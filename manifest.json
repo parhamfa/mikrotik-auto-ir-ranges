@@ -1,0 +1,57 @@
+{
+  "country": "IR",
+  "coverage": {
+    "asn_ranges": "IPtoASN rows whose origin-ASN country code is IR",
+    "country_ranges": "IPdeny Iran country zones",
+    "operation": "union, collapse, numeric sort"
+  },
+  "generated_at": "2026-08-30T22:05:50Z",
+  "generator_version": "1.0.0",
+  "ipv4": {
+    "bytes": 28333,
+    "count": 1808,
+    "file": "ir-ipv4.zone",
+    "sha512": "f4e53b522bbe129aa991fc30840afd36b7162f43935d989c86e3205804fbb460c4675716d197b8a410897f89eb4ce075491fff478edfe786d2216a6e2a3fc5eb"
+  },
+  "ipv6": {
+    "bytes": 8686,
+    "count": 578,
+    "file": "ir-ipv6.zone",
+    "sha512": "fdce5b10cf845f509d78271ea3ab8baaacb2ba3b3f9195e19ed1696531d01934be49b23af248e4527347f51e3be20becdecb9cadf96db3fb3a0403366f9e96b2"
+  },
+  "schema": 1,
+  "source_stats": {
+    "ipv4": {
+      "ipdeny_cidrs": 1958,
+      "iptoasn_ir_asns": 568,
+      "iptoasn_ir_ranges": 5190
+    },
+    "ipv6": {
+      "ipdeny_cidrs": 570,
+      "iptoasn_ir_asns": 145,
+      "iptoasn_ir_ranges": 421
+    }
+  },
+  "sources": {
+    "ipdeny_ipv4": {
+      "bytes": 30694,
+      "sha512": "0f06296308515f48d7d8760ee9eb3287b5e373c3f75c1db1b2c5049844525c735e8cd72441d1ffab122ce43daf4a81629f5432748dcc94f2fce55d183180c4cf",
+      "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
+    },
+    "ipdeny_ipv6": {
+      "bytes": 8543,
+      "sha512": "e2366fb651c4a7beeb2840504b6ae7802b2d11a13d970d6abb14bfa235605c69f3ee46c010572256ee28176c4668092f2ba02ac686e0cfd8020a1354ff0e4e94",
+      "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
+    },
+    "iptoasn_ipv4": {
+      "bytes": 6944852,
+      "sha512": "3cf02543e5e48b73453befdc95fdc9b47a3ea259346527208ea51fd909cc647f154b993c706972539ba39e95b2edfae61169b9ba72d96ba38ffed3af2b28eb98",
+      "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+    },
+    "iptoasn_ipv6": {
+      "bytes": 1995504,
+      "sha512": "b9b84a692cb3b00f7489f10ec259ec837ce9a3dc0df23fb58af9387e74e7fab8b0fc6c921ceba1fca9083f0167b3f3d74acca68262e33f8ca5b4e9c564874dce",
+      "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+    }
+  }
+}
