@@ -1,4 +1,4 @@
-# mikrotik-auto-ir-ranges v1.0.0 uninstaller
+# mikrotik-auto-ir-ranges v1.0.1 uninstaller
 # Keeps Iran_IPV4, Iran_IPV6, and every rule that references them.
 
 :if ([:len [/system scheduler find where name="auto-ir-ranges-daily"]] > 0) do={

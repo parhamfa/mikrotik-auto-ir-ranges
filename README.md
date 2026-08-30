@@ -8,7 +8,7 @@ fetches that feed directly over certificate-validated HTTPS and updates its own
 `Iran_IPV4` and `Iran_IPV6` lists at **03:00 router-local time**. No router API
 service, central controller, or stored router password is required.
 
-## Install v1.0.0
+## Install v1.0.1
 
 First export the router configuration:
 
@@ -19,7 +19,7 @@ First export the router configuration:
 Then paste this single line into a RouterOS terminal:
 
 ```routeros
-/tool fetch url="https://github.com/parhamfa/mikrotik-auto-ir-ranges/releases/download/v1.0.0/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
+/tool fetch url="https://github.com/parhamfa/mikrotik-auto-ir-ranges/releases/download/v1.0.1/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
 ```
 
 The installer performs a successful initial sync before enabling the scheduler.
@@ -84,11 +84,11 @@ Temporarily stop updates without changing the lists:
 /system scheduler disable [find where name="auto-ir-ranges-daily"]
 ```
 
-Uninstall v1.0.0 while retaining the last valid lists and every rule that uses
+Uninstall v1.0.1 while retaining the last valid lists and every rule that uses
 them:
 
 ```routeros
-/tool fetch url="https://github.com/parhamfa/mikrotik-auto-ir-ranges/releases/download/v1.0.0/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
+/tool fetch url="https://github.com/parhamfa/mikrotik-auto-ir-ranges/releases/download/v1.0.1/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
 ```
 
 For rollback to the pre-migration list contents, first uninstall, then restore

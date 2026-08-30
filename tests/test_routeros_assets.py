@@ -30,6 +30,12 @@ class RouterOSAssetTests(unittest.TestCase):
         self.assertLess(self.installer.index("IPv6 count mismatch"), first_add)
         self.assertLess(self.installer.index("IPv6 shrink guard"), first_add)
 
+    def test_routeros_missing_map_keys_use_nothing_type(self) -> None:
+        self.assertIn('($desiredV4->$cidr)] != "nothing"', self.installer)
+        self.assertIn('($desiredV6->$cidr)] != "nothing"', self.installer)
+        self.assertIn('($desiredV4->$currentAddress)] = "nothing"', self.installer)
+        self.assertIn('($desiredV6->$currentAddress)] = "nothing"', self.installer)
+
     def test_installer_does_not_create_firewall_rules(self) -> None:
         forbidden = (
             "/ip firewall filter add",

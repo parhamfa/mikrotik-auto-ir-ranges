@@ -1,4 +1,4 @@
-# mikrotik-auto-ir-ranges v1.0.0 installer
+# mikrotik-auto-ir-ranges v1.0.1 installer
 # RouterOS 7.20+; data updates daily at 03:00 router-local time.
 
 :local rosVersion [/system resource get version]
@@ -29,7 +29,7 @@
     /system script remove [/system script find where name="auto-ir-ranges-sync"]
 }
 
-/system script add name="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.0" source={
+/system script add name="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.1" source={
     :local manifestUrl "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/manifest.json"
     :local ipv4Url "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/ir-ipv4.zone"
     :local ipv6Url "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/ir-ipv6.zone"
@@ -122,7 +122,7 @@
         :if ([:typeof [:toip $addressPart]] != "ip") do={ :error ("auto-ir-ranges: invalid IPv4 address " . $cidr) }
         :if ([:typeof $prefixLength] != "num") do={ :error ("auto-ir-ranges: invalid IPv4 prefix " . $cidr) }
         :if (($prefixLength < 0) || ($prefixLength > 32)) do={ :error ("auto-ir-ranges: invalid IPv4 prefix " . $cidr) }
-        :if ([:typeof ($desiredV4->$cidr)] != "nil") do={ :error ("auto-ir-ranges: duplicate IPv4 CIDR " . $cidr) }
+        :if ([:typeof ($desiredV4->$cidr)] != "nothing") do={ :error ("auto-ir-ranges: duplicate IPv4 CIDR " . $cidr) }
         :set ($desiredV4->$cidr) true
         :set parsedV4 ($parsedV4 + 1)
     }
@@ -149,7 +149,7 @@
         :if ([:typeof [:toip6 $addressPart]] != "ip6") do={ :error ("auto-ir-ranges: invalid IPv6 address " . $cidr) }
         :if ([:typeof $prefixLength] != "num") do={ :error ("auto-ir-ranges: invalid IPv6 prefix " . $cidr) }
         :if (($prefixLength < 0) || ($prefixLength > 128)) do={ :error ("auto-ir-ranges: invalid IPv6 prefix " . $cidr) }
-        :if ([:typeof ($desiredV6->$cidr)] != "nil") do={ :error ("auto-ir-ranges: duplicate IPv6 CIDR " . $cidr) }
+        :if ([:typeof ($desiredV6->$cidr)] != "nothing") do={ :error ("auto-ir-ranges: duplicate IPv6 CIDR " . $cidr) }
         :set ($desiredV6->$cidr) true
         :set parsedV6 ($parsedV6 + 1)
     }
@@ -195,7 +195,7 @@
     }
     :foreach entryId in=[/ip firewall address-list find where list=$listV4] do={
         :local currentAddress [:tostr [/ip firewall address-list get $entryId address]]
-        :if ([:typeof ($desiredV4->$currentAddress)] = "nil") do={
+        :if ([:typeof ($desiredV4->$currentAddress)] = "nothing") do={
             /ip firewall address-list remove $entryId
             :set removedV4 ($removedV4 + 1)
         }
@@ -231,7 +231,7 @@
     }
     :foreach entryId in=[/ipv6 firewall address-list find where list=$listV6] do={
         :local currentAddress [:tostr [/ipv6 firewall address-list get $entryId address]]
-        :if ([:typeof ($desiredV6->$currentAddress)] = "nil") do={
+        :if ([:typeof ($desiredV6->$currentAddress)] = "nothing") do={
             /ipv6 firewall address-list remove $entryId
             :set removedV6 ($removedV6 + 1)
         }
@@ -255,7 +255,7 @@
 :if ([:len [/system scheduler find where name="auto-ir-ranges-daily"]] > 0) do={
     /system scheduler remove [/system scheduler find where name="auto-ir-ranges-daily"]
 }
-/system scheduler add name="auto-ir-ranges-daily" disabled=yes start-time=03:00:00 interval=1d on-event="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.0"
+/system scheduler add name="auto-ir-ranges-daily" disabled=yes start-time=03:00:00 interval=1d on-event="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.1"
 
 :onerror syncError in={
     /system script run auto-ir-ranges-sync
@@ -264,4 +264,4 @@
     :error $syncError
 }
 /system scheduler enable [/system scheduler find where name="auto-ir-ranges-daily"]
-:log info "auto-ir-ranges: v1.0.0 installed; daily schedule enabled at 03:00 local time"
+:log info "auto-ir-ranges: v1.0.1 installed; daily schedule enabled at 03:00 local time"
