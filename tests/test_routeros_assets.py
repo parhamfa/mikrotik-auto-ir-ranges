@@ -36,6 +36,16 @@ class RouterOSAssetTests(unittest.TestCase):
         self.assertIn('($desiredV4->$currentAddress)] = "nothing"', self.installer)
         self.assertIn('($desiredV6->$currentAddress)] = "nothing"', self.installer)
 
+    def test_sync_uses_linear_membership_scans(self) -> None:
+        self.assertNotIn("find where list=$listV4 and address=$cidr", self.installer)
+        self.assertNotIn("find where list=$listV6 and address=$cidr", self.installer)
+        self.assertIn(":local presentV4", self.installer)
+        self.assertIn(":local presentV6", self.installer)
+        self.assertLess(
+            self.installer.index("/ipv6 firewall address-list add"),
+            self.installer.index("/ip firewall address-list remove $entryId"),
+        )
+
     def test_installer_does_not_create_firewall_rules(self) -> None:
         forbidden = (
             "/ip firewall filter add",

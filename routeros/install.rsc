@@ -1,4 +1,4 @@
-# mikrotik-auto-ir-ranges v1.0.1 installer
+# mikrotik-auto-ir-ranges v1.0.2 installer
 # RouterOS 7.20+; data updates daily at 03:00 router-local time.
 
 :local rosVersion [/system resource get version]
@@ -29,7 +29,7 @@
     /system script remove [/system script find where name="auto-ir-ranges-sync"]
 }
 
-/system script add name="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.1" source={
+/system script add name="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.2" source={
     :local manifestUrl "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/manifest.json"
     :local ipv4Url "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/ir-ipv4.zone"
     :local ipv6Url "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/ir-ipv6.zone"
@@ -165,75 +165,87 @@
         :if (($parsedV6 * 2) < $currentV6) do={ :error ("auto-ir-ranges: IPv6 shrink guard " . $currentV6 . "->" . $parsedV6) }
     }
 
+    # Build current membership maps once. This avoids one RouterOS search per CIDR.
+    :local presentV4 [:toarray ""]
+    :foreach entryId in=[/ip firewall address-list find where list=$listV4] do={
+        :local currentAddress [:tostr [/ip firewall address-list get $entryId address]]
+        :set ($presentV4->$currentAddress) true
+    }
+    :local presentV6 [:toarray ""]
+    :foreach entryId in=[/ipv6 firewall address-list find where list=$listV6] do={
+        :local currentAddress [:tostr [/ipv6 firewall address-list get $entryId address]]
+        :set ($presentV6->$currentAddress) true
+    }
+
     :local addedV4 0
     :local adoptedV4 0
     :local removedV4 0
     :local duplicateV4 0
+    :local addedV6 0
+    :local adoptedV6 0
+    :local removedV6 0
+    :local duplicateV6 0
+
+    # Stage every missing CIDR in both families before any removal.
     :foreach cidr,wanted in=$desiredV4 do={
-        :local matching [/ip firewall address-list find where list=$listV4 and address=$cidr]
-        :if ([:len $matching] = 0) do={
+        :if ([:typeof ($presentV4->$cidr)] = "nothing") do={
             /ip firewall address-list add list=$listV4 address=$cidr comment=$managedComment
+            :set ($presentV4->$cidr) true
             :set addedV4 ($addedV4 + 1)
-        } else={
-            :local keeperChosen false
-            :foreach entryId in=$matching do={
-                :if ($keeperChosen = false) do={
-                    :set keeperChosen true
-                    :local needsAdoption false
-                    :if ([/ip firewall address-list get $entryId comment] != $managedComment) do={ :set needsAdoption true }
-                    :if ([/ip firewall address-list get $entryId disabled] = true) do={ :set needsAdoption true }
-                    :if ($needsAdoption = true) do={
-                        /ip firewall address-list set $entryId comment=$managedComment disabled=no
-                        :set adoptedV4 ($adoptedV4 + 1)
-                    }
-                } else={
-                    /ip firewall address-list remove $entryId
-                    :set duplicateV4 ($duplicateV4 + 1)
-                }
-            }
         }
     }
+    :foreach cidr,wanted in=$desiredV6 do={
+        :if ([:typeof ($presentV6->$cidr)] = "nothing") do={
+            /ipv6 firewall address-list add list=$listV6 address=$cidr comment=$managedComment
+            :set ($presentV6->$cidr) true
+            :set addedV6 ($addedV6 + 1)
+        }
+    }
+
+    # Adopt one desired entry per CIDR, then prune duplicates and stale entries.
+    :local seenV4 [:toarray ""]
     :foreach entryId in=[/ip firewall address-list find where list=$listV4] do={
         :local currentAddress [:tostr [/ip firewall address-list get $entryId address]]
         :if ([:typeof ($desiredV4->$currentAddress)] = "nothing") do={
             /ip firewall address-list remove $entryId
             :set removedV4 ($removedV4 + 1)
-        }
-    }
-
-    :local addedV6 0
-    :local adoptedV6 0
-    :local removedV6 0
-    :local duplicateV6 0
-    :foreach cidr,wanted in=$desiredV6 do={
-        :local matching [/ipv6 firewall address-list find where list=$listV6 and address=$cidr]
-        :if ([:len $matching] = 0) do={
-            /ipv6 firewall address-list add list=$listV6 address=$cidr comment=$managedComment
-            :set addedV6 ($addedV6 + 1)
         } else={
-            :local keeperChosen false
-            :foreach entryId in=$matching do={
-                :if ($keeperChosen = false) do={
-                    :set keeperChosen true
-                    :local needsAdoption false
-                    :if ([/ipv6 firewall address-list get $entryId comment] != $managedComment) do={ :set needsAdoption true }
-                    :if ([/ipv6 firewall address-list get $entryId disabled] = true) do={ :set needsAdoption true }
-                    :if ($needsAdoption = true) do={
-                        /ipv6 firewall address-list set $entryId comment=$managedComment disabled=no
-                        :set adoptedV6 ($adoptedV6 + 1)
-                    }
-                } else={
-                    /ipv6 firewall address-list remove $entryId
-                    :set duplicateV6 ($duplicateV6 + 1)
+            :if ([:typeof ($seenV4->$currentAddress)] = "nothing") do={
+                :set ($seenV4->$currentAddress) true
+                :local needsAdoption false
+                :if ([/ip firewall address-list get $entryId comment] != $managedComment) do={ :set needsAdoption true }
+                :if ([/ip firewall address-list get $entryId disabled] = true) do={ :set needsAdoption true }
+                :if ($needsAdoption = true) do={
+                    /ip firewall address-list set $entryId comment=$managedComment disabled=no
+                    :set adoptedV4 ($adoptedV4 + 1)
                 }
+            } else={
+                /ip firewall address-list remove $entryId
+                :set duplicateV4 ($duplicateV4 + 1)
             }
         }
     }
+
+    :local seenV6 [:toarray ""]
     :foreach entryId in=[/ipv6 firewall address-list find where list=$listV6] do={
         :local currentAddress [:tostr [/ipv6 firewall address-list get $entryId address]]
         :if ([:typeof ($desiredV6->$currentAddress)] = "nothing") do={
             /ipv6 firewall address-list remove $entryId
             :set removedV6 ($removedV6 + 1)
+        } else={
+            :if ([:typeof ($seenV6->$currentAddress)] = "nothing") do={
+                :set ($seenV6->$currentAddress) true
+                :local needsAdoption false
+                :if ([/ipv6 firewall address-list get $entryId comment] != $managedComment) do={ :set needsAdoption true }
+                :if ([/ipv6 firewall address-list get $entryId disabled] = true) do={ :set needsAdoption true }
+                :if ($needsAdoption = true) do={
+                    /ipv6 firewall address-list set $entryId comment=$managedComment disabled=no
+                    :set adoptedV6 ($adoptedV6 + 1)
+                }
+            } else={
+                /ipv6 firewall address-list remove $entryId
+                :set duplicateV6 ($duplicateV6 + 1)
+            }
         }
     }
 
@@ -255,7 +267,7 @@
 :if ([:len [/system scheduler find where name="auto-ir-ranges-daily"]] > 0) do={
     /system scheduler remove [/system scheduler find where name="auto-ir-ranges-daily"]
 }
-/system scheduler add name="auto-ir-ranges-daily" disabled=yes start-time=03:00:00 interval=1d on-event="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.1"
+/system scheduler add name="auto-ir-ranges-daily" disabled=yes start-time=03:00:00 interval=1d on-event="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=1.0.2"
 
 :onerror syncError in={
     /system script run auto-ir-ranges-sync
@@ -264,4 +276,4 @@
     :error $syncError
 }
 /system scheduler enable [/system scheduler find where name="auto-ir-ranges-daily"]
-:log info "auto-ir-ranges: v1.0.1 installed; daily schedule enabled at 03:00 local time"
+:log info "auto-ir-ranges: v1.0.2 installed; daily schedule enabled at 03:00 local time"
