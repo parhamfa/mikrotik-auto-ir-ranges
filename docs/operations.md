@@ -27,6 +27,11 @@ families before the first address-list mutation. It stages missing CIDRs,
 adopts matching legacy entries, removes duplicates and stale entries, and
 verifies exact final counts. Subsequent identical runs do not rewrite entries.
 
+RouterOS 7.20 may require
+`/certificate settings set builtin-trust-anchors=trusted` before its first
+certificate-validated fetch. Version-pinned setup uses the raw Git tag because
+7.20 does not follow GitHub release-asset redirects.
+
 Relevant log prefix: `auto-ir-ranges:`.
 
 ## Incident response

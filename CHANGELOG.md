@@ -5,6 +5,8 @@
 - Replace per-CIDR RouterOS searches with linear membership scans. This keeps
   unchanged daily runs fast while preserving validate-first and add-first
   behavior.
+- Use the immutable raw Git tag in setup commands for RouterOS 7.20 redirect
+  compatibility, and document its built-in trust-anchor prerequisite.
 
 ## v1.0.1
 

@@ -10,20 +10,30 @@ service, central controller, or stored router password is required.
 
 ## Install v1.0.2
 
-First export the router configuration:
+First confirm that the router clock and timezone are correct, then export the
+configuration. RouterOS exports hide sensitive values by default:
 
 ```routeros
-/export show-sensitive=no file=before-auto-ir-ranges
+/system clock print
+/export file=before-auto-ir-ranges
 ```
 
 Then paste this single line into a RouterOS terminal:
 
 ```routeros
-/tool fetch url="https://github.com/parhamfa/mikrotik-auto-ir-ranges/releases/download/v1.0.2/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
+:if ([:pick [/system resource get version] 0 4] = "7.20") do={ /certificate settings set builtin-trust-anchors=trusted }; /tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v1.0.2/routeros/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
 ```
 
 The installer performs a successful initial sync before enabling the scheduler.
 It does not create or change firewall, mangle, NAT, routing, or WireGuard rules.
+The 7.20 preamble enables MikroTik's built-in root CAs, which are disabled by
+default on some upgraded routers. The raw immutable tag URL is intentional:
+RouterOS 7.20 does not follow GitHub release-asset redirects.
+
+On RouterOS 7.21 or newer, `check-certificate=yes` uses the built-in trust store.
+If you intentionally restricted that store and the fetch reports no trusted CA,
+allow the `fetch` service under `/certificate settings`; do not disable
+certificate checking.
 
 ## Verify
 
@@ -88,7 +98,7 @@ Uninstall v1.0.2 while retaining the last valid lists and every rule that uses
 them:
 
 ```routeros
-/tool fetch url="https://github.com/parhamfa/mikrotik-auto-ir-ranges/releases/download/v1.0.2/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
+/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v1.0.2/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
 ```
 
 For rollback to the pre-migration list contents, first uninstall, then restore
