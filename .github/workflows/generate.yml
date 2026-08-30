@@ -1,0 +1,52 @@
+name: Publish Iran ranges
+
+on:
+  schedule:
+    - cron: "17 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-iran-ranges
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out generator
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: source
+      - name: Check out generated data
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: data
+          path: published
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Test generator
+        working-directory: source
+        run: python -m unittest discover -s tests -v
+      - name: Generate guarded feeds
+        run: >-
+          python source/scripts/generate.py
+          --output-dir published
+          --previous-dir published
+      - name: Commit changed data only
+        working-directory: published
+        shell: bash
+        run: |
+          if git diff --quiet -- ir-ipv4.zone ir-ipv6.zone manifest.json; then
+            echo "CIDR content is unchanged; preserving the existing manifest."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ir-ipv4.zone ir-ipv6.zone manifest.json
+          git commit -m "data: update Iran ranges $(date -u +%F)"
+          git push origin HEAD:data

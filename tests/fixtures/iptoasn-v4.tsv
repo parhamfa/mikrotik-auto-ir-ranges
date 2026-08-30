@@ -1,0 +1,4 @@
+20.0.0.0	20.0.0.255	100	IR	Iran example
+20.0.1.0	20.0.1.255	100	IR	Iran example
+30.0.0.0	30.0.0.255	200	US	Ignored example
+40.0.0.1	40.0.0.6	300	IR	Range conversion example

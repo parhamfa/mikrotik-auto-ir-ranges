@@ -1,0 +1,13 @@
+[project]
+name = "mikrotik-auto-ir-ranges"
+version = "1.0.0"
+description = "Credential-free Iran IPv4 and IPv6 address-list updates for MikroTik RouterOS"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Parham Fatemi"}]
+
+[project.urls]
+Repository = "https://github.com/parhamfa/mikrotik-auto-ir-ranges"
+
+[tool.unittest]
+start-directory = "tests"
