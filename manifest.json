@@ -5,13 +5,13 @@
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort"
   },
-  "generated_at": "2026-09-05T15:10:16Z",
+  "generated_at": "2026-09-12T15:29:18Z",
   "generator_version": "1.0.2",
   "ipv4": {
-    "bytes": 28333,
-    "count": 1808,
+    "bytes": 28363,
+    "count": 1810,
     "file": "ir-ipv4.zone",
-    "sha512": "f4e53b522bbe129aa991fc30840afd36b7162f43935d989c86e3205804fbb460c4675716d197b8a410897f89eb4ce075491fff478edfe786d2216a6e2a3fc5eb"
+    "sha512": "5e11f6ff96aad6f70306768b8eaffb87c7a8be69fe0df8521fe03861f9a6c268823d97312e2077e182a10bd24f0244836b9a5711f6c6ef6a20e090a5d0e161fd"
   },
   "ipv6": {
     "bytes": 8735,
@@ -22,20 +22,20 @@
   "schema": 1,
   "source_stats": {
     "ipv4": {
-      "ipdeny_cidrs": 1958,
-      "iptoasn_ir_asns": 571,
-      "iptoasn_ir_ranges": 5214
+      "ipdeny_cidrs": 1960,
+      "iptoasn_ir_asns": 569,
+      "iptoasn_ir_ranges": 5247
     },
     "ipv6": {
       "ipdeny_cidrs": 571,
-      "iptoasn_ir_asns": 151,
-      "iptoasn_ir_ranges": 429
+      "iptoasn_ir_asns": 153,
+      "iptoasn_ir_ranges": 433
     }
   },
   "sources": {
     "ipdeny_ipv4": {
-      "bytes": 30694,
-      "sha512": "0f06296308515f48d7d8760ee9eb3287b5e373c3f75c1db1b2c5049844525c735e8cd72441d1ffab122ce43daf4a81629f5432748dcc94f2fce55d183180c4cf",
+      "bytes": 30724,
+      "sha512": "ea7b0041033763bc533bfd7fb4ac7ff087b55f10ebaafecf100a5901c541e8c7a0126c106cd5479d94e93ae82246b541bf811be88d0f79831262979936c2e19d",
       "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
     },
     "ipdeny_ipv6": {
@@ -44,13 +44,13 @@
       "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
     },
     "iptoasn_ipv4": {
-      "bytes": 6956791,
-      "sha512": "5e56124c205e3574577d2426ed8461c7ae01afee83e9e52400223399986c29447bb88cc4d08eba126c6433fa02625ecff629670599b15f7116cd050ac3508608",
+      "bytes": 6967769,
+      "sha512": "44e8a65ff32c7b5a0a1b26770f9519d354858ccb864eb6d4f6f8261685ae6a3ae0b04ccb8696f740ec7cf6d6e29381bc75904b60bc413fa8d0a23060afc5c009",
       "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
     },
     "iptoasn_ipv6": {
-      "bytes": 1992110,
-      "sha512": "ddf9a63acd93e8a12169153969628bec8cabf1aa759082fe7e2e9b0eef04f9bab493ab0e887cdc833179dcfc680608be7a752c25979a2b872bc48682a0070d3b",
+      "bytes": 1994063,
+      "sha512": "51f86003dd08beb9edbceb7de8b610a5b2c012acc60bba70234b8f1c6d14656ca1a1c52bf7d1a70897a0764e3d3e95a9a70cd43f98afbf5ff8d182a8d328424c",
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     }
   }
