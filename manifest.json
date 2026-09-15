@@ -5,13 +5,13 @@
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort"
   },
-  "generated_at": "2026-09-12T15:29:18Z",
+  "generated_at": "2026-09-15T16:55:37Z",
   "generator_version": "1.0.2",
   "ipv4": {
     "bytes": 28363,
     "count": 1810,
     "file": "ir-ipv4.zone",
-    "sha512": "5e11f6ff96aad6f70306768b8eaffb87c7a8be69fe0df8521fe03861f9a6c268823d97312e2077e182a10bd24f0244836b9a5711f6c6ef6a20e090a5d0e161fd"
+    "sha512": "f885847751d9a084d8b0c6f7ff245768ceb36bed917dc8082162c19197a96a2f7a1bba06e23774afcde2db201ba9ab76c3d911002ad43f574733282b7d84eda4"
   },
   "ipv6": {
     "bytes": 8735,
@@ -23,13 +23,13 @@
   "source_stats": {
     "ipv4": {
       "ipdeny_cidrs": 1960,
-      "iptoasn_ir_asns": 569,
-      "iptoasn_ir_ranges": 5247
+      "iptoasn_ir_asns": 571,
+      "iptoasn_ir_ranges": 5300
     },
     "ipv6": {
       "ipdeny_cidrs": 571,
-      "iptoasn_ir_asns": 153,
-      "iptoasn_ir_ranges": 433
+      "iptoasn_ir_asns": 154,
+      "iptoasn_ir_ranges": 434
     }
   },
   "sources": {
@@ -44,13 +44,13 @@
       "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
     },
     "iptoasn_ipv4": {
-      "bytes": 6967769,
-      "sha512": "44e8a65ff32c7b5a0a1b26770f9519d354858ccb864eb6d4f6f8261685ae6a3ae0b04ccb8696f740ec7cf6d6e29381bc75904b60bc413fa8d0a23060afc5c009",
+      "bytes": 6972101,
+      "sha512": "3309b25bab317bb6e938deef2882c327b2967cd28c8aee276ce99582e62e0327d5a0b730177b532f895d557c19ac3544d0bfbfd95b92eb28b3c4e3bd19173c80",
       "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
     },
     "iptoasn_ipv6": {
-      "bytes": 1994063,
-      "sha512": "51f86003dd08beb9edbceb7de8b610a5b2c012acc60bba70234b8f1c6d14656ca1a1c52bf7d1a70897a0764e3d3e95a9a70cd43f98afbf5ff8d182a8d328424c",
+      "bytes": 1997605,
+      "sha512": "46f5196cd1db6533a93bce25fcad3f96e00b07ebcd9581bd5a705f88a2a01a0c923a8df3abab77d53e9dacf7c3418da7227a4e9ba9ee5648256521afbd535e24",
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     }
   }
