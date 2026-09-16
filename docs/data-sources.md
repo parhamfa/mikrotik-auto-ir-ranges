@@ -23,8 +23,55 @@ Iran zone once per daily publisher run rather than once per router.
 - Data license: Public Domain Dedication and License 1.0 (PDDL-1.0), as stated
   on the database site.
 
-The generator selects rows whose ASN country field is `IR`, converts each
-address range to CIDRs, and unions those networks with the IPdeny zones.
+The generator selects rows whose country field is `IR` or whose originating ASN
+is independently selected through the registry/ownership layer. It converts
+each address range to CIDRs and unions those networks with the other layers.
+
+## NRO extended delegated statistics
+
+- Publication and explanation: <https://www.nro.net/about/rirs/statistics/>
+- Daily file: <https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats>
+- Format: <https://www.nro.net/wp-content/uploads/nro-extended-stats-readme5.txt>
+
+The NRO publishes the five RIRs' allocation, assignment, and ASN statistics for
+analysis of Internet number resources. Country identifies the registered
+holder, not necessarily the location or nationality of every service.
+Allocated/assigned `IR` resources seed the selection. Reviewed foreign operator
+ASNs also seed it. Same-holder resources are joined only within one registry
+and snapshot: opaque holder IDs are not stable between snapshots.
+
+This is the public statistical dataset, not RIPEstat API output or a bulk copy
+of RIPE Database contact records. Do not republish registrant contact data.
+
+## Provider inventories
+
+- ArvanCloud: <https://www.arvancloud.ir/fa/ips.txt>, linked from
+  <https://www.arvancloud.ir/fa/dev/ips>.
+- MizbanCloud: <https://mizbancloud.com/ips.txt>, linked from
+  <https://docs.mizbancloud.com/cdn/whitelist>.
+
+These are provider-published network configuration inputs. The source provider
+and exact downloaded content hash remain in the manifest. Provider data is not
+relicensed under this repository's MIT code license. ASN affiliation evidence
+and expected operator names live in `coverage-policy.json`; the feed uses
+IPtoASN and NRO to select resources, not RIPEstat-derived prefix republishing.
+
+## Identified service DNS
+
+The reviewed service catalogue contains public domain names and their evidence
+URLs. Google and Cloudflare DNS-over-HTTPS provide A/AAAA observations. Each
+observation records the domain, resolver, address, CNAME target where relevant,
+minimum relevant TTL, and observation timestamp. Only exact public host
+addresses enter the union. This includes shared hosting under the chosen broad
+coverage policy. No general cloud/CDN ASN is selected merely because one of its
+addresses serves a catalogue entry.
+
+- Google API: <https://developers.google.com/speed/public-dns/docs/doh/json>
+- Cloudflare API: <https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests/dns-json/>
+
+Two resolver snapshots do not exhaust geographic DNS views, application
+subdomains, or future address changes. Daily snapshots are not a TTL-aware
+substitute for observing the DNS answers that clients actually use.
 
 ## Why RIPEstat is not a publisher input
 

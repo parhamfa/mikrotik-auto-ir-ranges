@@ -76,11 +76,14 @@ class GeneratorTests(unittest.TestCase):
             "ipdeny_ipv6": (FIXTURES / "ipdeny-v6.zone").read_bytes(),
             "iptoasn_ipv4": gzip.compress((FIXTURES / "iptoasn-v4.tsv").read_bytes()),
             "iptoasn_ipv6": gzip.compress((FIXTURES / "iptoasn-v6.tsv").read_bytes()),
+            "nro_delegated": b"2|nro|1|1|20260102|20260102|+0000\nripencc|IR|asn|100|1|20200101|assigned|ir-example\n",
+            "dns_snapshot": b'{"schema":1,"observed_at":"2026-01-02T03:04:05Z","queries":[]}',
         }
         artifacts = generate_from_sources(
             payloads,
             generated_at="2026-01-02T03:04:05Z",
             limits=TEST_LIMITS,
+            policy={"registry_url": "https://example.org/nro", "registry_min_asns": 1, "operators": [], "providers": [], "services": [], "dns_resolvers": {}},
         )
         manifest = json.loads(artifacts.manifest)
         self.assertEqual(manifest["schema"], 1)
@@ -100,13 +103,16 @@ class GeneratorTests(unittest.TestCase):
         ]
         v4 = Feed(serialize_zone(v4_networks), len(v4_networks))
         v6 = Feed(serialize_zone(v6_networks), len(v6_networks))
-        first = GeneratedArtifacts(v4, v6, b'{"generated_at":"first"}\n')
-        second = GeneratedArtifacts(v4, v6, b'{"generated_at":"second"}\n')
+        first = GeneratedArtifacts(v4, v6, b'{"generated_at":"first","generator_version":"1"}\n')
+        second = GeneratedArtifacts(v4, v6, b'{"generated_at":"second","generator_version":"1"}\n')
         with tempfile.TemporaryDirectory() as temporary:
             output = Path(temporary)
             self.assertTrue(publish_artifacts(first, output))
             self.assertFalse(publish_artifacts(second, output))
             self.assertEqual((output / "manifest.json").read_bytes(), first.manifest)
+            changed_policy = GeneratedArtifacts(v4, v6, b'{"generated_at":"third","generator_version":"2"}\n')
+            self.assertTrue(publish_artifacts(changed_policy, output))
+            self.assertEqual((output / "manifest.json").read_bytes(), changed_policy.manifest)
 
 
 if __name__ == "__main__":

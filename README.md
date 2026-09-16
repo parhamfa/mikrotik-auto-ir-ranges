@@ -3,7 +3,7 @@
 Credential-free, self-updating Iran IPv4 and IPv6 address lists for MikroTik
 RouterOS 7.20 or newer.
 
-GitHub Actions builds a guarded, ASN-augmented feed once a day. Each router
+GitHub Actions builds a guarded, evidence-based feed once a day. Each router
 fetches that feed directly over certificate-validated HTTPS and updates its own
 `Iran_IPV4` and `Iran_IPV6` lists at **03:00 router-local time**. No router API
 service, central controller, or stored router password is required.
@@ -110,19 +110,40 @@ helper deliberately. Do not blindly import the entire export into a live router.
 The generated set is the collapsed union of:
 
 - IPdeny Iran country IPv4 and IPv6 ranges.
-- IPtoASN ranges whose origin ASN is classified as Iranian.
+- NRO allocations and assignments registered to Iranian holders, plus resources
+  held by the same registered operators, including reviewed foreign affiliates.
+- IPtoASN ranges labelled `IR`, or originated by ASNs identified independently
+  through those registry records and the reviewed operator catalogue.
+- Official provider inventories, currently ArvanCloud and MizbanCloud.
+- Exact A/AAAA addresses of the service domains in
+  [`coverage-policy.json`](coverage-policy.json), observed through Google and
+  Cloudflare DNS. This includes shared hosting addresses, never the entire
+  hosting ASN merely because it hosts one Iranian website.
 
-This retains the old helper's important ASN augmentation, including some
-Iranian-operated, foreign-registered address space. It does not identify an
-Iranian service hosted entirely behind a non-Iranian ASN or CDN.
+Country registration, operator identity, and service identity are different
+signals. For example, ArvanCloud's AS208006 and AS57568 are labelled `AE`, so
+selecting only `IR` rows missed their networks even though Arvan published them.
 
-The legacy helper discovered Iranian ASNs through RIPEstat. This public
-publisher instead uses IPtoASN's own ASN-country field: it produced exact CIDR
-parity during migration, avoids an extra dependency, and avoids republishing
-RIPEstat-derived data contrary to RIPEstat's service terms.
+**There is no measured 99.99% guarantee for all Iran-related IPs.** The catalogue
+is not exhaustive, and DNS snapshots vary by resolver, geography, and time.
+The daily feed/router schedule does not follow DNS TTLs. Shared IPs can also
+serve unrelated foreign sites. These lists are a broad routing policy, not a
+geolocation or ownership certificate.
+
+Every successful build produces `coverage.json`: source hashes, registry
+freshness, per-layer coverage, additions beyond the legacy algorithm, and DNS
+observations with TTLs. Its known-source checks require complete containment,
+including coverage by multiple smaller prefixes. They prove that admitted
+evidence survived generation; they do not measure undiscovered networks.
+
+Provider feed failures, malformed/truncated registry data, stale snapshots,
+reviewed ASN identity changes, and provider shrinkage exceeding 10% abort
+publication. Previously published feeds remain available. Existing v1.0.2
+router installations can consume the expanded schema-1 feeds without reinstalling.
 
 See [data sources and licensing](docs/data-sources.md) and
-[feed operations](docs/operations.md).
+[feed operations](docs/operations.md), plus the
+[2026-09-16 coverage audit](docs/coverage-audit-2026-09-16.md).
 
 ## Development
 
