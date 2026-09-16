@@ -5,13 +5,13 @@
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort"
   },
-  "generated_at": "2026-09-15T16:55:37Z",
+  "generated_at": "2026-09-16T16:50:07Z",
   "generator_version": "1.0.2",
   "ipv4": {
-    "bytes": 28363,
-    "count": 1810,
+    "bytes": 28349,
+    "count": 1809,
     "file": "ir-ipv4.zone",
-    "sha512": "f885847751d9a084d8b0c6f7ff245768ceb36bed917dc8082162c19197a96a2f7a1bba06e23774afcde2db201ba9ab76c3d911002ad43f574733282b7d84eda4"
+    "sha512": "5ec610861146f0ddb844674bbd55d8ab7a9a71a33bd6c840c67706e8692aa33898b499b252133254075afe58d3814de87f864c3dcc0fc20316087fcf17c8fb39"
   },
   "ipv6": {
     "bytes": 8735,
@@ -23,8 +23,8 @@
   "source_stats": {
     "ipv4": {
       "ipdeny_cidrs": 1960,
-      "iptoasn_ir_asns": 571,
-      "iptoasn_ir_ranges": 5300
+      "iptoasn_ir_asns": 570,
+      "iptoasn_ir_ranges": 5322
     },
     "ipv6": {
       "ipdeny_cidrs": 571,
@@ -44,13 +44,13 @@
       "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
     },
     "iptoasn_ipv4": {
-      "bytes": 6972101,
-      "sha512": "3309b25bab317bb6e938deef2882c327b2967cd28c8aee276ce99582e62e0327d5a0b730177b532f895d557c19ac3544d0bfbfd95b92eb28b3c4e3bd19173c80",
+      "bytes": 6973435,
+      "sha512": "fc87c553135f649052186d2a7e6a1c224ae62d27028e0bc821cb70bf21b5dff3574eed2c43fb5eacf2ed1fb91f4cf2346a692a9cdbf7babdcb7e0886f1f3849b",
       "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
     },
     "iptoasn_ipv6": {
-      "bytes": 1997605,
-      "sha512": "46f5196cd1db6533a93bce25fcad3f96e00b07ebcd9581bd5a705f88a2a01a0c923a8df3abab77d53e9dacf7c3418da7227a4e9ba9ee5648256521afbd535e24",
+      "bytes": 1996722,
+      "sha512": "8a6ae88d87f4ab6add0f2cc8c4f322f13cf30bf3929fb1e49e991e3b665ace37512964be4c8952d1039db5953d2bceb5432d9d114b8376dc5f5d33d24c728312",
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     }
   }
