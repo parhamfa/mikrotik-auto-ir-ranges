@@ -96,6 +96,27 @@ def memberships(api):
     return {v: {str(ipaddress.ip_network(row['address'])) for row in api.call('/ip/firewall/address-list/print' if v == 4 else '/ipv6/firewall/address-list/print') if row['list'] == f'Iran_IPV{v}'} for v in (4, 6)}
 
 
+def checkpoint(api, prefix=''):
+    name = prefix+'auto-ir-ranges/state.json'
+    found = [r for r in api.call('/file/print') if r['name'] == name]
+    return api.call('/file/get', **{'.id': found[0]['.id'], 'value-name': 'contents'})[0]['ret'] if found else None
+
+
+def reboot(api):
+    api.call('/system/reboot')
+    api.socket.close()
+    time.sleep(3)
+    deadline = time.monotonic()+90
+    while time.monotonic() < deadline:
+        try:
+            fresh = API()
+            assert fresh.call('/system/identity/print')[0]['name'] == 'CHR'
+            return fresh
+        except (OSError, EOFError, RuntimeError):
+            time.sleep(2)
+    raise TimeoutError('Disposable CHR did not return after reboot')
+
+
 def fixture(count4=1100, count6=350, offset=0):
     feeds = {}
     for v, count in ((4, count4), (6, count6)):
@@ -113,6 +134,28 @@ def serve_fixture(directory, feeds, generation_time):
         target.write_bytes(data)
     (directory/'manifest-v2.json').write_bytes(manifest)
     return json.loads(manifest)
+
+
+def check_storage_failure(api, served):
+    before = memberships(api)
+    manifest = (served/'manifest-v2.json').read_bytes()
+    assert checkpoint(api) is None
+    assert not any(r['name'].startswith('auto-ir-ranges/') for r in api.call('/file/print'))
+    directory = next((r for r in api.call('/file/print') if r['name'] == 'auto-ir-ranges'), None)
+    if directory:
+        api.call('/file/remove', **{'.id': directory['.id']})
+    blocked = api.call('/file/add', name='auto-ir-ranges', type='file', contents='occupied')[0]['ret']
+    try:
+        serve_fixture(served, fixture(1401,475,offset=300000), '2026-09-17T16:00:00Z')
+        try:
+            api.script('/system script run auto-ir-ranges-sync')
+            raise AssertionError('unwritable checkpoint location accepted')
+        except RuntimeError as exc:
+            assert 'recovery directory path is occupied' in str(exc)
+        assert memberships(api) == before
+    finally:
+        api.call('/file/remove', **{'.id': blocked})
+        (served/'manifest-v2.json').write_bytes(manifest)
 
 
 def main():
@@ -152,13 +195,28 @@ def main():
     api.script(installer, 'lab-install')
     expected = {v: set(feed.data.decode().splitlines()) for v, feed in feeds.items()}
     assert memberships(api) == expected
+    assert not any(r['name'] == 'auto-ir-ranges-state' for r in api.call('/system/script/print'))
+    assert checkpoint(api) is None
     results = ['multi-page install exact membership']
     before = {v: api.call('/ip/firewall/address-list/print' if v==4 else '/ipv6/firewall/address-list/print') for v in (4,6)}
     api.script('/system script run auto-ir-ranges-sync')
     after = {v: api.call('/ip/firewall/address-list/print' if v==4 else '/ipv6/firewall/address-list/print') for v in (4,6)}
     assert before == after
+    assert checkpoint(api) is None
     results.append('repeat-run idempotence including entry IDs')
     print(results, flush=True)
+    # A damaged pending record must not be mistaken for an idle checkpoint.
+    if not any(r['name'] == 'auto-ir-ranges' for r in api.call('/file/print')):
+        api.call('/file/add', name='auto-ir-ranges', type='directory')
+    for damaged in ('', '{', '{"generation":"'+'a'*64+'","previous4":"bad","previous6":350}'):
+        row = api.call('/file/add', name='auto-ir-ranges/state.json', type='file', contents=damaged)[0]['ret']
+        try:
+            api.script('/system script run auto-ir-ranges-sync')
+            raise AssertionError('damaged checkpoint accepted')
+        except RuntimeError:
+            assert memberships(api) == expected
+        api.call('/file/remove', **{'.id': row})
+    results.append('empty, malformed and invalid checkpoint counts leave lists unchanged')
     # Corrupt/missing/mixed-generation/capacity failures must leave BOTH families intact.
     page = served/manifest['ipv6']['pages'][-1]['file']
     content = page.read_bytes()
@@ -207,12 +265,19 @@ def main():
         assert 'lab interruption' in str(exc)
     partial = memberships(api)
     assert expected[4] <= partial[4] and expected[6] <= partial[6], 'old entries pruned before all additions'
+    pending = checkpoint(api)
+    assert json.loads(pending)['generation'] == target['generation']
     api.call('/system/script/set', **{'.id': sync['.id'], 'source': real})
     # A newer pointer must not interfere with finishing the pending immutable generation.
     serve_fixture(served, fixture(1300,450,offset=200000), '2026-09-17T14:00:00Z')
+    api = reboot(api)
+    assert checkpoint(api) == pending
+    assert memberships(api) == partial
     api.script('/system script run auto-ir-ranges-sync')
     assert memberships(api) == {v: set(f.data.decode().splitlines()) for v,f in next_feeds.items()}
-    results.append('interrupted add phase resumes pinned generation before newer pointer')
+    assert checkpoint(api) is None
+    results.append('interrupted add survives reboot and resumes pinned generation before newer pointer')
+    print(results[-1], flush=True)
     # Interrupt pruning after all new addresses have been staged.
     latest = fixture(1300,450,offset=200000)
     prune_interrupt = real.replace(':set removedV4 ($removedV4 + 1)', ':set removedV4 ($removedV4 + 1); :if ($removedV4 = 17) do={ :error "lab prune interruption" }')
@@ -224,10 +289,47 @@ def main():
         assert 'lab prune interruption' in str(exc)
     staged = memberships(api)
     assert all(set(f.data.decode().splitlines()) <= staged[v] for v,f in latest.items())
+    # Simulate upgrading from the old script-comment checkpoint during recovery.
+    pending = checkpoint(api)
+    api.call('/system/script/add', name='auto-ir-ranges-state', source='', policy='read', comment=pending)
+    api.call('/file/remove', **{'.id': next(r['.id'] for r in api.call('/file/print') if r['name'] == 'auto-ir-ranges/state.json')})
+    serve_fixture(served, fixture(1400,475,offset=300000), '2026-09-17T15:00:00Z')
+    migrating = installer.replace(':delay 45s', ':delay 45s; :error "lab migration interruption"')
+    try:
+        api.script(migrating, 'lab-migrate')
+        raise AssertionError('migration interruption not reached')
+    except RuntimeError as exc:
+        assert 'lab migration interruption' in str(exc)
+    assert checkpoint(api) == pending
+    assert memberships(api) == staged
+    assert next(r for r in api.call('/system/script/print') if r['name'] == 'auto-ir-ranges-state')['comment'] == pending
+    api.script(installer, 'lab-install')
+    assert memberships(api) == {v: set(f.data.decode().splitlines()) for v,f in latest.items()}
+    assert checkpoint(api) is None
+    assert not any(r['name'] == 'auto-ir-ranges-state' for r in api.call('/system/script/print'))
+    results.append('pending legacy migration survives interruption, finishes pruning and removes old script')
+    print(results[-1], flush=True)
+    # A device exposing flash/ must keep its checkpoint there, not at the root.
+    api.call('/file/add', name='flash', type='directory')
+    sync = next(r for r in api.call('/system/script/print') if r['name'] == 'auto-ir-ranges-sync')
+    real = sync['source']
+    interrupted = real.replace(':set addedV4 ($addedV4 + 1)', ':set addedV4 ($addedV4 + 1); :if ($addedV4 = 17) do={ :error "lab flash interruption" }')
+    api.call('/system/script/set', **{'.id': sync['.id'], 'source': interrupted})
+    try:
+        api.script('/system script run auto-ir-ranges-sync')
+        raise AssertionError('flash interruption not reached')
+    except RuntimeError as exc:
+        assert 'lab flash interruption' in str(exc)
+    assert checkpoint(api) is None
+    assert checkpoint(api, 'flash/') is not None
     api.call('/system/script/set', **{'.id': sync['.id'], 'source': real})
     api.script('/system script run auto-ir-ranges-sync')
-    assert memberships(api) == {v: set(f.data.decode().splitlines()) for v,f in latest.items()}
-    results.append('interrupted prune preserves desired coverage and rerun finishes')
+    assert memberships(api) == {v: set(f.data.decode().splitlines()) for v,f in fixture(1400,475,offset=300000).items()}
+    assert checkpoint(api, 'flash/') is None
+    api.call('/file/remove', **{'.id': next(r['.id'] for r in api.call('/file/print') if r['name'] == 'flash')})
+    results.append('flash path selected and checkpoint removed after successful recovery')
+    check_storage_failure(api, served)
+    results.append('unwritable checkpoint location leaves lists unchanged')
     (work/'results.json').write_text(json.dumps({'routeros': api.call('/system/resource/print')[0]['version'], 'checks': results}, indent=2)+'\n')
     print(json.dumps(results), flush=True)
     server.shutdown()
