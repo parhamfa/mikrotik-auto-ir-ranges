@@ -17,7 +17,7 @@ from pathlib import Path
 from typing import Callable, Iterable, Mapping, Sequence
 
 from . import __version__
-from . import coverage
+from . import coverage, delivery, dns, catalogue
 from .errors import GenerationError
 
 
@@ -37,8 +37,8 @@ SOURCE_URLS = {
 }
 
 DEFAULT_LIMITS = {
-    4: {"min_count": 1_000, "max_count": 5_000, "max_bytes": 60 * 1024},
-    6: {"min_count": 300, "max_count": 2_000, "max_bytes": 60 * 1024},
+    4: {"min_count": 1_000, "max_count": 50_000, "max_bytes": 3 * 1024 * 1024},
+    6: {"min_count": 300, "max_count": 50_000, "max_bytes": 3 * 1024 * 1024},
 }
 
 
@@ -62,6 +62,10 @@ class GeneratedArtifacts:
     ipv6: Feed
     manifest: bytes
     coverage: bytes | None = None
+    paged_manifest: bytes | None = None
+    pages: Mapping[str, bytes] | None = None
+    provenance: bytes | None = None
+    dns_cache: bytes | None = None
 
 
 def download(
@@ -119,6 +123,7 @@ def parse_iptoasn_rows(
     country_code: str = COUNTRY_CODE,
     include_asns: Iterable[int] = (),
     expected_descriptions: Mapping[int, str] | None = None,
+    details: list | None = None,
 ) -> tuple[list[ipaddress._BaseNetwork], set[int]]:
     """Select IR-labelled rows OR independently identified Iranian operator ASNs."""
     text = payload.decode("utf-8", "strict") if isinstance(payload, bytes) else payload
@@ -137,8 +142,6 @@ def parse_iptoasn_rows(
             row_asn = int(parts[2])
         except ValueError as exc:
             raise GenerationError(f"invalid ASN at IPtoASN line {line_number}") from exc
-        if parts[3].strip().upper() != wanted_country and row_asn not in selected_asns:
-            continue
         try:
             first = ipaddress.ip_address(parts[0].strip())
             last = ipaddress.ip_address(parts[1].strip())
@@ -147,12 +150,18 @@ def parse_iptoasn_rows(
             raise GenerationError(f"invalid Iranian IPtoASN row at line {line_number}") from exc
         if first.version != version or last.version != version or first > last:
             raise GenerationError(f"wrong or reversed range at IPtoASN line {line_number}")
-        if asn <= 0:
+        if not 0 <= asn < 2**32:
             raise GenerationError(f"invalid ASN at IPtoASN line {line_number}: {asn}")
+        if parts[3].strip().upper() != wanted_country and row_asn not in selected_asns:
+            continue
+        if asn == 0:
+            raise GenerationError(f"unassigned ASN in selected IPtoASN row {line_number}")
         if expected_descriptions and asn in expected_descriptions:
             first_word = parts[4].split()[0].upper() if len(parts) > 4 and parts[4].strip() else ""
             if first_word != expected_descriptions[asn].upper():
                 raise GenerationError(f"reviewed operator AS{asn} identity changed: {first_word}")
+        if details is not None:
+            details.append({"asn": asn, "country": parts[3], "description": parts[4] if len(parts) > 4 else "", "first": str(first), "last": str(last), "selection": "IR label" if parts[3] == wanted_country else "selected ASN"})
         asns.add(asn)
         networks.extend(ipaddress.summarize_address_range(first, last))
 
@@ -168,12 +177,13 @@ def parse_iptoasn_gzip(
     country_code: str = COUNTRY_CODE,
     include_asns: Iterable[int] = (),
     expected_descriptions: Mapping[int, str] | None = None,
+    details: list | None = None,
 ) -> tuple[list[ipaddress._BaseNetwork], set[int]]:
     try:
         uncompressed = gzip.decompress(payload)
     except (OSError, EOFError) as exc:
         raise GenerationError(f"invalid IPv{version} IPtoASN gzip stream") from exc
-    return parse_iptoasn_rows(uncompressed, version, country_code=country_code, include_asns=include_asns, expected_descriptions=expected_descriptions)
+    return parse_iptoasn_rows(uncompressed, version, country_code=country_code, include_asns=include_asns, expected_descriptions=expected_descriptions, details=details)
 
 
 def collapse_networks(
@@ -263,6 +273,8 @@ def generate_from_sources(
     policy: Mapping | None = None,
 ) -> GeneratedArtifacts:
     policy = coverage.load_policy() if policy is None else policy
+    if policy.get("schema") == 2:
+        catalogue.validate(policy)
     effective_urls = {**source_urls, **coverage.source_urls(policy), "dns_snapshot": "coverage-policy.json#dns_resolvers"}
     missing = sorted(set(effective_urls) - set(source_payloads))
     if missing:
@@ -271,23 +283,28 @@ def generate_from_sources(
     country_v4 = parse_country_zone(source_payloads["ipdeny_ipv4"], 4)
     country_v6 = parse_country_zone(source_payloads["ipdeny_ipv6"], 6)
     anchors = coverage.extra_asns(policy)
-    reference_time = datetime.fromisoformat(generated_at.replace("Z", "+00:00")) if generated_at else None
-    registry, registered_asns, registry_stats = coverage.parse_delegated(source_payloads["nro_delegated"], anchors=anchors, now=reference_time)
+    reference_time = datetime.fromisoformat(generated_at.replace("Z", "+00:00")) if generated_at else datetime.now(timezone.utc).replace(microsecond=0)
+    registry_details, asn_details = [], []
+    registry, registered_asns, registry_stats = coverage.parse_delegated(source_payloads["nro_delegated"], anchors=anchors, now=reference_time, details=registry_details)
     if len(registered_asns) < policy["registry_min_asns"]:
         raise GenerationError(f"registry returned too few selected ASNs: {len(registered_asns)}")
     selected_asns = registered_asns | set(anchors)
-    asn_v4, asns_v4 = parse_iptoasn_gzip(source_payloads["iptoasn_ipv4"], 4, include_asns=selected_asns, expected_descriptions=anchors)
-    asn_v6, asns_v6 = parse_iptoasn_gzip(source_payloads["iptoasn_ipv6"], 6, include_asns=selected_asns, expected_descriptions=anchors)
+    asn_v4, asns_v4 = parse_iptoasn_gzip(source_payloads["iptoasn_ipv4"], 4, include_asns=selected_asns, expected_descriptions=anchors, details=asn_details)
+    asn_v6, asns_v6 = parse_iptoasn_gzip(source_payloads["iptoasn_ipv6"], 6, include_asns=selected_asns, expected_descriptions=anchors, details=asn_details)
     absent_operators = set(anchors) - (asns_v4 | asns_v6)
     if absent_operators:
         raise GenerationError(f"reviewed operator ASNs disappeared from the routing dataset: {sorted(absent_operators)}")
 
-    dns, dns_records = coverage.parse_dns_snapshot(source_payloads["dns_snapshot"], policy, now=reference_time)
+    if json.loads(source_payloads["dns_snapshot"])["schema"] == 2:
+        dns_networks, dns_records, dns_status = dns.evaluate(source_payloads["dns_snapshot"], policy, now=reference_time)
+    else:
+        dns_networks, dns_records = coverage.parse_dns_snapshot(source_payloads["dns_snapshot"], policy, now=reference_time)
+        dns_status = {"outcomes": [], "unresolved_services": [], "resolver_disagreements": []}
     layers = {
         "ipdeny_ipv4": (4, country_v4), "ipdeny_ipv6": (6, country_v6),
         "registered_resources_ipv4": (4, registry[4]), "registered_resources_ipv6": (6, registry[6]),
         "selected_asn_ipv4": (4, asn_v4), "selected_asn_ipv6": (6, asn_v6),
-        "service_dns_ipv4": (4, dns[4]), "service_dns_ipv6": (6, dns[6]),
+        "service_dns_ipv4": (4, dns_networks[4]), "service_dns_ipv6": (6, dns_networks[6]),
     }
     for provider in policy["providers"]:
         key = f"provider_{provider['id']}"
@@ -300,7 +317,7 @@ def generate_from_sources(
     parse_and_validate_zone(feed_v4.data, 4, limits=limits)
     parse_and_validate_zone(feed_v6.data, 6, limits=limits)
 
-    timestamp = generated_at or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace(
+    timestamp = generated_at or reference_time.isoformat().replace(
         "+00:00", "Z"
     )
     manifest = {
@@ -368,8 +385,16 @@ def generate_from_sources(
         "layers": coverage.coverage_report(layers, {4: collapsed_v4, 6: collapsed_v6}, {4: collapse_networks([*country_v4, *baseline_v4], 4), 6: collapse_networks([*country_v6, *baseline_v6], 6)}),
         "service_domains": len(policy["services"]),
         "dns_records": dns_records,
+        "dns": dns_status,
+        "known_source_completeness_percent": 100,
+        "measured_lab_recall": None,
+        "discovery": {"report": "discovery/report.json", "admission": "Only reviewed catalogue entries are collected; pending discovery is reported separately."},
     }
-    return GeneratedArtifacts(feed_v4, feed_v6, manifest_bytes, (json.dumps(report, indent=2, sort_keys=True) + "\n").encode())
+    from .provenance import build_provenance
+    provenance = build_provenance(policy, layers, registry_details, asn_details, dns_records, manifest)
+    paged_manifest, pages = delivery.build({4: feed_v4, 6: feed_v6}, generated_at=timestamp, generator_version=__version__)
+    report["delivery"] = {"generation": json.loads(paged_manifest)["generation"], "legacy_compatible": json.loads(paged_manifest)["legacy_compatible"]}
+    return GeneratedArtifacts(feed_v4, feed_v6, manifest_bytes, (json.dumps(report, indent=2, sort_keys=True) + "\n").encode(), paged_manifest, pages, provenance, source_payloads["dns_snapshot"])
 
 
 def _atomic_write(path: Path, data: bytes) -> None:
@@ -408,14 +433,19 @@ def publish_artifacts(
     """Atomically write changed feeds. Preserve the old manifest on unchanged runs."""
     output_dir.mkdir(parents=True, exist_ok=True)
     previous_dir = previous_dir or output_dir
+    legacy_shrink = False
     for filename, feed, version in (
         ("ir-ipv4.zone", artifacts.ipv4, 4),
         ("ir-ipv6.zone", artifacts.ipv6, 6),
     ):
         prior = _previous_count(previous_dir / filename, version)
         if prior is not None:
-            validate_shrink(feed.count, prior, version)
+            if artifacts.paged_manifest is None:
+                validate_shrink(feed.count, prior, version)
+            elif feed.count * 2 < prior:
+                legacy_shrink = True
 
+    prior_report = {}
     if artifacts.coverage is not None:
         report = json.loads(artifacts.coverage)
         prior_report_path = previous_dir / "coverage.json"
@@ -430,6 +460,63 @@ def publish_artifacts(
                         if int(stats[metric]) * 10 < int(old[metric]) * 9:
                             raise GenerationError(f"{name} {metric} shrank by more than 10%; review the provider change")
 
+    if artifacts.paged_manifest is not None:
+        desired = delivery.validate(artifacts.paged_manifest, artifacts.pages.__getitem__)
+        old_v2 = previous_dir / "manifest-v2.json"
+        manifest_v2 = json.loads(artifacts.paged_manifest)
+        if old_v2.exists():
+            old = delivery.validate(old_v2.read_bytes(), lambda name: (previous_dir/name).read_bytes())
+        else:
+            old = {v: parse_and_validate_zone((previous_dir/f"ir-ipv{v}.zone").read_bytes(), v) if (previous_dir/f"ir-ipv{v}.zone").exists() else [] for v in (4, 6)}
+        if old_v2.exists():
+            old_manifest_v2 = json.loads(old_v2.read_bytes())
+            if old_manifest_v2["generation"] == manifest_v2["generation"]:
+                for version in (4, 6):
+                    if "dns_only_shrink" in old_manifest_v2[f"ipv{version}"]:
+                        manifest_v2[f"ipv{version}"]["dns_only_shrink"] = old_manifest_v2[f"ipv{version}"]["dns_only_shrink"]
+        for version in (4, 6):
+            if len(desired[version]) * 2 < len(old[version]):
+                proof = delivery.dns_shrink_proof(old[version], desired[version], prior_report.get("dns_records", []), version)
+                if proof is None:
+                    validate_shrink(len(desired[version]), len(old[version]), version)
+                manifest_v2[f"ipv{version}"]["dns_only_shrink"] = proof
+        # Legacy updaters cannot honor a reviewed DNS-only shrink exception.
+        if legacy_shrink:
+            manifest_v2["legacy_compatible"] = False
+        paged_manifest = delivery.encoded(manifest_v2)
+        pages = dict(artifacts.pages)
+        pages[f"generations/{manifest_v2['generation']}/manifest.json"] = paged_manifest
+        report_bytes = artifacts.coverage
+        if report_bytes is not None:
+            current_report = json.loads(report_bytes)
+            current_report["delivery"] = {"generation": manifest_v2["generation"], "legacy_compatible": manifest_v2["legacy_compatible"], "dns_only_shrink": {f"ipv{v}": manifest_v2[f"ipv{v}"].get("dns_only_shrink") for v in (4, 6)}}
+            report_bytes = (json.dumps(current_report, indent=2, sort_keys=True)+"\n").encode()
+        # Preflight immutable paths before writing anything.
+        for name, data in pages.items():
+            path = output_dir / name
+            if path.exists() and path.read_bytes() != data:
+                raise GenerationError(f"immutable generation page changed: {name}")
+        v2_changed = not (output_dir/"manifest-v2.json").exists() or (output_dir/"manifest-v2.json").read_bytes() != paged_manifest
+        for name, data in pages.items():
+            if not (output_dir/name).exists():
+                _atomic_write(output_dir/name, data)
+        for name, data in (("provenance.json.gz", artifacts.provenance), ("dns-cache.json", artifacts.dns_cache), ("coverage.json", report_bytes)):
+            if data is not None:
+                _atomic_write(output_dir/name, data)
+        _atomic_write(output_dir/"manifest-v2.json", paged_manifest)
+        compatible = manifest_v2["legacy_compatible"]
+        _atomic_write(output_dir/"legacy-status.json", delivery.encoded({"schema": 1, "upgrade_required": not compatible, "message": "v1 receives the complete feed" if compatible else "v1 is frozen at its last valid generation; install the v2 updater", "latest_generation": json.loads(artifacts.paged_manifest)["generation"]}))
+        if not compatible:
+            # Never publish a shortened list to old clients. Preserve all three v1 files.
+            for name in ("ir-ipv4.zone", "ir-ipv6.zone", "manifest.json"):
+                old_path = previous_dir/name
+                if previous_dir != output_dir and old_path.exists():
+                    _atomic_write(output_dir/name, old_path.read_bytes())
+            print("UPGRADE REQUIRED: legacy v1 endpoints frozen; complete feed is on manifest-v2.json", file=sys.stderr)
+            return v2_changed
+
+    if artifacts.paged_manifest is None:
+        report_bytes = artifacts.coverage
     v4_path = output_dir / "ir-ipv4.zone"
     v6_path = output_dir / "ir-ipv6.zone"
     manifest_path = output_dir / "manifest.json"
@@ -449,15 +536,15 @@ def publish_artifacts(
         and same_contract
     )
     if unchanged:
-        if artifacts.coverage is not None:
-            _atomic_write(output_dir / "coverage.json", artifacts.coverage)
-        return False
+        if report_bytes is not None:
+            _atomic_write(output_dir / "coverage.json", report_bytes)
+        return v2_changed if artifacts.paged_manifest is not None else False
 
     _atomic_write(v4_path, artifacts.ipv4.data)
     _atomic_write(v6_path, artifacts.ipv6.data)
     _atomic_write(output_dir / "manifest.json", artifacts.manifest)
-    if artifacts.coverage is not None:
-        _atomic_write(output_dir / "coverage.json", artifacts.coverage)
+    if report_bytes is not None:
+        _atomic_write(output_dir / "coverage.json", report_bytes)
     return True
 
 
@@ -467,6 +554,7 @@ def build_live_artifacts(
     generated_at: str | None = None,
     policy: Mapping | None = None,
     source_dir: Path | None = None,
+    previous_dns: bytes | None = None,
 ) -> GeneratedArtifacts:
     policy = coverage.load_policy() if policy is None else policy
     urls = {**source_urls, **coverage.source_urls(policy)}
@@ -477,7 +565,7 @@ def build_live_artifacts(
         return name, download(urls[name], timeout=60)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
         payloads = dict(executor.map(fetch, sorted(urls)))
-    payloads["dns_snapshot"] = (source_dir / "dns_snapshot").read_bytes() if source_dir is not None else coverage.collect_dns(policy)
+    payloads["dns_snapshot"] = (source_dir / "dns_snapshot").read_bytes() if source_dir is not None else dns.collect(policy, previous_dns)
     return generate_from_sources(
         payloads,
         generated_at=generated_at,
@@ -500,7 +588,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        artifacts = build_live_artifacts(generated_at=args.generated_at, policy=coverage.load_policy(args.policy), source_dir=args.source_dir)
+        cache_path = (args.previous_dir or args.output_dir) / "dns-cache.json"
+        artifacts = build_live_artifacts(generated_at=args.generated_at, policy=coverage.load_policy(args.policy), source_dir=args.source_dir, previous_dns=cache_path.read_bytes() if cache_path.exists() else None)
         changed = publish_artifacts(
             artifacts,
             args.output_dir,

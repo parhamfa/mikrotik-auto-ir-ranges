@@ -41,7 +41,8 @@ jobs:
         working-directory: published
         shell: bash
         run: |
-          git add ir-ipv4.zone ir-ipv6.zone manifest.json coverage.json
+          git add ir-ipv4.zone ir-ipv6.zone manifest.json manifest-v2.json
+          git add generations coverage.json provenance.json.gz dns-cache.json legacy-status.json
           if git diff --cached --quiet; then
             echo "Feeds and coverage evidence are unchanged."
             exit 0
