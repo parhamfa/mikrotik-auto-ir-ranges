@@ -1,179 +1,66 @@
 # MikroTik Auto Iran Ranges
 
-Credential-free, self-updating Iran IPv4 and IPv6 address lists for MikroTik
-RouterOS 7.20 or newer.
+Automatically updates `Iran_IPV4` and `Iran_IPV6` address lists on MikroTik.
+GitHub builds the feed daily; each router downloads it directly over HTTPS.
 
-GitHub Actions builds a guarded, evidence-based feed once a day. Each router
-fetches that feed directly over certificate-validated HTTPS and updates its own
-`Iran_IPV4` and `Iran_IPV6` lists at **03:00 router-local time**. No router API
-service, central controller, or stored router password is required.
+## Install
 
-## Install v2.0.0
-
-First confirm that the router clock and timezone are correct, then export the
-configuration. RouterOS exports hide sensitive values by default:
-
-```routeros
-/system clock print
-/export file=before-auto-ir-ranges
-```
-
-Then paste this single line into a RouterOS terminal:
+Requires **RouterOS 7.20+** and access to GitHub. Paste this into the router terminal:
 
 ```routeros
 :if ([:pick [/system resource get version] 0 4] = "7.20") do={ /certificate settings set builtin-trust-anchors=trusted }; /tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.0/routeros/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
 ```
 
-The installer performs a successful initial sync before enabling the scheduler.
-It does not create or change firewall, mangle, NAT, routing, or WireGuard rules.
-The 7.20 preamble enables MikroTik's built-in root CAs, which are disabled by
-default on some upgraded routers. The raw immutable tag URL is intentional:
-RouterOS 7.20 does not follow GitHub release-asset redirects.
+This syncs both lists and schedules updates for **03:00 router-local time**.
+Use the list names in your own routing and firewall rules; the installer only
+manages the lists and updater. Keep manual exceptions in a separate list.
 
-On RouterOS 7.21 or newer, `check-certificate=yes` uses the built-in trust store.
-If you intentionally restricted that store and the fetch reports no trusted CA,
-allow the `fetch` service under `/certificate settings`; do not disable
-certificate checking.
+## How it works
 
-## Verify
+1. **Collect:** IPdeny supplies Iran country ranges. NRO supplies registered
+   allocations and ASNs. IPtoASN adds Iran-labelled ranges and ranges associated
+   with selected ASNs.
+2. **Extend:** a reviewed [catalogue](coverage-policy.json) adds operator
+   affiliations, provider-published ranges and public DNS addresses for listed
+   services. A service on shared hosting adds its exact addresses, not the
+   hosting provider's entire network.
+3. **Publish:** combine and deduplicate the ranges, validate the result, and
+   publish a versioned feed on the [`data` branch](https://github.com/parhamfa/mikrotik-auto-ir-ranges/tree/data).
+4. **Sync:** routers validate every page, add missing entries, then remove stale
+   entries. Interrupted updates resume on the next run.
 
-```routeros
-/ip firewall address-list print count-only where list="Iran_IPV4"
-/ipv6 firewall address-list print count-only where list="Iran_IPV6"
-/system scheduler print detail where name="auto-ir-ranges-daily"
-/log print where message~"auto-ir-ranges"
-```
+Discovery searches global ASN descriptions, registry information and community
+lists for more operators and services. Candidates stay separate from the feed;
+a weekly investigator proposes catalogue changes through reviewed pull requests.
+Accepted sources then refresh automatically.
 
-Compare the two counts with the current
-[`manifest-v2.json`](https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/manifest-v2.json).
-The scheduler should be enabled with `start-time=03:00:00` and `interval=1d`.
+Coverage depends on the sources and catalogue. Service DNS is a daily snapshot;
+shared addresses can also serve unrelated sites.
 
-Run an immediate refresh at any time:
+## Management
+
+Refresh now:
 
 ```routeros
 /system script run auto-ir-ranges-sync
 ```
 
-An unchanged run validates the remote data but performs no address-list writes.
-
-## Ownership and migration
-
-`Iran_IPV4` and `Iran_IPV6` are fully managed. The first run adopts existing
-entries in those lists, adds missing CIDRs before removing stale ones, removes
-duplicates, and applies the comment `managed:mikrotik-auto-ir-ranges`.
-Manual entries placed in either managed list will be removed on the next sync.
-Use a different list name for local exceptions.
-
-Existing rules referencing these two list names continue to work unchanged.
-Disable any old `adlist.py` cron/launchd job before installation so there is only
-one writer. Do not copy `mikrotik_config.json` into this repository; after all
-routers have migrated, remove that credential file and rotate the stored router
-passwords.
-
-## Safety model
-
-Before changing either list, the router validates the complete paged generation:
-
-- TLS certificates, manifest schema, filenames, byte sizes, and SHA-512 hashes.
-- Exact CIDR counts, address families, prefix lengths, and duplicate rows.
-- Bounds of 1,000–50,000 IPv4 and 300–50,000 IPv6 CIDRs.
-- Immutable numbered pages of at most 48 KiB and a greater-than-50% shrink rejection.
-- Storage and memory capacity for the transient union; no truncation.
-
-The publisher independently applies the same count, size, syntax, and shrink
-guards. Failed generation leaves the `data` branch untouched. Address-list
-updates add missing entries in both families before pruning. A persistent journal
-lets interrupted updates resume the same immutable generation.
-
-## Upgrade, stop, and uninstall
-
-Router code never updates itself. To upgrade, review the release and run the
-new release's version-pinned install command.
-
-Temporarily stop updates without changing the lists:
+Check the updater log:
 
 ```routeros
-/system scheduler disable [find where name="auto-ir-ranges-daily"]
+/log print where message~"auto-ir-ranges"
 ```
 
-Uninstall v2.0.0 while retaining the last valid lists and every rule that uses
-them:
+The feed updates automatically. To update the router script, rerun the install
+command from the current README.
 
-```routeros
-/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.0/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
-```
+## Thanks to
 
-For rollback to the pre-migration list contents, first uninstall, then restore
-the two address lists from `before-auto-ir-ranges.rsc` or rerun the retired
-helper deliberately. Do not blindly import the entire export into a live router.
+Discovery builds on these community projects:
 
-## What the feed covers
+- [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) — Iran-related domain rules.
+- [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains) — service domain lists.
+- [Chocolate4U/Iran-v2ray-rules](https://github.com/Chocolate4U/Iran-v2ray-rules) — provider inventory sources and ranges.
 
-The generated set is the collapsed union of:
-
-- IPdeny Iran country IPv4 and IPv6 ranges.
-- NRO allocations and assignments registered to Iranian holders, plus resources
-  held by the same registered operators, including reviewed foreign affiliates.
-- IPtoASN ranges labelled `IR`, or originated by ASNs identified independently
-  through those registry records and the reviewed operator catalogue.
-- Official provider inventories, currently ArvanCloud and MizbanCloud.
-- Exact A/AAAA addresses of the service domains in
-  [`coverage-policy.json`](coverage-policy.json), observed through Google and
-  Cloudflare DNS. This includes shared hosting addresses, never the entire
-  hosting ASN merely because it hosts one Iranian website.
-
-Country registration, operator identity, and service identity are different
-signals. For example, ArvanCloud's AS208006 and AS57568 are labelled `AE`, so
-selecting only `IR` rows missed their networks even though Arvan published them.
-
-**There is no measured 99.99% guarantee for all Iran-related IPs.** The catalogue
-is not exhaustive, and DNS snapshots vary by resolver, geography, and time.
-The daily feed/router schedule does not follow DNS TTLs. Shared IPs can also
-serve unrelated foreign sites. These lists are a broad routing policy, not a
-geolocation or ownership certificate.
-
-Every successful build produces `coverage.json`: source hashes, registry
-freshness, per-layer coverage, additions beyond the legacy algorithm, and DNS
-observations with TTLs. Its known-source checks require complete containment,
-including coverage by multiple smaller prefixes. They prove that admitted
-evidence survived generation; they do not measure undiscovered networks.
-
-Provider feed failures, malformed/truncated registry data, stale snapshots,
-reviewed ASN identity changes, and provider shrinkage exceeding 10% abort
-publication. DNS lookup failures are reported separately: successful answers
-continue, while old observations may be reused for at most 48 hours at generation
-time. Previously published feeds remain available. Legacy v1 endpoints remain
-complete while they fit their old limits; otherwise they freeze and report that
-an updater upgrade is required.
-
-See [data sources and licensing](docs/data-sources.md) and
-[feed operations](docs/operations.md), plus the
-[2026-09-16 coverage audit](docs/coverage-audit-2026-09-16.md).
-
-## Discovery and review
-
-Systematic discovery → evidence-based investigation → reviewed catalogue →
-automatic collection → validation → publication → routers.
-
-A persistent candidate pool draws on the global ASN index, RDAP organization
-names, v2fly, bootmortis and Chocolate4U. Name similarity nominates candidates;
-verified affiliation is required before accepting ASNs. Shared source lineage,
-non-enumerable domain rules and unresolved evidence stay visible. A weekly Codex
-investigator prepares catalogue/evidence PRs, including older unreviewed leads.
-It does not merge PRs or publish production feeds.
-
-Use `scripts/discover.py` to search candidates, `scripts/explain.py IP-or-ASN` to
-trace inclusion, and `scripts/compare.py` to inspect projected address changes.
-See [the investigator instructions](docs/weekly-investigator.md) and
-[operations](docs/operations.md). The private evaluation lab measures observed
-misses separately; it supplies no private data to public proposals.
-
-## Development
-
-```bash
-python3 -m unittest discover -s tests -v
-python3 scripts/generate.py --output-dir build/data --previous-dir build/data
-```
-
-The Python generator has no third-party runtime dependencies. Code is MIT
-licensed; upstream data remains subject to its own terms.
+[Sources and selection](docs/data-sources.md) ·
+[Commands and maintenance](docs/operations.md)
