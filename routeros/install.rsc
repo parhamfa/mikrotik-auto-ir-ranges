@@ -22,6 +22,8 @@
     }
 }
 
+:if ([:len [/system script job find where script="auto-ir-ranges-sync"]] > 0) do={ :error "auto-ir-ranges: wait for the running sync before upgrading" }
+
 :if ([:len [/system scheduler find where name="auto-ir-ranges-daily"]] > 0) do={
     /system scheduler disable [/system scheduler find where name="auto-ir-ranges-daily"]
 }
