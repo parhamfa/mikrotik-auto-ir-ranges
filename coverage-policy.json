@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "registry_url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats",
   "registry_min_asns": 500,
   "operators": [
@@ -17,6 +17,76 @@
         "https://www.arvancloud.ir/fa/dev/ips",
         "https://rdap.db.ripe.net/autnum/208006",
         "https://rdap.db.ripe.net/autnum/57568"
+      ],
+      "state": "accepted",
+      "review_reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation.",
+      "relationships": [
+        {
+          "type": "asn_ownership",
+          "target": "AS202468",
+          "evidence": [
+            "https://www.arvancloud.ir/fa/dev/ips",
+            "https://rdap.db.ripe.net/autnum/208006",
+            "https://rdap.db.ripe.net/autnum/57568",
+            "https://rdap.db.ripe.net/autnum/202468"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation."
+        },
+        {
+          "type": "asn_ownership",
+          "target": "AS205585",
+          "evidence": [
+            "https://www.arvancloud.ir/fa/dev/ips",
+            "https://rdap.db.ripe.net/autnum/208006",
+            "https://rdap.db.ripe.net/autnum/57568",
+            "https://rdap.db.ripe.net/autnum/205585"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation."
+        },
+        {
+          "type": "asn_ownership",
+          "target": "AS208006",
+          "evidence": [
+            "https://www.arvancloud.ir/fa/dev/ips",
+            "https://rdap.db.ripe.net/autnum/208006",
+            "https://rdap.db.ripe.net/autnum/57568"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation."
+        },
+        {
+          "type": "asn_ownership",
+          "target": "AS57568",
+          "evidence": [
+            "https://www.arvancloud.ir/fa/dev/ips",
+            "https://rdap.db.ripe.net/autnum/208006",
+            "https://rdap.db.ripe.net/autnum/57568"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation."
+        },
+        {
+          "type": "operator_affiliation",
+          "target": "foreign-registered ArvanCloud networks",
+          "evidence": [
+            "https://www.arvancloud.ir/fa/dev/ips",
+            "https://rdap.db.ripe.net/autnum/208006",
+            "https://rdap.db.ripe.net/autnum/57568"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation."
+        }
+      ],
+      "aliases": [
+        "ArvanCloud",
+        "Abr Arvan",
+        "Noyan Abr Arvan"
+      ],
+      "websites": [
+        "https://www.arvancloud.ir/",
+        "https://www.arvancloud.com/"
       ]
     }
   ],
@@ -28,7 +98,21 @@
       "evidence": "https://www.arvancloud.ir/fa/dev/ips",
       "min_count": 10,
       "max_count": 256,
-      "min_prefixlen": 16
+      "min_prefixlen": 16,
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Official provider inventory reviewed during the v1.1.0 coverage audit.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://www.arvancloud.ir/fa/ips.txt",
+          "evidence": [
+            "https://www.arvancloud.ir/fa/dev/ips"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Official provider inventory reviewed during the v1.1.0 coverage audit."
+        }
+      ]
     },
     {
       "id": "mizbancloud",
@@ -37,7 +121,21 @@
       "evidence": "https://docs.mizbancloud.com/cdn/whitelist",
       "min_count": 6,
       "max_count": 256,
-      "min_prefixlen": 16
+      "min_prefixlen": 16,
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Official provider inventory reviewed during the v1.1.0 coverage audit.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://mizbancloud.com/ips.txt",
+          "evidence": [
+            "https://docs.mizbancloud.com/cdn/whitelist"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Official provider inventory reviewed during the v1.1.0 coverage audit."
+        }
+      ]
     }
   ],
   "dns_resolvers": {
@@ -45,25 +143,365 @@
     "cloudflare": "https://cloudflare-dns.com/dns-query"
   },
   "services": [
-    {"domain": "arvancloud.ir", "evidence": "https://www.arvancloud.ir/"},
-    {"domain": "mizbancloud.com", "evidence": "https://mizbancloud.com/"},
-    {"domain": "derak.cloud", "evidence": "https://derak.cloud/"},
-    {"domain": "hostiran.net", "evidence": "https://hostiran.net/"},
-    {"domain": "iranserver.com", "evidence": "https://www.iranserver.com/"},
-    {"domain": "parspack.com", "evidence": "https://parspack.com/"},
-    {"domain": "digikala.com", "evidence": "https://www.digikala.com/"},
-    {"domain": "www.digikala.com", "evidence": "https://www.digikala.com/"},
-    {"domain": "snapp.ir", "evidence": "https://snapp.ir/"},
-    {"domain": "snappfood.ir", "evidence": "https://snappfood.ir/"},
-    {"domain": "torob.com", "evidence": "https://torob.com/"},
-    {"domain": "divar.ir", "evidence": "https://divar.ir/"},
-    {"domain": "sheypoor.com", "evidence": "https://www.sheypoor.com/"},
-    {"domain": "aparat.com", "evidence": "https://www.aparat.com/"},
-    {"domain": "www.aparat.com", "evidence": "https://www.aparat.com/"},
-    {"domain": "filimo.com", "evidence": "https://www.filimo.com/"},
-    {"domain": "www.filimo.com", "evidence": "https://www.filimo.com/"},
-    {"domain": "namava.ir", "evidence": "https://www.namava.ir/"},
-    {"domain": "mci.ir", "evidence": "https://mci.ir/"},
-    {"domain": "my.irancell.ir", "evidence": "https://my.irancell.ir/"}
+    {
+      "domain": "arvancloud.ir",
+      "evidence": "https://www.arvancloud.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "arvancloud.ir",
+          "evidence": [
+            "https://www.arvancloud.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "mizbancloud.com",
+      "evidence": "https://mizbancloud.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "mizbancloud.com",
+          "evidence": [
+            "https://mizbancloud.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "derak.cloud",
+      "evidence": "https://derak.cloud/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "derak.cloud",
+          "evidence": [
+            "https://derak.cloud/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "hostiran.net",
+      "evidence": "https://hostiran.net/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "hostiran.net",
+          "evidence": [
+            "https://hostiran.net/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "iranserver.com",
+      "evidence": "https://www.iranserver.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "iranserver.com",
+          "evidence": [
+            "https://www.iranserver.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "parspack.com",
+      "evidence": "https://parspack.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "parspack.com",
+          "evidence": [
+            "https://parspack.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "digikala.com",
+      "evidence": "https://www.digikala.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "digikala.com",
+          "evidence": [
+            "https://www.digikala.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "www.digikala.com",
+      "evidence": "https://www.digikala.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.digikala.com",
+          "evidence": [
+            "https://www.digikala.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "snapp.ir",
+      "evidence": "https://snapp.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "snapp.ir",
+          "evidence": [
+            "https://snapp.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "snappfood.ir",
+      "evidence": "https://snappfood.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "snappfood.ir",
+          "evidence": [
+            "https://snappfood.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "torob.com",
+      "evidence": "https://torob.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "torob.com",
+          "evidence": [
+            "https://torob.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "divar.ir",
+      "evidence": "https://divar.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "divar.ir",
+          "evidence": [
+            "https://divar.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "sheypoor.com",
+      "evidence": "https://www.sheypoor.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "sheypoor.com",
+          "evidence": [
+            "https://www.sheypoor.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "aparat.com",
+      "evidence": "https://www.aparat.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "aparat.com",
+          "evidence": [
+            "https://www.aparat.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "www.aparat.com",
+      "evidence": "https://www.aparat.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.aparat.com",
+          "evidence": [
+            "https://www.aparat.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "filimo.com",
+      "evidence": "https://www.filimo.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "filimo.com",
+          "evidence": [
+            "https://www.filimo.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "www.filimo.com",
+      "evidence": "https://www.filimo.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.filimo.com",
+          "evidence": [
+            "https://www.filimo.com/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "namava.ir",
+      "evidence": "https://www.namava.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "namava.ir",
+          "evidence": [
+            "https://www.namava.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "mci.ir",
+      "evidence": "https://mci.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "mci.ir",
+          "evidence": [
+            "https://mci.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    },
+    {
+      "domain": "my.irancell.ir",
+      "evidence": "https://my.irancell.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-16",
+      "review_reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "my.irancell.ir",
+          "evidence": [
+            "https://my.irancell.ir/"
+          ],
+          "reviewed_on": "2026-09-16",
+          "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
+        }
+      ]
+    }
   ]
 }

@@ -1,0 +1,53 @@
+name: Refresh public discovery candidates
+
+on:
+  schedule:
+    - cron: "31 5 * * 6"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Both workflows update data; serialize their checkouts and pushes.
+concurrency:
+  group: publish-iran-ranges
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: source
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: data
+          path: published
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Refresh candidate pool without changing accepted inputs
+        id: refresh
+        continue-on-error: true
+        run: >-
+          python source/scripts/discover.py refresh
+          --output-dir published/discovery
+          --previous-dir published/discovery
+          --decisions source/candidate-decisions.json
+      - name: Preserve discoveries, licensing and explicit source failures
+        working-directory: published
+        run: |
+          test -f discovery/report.json
+          git add discovery
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "discovery: refresh public evidence and candidate backlog"
+          git push origin HEAD:data
+      - name: Report incomplete refresh
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo "Discovery refresh was incomplete. Inspect discovery/report.json; accepted feeds are independent."
+          exit 1

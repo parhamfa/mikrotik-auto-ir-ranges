@@ -8,7 +8,7 @@ fetches that feed directly over certificate-validated HTTPS and updates its own
 `Iran_IPV4` and `Iran_IPV6` lists at **03:00 router-local time**. No router API
 service, central controller, or stored router password is required.
 
-## Install v1.0.2
+## Install v2.0.0
 
 First confirm that the router clock and timezone are correct, then export the
 configuration. RouterOS exports hide sensitive values by default:
@@ -21,7 +21,7 @@ configuration. RouterOS exports hide sensitive values by default:
 Then paste this single line into a RouterOS terminal:
 
 ```routeros
-:if ([:pick [/system resource get version] 0 4] = "7.20") do={ /certificate settings set builtin-trust-anchors=trusted }; /tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v1.0.2/routeros/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
+:if ([:pick [/system resource get version] 0 4] = "7.20") do={ /certificate settings set builtin-trust-anchors=trusted }; /tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.0/routeros/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
 ```
 
 The installer performs a successful initial sync before enabling the scheduler.
@@ -45,7 +45,7 @@ certificate checking.
 ```
 
 Compare the two counts with the current
-[`manifest.json`](https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/manifest.json).
+[`manifest-v2.json`](https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/manifest-v2.json).
 The scheduler should be enabled with `start-time=03:00:00` and `interval=1d`.
 
 Run an immediate refresh at any time:
@@ -72,16 +72,18 @@ passwords.
 
 ## Safety model
 
-Before changing either list, the router validates all three downloads:
+Before changing either list, the router validates the complete paged generation:
 
 - TLS certificates, manifest schema, filenames, byte sizes, and SHA-512 hashes.
 - Exact CIDR counts, address families, prefix lengths, and duplicate rows.
-- Bounds of 1,000–5,000 IPv4 and 300–2,000 IPv6 CIDRs.
-- A 60 KiB maximum per feed and a greater-than-50% shrink rejection.
+- Bounds of 1,000–50,000 IPv4 and 300–50,000 IPv6 CIDRs.
+- Immutable numbered pages of at most 48 KiB and a greater-than-50% shrink rejection.
+- Storage and memory capacity for the transient union; no truncation.
 
 The publisher independently applies the same count, size, syntax, and shrink
 guards. Failed generation leaves the `data` branch untouched. Address-list
-updates are add-first, so a mid-run failure cannot create a coverage gap.
+updates add missing entries in both families before pruning. A persistent journal
+lets interrupted updates resume the same immutable generation.
 
 ## Upgrade, stop, and uninstall
 
@@ -94,11 +96,11 @@ Temporarily stop updates without changing the lists:
 /system scheduler disable [find where name="auto-ir-ranges-daily"]
 ```
 
-Uninstall v1.0.2 while retaining the last valid lists and every rule that uses
+Uninstall v2.0.0 while retaining the last valid lists and every rule that uses
 them:
 
 ```routeros
-/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v1.0.2/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
+/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.0/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
 ```
 
 For rollback to the pre-migration list contents, first uninstall, then restore
@@ -138,12 +140,33 @@ evidence survived generation; they do not measure undiscovered networks.
 
 Provider feed failures, malformed/truncated registry data, stale snapshots,
 reviewed ASN identity changes, and provider shrinkage exceeding 10% abort
-publication. Previously published feeds remain available. Existing v1.0.2
-router installations can consume the expanded schema-1 feeds without reinstalling.
+publication. DNS lookup failures are reported separately: successful answers
+continue, while old observations may be reused for at most 48 hours at generation
+time. Previously published feeds remain available. Legacy v1 endpoints remain
+complete while they fit their old limits; otherwise they freeze and report that
+an updater upgrade is required.
 
 See [data sources and licensing](docs/data-sources.md) and
 [feed operations](docs/operations.md), plus the
 [2026-09-16 coverage audit](docs/coverage-audit-2026-09-16.md).
+
+## Discovery and review
+
+Systematic discovery → evidence-based investigation → reviewed catalogue →
+automatic collection → validation → publication → routers.
+
+A persistent candidate pool draws on the global ASN index, RDAP organization
+names, v2fly, bootmortis and Chocolate4U. Name similarity nominates candidates;
+verified affiliation is required before accepting ASNs. Shared source lineage,
+non-enumerable domain rules and unresolved evidence stay visible. A weekly Codex
+investigator prepares catalogue/evidence PRs, including older unreviewed leads.
+It does not merge PRs or publish production feeds.
+
+Use `scripts/discover.py` to search candidates, `scripts/explain.py IP-or-ASN` to
+trace inclusion, and `scripts/compare.py` to inspect projected address changes.
+See [the investigator instructions](docs/weekly-investigator.md) and
+[operations](docs/operations.md). The private evaluation lab measures observed
+misses separately; it supplies no private data to public proposals.
 
 ## Development
 

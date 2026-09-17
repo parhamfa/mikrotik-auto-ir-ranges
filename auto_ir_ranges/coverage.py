@@ -20,7 +20,7 @@ REGISTRIES = {"afrinic", "apnic", "arin", "lacnic", "ripencc", "iana"}
 def load_policy(path: Path = POLICY_PATH) -> dict:
     try:
         policy = json.loads(path.read_text())
-        if policy["schema"] != 1:
+        if policy["schema"] not in (1, 2):
             raise ValueError("unsupported policy schema")
         domains = [item["domain"] for item in policy["services"]]
         if len(set(domains)) != len(domains):
@@ -48,6 +48,8 @@ def load_policy(path: Path = POLICY_PATH) -> dict:
                     raise ValueError("invalid reviewed ASN")
     except (OSError, ValueError, KeyError, TypeError) as exc:
         raise GenerationError(f"invalid coverage policy: {exc}") from exc
+    from .catalogue import validate
+    validate(policy)
     return policy
 
 
@@ -62,7 +64,7 @@ def source_urls(policy: Mapping) -> dict[str, str]:
     }
 
 
-def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetime | None = None) -> tuple[dict[int, list], set[int], dict]:
+def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetime | None = None, details: list | None = None) -> tuple[dict[int, list], set[int], dict]:
     """Select IR resources, plus resources held by the same registered operators.
 
     Opaque holder IDs are used only within this one snapshot and registry.
@@ -80,6 +82,7 @@ def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetim
             raise ValueError(f"registry snapshot is stale or future-dated: {header[5]}")
         wanted_asns = set(anchors)
         trusted_holders: set[tuple[str, str]] = set()
+        holder_seeds = {}
         count = 0
         selected = []
         for line in lines:
@@ -91,6 +94,17 @@ def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetim
             if len(fields) < 8 or fields[0] not in REGISTRIES or fields[2] not in ("asn", "ipv4", "ipv6"):
                 raise ValueError("malformed delegated statistics record")
             count += 1
+            # Validate the entire core dataset, including rows we do not select.
+            first_value, size_value = fields[3], int(fields[4])
+            if fields[2] == "asn":
+                if not 0 <= int(first_value) < 2**32 or not 1 <= size_value <= 2**32 or int(first_value)+size_value > 2**32:
+                    raise ValueError("invalid global ASN allocation")
+            elif fields[2] == "ipv4":
+                first_address = ipaddress.IPv4Address(first_value)
+                if size_value <= 0 or int(first_address)+size_value > 2**32:
+                    raise ValueError("invalid global IPv4 allocation")
+            else:
+                ipaddress.IPv6Network(f"{first_value}/{size_value}", strict=True)
             if fields[6] not in ("allocated", "assigned"):
                 continue
             anchor = fields[2] == "asn" and any(int(fields[3]) <= a < int(fields[3]) + int(fields[4]) for a in wanted_asns)
@@ -98,6 +112,7 @@ def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetim
                 selected.append(fields)
                 if fields[7]:
                     trusted_holders.add((fields[0], fields[7]))
+                    holder_seeds.setdefault((fields[0], fields[7]), {"country": fields[1], "type": fields[2], "start": fields[3], "value": fields[4], "reason": "IR label" if fields[1] == "IR" else "reviewed ASN anchor"})
         if count != expected_records:
             raise ValueError(f"truncated registry snapshot: {count} records, expected {expected_records}")
         selected_keys = {tuple(fields) for fields in selected}
@@ -109,6 +124,8 @@ def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetim
         networks: dict[int, list] = {4: [], 6: []}
         asns: set[int] = set()
         for fields in selected:
+            if details is not None:
+                details.append({"registry": fields[0], "country": fields[1], "type": fields[2], "start": fields[3], "value": fields[4], "snapshot": header[5], "holder_id_in_snapshot": fields[7], "holder_selection_evidence": holder_seeds.get((fields[0], fields[7])), "selection": "IR registration" if fields[1] == "IR" else "selected ASN or same holder within this registry and snapshot"})
             start, value = fields[3:5]
             if fields[2] == "asn":
                 first, size = int(start), int(value)

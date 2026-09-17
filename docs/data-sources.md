@@ -85,3 +85,29 @@ RIPEstat-ASN method. That measurement is historical, not a permanent guarantee.
 Upstream classifications can be incomplete or wrong. Treat these lists as a
 routing/firewall input with a rollback path, not as proof of legal jurisdiction
 or user location.
+
+## Discovery-only sources
+
+- [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community),
+  MIT: recursively read the pinned `category-ir` tree. Preserve include filters,
+  suffixes, exact hosts, keywords, regexes, attributes and unresolved rules.
+- [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains),
+  MIT: use a pinned release's domain asset and record its upstream source chain.
+  Its aggregation includes v2fly, so it does not independently corroborate that
+  list. Per-entry origins are not supplied; the grouping is conservative.
+- [Chocolate4U/Iran-v2ray-rules](https://github.com/Chocolate4U/Iran-v2ray-rules),
+  GPL-3.0: discover official inventory URLs from the pinned domestic-CDN build
+  script; read only matching provider files from a pinned release commit.
+  Preserve original-source URLs and the upstream license. Do not ingest its
+  compiled country list, separately licensed geolocation databases, or injected
+  and private address inputs as Iranian ownership evidence.
+- [IANA RDAP ASN bootstrap](https://data.iana.org/rdap/asn.json): locate the
+  authoritative registry for bounded ASN organization lookups. Save only public
+  network/registrant organization names, website links, source URLs, hashes and
+  dates; omit email, phone, address and abuse/technical-contact records.
+
+Upstream license texts are retained under `discovery/licenses/` on the data
+branch. Discovery-derived assertions retain upstream licensing; this project's
+MIT license does not override it. Candidates do not enter production feeds until
+reviewed public evidence supports the precise catalogue relationship. Shared
+lineage and repeated releases of the same assertion never multiply corroboration.
