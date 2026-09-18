@@ -4,7 +4,7 @@
       "ipv4": null,
       "ipv6": null
     },
-    "generation": "436f8bd8e066ba18ffbe1774c35abef9345de7b5ceaaa5448ba35005efb40cda",
+    "generation": "26632eae45d82aedfbaa3f89dd65aaf813907a55902faf949d7b6472ba64d028",
     "legacy_compatible": true
   },
   "discovery": {
@@ -21,12 +21,12 @@
           "185.143.234.200",
           "185.143.235.200"
         ],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.224661+00:00",
+        "age_seconds": 1,
+        "attempted_at": "2026-09-18T16:21:37.987307+00:00",
         "domain": "arvancloud.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.224642+00:00",
+        "observed_at": "2026-09-18T16:21:37.987297+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -34,11 +34,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.227305+00:00",
+        "attempted_at": "2026-09-18T16:21:38.165677+00:00",
         "domain": "arvancloud.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.227295+00:00",
+        "observed_at": "2026-09-18T16:21:38.165659+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -50,12 +50,12 @@
           "185.143.234.200",
           "185.143.235.200"
         ],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.235349+00:00",
+        "age_seconds": 1,
+        "attempted_at": "2026-09-18T16:21:37.981411+00:00",
         "domain": "arvancloud.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.235338+00:00",
+        "observed_at": "2026-09-18T16:21:37.981391+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -63,11 +63,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.244614+00:00",
+        "attempted_at": "2026-09-18T16:21:38.054277+00:00",
         "domain": "arvancloud.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.244606+00:00",
+        "observed_at": "2026-09-18T16:21:38.054260+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -78,11 +78,11 @@
           "185.226.142.142"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.344863+00:00",
+        "attempted_at": "2026-09-18T16:21:38.368042+00:00",
         "domain": "mizbancloud.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.344846+00:00",
+        "observed_at": "2026-09-18T16:21:38.368027+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -90,11 +90,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.347062+00:00",
+        "attempted_at": "2026-09-18T16:21:38.342241+00:00",
         "domain": "mizbancloud.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.347053+00:00",
+        "observed_at": "2026-09-18T16:21:38.342227+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -105,11 +105,11 @@
           "185.226.142.142"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.426861+00:00",
+        "attempted_at": "2026-09-18T16:21:38.312718+00:00",
         "domain": "mizbancloud.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.426852+00:00",
+        "observed_at": "2026-09-18T16:21:38.312701+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -117,11 +117,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.414552+00:00",
+        "attempted_at": "2026-09-18T16:21:38.292799+00:00",
         "domain": "mizbancloud.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.414533+00:00",
+        "observed_at": "2026-09-18T16:21:38.292789+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -132,11 +132,11 @@
           "5.145.118.2"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.326885+00:00",
+        "attempted_at": "2026-09-18T16:21:38.264991+00:00",
         "domain": "derak.cloud",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.326866+00:00",
+        "observed_at": "2026-09-18T16:21:38.264982+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -146,11 +146,11 @@
           "2a04:2f00:e:1::a2"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.441661+00:00",
+        "attempted_at": "2026-09-18T16:21:38.252759+00:00",
         "domain": "derak.cloud",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.441653+00:00",
+        "observed_at": "2026-09-18T16:21:38.252742+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -161,11 +161,11 @@
           "5.145.118.2"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.450510+00:00",
+        "attempted_at": "2026-09-18T16:21:38.964666+00:00",
         "domain": "derak.cloud",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.450502+00:00",
+        "observed_at": "2026-09-18T16:21:38.964654+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -175,11 +175,11 @@
           "2a04:2f00:e:1::a2"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.458063+00:00",
+        "attempted_at": "2026-09-18T16:21:38.966213+00:00",
         "domain": "derak.cloud",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.458053+00:00",
+        "observed_at": "2026-09-18T16:21:38.966205+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -190,11 +190,11 @@
           "185.143.234.238"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.345268+00:00",
+        "attempted_at": "2026-09-18T16:21:38.495435+00:00",
         "domain": "hostiran.net",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.345259+00:00",
+        "observed_at": "2026-09-18T16:21:38.495426+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -202,11 +202,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.483549+00:00",
+        "attempted_at": "2026-09-18T16:21:38.487483+00:00",
         "domain": "hostiran.net",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.483538+00:00",
+        "observed_at": "2026-09-18T16:21:38.487475+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -217,11 +217,11 @@
           "185.143.234.238"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.360134+00:00",
+        "attempted_at": "2026-09-18T16:21:38.384362+00:00",
         "domain": "hostiran.net",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.360123+00:00",
+        "observed_at": "2026-09-18T16:21:38.384351+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -229,11 +229,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.362478+00:00",
+        "attempted_at": "2026-09-18T16:21:38.484533+00:00",
         "domain": "hostiran.net",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.362470+00:00",
+        "observed_at": "2026-09-18T16:21:38.484513+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -243,11 +243,11 @@
           "91.247.174.1"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.544543+00:00",
+        "attempted_at": "2026-09-18T16:21:38.633592+00:00",
         "domain": "iranserver.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.544532+00:00",
+        "observed_at": "2026-09-18T16:21:38.633583+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -255,11 +255,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.705120+00:00",
+        "attempted_at": "2026-09-18T16:21:38.905782+00:00",
         "domain": "iranserver.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.705108+00:00",
+        "observed_at": "2026-09-18T16:21:38.905765+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -269,11 +269,11 @@
           "91.247.174.1"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.434458+00:00",
+        "attempted_at": "2026-09-18T16:21:39.069809+00:00",
         "domain": "iranserver.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.434450+00:00",
+        "observed_at": "2026-09-18T16:21:39.069794+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -281,11 +281,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.445405+00:00",
+        "attempted_at": "2026-09-18T16:21:39.070680+00:00",
         "domain": "iranserver.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.445397+00:00",
+        "observed_at": "2026-09-18T16:21:39.070670+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -296,11 +296,11 @@
           "194.26.195.206"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.453977+00:00",
+        "attempted_at": "2026-09-18T16:21:38.543264+00:00",
         "domain": "parspack.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.453968+00:00",
+        "observed_at": "2026-09-18T16:21:38.543255+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -311,11 +311,11 @@
           "2606:4700:3037::6815:1494"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.457419+00:00",
+        "attempted_at": "2026-09-18T16:21:38.535955+00:00",
         "domain": "parspack.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.457410+00:00",
+        "observed_at": "2026-09-18T16:21:38.535946+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -326,11 +326,11 @@
           "194.26.195.206"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.459900+00:00",
+        "attempted_at": "2026-09-18T16:21:38.572057+00:00",
         "domain": "parspack.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.459890+00:00",
+        "observed_at": "2026-09-18T16:21:38.572042+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -341,11 +341,11 @@
           "2606:4700:3037::6815:1494"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.466917+00:00",
+        "attempted_at": "2026-09-18T16:21:38.599403+00:00",
         "domain": "parspack.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.466907+00:00",
+        "observed_at": "2026-09-18T16:21:38.599393+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -355,11 +355,11 @@
           "185.188.104.10"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.466085+00:00",
+        "attempted_at": "2026-09-18T16:21:38.599670+00:00",
         "domain": "digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.466077+00:00",
+        "observed_at": "2026-09-18T16:21:38.599659+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -367,11 +367,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.472407+00:00",
+        "attempted_at": "2026-09-18T16:21:38.642270+00:00",
         "domain": "digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.472399+00:00",
+        "observed_at": "2026-09-18T16:21:38.642261+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -381,11 +381,11 @@
           "185.188.104.10"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.473816+00:00",
+        "attempted_at": "2026-09-18T16:21:38.629084+00:00",
         "domain": "digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.473808+00:00",
+        "observed_at": "2026-09-18T16:21:38.629069+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -393,11 +393,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.564879+00:00",
+        "attempted_at": "2026-09-18T16:21:38.791030+00:00",
         "domain": "digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.564871+00:00",
+        "observed_at": "2026-09-18T16:21:38.791020+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -410,11 +410,11 @@
           "185.188.107.10"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.479198+00:00",
+        "attempted_at": "2026-09-18T16:21:38.669553+00:00",
         "domain": "www.digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.479190+00:00",
+        "observed_at": "2026-09-18T16:21:38.669542+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -422,11 +422,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.480727+00:00",
+        "attempted_at": "2026-09-18T16:21:38.672605+00:00",
         "domain": "www.digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.480717+00:00",
+        "observed_at": "2026-09-18T16:21:38.672597+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -439,11 +439,11 @@
           "185.188.107.10"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.487850+00:00",
+        "attempted_at": "2026-09-18T16:21:38.693090+00:00",
         "domain": "www.digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.487841+00:00",
+        "observed_at": "2026-09-18T16:21:38.693076+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -451,11 +451,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.490092+00:00",
+        "attempted_at": "2026-09-18T16:21:38.699230+00:00",
         "domain": "www.digikala.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.490081+00:00",
+        "observed_at": "2026-09-18T16:21:38.699221+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -466,11 +466,11 @@
           "185.143.234.122"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.494941+00:00",
+        "attempted_at": "2026-09-18T16:21:38.747531+00:00",
         "domain": "snapp.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.494933+00:00",
+        "observed_at": "2026-09-18T16:21:38.747514+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -478,65 +478,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.496600+00:00",
+        "attempted_at": "2026-09-18T16:21:38.792507+00:00",
         "domain": "snapp.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.496592+00:00",
-        "resolver": "google",
-        "status": "success",
-        "type": 28
-      },
-      {
-        "addresses": [
-          "185.143.233.122",
-          "185.143.234.122"
-        ],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.500046+00:00",
-        "domain": "snapp.ir",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.500037+00:00",
-        "resolver": "cloudflare",
-        "status": "success",
-        "type": 1
-      },
-      {
-        "addresses": [],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.504606+00:00",
-        "domain": "snapp.ir",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.504598+00:00",
-        "resolver": "cloudflare",
-        "status": "success",
-        "type": 28
-      },
-      {
-        "addresses": [
-          "185.143.233.122",
-          "185.143.234.122"
-        ],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.507052+00:00",
-        "domain": "snappfood.ir",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.507039+00:00",
-        "resolver": "google",
-        "status": "success",
-        "type": 1
-      },
-      {
-        "addresses": [],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.508517+00:00",
-        "domain": "snappfood.ir",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.508509+00:00",
+        "observed_at": "2026-09-18T16:21:38.792498+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -547,11 +493,11 @@
           "185.143.234.122"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.516359+00:00",
-        "domain": "snappfood.ir",
+        "attempted_at": "2026-09-18T16:21:38.779230+00:00",
+        "domain": "snapp.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.516351+00:00",
+        "observed_at": "2026-09-18T16:21:38.779212+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -559,11 +505,65 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.514503+00:00",
+        "attempted_at": "2026-09-18T16:21:38.801790+00:00",
+        "domain": "snapp.ir",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:38.801782+00:00",
+        "resolver": "cloudflare",
+        "status": "success",
+        "type": 28
+      },
+      {
+        "addresses": [
+          "185.143.233.122",
+          "185.143.234.122"
+        ],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.004670+00:00",
         "domain": "snappfood.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.514494+00:00",
+        "observed_at": "2026-09-18T16:21:39.004657+00:00",
+        "resolver": "google",
+        "status": "success",
+        "type": 1
+      },
+      {
+        "addresses": [],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.011134+00:00",
+        "domain": "snappfood.ir",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:39.011115+00:00",
+        "resolver": "google",
+        "status": "success",
+        "type": 28
+      },
+      {
+        "addresses": [
+          "185.143.233.122",
+          "185.143.234.122"
+        ],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:38.825057+00:00",
+        "domain": "snappfood.ir",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:38.825042+00:00",
+        "resolver": "cloudflare",
+        "status": "success",
+        "type": 1
+      },
+      {
+        "addresses": [],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.180832+00:00",
+        "domain": "snappfood.ir",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:39.180820+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -573,11 +573,11 @@
           "81.12.31.29"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.526799+00:00",
+        "attempted_at": "2026-09-18T16:21:38.947401+00:00",
         "domain": "torob.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.526788+00:00",
+        "observed_at": "2026-09-18T16:21:38.947383+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -585,11 +585,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.522451+00:00",
+        "attempted_at": "2026-09-18T16:21:38.981300+00:00",
         "domain": "torob.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.522442+00:00",
+        "observed_at": "2026-09-18T16:21:38.981285+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -599,11 +599,11 @@
           "81.12.31.29"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.527265+00:00",
+        "attempted_at": "2026-09-18T16:21:38.991999+00:00",
         "domain": "torob.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.527254+00:00",
+        "observed_at": "2026-09-18T16:21:38.991987+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -611,11 +611,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.526041+00:00",
+        "attempted_at": "2026-09-18T16:21:38.994514+00:00",
         "domain": "torob.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.526032+00:00",
+        "observed_at": "2026-09-18T16:21:38.994505+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -626,11 +626,11 @@
           "185.166.104.7"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.528577+00:00",
+        "attempted_at": "2026-09-18T16:21:39.017863+00:00",
         "domain": "divar.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.528568+00:00",
+        "observed_at": "2026-09-18T16:21:39.017851+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -638,11 +638,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.537653+00:00",
+        "attempted_at": "2026-09-18T16:21:39.093849+00:00",
         "domain": "divar.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.537644+00:00",
+        "observed_at": "2026-09-18T16:21:39.093839+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -653,11 +653,11 @@
           "185.166.104.7"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.544049+00:00",
+        "attempted_at": "2026-09-18T16:21:39.017314+00:00",
         "domain": "divar.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.544038+00:00",
+        "observed_at": "2026-09-18T16:21:39.017304+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -665,11 +665,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.542076+00:00",
+        "attempted_at": "2026-09-18T16:21:39.103768+00:00",
         "domain": "divar.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.542068+00:00",
+        "observed_at": "2026-09-18T16:21:39.103759+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -680,11 +680,11 @@
           "79.175.191.78"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.553840+00:00",
+        "attempted_at": "2026-09-18T16:21:39.093293+00:00",
         "domain": "sheypoor.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.553831+00:00",
+        "observed_at": "2026-09-18T16:21:39.093284+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -692,11 +692,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.557160+00:00",
+        "attempted_at": "2026-09-18T16:21:39.072779+00:00",
         "domain": "sheypoor.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.557150+00:00",
+        "observed_at": "2026-09-18T16:21:39.072770+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -707,11 +707,11 @@
           "79.175.191.78"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.563455+00:00",
+        "attempted_at": "2026-09-18T16:21:39.050152+00:00",
         "domain": "sheypoor.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.563446+00:00",
+        "observed_at": "2026-09-18T16:21:39.050135+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -719,11 +719,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.558709+00:00",
+        "attempted_at": "2026-09-18T16:21:39.084133+00:00",
         "domain": "sheypoor.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.558698+00:00",
+        "observed_at": "2026-09-18T16:21:39.084121+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -733,11 +733,11 @@
           "185.147.179.11"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.559425+00:00",
+        "attempted_at": "2026-09-18T16:21:39.110132+00:00",
         "domain": "aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.559417+00:00",
+        "observed_at": "2026-09-18T16:21:39.110119+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -745,11 +745,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.558551+00:00",
+        "attempted_at": "2026-09-18T16:21:39.114814+00:00",
         "domain": "aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.558543+00:00",
+        "observed_at": "2026-09-18T16:21:39.114804+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -759,11 +759,11 @@
           "185.147.179.11"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.567093+00:00",
+        "attempted_at": "2026-09-18T16:21:39.097647+00:00",
         "domain": "aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.567085+00:00",
+        "observed_at": "2026-09-18T16:21:39.097636+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -771,11 +771,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.568342+00:00",
+        "attempted_at": "2026-09-18T16:21:39.110689+00:00",
         "domain": "aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.568332+00:00",
+        "observed_at": "2026-09-18T16:21:39.110677+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -785,11 +785,11 @@
           "185.147.179.11"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.571212+00:00",
+        "attempted_at": "2026-09-18T16:21:39.124541+00:00",
         "domain": "www.aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.571204+00:00",
+        "observed_at": "2026-09-18T16:21:39.124530+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -797,11 +797,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.569480+00:00",
+        "attempted_at": "2026-09-18T16:21:39.128551+00:00",
         "domain": "www.aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.569472+00:00",
+        "observed_at": "2026-09-18T16:21:39.128542+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -811,11 +811,11 @@
           "185.147.179.11"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.576731+00:00",
+        "attempted_at": "2026-09-18T16:21:39.125133+00:00",
         "domain": "www.aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.576723+00:00",
+        "observed_at": "2026-09-18T16:21:39.125122+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -823,11 +823,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.578061+00:00",
+        "attempted_at": "2026-09-18T16:21:39.127192+00:00",
         "domain": "www.aparat.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.578051+00:00",
+        "observed_at": "2026-09-18T16:21:39.127182+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -837,11 +837,11 @@
           "185.147.178.23"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.579539+00:00",
+        "attempted_at": "2026-09-18T16:21:39.145881+00:00",
         "domain": "filimo.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.579530+00:00",
+        "observed_at": "2026-09-18T16:21:39.145860+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -849,63 +849,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.581128+00:00",
+        "attempted_at": "2026-09-18T16:21:39.153280+00:00",
         "domain": "filimo.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.581119+00:00",
-        "resolver": "google",
-        "status": "success",
-        "type": 28
-      },
-      {
-        "addresses": [
-          "185.147.178.23"
-        ],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.580506+00:00",
-        "domain": "filimo.com",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.580497+00:00",
-        "resolver": "cloudflare",
-        "status": "success",
-        "type": 1
-      },
-      {
-        "addresses": [],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.585141+00:00",
-        "domain": "filimo.com",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.585131+00:00",
-        "resolver": "cloudflare",
-        "status": "success",
-        "type": 28
-      },
-      {
-        "addresses": [
-          "185.147.178.23"
-        ],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.584337+00:00",
-        "domain": "www.filimo.com",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.584329+00:00",
-        "resolver": "google",
-        "status": "success",
-        "type": 1
-      },
-      {
-        "addresses": [],
-        "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.587620+00:00",
-        "domain": "www.filimo.com",
-        "error": null,
-        "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.587610+00:00",
+        "observed_at": "2026-09-18T16:21:39.153270+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -915,11 +863,11 @@
           "185.147.178.23"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.593098+00:00",
-        "domain": "www.filimo.com",
+        "attempted_at": "2026-09-18T16:21:39.146656+00:00",
+        "domain": "filimo.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.593090+00:00",
+        "observed_at": "2026-09-18T16:21:39.146643+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -927,11 +875,63 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.598909+00:00",
+        "attempted_at": "2026-09-18T16:21:39.151961+00:00",
+        "domain": "filimo.com",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:39.151951+00:00",
+        "resolver": "cloudflare",
+        "status": "success",
+        "type": 28
+      },
+      {
+        "addresses": [
+          "185.147.178.23"
+        ],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.173878+00:00",
         "domain": "www.filimo.com",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.598900+00:00",
+        "observed_at": "2026-09-18T16:21:39.173867+00:00",
+        "resolver": "google",
+        "status": "success",
+        "type": 1
+      },
+      {
+        "addresses": [],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.169145+00:00",
+        "domain": "www.filimo.com",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:39.169133+00:00",
+        "resolver": "google",
+        "status": "success",
+        "type": 28
+      },
+      {
+        "addresses": [
+          "185.147.178.23"
+        ],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.157110+00:00",
+        "domain": "www.filimo.com",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:39.157102+00:00",
+        "resolver": "cloudflare",
+        "status": "success",
+        "type": 1
+      },
+      {
+        "addresses": [],
+        "age_seconds": 0,
+        "attempted_at": "2026-09-18T16:21:39.174724+00:00",
+        "domain": "www.filimo.com",
+        "error": null,
+        "freshness": "fresh",
+        "observed_at": "2026-09-18T16:21:39.174716+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -942,11 +942,11 @@
           "94.182.176.33"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.841327+00:00",
+        "attempted_at": "2026-09-18T16:21:39.550100+00:00",
         "domain": "namava.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.841310+00:00",
+        "observed_at": "2026-09-18T16:21:39.550084+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -954,11 +954,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.760161+00:00",
+        "attempted_at": "2026-09-18T16:21:39.649017+00:00",
         "domain": "namava.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.760149+00:00",
+        "observed_at": "2026-09-18T16:21:39.648997+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -969,11 +969,11 @@
           "94.182.176.33"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.769839+00:00",
+        "attempted_at": "2026-09-18T16:21:39.789068+00:00",
         "domain": "namava.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.769828+00:00",
+        "observed_at": "2026-09-18T16:21:39.789049+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -981,11 +981,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.779329+00:00",
+        "attempted_at": "2026-09-18T16:21:39.185353+00:00",
         "domain": "namava.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.779321+00:00",
+        "observed_at": "2026-09-18T16:21:39.185344+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -995,11 +995,11 @@
           "5.106.4.1"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.600006+00:00",
+        "attempted_at": "2026-09-18T16:21:39.650940+00:00",
         "domain": "mci.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.599996+00:00",
+        "observed_at": "2026-09-18T16:21:39.650930+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -1009,11 +1009,11 @@
           "2a02:4544:e0:300::1"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.608282+00:00",
+        "attempted_at": "2026-09-18T16:21:39.207405+00:00",
         "domain": "mci.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.608274+00:00",
+        "observed_at": "2026-09-18T16:21:39.207393+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -1023,11 +1023,11 @@
           "5.106.4.1"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.783581+00:00",
+        "attempted_at": "2026-09-18T16:21:39.203865+00:00",
         "domain": "mci.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.783573+00:00",
+        "observed_at": "2026-09-18T16:21:39.203849+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -1037,11 +1037,11 @@
           "2a02:4544:e0:300::1"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.783949+00:00",
+        "attempted_at": "2026-09-18T16:21:39.798616+00:00",
         "domain": "mci.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.783941+00:00",
+        "observed_at": "2026-09-18T16:21:39.798602+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -1051,11 +1051,11 @@
           "92.42.50.141"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.621998+00:00",
+        "attempted_at": "2026-09-18T16:21:39.219030+00:00",
         "domain": "my.irancell.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.621988+00:00",
+        "observed_at": "2026-09-18T16:21:39.219017+00:00",
         "resolver": "google",
         "status": "success",
         "type": 1
@@ -1063,11 +1063,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.634573+00:00",
+        "attempted_at": "2026-09-18T16:21:39.611075+00:00",
         "domain": "my.irancell.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.634562+00:00",
+        "observed_at": "2026-09-18T16:21:39.611057+00:00",
         "resolver": "google",
         "status": "success",
         "type": 28
@@ -1077,11 +1077,11 @@
           "92.42.50.141"
         ],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.650081+00:00",
+        "attempted_at": "2026-09-18T16:21:39.232025+00:00",
         "domain": "my.irancell.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.650073+00:00",
+        "observed_at": "2026-09-18T16:21:39.232010+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 1
@@ -1089,11 +1089,11 @@
       {
         "addresses": [],
         "age_seconds": 0,
-        "attempted_at": "2026-09-17T18:24:19.850922+00:00",
+        "attempted_at": "2026-09-18T16:21:39.475888+00:00",
         "domain": "my.irancell.ir",
         "error": null,
         "freshness": "fresh",
-        "observed_at": "2026-09-17T18:24:19.850911+00:00",
+        "observed_at": "2026-09-18T16:21:39.475870+00:00",
         "resolver": "cloudflare",
         "status": "success",
         "type": 28
@@ -1104,82 +1104,91 @@
   },
   "dns_records": [
     {
-      "address": "185.143.232.200",
+      "address": "185.143.235.200",
       "domain": "arvancloud.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.224642+00:00",
+      "observed_at": "2026-09-18T16:21:37.987297+00:00",
       "owner": "arvancloud.ir",
       "resolver": "google",
-      "ttl": 166
+      "ttl": 40
     },
     {
       "address": "185.143.233.200",
       "domain": "arvancloud.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.224642+00:00",
+      "observed_at": "2026-09-18T16:21:37.987297+00:00",
       "owner": "arvancloud.ir",
       "resolver": "google",
-      "ttl": 166
-    },
-    {
-      "address": "185.143.235.200",
-      "domain": "arvancloud.ir",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.224642+00:00",
-      "owner": "arvancloud.ir",
-      "resolver": "google",
-      "ttl": 166
-    },
-    {
-      "address": "185.143.234.200",
-      "domain": "arvancloud.ir",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.224642+00:00",
-      "owner": "arvancloud.ir",
-      "resolver": "google",
-      "ttl": 166
-    },
-    {
-      "address": "185.143.234.200",
-      "domain": "arvancloud.ir",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.235338+00:00",
-      "owner": "arvancloud.ir",
-      "resolver": "cloudflare",
-      "ttl": 133
-    },
-    {
-      "address": "185.143.235.200",
-      "domain": "arvancloud.ir",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.235338+00:00",
-      "owner": "arvancloud.ir",
-      "resolver": "cloudflare",
-      "ttl": 133
+      "ttl": 40
     },
     {
       "address": "185.143.232.200",
       "domain": "arvancloud.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.235338+00:00",
+      "observed_at": "2026-09-18T16:21:37.987297+00:00",
+      "owner": "arvancloud.ir",
+      "resolver": "google",
+      "ttl": 40
+    },
+    {
+      "address": "185.143.234.200",
+      "domain": "arvancloud.ir",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:37.987297+00:00",
+      "owner": "arvancloud.ir",
+      "resolver": "google",
+      "ttl": 40
+    },
+    {
+      "address": "185.143.235.200",
+      "domain": "arvancloud.ir",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:37.981391+00:00",
       "owner": "arvancloud.ir",
       "resolver": "cloudflare",
-      "ttl": 133
+      "ttl": 50
+    },
+    {
+      "address": "185.143.232.200",
+      "domain": "arvancloud.ir",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:37.981391+00:00",
+      "owner": "arvancloud.ir",
+      "resolver": "cloudflare",
+      "ttl": 50
     },
     {
       "address": "185.143.233.200",
       "domain": "arvancloud.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.235338+00:00",
+      "observed_at": "2026-09-18T16:21:37.981391+00:00",
       "owner": "arvancloud.ir",
       "resolver": "cloudflare",
-      "ttl": 133
+      "ttl": 50
+    },
+    {
+      "address": "185.143.234.200",
+      "domain": "arvancloud.ir",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:37.981391+00:00",
+      "owner": "arvancloud.ir",
+      "resolver": "cloudflare",
+      "ttl": 50
+    },
+    {
+      "address": "185.226.140.140",
+      "domain": "mizbancloud.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.368027+00:00",
+      "owner": "mizbancloud.com",
+      "resolver": "google",
+      "ttl": 120
     },
     {
       "address": "185.226.142.142",
       "domain": "mizbancloud.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.344846+00:00",
+      "observed_at": "2026-09-18T16:21:38.368027+00:00",
       "owner": "mizbancloud.com",
       "resolver": "google",
       "ttl": 120
@@ -1188,16 +1197,7 @@
       "address": "185.226.140.140",
       "domain": "mizbancloud.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.344846+00:00",
-      "owner": "mizbancloud.com",
-      "resolver": "google",
-      "ttl": 120
-    },
-    {
-      "address": "185.226.140.140",
-      "domain": "mizbancloud.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.426852+00:00",
+      "observed_at": "2026-09-18T16:21:38.312701+00:00",
       "owner": "mizbancloud.com",
       "resolver": "cloudflare",
       "ttl": 120
@@ -1206,7 +1206,7 @@
       "address": "185.226.142.142",
       "domain": "mizbancloud.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.426852+00:00",
+      "observed_at": "2026-09-18T16:21:38.312701+00:00",
       "owner": "mizbancloud.com",
       "resolver": "cloudflare",
       "ttl": 120
@@ -1215,7 +1215,7 @@
       "address": "5.145.118.1",
       "domain": "derak.cloud",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.326866+00:00",
+      "observed_at": "2026-09-18T16:21:38.264982+00:00",
       "owner": "derak.cloud",
       "resolver": "google",
       "ttl": 120
@@ -1224,7 +1224,7 @@
       "address": "5.145.118.2",
       "domain": "derak.cloud",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.326866+00:00",
+      "observed_at": "2026-09-18T16:21:38.264982+00:00",
       "owner": "derak.cloud",
       "resolver": "google",
       "ttl": 120
@@ -1233,7 +1233,7 @@
       "address": "2a04:2f00:e:1::a2",
       "domain": "derak.cloud",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.441653+00:00",
+      "observed_at": "2026-09-18T16:21:38.252742+00:00",
       "owner": "derak.cloud",
       "resolver": "google",
       "ttl": 120
@@ -1242,7 +1242,7 @@
       "address": "5.145.118.1",
       "domain": "derak.cloud",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.450502+00:00",
+      "observed_at": "2026-09-18T16:21:38.964654+00:00",
       "owner": "derak.cloud",
       "resolver": "cloudflare",
       "ttl": 120
@@ -1251,7 +1251,7 @@
       "address": "5.145.118.2",
       "domain": "derak.cloud",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.450502+00:00",
+      "observed_at": "2026-09-18T16:21:38.964654+00:00",
       "owner": "derak.cloud",
       "resolver": "cloudflare",
       "ttl": 120
@@ -1260,34 +1260,34 @@
       "address": "2a04:2f00:e:1::a2",
       "domain": "derak.cloud",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.458053+00:00",
+      "observed_at": "2026-09-18T16:21:38.966205+00:00",
       "owner": "derak.cloud",
       "resolver": "cloudflare",
       "ttl": 120
     },
     {
-      "address": "185.143.233.238",
-      "domain": "hostiran.net",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.345259+00:00",
-      "owner": "hostiran.net",
-      "resolver": "google",
-      "ttl": 174
-    },
-    {
       "address": "185.143.234.238",
       "domain": "hostiran.net",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.345259+00:00",
+      "observed_at": "2026-09-18T16:21:38.495426+00:00",
       "owner": "hostiran.net",
       "resolver": "google",
-      "ttl": 174
+      "ttl": 180
     },
     {
       "address": "185.143.233.238",
       "domain": "hostiran.net",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.360123+00:00",
+      "observed_at": "2026-09-18T16:21:38.495426+00:00",
+      "owner": "hostiran.net",
+      "resolver": "google",
+      "ttl": 180
+    },
+    {
+      "address": "185.143.233.238",
+      "domain": "hostiran.net",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.384351+00:00",
       "owner": "hostiran.net",
       "resolver": "cloudflare",
       "ttl": 180
@@ -1296,7 +1296,7 @@
       "address": "185.143.234.238",
       "domain": "hostiran.net",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.360123+00:00",
+      "observed_at": "2026-09-18T16:21:38.384351+00:00",
       "owner": "hostiran.net",
       "resolver": "cloudflare",
       "ttl": 180
@@ -1305,7 +1305,7 @@
       "address": "91.247.174.1",
       "domain": "iranserver.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.544532+00:00",
+      "observed_at": "2026-09-18T16:21:38.633583+00:00",
       "owner": "iranserver.com",
       "resolver": "google",
       "ttl": 120
@@ -1314,43 +1314,16 @@
       "address": "91.247.174.1",
       "domain": "iranserver.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.434450+00:00",
+      "observed_at": "2026-09-18T16:21:39.069794+00:00",
       "owner": "iranserver.com",
       "resolver": "cloudflare",
       "ttl": 120
     },
     {
-      "address": "194.26.195.203",
-      "domain": "parspack.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.453968+00:00",
-      "owner": "parspack.com",
-      "resolver": "google",
-      "ttl": 600
-    },
-    {
       "address": "194.26.195.206",
       "domain": "parspack.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.453968+00:00",
-      "owner": "parspack.com",
-      "resolver": "google",
-      "ttl": 600
-    },
-    {
-      "address": "2606:4700:3034::ac43:c124",
-      "domain": "parspack.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.457410+00:00",
-      "owner": "parspack.com",
-      "resolver": "google",
-      "ttl": 600
-    },
-    {
-      "address": "2606:4700:3037::6815:1494",
-      "domain": "parspack.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.457410+00:00",
+      "observed_at": "2026-09-18T16:21:38.543255+00:00",
       "owner": "parspack.com",
       "resolver": "google",
       "ttl": 600
@@ -1359,25 +1332,52 @@
       "address": "194.26.195.203",
       "domain": "parspack.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.459890+00:00",
+      "observed_at": "2026-09-18T16:21:38.543255+00:00",
       "owner": "parspack.com",
-      "resolver": "cloudflare",
-      "ttl": 493
+      "resolver": "google",
+      "ttl": 600
     },
     {
-      "address": "194.26.195.206",
+      "address": "2606:4700:3037::6815:1494",
       "domain": "parspack.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.459890+00:00",
+      "observed_at": "2026-09-18T16:21:38.535946+00:00",
       "owner": "parspack.com",
-      "resolver": "cloudflare",
-      "ttl": 493
+      "resolver": "google",
+      "ttl": 600
     },
     {
       "address": "2606:4700:3034::ac43:c124",
       "domain": "parspack.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.466907+00:00",
+      "observed_at": "2026-09-18T16:21:38.535946+00:00",
+      "owner": "parspack.com",
+      "resolver": "google",
+      "ttl": 600
+    },
+    {
+      "address": "194.26.195.206",
+      "domain": "parspack.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.572042+00:00",
+      "owner": "parspack.com",
+      "resolver": "cloudflare",
+      "ttl": 600
+    },
+    {
+      "address": "194.26.195.203",
+      "domain": "parspack.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.572042+00:00",
+      "owner": "parspack.com",
+      "resolver": "cloudflare",
+      "ttl": 600
+    },
+    {
+      "address": "2606:4700:3034::ac43:c124",
+      "domain": "parspack.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.599393+00:00",
       "owner": "parspack.com",
       "resolver": "cloudflare",
       "ttl": 600
@@ -1386,7 +1386,7 @@
       "address": "2606:4700:3037::6815:1494",
       "domain": "parspack.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.466907+00:00",
+      "observed_at": "2026-09-18T16:21:38.599393+00:00",
       "owner": "parspack.com",
       "resolver": "cloudflare",
       "ttl": 600
@@ -1395,97 +1395,97 @@
       "address": "185.188.104.10",
       "domain": "digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.466077+00:00",
+      "observed_at": "2026-09-18T16:21:38.599659+00:00",
       "owner": "digikala.com",
       "resolver": "google",
-      "ttl": 2867
+      "ttl": 571
     },
     {
       "address": "185.188.104.10",
       "domain": "digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.473808+00:00",
+      "observed_at": "2026-09-18T16:21:38.629069+00:00",
       "owner": "digikala.com",
       "resolver": "cloudflare",
-      "ttl": 3001
-    },
-    {
-      "address": "185.188.107.10",
-      "domain": "www.digikala.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.479190+00:00",
-      "owner": "www.digikala.com",
-      "resolver": "google",
-      "ttl": 52
-    },
-    {
-      "address": "185.188.104.10",
-      "domain": "www.digikala.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.479190+00:00",
-      "owner": "www.digikala.com",
-      "resolver": "google",
-      "ttl": 52
-    },
-    {
-      "address": "185.188.105.10",
-      "domain": "www.digikala.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.479190+00:00",
-      "owner": "www.digikala.com",
-      "resolver": "google",
-      "ttl": 52
+      "ttl": 3005
     },
     {
       "address": "185.188.106.10",
       "domain": "www.digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.479190+00:00",
+      "observed_at": "2026-09-18T16:21:38.669542+00:00",
       "owner": "www.digikala.com",
       "resolver": "google",
-      "ttl": 52
+      "ttl": 5
     },
     {
       "address": "185.188.104.10",
       "domain": "www.digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.487841+00:00",
+      "observed_at": "2026-09-18T16:21:38.669542+00:00",
       "owner": "www.digikala.com",
-      "resolver": "cloudflare",
-      "ttl": 99
+      "resolver": "google",
+      "ttl": 5
     },
     {
       "address": "185.188.105.10",
       "domain": "www.digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.487841+00:00",
+      "observed_at": "2026-09-18T16:21:38.669542+00:00",
       "owner": "www.digikala.com",
-      "resolver": "cloudflare",
-      "ttl": 99
+      "resolver": "google",
+      "ttl": 5
     },
     {
       "address": "185.188.107.10",
       "domain": "www.digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.487841+00:00",
+      "observed_at": "2026-09-18T16:21:38.669542+00:00",
+      "owner": "www.digikala.com",
+      "resolver": "google",
+      "ttl": 5
+    },
+    {
+      "address": "185.188.104.10",
+      "domain": "www.digikala.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.693076+00:00",
       "owner": "www.digikala.com",
       "resolver": "cloudflare",
-      "ttl": 99
+      "ttl": 61
+    },
+    {
+      "address": "185.188.107.10",
+      "domain": "www.digikala.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.693076+00:00",
+      "owner": "www.digikala.com",
+      "resolver": "cloudflare",
+      "ttl": 61
+    },
+    {
+      "address": "185.188.105.10",
+      "domain": "www.digikala.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:38.693076+00:00",
+      "owner": "www.digikala.com",
+      "resolver": "cloudflare",
+      "ttl": 61
     },
     {
       "address": "185.188.106.10",
       "domain": "www.digikala.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.487841+00:00",
+      "observed_at": "2026-09-18T16:21:38.693076+00:00",
       "owner": "www.digikala.com",
       "resolver": "cloudflare",
-      "ttl": 99
+      "ttl": 61
     },
     {
       "address": "185.143.234.122",
       "domain": "snapp.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.494933+00:00",
+      "observed_at": "2026-09-18T16:21:38.747514+00:00",
       "owner": "snapp.ir",
       "resolver": "google",
       "ttl": 600
@@ -1494,7 +1494,7 @@
       "address": "185.143.233.122",
       "domain": "snapp.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.494933+00:00",
+      "observed_at": "2026-09-18T16:21:38.747514+00:00",
       "owner": "snapp.ir",
       "resolver": "google",
       "ttl": 600
@@ -1503,61 +1503,61 @@
       "address": "185.143.233.122",
       "domain": "snapp.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.500037+00:00",
+      "observed_at": "2026-09-18T16:21:38.779212+00:00",
       "owner": "snapp.ir",
       "resolver": "cloudflare",
-      "ttl": 600
+      "ttl": 594
     },
     {
       "address": "185.143.234.122",
       "domain": "snapp.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.500037+00:00",
+      "observed_at": "2026-09-18T16:21:38.779212+00:00",
       "owner": "snapp.ir",
       "resolver": "cloudflare",
-      "ttl": 600
+      "ttl": 594
     },
     {
       "address": "185.143.233.122",
       "domain": "snappfood.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.507039+00:00",
+      "observed_at": "2026-09-18T16:21:39.004657+00:00",
       "owner": "snappfood.ir",
       "resolver": "google",
-      "ttl": 92
+      "ttl": 180
     },
     {
       "address": "185.143.234.122",
       "domain": "snappfood.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.507039+00:00",
+      "observed_at": "2026-09-18T16:21:39.004657+00:00",
       "owner": "snappfood.ir",
       "resolver": "google",
-      "ttl": 92
+      "ttl": 180
     },
     {
       "address": "185.143.233.122",
       "domain": "snappfood.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.516351+00:00",
+      "observed_at": "2026-09-18T16:21:38.825042+00:00",
       "owner": "snappfood.ir",
       "resolver": "cloudflare",
-      "ttl": 119
+      "ttl": 100
     },
     {
       "address": "185.143.234.122",
       "domain": "snappfood.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.516351+00:00",
+      "observed_at": "2026-09-18T16:21:38.825042+00:00",
       "owner": "snappfood.ir",
       "resolver": "cloudflare",
-      "ttl": 119
+      "ttl": 100
     },
     {
       "address": "81.12.31.29",
       "domain": "torob.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.526788+00:00",
+      "observed_at": "2026-09-18T16:21:38.947383+00:00",
       "owner": "torob.com",
       "resolver": "google",
       "ttl": 300
@@ -1566,61 +1566,52 @@
       "address": "81.12.31.29",
       "domain": "torob.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.527254+00:00",
+      "observed_at": "2026-09-18T16:21:38.991987+00:00",
       "owner": "torob.com",
       "resolver": "cloudflare",
-      "ttl": 284
+      "ttl": 55
     },
     {
       "address": "185.166.104.6",
       "domain": "divar.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.528568+00:00",
+      "observed_at": "2026-09-18T16:21:39.017851+00:00",
       "owner": "divar.ir",
       "resolver": "google",
-      "ttl": 93
+      "ttl": 77
     },
     {
       "address": "185.166.104.7",
       "domain": "divar.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.528568+00:00",
+      "observed_at": "2026-09-18T16:21:39.017851+00:00",
       "owner": "divar.ir",
       "resolver": "google",
-      "ttl": 93
+      "ttl": 77
     },
     {
       "address": "185.166.104.6",
       "domain": "divar.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.544038+00:00",
+      "observed_at": "2026-09-18T16:21:39.017304+00:00",
       "owner": "divar.ir",
       "resolver": "cloudflare",
-      "ttl": 44
+      "ttl": 212
     },
     {
       "address": "185.166.104.7",
       "domain": "divar.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.544038+00:00",
+      "observed_at": "2026-09-18T16:21:39.017304+00:00",
       "owner": "divar.ir",
       "resolver": "cloudflare",
-      "ttl": 44
-    },
-    {
-      "address": "79.175.191.74",
-      "domain": "sheypoor.com",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.553831+00:00",
-      "owner": "sheypoor.com",
-      "resolver": "google",
-      "ttl": 21600
+      "ttl": 212
     },
     {
       "address": "79.175.191.78",
       "domain": "sheypoor.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.553831+00:00",
+      "observed_at": "2026-09-18T16:21:39.093284+00:00",
       "owner": "sheypoor.com",
       "resolver": "google",
       "ttl": 21600
@@ -1629,7 +1620,16 @@
       "address": "79.175.191.74",
       "domain": "sheypoor.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.563446+00:00",
+      "observed_at": "2026-09-18T16:21:39.093284+00:00",
+      "owner": "sheypoor.com",
+      "resolver": "google",
+      "ttl": 21600
+    },
+    {
+      "address": "79.175.191.74",
+      "domain": "sheypoor.com",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:39.050135+00:00",
       "owner": "sheypoor.com",
       "resolver": "cloudflare",
       "ttl": 86400
@@ -1638,7 +1638,7 @@
       "address": "79.175.191.78",
       "domain": "sheypoor.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.563446+00:00",
+      "observed_at": "2026-09-18T16:21:39.050135+00:00",
       "owner": "sheypoor.com",
       "resolver": "cloudflare",
       "ttl": 86400
@@ -1647,52 +1647,52 @@
       "address": "185.147.179.11",
       "domain": "aparat.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.559417+00:00",
+      "observed_at": "2026-09-18T16:21:39.110119+00:00",
       "owner": "aparat.com",
       "resolver": "google",
-      "ttl": 284
+      "ttl": 20
     },
     {
       "address": "185.147.179.11",
       "domain": "aparat.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.567085+00:00",
+      "observed_at": "2026-09-18T16:21:39.097636+00:00",
       "owner": "aparat.com",
       "resolver": "cloudflare",
-      "ttl": 124
+      "ttl": 300
     },
     {
       "address": "185.147.179.11",
       "domain": "www.aparat.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.571204+00:00",
+      "observed_at": "2026-09-18T16:21:39.124530+00:00",
       "owner": "www.aparat.com",
       "resolver": "google",
-      "ttl": 101
+      "ttl": 266
     },
     {
       "address": "185.147.179.11",
       "domain": "www.aparat.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.576723+00:00",
+      "observed_at": "2026-09-18T16:21:39.125122+00:00",
       "owner": "www.aparat.com",
       "resolver": "cloudflare",
-      "ttl": 273
+      "ttl": 192
     },
     {
       "address": "185.147.178.23",
       "domain": "filimo.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.579530+00:00",
+      "observed_at": "2026-09-18T16:21:39.145860+00:00",
       "owner": "filimo.com",
       "resolver": "google",
-      "ttl": 59
+      "ttl": 56
     },
     {
       "address": "185.147.178.23",
       "domain": "filimo.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.580497+00:00",
+      "observed_at": "2026-09-18T16:21:39.146643+00:00",
       "owner": "filimo.com",
       "resolver": "cloudflare",
       "ttl": 300
@@ -1701,34 +1701,25 @@
       "address": "185.147.178.23",
       "domain": "www.filimo.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.584329+00:00",
+      "observed_at": "2026-09-18T16:21:39.173867+00:00",
       "owner": "www.filimo.com",
       "resolver": "google",
-      "ttl": 177
+      "ttl": 300
     },
     {
       "address": "185.147.178.23",
       "domain": "www.filimo.com",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.593090+00:00",
+      "observed_at": "2026-09-18T16:21:39.157102+00:00",
       "owner": "www.filimo.com",
       "resolver": "cloudflare",
-      "ttl": 106
-    },
-    {
-      "address": "94.182.100.133",
-      "domain": "namava.ir",
-      "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.841310+00:00",
-      "owner": "namava.ir",
-      "resolver": "google",
-      "ttl": 21600
+      "ttl": 300
     },
     {
       "address": "94.182.176.33",
       "domain": "namava.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.841310+00:00",
+      "observed_at": "2026-09-18T16:21:39.550084+00:00",
       "owner": "namava.ir",
       "resolver": "google",
       "ttl": 21600
@@ -1737,7 +1728,16 @@
       "address": "94.182.100.133",
       "domain": "namava.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.769828+00:00",
+      "observed_at": "2026-09-18T16:21:39.550084+00:00",
+      "owner": "namava.ir",
+      "resolver": "google",
+      "ttl": 21600
+    },
+    {
+      "address": "94.182.100.133",
+      "domain": "namava.ir",
+      "freshness": "fresh",
+      "observed_at": "2026-09-18T16:21:39.789049+00:00",
       "owner": "namava.ir",
       "resolver": "cloudflare",
       "ttl": 21600
@@ -1746,7 +1746,7 @@
       "address": "94.182.176.33",
       "domain": "namava.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.769828+00:00",
+      "observed_at": "2026-09-18T16:21:39.789049+00:00",
       "owner": "namava.ir",
       "resolver": "cloudflare",
       "ttl": 21600
@@ -1755,58 +1755,58 @@
       "address": "5.106.4.1",
       "domain": "mci.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.599996+00:00",
+      "observed_at": "2026-09-18T16:21:39.650930+00:00",
       "owner": "mci.ir",
       "resolver": "google",
-      "ttl": 3276
+      "ttl": 3397
     },
     {
       "address": "2a02:4544:e0:300::1",
       "domain": "mci.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.608274+00:00",
+      "observed_at": "2026-09-18T16:21:39.207393+00:00",
       "owner": "mci.ir",
       "resolver": "google",
-      "ttl": 786
+      "ttl": 1701
     },
     {
       "address": "5.106.4.1",
       "domain": "mci.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.783573+00:00",
+      "observed_at": "2026-09-18T16:21:39.203849+00:00",
       "owner": "mci.ir",
       "resolver": "cloudflare",
-      "ttl": 3433
+      "ttl": 1848
     },
     {
       "address": "2a02:4544:e0:300::1",
       "domain": "mci.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.783941+00:00",
+      "observed_at": "2026-09-18T16:21:39.798602+00:00",
       "owner": "mci.ir",
       "resolver": "cloudflare",
-      "ttl": 1495
+      "ttl": 1744
     },
     {
       "address": "92.42.50.141",
       "domain": "my.irancell.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.621988+00:00",
+      "observed_at": "2026-09-18T16:21:39.219017+00:00",
       "owner": "my.irancell.ir",
       "resolver": "google",
-      "ttl": 38
+      "ttl": 16
     },
     {
       "address": "92.42.50.141",
       "domain": "my.irancell.ir",
       "freshness": "fresh",
-      "observed_at": "2026-09-17T18:24:19.650073+00:00",
+      "observed_at": "2026-09-18T16:21:39.232010+00:00",
       "owner": "my.irancell.ir",
       "resolver": "cloudflare",
-      "ttl": 127
+      "ttl": 236
     }
   ],
-  "generator_version": "2.0.0",
+  "generator_version": "2.0.1",
   "known_source_completeness_percent": 100,
   "layers": {
     "ipdeny_ipv4": {
@@ -1879,7 +1879,7 @@
       "version": 6
     },
     "selected_asn_ipv4": {
-      "input_prefixes": 5297,
+      "input_prefixes": 5306,
       "missing_prefixes": [],
       "outside_legacy_baseline": [
         "91.216.13.0/24",
@@ -1892,16 +1892,16 @@
         "194.5.206.0/23",
         "217.60.192.0/24"
       ],
-      "unique_addresses": "10203648",
+      "unique_addresses": "10202368",
       "version": 4
     },
     "selected_asn_ipv6": {
-      "input_prefixes": 436,
+      "input_prefixes": 437,
       "missing_prefixes": [],
       "outside_legacy_baseline": [
         "2a0f:94c0:200::/40"
       ],
-      "unique_addresses": "57992487096552680928869861031936",
+      "unique_addresses": "57992491932255959387386559856640",
       "version": 6
     },
     "service_dns_ipv4": {
@@ -1928,13 +1928,13 @@
     "Shared IPs may also serve unrelated foreign services; hosting ASNs are not automatically included."
   ],
   "measured_lab_recall": null,
-  "observed_at": "2026-09-17T18:24:19Z",
+  "observed_at": "2026-09-18T16:21:39Z",
   "policy_sha512": "cb5ad4be08a9feff8301181771b9d27560b4d4db7a8972ed27479044dbf3c24c859e4fb9c1a8367924ca522f8495082a0adca8df6384b90669825b2700b1dda7",
   "registry": {
-    "records": 770332,
+    "records": 770523,
     "selected_asns": 859,
     "selected_holders": 911,
-    "snapshot_date": "20260917"
+    "snapshot_date": "20260918"
   },
   "reviewed_operator_asns": [
     57568,
@@ -1947,8 +1947,8 @@
   "service_domains": 20,
   "sources": {
     "dns_snapshot": {
-      "bytes": 42439,
-      "sha512": "4b6986258d80035fb36bf1cc1320b78f3cd88d3ada103070e07bc94ad8993b65bf998aab559e3726be7cf8dc78c7a83f3f8431bddb98236cd790154b94e4fda1",
+      "bytes": 42853,
+      "sha512": "68d17bf9356d4ce2e6e972259eff3ceb9ce73060cae83c096dc6e9eb6a569ad5e3a46f1cd647d453c14423b576e8efb9cb293ed4645989b0c0c3d16d601e7339",
       "url": "coverage-policy.json#dns_resolvers"
     },
     "ipdeny_ipv4": {
@@ -1962,18 +1962,18 @@
       "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
     },
     "iptoasn_ipv4": {
-      "bytes": 6976838,
-      "sha512": "3bdbd5d81657beb636049f72c63a1fc3038fa0a18c343a9fd72bf4b6d8bc598616e9ae26dad045a49e6ee0a0c2abfa01c99929dbbcfdb0a771724f7a5f5069eb",
+      "bytes": 6980072,
+      "sha512": "9e586211015a3756175896df143278b33e1c21938d65a36d5b6a435c297d370fc743370412bd55aff7d2668f186c97220452e6eef3fa52bc552d6e190ae88598",
       "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
     },
     "iptoasn_ipv6": {
-      "bytes": 1998596,
-      "sha512": "7d3ed452260c537a4a5e1c173ecda4ffc06aae37e24dab9a5c72a5fb3224201e0b7a30ece2db1e1f1094ef931b83011c9e6b04462e93476345f3dd531b3d3a20",
+      "bytes": 1999490,
+      "sha512": "f8ac8d8df13b49416ffc9cc3dfe0fd195a4959e37ece49e771dfbff89950ac58dc0662c58b97c4d8eeca93512b465ae886d542bc912235ebb66da78315828b56",
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 56770533,
-      "sha512": "8c8c4357500db92961510834df0de7c7f3b69f229f3b8f2e36939f9e17e17a79c0f6957ca4d2d2a375a0701aa6e088ea5844c142d0264d6db31ac1df9eff8e21",
+      "bytes": 56783889,
+      "sha512": "dde84c98d89f091ea36be4d5572cf47fe1dd42a7696bc85853f277c09ca0d2d939c6b574b0053ec52f69dd334e45c2216a6c6099b84fbd63a96b42ca3bae33c6",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
