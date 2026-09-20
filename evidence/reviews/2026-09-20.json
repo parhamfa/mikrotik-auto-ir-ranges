@@ -1,0 +1,568 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-09-20",
+  "data_commit": "d08a34ac6794d4418e0f26ffae410f4c12b75778",
+  "discovery_observed_at": "2026-09-19T09:40:50.799985+00:00",
+  "oldest_queue_reviewed": [
+    "asn:10002",
+    "asn:10015",
+    "asn:10016",
+    "asn:10022",
+    "asn:10025",
+    "asn:10031",
+    "asn:10034",
+    "asn:10039",
+    "asn:10040"
+  ],
+  "reviewed_targets": 18,
+  "oldest_queue_targets": 9,
+  "ageing_catalogue": [],
+  "unsupported_rules_count": 387,
+  "source_errors": [],
+  "registry_observations": [
+    {
+      "asn": 10002,
+      "url": "https://rdap.apnic.net/autnum/10002",
+      "name": "ICT",
+      "country": "JP",
+      "sha256": "dd4d0dc47fa9c2c1da795e25711d064c2e095863afb841147dee5c472c27184b"
+    },
+    {
+      "asn": 10015,
+      "url": "https://rdap.apnic.net/autnum/10015",
+      "name": "CWJ-NET",
+      "country": "JP",
+      "sha256": "284a5d4e8274bddd04423921e0002698f445f93436cedfd9f5303c149bd8c87b"
+    },
+    {
+      "asn": 10016,
+      "url": "https://rdap.apnic.net/autnum/10016",
+      "name": "MINC",
+      "country": "JP",
+      "sha256": "a13a6216dff2509906813a5a3c40359a8272318806f7c9ccdde1d114eb5d2df1"
+    },
+    {
+      "asn": 10022,
+      "url": "https://rdap.apnic.net/autnum/10022",
+      "name": "DSLAK-AS-AP",
+      "country": "NZ",
+      "sha256": "b193019d13a87e03d41079abdb3ed3b620be3b392efbe0503e08a71c93857716"
+    },
+    {
+      "asn": 10025,
+      "url": "https://rdap.apnic.net/autnum/10025",
+      "name": "IUSN-AS-AP",
+      "country": "NU",
+      "sha256": "c9a1ce6f14fbc35640ca1efd1ab1eccca2632d05bd410ce68d128ae53aafc4ed"
+    },
+    {
+      "asn": 10031,
+      "url": "https://rdap.apnic.net/autnum/10031",
+      "name": "WEBSATMEDIA-AS",
+      "country": "SG",
+      "sha256": "c084c26030cf8d666cca2ffc5813cadeb814d8a62cb5330e0c744ff48e2af8fd"
+    },
+    {
+      "asn": 10034,
+      "url": "https://rdap.apnic.net/autnum/10034",
+      "name": "GARAK-AS-KR-KR",
+      "country": "KR",
+      "sha256": "6711101df7029fb5fc4c4662dc3136d331126141b4740f426650ae2a8873d54c"
+    },
+    {
+      "asn": 10039,
+      "url": "https://rdap.apnic.net/autnum/10039",
+      "name": "KHIDI-AS-KR-KR",
+      "country": "KR",
+      "sha256": "efa0869a564dbe821666ca38012f046b487ed1c6c64a47f02f7e23f48aa5743d"
+    },
+    {
+      "asn": 21341,
+      "url": "https://rdap.db.ripe.net/autnum/21341",
+      "name": "SINET-AS",
+      "country": null,
+      "sha256": "5e01e76059766aa5ec1a206984ca8eab751386ca3fae0691cb28337a122be58b"
+    },
+    {
+      "asn": 34871,
+      "url": "https://rdap.db.ripe.net/autnum/34871",
+      "name": "Part-Financial-Information-Processing",
+      "country": null,
+      "sha256": "b3b37c04d6dca73722526b5bff4449e08eb6c3c6d7aeb2244e4b62aba2b357ab"
+    },
+    {
+      "asn": 39364,
+      "url": "https://rdap.db.ripe.net/autnum/39364",
+      "name": "Hormoz-IT",
+      "country": null,
+      "sha256": "7b09442158d5f3baf13f4e1d13091f004a73f7976f8ff0bf0bb1cc66f0654880"
+    },
+    {
+      "asn": 42907,
+      "url": "https://rdap.db.ripe.net/autnum/42907",
+      "name": "RIPI",
+      "country": null,
+      "sha256": "4872ffa53a8bb7fb4cf413a53cac83e3979e1703659b437e68d5bb52ea35f521"
+    },
+    {
+      "asn": 48391,
+      "url": "https://rdap.db.ripe.net/autnum/48391",
+      "name": "pdp",
+      "country": null,
+      "sha256": "6b010c26a5754a6162a68e0b8cd3097c74c6d2b93c1019989a9e7b8022657a91"
+    },
+    {
+      "asn": 49207,
+      "url": "https://rdap.db.ripe.net/autnum/49207",
+      "name": "SANGANCO-AS",
+      "country": null,
+      "sha256": "f1a8e203f882759fa169f3c6cc151eaceb5baafb001cfcaf3218e632fc45400c"
+    },
+    {
+      "asn": 50114,
+      "url": "https://rdap.db.ripe.net/autnum/50114",
+      "name": "KAIC",
+      "country": null,
+      "sha256": "d2512ba21bbc93898d8bfaa1942ff8fc3ff5ed6ad27c80d161597a7c1126769d"
+    },
+    {
+      "asn": 50177,
+      "url": "https://rdap.db.ripe.net/autnum/50177",
+      "name": "SHETAB",
+      "country": null,
+      "sha256": "161ec3e9d18440201dc889841c15a86f8855b07dd44402b626d4f29ecb22ec34"
+    },
+    {
+      "asn": 56375,
+      "url": "https://rdap.db.ripe.net/autnum/56375",
+      "name": "IKRF",
+      "country": null,
+      "sha256": "39ff38e461475de863c353da2c8b73a0dad61e8da23cca1f5cae12e24afcfb5a"
+    },
+    {
+      "asn": 56547,
+      "url": "https://rdap.db.ripe.net/autnum/56547",
+      "name": "TMUNICIPALITY-AS",
+      "country": null,
+      "sha256": "8715c5e64b39917b72235df7a6222487bd481e5df718f0d0f7f3d1cc4411305e"
+    },
+    {
+      "asn": 56632,
+      "url": "https://rdap.db.ripe.net/autnum/56632",
+      "name": "Aryansatellite",
+      "country": null,
+      "sha256": "17ea918a5c9a5346eb79aecb53969f2e0791688235b65caa3c0900c18e51d081"
+    },
+    {
+      "asn": 57292,
+      "url": "https://rdap.db.ripe.net/autnum/57292",
+      "name": "ITRC",
+      "country": null,
+      "sha256": "40c91ab22eef2aa3c339087de0ef5dd94daeec0ac8e4b40760130338f46e7310"
+    },
+    {
+      "asn": 57474,
+      "url": "https://rdap.db.ripe.net/autnum/57474",
+      "name": "Nazhin",
+      "country": null,
+      "sha256": "8019401f5751dae3f521b160c830607fc8762969dbd72ae854e7d59cbb0d9265"
+    },
+    {
+      "asn": 57574,
+      "url": "https://rdap.db.ripe.net/autnum/57574",
+      "name": "AGRIBANK-AS",
+      "country": null,
+      "sha256": "804ac66efdf29f96abee8b6180b58a11466ba701956834b74fd0a5b6f9f17ff0"
+    },
+    {
+      "asn": 59754,
+      "url": "https://rdap.db.ripe.net/autnum/59754",
+      "name": "BIM",
+      "country": null,
+      "sha256": "fcaf17aea35becd338a91ec9b9bda35915a465172cca8d06857f13deffa2c811"
+    },
+    {
+      "asn": 203014,
+      "url": "https://rdap.db.ripe.net/autnum/203014",
+      "name": "IRANCHAMBER",
+      "country": null,
+      "sha256": "8badc2501870b87590598d1a69b3c79ae2dae3258d858e4b3d01aa7d45b0daa7"
+    },
+    {
+      "asn": 203162,
+      "url": "https://rdap.db.ripe.net/autnum/203162",
+      "name": "charisma",
+      "country": null,
+      "sha256": "54d44ba9d391123d1b9301f299dd20b4dcaa0417749ee1eba48cdcd6340503e1"
+    },
+    {
+      "asn": 205837,
+      "url": "https://rdap.db.ripe.net/autnum/205837",
+      "name": "SADADPSP-AS",
+      "country": null,
+      "sha256": "c4a1eae2c7f0d3635807026397afd32037c0753c0f0aa9c22fb2252a8103d871"
+    },
+    {
+      "asn": 219142,
+      "url": "https://rdap.db.ripe.net/autnum/219142",
+      "name": "MizbanOnline",
+      "country": null,
+      "sha256": "b6e7f8575ae30f1c945c69c5fac18291cbcb03dd504405ebf0db44c08308d327"
+    },
+    {
+      "asn": 10040,
+      "url": "https://rdap.apnic.net/autnum/10040",
+      "name": "NICEVAN-AS-KR-KR",
+      "country": "KR",
+      "sha256": "792e78c185edd6975c5b3c31e6a33a6fbdec9bedf21325200fdbe5f4879677db"
+    },
+    {
+      "asn": 44650,
+      "url": "https://rdap.db.ripe.net/autnum/44650",
+      "name": "BluBank",
+      "country": null,
+      "sha256": "21d846727460af483596aacd7c420c16d4054c954f18d54065d7d9ca6d297a17"
+    },
+    {
+      "asn": 48159,
+      "url": "https://rdap.db.ripe.net/autnum/48159",
+      "name": "TIC-AS",
+      "country": null,
+      "sha256": "2696a579c697a430808fe2b8e49dd09e25e338ddae1bb6648f5cffdbdc513845"
+    },
+    {
+      "asn": 49666,
+      "url": "https://rdap.db.ripe.net/autnum/49666",
+      "name": "TIC-GW-AS",
+      "country": null,
+      "sha256": "0d74d440f39b45aacbbabb94eb463ba40a9289de58712d5da3f6f5cbc3b97e9f"
+    },
+    {
+      "asn": 58224,
+      "url": "https://rdap.db.ripe.net/autnum/58224",
+      "name": "TCI",
+      "country": null,
+      "sha256": "315981c87feaf4e69df3da7767eb35c36e7227421bc7d87b036918a77b9ed72e"
+    },
+    {
+      "asn": 58232,
+      "url": "https://rdap.db.ripe.net/autnum/58232",
+      "name": "haderan",
+      "country": null,
+      "sha256": "6b691141f5369a25a2b049628ecff273ab8a3909c0a27e98c9569e38c8b71591"
+    }
+  ],
+  "provider_observations": [
+    {
+      "id": "parspack-inventory",
+      "url": "https://parspack.com/cdnips.txt",
+      "final_url": "https://parspack.com/cdnips.txt",
+      "content_type": "text/plain",
+      "bytes": 828,
+      "sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3"
+    },
+    {
+      "id": "derak-ipv4",
+      "url": "https://api.derak.cloud/public/ipv4",
+      "final_url": "https://api.derak.cloud/public/ipv4",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 323,
+      "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c"
+    },
+    {
+      "id": "derak-ipv6",
+      "url": "https://api.derak.cloud/public/ipv6",
+      "final_url": "https://api.derak.cloud/public/ipv6",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 207,
+      "sha256": "0ff567eb454c4d41976d6ae642782acaf00c2e0d17cd39a7ba18fbc433b16b25"
+    },
+    {
+      "id": "iranserver-inventory",
+      "url": "https://ips.f95.com/ip.txt",
+      "final_url": "https://ips.f95.com/ip.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "bytes": 303,
+      "sha256": "b89d869811563d2a4bf09b19a35622382b344045f8551abd60a4dce015b4b626"
+    }
+  ],
+  "service_observations": [
+    {
+      "url": "https://www.adivery.com/about-us/",
+      "final_url": "https://www.adivery.com/about-us/",
+      "sha256": "cd57ce6e23a92cfb65fa26215038ad1bef8c510de6822e9f377faaeee0572679"
+    },
+    {
+      "url": "https://www.adivery.com/contact/",
+      "final_url": "https://www.adivery.com/contact/",
+      "sha256": "25cb255d909c397aefdf586cd7098aa43cc78ba34c5e0f63fa61fdf513c2ed62"
+    },
+    {
+      "url": "https://www.najva.com/about-us/",
+      "final_url": "https://www.najva.com/about-us/",
+      "sha256": "99cd03b7bba9bac5a1a7d335e9c758cf584f2e34f60f8d2e5738e502adce31fd"
+    },
+    {
+      "url": "https://www.iranserver.com/cdn/",
+      "final_url": "https://www.iranserver.com/cdn/",
+      "sha256": "590ceeec1d60eafc2809af0d954029abe0cc22ff60a96ad5f6c83f433551b090"
+    }
+  ],
+  "source_lineage_note": "Provider leads retain Chocolate4U GPL-3.0 provenance; accepted ranges are fetched from provider endpoints, without copying upstream implementation or list files. Service leads retain bootmortis MIT provenance and the shared iran-community-domains lineage. Copies are not independent corroboration.",
+  "unresolved": [
+    "Derak IPv4 includes a non-public prefix.",
+    "IranServer inventory attribution at ips.f95.com still needs first-party confirmation.",
+    "Name matching on generic words produces low-value ASN leads; these decisions do not change discovery algorithms.",
+    "94.183.216.0/24 disappears from the fresh baseline after an IPtoASN origin/country change, despite a more-specific RIPE IR record. AS58232 remains pending; neither its whole ASN nor a new range override is admitted."
+  ],
+  "universe_coverage_percent": null,
+  "projection": {
+    "generated_at": "2026-09-20T07:08:11+00:00",
+    "comparison": "Baseline and candidate policies use identical downloaded datasets and the same DNS observations.",
+    "baseline_policy_sha512": "39603552c7e3b2572c3f3dac230aa7a8535b975f25f67a0dc30e33e9a90435a94c968fc537168c8cb427ef80acd5f6ee1088e60710af3f87402230126e31305d",
+    "candidate_policy_sha512": "bb78bb103487e332c5dc47731a3bc4fba69a20065eb63b94654adcf3ae2d8a47c1b677a027142b4128b08f03fda87b3c55516b0d692270e9237122cd31b1cda3",
+    "changes": {
+      "ipv4": {
+        "before_prefixes": 1816,
+        "after_prefixes": 1852,
+        "added_ranges": [
+          "45.32.131.160/28",
+          "45.32.154.64/28",
+          "45.76.132.16/28",
+          "45.77.211.208/28",
+          "45.77.223.80/28",
+          "64.176.15.176/28",
+          "64.176.64.80/28",
+          "65.20.72.128/28",
+          "65.20.113.240/28",
+          "84.17.42.173/32",
+          "84.17.42.174/31",
+          "84.17.42.224/28",
+          "87.236.161.96/28",
+          "89.36.162.32/28",
+          "89.187.169.11/32",
+          "89.187.169.12/31",
+          "89.187.169.48/28",
+          "95.179.140.112/28",
+          "95.179.164.96/28",
+          "95.179.220.128/28",
+          "139.84.177.16/28",
+          "139.84.236.0/28",
+          "144.202.58.96/28",
+          "144.202.78.96/28",
+          "144.202.114.128/28",
+          "155.138.162.96/28",
+          "158.51.122.240/28",
+          "158.247.223.48/28",
+          "167.179.93.112/28",
+          "185.208.173.0/24",
+          "195.181.174.64/28",
+          "207.148.69.96/28",
+          "208.85.22.32/28",
+          "213.183.48.16/28",
+          "216.238.117.0/28",
+          "217.197.97.48/28"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "758",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 586,
+        "after_prefixes": 587,
+        "added_ranges": [
+          "2a01:4f8:c0:2da6::/64"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "18446744073709551616",
+        "removed_addresses": "0"
+      }
+    },
+    "source_observations": [
+      {
+        "name": "dns_snapshot",
+        "bytes": 52483,
+        "sha256": "4e6d0cd4f84214e98541221034eeae0ee3bea787686fc533b9f82e12fec76bff"
+      },
+      {
+        "name": "ipdeny_ipv4",
+        "bytes": 30724,
+        "sha256": "f6e1f5e0242643c70c7bc1f6adc7853bf9e8ef6000807bf3af2e164d0a611e91"
+      },
+      {
+        "name": "ipdeny_ipv6",
+        "bytes": 8573,
+        "sha256": "74945f62cb5c1d1667349d589e3626f1936a23c0b27953165220e4ad32ad0c95"
+      },
+      {
+        "name": "iptoasn_ipv4",
+        "bytes": 6978180,
+        "sha256": "aed26197e56174fb74af7926a7cea25d27103e96046163513c9216fafd557f8c"
+      },
+      {
+        "name": "iptoasn_ipv6",
+        "bytes": 2000581,
+        "sha256": "0acc6ef594618324b7bf2d5b8cd3ac5870e563acb48f785611c40972d36f7f04"
+      },
+      {
+        "name": "nro_delegated",
+        "bytes": 56793785,
+        "sha256": "514a3200755277ae3e8dbb3d7b5894a3929e6903f733cce2c691c2e3495217fe"
+      },
+      {
+        "name": "provider_arvancloud",
+        "bytes": 220,
+        "sha256": "7357e3c11af8073d5a8c147c704e2c5a816a6c2cc4046918b00e5986e98e9967"
+      },
+      {
+        "name": "provider_derakcloud_ipv6",
+        "bytes": 207,
+        "sha256": "0ff567eb454c4d41976d6ae642782acaf00c2e0d17cd39a7ba18fbc433b16b25"
+      },
+      {
+        "name": "provider_mizbancloud",
+        "bytes": 132,
+        "sha256": "53263ccf6dc9c95795751f9792a6a5a826ddb77b80433bddd646f7d0ced6c3f4"
+      },
+      {
+        "name": "provider_parspack",
+        "bytes": 828,
+        "sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3"
+      }
+    ],
+    "new_service_domains": [
+      "adivery.com",
+      "www.adivery.com",
+      "najva.com",
+      "www.najva.com"
+    ],
+    "new_service_addresses_already_covered": true
+  },
+  "validation": {
+    "unit_tests_passed": 48,
+    "compileall": "passed",
+    "candidate_decisions_applied": 16,
+    "oldest_rejected_candidates_leave_queue": true,
+    "non_public_provider_prefix_rejection": "passed",
+    "all_admitted_provider_ranges_contained": true,
+    "all_new_service_answers_contained": true,
+    "known_source_completeness_percent": 100,
+    "dns_outcomes": {
+      "success": 96
+    },
+    "guarded_generation_against_published": "passed; identical feed membership and manifest to candidate projection",
+    "published_generation": "dff36687e5361e0330707cd8204e2f828c0914cc4801adf23c3260c07da4c9f5",
+    "production_snapshot_changes": {
+      "ipv4": {
+        "before_prefixes": 1817,
+        "after_prefixes": 1852,
+        "added_ranges": [
+          "45.32.131.160/28",
+          "45.32.154.64/28",
+          "45.76.132.16/28",
+          "45.77.211.208/28",
+          "45.77.223.80/28",
+          "64.176.15.176/28",
+          "64.176.64.80/28",
+          "65.20.72.128/28",
+          "65.20.113.240/28",
+          "84.17.42.173/32",
+          "84.17.42.174/31",
+          "84.17.42.224/28",
+          "87.236.161.96/28",
+          "89.36.162.32/28",
+          "89.187.169.11/32",
+          "89.187.169.12/31",
+          "89.187.169.48/28",
+          "95.179.140.112/28",
+          "95.179.164.96/28",
+          "95.179.220.128/28",
+          "139.84.177.16/28",
+          "139.84.236.0/28",
+          "144.202.58.96/28",
+          "144.202.78.96/28",
+          "144.202.114.128/28",
+          "155.138.162.96/28",
+          "158.51.122.240/28",
+          "158.247.223.48/28",
+          "167.179.93.112/28",
+          "185.208.173.0/24",
+          "195.181.174.64/28",
+          "207.148.69.96/28",
+          "208.85.22.32/28",
+          "213.183.48.16/28",
+          "216.238.117.0/28",
+          "217.197.97.48/28"
+        ],
+        "removed_ranges": [
+          "94.183.216.0/24"
+        ],
+        "added_addresses": "758",
+        "removed_addresses": "256"
+      },
+      "ipv6": {
+        "before_prefixes": 586,
+        "after_prefixes": 587,
+        "added_ranges": [
+          "2a01:4f8:c0:2da6::/64"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "18446744073709551616",
+        "removed_addresses": "0"
+      }
+    },
+    "explain_checks": [
+      {
+        "query": "185.208.173.1",
+        "layer": "provider_parspack"
+      },
+      {
+        "query": "2a01:4f8:c0:2da6::1",
+        "layer": "provider_derakcloud_ipv6"
+      }
+    ]
+  },
+  "upstream_change_review": {
+    "range": "94.183.216.0/24",
+    "policy_change": false,
+    "previous_publication": {
+      "origin_asn": 214957,
+      "country": "IR",
+      "description": "NAHOR_HADISH",
+      "contributing_layer": "selected_asn_ipv4"
+    },
+    "current_iptoasn": {
+      "origin_asn": 58232,
+      "country": "AU",
+      "description": "HADERAN Hosted by haderan.com Owner havadaran data processing hosting",
+      "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+    },
+    "covering_delegated_record": {
+      "registry": "ripencc",
+      "country": "AE",
+      "first": "94.183.192.0",
+      "addresses": 16384,
+      "status": "assigned",
+      "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+    },
+    "more_specific_registry_record": {
+      "url": "https://rdap.db.ripe.net/ip/94.183.216.1",
+      "name": "PenguCloud",
+      "country": "IR",
+      "first": "94.183.216.0",
+      "last": "94.183.216.255",
+      "sha256": "414ea420423e5d08c8add2b747b9a872e3328cdf3c7158f834ebe7b74f3b1ad5"
+    },
+    "asn_registrant": {
+      "url": "https://rdap.db.ripe.net/autnum/58232",
+      "organization": "Parsun Network Solutions PTY LTD",
+      "registered_country": "AU"
+    },
+    "website_observation": {
+      "url": "https://haderan.com/",
+      "result": "Directory index with no company identification.",
+      "sha256": "e1e2ee1484d1667376699e506ab343736d95bb5c08411f3a799f28f20948f021"
+    },
+    "decision": "Pending identity investigation. The new policy adds no ASNs; this upstream removal also occurs with the unchanged policy and identical current source inputs."
+  }
+}
