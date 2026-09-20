@@ -136,6 +136,130 @@
           "reason": "Official provider inventory reviewed during the v1.1.0 coverage audit."
         }
       ]
+    },
+    {
+      "id": "parspack",
+      "version": 4,
+      "url": "https://parspack.com/cdnips.txt",
+      "evidence": "https://parspack.com/cdn",
+      "min_count": 24,
+      "max_count": 128,
+      "min_prefixlen": 24,
+      "state": "accepted",
+      "reviewed_on": "2026-09-20",
+      "review_reason": "The provider publishes this inventory on its own domain for its Iranian CDN service. Collect the listed public prefixes, including foreign-hosted edges; this does not establish ownership of the hosting ASNs.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://parspack.com/cdnips.txt",
+          "evidence": [
+            "https://parspack.com/cdn",
+            "https://parspack.com/cdnips.txt"
+          ],
+          "reviewed_on": "2026-09-20",
+          "reason": "The provider publishes this inventory on its own domain for its Iranian CDN service. Collect the listed public prefixes, including foreign-hosted edges; this does not establish ownership of the hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "provider:https://parspack.com/cdnips.txt",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4ff1061203de60284d876b2fa8b8ee7ba386710c31a5325a3da6c94a3c8da140",
+          "e804dfa642074d7dc08ab44a5ad61dc2e1458e92e42a071371a2624d72881991"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:parspack",
+            "original_source_urls": [
+              "https://parspack.com/cdnips.txt"
+            ],
+            "path": "text/parspack.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/parspack.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:parspack",
+            "original_source_urls": [
+              "https://parspack.com/cdnips.txt"
+            ],
+            "path": "text/parspack.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/parspack.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          }
+        ]
+      }
+    },
+    {
+      "id": "derakcloud_ipv6",
+      "version": 6,
+      "url": "https://api.derak.cloud/public/ipv6",
+      "evidence": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "min_count": 5,
+      "max_count": 32,
+      "min_prefixlen": 64,
+      "state": "accepted",
+      "reviewed_on": "2026-09-20",
+      "review_reason": "Derak's official IP-range documentation links this IPv6 inventory for its reverse proxies. All ten observed prefixes are public /64s. Admit only the published prefixes, not the hosting ASNs.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://api.derak.cloud/public/ipv6",
+          "evidence": [
+            "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "reviewed_on": "2026-09-20",
+          "reason": "Derak's official IP-range documentation links this IPv6 inventory for its reverse proxies. All ten observed prefixes are public /64s. Admit only the published prefixes, not the hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "provider:https://api.derak.cloud/public/ipv6",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+          "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/derakcloud.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/derakcloud.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          }
+        ]
+      }
     }
   ],
   "dns_resolvers": {
@@ -502,6 +626,152 @@
           "reason": "Identified Iranian service, reviewed during the v1.1.0 audit; admit exact public DNS answers only."
         }
       ]
+    },
+    {
+      "domain": "adivery.com",
+      "evidence": "https://www.adivery.com/about-us/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-20",
+      "review_reason": "The official about page identifies Adivery as Yektanet's Iranian app-advertising service, and its contact page lists a Tehran office. Resolve the apex and official www hostname only; neither ad partners nor their ASNs are admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "adivery.com",
+          "evidence": [
+            "https://www.adivery.com/about-us/",
+            "https://www.adivery.com/contact/"
+          ],
+          "reviewed_on": "2026-09-20",
+          "reason": "The official about page identifies Adivery as Yektanet's Iranian app-advertising service, and its contact page lists a Tehran office. Resolve the apex and official www hostname only; neither ad partners nor their ASNs are admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:adivery.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "823a8955118c7c0b62644a20f8c206d28c4714e61dea41faef5dfe701b3e416b"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "adivery.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609170900/domains.txt",
+            "version": "202609170900"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.adivery.com",
+      "evidence": "https://www.adivery.com/about-us/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-20",
+      "review_reason": "The official about page identifies Adivery as Yektanet's Iranian app-advertising service, and its contact page lists a Tehran office. Resolve the apex and official www hostname only; neither ad partners nor their ASNs are admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.adivery.com",
+          "evidence": [
+            "https://www.adivery.com/about-us/",
+            "https://www.adivery.com/contact/"
+          ],
+          "reviewed_on": "2026-09-20",
+          "reason": "The official about page identifies Adivery as Yektanet's Iranian app-advertising service, and its contact page lists a Tehran office. Resolve the apex and official www hostname only; neither ad partners nor their ASNs are admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:adivery.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "823a8955118c7c0b62644a20f8c206d28c4714e61dea41faef5dfe701b3e416b"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "adivery.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609170900/domains.txt",
+            "version": "202609170900"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "najva.com",
+      "evidence": "https://www.najva.com/about-us/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-20",
+      "review_reason": "The official about page identifies Najva as an Iranian retention-marketing service. Resolve the apex and official www hostname only; hosting does not establish ownership of a shared-cloud ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "najva.com",
+          "evidence": [
+            "https://www.najva.com/about-us/"
+          ],
+          "reviewed_on": "2026-09-20",
+          "reason": "The official about page identifies Najva as an Iranian retention-marketing service. Resolve the apex and official www hostname only; hosting does not establish ownership of a shared-cloud ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:najva.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "09aaef56f46589840fe30c137c54209b44ae43bbb673c9cda361600b5998cc2f"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "najva.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609170900/domains.txt",
+            "version": "202609170900"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.najva.com",
+      "evidence": "https://www.najva.com/about-us/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-20",
+      "review_reason": "The official about page identifies Najva as an Iranian retention-marketing service. Resolve the apex and official www hostname only; hosting does not establish ownership of a shared-cloud ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.najva.com",
+          "evidence": [
+            "https://www.najva.com/about-us/"
+          ],
+          "reviewed_on": "2026-09-20",
+          "reason": "The official about page identifies Najva as an Iranian retention-marketing service. Resolve the apex and official www hostname only; hosting does not establish ownership of a shared-cloud ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:najva.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "09aaef56f46589840fe30c137c54209b44ae43bbb673c9cda361600b5998cc2f"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "najva.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609170900/domains.txt",
+            "version": "202609170900"
+          }
+        ]
+      }
     }
   ]
 }

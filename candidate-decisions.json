@@ -1,4 +1,235 @@
 {
   "schema": 1,
-  "decisions": {}
+  "decisions": {
+    "asn:10002": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies IGAUENO CABLE TELEVISION CO.,LTD (JP); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'ict'/'ict' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "2fe7380e13a56379c01223ac064ef7c3330e6c35fd5d2612b7df957208388023",
+        "a6ea7b3eaa79666b8760eccfaddbccc3c20fde926a8c12723f869e58133474bb"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10002",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292"
+      ]
+    },
+    "asn:10015": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies Cyber Wave Japan Co., Ltd. (JP); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'waves'/'wave' (0.89)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "1f01f492e043082d63132782f85937f9604e43e1876f80fd43604d515574ded8"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10015",
+        "https://rdap.db.ripe.net/autnum/39364"
+      ]
+    },
+    "asn:10016": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies Minaminihon Information Processing Center Co Ltd (JP); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'processing'/'processing' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "00592334b87dffdd626b0af9055f74a418cb465ce545adab1b634d4e6021ef68",
+        "19a7aab09b1198a1178f4c2114d161d7bc3b70b5b3eebf8da097c2df9c2e2d37",
+        "52ec7e55db6c21e7f4d4128451fc3460674adbdd2a301b72e0ca1f828df37364",
+        "7d1842573e7ae939273d4ad8423af0f45d12691d5f542c5b3e36b03e2d30b4f1",
+        "d630c6cbb9086eaf1fff08c09d4063cf284d483fdec24b74ad915ce4ed8b0e50",
+        "efd687d077dfed80236b6eb067aa5769fe9dc1551c3144d534170912a575dc2e"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10016",
+        "https://rdap.db.ripe.net/autnum/34871",
+        "https://rdap.db.ripe.net/autnum/48391",
+        "https://rdap.db.ripe.net/autnum/50177",
+        "https://rdap.db.ripe.net/autnum/57474",
+        "https://rdap.db.ripe.net/autnum/203162",
+        "https://rdap.db.ripe.net/autnum/205837"
+      ]
+    },
+    "asn:10022": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies Internet access for Datacom Systems Auckland (NZ); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'access'/'access' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "b1e55bd992248082e945ce574f6a70ced1d28c885f0a8b3a9281bfd484ab4547"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10022",
+        "https://rdap.db.ripe.net/autnum/21341"
+      ]
+    },
+    "asn:10025": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies The IUSN Foundation (NU); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'foundation'/'foundation' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "e13965af0e9064eb26026899c409f5df2cc6fb3a2fce26f014c2eb85e85bf6a6"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10025",
+        "https://rdap.db.ripe.net/autnum/56375"
+      ]
+    },
+    "asn:10031": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies WEBSATMEDIA PTE LTD, Satellite Over IP, Singapore (SG); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'satellite'/'satellite' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "a23f63f101072ef5cda5673d6e76b0128ba5eb9d33fddc4b9f99b9836a7d15fd"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10031",
+        "https://rdap.db.ripe.net/autnum/56632"
+      ]
+    },
+    "asn:10034": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies SEOUL AGRICULTURAL MARINE PRODUCTS CORP. (KR); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'agriculture'/'agricultural' (0.87)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "7fdd3216ab919c9fe6d6ef3e5495f4e9309a1ef0a6270896b8a5777e25da1299",
+        "d809c72bf545366d5fefebb14e8f00edf4ec1ca3944318834045c9cd423b4c6f"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10034",
+        "https://rdap.db.ripe.net/autnum/57574",
+        "https://rdap.db.ripe.net/autnum/203014"
+      ]
+    },
+    "asn:10039": {
+      "state": "rejected",
+      "reason": "Reject the currently supplied affiliation lead: APNIC identifies Korea Health Industry Development Institute (KR); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'industry'/'industry' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "95b7dc5da42dbf78356484f8d4f9b69e139f3fb42fe9ffe8ec7d29f11f047419",
+        "addd1f5350ef334ba7cafcf0ec23bd8e7b0dce1c0c3e0c71cdf149958c08140a",
+        "c6b90d782b9fa4bb73142b6ac333130b6b8d5c841d1662bc558d0bc342326259",
+        "c78b99f41b536f7e0724bf45e3e8b495849b8880a983c9a33502fd3d79631178",
+        "ccb6efcf24f6544484977bd9f02a6490b2dc963c831bd96b14304f02d1882a6c"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10039",
+        "https://rdap.db.ripe.net/autnum/42907",
+        "https://rdap.db.ripe.net/autnum/49207",
+        "https://rdap.db.ripe.net/autnum/50114",
+        "https://rdap.db.ripe.net/autnum/59754",
+        "https://rdap.db.ripe.net/autnum/219142"
+      ]
+    },
+    "provider:https://parspack.com/cdnips.txt": {
+      "state": "accepted",
+      "reason": "The provider publishes this inventory on its own domain for its Iranian CDN service. Collect the listed public prefixes, including foreign-hosted edges; this does not establish ownership of the hosting ASNs.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "4ff1061203de60284d876b2fa8b8ee7ba386710c31a5325a3da6c94a3c8da140",
+        "e804dfa642074d7dc08ab44a5ad61dc2e1458e92e42a071371a2624d72881991"
+      ],
+      "evidence": [
+        "https://parspack.com/cdn",
+        "https://parspack.com/cdnips.txt"
+      ]
+    },
+    "provider:https://api.derak.cloud/public/ipv6": {
+      "state": "accepted",
+      "reason": "Derak's official IP-range documentation links this IPv6 inventory for its reverse proxies. All ten observed prefixes are public /64s. Admit only the published prefixes, not the hosting ASNs.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d"
+      ],
+      "evidence": [
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+        "https://api.derak.cloud/public/ipv6"
+      ]
+    },
+    "provider:https://api.derak.cloud/public/ipv4": {
+      "state": "pending",
+      "reason": "The official IPv4 inventory contains non-public 192.168.204.48/28. Keep it outside automatic collection until the provider supplies a valid public inventory; do not relax the strict non-public-prefix rejection.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d"
+      ],
+      "evidence": [
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+        "https://api.derak.cloud/public/ipv4"
+      ]
+    },
+    "provider:https://ips.f95.com/ip.txt": {
+      "state": "pending",
+      "reason": "The endpoint is reachable and lists 22 public host addresses, but the community attribution to IranServer is not primary ownership evidence. The reviewed IranServer CDN page did not establish control of this separate domain. Require an official provider link or equivalent first-party attribution before admission.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
+        "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a"
+      ],
+      "evidence": [
+        "https://www.iranserver.com/cdn/",
+        "https://ips.f95.com/ip.txt"
+      ]
+    },
+    "domain:adivery.com": {
+      "state": "accepted",
+      "reason": "The official about page identifies Adivery as Yektanet's Iranian app-advertising service, and its contact page lists a Tehran office. Resolve the apex and official www hostname only; neither ad partners nor their ASNs are admitted.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "823a8955118c7c0b62644a20f8c206d28c4714e61dea41faef5dfe701b3e416b"
+      ],
+      "evidence": [
+        "https://www.adivery.com/about-us/",
+        "https://www.adivery.com/contact/"
+      ]
+    },
+    "domain:najva.com": {
+      "state": "accepted",
+      "reason": "The official about page identifies Najva as an Iranian retention-marketing service. Resolve the apex and official www hostname only; hosting does not establish ownership of a shared-cloud ASN.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "09aaef56f46589840fe30c137c54209b44ae43bbb673c9cda361600b5998cc2f"
+      ],
+      "evidence": [
+        "https://www.najva.com/about-us/"
+      ]
+    },
+    "asn:10040": {
+      "state": "rejected",
+      "reason": "Reject the current affiliation assertions: APNIC identifies NICE Information Telecommunication, Inc in Korea. The linked RIPE records identify BISTALK TELECUMUNICATION SYSTEMS COMPANY, Telecommunication Infrastructure Company and Iran Telecommunication Company. Their shared generic word 'telecommunication' supplies no evidence of common ownership. New independently supported evidence can reopen the candidate.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "82f6a7f516b19706d8703e330e777b0a515e9afd7142142a9fd77d03cf2c92a6",
+        "b47d074816872376edb96930cccdfe7972bdabf067a08dffc6ed150b2822792d",
+        "b518a92e9db15be8f97eeec15638ebe5dad0647bdb7380961a09a5d20ea52529",
+        "e6ac0e83b7919272ba17788e507effb97fbda8b0b7d14485b229cb826110f964"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10040",
+        "https://rdap.db.ripe.net/autnum/44650",
+        "https://rdap.db.ripe.net/autnum/48159",
+        "https://rdap.db.ripe.net/autnum/49666",
+        "https://rdap.db.ripe.net/autnum/58224"
+      ]
+    },
+    "asn:58232": {
+      "state": "pending",
+      "reason": "Current IPtoASN maps 94.183.216.0/24 to AS58232 with an AU label, so the fresh baseline drops a previously IR-selected range. RIPE's more-specific IP record labels the /24 IR, but the covering delegated allocation is AE and the ASN registrant is Parsun Network Solutions PTY LTD in Australia. The haderan.com root provides no company information. Resolve this registration and operating-identity conflict; a hosted IR subnet and generic name matches do not establish Iranian ownership of the entire ASN.",
+      "reviewed_on": "2026-09-20",
+      "evidence_fingerprints": [
+        "044051383c80512aaa3a089549d28102ac7d47cace40bb4a1fa2cdc01b6091af",
+        "76c4068e0f14d215cdd01955128ea5eb1e0cae58274e8a551d290b5450831e4a",
+        "9fb3e0f27aa7664c55cc486eda610c3abadace9ad4d850dbbaadc44291787191",
+        "ee9350b81266dc8651e7c80bda05b477d08e0496c53b99a7250cee74c7e9789f",
+        "f575b1b526ce3e0ab68a76cc741762f316be1be83773140a2921f28a6a08f3c9",
+        "feb3d1e12cafc8aff2f9eb201c5541982f52ca09a7c7d8f13b34f99b6911b3fc"
+      ],
+      "evidence": [
+        "https://iptoasn.com/data/ip2asn-v4.tsv.gz",
+        "https://rdap.db.ripe.net/ip/94.183.216.1",
+        "https://rdap.db.ripe.net/autnum/58232",
+        "https://haderan.com/"
+      ]
+    }
+  }
 }
