@@ -10,13 +10,13 @@
     "report": "coverage.json",
     "services": "Exact A/AAAA addresses observed for reviewed service domains; shared hosting included"
   },
-  "generated_at": "2026-09-20T16:01:25Z",
+  "generated_at": "2026-09-22T16:54:01Z",
   "generator_version": "2.0.1",
   "ipv4": {
     "bytes": 29073,
     "count": 1852,
     "file": "ir-ipv4.zone",
-    "sha512": "c148703975cc4363c3470b66f8ffca6dac2e377cdfb8b50206ea19b9c0e99c24b45fbac612c1410ee5533360054a24c4dcbfc9495488aa914756d81127dd6c0a"
+    "sha512": "99562303280b5656d26e6cf7c3f7e5d26acc01c953c58969e25e6d631310469d419c91589d90f0560b6466afa58474ec55e44a0dfa82cdbba85f98c8ff570ed5"
   },
   "ipv6": {
     "bytes": 8862,
@@ -27,25 +27,25 @@
   "schema": 1,
   "source_stats": {
     "ipv4": {
-      "ipdeny_cidrs": 1960,
-      "iptoasn_selected_asns": 571,
-      "iptoasn_selected_ranges": 5313
+      "ipdeny_cidrs": 1961,
+      "iptoasn_selected_asns": 573,
+      "iptoasn_selected_ranges": 5279
     },
     "ipv6": {
       "ipdeny_cidrs": 572,
-      "iptoasn_selected_asns": 156,
-      "iptoasn_selected_ranges": 451
+      "iptoasn_selected_asns": 157,
+      "iptoasn_selected_ranges": 453
     }
   },
   "sources": {
     "dns_snapshot": {
-      "bytes": 52856,
-      "sha512": "f020050fe5e70b212f4859768d012f801d87dd957071406fb1ec9f93ff8c5e080ccb3ecade38a45357beed7eb3dc73e401c9a42b1b087d73f656db1c7108f162",
+      "bytes": 52575,
+      "sha512": "5fb1854be954247f6696a85c17ee9adcdbc80f82c0527a9595615f8b574d3b76d7fbd8bda08e1af86af848ce1775daeb6af50c2c5fd302acbef2a63ef06f76af",
       "url": "coverage-policy.json#dns_resolvers"
     },
     "ipdeny_ipv4": {
-      "bytes": 30724,
-      "sha512": "ea7b0041033763bc533bfd7fb4ac7ff087b55f10ebaafecf100a5901c541e8c7a0126c106cd5479d94e93ae82246b541bf811be88d0f79831262979936c2e19d",
+      "bytes": 30740,
+      "sha512": "82c6300b2551cc71493f154d102ee57b16b772e6fb6b96347181265fae6d474207d30ba43b80354c9adffc4f7f85f67268182a3b8d63e9a1953491af5b2c001b",
       "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
     },
     "ipdeny_ipv6": {
@@ -54,18 +54,18 @@
       "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
     },
     "iptoasn_ipv4": {
-      "bytes": 6978741,
-      "sha512": "0e68f46f66b3dc73eb5e402dd6c7d92c8ff47d669679bf1146e304f18dbe1cd3947399f4f6b18c3f8e6248f3929a19527aa08f9c9986bb55b76c43f40ff4a218",
+      "bytes": 6980707,
+      "sha512": "3757b279d51ece845ce81387fe0a7b305e1947431aedac573ec991abf42dfd19f4b6790b5357f5b28e48c60e994e7ff08844a79562e1362389728f3b0b0bf072",
       "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
     },
     "iptoasn_ipv6": {
-      "bytes": 2001464,
-      "sha512": "1190c6076686f85a9cf7abde7859d4dbe84be61be5b5e14f3b4917ee387d7bd8f6c08c7fce15d0e57e1a4bfb51c6631aec5edcb8cb0545ac15f80e7b26a2e18c",
+      "bytes": 2003626,
+      "sha512": "67089d2b0b6507625a6f549b0a1d36eb5da9edabe86dff4e5eee17735df0a9e0c6e672fc597ef5641cb77a3a87e65a82d5691155b81514ed404e7f27c94c5fbf",
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 56795290,
-      "sha512": "d15fac9fa98e0d8d9b0b68fcb1e466b7ef290928345cac76d2e7e8542d8d57e53cb993d8fa9408b220e71b272b9fb50eedeb5d94f3a4b2d6ba419a41018ef722",
+      "bytes": 56801275,
+      "sha512": "4994dc571e94a11c74180d7f6f0c3e7bf80314edf6c12cd8aafe8552a08237a92ae13870864b18cb7239f57a2d2db3c14154ad511546b697d552e0c081d946e2",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
