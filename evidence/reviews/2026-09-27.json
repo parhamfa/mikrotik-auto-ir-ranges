@@ -381,11 +381,11 @@
     }
   },
   "projection": {
-    "mode": "diagnostic with explicit HTTP Content-Encoding gzip decoding",
-    "generated_at": "2026-09-27T07:15:07+00:00",
-    "comparison": "Identical public source observations and DNS answers were used for baseline and candidate. The existing provider_parspack HTTP response was decompressed for both policies; no address data was edited. The repository downloader remains unchanged.",
-    "baseline_policy_sha512": "bb78bb103487e332c5dc47731a3bc4fba69a20065eb63b94654adcf3ae2d8a47c1b677a027142b4128b08f03fda87b3c55516b0d692270e9237122cd31b1cda3",
-    "candidate_policy_sha512": "c85abe65171a30be28224ccfc93dfb7ff51454a6c0610f862c19bc2e487dbe757511358ea60b22cd642576a131cdef4ae5dca0e8c76d7d08685e11e4b0e77522",
+    "mode": "live collection through the repository downloader",
+    "generated_at": "2026-09-27T07:34:42+00:00",
+    "comparison": "Identical freshly downloaded public source observations and DNS answers were used for baseline and candidate. HTTP Content-Encoding is decoded by the repaired repository downloader; no source payload was manually modified.",
+    "baseline_policy_sha512": "3a742c2b76a2818384ca8adc7a24f34efde321624df1387ed7ef609d2fa3fd0a194b4e8c83c6a8f4c8612e378a081e80aece1ae113ce809eb99829cac588bd70",
+    "candidate_policy_sha512": "c7a25c01af491604b5c5b5a47d1459d26db84242f2009e4ce6c843e77eadc6ec314f940fad2a979d4e14ac866be6374f4d8a8598c4f4ea126ef7be6adb06c94b",
     "changes": {
       "ipv4": {
         "before_prefixes": 1853,
@@ -444,8 +444,8 @@
     },
     "source_observations": {
       "dns_snapshot": {
-        "bytes": 66286,
-        "sha256": "ad81a3cb0f9dcc783477a795567960669970dce96beb935e1307eba2e397a854"
+        "bytes": 66279,
+        "sha256": "f0969a40a58387247cb9eed2a02947884df20b2332917afba07a38b3eb39600d"
       },
       "ipdeny_ipv4": {
         "bytes": 30819,
@@ -518,14 +518,14 @@
     ]
   },
   "validation": {
-    "unit_tests_passed": 48,
+    "unit_tests_passed": 59,
     "compileall": "passed",
     "catalogue_and_28_decisions": "passed",
     "oldest_review_allocation": "passed",
     "all_admitted_provider_ranges_contained": true,
     "all_new_service_answers_contained": true,
     "v2_complete_page_validation": "passed",
-    "guarded_generation_against_last_publication": "passed with the same explicitly decompressed provider payload",
+    "guarded_generation_against_last_publication": "passed using the normal live projection sources",
     "guarded_manifest_and_membership_equal_projection": true,
     "non_public_provider_prefix_rejection": "passed",
     "explain_checks": [
@@ -545,11 +545,14 @@
     },
     "new_dns_queries": 28,
     "unresolved_services": [],
-    "known_source_completeness_percent": 100
+    "known_source_completeness_percent": 100,
+    "normal_live_projection": "passed without manual source decoding",
+    "all_admitted_source_ranges_contained": true
   },
-  "live_projection_failure": {
-    "status": "reproduced on unchanged baseline and candidate",
-    "source": {
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null,
+  "downloader_fix": {
+    "trigger": {
       "url": "https://parspack.com/cdnips.txt",
       "observed_at": "2026-09-27T07:17:08.983662+00:00",
       "user_agent": "mikrotik-auto-ir-ranges/2.0.1 (+https://github.com/parhamfa/mikrotik-auto-ir-ranges)",
@@ -561,16 +564,12 @@
       "decoded_sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3",
       "decoded_sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4"
     },
-    "error": "invalid parspack provider feed: 'ascii' codec can't decode byte 0x8b in position 1: ordinal not in range(128)",
+    "original_error": "invalid parspack provider feed: 'ascii' codec can't decode byte 0x8b in position 1: ordinal not in range(128)",
     "cause": "download() returns the HTTP gzip body unchanged; parse_provider() expects decoded ASCII text.",
-    "decoded_payload_matches_last_publication": true,
-    "last_successful_scheduled_publication": {
-      "observed_at": "2026-09-26T16:19:41Z",
-      "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/36255044636"
-    },
-    "scope": "Observed local HTTP response; this does not establish that the GitHub runner currently receives the same response or that production publication is failing.",
-    "required_follow_up": "Handle HTTP Content-Encoding with decoded-size bounds while preserving compressed dataset file semantics; then repeat normal live projection. No downloader or provider-parser changes are part of this proposal."
-  },
-  "universe_coverage_percent": null,
-  "measured_lab_recall": null
+    "resolution": "Decode declared HTTP gzip encodings in reverse order, preserving gzip dataset files when not HTTP-encoded. Enforce the 256 MiB limit on both wire and decoded bytes; reject unsupported encodings and invalid compressed streams.",
+    "regression_tests": 11,
+    "validation": "Normal live projection and generation guarded against the last published feed pass without manual decoding.",
+    "parspack_decoded_payload_matches_last_publication": true,
+    "global_coverage_note": "This repair changes transport decoding, not source-admission policy."
+  }
 }
