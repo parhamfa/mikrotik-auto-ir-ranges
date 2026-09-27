@@ -29,14 +29,26 @@
     },
     "asn:10016": {
       "state": "rejected",
-      "reason": "Reject the currently supplied affiliation lead: APNIC identifies Minaminihon Information Processing Center Co Ltd (JP); the linked RIPE records identify different organizations. The match is a generic word or abbreviation (Name similarity 'processing'/'processing' (1.00)), with no evidence of common ownership. This rejects these assertions, not any future independently supported relationship.",
-      "reviewed_on": "2026-09-20",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Minaminihon Information Processing Center Co Ltd (JP); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'processing'/'processing' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate. The reopened assertions were rechecked against the additional Iranian anchor organizations.",
+      "reviewed_on": "2026-09-27",
       "evidence_fingerprints": [
         "00592334b87dffdd626b0af9055f74a418cb465ce545adab1b634d4e6021ef68",
         "19a7aab09b1198a1178f4c2114d161d7bc3b70b5b3eebf8da097c2df9c2e2d37",
+        "3075124373306bbff98c0accc9629567a5bbe18410ea4b37c95f7e56b5151834",
+        "3aedc6a0399da4acfb41834c3096ce1a6dd3730d0e3179f902eb07bd5516e71b",
         "52ec7e55db6c21e7f4d4128451fc3460674adbdd2a301b72e0ca1f828df37364",
+        "588fcd48be9ebb74f7d4d767eb5e4a2935c2149fa3ca68186451ec36fe994313",
+        "7623aa22fc51f0d416f15c2825532ae05fea85d39c1eaefbad42751c5fda49ce",
         "7d1842573e7ae939273d4ad8423af0f45d12691d5f542c5b3e36b03e2d30b4f1",
+        "860c68d0a0e29644c5816596abdbf49fb2f21caa1a0cfe522e13c141807379b3",
+        "8eaec19d1d65a5cab8095174ba5b3c827116fa6818ee1e4ead69ae2fecea8736",
+        "a1c06dedcf318cf220de4bbb341c204da39cf83c714969365cad3ac54a303ce2",
+        "ae35505632d357bccf10359e25d25b17121a5c0bd552bc62a0eea7683930662d",
+        "b193847b6997e559e83a72034a45b051c379c2006b588326a17da332b818670a",
         "d630c6cbb9086eaf1fff08c09d4063cf284d483fdec24b74ad915ce4ed8b0e50",
+        "db81eb01c77c4b859712a91a2bd38a43e36d86688c05b6ef485c1ed594bed4be",
+        "e9bdccd69502d4408cb6d2a2eb4e23ad86a73434faf324bd75ced47093a77712",
+        "ec78a810219d3d271d714432dcfef140030a290b8eddf1eb1376c496a3b6d967",
         "efd687d077dfed80236b6eb067aa5769fe9dc1551c3144d534170912a575dc2e"
       ],
       "evidence": [
@@ -46,7 +58,10 @@
         "https://rdap.db.ripe.net/autnum/50177",
         "https://rdap.db.ripe.net/autnum/57474",
         "https://rdap.db.ripe.net/autnum/203162",
-        "https://rdap.db.ripe.net/autnum/205837"
+        "https://rdap.db.ripe.net/autnum/205837",
+        "https://rdap.db.ripe.net/autnum/213222",
+        "https://rdap.db.ripe.net/autnum/213682",
+        "https://rdap.db.ripe.net/autnum/215700"
       ]
     },
     "asn:10022": {
@@ -147,27 +162,30 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reason": "The official IPv4 inventory contains non-public 192.168.204.48/28. Keep it outside automatic collection until the provider supplies a valid public inventory; do not relax the strict non-public-prefix rejection.",
-      "reviewed_on": "2026-09-20",
+      "reason": "The refreshed official inventory still includes non-public 192.168.204.48/28. The source remains pending under the current strict parser. No partial inventory or cached answer is admitted.",
+      "reviewed_on": "2026-09-27",
       "evidence_fingerprints": [
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
-        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d"
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0"
       ],
       "evidence": [
-        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
-        "https://api.derak.cloud/public/ipv4"
+        "https://api.derak.cloud/public/ipv4",
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/"
       ]
     },
     "provider:https://ips.f95.com/ip.txt": {
       "state": "pending",
-      "reason": "The endpoint is reachable and lists 22 public host addresses, but the community attribution to IranServer is not primary ownership evidence. The reviewed IranServer CDN page did not establish control of this separate domain. Require an official provider link or equivalent first-party attribution before admission.",
-      "reviewed_on": "2026-09-20",
+      "reason": "IranServer's official CDN whitelist documentation directly links https://ips.f95.com/, resolving the provider-attribution gap. The ip.txt inventory timed out on three fetch attempts during this review, so a fresh valid inventory could not be verified. Keep collection pending until the endpoint is reachable and validated.",
+      "reviewed_on": "2026-09-27",
       "evidence_fingerprints": [
         "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
+        "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
         "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a"
       ],
       "evidence": [
-        "https://www.iranserver.com/cdn/",
+        "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+        "https://docs.iranserver.com/cdn/getting-started-cdn/cdn-getting-started/",
         "https://ips.f95.com/ip.txt"
       ]
     },
@@ -214,21 +232,328 @@
     },
     "asn:58232": {
       "state": "pending",
-      "reason": "Current IPtoASN maps 94.183.216.0/24 to AS58232 with an AU label, so the fresh baseline drops a previously IR-selected range. RIPE's more-specific IP record labels the /24 IR, but the covering delegated allocation is AE and the ASN registrant is Parsun Network Solutions PTY LTD in Australia. The haderan.com root provides no company information. Resolve this registration and operating-identity conflict; a hosted IR subnet and generic name matches do not establish Iranian ownership of the entire ASN.",
-      "reviewed_on": "2026-09-20",
+      "reason": "RIPE still identifies Parsun Network Solutions PTY LTD as the AS58232 registrant and IPtoASN labels its ranges AU, while the specific 94.183.216.0/24 IP record remains labelled IR. New Parsun/Nahor name and maintainer matches are leads, not proof that the entire ASN qualifies. Its website still provides no company information. Keep the operator candidate pending and the exact-subnet evidence separate.",
+      "reviewed_on": "2026-09-27",
       "evidence_fingerprints": [
+        "00081351ebf4d4ea24894ba3af0e9a889734ffd17fe07ab1cca17408531b3199",
         "044051383c80512aaa3a089549d28102ac7d47cace40bb4a1fa2cdc01b6091af",
+        "05fa7bdd2512a42b418a507aad265f6b7e82c052601eadc13f9e86cff16f9104",
+        "0b2a2f0e6dca4dc87f0ace8e7c646f5a78ef299e700d576740ef9547cf1cd342",
+        "0d7e95679cf762969c06163419cb8865af2deb6f08d09e70c8dd94bbd34cab96",
+        "139e196fe3f6e79e2589b9d1658245767226cb50b548f3b21fe7d1b68edc1ec8",
+        "1587392f91e763f6f384c6d98aba6d51ff045544ccd0c8e4f8ef0b390cf0fe10",
+        "1a0d2b9c301c8821939258a800595324b6e7215efee9cc47c3803daf69f40229",
+        "1d6f4285acc0cd86e18417b0c738b5e6dd24bc9162ca233c5ddaf46a8fe68602",
+        "1f7941194a0ba80c0966064cbe9c6e64638aa489dd2252d7cb2ea7add1369c9a",
+        "301ac25abd10695a9d96736fd99a0312a605b51a57768d8c3db14ad49ce8b771",
+        "3233471866bcf468c2ee4ea16d399631e3a837c014e4fae0cede4971a93344f6",
+        "33d08c20e2b9a592dbf637efabc297b5966b779da45a9aaa5d119757f6a3bc4e",
+        "38ad296dda10893db847a06b9f67de44a40032be934d7b8e7e7d4a5dbff07592",
+        "3b2654fb796225e2b91e7d4d23ff510be65a32151651cc29f24b23c402342b38",
+        "484581674e70cacd3a74a0f0b9e37c892691a143acfdd271a2de5e143743cab5",
+        "59fcc0a98fdece2036a2fe47dbdf4013efb74b69e792eebc4b2af8e120fe66e0",
+        "5dfa93095125e8722872effbef907a39dfd2c12a2e554bf85ce53f5ba31fdd04",
+        "631164eea1a45fe891e9592867d9ed4bbeff9104b0b37b32443cb5a381c77654",
+        "66d6b3ea63ee6faffc93b2faaa5c19dea8c01922d51683dc74ac710c6dd28434",
+        "6e68eb3389392b202580ccaeb5c29b953266b94dcef72316849d023ba048124f",
+        "6e72d3d2faf3e6db7876862f2e671acaf2a61f8d3bb35dd1a6ef9c13b68eb5d1",
+        "7047612e504bf9fa115351d91ca8e765c93bec8096f5c31610ec648a4f3bf19b",
+        "761ccbc81a48226c9da9f64a5eb0d28ea6600289aad76f49af905646055fd519",
         "76c4068e0f14d215cdd01955128ea5eb1e0cae58274e8a551d290b5450831e4a",
+        "771dd849b0674375388accd9af8f99f3d56e778ec671d32c9dc157410b17902a",
+        "7ddaa57286f4e1f3e8dc842b36e5d33a1926105f59753a7bfe59f3e813fe1008",
+        "82258d8532c841528ec1605dd62849204d18aa6c9de2e233a62b3a5e35e9ea4f",
+        "8be481a605461774ede59e561c726898a0686a20bda17c9caff60c8457c7056c",
+        "8d44e415b24707f7f4124284bab661098d6fb26cd7d1e0a1e67dc784053f8803",
+        "919fd9a6e6dc30b571a402d00355c486ec4ded9340f082b383d965e9f53c68a8",
+        "989da856a2f572986750be2a35cda2613827b1e0d331a1f187e3d4a10b617bca",
         "9fb3e0f27aa7664c55cc486eda610c3abadace9ad4d850dbbaadc44291787191",
+        "a6348740e9f3d6779c2ade6315ef3e2ce94d869b404acbc0212fbc9aff45e5f5",
+        "b165bad90894db2e91390a2ff79f937edeab72606afc11c92adea13cd13a4bf6",
+        "b511c35b87d802d3a7d2646de239ac56bd79a9517a7ea4cad6942d52f8147b5d",
+        "c10811d8d04ec8f171573af53e767d57f3fd88d4a8d242961e6bed75821bf22d",
+        "c7f81cca85d2f805ae9f9eaf9366351947b0deeb62fe6881ddb477b2ebb1b624",
+        "ca42c36fd459f0eba281a95ee391596739c9754b9af080ce9ec393008b949edf",
         "ee9350b81266dc8651e7c80bda05b477d08e0496c53b99a7250cee74c7e9789f",
+        "f0755683409aaea1395678fd4fc44568af9790af84d16267954f2dd2d8f44c24",
+        "f34f514d3c7c3be79930cb53b829e29665b33b63a7203ddf59b0f0d900d5cf70",
         "f575b1b526ce3e0ab68a76cc741762f316be1be83773140a2921f28a6a08f3c9",
         "feb3d1e12cafc8aff2f9eb201c5541982f52ca09a7c7d8f13b34f99b6911b3fc"
       ],
       "evidence": [
-        "https://iptoasn.com/data/ip2asn-v4.tsv.gz",
-        "https://rdap.db.ripe.net/ip/94.183.216.1",
         "https://rdap.db.ripe.net/autnum/58232",
+        "https://rdap.db.ripe.net/ip/94.183.216.1",
         "https://haderan.com/"
+      ]
+    },
+    "domain:hamravesh.com": {
+      "state": "accepted",
+      "reason": "Hamravesh's official contact page lists its Tehran office, and the main site identifies its cloud service and links the exact customer console. Approved hostnames: hamravesh.com, console.hamravesh.com. Exact public DNS addresses only.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "89403f3f2db22e82e44afb97e8b936b74e480bf8a7f20e80fd78cca04fab1489"
+      ],
+      "evidence": [
+        "https://hamravesh.com/contact-us",
+        "https://hamravesh.com/"
+      ]
+    },
+    "domain:liara.ir": {
+      "state": "accepted",
+      "reason": "Liara's official company page lists its Qom office, and the main site describes its cloud service and links the exact customer console. Approved hostnames: liara.ir, console.liara.ir. Exact public DNS addresses only.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "d059ad6c702265de214d978402201ce75d88593885cd48089b680eeec982b052"
+      ],
+      "evidence": [
+        "https://liara.ir/about/",
+        "https://liara.ir/"
+      ]
+    },
+    "domain:limoo.host": {
+      "state": "accepted",
+      "reason": "Limoo Host's official about page identifies its Iranian hosting business, lists its Tehran office and links the exact customer panel. Approved hostnames: limoo.host, panel.limoo.host. Exact public DNS addresses only.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "0e7d5c6936cfa73fdaced5265d3d0e07c3bf12535d7299fdf0c653f729bb0590"
+      ],
+      "evidence": [
+        "https://limoo.host/about/"
+      ]
+    },
+    "domain:sazito.com": {
+      "state": "accepted",
+      "reason": "Sazito's official about page identifies its storefront-building service and operating company; its contact page provides a Tehran-area office. Approved hostnames: sazito.com. Exact public DNS addresses only.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "b47d6424fb1c19f3777f64cf00b0e9ebde5f00e050c062e9ec8471c8607ae145"
+      ],
+      "evidence": [
+        "https://sazito.com/about",
+        "https://sazito.com/contact"
+      ]
+    },
+    "asn:10043": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Ministry of Science and ICT (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'ict'/'ict' (1.00); Name similarity 'ministry'/'ministry' (1.00); Name similarity 'science'/'science' (1.00); Name similarity 'sciences'/'science' (0.93)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "071b05a8d771c6f92247d500363703b59cc5375fd870151c3463544f16b70901",
+        "1041054b5d914ebe50fdd27c053fb314e99f93c4384b881b8c9ecaf260273f8e",
+        "12a1188021befd3cd0a1f8bcb509b8b3a456cbf6a5cdfc447b36a9bf7f83f8d3",
+        "1969416138bdfa8b2d2a6e012404b5ab5b12d4cf953efe1eb6321f824cdac922",
+        "214cbcecc3d3560351069ddfb3cc78b46d9a57b3c63cd57190ff43369d7ac5ad",
+        "226300e55f37a69c93ea580a7ed4e641f7bb8b5dc0f4ade96754ceaaf44e665e",
+        "23f392325e0ce0342a11a2b2bdefcc9df9105f8ce39f1154e9125dfb92042b1a",
+        "2d310097342a3ee329435a378dcdfa000f888e2486fc512feb3fb2f1768afc71",
+        "2ddd5d92824a17ba3bf2ab73173edb0e73360406bb988c6e5e7eaf8cd3028243",
+        "353859316fda8c012ee4263c8d64be548ea9a43aff24687887891fecae16fcf7",
+        "3b860e283fa7904768dd133450e6e2f5ec1f4d86282e171a9f3568c179947795",
+        "427dbe24404d62e1aac7cd3e9330cb5dd1ceb925a5ceb62f7cda6ece3040dc1b",
+        "45de1191dde23ce8a2bba3d3db54f59efdd1ebc95400ea00f326116823475258",
+        "4c69253c9988fa247ffe287e75929ce36a60e860a3031991bbf0a8455bdc9d72",
+        "528508fd2a22589ff77e4ec2a3daad8dc7ae34f6492a880acf6359f24abbbd3f",
+        "531898050199593776606a278c72df96ee2b5b2defcd03d1cdfd775c0b8fee2c",
+        "53e9e9406dd8df6931b7417d4cd1dd2015674dcf415794cc2705f35fc6774f50",
+        "58652a8805f3504b3f0f684e3580c16da35df4def4af1a8a06aead848ac6dae6",
+        "5f646bdbec1b20b2605c676c7d93b651b7dd8e528ee4a859063ebd24f64f5450",
+        "60575aaa52e36d0b62ec5eadcbcdf9134cb40c6ae2e6bc7cb184527d42689b58",
+        "608863d5372b937f81efca613f076e5a25bf791edbe1d892b2e26972566f6262",
+        "62db4010f976e9482f727dc86458369d3e7658257876d6c3bf8822a0bb51ea2c",
+        "63afc1250ff93fb6e4388753e2776712e9e30e5f43351f9b7fa1178453cd38ea",
+        "649e5f8f5947ca2063db22eb4218893aaf9a096ce580e19e270c9fc2b07a165e",
+        "6def27386db56c91c305bb372516ba31d46b7e45b4f09d0aebef1bb5fb1d4523",
+        "756e65a822ed497dcac01cd99d58e716bdcf6529a80b0d6382301dd487df2768",
+        "7a868210865a5a00ea3d834ebbaf52dcf02a26928dfc6b8cd92c92c66baef50a",
+        "7f470d69dc1b8d91be592d0f294b2878ed19ac0a33046cdac3f17d4cdc3fea2a",
+        "84b0b5d5b31cbd3ba1d8ba9e60cc5310882f1601f4c299e3311f78355f042d36",
+        "92117e54baba8e5ea63e1900d5da5fdc9e8333677e87d1ade2ddb8bde6bf14cc",
+        "944b18d459140aaee7173d16483e6fd0f891bb20615f77ccb95ae2614010765c",
+        "a1263c0478538c5668cd0a96606863031dad6701004642c13f59beefdfc51f7b",
+        "a158e6d1232e9c39a51d13696a04be68be37de683becad60c22f6d5ad384379a",
+        "b0aab09356b4c72c15c6d76534025ac2bf80a62ed5f9545326653b89c26271fb",
+        "be64625d5fe2f54d1aa2f45b7dbcd1d1dfbb2a094950da2452c14f0bf37e6806",
+        "c57f8ae13c1cf164db69b0b327b5ca8caf39e125c327aad97a8a721496cc1db5",
+        "c6facd5df2b715af50f42109f0df645846631df790768c8e9005d78cf39455e0",
+        "c7b5997b82a7a196d087df6ae86255f23de448fa03b7c2422868b5ba031ca060",
+        "caabeb0c2703eb3d63f6534c0f02384fc45b5633d2cc5be18ef774d6ea96dfd1",
+        "cc38c4fa8a61d432a17701b719734318b102b9ac8ec2531ad81dc3d4c0d2be64",
+        "e06b22035393e0c2f009f5fbb4b765370d24c4af3a5882102cd41b090e931d46",
+        "e7b97366a9b4e6d459a73c4bb4bf829e330ddfbb1862dbbdd48a7ebbc9f8c950",
+        "ea530f78dc583fe3975b83592082e029a712cd6c4b7b648222e11fe4339b4c70",
+        "f7e5286de84c28daa84a6c10d2f30a56c04f55aa2c68ac21cad5ebaed59ca2d1",
+        "fa98bc333033e80cf310f44a047886a3714b05736db007a765471e3dc0ee6d84"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10043",
+        "https://rdap.db.ripe.net/autnum/5542",
+        "https://rdap.db.ripe.net/autnum/6736",
+        "https://rdap.db.ripe.net/autnum/15611",
+        "https://rdap.db.ripe.net/autnum/16292",
+        "https://rdap.db.ripe.net/autnum/34837",
+        "https://rdap.db.ripe.net/autnum/35285",
+        "https://rdap.db.ripe.net/autnum/39200",
+        "https://rdap.db.ripe.net/autnum/41620",
+        "https://rdap.db.ripe.net/autnum/43965",
+        "https://rdap.db.ripe.net/autnum/47981",
+        "https://rdap.db.ripe.net/autnum/48898",
+        "https://rdap.db.ripe.net/autnum/49228",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292",
+        "https://rdap.db.ripe.net/autnum/57563",
+        "https://rdap.db.ripe.net/autnum/59506",
+        "https://rdap.db.ripe.net/autnum/59553",
+        "https://rdap.db.ripe.net/autnum/60562",
+        "https://rdap.db.ripe.net/autnum/203102",
+        "https://rdap.db.ripe.net/autnum/203798",
+        "https://rdap.db.ripe.net/autnum/206596",
+        "https://rdap.db.ripe.net/autnum/212227",
+        "https://rdap.db.ripe.net/autnum/215271"
+      ]
+    },
+    "asn:10044": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Rural Development Administration (RDA) (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'administration'/'administration' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "431bf580e59edfb221344dce7869a7febb4154b9085cad7c1158e01fc4bf69ea",
+        "eb7401fa6461d0b7a5e674648462cb09c75dcc6fa1ee0278dc163dde5b8fdb9d"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10044",
+        "https://rdap.db.ripe.net/autnum/34592"
+      ]
+    },
+    "asn:10051": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Korea Post Information Center (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'post'/'post' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "33705ffdb3a56f55a22cffd04741392e55c9576421e948109a862ab5733fa01d",
+        "7982076f1973cb1345f87fabf12ca82cd47deadf322eb87b1ead4d168d2c2712",
+        "cc1c5cb583ebda82fdaee51aab09f6e11f889ea3c28d397ca5881e8446ba5922",
+        "e3e3a80e0be27008e6c2ffe4921db2b2112c11c8d44a1caebfc7e7d758825d4f"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10051",
+        "https://rdap.db.ripe.net/autnum/51241",
+        "https://rdap.db.ripe.net/autnum/57366"
+      ]
+    },
+    "asn:10054": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies CMB Kwangju Broadcasting (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'broadcasting'/'broadcasting' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "43883ae67c602b301957aea59a45bcc84df0de734f24ee70791d6be565af2d25",
+        "f8037aadfe2504971c8b8bc23526af195ac7e310982d19bc871e0129f638c50c"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10054",
+        "https://rdap.db.ripe.net/autnum/42586"
+      ]
+    },
+    "asn:10055": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Korean National Railroad Administration (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'administration'/'administration' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "1fdc72c30c24307ae9af252bdab398ff07e82dc18bdce242833a1c7a70e048a9",
+        "ad97d25dacb714bd6d69af4da1e15853ffcba9a357ed20ba6d5f5a65a3457a09"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10055",
+        "https://rdap.db.ripe.net/autnum/34592"
+      ]
+    },
+    "asn:10061": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Financial Supervisory Service (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'financial'/'financial' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "0ea5154514a7d53df515ec437d3cc51b02335af80a8f3c22b30f802f89394eb4",
+        "1d2229e4884935cd3dee546bc9951a390fe7d7f9b2786c441ac24344cf4157e5",
+        "8126ef2db5e1003773c7c49acda77c25a5370ca6a61081d88e36d18cc9ecfbc0",
+        "95a50f5f079a49d5de5eabd129843a64525234bb5f5f9664c1933db69b3d37ca",
+        "b631a0670d300bf9b46e46cafb5cdf76957e7b6df2af0ff96cd76a72a1ac6a64",
+        "b6d3d1a50eed3249925d073ead4ca95d63de77b284c14929be3be6bc563bbba2",
+        "d2e2b3bedf4e5d703ab244eba7d7a605020a484f1062acb0ad75170b81075598",
+        "e1dc3097d38b5a6ff3d52724a88979e2da6d28d59e89c94506e08ebfefb70f42",
+        "eed81dc9f77c54e5387188eb3a0d0bc360cf7fc15340067e512da0d1eb3cf098",
+        "fa2edd3abded57f8ad16d0554c524e736070a4c1cdd365ac9b119a7a9fb5fbc0"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10061",
+        "https://rdap.db.ripe.net/autnum/34871",
+        "https://rdap.db.ripe.net/autnum/62238",
+        "https://rdap.db.ripe.net/autnum/203162",
+        "https://rdap.db.ripe.net/autnum/213682",
+        "https://rdap.db.ripe.net/autnum/215700"
+      ]
+    },
+    "asn:10063": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Korea Meteorological Administration (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'administration'/'administration' (1.00); Name similarity 'meteorological'/'meteorological' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "09a2c80b639fba1733240d6e14964245398662bce1ab6365be5027b1979ed83f",
+        "5c5eeee365d22b76552fe6ae6856d6e61c28db2f88bb628e0c329a0f067bd67f",
+        "ed9a320f32c2f09ac68b7dcd6667afbbc61c940a91d593132d50043fa0322b84",
+        "f0f890a09dabac9c94db14fd2cff85f0d93fa2071ea2a29df738eca450c49301"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10063",
+        "https://rdap.db.ripe.net/autnum/34592",
+        "https://rdap.db.ripe.net/autnum/61246"
+      ]
+    },
+    "asn:10089": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies Total Access Communication PLC. (TH); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'access'/'access' (1.00); Name similarity 'plc'/'plc' (1.00)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-09-27",
+      "evidence_fingerprints": [
+        "077762e7300be709612bc117a71aedc1bdb21ec7eec76b1484673bc0d67b0999",
+        "09b380a5b002349a698dff90055bac4f5e0d85a9ef42957e9058399ccaa9b16f",
+        "14a4e82e662c1ab299afe8e5f963c6b65c8935401bcce7520ad8ccaf5a5947cb",
+        "1fe9d50ef188384df842f4134cfac6c9c71336830500ce9655076ee8aedc90da",
+        "2926b430085f51066487e2653a7b5b9d9137f16661aae4a45588d33550973729",
+        "2c233ec3dc789439d483c49e9f66858cafd7a7e3de8e71c94cc0da115a8ee71d",
+        "3456d6e5258aeefce42dfc9ab8cba4455d001f06b5955ffeff8fc11682f93c70",
+        "3a198bcaec5cf4c3f96d6ed8f23ca987cf5acd63e7a92b9aeba7d645acf2263e",
+        "3bb889b0f76f228b65d424c6275fcc93d255b8946bc1f9456d0c6fc48c59fc5e",
+        "4bb68dc95e8cdf9b346819b27ca58399254d0b307584796b9510b5b4322186d3",
+        "51fc06b79ded07f187fed812f4789a4696b3c7714856c9056565c84f067087ed",
+        "5edc568171c0444b35fc41ea2f8cb826799e8985c2b4129c729b432ac847a648",
+        "6deac40c2b57a0e78ab2b6d0fab617b328ed7ae4bdb5d834874cc2cb4c673e99",
+        "70ef887a0f0de1dccce6932a57182b20e317a628d3b367342ab984b6862b6c97",
+        "7ce995ac5e4b3207358b0bbe4c9c540ec64ead9ac010d5e782a4e98fe8c6f388",
+        "9d75588d55ff1517603bed2a7f832adf54d66e072539cca0aacf9418deba261f",
+        "ccbf3057f9ea23b4d57df3e82229985e762abc7ed10c9b2e0762a673751a9831",
+        "ce4399d14ebea31e42295123a4fdd36454a53c418d31a4dc79432606030e19e2",
+        "d2e2404250faef66b6b57af8ecae689ff56817585c2afdc7b0ffc02fa7be2455",
+        "d3bfd9723de4121fc5b6d44af818c1a7988f2ef13c4ff13e4e22651d41e91e30",
+        "d429e1c49ab003a5f0cc9941aca9aba2c812f4e596fd2f046728362e1680db0f",
+        "d69cc733c42c263844457f627a9d37ee00e5830743a613935c32b8d7b09d46ba",
+        "dbd3d2193db8cfa2434ea3c762997b43a92e978855467f37401cb3330dba1eef",
+        "e1f15aeeeb1e660f6ff3922d484f744bf385ed2e5c67b98522b4387d245989fc",
+        "e49a7714852159ab41e70113541dee5a3ab876f16a869dbce7098e54b4998144",
+        "fcbb60d1b119727774767f0580acbf5afce35db2de5351e205f2da62b57a053e"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10089",
+        "https://rdap.db.ripe.net/autnum/5618",
+        "https://rdap.db.ripe.net/autnum/13231",
+        "https://rdap.db.ripe.net/autnum/21341",
+        "https://rdap.db.ripe.net/autnum/44208",
+        "https://rdap.db.ripe.net/autnum/50114",
+        "https://rdap.db.ripe.net/autnum/51732",
+        "https://rdap.db.ripe.net/autnum/51785",
+        "https://rdap.db.ripe.net/autnum/57474",
+        "https://rdap.db.ripe.net/autnum/60315",
+        "https://rdap.db.ripe.net/autnum/60811",
+        "https://rdap.db.ripe.net/autnum/197207",
+        "https://rdap.db.ripe.net/autnum/210603",
+        "https://rdap.db.ripe.net/autnum/212067"
       ]
     }
   }
