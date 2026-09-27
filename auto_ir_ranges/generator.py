@@ -4,6 +4,7 @@ import argparse
 import concurrent.futures
 import gzip
 import hashlib
+import io
 import ipaddress
 import json
 import os
@@ -75,15 +76,34 @@ def download(
     timeout: int = 180,
     sleep: Callable[[float], None] = time.sleep,
 ) -> bytes:
-    """Download one source with bounded reads and exponential retry."""
+    """Decode HTTP compression with bounded wire/decoded reads and retry."""
     last_error: Exception | None = None
     for attempt in range(1, attempts + 1):
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+            request = urllib.request.Request(
+                url, headers={"User-Agent": USER_AGENT, "Accept-Encoding": "gzip, identity"}
+            )
             with urllib.request.urlopen(request, timeout=timeout) as response:
+                encodings = [
+                    coding.strip().lower()
+                    for header in response.headers.get_all("Content-Encoding", [])
+                    for coding in header.split(",")
+                ]
+                if any(coding not in {"gzip", "identity"} for coding in encodings):
+                    raise GenerationError(f"unsupported HTTP Content-Encoding {encodings}: {url}")
                 payload = response.read(MAX_DOWNLOAD_BYTES + 1)
             if len(payload) > MAX_DOWNLOAD_BYTES:
                 raise GenerationError(f"source exceeds {MAX_DOWNLOAD_BYTES} bytes: {url}")
+            # Remove only HTTP encodings, in reverse order. A .gz source file
+            # without Content-Encoding must remain compressed for its parser.
+            for coding in reversed(encodings):
+                if coding == "gzip":
+                    with gzip.GzipFile(fileobj=io.BytesIO(payload)) as compressed:
+                        payload = compressed.read(MAX_DOWNLOAD_BYTES + 1)
+                    if len(payload) > MAX_DOWNLOAD_BYTES:
+                        raise GenerationError(
+                            f"decoded source exceeds {MAX_DOWNLOAD_BYTES} bytes: {url}"
+                        )
             if not payload:
                 raise GenerationError(f"source is empty: {url}")
             return payload

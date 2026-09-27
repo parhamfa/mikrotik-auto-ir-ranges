@@ -772,6 +772,263 @@
           }
         ]
       }
+    },
+    {
+      "domain": "hamravesh.com",
+      "evidence": "https://hamravesh.com/contact-us",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Hamravesh's official contact page lists its Tehran office, and the main site identifies its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "hamravesh.com",
+          "evidence": [
+            "https://hamravesh.com/contact-us",
+            "https://hamravesh.com/"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Hamravesh's official contact page lists its Tehran office, and the main site identifies its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:hamravesh.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "89403f3f2db22e82e44afb97e8b936b74e480bf8a7f20e80fd78cca04fab1489"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "hamravesh.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "console.hamravesh.com",
+      "evidence": "https://hamravesh.com/contact-us",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Hamravesh's official contact page lists its Tehran office, and the main site identifies its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "console.hamravesh.com",
+          "evidence": [
+            "https://hamravesh.com/contact-us",
+            "https://hamravesh.com/"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Hamravesh's official contact page lists its Tehran office, and the main site identifies its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:hamravesh.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "89403f3f2db22e82e44afb97e8b936b74e480bf8a7f20e80fd78cca04fab1489"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "hamravesh.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "liara.ir",
+      "evidence": "https://liara.ir/about/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Liara's official company page lists its Qom office, and the main site describes its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "liara.ir",
+          "evidence": [
+            "https://liara.ir/about/",
+            "https://liara.ir/"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Liara's official company page lists its Qom office, and the main site describes its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:liara.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d059ad6c702265de214d978402201ce75d88593885cd48089b680eeec982b052"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "liara.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "console.liara.ir",
+      "evidence": "https://liara.ir/about/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Liara's official company page lists its Qom office, and the main site describes its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "console.liara.ir",
+          "evidence": [
+            "https://liara.ir/about/",
+            "https://liara.ir/"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Liara's official company page lists its Qom office, and the main site describes its cloud service and links the exact customer console. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:liara.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d059ad6c702265de214d978402201ce75d88593885cd48089b680eeec982b052"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "liara.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "limoo.host",
+      "evidence": "https://limoo.host/about/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Limoo Host's official about page identifies its Iranian hosting business, lists its Tehran office and links the exact customer panel. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "limoo.host",
+          "evidence": [
+            "https://limoo.host/about/"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Limoo Host's official about page identifies its Iranian hosting business, lists its Tehran office and links the exact customer panel. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:limoo.host",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "0e7d5c6936cfa73fdaced5265d3d0e07c3bf12535d7299fdf0c653f729bb0590"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "limoo.host",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "panel.limoo.host",
+      "evidence": "https://limoo.host/about/",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Limoo Host's official about page identifies its Iranian hosting business, lists its Tehran office and links the exact customer panel. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "panel.limoo.host",
+          "evidence": [
+            "https://limoo.host/about/"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Limoo Host's official about page identifies its Iranian hosting business, lists its Tehran office and links the exact customer panel. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:limoo.host",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "0e7d5c6936cfa73fdaced5265d3d0e07c3bf12535d7299fdf0c653f729bb0590"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "limoo.host",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "sazito.com",
+      "evidence": "https://sazito.com/about",
+      "state": "accepted",
+      "reviewed_on": "2026-09-27",
+      "review_reason": "Sazito's official about page identifies its storefront-building service and operating company; its contact page provides a Tehran-area office. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "sazito.com",
+          "evidence": [
+            "https://sazito.com/about",
+            "https://sazito.com/contact"
+          ],
+          "reviewed_on": "2026-09-27",
+          "reason": "Sazito's official about page identifies its storefront-building service and operating company; its contact page provides a Tehran-area office. Collect only the public DNS answers for this exact hostname; this does not admit customer domains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:sazito.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "b47d6424fb1c19f3777f64cf00b0e9ebde5f00e050c062e9ec8471c8607ae145"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "sazito.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
+            "version": "202609210145"
+          }
+        ]
+      }
     }
   ]
 }
