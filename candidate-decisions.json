@@ -162,12 +162,13 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reason": "The refreshed official inventory still includes non-public 192.168.204.48/28. The source remains pending under the current strict parser. No partial inventory or cached answer is admitted.",
-      "reviewed_on": "2026-09-27",
+      "reason": "The refreshed official IPv4 inventory still includes non-public 192.168.204.48/28. Keep it outside collection under the strict public-prefix parser; no partial inventory is admitted.",
+      "reviewed_on": "2026-10-04",
       "evidence_fingerprints": [
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
         "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
-        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0"
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5"
       ],
       "evidence": [
         "https://api.derak.cloud/public/ipv4",
@@ -175,18 +176,19 @@
       ]
     },
     "provider:https://ips.f95.com/ip.txt": {
-      "state": "pending",
-      "reason": "IranServer's official CDN whitelist documentation directly links https://ips.f95.com/, resolving the provider-attribution gap. The ip.txt inventory timed out on three fetch attempts during this review, so a fresh valid inventory could not be verified. Keep collection pending until the endpoint is reachable and validated.",
-      "reviewed_on": "2026-09-27",
+      "state": "accepted",
+      "reason": "IranServer's official CDN whitelist documentation links ips.f95.com, whose root and legacy ip.txt path redirect to this inventory. All 22 observed entries are public IPv4 host addresses. Admit the published CDN endpoints without admitting their hosting ASNs. The canonical /ips.txt URL is used for collection.",
+      "reviewed_on": "2026-10-04",
       "evidence_fingerprints": [
         "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
         "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
-        "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a"
+        "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
+        "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08"
       ],
       "evidence": [
         "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
-        "https://docs.iranserver.com/cdn/getting-started-cdn/cdn-getting-started/",
-        "https://ips.f95.com/ip.txt"
+        "https://ips.f95.com/",
+        "https://ips.f95.com/ips.txt"
       ]
     },
     "domain:adivery.com": {
@@ -554,6 +556,226 @@
         "https://rdap.db.ripe.net/autnum/197207",
         "https://rdap.db.ripe.net/autnum/210603",
         "https://rdap.db.ripe.net/autnum/212067"
+      ]
+    },
+    "domain:karlancer.com": {
+      "state": "accepted",
+      "reason": "Karlancer's official contact page identifies its Iranian freelance service and Tehran office. The apex redirects to the official www hostname. Approved exact hostnames: karlancer.com, www.karlancer.com.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "d46508178483eb1f85007e384813985c78eb058307df7394e22ae16da6b52acf"
+      ],
+      "evidence": [
+        "https://www.karlancer.com/contact",
+        "https://www.karlancer.com/terms",
+        "https://karlancer.com/"
+      ]
+    },
+    "domain:ponisha.ir": {
+      "state": "accepted",
+      "reason": "Ponisha's official company page identifies its freelance marketplace in Iran; its terms govern that service under Iranian law. Approved exact hostnames: ponisha.ir.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "edf72d6061bd086887d7f5c3af854e74f60ab612b20f63182487a49ad428db3a"
+      ],
+      "evidence": [
+        "https://ponisha.ir/about",
+        "https://ponisha.ir/terms"
+      ]
+    },
+    "domain:eseminar.tv": {
+      "state": "accepted",
+      "reason": "Eseminar's official pages identify its webinar service, operating company Arzesh Afarinan Novin Asa and Tehran office. Approved exact hostnames: eseminar.tv.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "d4185135feb67133ded27a2e818fcf5e32a908cc78e5e5151976b9f444948197"
+      ],
+      "evidence": [
+        "https://eseminar.tv/about",
+        "https://eseminar.tv/contact"
+      ]
+    },
+    "domain:taskulu.com": {
+      "state": "accepted",
+      "reason": "Taskulu's official contact page lists its Tehran office, and its Persian product page links taskulu.app as the current application. Approved exact hostnames: taskulu.com, taskulu.app.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "e51bb5edd883fa5db672bd7aab5ecf885e61ad4529403469700e438115f8b174"
+      ],
+      "evidence": [
+        "https://taskulu.com/fa/contact",
+        "https://taskulu.com/fa"
+      ]
+    },
+    "domain:melipayamak.com": {
+      "state": "accepted",
+      "reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Approved exact hostnames: melipayamak.com, www.melipayamak.com, login.melipayamak.com, sign.melipayamak.com.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "23d18fa6bcbb5a1eae1396ba65597f26314a3ffa84d6235878694671d893293a"
+      ],
+      "evidence": [
+        "https://www.melipayamak.com/contact/",
+        "https://melipayamak.com/"
+      ]
+    },
+    "domain:zhaket.com": {
+      "state": "accepted",
+      "reason": "Zhaket's official contact page identifies its Iranian digital-products marketplace and Tehran office. The apex redirects to its official www hostname. Approved exact hostnames: zhaket.com, www.zhaket.com.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "069a0d8b817a4d2fc2ee177eab5b09e2ae4e8d718bb0051528d4937b28c9fb87"
+      ],
+      "evidence": [
+        "https://www.zhaket.com/content/contact",
+        "https://zhaket.com/"
+      ]
+    },
+    "asn:10128": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies IAG-AS-AP, SingTel Optus Pty Ltd (AU), while the linked Iranian records identify different organizations. The supplied matches (Name similarity 'customer'/'customer' (1.00)) do not establish affiliation. Independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "39388999f39819ce95362cc28b195497c6320688818c5e633dd300de548c7641",
+        "4bb3be961fd505a8def039d1224869eeaf11ba12ad87c99528cb6ffe6dd20628"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10128",
+        "https://rdap.db.ripe.net/autnum/51433"
+      ]
+    },
+    "asn:10137": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies TELKOMSAT-AP (ID), while the linked Iranian records identify different organizations. The supplied matches (Name similarity 'satellite'/'satelit' (0.88)) do not establish affiliation. Independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "0d5b70b002e9eee6a8cf2d761e4755a5c02d98d2653015fce1163a9ac5204fa7",
+        "6ce5909c7fe6dc8695ec8d180cf1b47cb85697901d4b2d69606807be76f93612"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10137",
+        "https://rdap.db.ripe.net/autnum/56632"
+      ]
+    },
+    "asn:10145": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies SECUREIPITS-AS-AP, SecureIP ITS (AU), while the linked Iranian records identify different organizations. The supplied matches (Name similarity 'secure'/'secureip' (0.86)) do not establish affiliation. Independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "693c03efcbcd020c9fbf84dabc33e2c86afa1c1a1a0e70c6908e6e3bd9af4162",
+        "842151b85c1c32a9feed28c5aa9b6b38d83acf3f157f00a94105282d84bc855a",
+        "8f4353598d73c6c381e54bcdcc758137996a9c22853a5424687c2d965a1a6a14",
+        "9299a32b12a60f47285d3555649ba227e9ac6e2e369660db3133265ef889a093"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10145",
+        "https://rdap.db.ripe.net/autnum/43415",
+        "https://rdap.db.ripe.net/autnum/204104"
+      ]
+    },
+    "asn:10150": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies SingTel Optus Pty Ltd, TENNET-AU-AP (AU), while the linked Iranian records identify different organizations. The supplied matches (Name similarity 'customer'/'customer' (1.00)) do not establish affiliation. Independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "169ba8afccd10545c82046895276cb8cdcc5d025e6b62f82725b988cd770ee88",
+        "948f32fd6a32eeb26ced897152a0f5bc5589e8d5175fd0ed7011f654a03ee9f5"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10150",
+        "https://rdap.db.ripe.net/autnum/51433"
+      ]
+    },
+    "asn:10166": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies KOWANET-AS-KR-KR (KR), while the linked Iranian records identify different organizations. The supplied matches (Name similarity 'water'/'water' (1.00)) do not establish affiliation. Independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "596b6f96e474f4fafe5892d13fddd6b50d342b1d9ee07eddc1d5a6d646f5280a",
+        "8452cabb91f261ea46c5e118a38cee759c68ddddafb69f2c1d108cf664464993",
+        "a0ae2446c68f070f626cbb98d02b26b7250163e27285c307a692b8e71ae0d3da",
+        "d900e2f5ef904b2f9c7bf2057b7f6eb3bf95709202c9a6a62a62140799b2d6ee"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10166",
+        "https://rdap.db.ripe.net/autnum/47430",
+        "https://rdap.db.ripe.net/autnum/202788"
+      ]
+    },
+    "asn:10174": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: APNIC identifies MBC-AS-KR-KR (KR), while the linked Iranian records identify different organizations. The supplied matches (Name similarity 'broadcasting'/'broadcasting' (1.00)) do not establish affiliation. Independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "03b8acecb85d5bebdb84b1bfb518a21caa49954c06c436fdbf957d5baa8ec504",
+        "b4b785a3bebc223891fca6f2326dba25da843259b8e0ef95a720ab567cfdb1e7"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10174",
+        "https://rdap.db.ripe.net/autnum/42586"
+      ]
+    },
+    "asn:45855": {
+      "state": "pending",
+      "reason": "APNIC identifies AsiaTech Telecom Limited in Hong Kong, and the Hong Kong regulator lists that company under ISP entry 1444. Iranian anchors identify Asiatech Data Transmission company and related names. The shared AsiaTech name is a lead; no primary corporate evidence establishing affiliation between the holders was found. Require that relationship before admitting this ASN.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "41863e08a0f16e159f2f72b0b070af545aa0b9b3f09f844ec2da51a507c4011e",
+        "42f98e276c524147131050f0287c5be561cffc5ba75c3e2c6e76de528a9ee0d1",
+        "4fc03898c72a1478004de1e444791932954c0a4902b0b99a7611e0885fdc52cd",
+        "65db37fea7b27b85ad11f61ca2be1142a0dfb15ab691a9cc02615ccaa73fc564",
+        "6adc6dd2dd9098c1453c4312f7cc8d25c7be7e1e5a746949a13a6b232ae8e30a",
+        "72166dde757753b5150fc5724bd8c71f5ff147d6a2482e6f83cb5142db99c988",
+        "777ce40eef9ccc69e23da9280c57426439f133831adae711ab5b253862f550c1",
+        "7a548c59ad3d89e199645c2b76a085717a17568d79ed5318ddce170ed637dff7",
+        "a05197f65c819435bb984a09b9cf2dd91642ff4fc9e373d160160a4996efe17f",
+        "c6f614c6d1be457408c38750f41e5e43055aaf6e3d69f93c694e03d0bdb46dfb",
+        "e87b447bed1f8e0e3192e18d88f9ac1bf8ee497388f870623c7236ee1dea0aad",
+        "e9390adc5939dae684b927e7045421b11bd517d182a2a264d64689d6f090567b",
+        "eef0db7df65a5abcb8ff84067d96da5ba0eb94e47b8f73c9ab54b9f7e5c9bdf2",
+        "f214f69005235f1467fd88828f4d1e858315dede105e1f5370270aa433fde223"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/45855",
+        "https://www.ofca.gov.hk/en/media_focus/data_statistics/internet/list_of_internet_service_providers/",
+        "https://rdap.db.ripe.net/autnum/34636",
+        "https://rdap.db.ripe.net/autnum/43754",
+        "https://rdap.db.ripe.net/autnum/51433",
+        "https://rdap.db.ripe.net/autnum/60077",
+        "https://rdap.db.ripe.net/autnum/203000",
+        "https://rdap.db.ripe.net/autnum/208651",
+        "https://rdap.db.ripe.net/autnum/211421"
+      ]
+    },
+    "asn:4849": {
+      "state": "pending",
+      "reason": "The authoritative RDAP response identifies S3 Company Ltd, while IPtoASN retains an AsiaTech Telecom description. The Iranian anchors identify Asiatech Data Transmission company and related names. Resolve the current operating identity and provide a primary corporate link before admitting this ASN; the matching description alone is insufficient.",
+      "reviewed_on": "2026-10-04",
+      "evidence_fingerprints": [
+        "153506d50dacee3fc558a680a022fc6fb680ac690a4fb2f490e5a933230f3a84",
+        "1c65ad40b81facef67c9f6c81b28155221c229f298c3531fa0ae8d4c43de42c2",
+        "51872506fb1ec318e5e008a3d89072a7b3b07d2e0953039c032d82f503f781d6",
+        "521f622df873e6ee5e108052548fe06d71060dd1818a89eb66f3c3014b422217",
+        "522904b4f72e4f43b34a1d7ac7f3524c238fc084ac59f2fb399543332ba6eadf",
+        "559324c55b76598580705847fe778f76dc6c418fc09bccf2692e4b512666ee58",
+        "75149bf929cd0d17d66f6444fbb20e8174a4acf83639e28a30f215ba38551157",
+        "8cb403b3809874edc35bf68867b14eae37dfffe8766f093ada57e96e053d06f0",
+        "985dd65003c16b631affaa898dcd76f12587f1ba76d5687b47af4b112bf6329a",
+        "9bcafdd223ec142d77bb50d78ac96b1655f39e8fdd5e4b8f011bdbdc89693946",
+        "b73f92b1281d1f0fc06d4153027a19e8e0282d6afe0e7722924898b6b44df53e",
+        "b9b1debba78cf4745639e5b3af7dce6d191fb21b7f7f5bc9d1e7217499c1052a",
+        "bc9c77743be503345d29c1bd4d2df99dcc35d90c1c17522dbdeab89082e39209",
+        "f7294a7e391af435ba9d0a5d26ef09a77543a2694371f141fa445178bca3dae5"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/4849",
+        "https://rdap.db.ripe.net/autnum/34636",
+        "https://rdap.db.ripe.net/autnum/43754",
+        "https://rdap.db.ripe.net/autnum/51433",
+        "https://rdap.db.ripe.net/autnum/60077",
+        "https://rdap.db.ripe.net/autnum/203000",
+        "https://rdap.db.ripe.net/autnum/208651",
+        "https://rdap.db.ripe.net/autnum/211421"
       ]
     }
   }
