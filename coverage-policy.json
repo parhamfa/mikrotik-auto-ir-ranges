@@ -260,6 +260,96 @@
           }
         ]
       }
+    },
+    {
+      "id": "iranserver",
+      "version": 4,
+      "url": "https://ips.f95.com/ips.txt",
+      "evidence": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "min_count": 11,
+      "max_count": 64,
+      "min_prefixlen": 32,
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "IranServer's official CDN whitelist documentation links ips.f95.com, whose root and legacy ip.txt path redirect to this inventory. All 22 observed entries are public IPv4 host addresses. Admit the published CDN endpoints without admitting their hosting ASNs.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://ips.f95.com/ips.txt",
+          "evidence": [
+            "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+            "https://ips.f95.com/",
+            "https://ips.f95.com/ips.txt"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "IranServer's official CDN whitelist documentation links ips.f95.com, whose root and legacy ip.txt path redirect to this inventory. All 22 observed entries are public IPv4 host addresses. Admit the published CDN endpoints without admitting their hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "provider:https://ips.f95.com/ip.txt",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
+          "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
+          "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
+          "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/iranserver.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/iranserver.txt",
+            "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/iranserver.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/iranserver.txt",
+            "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
+          }
+        ]
+      }
     }
   ],
   "dns_resolvers": {
@@ -1026,6 +1116,452 @@
             "source": "bootmortis/iran-hosted-domains",
             "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609210145/domains.txt",
             "version": "202609210145"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "karlancer.com",
+      "evidence": "https://www.karlancer.com/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Karlancer's official contact page identifies its Iranian freelance service and Tehran office. The apex redirects to the official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "karlancer.com",
+          "evidence": [
+            "https://www.karlancer.com/contact",
+            "https://www.karlancer.com/terms",
+            "https://karlancer.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Karlancer's official contact page identifies its Iranian freelance service and Tehran office. The apex redirects to the official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:karlancer.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d46508178483eb1f85007e384813985c78eb058307df7394e22ae16da6b52acf"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "karlancer.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.karlancer.com",
+      "evidence": "https://www.karlancer.com/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Karlancer's official contact page identifies its Iranian freelance service and Tehran office. The apex redirects to the official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.karlancer.com",
+          "evidence": [
+            "https://www.karlancer.com/contact",
+            "https://www.karlancer.com/terms",
+            "https://karlancer.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Karlancer's official contact page identifies its Iranian freelance service and Tehran office. The apex redirects to the official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:karlancer.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d46508178483eb1f85007e384813985c78eb058307df7394e22ae16da6b52acf"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "karlancer.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "ponisha.ir",
+      "evidence": "https://ponisha.ir/about",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Ponisha's official company page identifies its freelance marketplace in Iran; its terms govern that service under Iranian law. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "ponisha.ir",
+          "evidence": [
+            "https://ponisha.ir/about",
+            "https://ponisha.ir/terms"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Ponisha's official company page identifies its freelance marketplace in Iran; its terms govern that service under Iranian law. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:ponisha.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "edf72d6061bd086887d7f5c3af854e74f60ab612b20f63182487a49ad428db3a"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "ponisha.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "eseminar.tv",
+      "evidence": "https://eseminar.tv/about",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Eseminar's official pages identify its webinar service, operating company Arzesh Afarinan Novin Asa and Tehran office. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "eseminar.tv",
+          "evidence": [
+            "https://eseminar.tv/about",
+            "https://eseminar.tv/contact"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Eseminar's official pages identify its webinar service, operating company Arzesh Afarinan Novin Asa and Tehran office. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:eseminar.tv",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d4185135feb67133ded27a2e818fcf5e32a908cc78e5e5151976b9f444948197"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "eseminar.tv",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "taskulu.com",
+      "evidence": "https://taskulu.com/fa/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Taskulu's official contact page lists its Tehran office, and its Persian product page links taskulu.app as the current application. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "taskulu.com",
+          "evidence": [
+            "https://taskulu.com/fa/contact",
+            "https://taskulu.com/fa"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Taskulu's official contact page lists its Tehran office, and its Persian product page links taskulu.app as the current application. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:taskulu.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "e51bb5edd883fa5db672bd7aab5ecf885e61ad4529403469700e438115f8b174"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "taskulu.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "taskulu.app",
+      "evidence": "https://taskulu.com/fa/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Taskulu's official contact page lists its Tehran office, and its Persian product page links taskulu.app as the current application. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "taskulu.app",
+          "evidence": [
+            "https://taskulu.com/fa/contact",
+            "https://taskulu.com/fa"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Taskulu's official contact page lists its Tehran office, and its Persian product page links taskulu.app as the current application. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:taskulu.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "e51bb5edd883fa5db672bd7aab5ecf885e61ad4529403469700e438115f8b174"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "taskulu.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "melipayamak.com",
+      "evidence": "https://www.melipayamak.com/contact/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "melipayamak.com",
+          "evidence": [
+            "https://www.melipayamak.com/contact/",
+            "https://melipayamak.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:melipayamak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "23d18fa6bcbb5a1eae1396ba65597f26314a3ffa84d6235878694671d893293a"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "melipayamak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.melipayamak.com",
+      "evidence": "https://www.melipayamak.com/contact/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.melipayamak.com",
+          "evidence": [
+            "https://www.melipayamak.com/contact/",
+            "https://melipayamak.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:melipayamak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "23d18fa6bcbb5a1eae1396ba65597f26314a3ffa84d6235878694671d893293a"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "melipayamak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "login.melipayamak.com",
+      "evidence": "https://www.melipayamak.com/contact/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "login.melipayamak.com",
+          "evidence": [
+            "https://www.melipayamak.com/contact/",
+            "https://melipayamak.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:melipayamak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "23d18fa6bcbb5a1eae1396ba65597f26314a3ffa84d6235878694671d893293a"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "melipayamak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "sign.melipayamak.com",
+      "evidence": "https://www.melipayamak.com/contact/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "sign.melipayamak.com",
+          "evidence": [
+            "https://www.melipayamak.com/contact/",
+            "https://melipayamak.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Meli Payamak's official pages describe its Iranian SMS service and Tehran office. The apex redirects to www, whose login and registration links identify the exact additional hostnames. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:melipayamak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "23d18fa6bcbb5a1eae1396ba65597f26314a3ffa84d6235878694671d893293a"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "melipayamak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "zhaket.com",
+      "evidence": "https://www.zhaket.com/content/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Zhaket's official contact page identifies its Iranian digital-products marketplace and Tehran office. The apex redirects to its official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "zhaket.com",
+          "evidence": [
+            "https://www.zhaket.com/content/contact",
+            "https://zhaket.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Zhaket's official contact page identifies its Iranian digital-products marketplace and Tehran office. The apex redirects to its official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:zhaket.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "069a0d8b817a4d2fc2ee177eab5b09e2ae4e8d718bb0051528d4937b28c9fb87"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "zhaket.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.zhaket.com",
+      "evidence": "https://www.zhaket.com/content/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-04",
+      "review_reason": "Zhaket's official contact page identifies its Iranian digital-products marketplace and Tehran office. The apex redirects to its official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.zhaket.com",
+          "evidence": [
+            "https://www.zhaket.com/content/contact",
+            "https://zhaket.com/"
+          ],
+          "reviewed_on": "2026-10-04",
+          "reason": "Zhaket's official contact page identifies its Iranian digital-products marketplace and Tehran office. The apex redirects to its official www hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:zhaket.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "069a0d8b817a4d2fc2ee177eab5b09e2ae4e8d718bb0051528d4937b28c9fb87"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "zhaket.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+            "version": "202609280201"
           }
         ]
       }

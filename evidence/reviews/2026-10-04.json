@@ -1,0 +1,768 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-10-04",
+  "main_commit": "9b050d6316b03815dba6b0e35a26ca479aab7dc7",
+  "data_commit": "f15b348cd5862e2fe5155d13b79430e3928b7796",
+  "reviewed_candidates": [
+    "asn:10128",
+    "asn:10137",
+    "asn:10145",
+    "asn:10150",
+    "asn:10166",
+    "asn:10174",
+    "asn:45855",
+    "asn:4849",
+    "domain:karlancer.com",
+    "domain:ponisha.ir",
+    "domain:eseminar.tv",
+    "domain:taskulu.com",
+    "domain:melipayamak.com",
+    "domain:zhaket.com",
+    "provider:https://ips.f95.com/ip.txt",
+    "provider:https://api.derak.cloud/public/ipv4"
+  ],
+  "oldest_previously_unreviewed_candidates": [
+    "asn:10128",
+    "asn:10137",
+    "asn:10145",
+    "asn:10150",
+    "asn:10166",
+    "asn:10174",
+    "asn:45855",
+    "asn:4849",
+    "domain:karlancer.com",
+    "domain:ponisha.ir",
+    "domain:eseminar.tv",
+    "domain:taskulu.com",
+    "domain:melipayamak.com",
+    "domain:zhaket.com"
+  ],
+  "additional_exact_hostnames": [
+    "login.melipayamak.com",
+    "sign.melipayamak.com",
+    "taskulu.app",
+    "www.karlancer.com",
+    "www.melipayamak.com",
+    "www.zhaket.com"
+  ],
+  "review_budget_note": "14 of 16 pool candidates were from the oldest previously unreviewed cohort; six additional exact hostnames were verified through official redirects or application links. Prior reviews were checked against the committed decisions, not only the pool review field.",
+  "discovery_before_proposal": {
+    "ageing_catalogue": [],
+    "candidates": {
+      "accepted": 25,
+      "pending": 134780,
+      "rejected": 13
+    },
+    "global_asns": 87125,
+    "iran_anchors": 592,
+    "observed_at": "2026-10-04T06:06:20.466348+00:00",
+    "rdap": {
+      "errors": [],
+      "pending_enrichment": 86134,
+      "requests": 0
+    },
+    "schema": 1,
+    "source_errors": [],
+    "sources": [
+      {
+        "license": "MIT",
+        "license_url": "https://github.com/v2fly/domain-list-community/blob/63777333b7dd1ac57f790e466c0f6a647b9c7281/LICENSE",
+        "lineage": "iran-community-domains",
+        "source": "v2fly/domain-list-community",
+        "url": "https://github.com/v2fly/domain-list-community/blob/63777333b7dd1ac57f790e466c0f6a647b9c7281",
+        "version": "63777333b7dd1ac57f790e466c0f6a647b9c7281"
+      },
+      {
+        "asset_url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202609280201/domains.txt",
+        "license": "MIT",
+        "license_url": "https://github.com/bootmortis/iran-hosted-domains/blob/c5c047bfa94d523208d3ac4674e9259c82533797/LICENSE",
+        "lineage": "iran-community-domains",
+        "lineage_note": "Per-entry origin is not supplied; conservatively grouped with v2fly, not counted as independent confirmation.",
+        "original_sources": [
+          "v2fly/domain-list-community",
+          "ITO",
+          "Enamad",
+          "TCI",
+          "IWMF",
+          "bootmortis custom list"
+        ],
+        "release": "202609280201",
+        "sha256": "937ccc29ee8c504f5e1bbf76a707ed0fdb6c0cb5d3e9cec814004d03ec43fdb5",
+        "source": "bootmortis/iran-hosted-domains",
+        "url": "https://github.com/bootmortis/iran-hosted-domains/blob/c5c047bfa94d523208d3ac4674e9259c82533797",
+        "version": "c5c047bfa94d523208d3ac4674e9259c82533797"
+      },
+      {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "chocolate4u-provider-leads",
+        "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099",
+        "version": "676695ea3b4c95d5cf48a7c4e2e718bac5b8a099"
+      }
+    ],
+    "systematic_sources": {
+      "iptoasn_ipv4": {
+        "bytes": 6991181,
+        "sha256": "d5f5787509f0b2dbce85717c230d3b46b8407e00af5a5e3f8a1e1df231b462cf",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2010697,
+        "sha256": "7f42760a41247120e861ac3141129a42e01215b2bf8217d063c500f34c9ead23",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro": {
+        "bytes": 56889335,
+        "sha256": "62ecdcec79a659dd5d12fe3c0ecf6430031ff8ce6fdf38dd38d9e6c98317f65f",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      }
+    },
+    "universe_coverage_percent": null,
+    "unsupported_rules_count": 387
+  },
+  "rdap_refresh": {
+    "successful_requests": 24,
+    "recovered_failed_asns": [
+      14144,
+      15317,
+      17271
+    ],
+    "errors": [],
+    "first_observed_at": "2026-10-04T06:04:46.830193+00:00",
+    "last_observed_at": "2026-10-04T06:04:48.315963+00:00",
+    "response_sha256": {
+      "https://rdap.apnic.net/autnum/4849": "51f9f0388ab621bd51f6c1a09a0243b1e99814d895a7afa10dff9743fc389a0e",
+      "https://rdap.apnic.net/autnum/10128": "3b0b7ff26241355d3683e4f6f76dbb32aca4d6432b4c99333d9b09d602db8052",
+      "https://rdap.apnic.net/autnum/10137": "3b41e95ac4e8f568169cbed78d796a8a51766f5362bbf0a5e1e6a5a4f63ca2d1",
+      "https://rdap.apnic.net/autnum/10145": "c938b1c198f37b5cf505428b105e90bff899b3d5a61d8f11d652c6af3d329168",
+      "https://rdap.apnic.net/autnum/10150": "ae2abc2fcc22750f6d9627136c51cef7c691ba4075ef75decef455f996839ec0",
+      "https://rdap.apnic.net/autnum/10166": "1e5ac8a5ad2f5d17459969866817036b68ef4bd485f4230ec73ab94786cd120f",
+      "https://rdap.apnic.net/autnum/10174": "1bd01a30812e375bf8c11ae944739fa4c226feb7a1077eb37c173c3bf1af9208",
+      "https://rdap.arin.net/registry/autnum/14144": "0b6f98b55a7aaa6da0e0b378c635cbe65efe0b30b62fc087d08181663486b050",
+      "https://rdap.arin.net/registry/autnum/15317": "1c66322c9e0260b1f05cae7d7758e841c26efe8a0d3cd2952c26e9585d9cac73",
+      "https://rdap.arin.net/registry/autnum/17271": "1b3fad8d67eda26b7a8c7206e21452a4006b8b7cee0923a5f3823e1096ca0daa",
+      "https://rdap.db.ripe.net/autnum/34636": "8bf401ea4f62962fabc1bbefcbbb876bce1002b71ef77c582cedced4fab072fd",
+      "https://rdap.db.ripe.net/autnum/42586": "23d9c8d424b4c167172a7ed7cf7bcce8c10e27d4631615c2ca29da60d9477c95",
+      "https://rdap.db.ripe.net/autnum/43415": "4ef342c2ece76318d7c7900a61693369bdd87fbf6fa8377b49a79578cf09ea6d",
+      "https://rdap.db.ripe.net/autnum/43754": "05942c899a0939bc10e94b3f693927be6f1f148df8054b3a3e3d5c998660cb79",
+      "https://rdap.apnic.net/autnum/45855": "cccd8385aec7f12886fb819b8514e76304cfb004f5b34fe7d2b4847e4b7be03c",
+      "https://rdap.db.ripe.net/autnum/47430": "e6c7885000581c5f0ab5ef5adabf8556752d1dc71484497d06b8c7b2da323eb9",
+      "https://rdap.db.ripe.net/autnum/51433": "458565117572fa4b605b504c18b5c6e36b38f1382ef6858f70548293ca3b8d21",
+      "https://rdap.db.ripe.net/autnum/56632": "17ea918a5c9a5346eb79aecb53969f2e0791688235b65caa3c0900c18e51d081",
+      "https://rdap.db.ripe.net/autnum/60077": "8dbe92b7da5b5b166517262fd4ad6e20979615a97e32a57c6bd3e3b286883efa",
+      "https://rdap.db.ripe.net/autnum/202788": "31fa06c3a0784a911372ac64ce978f8041975e7ed77b3abbfebbdee89445bc98",
+      "https://rdap.db.ripe.net/autnum/203000": "2d3dc7738f4b7deea401e0a7707916706fc1d8422eeae487cb928c69e25d1e0f",
+      "https://rdap.db.ripe.net/autnum/204104": "f2bd7052a7ad8fd3b042ead16f0c9679e517dd52a1e20f9ab3f88db7e73e4015",
+      "https://rdap.db.ripe.net/autnum/208651": "d5bef189d5e02868d2a8f80455d08c7d2ff821e684a613a5d67820805fa6080f",
+      "https://rdap.db.ripe.net/autnum/211421": "ba248ba8383a9fd7410cd0d1076731155fefac25f2d235389202884969d52b08"
+    }
+  },
+  "public_observations": [
+    {
+      "id": "karlancer-home",
+      "url": "https://karlancer.com/",
+      "observed_at": "2026-10-04T06:06:21.637589+00:00",
+      "final_url": "https://www.karlancer.com/",
+      "status": 200,
+      "bytes": 503360,
+      "sha256": "9aea5fcb63c21aad8f061ecf428b2252ffd9bc18b2a6d2c05345a64c4f344b6f",
+      "content_encoding": null
+    },
+    {
+      "id": "karlancer-contact",
+      "url": "https://www.karlancer.com/contact",
+      "observed_at": "2026-10-04T06:06:21.638161+00:00",
+      "final_url": "https://www.karlancer.com/contact",
+      "status": 200,
+      "bytes": 142051,
+      "sha256": "0b454d9118f81cf67c3baf6f16deaac8e6a5b50a66d60785733dc39a565d6442",
+      "content_encoding": null
+    },
+    {
+      "id": "karlancer-terms",
+      "url": "https://www.karlancer.com/terms",
+      "observed_at": "2026-10-04T06:06:21.638259+00:00",
+      "final_url": "https://www.karlancer.com/terms",
+      "status": 200,
+      "bytes": 171869,
+      "sha256": "9744ea56761fb93c46ff3d15679533c75c0647a7d78cc215e8e594b421a93c49",
+      "content_encoding": null
+    },
+    {
+      "id": "ponisha-home",
+      "url": "https://ponisha.ir/",
+      "observed_at": "2026-10-04T06:06:21.638342+00:00",
+      "final_url": "https://ponisha.ir/",
+      "status": 200,
+      "bytes": 599604,
+      "sha256": "5d2dc276fcc1bea91b9d681b0f81f0478f89b7c7443f95881e809486b273b856",
+      "content_encoding": null
+    },
+    {
+      "id": "eseminar-about",
+      "url": "https://eseminar.tv/about",
+      "observed_at": "2026-10-04T06:06:21.638414+00:00",
+      "final_url": "https://eseminar.tv/about",
+      "status": 200,
+      "bytes": 244491,
+      "sha256": "e6bc2e8ca687d313f37f7ebe64d041cdd5d8e0ee2838c43ef949e6ba9f4ee1e8",
+      "content_encoding": null
+    },
+    {
+      "id": "eseminar-contact",
+      "url": "https://eseminar.tv/contact",
+      "observed_at": "2026-10-04T06:06:21.638471+00:00",
+      "final_url": "https://eseminar.tv/contact",
+      "status": 200,
+      "bytes": 239504,
+      "sha256": "80728b4169325887b24643ac2a59165aaf9eb6c4bdf7f77a3cbc420b4ef08f8a",
+      "content_encoding": null
+    },
+    {
+      "id": "taskulu-fa",
+      "url": "https://taskulu.com/fa",
+      "observed_at": "2026-10-04T06:06:22.509571+00:00",
+      "final_url": "https://taskulu.com/fa",
+      "status": 200,
+      "bytes": 344095,
+      "sha256": "e75633420e901c41456c30b518da6a5443cc753baa558330e0861c28694e569d",
+      "content_encoding": null
+    },
+    {
+      "id": "meli-home",
+      "url": "https://melipayamak.com/",
+      "observed_at": "2026-10-04T06:06:22.761436+00:00",
+      "final_url": "https://www.melipayamak.com/",
+      "status": 200,
+      "bytes": 190765,
+      "sha256": "b2188eca3cf955b0499e4e6375b41fae57c229242fe1fb8568dafb08b57ab173",
+      "content_encoding": null
+    },
+    {
+      "id": "meli-contact",
+      "url": "https://www.melipayamak.com/contact/",
+      "observed_at": "2026-10-04T06:06:22.822170+00:00",
+      "final_url": "https://www.melipayamak.com/contact/",
+      "status": 200,
+      "bytes": 132354,
+      "sha256": "7cd957e0edbb0cc975d58dc9bcc86131f600d6a1f8bda887a118f327986f001d",
+      "content_encoding": null
+    },
+    {
+      "id": "zhaket-home",
+      "url": "https://zhaket.com/",
+      "observed_at": "2026-10-04T06:06:22.822574+00:00",
+      "final_url": "https://www.zhaket.com/",
+      "status": 200,
+      "bytes": 972165,
+      "sha256": "df3d37debc1aa48a8e337ab4aea5ebd3d8911500b8960e4f2c576b7ede5177a2",
+      "content_encoding": null
+    },
+    {
+      "id": "iranserver-whitelist",
+      "url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "observed_at": "2026-10-04T06:06:22.872945+00:00",
+      "final_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "status": 200,
+      "bytes": 1082991,
+      "sha256": "efd28e76ed5a9ccf092a524314e2ecd1879ba6846bed28baf64a8b26cf748a12",
+      "content_encoding": null
+    },
+    {
+      "id": "f95-inventory",
+      "url": "https://ips.f95.com/ip.txt",
+      "observed_at": "2026-10-04T06:06:22.933200+00:00",
+      "final_url": "https://ips.f95.com/ips.txt",
+      "status": 200,
+      "bytes": 302,
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "content_encoding": null
+    },
+    {
+      "id": "f95-root",
+      "url": "https://ips.f95.com/",
+      "observed_at": "2026-10-04T06:06:22.949237+00:00",
+      "final_url": "https://ips.f95.com/ips.txt",
+      "status": 200,
+      "bytes": 302,
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "content_encoding": null
+    },
+    {
+      "id": "derak-ipv4",
+      "url": "https://api.derak.cloud/public/ipv4",
+      "observed_at": "2026-10-04T06:06:23.339446+00:00",
+      "final_url": "https://api.derak.cloud/public/ipv4",
+      "status": 200,
+      "bytes": 323,
+      "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c",
+      "content_encoding": null
+    },
+    {
+      "id": "ponisha-about",
+      "url": "https://ponisha.ir/about",
+      "observed_at": "2026-10-04T06:07:44.366047+00:00",
+      "final_url": "https://ponisha.ir/about",
+      "status": 200,
+      "bytes": 143505,
+      "sha256": "b572159279ac857a142c9681a91d5d81ed00dfdb8ee6300e0c52034f2132dce6",
+      "content_encoding": null
+    },
+    {
+      "id": "ponisha-terms",
+      "url": "https://ponisha.ir/terms",
+      "observed_at": "2026-10-04T06:07:44.366629+00:00",
+      "final_url": "https://ponisha.ir/terms",
+      "status": 200,
+      "bytes": 155520,
+      "sha256": "2f7986f26097eed34b7d104297178faeaca3351278c1bb34e040bc1989f27a0f",
+      "content_encoding": null
+    },
+    {
+      "id": "taskulu-contact",
+      "url": "https://taskulu.com/fa/contact",
+      "observed_at": "2026-10-04T06:07:44.366766+00:00",
+      "final_url": "https://taskulu.com/fa/contact",
+      "status": 200,
+      "bytes": 264126,
+      "sha256": "297fdb1ac7abebfe3378ca65f2d576d1de203cced81c4e2667929b0c6a4f1209",
+      "content_encoding": null
+    },
+    {
+      "id": "taskulu-terms",
+      "url": "https://taskulu.com/fa/terms",
+      "observed_at": "2026-10-04T06:07:44.366832+00:00",
+      "final_url": "https://taskulu.com/fa/terms",
+      "status": 200,
+      "bytes": 189742,
+      "sha256": "ba10e0cba34da0fac31f96898303b4f8d22868da8d2d8e854580bd64d2a0b049",
+      "content_encoding": null
+    },
+    {
+      "id": "taskulu-app",
+      "url": "https://taskulu.app/",
+      "observed_at": "2026-10-04T06:07:44.367013+00:00",
+      "final_url": "https://taskulu.app/",
+      "status": 200,
+      "bytes": 3067,
+      "sha256": "f48894149004d02c6f839b3530b9de37835ef9af83dde208f34fb1fba866c281",
+      "content_encoding": null
+    },
+    {
+      "id": "zhaket-contact",
+      "url": "https://www.zhaket.com/content/contact",
+      "observed_at": "2026-10-04T06:07:44.367085+00:00",
+      "final_url": "https://www.zhaket.com/content/contact",
+      "status": 200,
+      "bytes": 228107,
+      "sha256": "92eae351cd93547ae97624eab37bdb33d71bc11ce3781b346419ed661678a23f",
+      "content_encoding": null
+    },
+    {
+      "id": "zhaket-about",
+      "url": "https://www.zhaket.com/content/about",
+      "observed_at": "2026-10-04T06:07:44.703287+00:00",
+      "final_url": "https://www.zhaket.com/content/about",
+      "status": 200,
+      "bytes": 135502,
+      "sha256": "7ded224db77daaabcca14485cbf61de4d3728042cae88ac8385572f739458594",
+      "content_encoding": null
+    },
+    {
+      "id": "f95-canonical",
+      "url": "https://ips.f95.com/ips.txt",
+      "observed_at": "2026-10-04T06:07:44.756048+00:00",
+      "final_url": "https://ips.f95.com/ips.txt",
+      "status": 200,
+      "bytes": 302,
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "content_encoding": null
+    },
+    {
+      "id": "hk-isp-register",
+      "url": "https://www.ofca.gov.hk/en/media_focus/data_statistics/internet/list_of_internet_service_providers/",
+      "observed_at": "2026-10-04T06:07:44.985285+00:00",
+      "final_url": "https://www.ofca.gov.hk/en/media_focus/data_statistics/internet/list_of_internet_service_providers/",
+      "status": 200,
+      "bytes": 28283,
+      "sha256": "a65480d549801aae87fedc022a8cc036ad1a1d1b00cbcdd3bd357708771569bf",
+      "content_encoding": null
+    }
+  ],
+  "source_lineage_note": "Service leads retain bootmortis MIT licensing and shared iran-community-domains lineage. Provider leads retain Chocolate4U GPL-3.0 provenance. Copied sources and newer releases are not independent corroboration; admission relies on public primary evidence.",
+  "provider_review": {
+    "id": "iranserver",
+    "url": "https://ips.f95.com/ips.txt",
+    "official_documentation": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+    "redirects_verified": {
+      "https://ips.f95.com/": "https://ips.f95.com/ips.txt",
+      "https://ips.f95.com/ip.txt": "https://ips.f95.com/ips.txt"
+    },
+    "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+    "published_ipv4_addresses": 22,
+    "exact_host_addresses_only": true,
+    "min_count": 11,
+    "max_count": 64,
+    "not_in_baseline": [
+      "45.134.88.74/32",
+      "87.98.249.55/32",
+      "118.91.186.70/32",
+      "140.235.129.59/32",
+      "147.160.138.19/32",
+      "168.119.4.72/32",
+      "185.121.169.29/32"
+    ]
+  },
+  "review_outcomes": {
+    "new_service_hostnames": [
+      "karlancer.com",
+      "www.karlancer.com",
+      "ponisha.ir",
+      "eseminar.tv",
+      "taskulu.com",
+      "taskulu.app",
+      "melipayamak.com",
+      "www.melipayamak.com",
+      "login.melipayamak.com",
+      "sign.melipayamak.com",
+      "zhaket.com",
+      "www.zhaket.com"
+    ],
+    "rejected_asns": [
+      10128,
+      10137,
+      10145,
+      10150,
+      10166,
+      10174
+    ],
+    "pending": {
+      "asn:45855": "APNIC identifies AsiaTech Telecom Limited in Hong Kong, and the Hong Kong regulator lists that company under ISP entry 1444. Iranian anchors identify Asiatech Data Transmission company and related names. The shared AsiaTech name is a lead; no primary corporate evidence establishing affiliation between the holders was found. Require that relationship before admitting this ASN.",
+      "asn:4849": "The authoritative RDAP response identifies S3 Company Ltd, while IPtoASN retains an AsiaTech Telecom description. The Iranian anchors identify Asiatech Data Transmission company and related names. Resolve the current operating identity and provide a primary corporate link before admitting this ASN; the matching description alone is insufficient.",
+      "provider:https://api.derak.cloud/public/ipv4": "The refreshed official IPv4 inventory still includes non-public 192.168.204.48/28. Keep it outside collection under the strict public-prefix parser; no partial inventory is admitted."
+    }
+  },
+  "projection": {
+    "mode": "live collection through the repository downloader",
+    "generated_at": "2026-10-04T06:12:53+00:00",
+    "comparison": "Identical public datasets and DNS observations were used for both policies. No source payloads were manually modified.",
+    "policy_hash_format": "SHA-512 of UTF-8 json.dumps(policy, sort_keys=True), matching the generated manifest.",
+    "baseline_policy_sha512": "c7a25c01af491604b5c5b5a47d1459d26db84242f2009e4ce6c843e77eadc6ec314f940fad2a979d4e14ac866be6374f4d8a8598c4f4ea126ef7be6adb06c94b",
+    "candidate_policy_sha512": "459234db57608cdebefeb0dbe6ed5c0a137e8df7222945d5c51527324d01b16962af42380eb29eb35d0999ea7baf96a6000e09d31dcac478d2bb56552a7bd886",
+    "changes": {
+      "ipv4": {
+        "before_prefixes": 1857,
+        "after_prefixes": 1866,
+        "added_ranges": [
+          "45.134.88.74/32",
+          "87.98.249.55/32",
+          "104.21.46.192/32",
+          "118.91.186.70/32",
+          "140.235.129.59/32",
+          "147.160.138.19/32",
+          "168.119.4.72/32",
+          "172.67.141.145/32",
+          "185.121.169.29/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "9",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 592,
+        "after_prefixes": 594,
+        "added_ranges": [
+          "2606:4700:3030::ac43:8d91/128",
+          "2606:4700:3033::6815:2ec0/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      }
+    },
+    "versus_last_publication": {
+      "ipv4": {
+        "before_prefixes": 1855,
+        "after_prefixes": 1866,
+        "added_ranges": [
+          "45.134.88.74/32",
+          "87.98.249.55/32",
+          "104.21.46.192/32",
+          "118.91.186.70/32",
+          "140.235.129.59/32",
+          "147.160.138.19/32",
+          "168.119.4.72/32",
+          "172.67.141.145/32",
+          "185.121.169.29/32",
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "11",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 590,
+        "after_prefixes": 594,
+        "added_ranges": [
+          "2606:4700:3030::ac43:8d91/128",
+          "2606:4700:3033::6815:2ec0/128",
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "4",
+        "removed_addresses": "0"
+      }
+    },
+    "last_publication_difference_note": "The extra two IPv4 and two IPv6 addresses versus publication are current Google DNS answers for already accepted limoo.host. They are present in the fresh baseline and are not caused by this policy change.",
+    "source_observations": {
+      "dns_snapshot": {
+        "bytes": 92323,
+        "sha256": "218846604db637c23144e548821c8ecd2bf154f6eebf95bc767a5fb67edb540f"
+      },
+      "ipdeny_ipv4": {
+        "bytes": 30900,
+        "sha256": "219c25f760fc03a4a80760de030c6f6814304cf7499cf74ecadbc9a76b6fd26d"
+      },
+      "ipdeny_ipv6": {
+        "bytes": 8573,
+        "sha256": "74945f62cb5c1d1667349d589e3626f1936a23c0b27953165220e4ad32ad0c95"
+      },
+      "iptoasn_ipv4": {
+        "bytes": 6991181,
+        "sha256": "d5f5787509f0b2dbce85717c230d3b46b8407e00af5a5e3f8a1e1df231b462cf"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2010697,
+        "sha256": "7f42760a41247120e861ac3141129a42e01215b2bf8217d063c500f34c9ead23"
+      },
+      "nro_delegated": {
+        "bytes": 56889335,
+        "sha256": "62ecdcec79a659dd5d12fe3c0ecf6430031ff8ce6fdf38dd38d9e6c98317f65f"
+      },
+      "provider_arvancloud": {
+        "bytes": 220,
+        "sha256": "7357e3c11af8073d5a8c147c704e2c5a816a6c2cc4046918b00e5986e98e9967"
+      },
+      "provider_derakcloud_ipv6": {
+        "bytes": 207,
+        "sha256": "0ff567eb454c4d41976d6ae642782acaf00c2e0d17cd39a7ba18fbc433b16b25"
+      },
+      "provider_iranserver": {
+        "bytes": 302,
+        "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871"
+      },
+      "provider_mizbancloud": {
+        "bytes": 132,
+        "sha256": "53263ccf6dc9c95795751f9792a6a5a826ddb77b80433bddd646f7d0ced6c3f4"
+      },
+      "provider_parspack": {
+        "bytes": 828,
+        "sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3"
+      }
+    },
+    "resolver_disagreements": [
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.69.22",
+            "172.67.202.213"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "limoo.host",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3030::6815:4516",
+            "2606:4700:3030::ac43:cad5"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "limoo.host",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.46.192",
+            "172.67.141.145"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3030::ac43:8d91",
+            "2606:4700:3033::6815:2ec0"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 28
+      }
+    ]
+  },
+  "validation": {
+    "unit_tests_passed": 59,
+    "compileall": "passed",
+    "catalogue_and_decisions": "passed",
+    "reviewed_candidate_states": {
+      "rejected": 6,
+      "pending": 3,
+      "accepted": 7
+    },
+    "oldest_review_allocation": "14/16 pool candidates; 14/22 including derived hostnames",
+    "normal_live_projection": "passed",
+    "guarded_generation_against_last_publication": "passed",
+    "guarded_manifest_and_membership_equal_projection": true,
+    "all_admitted_source_ranges_contained": true,
+    "all_service_answers_contained": true,
+    "v2_complete_page_validation": "passed",
+    "non_public_provider_prefix_rejection": "passed",
+    "pending_asns_not_selected": [
+      45855,
+      4849
+    ],
+    "explain_checks": [
+      {
+        "address": "45.134.88.74",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "87.98.249.55",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "104.21.46.192",
+        "layers": [
+          "service_dns_ipv4"
+        ],
+        "providers": [],
+        "services": [
+          "taskulu.com"
+        ]
+      },
+      {
+        "address": "118.91.186.70",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "140.235.129.59",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "147.160.138.19",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "168.119.4.72",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "172.67.141.145",
+        "layers": [
+          "service_dns_ipv4"
+        ],
+        "providers": [],
+        "services": [
+          "taskulu.com"
+        ]
+      },
+      {
+        "address": "185.121.169.29",
+        "layers": [
+          "provider_iranserver"
+        ],
+        "providers": [
+          "iranserver"
+        ],
+        "services": []
+      },
+      {
+        "address": "2606:4700:3030::ac43:8d91",
+        "layers": [
+          "service_dns_ipv6"
+        ],
+        "providers": [],
+        "services": [
+          "taskulu.com"
+        ]
+      },
+      {
+        "address": "2606:4700:3033::6815:2ec0",
+        "layers": [
+          "service_dns_ipv6"
+        ],
+        "providers": [],
+        "services": [
+          "taskulu.com"
+        ]
+      }
+    ],
+    "dns_query_status": {
+      "success": 172
+    },
+    "new_dns_queries": 48,
+    "unresolved_services": [],
+    "known_source_completeness_percent": 100
+  },
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null
+}
