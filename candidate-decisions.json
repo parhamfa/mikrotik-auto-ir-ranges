@@ -162,9 +162,10 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reason": "The refreshed official IPv4 inventory still includes non-public 192.168.204.48/28. Keep it outside collection under the strict public-prefix parser; no partial inventory is admitted.",
-      "reviewed_on": "2026-10-04",
+      "reason": "The refreshed official IPv4 inventory contains 19 entries, including non-public 192.168.204.48/28. Keep it outside collection under the strict public-prefix parser; no partial inventory is admitted.",
+      "reviewed_on": "2026-10-11",
       "evidence_fingerprints": [
+        "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
         "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
         "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
@@ -177,13 +178,14 @@
     },
     "provider:https://ips.f95.com/ip.txt": {
       "state": "accepted",
-      "reason": "IranServer's official CDN whitelist documentation links ips.f95.com, whose root and legacy ip.txt path redirect to this inventory. All 22 observed entries are public IPv4 host addresses. Admit the published CDN endpoints without admitting their hosting ASNs. The canonical /ips.txt URL is used for collection.",
-      "reviewed_on": "2026-10-04",
+      "reason": "IranServer's official CDN documentation still links ips.f95.com. Its root and legacy /ip.txt path redirect to the accepted /ips.txt inventory, whose 22 public IPv4 host addresses are unchanged. The new community-release fingerprint repeats this same provider inventory; retain acceptance of the existing canonical source without adding hosting ASNs.",
+      "reviewed_on": "2026-10-11",
       "evidence_fingerprints": [
         "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
         "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
         "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
-        "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08"
+        "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08",
+        "d8e550acbf546b81cb7c3c94ff9d5d203c544c2345fd255e3944395b475606f9"
       ],
       "evidence": [
         "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
@@ -776,6 +778,209 @@
         "https://rdap.db.ripe.net/autnum/203000",
         "https://rdap.db.ripe.net/autnum/208651",
         "https://rdap.db.ripe.net/autnum/211421"
+      ]
+    },
+    "domain:raychat.io": {
+      "state": "accepted",
+      "reason": "Raychat’s official contact page lists offices in Tabriz and Tehran; its service terms are governed by Iranian law. Approved exact hostnames: raychat.io.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "e29ba9c8638423a63d813d90021e3877d481c3a8b7dd9bb11d667d08d14b8469"
+      ],
+      "evidence": [
+        "https://raychat.io/contact",
+        "https://raychat.io/license"
+      ]
+    },
+    "domain:goftino.com": {
+      "state": "accepted",
+      "reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. Approved exact hostnames: goftino.com, www.goftino.com, my.goftino.com.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "ce7ed18b63c0ccecd76e09baae8b6c8c4e307c9ccca8461e336f1cc032274164"
+      ],
+      "evidence": [
+        "https://www.goftino.com/contact",
+        "https://www.goftino.com/rules"
+      ]
+    },
+    "domain:porsline.ir": {
+      "state": "accepted",
+      "reason": "Porsline’s official terms identify the service owner as System Gostar Chista, company registration 476949 in Tehran, and place service use under Iranian law. Approved exact hostnames: porsline.ir, survey.porsline.ir.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "55b826a5e925248356617bf1b8350bd7077183a660f444d4c20c71b29f592ffd"
+      ],
+      "evidence": [
+        "https://porsline.ir/terms-of-use"
+      ]
+    },
+    "domain:porsall.com": {
+      "state": "accepted",
+      "reason": "Porsall’s official about page identifies it as a service of Sarafraz Rayan Ghasedak; the official contact page locates that company in Kashan, Isfahan province. Approved exact hostnames: porsall.com, panel.porsall.com.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "09867f383d8299bc9debffae9cb34bbcfa87694edb53c6446acebcb2c6bcd471"
+      ],
+      "evidence": [
+        "https://porsall.com/contact-2/",
+        "https://porsall.com/about/"
+      ]
+    },
+    "domain:anjammidam.com": {
+      "state": "accepted",
+      "reason": "Anjammidam’s official about page identifies an Iranian team serving Iranian specialists and businesses; its terms state that the site operates under Iranian law. Approved exact hostnames: anjammidam.com, www.anjammidam.com.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "39999b01626d833d8291e65c6b8d8a5138ac101c82be0e6f34ea040199e869c5"
+      ],
+      "evidence": [
+        "https://anjammidam.com/pages/about-anjammidam",
+        "https://anjammidam.com/support/terms-of-service"
+      ]
+    },
+    "domain:parsfreelancer.com": {
+      "state": "pending",
+      "reason": "Both the candidate apex and a conventional www probe failed local public HTTP fetching at DNS resolution. No current official company/contact/legal evidence or official hostname link was obtained. This is not evidence of non-Iranian affiliation or permanent unavailability. Retain the candidate pending primary evidence.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "d06e040fd7bccc776ca456a756dde9d817ed3b87b0699ed4ffafb91eb9635378"
+      ],
+      "evidence": []
+    },
+    "domain:karboom.io": {
+      "state": "accepted",
+      "reason": "Karboom’s official contact page identifies Aria Sabin Human Capital Development as its operating company and a Ministry of Labour electronic-recruitment licence; its terms explicitly apply Iranian law. Approved exact hostnames: karboom.io, careers.karboom.io.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "6741239a668df52bf2710c68a8067a4dcee1364f62fd21457022f7f902e667ce"
+      ],
+      "evidence": [
+        "https://karboom.io/contact-us",
+        "https://karboom.io/terms-and-conditions"
+      ]
+    },
+    "domain:virgool.io": {
+      "state": "accepted",
+      "reason": "Virgool’s official contact page identifies Mohtava Negar Parsi Khalagh and an Isfahan office; its official login-linked terms place Virgool activities under Iranian law. Approved exact hostnames: virgool.io.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "e378032057f33ca7b5bdcb6f5e63e380c1b09195f7b017fe8f5056fb05461888"
+      ],
+      "evidence": [
+        "https://virgool.io/contact-us",
+        "https://virgool.io/terms",
+        "https://virgool.io/login"
+      ]
+    },
+    "asn:10179": {
+      "state": "rejected",
+      "reason": "APNIC identifies Daehan Investment Trust Securities in Korea. The linked RIPE anchors identify Securities and Exchange Organization (AS31175) and Sina Financial & Investment Holding Co (PJS) (AS62238). The assertions match only the generic words 'securities' and 'investment'; they provide no evidence of common ownership. This rejects the supplied assertions; independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "262bcc3213cb7f459f71713b1c8c2d16cc3c1a5df2125ceefa4cdd93838fbc4e",
+        "ba88cb784773b4efbb56df7032bfe0e7c9ee154e5ac089f9312623f7cded6cf8",
+        "f561491cb4cc9e371d447f9c92994a68c9b9543d7c6dc32f078f8a1d3a2a671a"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10179",
+        "https://rdap.db.ripe.net/autnum/31175",
+        "https://rdap.db.ripe.net/autnum/62238"
+      ]
+    },
+    "asn:10183": {
+      "state": "rejected",
+      "reason": "APNIC identifies Korea Culture Information Service Agency in Korea. The linked RIPE anchors identify IRNA (AS29079) and Fars News Agency Cultural Arts Institute (AS44609 and AS62229). Their shared generic word 'agency' does not establish affiliation. This rejects the supplied assertions; independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "0b567bb94e460035ee4de485b62072715aec239efe34a00f4311e8282e3f6d0d",
+        "3e8e3d2627eec5b2fcefce5a079b50499679087ad5fafb7631f09c9bc1a097a7",
+        "69aef1bc7ba8ec9aa3287731306686a1bd8b9d7dded702fcd4bac81ed138d78a",
+        "b21658f918efa564b9062e12aa006929e394076970e10e5a7f8a260ab24e13c6",
+        "f41de03a9b8602579df8fd17539d29e1db453a0da72ed3187b67403e3b6f4282",
+        "f69a7feafe38c3dcf75ab9b89381a8eb306bdef7b50b10f7d203648f2e4cb2ea"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10183",
+        "https://rdap.db.ripe.net/autnum/29079",
+        "https://rdap.db.ripe.net/autnum/44609",
+        "https://rdap.db.ripe.net/autnum/62229"
+      ]
+    },
+    "asn:10192": {
+      "state": "rejected",
+      "reason": "APNIC identifies kiwoom Securities.co.,Ltd in Korea, while the linked RIPE anchor AS31175 identifies Securities and Exchange Organization. The supplied assertion is only the generic word 'securities', without evidence of common ownership. This rejects the supplied assertions; independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "693b79143c4c24f2f3dcdc56f500d47d41fe0c9f753d916d2415715f64c42de4"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10192",
+        "https://rdap.db.ripe.net/autnum/31175"
+      ]
+    },
+    "asn:10204": {
+      "state": "rejected",
+      "reason": "APNIC identifies NTT MSC Sdn Bhd in Malaysia; the linked RIPE anchor AS204686 identifies mobarakeh steel company. The shared 'MSC' abbreviation is a name collision and does not establish affiliation. This rejects the supplied assertions; independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "c12ddab273acf2632ae1d21abaa45359b0fb202fa17db19b7fe4ccf34dee06b4",
+        "dc197a48e1807e20ea3a4ee0d20da435a5ba9ed40cd5799281ba3e34edf742a5"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10204",
+        "https://rdap.db.ripe.net/autnum/204686"
+      ]
+    },
+    "asn:31732": {
+      "state": "pending",
+      "reason": "RIPE identifies Parsun Network Solutions PTY LTD; Parsun's official site describes it as Australian and explicitly names AS31732. The official site offers sponsoring-LIR and registry-administration services; the current AS12697 record lists Parsun as sponsoring organization while naming Tose Masiryabi Shabake Aria PJSC as registrant. Other linked Iranian anchor records identify distinct organizations. Sponsorship, shared maintainers and a Parsun name match do not establish ownership. Require a current primary corporate link to a qualifying Iranian operator before admitting the ASN.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "25f68fd0ba08687009ad278c735cb079941f3b43794537230df2521ab3eaec5a",
+        "30b7ebe84177e421f7b402ef991545f73d7946ebbfa133e7419109545fb744a3",
+        "790c6efb1735908a6526679d30bd00bfd448d16c3819d95c9cc132039e6bc97d",
+        "cd5276113403a318d4068de1080fd3c822d643f7811331679d96a11bd75c953a",
+        "d3ad0abe6daf2fdf75079b08dbea7642d0a8867d50fcfbc3890c603cbbc258d5",
+        "f9fc5944a067e70e3d6b3f1795da433488bfdda2dc42652c2d4ea91fd05af816"
+      ],
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/31732",
+        "https://rdap.db.ripe.net/autnum/12697",
+        "https://rdap.db.ripe.net/autnum/62048",
+        "https://rdap.db.ripe.net/autnum/198357",
+        "https://rdap.db.ripe.net/autnum/203895",
+        "https://rdap.db.ripe.net/autnum/213775",
+        "https://parsun.com/",
+        "https://parsun.com/about/",
+        "https://parsun.com/lir/",
+        "https://rest.db.ripe.net/ripe/aut-num/AS12697.json"
+      ]
+    },
+    "asn:9484": {
+      "state": "rejected",
+      "reason": "APNIC identifies Mobinet LLC in Mongolia, whose official about page identifies itself with the Mobicom group. The linked RIPE records identify Mobin Net Communication Company (Private Joint Stock), Amirkabir University of Technology, Ayandeh Bank and Vira Cloud DataCenter PJSC. The supplied 'mobinnet'/'mobinet' name-similarity assertions do not establish a corporate relationship between these organizations. This rejects the supplied assertions; independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-10-11",
+      "evidence_fingerprints": [
+        "2bee84248d1b86e212051c46b8525ddf386d3c69f4b34109f988b5423f16b8f6",
+        "4c313863cd570e75917c0a33a1c92fff238d34741d4bdb3f9b5de523cc12633b",
+        "5014fdef4761157b45d2578aef5c27c224c46e9f53b20ee75de542f8625393cb",
+        "68c22394dd61b1fad3aaa3a8e4084f26eed64e3144c3ca6c32dc2d90c413760f",
+        "6c8c75a02b3ef1e1947e4fa01682476911cd6fa5a7b781decca05987c636d04a",
+        "8937ead25709ca7df1c3df0569cc119779a8e31758d36ed4e98f0c6975c3a3fd",
+        "b35ea6cae462baa8109427620167e4e1cd0807435b2666c9ad79ea6e006aca85",
+        "bdea54b1232fca885ad9ee649017eff4b8d6922c931291e0fbd4dc036d4a617c",
+        "e4195781200b7ed6a764ad13154e1f974ca9c24559d60f6a851cb4a009592604",
+        "e9c4ab780a8c9ddc4ddf0b892cffa144b7bf590931f361238a4cf0833b0371ed"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/9484",
+        "https://rdap.db.ripe.net/autnum/47330",
+        "https://rdap.db.ripe.net/autnum/49792",
+        "https://rdap.db.ripe.net/autnum/50810",
+        "https://rdap.db.ripe.net/autnum/61250",
+        "https://rdap.db.ripe.net/autnum/210405",
+        "https://mobinet.mn/about-us/20"
       ]
     }
   }
