@@ -4,43 +4,43 @@
     "asn_ranges": "IR-labelled IPtoASN rows plus independently selected operator ASNs",
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort",
-    "policy_sha512": "459234db57608cdebefeb0dbe6ed5c0a137e8df7222945d5c51527324d01b16962af42380eb29eb35d0999ea7baf96a6000e09d31dcac478d2bb56552a7bd886",
+    "policy_sha512": "41ff66c62eae2d5d998a8a085fdff8b036477c366ed75be7e1057c6d89d86a5927bc61adccfe0a5d2a063db1cb6beef7436313059b4e5f0195e48207e6127a7a",
     "providers": "Official provider-published inventories",
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json",
     "services": "Exact A/AAAA addresses observed for reviewed service domains; shared hosting included"
   },
-  "generated_at": "2026-10-06T18:19:16Z",
+  "generated_at": "2026-10-11T17:40:33Z",
   "generator_version": "2.0.1",
   "ipv4": {
-    "bytes": 29293,
-    "count": 1865,
+    "bytes": 29375,
+    "count": 1870,
     "file": "ir-ipv4.zone",
-    "sha512": "3ea7f6e19a40a6f4657659961934277b3f5a30f1bafac72e52e8a222523e1442c4bddccaca0aa1383114d0696bbe441dd2b464f6e5979eb1f584218b70a626c4"
+    "sha512": "f002fe385d685f8e127d8486a872ca127c211b93499cafdaaf06fd2cc73d9a866301966362eefb6a2b3a66c3d7ed48e746d1331cfa42e90c794afd8797d0a144"
   },
   "ipv6": {
-    "bytes": 9000,
-    "count": 592,
+    "bytes": 9142,
+    "count": 597,
     "file": "ir-ipv6.zone",
-    "sha512": "bddca69fbab4440b25e7201199bf6c2e4c64c1efaee38673dca2aca7f3ad5686d2b2cf7c637914ebd2486b40bf8001bb851687f1fb14dbbbd62ead897af0c1a1"
+    "sha512": "32e41d92eb4929a289345a9e2f483645273a3f2d1865798a3da7690952d7630c435e0424f4dced53ff61e8c0fed12b0554d10c5e91487abc6313919ac8a741b8"
   },
   "schema": 1,
   "source_stats": {
     "ipv4": {
       "ipdeny_cidrs": 1972,
-      "iptoasn_selected_asns": 570,
-      "iptoasn_selected_ranges": 4981
+      "iptoasn_selected_asns": 567,
+      "iptoasn_selected_ranges": 4893
     },
     "ipv6": {
       "ipdeny_cidrs": 572,
-      "iptoasn_selected_asns": 159,
-      "iptoasn_selected_ranges": 475
+      "iptoasn_selected_asns": 160,
+      "iptoasn_selected_ranges": 476
     }
   },
   "sources": {
     "dns_snapshot": {
-      "bytes": 93621,
-      "sha512": "31723da79d2a3800d6de7fb9b73cbde590362a915831b7b559bec67109a1af1b5606343c3b68aaf4ae60b22a23f6058635d0363fe685a20948902c2fb212784e",
+      "bytes": 122372,
+      "sha512": "fa2f7a29b8520aff24026fa888a100b35f939cf03856fdff9e626d2f228d55f16dc6cee00c344cab69f9e37329d687f1d3c548299d0af06b055fe293b664ebb3",
       "url": "coverage-policy.json#dns_resolvers"
     },
     "ipdeny_ipv4": {
@@ -54,18 +54,18 @@
       "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
     },
     "iptoasn_ipv4": {
-      "bytes": 6997258,
-      "sha512": "3435c79a1cff9e972c1dc74cac2f74ac337339dfd96e0eed164a83bd3cc29f441049473224b21bf20b7f7fd23706f72e0bc863e39cef7e32d59d4d8919650c0a",
+      "bytes": 7001484,
+      "sha512": "d679c14eb702ffe1c1c0969ea222ad0fa1408a0d4ee20259885f0f5de6d07893b0f23da98cc35d43fa53041d569bdecce5a7960b4a345bce62f26efa448039d8",
       "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
     },
     "iptoasn_ipv6": {
-      "bytes": 2015261,
-      "sha512": "09d47129efbfb1410cf8c389f373d3d6714c72625b48a121740a8393dbdd4177931cc7895a4618bf1f18d7913a5159669f4ad4f8917e0b3f301514e6c5a49bb0",
+      "bytes": 2017729,
+      "sha512": "b8443f8f9c5abed057a0d6172ad511eeee60b013fe52e13ffd7d2fd5cd46b313eb168b2bed648d534aa62888f624b05dfd9840a078fddd20f7fe493a9f309c9c",
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 56909442,
-      "sha512": "2291bc164edd1882583853081d036828ea7f5eaa002dc9ffc2c9e30de1579f1ef4f22f0dd81e54ecfa0b98ae5abf9e8d4f94ded7be00ce95477ad81a467b639f",
+      "bytes": 56959805,
+      "sha512": "075d06d0de3b5b8a0ba72363721d98bafec1a8cc4c9c312d7667009e0fa26ff5905f018d8abfd6dfc897030dbeb9424992b7ddbc53ae772f33020e8c10fb5eb9",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
