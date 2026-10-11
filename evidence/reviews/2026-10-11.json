@@ -1,0 +1,1692 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-10-11",
+  "main_commit": "090b10b21ae7e4b8eedeb350a7f44f4298c8d9ba",
+  "data_commit": "eef7c795862d22edd02fa06d2192a1af42d27e77",
+  "reviewed_candidates": [
+    "domain:raychat.io",
+    "domain:goftino.com",
+    "domain:porsline.ir",
+    "domain:porsall.com",
+    "domain:anjammidam.com",
+    "domain:parsfreelancer.com",
+    "domain:karboom.io",
+    "domain:virgool.io",
+    "asn:10179",
+    "asn:10183",
+    "asn:10192",
+    "asn:10204",
+    "asn:31732",
+    "asn:9484",
+    "provider:https://api.derak.cloud/public/ipv4",
+    "provider:https://ips.f95.com/ip.txt"
+  ],
+  "oldest_previously_unreviewed_candidates": [
+    "domain:raychat.io",
+    "domain:goftino.com",
+    "domain:porsline.ir",
+    "domain:porsall.com",
+    "domain:anjammidam.com",
+    "domain:parsfreelancer.com",
+    "domain:karboom.io",
+    "domain:virgool.io",
+    "asn:10179",
+    "asn:10183",
+    "asn:10192",
+    "asn:10204",
+    "asn:31732",
+    "asn:9484"
+  ],
+  "additional_exact_hostnames": [
+    "careers.karboom.io",
+    "my.goftino.com",
+    "panel.porsall.com",
+    "survey.porsline.ir",
+    "www.anjammidam.com",
+    "www.goftino.com"
+  ],
+  "review_budget_note": "14 of 16 pool candidates are from the oldest previously unreviewed cohort. Six further exact hostnames were verified through official links or redirects. Prior review status is checked against committed decisions.",
+  "discovery_before_proposal": {
+    "ageing_catalogue": [],
+    "candidates": {
+      "accepted": 31,
+      "pending": 134780,
+      "rejected": 19
+    },
+    "global_asns": 87166,
+    "iran_anchors": 590,
+    "observed_at": "2026-10-11T06:07:27.155445+00:00",
+    "rdap": {
+      "errors": [],
+      "pending_enrichment": 85935,
+      "requests": 0
+    },
+    "schema": 1,
+    "source_errors": [],
+    "sources": [
+      {
+        "license": "MIT",
+        "license_url": "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/LICENSE",
+        "lineage": "iran-community-domains",
+        "source": "v2fly/domain-list-community",
+        "url": "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+        "version": "c6adacf29cc4fb05e04651fcf03e00989ef9f797"
+      },
+      {
+        "asset_url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+        "license": "MIT",
+        "license_url": "https://github.com/bootmortis/iran-hosted-domains/blob/c5c047bfa94d523208d3ac4674e9259c82533797/LICENSE",
+        "lineage": "iran-community-domains",
+        "lineage_note": "Per-entry origin is not supplied; conservatively grouped with v2fly, not counted as independent confirmation.",
+        "original_sources": [
+          "v2fly/domain-list-community",
+          "ITO",
+          "Enamad",
+          "TCI",
+          "IWMF",
+          "bootmortis custom list"
+        ],
+        "release": "202610050227",
+        "sha256": "937ccc29ee8c504f5e1bbf76a707ed0fdb6c0cb5d3e9cec814004d03ec43fdb5",
+        "source": "bootmortis/iran-hosted-domains",
+        "url": "https://github.com/bootmortis/iran-hosted-domains/blob/c5c047bfa94d523208d3ac4674e9259c82533797",
+        "version": "c5c047bfa94d523208d3ac4674e9259c82533797"
+      },
+      {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "chocolate4u-provider-leads",
+        "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099",
+        "version": "676695ea3b4c95d5cf48a7c4e2e718bac5b8a099"
+      }
+    ],
+    "systematic_sources": {
+      "iptoasn_ipv4": {
+        "bytes": 7000517,
+        "sha256": "e632c4da7d4de99d178e280d4e8f1a0539f80901737f48ecae4896be09da2fbf",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2017690,
+        "sha256": "309557e3f6368bf9af4db7d29ed5d0fdc821bdcf008a8c6a3c92479c690284c1",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro": {
+        "bytes": 56955674,
+        "sha256": "cb151988466283220d13f4b9e3c10999f1645fb310d3511c6d26ce06702340f8",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      }
+    },
+    "universe_coverage_percent": null,
+    "unsupported_rules_count": 387
+  },
+  "registry_refresh": {
+    "retried_previous_failures": 26,
+    "recovered_failures": 25,
+    "reviewed_asn_and_anchor_lookups": 22,
+    "unresolved": [
+      {
+        "asn": 25696,
+        "url": "https://rdap.arin.net/registry/autnum/25696",
+        "attempted_at": "2026-10-11T06:03:35.994521+00:00",
+        "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/25696: HTTP Error 404: ",
+        "status": "failed",
+        "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/25696: HTTP Error 404: "
+      }
+    ],
+    "note": "The discovery refresh used rdap-budget 0 after importing these targeted successful lookups. Its empty per-run errors array does not erase the unresolved AS25696 lookup or pending enrichment.",
+    "observations": [
+      {
+        "asn": 9484,
+        "url": "https://rdap.apnic.net/autnum/9484",
+        "observed_at": "2026-10-11T06:07:56.485533+00:00",
+        "sha256": "eb1b748ab54a9bb30917e3f7c976aa807405a9da4ccadd8361628179d143c810"
+      },
+      {
+        "asn": 10179,
+        "url": "https://rdap.apnic.net/autnum/10179",
+        "observed_at": "2026-10-11T06:07:56.485744+00:00",
+        "sha256": "6f3481950d30c1d34b3d6c8a825bc18424b974bda5cf8a5337e3c2fa210f44de"
+      },
+      {
+        "asn": 10183,
+        "url": "https://rdap.apnic.net/autnum/10183",
+        "observed_at": "2026-10-11T06:07:56.486010+00:00",
+        "sha256": "76e081e4673706a00818b52ad22ec7e5419fa0cf696b5a8d15ac9174772ccb75"
+      },
+      {
+        "asn": 10192,
+        "url": "https://rdap.apnic.net/autnum/10192",
+        "observed_at": "2026-10-11T06:07:56.486108+00:00",
+        "sha256": "551a9d3a4033d1af6140085c834b177ab0f46dd879758228bd16cca2138bff9b"
+      },
+      {
+        "asn": 10204,
+        "url": "https://rdap.apnic.net/autnum/10204",
+        "observed_at": "2026-10-11T06:07:56.789386+00:00",
+        "sha256": "01d16900e79408844698e6f1f074101030692722ace66434e9fa6726191a7d0f"
+      },
+      {
+        "asn": 12697,
+        "url": "https://rdap.db.ripe.net/autnum/12697",
+        "observed_at": "2026-10-11T06:07:56.958011+00:00",
+        "sha256": "30606813d0914387100b66f30197bcbeebd8b5f8480c1c5262f878c083da9ab5"
+      },
+      {
+        "asn": 29079,
+        "url": "https://rdap.db.ripe.net/autnum/29079",
+        "observed_at": "2026-10-11T06:07:56.958188+00:00",
+        "sha256": "d780e1a419d818a95161ea5585fdb5aa40f19811dd5b689ae0fefc2265a16eab"
+      },
+      {
+        "asn": 31175,
+        "url": "https://rdap.db.ripe.net/autnum/31175",
+        "observed_at": "2026-10-11T06:07:56.960746+00:00",
+        "sha256": "f5ab00e46268bf72ac149a27c2a899c316c13d49e66c66c0baea0e6565c7dddc"
+      },
+      {
+        "asn": 31732,
+        "url": "https://rdap.db.ripe.net/autnum/31732",
+        "observed_at": "2026-10-11T06:07:57.134088+00:00",
+        "sha256": "a3be42ca939fdfecba4a446ae074b907b3b9bdb5bc4d1f26407b741857945740"
+      },
+      {
+        "asn": 44609,
+        "url": "https://rdap.db.ripe.net/autnum/44609",
+        "observed_at": "2026-10-11T06:07:57.378289+00:00",
+        "sha256": "cf492eabfcf25e474bf3fb021b522240201346d90c5cb1ea087e5f78a710c015"
+      },
+      {
+        "asn": 47330,
+        "url": "https://rdap.db.ripe.net/autnum/47330",
+        "observed_at": "2026-10-11T06:07:57.386433+00:00",
+        "sha256": "d9d2c57dbaafeaf4edb72c3780026f61a5a8a272d6f31b0b2ee58c34fbc84e0b"
+      },
+      {
+        "asn": 49792,
+        "url": "https://rdap.db.ripe.net/autnum/49792",
+        "observed_at": "2026-10-11T06:07:57.386692+00:00",
+        "sha256": "0c3d0a970cc4805165a0fd6dafd42f162bc5d218e255ef3121228d1df8ad0a52"
+      },
+      {
+        "asn": 50810,
+        "url": "https://rdap.db.ripe.net/autnum/50810",
+        "observed_at": "2026-10-11T06:07:57.591066+00:00",
+        "sha256": "4dff39f516450f6c01e63908bc7098b0cb8413576a51ffd1e8660022a3db9622"
+      },
+      {
+        "asn": 61250,
+        "url": "https://rdap.db.ripe.net/autnum/61250",
+        "observed_at": "2026-10-11T06:07:57.833246+00:00",
+        "sha256": "5970cbdc1cd8d4a6c5909ec78d3760684c60dfa3c381d6c44896ad4509977ebd"
+      },
+      {
+        "asn": 62048,
+        "url": "https://rdap.db.ripe.net/autnum/62048",
+        "observed_at": "2026-10-11T06:07:57.846557+00:00",
+        "sha256": "85e16fefb3359d65551ca173b0107efcc509e8ded7530c6ee3616f5c7b495a50"
+      },
+      {
+        "asn": 62229,
+        "url": "https://rdap.db.ripe.net/autnum/62229",
+        "observed_at": "2026-10-11T06:07:57.846796+00:00",
+        "sha256": "ac4f745c1eb22cf805699c3821e750822be0431fcbe03680f9f192089c812a76"
+      },
+      {
+        "asn": 62238,
+        "url": "https://rdap.db.ripe.net/autnum/62238",
+        "observed_at": "2026-10-11T06:07:58.015853+00:00",
+        "sha256": "f793a80a0417de9613cf4ad0b458da7092114661878391a46e9280ca23ac4aa7"
+      },
+      {
+        "asn": 198357,
+        "url": "https://rdap.db.ripe.net/autnum/198357",
+        "observed_at": "2026-10-11T06:07:58.265840+00:00",
+        "sha256": "a23ad8247bbb532a194a1167b3c9a6501d80ede929c092caf68d25bfdf0e32ca"
+      },
+      {
+        "asn": 203895,
+        "url": "https://rdap.db.ripe.net/autnum/203895",
+        "observed_at": "2026-10-11T06:07:58.290258+00:00",
+        "sha256": "8d56bdbc9a60de064465bdadea90604aae7e835a2658cb2361f42cac45fe8092"
+      },
+      {
+        "asn": 204686,
+        "url": "https://rdap.db.ripe.net/autnum/204686",
+        "observed_at": "2026-10-11T06:07:58.294090+00:00",
+        "sha256": "52c6cfa5466dc380d5688198d490eb9e568b4f9301b77bca37eca284b0af5fcc"
+      },
+      {
+        "asn": 210405,
+        "url": "https://rdap.db.ripe.net/autnum/210405",
+        "observed_at": "2026-10-11T06:07:58.442280+00:00",
+        "sha256": "019a41a0a3fddbce7395813e1c5161304e6c49a48b7dd96471007aaf6d62a62c"
+      },
+      {
+        "asn": 213775,
+        "url": "https://rdap.db.ripe.net/autnum/213775",
+        "observed_at": "2026-10-11T06:07:58.690200+00:00",
+        "sha256": "82d064090041f089947758ad524254c2a6d197e41cc88070c111619cc547c3fa"
+      },
+      {
+        "asn": 19797,
+        "url": "https://rdap.arin.net/registry/autnum/19797",
+        "observed_at": "2026-10-11T06:03:14.779831+00:00",
+        "sha256": "2fbd15af077de52ede467210f2433cf752ec4ed398b9695ecbed5bd1d067edeb"
+      },
+      {
+        "asn": 19951,
+        "url": "https://rdap.arin.net/registry/autnum/19951",
+        "observed_at": "2026-10-11T06:03:16.696684+00:00",
+        "sha256": "6bb53f8887bc3ee218bd47744b52a4ca0a7d330bb1069e0f6864a7e94246aa3f"
+      },
+      {
+        "asn": 20030,
+        "url": "https://rdap.arin.net/registry/autnum/20030",
+        "observed_at": "2026-10-11T06:03:18.227275+00:00",
+        "sha256": "25f2f6504502c908330a85b8b712f1274ade5b07c44346955179edf85a5479a9"
+      },
+      {
+        "asn": 20203,
+        "url": "https://rdap.arin.net/registry/autnum/20203",
+        "observed_at": "2026-10-11T06:03:20.123251+00:00",
+        "sha256": "c93113bb5273761f473e845b04650c7b5d7e2824f96b4b05df8d643f1bb5a60a"
+      },
+      {
+        "asn": 22742,
+        "url": "https://rdap.arin.net/registry/autnum/22742",
+        "observed_at": "2026-10-11T06:03:21.787805+00:00",
+        "sha256": "831e803868420a8f9cb3b149a98253fe464fe816c57fedc5fa2be32fb2e83977"
+      },
+      {
+        "asn": 22874,
+        "url": "https://rdap.arin.net/registry/autnum/22874",
+        "observed_at": "2026-10-11T06:03:23.923306+00:00",
+        "sha256": "56dc1f953156fa90a7c862823362a2627b1330ac713ad81f8641bbf24d22fa37"
+      },
+      {
+        "asn": 22911,
+        "url": "https://rdap.arin.net/registry/autnum/22911",
+        "observed_at": "2026-10-11T06:03:25.417911+00:00",
+        "sha256": "7759bfdefddca61e3db452aba12d485a0bd40ee44722e7db733a6fc2240cc6fb"
+      },
+      {
+        "asn": 23036,
+        "url": "https://rdap.arin.net/registry/autnum/23036",
+        "observed_at": "2026-10-11T06:03:26.944218+00:00",
+        "sha256": "a156cde63062fd9832848447b1b60b2dbf258c32619ec84bb949f272354fea66"
+      },
+      {
+        "asn": 23090,
+        "url": "https://rdap.arin.net/registry/autnum/23090",
+        "observed_at": "2026-10-11T06:03:28.475573+00:00",
+        "sha256": "88225915f130109ecf3267591611ac076f5652aa3f76e524ed2eb0bea55ea0d1"
+      },
+      {
+        "asn": 23111,
+        "url": "https://rdap.arin.net/registry/autnum/23111",
+        "observed_at": "2026-10-11T06:03:29.991500+00:00",
+        "sha256": "a42151da8e244d9671912ed7e7acfbda84d8d81bd6da50717d78e95f14a5c866"
+      },
+      {
+        "asn": 23120,
+        "url": "https://rdap.arin.net/registry/autnum/23120",
+        "observed_at": "2026-10-11T06:03:31.494038+00:00",
+        "sha256": "8bf56d19d6d080421a28b163033aed500067c1cf95a5f8ffa5539414d5828333"
+      },
+      {
+        "asn": 23171,
+        "url": "https://rdap.arin.net/registry/autnum/23171",
+        "observed_at": "2026-10-11T06:03:32.992990+00:00",
+        "sha256": "b7601aff59537173205c40748babe080f57e66ed0fe4e150b50396f90abb9cd3"
+      },
+      {
+        "asn": 23173,
+        "url": "https://rdap.arin.net/registry/autnum/23173",
+        "observed_at": "2026-10-11T06:03:34.488592+00:00",
+        "sha256": "79f9114b2870e620d94c61a97910f555999b5747d2e5d3a00f0462bd8fe21cf4"
+      },
+      {
+        "asn": 25905,
+        "url": "https://rdap.arin.net/registry/autnum/25905",
+        "observed_at": "2026-10-11T06:03:37.531790+00:00",
+        "sha256": "7411871feafaa945786dca61dbe2bb1ed39b5a1789b82f10da92de504fe2d99b"
+      },
+      {
+        "asn": 25943,
+        "url": "https://rdap.arin.net/registry/autnum/25943",
+        "observed_at": "2026-10-11T06:03:39.039598+00:00",
+        "sha256": "b1e7d402b0f12e2ee15dd9fd19a2d4a25095ebe0f2d62009f90d9254eac6b987"
+      },
+      {
+        "asn": 26046,
+        "url": "https://rdap.arin.net/registry/autnum/26046",
+        "observed_at": "2026-10-11T06:03:40.719569+00:00",
+        "sha256": "780b4f593ff1090c153cb4635f995a5faf2a7c4c3884e838204a536387008b5b"
+      },
+      {
+        "asn": 26329,
+        "url": "https://rdap.arin.net/registry/autnum/26329",
+        "observed_at": "2026-10-11T06:03:42.253913+00:00",
+        "sha256": "e2fa44086ea690b5ac93810f21227ad1edea15b6efec6750913a8f4b56ede1d7"
+      },
+      {
+        "asn": 26359,
+        "url": "https://rdap.arin.net/registry/autnum/26359",
+        "observed_at": "2026-10-11T06:03:43.753968+00:00",
+        "sha256": "d3c84d6a903ba5f3068018ca95b1edef70cfb30c05ddb7a1ded5c9bbd5dc1507"
+      },
+      {
+        "asn": 27499,
+        "url": "https://rdap.arin.net/registry/autnum/27499",
+        "observed_at": "2026-10-11T06:03:45.255825+00:00",
+        "sha256": "a18764c84efb58e36719f33cc6b8d091a445e377a7e4a7a8626ae9fa11029951"
+      },
+      {
+        "asn": 28400,
+        "url": "https://rdap.lacnic.net/rdap/autnum/28400",
+        "observed_at": "2026-10-11T06:03:46.792723+00:00",
+        "sha256": "571c3e4d393fcde91d047adae8fb2a5785d86974c2567d60de69a46eb7f45e0a"
+      },
+      {
+        "asn": 28469,
+        "url": "https://rdap.lacnic.net/rdap/autnum/28469",
+        "observed_at": "2026-10-11T06:03:48.735999+00:00",
+        "sha256": "3cdab9de1aa917aef7c5550154e450180090d558e6e33b53f58cd293a2ab7549"
+      },
+      {
+        "asn": 28515,
+        "url": "https://rdap.lacnic.net/rdap/autnum/28515",
+        "observed_at": "2026-10-11T06:03:51.215389+00:00",
+        "sha256": "63f4b6a606f33db6dcf67b8729305710292e7bad98c6580eeb50117bb144bab2"
+      },
+      {
+        "asn": 28521,
+        "url": "https://rdap.lacnic.net/rdap/autnum/28521",
+        "observed_at": "2026-10-11T06:03:53.565494+00:00",
+        "sha256": "587b27b13dcc64000a7cc8490010fac96642c39129f70e2afc6ce5e4ae066019"
+      },
+      {
+        "asn": 28636,
+        "url": "https://rdap.lacnic.net/rdap/autnum/28636",
+        "observed_at": "2026-10-11T06:03:56.023559+00:00",
+        "sha256": "7b41546d715519cfa5c6cc9ab1d80b7e3c707a69ed5f3393f3c2001f0f38ffdd"
+      },
+      {
+        "asn": 30390,
+        "url": "https://rdap.arin.net/registry/autnum/30390",
+        "observed_at": "2026-10-11T06:03:59.300517+00:00",
+        "sha256": "f830f781e87eed47c002221801a39786d8d98595d575703e7a7785daa4aa8c6a"
+      }
+    ]
+  },
+  "public_service_observations": [
+    {
+      "id": "raychat-home",
+      "url": "https://raychat.io/",
+      "observed_at": "2026-10-11T06:03:58.985658+00:00",
+      "final_url": "https://raychat.io/",
+      "status": 200,
+      "bytes": 571521,
+      "sha256": "dec1e4ffbf1c3c63b00daa73d3f44aa59d9efb526e49fed6c3e6d26b61a3a4ed",
+      "redirects": []
+    },
+    {
+      "id": "goftino-home",
+      "url": "https://goftino.com/",
+      "observed_at": "2026-10-11T06:03:58.986130+00:00",
+      "final_url": "https://www.goftino.com/",
+      "status": 200,
+      "bytes": 19542,
+      "sha256": "f87645794c9d0d8fb0caf6aa087751be593ca6139f8ad2135d66b3703db07c49",
+      "redirects": [
+        {
+          "url": "https://goftino.com/",
+          "status": 301,
+          "location": "https://www.goftino.com/"
+        }
+      ]
+    },
+    {
+      "id": "porsline-home",
+      "url": "https://porsline.ir/",
+      "observed_at": "2026-10-11T06:03:58.986319+00:00",
+      "final_url": "https://porsline.ir/",
+      "status": 200,
+      "bytes": 268456,
+      "sha256": "dfcd8dd6a32b12202e34ff63de6d0c406c73fa1225638a68c45f2e2e4ad414a2",
+      "redirects": []
+    },
+    {
+      "id": "porsall-home",
+      "url": "https://porsall.com/",
+      "observed_at": "2026-10-11T06:03:58.986412+00:00",
+      "final_url": "https://porsall.com/",
+      "status": 200,
+      "bytes": 126504,
+      "sha256": "8d84b2ea575e4041387667364f99cdbd51510b86a9b2cf5fb5003835333a762f",
+      "redirects": []
+    },
+    {
+      "id": "anjammidam-home",
+      "url": "https://anjammidam.com/",
+      "observed_at": "2026-10-11T06:03:58.986509+00:00",
+      "final_url": "https://anjammidam.com/",
+      "status": 200,
+      "bytes": 109067,
+      "sha256": "93ae0a72b2917528c027d8b062b536cf9964105030dbe47e8dd4f49cf810de26",
+      "redirects": []
+    },
+    {
+      "id": "parsfreelancer-home",
+      "url": "https://parsfreelancer.com/",
+      "observed_at": "2026-10-11T06:03:58.986603+00:00",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "redirects": []
+    },
+    {
+      "id": "karboom-home",
+      "url": "https://karboom.io/",
+      "observed_at": "2026-10-11T06:03:59.125422+00:00",
+      "final_url": "https://karboom.io/",
+      "status": 200,
+      "bytes": 103597,
+      "sha256": "67c2652d7f35091ddbeacff5cd1be5061b21a096270e9a1a8b8295af7bd15826",
+      "redirects": []
+    },
+    {
+      "id": "virgool-home",
+      "url": "https://virgool.io/",
+      "observed_at": "2026-10-11T06:03:59.396753+00:00",
+      "final_url": "https://virgool.io/",
+      "status": 200,
+      "bytes": 215932,
+      "sha256": "5e93230f9f6b51a8d1889ef4bc4f29149b68a15093440d8ec9bbec4121c55ec6",
+      "redirects": []
+    },
+    {
+      "id": "raychat-contact",
+      "url": "https://raychat.io/contact",
+      "observed_at": "2026-10-11T06:04:34.746413+00:00",
+      "final_url": "https://raychat.io/contact",
+      "status": 200,
+      "bytes": 438365,
+      "sha256": "3b00d094b9f98a7c9397ac0ad0a6380b0641920a1d982640690ffbf5a7d01726",
+      "redirects": []
+    },
+    {
+      "id": "raychat-about",
+      "url": "https://raychat.io/about",
+      "observed_at": "2026-10-11T06:04:34.746703+00:00",
+      "final_url": "https://raychat.io/about",
+      "status": 200,
+      "bytes": 473619,
+      "sha256": "37c36fb1c2c83f7bd2559bedc0e13b549ef0828102cb958b7624949575942ebc",
+      "redirects": []
+    },
+    {
+      "id": "raychat-license",
+      "url": "https://raychat.io/license",
+      "observed_at": "2026-10-11T06:04:34.746791+00:00",
+      "final_url": "https://raychat.io/license",
+      "status": 200,
+      "bytes": 472834,
+      "sha256": "ebb027268022e25381a9f0bf5563308c35e5085f27954203a9fa3fb9c5f87b9a",
+      "redirects": []
+    },
+    {
+      "id": "goftino-contact",
+      "url": "https://www.goftino.com/contact",
+      "observed_at": "2026-10-11T06:04:34.746843+00:00",
+      "final_url": "https://www.goftino.com/contact",
+      "status": 200,
+      "bytes": 14160,
+      "sha256": "44b1cc34cb0769d33bf4e26fe365b75f1aaa65d16849ce71464442651a221623",
+      "redirects": []
+    },
+    {
+      "id": "goftino-rules",
+      "url": "https://www.goftino.com/rules",
+      "observed_at": "2026-10-11T06:04:34.746889+00:00",
+      "final_url": "https://www.goftino.com/rules",
+      "status": 200,
+      "bytes": 26309,
+      "sha256": "c69ecbb610955d2fc64909da1a23158344fe4a92aba2e0be8592a484e977c9f7",
+      "redirects": []
+    },
+    {
+      "id": "porsline-about",
+      "url": "https://porsline.ir/about-us",
+      "observed_at": "2026-10-11T06:04:34.746934+00:00",
+      "final_url": "https://porsline.ir/about-us",
+      "status": 200,
+      "bytes": 84870,
+      "sha256": "d00d3102ef770a76b9ee7b46e365eec257723f1d0f653bfb7e27d3e5b2d699fc",
+      "redirects": []
+    },
+    {
+      "id": "porsline-terms",
+      "url": "https://porsline.ir/terms-of-use",
+      "observed_at": "2026-10-11T06:04:35.362490+00:00",
+      "final_url": "https://porsline.ir/terms-of-use",
+      "status": 200,
+      "bytes": 98698,
+      "sha256": "cbea2f7dc3ce544962a02df82c6a4ab73e211817e03d1d2eb4ad3154a9f78bbe",
+      "redirects": []
+    },
+    {
+      "id": "porsall-contact",
+      "url": "https://porsall.com/contact-2/",
+      "observed_at": "2026-10-11T06:04:35.423418+00:00",
+      "final_url": "https://porsall.com/contact-2/",
+      "status": 200,
+      "bytes": 78741,
+      "sha256": "a4535c38c199683013e6f15325500300880851a3ca0bed94f288b2677e53c89d",
+      "redirects": []
+    },
+    {
+      "id": "porsall-about",
+      "url": "https://porsall.com/about/",
+      "observed_at": "2026-10-11T06:04:35.428176+00:00",
+      "final_url": "https://porsall.com/about/",
+      "status": 200,
+      "bytes": 112607,
+      "sha256": "cdbdb6c7d88dd56f6fdf6edb400f40f2bde57faaf4c4ab6b1d6b49ddc9f8955d",
+      "redirects": []
+    },
+    {
+      "id": "anjammidam-about",
+      "url": "https://anjammidam.com/pages/about-anjammidam",
+      "observed_at": "2026-10-11T06:04:35.679180+00:00",
+      "final_url": "https://anjammidam.com/pages/about-anjammidam",
+      "status": 200,
+      "bytes": 36311,
+      "sha256": "d41814754f30247b4636e2ef196d7bc09da4701eec9adfa20db30ed4ff825017",
+      "redirects": []
+    },
+    {
+      "id": "anjammidam-contact",
+      "url": "https://anjammidam.com/pages/contact-anjammidam",
+      "observed_at": "2026-10-11T06:04:35.696035+00:00",
+      "final_url": "https://anjammidam.com/support-ticket",
+      "status": 200,
+      "bytes": 58890,
+      "sha256": "f7fc6df24d62f7ca03b11c777895bf27472393a1c9be6782649955bf8e134509",
+      "redirects": [
+        {
+          "url": "https://anjammidam.com/pages/contact-anjammidam",
+          "status": 302,
+          "location": "https://anjammidam.com/ticket/new"
+        },
+        {
+          "url": "https://anjammidam.com/ticket/new",
+          "status": 302,
+          "location": "https://anjammidam.com/support-ticket"
+        }
+      ]
+    },
+    {
+      "id": "anjammidam-terms",
+      "url": "https://anjammidam.com/support/terms-of-service",
+      "observed_at": "2026-10-11T06:04:35.697004+00:00",
+      "final_url": "https://anjammidam.com/support/terms-of-service",
+      "status": 200,
+      "bytes": 104597,
+      "sha256": "b868ddb1349a73df8d2c8da7830c3e98f0a176245fe3b0989d6ab17a15e52549",
+      "redirects": []
+    },
+    {
+      "id": "karboom-about",
+      "url": "https://karboom.io/about-us",
+      "observed_at": "2026-10-11T06:04:35.779240+00:00",
+      "final_url": "https://careers.karboom.io/",
+      "status": 200,
+      "bytes": 38892,
+      "sha256": "c0a89f57bd32f3d0f282257bedb1d459dd5bd0dce00f44dc95a8b6af0b53e43a",
+      "redirects": [
+        {
+          "url": "https://karboom.io/about-us",
+          "status": 302,
+          "location": "https://careers.karboom.io/"
+        }
+      ]
+    },
+    {
+      "id": "karboom-contact",
+      "url": "https://karboom.io/contact-us",
+      "observed_at": "2026-10-11T06:04:35.789673+00:00",
+      "final_url": "https://karboom.io/contact-us",
+      "status": 200,
+      "bytes": 33089,
+      "sha256": "fb16ab6838be1b82bea8f0818cb2f88758286d1c17a52563c157c4092f23e87a",
+      "redirects": []
+    },
+    {
+      "id": "karboom-terms",
+      "url": "https://karboom.io/terms-and-conditions",
+      "observed_at": "2026-10-11T06:04:35.963230+00:00",
+      "final_url": "https://karboom.io/terms-and-conditions",
+      "status": 200,
+      "bytes": 38392,
+      "sha256": "6674d3ffc1feab689983f2648fbe3d8cc62d115db9455d685441868a568f0450",
+      "redirects": []
+    },
+    {
+      "id": "virgool-login",
+      "url": "https://virgool.io/login",
+      "observed_at": "2026-10-11T06:05:40.865261+00:00",
+      "final_url": "https://virgool.io/login",
+      "status": 200,
+      "bytes": 52573,
+      "sha256": "804c87e5c630306c986eb0e068f332ce8d6da49b4909f8330f771a51091b5f45",
+      "redirects": []
+    },
+    {
+      "id": "virgool-terms",
+      "url": "https://virgool.io/terms",
+      "observed_at": "2026-10-11T06:05:40.865600+00:00",
+      "final_url": "https://virgool.io/terms",
+      "status": 200,
+      "bytes": 80049,
+      "sha256": "f8ff9a564cec367eb436e9a15c487999ecfce84adf03fb154d655783efb1f318",
+      "redirects": []
+    },
+    {
+      "id": "goftino-app",
+      "url": "https://my.goftino.com/",
+      "observed_at": "2026-10-11T06:05:40.865690+00:00",
+      "final_url": "https://my.goftino.com/",
+      "status": 200,
+      "bytes": 18286,
+      "sha256": "17523f596e45b8381e27948915c7660768707c5bb341dee9337a810c7a7582fa",
+      "redirects": []
+    },
+    {
+      "id": "porsall-panel",
+      "url": "https://panel.porsall.com/Home/Login/",
+      "observed_at": "2026-10-11T06:05:40.865749+00:00",
+      "final_url": "https://panel.porsall.com/Home/Login/",
+      "status": 200,
+      "bytes": 3895,
+      "sha256": "84d8bc7b4580a48e0aa9862c18fb6a887d523edf180870f214a5a0115e6846fa",
+      "redirects": []
+    },
+    {
+      "id": "porsline-contact-form",
+      "url": "https://survey.porsline.ir/s/H90bnb",
+      "observed_at": "2026-10-11T06:05:40.865798+00:00",
+      "final_url": "https://survey.porsline.ir/s/H90bnb",
+      "status": 200,
+      "bytes": 7268,
+      "sha256": "cdd584e299f5e4dcaa75f0d1008ea38a332d5587dc25cc46adb51d2af958a857",
+      "redirects": []
+    },
+    {
+      "id": "parsfreelancer-www",
+      "url": "https://www.parsfreelancer.com/",
+      "observed_at": "2026-10-11T06:05:40.865842+00:00",
+      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>",
+      "redirects": []
+    },
+    {
+      "id": "anjammidam-www",
+      "url": "https://www.anjammidam.com/",
+      "observed_at": "2026-10-11T06:06:45.204137+00:00",
+      "final_url": "https://anjammidam.com/",
+      "status": 200,
+      "bytes": 109042,
+      "sha256": "f501a2616d145b71236e6424c215d72560092c859f39f764f131ce79fe074e18",
+      "redirects": [
+        {
+          "url": "https://www.anjammidam.com/",
+          "status": 301,
+          "location": "https://anjammidam.com/"
+        }
+      ]
+    },
+    {
+      "id": "virgool-contact",
+      "url": "https://virgool.io/contact-us",
+      "observed_at": "2026-10-11T06:06:45.204430+00:00",
+      "final_url": "https://virgool.io/contact-us",
+      "status": 200,
+      "bytes": 55143,
+      "sha256": "1411d9291ef185b9781c71c132c1873687e8efe62683d711da92df53d1f8d975",
+      "redirects": []
+    }
+  ],
+  "service_evidence": [
+    {
+      "candidate_id": "domain:raychat.io",
+      "state": "accepted",
+      "reason": "Raychat’s official contact page lists offices in Tabriz and Tehran; its service terms are governed by Iranian law.",
+      "evidence": [
+        "https://raychat.io/contact",
+        "https://raychat.io/license"
+      ],
+      "hostnames": [
+        {
+          "hostname": "raychat.io",
+          "role": "apex",
+          "reason": "Official apex website; its public dashboard login link remains on raychat.io.",
+          "evidence": [
+            "https://raychat.io/contact",
+            "https://raychat.io/license",
+            "https://raychat.io/"
+          ],
+          "observations": [
+            "raychat-home",
+            "raychat-home"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "domain:goftino.com",
+      "state": "accepted",
+      "reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law.",
+      "evidence": [
+        "https://www.goftino.com/contact",
+        "https://www.goftino.com/rules"
+      ],
+      "hostnames": [
+        {
+          "hostname": "goftino.com",
+          "role": "apex_redirect",
+          "reason": "The candidate apex redirects to the official www.goftino.com website.",
+          "evidence": [
+            "https://www.goftino.com/contact",
+            "https://www.goftino.com/rules",
+            "https://goftino.com/"
+          ],
+          "observations": [
+            "goftino-home",
+            "goftino-home"
+          ]
+        },
+        {
+          "hostname": "www.goftino.com",
+          "role": "official_www",
+          "reason": "Verified final hostname of the apex redirect and host of official contact and terms pages.",
+          "evidence": [
+            "https://www.goftino.com/contact",
+            "https://www.goftino.com/rules",
+            "https://goftino.com/"
+          ],
+          "observations": [
+            "goftino-home",
+            "goftino-home"
+          ]
+        },
+        {
+          "hostname": "my.goftino.com",
+          "role": "linked_application",
+          "reason": "The official home page directly links my.goftino.com for login.",
+          "evidence": [
+            "https://www.goftino.com/contact",
+            "https://www.goftino.com/rules",
+            "https://goftino.com/"
+          ],
+          "observations": [
+            "goftino-home",
+            "goftino-app"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "domain:porsline.ir",
+      "state": "accepted",
+      "reason": "Porsline’s official terms identify the service owner as System Gostar Chista, company registration 476949 in Tehran, and place service use under Iranian law.",
+      "evidence": [
+        "https://porsline.ir/terms-of-use"
+      ],
+      "hostnames": [
+        {
+          "hostname": "porsline.ir",
+          "role": "apex",
+          "reason": "Official apex website carrying the terms and product pages.",
+          "evidence": [
+            "https://porsline.ir/terms-of-use",
+            "https://porsline.ir/"
+          ],
+          "observations": [
+            "porsline-home",
+            "porsline-home"
+          ]
+        },
+        {
+          "hostname": "survey.porsline.ir",
+          "role": "linked_service_application",
+          "reason": "The official home page directly links its contact survey and jobs form on survey.porsline.ir.",
+          "evidence": [
+            "https://porsline.ir/terms-of-use",
+            "https://porsline.ir/"
+          ],
+          "observations": [
+            "porsline-home",
+            "porsline-contact-form"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "domain:porsall.com",
+      "state": "accepted",
+      "reason": "Porsall’s official about page identifies it as a service of Sarafraz Rayan Ghasedak; the official contact page locates that company in Kashan, Isfahan province.",
+      "evidence": [
+        "https://porsall.com/contact-2/",
+        "https://porsall.com/about/"
+      ],
+      "hostnames": [
+        {
+          "hostname": "porsall.com",
+          "role": "apex",
+          "reason": "Official apex website carrying company and contact pages.",
+          "evidence": [
+            "https://porsall.com/contact-2/",
+            "https://porsall.com/about/",
+            "https://porsall.com/"
+          ],
+          "observations": [
+            "porsall-home",
+            "porsall-home"
+          ]
+        },
+        {
+          "hostname": "panel.porsall.com",
+          "role": "linked_application",
+          "reason": "The official home page directly links panel.porsall.com for login and signup.",
+          "evidence": [
+            "https://porsall.com/contact-2/",
+            "https://porsall.com/about/",
+            "https://porsall.com/"
+          ],
+          "observations": [
+            "porsall-home",
+            "porsall-panel"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "domain:anjammidam.com",
+      "state": "accepted",
+      "reason": "Anjammidam’s official about page identifies an Iranian team serving Iranian specialists and businesses; its terms state that the site operates under Iranian law.",
+      "evidence": [
+        "https://anjammidam.com/pages/about-anjammidam",
+        "https://anjammidam.com/support/terms-of-service"
+      ],
+      "hostnames": [
+        {
+          "hostname": "anjammidam.com",
+          "role": "apex",
+          "reason": "Official apex website carrying the about and terms pages.",
+          "evidence": [
+            "https://anjammidam.com/pages/about-anjammidam",
+            "https://anjammidam.com/support/terms-of-service",
+            "https://anjammidam.com/"
+          ],
+          "observations": [
+            "anjammidam-home",
+            "anjammidam-home"
+          ]
+        },
+        {
+          "hostname": "www.anjammidam.com",
+          "role": "linked_www_redirect",
+          "reason": "The official about page directly links www.anjammidam.com; a request to that alias redirects to anjammidam.com.",
+          "evidence": [
+            "https://anjammidam.com/pages/about-anjammidam",
+            "https://anjammidam.com/support/terms-of-service"
+          ],
+          "observations": [
+            "anjammidam-about",
+            "anjammidam-www"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "domain:parsfreelancer.com",
+      "state": "pending",
+      "reason": "Both the candidate apex and a conventional www probe failed local public HTTP fetching at DNS resolution. No current official company/contact/legal evidence or official hostname link was obtained. This is not evidence of non-Iranian affiliation or permanent unavailability. Retain the candidate pending primary evidence.",
+      "evidence": [],
+      "hostnames": []
+    },
+    {
+      "candidate_id": "domain:karboom.io",
+      "state": "accepted",
+      "reason": "Karboom’s official contact page identifies Aria Sabin Human Capital Development as its operating company and a Ministry of Labour electronic-recruitment licence; its terms explicitly apply Iranian law.",
+      "evidence": [
+        "https://karboom.io/contact-us",
+        "https://karboom.io/terms-and-conditions"
+      ],
+      "hostnames": [
+        {
+          "hostname": "karboom.io",
+          "role": "apex",
+          "reason": "Official apex service website carrying company and contact pages.",
+          "evidence": [
+            "https://karboom.io/contact-us",
+            "https://karboom.io/terms-and-conditions",
+            "https://karboom.io/"
+          ],
+          "observations": [
+            "karboom-home",
+            "karboom-home"
+          ]
+        },
+        {
+          "hostname": "careers.karboom.io",
+          "role": "official_about_redirect",
+          "reason": "The official home page links about-us; that URL redirects to the company’s career site at careers.karboom.io.",
+          "evidence": [
+            "https://karboom.io/contact-us",
+            "https://karboom.io/terms-and-conditions",
+            "https://karboom.io/",
+            "https://karboom.io/about-us"
+          ],
+          "observations": [
+            "karboom-home",
+            "karboom-about",
+            "karboom-about"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "domain:virgool.io",
+      "state": "accepted",
+      "reason": "Virgool’s official contact page identifies Mohtava Negar Parsi Khalagh and an Isfahan office; its official login-linked terms place Virgool activities under Iranian law.",
+      "evidence": [
+        "https://virgool.io/contact-us",
+        "https://virgool.io/terms",
+        "https://virgool.io/login"
+      ],
+      "hostnames": [
+        {
+          "hostname": "virgool.io",
+          "role": "apex",
+          "reason": "Official apex website; the login, terms and contact pages are on the same exact hostname.",
+          "evidence": [
+            "https://virgool.io/contact-us",
+            "https://virgool.io/terms",
+            "https://virgool.io/login"
+          ],
+          "observations": [
+            "virgool-login",
+            "virgool-terms",
+            "virgool-home"
+          ]
+        }
+      ]
+    }
+  ],
+  "network_evidence": [
+    {
+      "url": "https://parsun.com/",
+      "observed_at": "2026-10-11T06:08:53.326690+00:00",
+      "attempted_at": "2026-10-11T06:08:53.326690+00:00",
+      "status": 200,
+      "final_url": "https://parsun.com/",
+      "bytes": 31489,
+      "sha256": "23e3ff9b8dd48a33421c68249cc7fb7b19ead1e1ac7bb869d6de965ab71f515e",
+      "kind": "primary_corporate_page",
+      "summary": "The official Parsun site names AS31732, directly associating this company with the candidate ASN.",
+      "verified_extracts": [
+        "AS31732 Autonomous System"
+      ],
+      "extract_word_count": 3
+    },
+    {
+      "url": "https://parsun.com/about/",
+      "observed_at": "2026-10-11T06:08:53.327159+00:00",
+      "attempted_at": "2026-10-11T06:08:53.327159+00:00",
+      "status": 200,
+      "final_url": "https://parsun.com/about/",
+      "bytes": 16600,
+      "sha256": "924fc4a308ea42588f7ccd68f06e5678ace83ad1a50d98d89fe72a7d1af8c7b3",
+      "kind": "primary_corporate_page",
+      "summary": "The company describes itself as Australian; this page supplies no corporate ownership link to the Iranian anchors.",
+      "verified_extracts": [
+        "Parsun Network Solutions is an Australian technology company"
+      ],
+      "extract_word_count": 8
+    },
+    {
+      "url": "https://parsun.com/lir/",
+      "observed_at": "2026-10-11T06:08:53.327261+00:00",
+      "attempted_at": "2026-10-11T06:08:53.327261+00:00",
+      "status": 200,
+      "final_url": "https://parsun.com/lir/",
+      "bytes": 22071,
+      "sha256": "0f608571811d6c6f5734802371bcb4405cc81e19451836a4e00c76f6579376b7",
+      "kind": "primary_corporate_page",
+      "summary": "Parsun offers sponsoring-LIR administration to end users. A sponsoring or maintainer role does not establish ownership of its clients.",
+      "verified_extracts": [
+        "We coordinate Sponsoring LIR arrangements for eligible independent Internet number resources assigned to End Users."
+      ],
+      "extract_word_count": 15
+    },
+    {
+      "url": "https://mobinet.mn/about-us/20",
+      "observed_at": "2026-10-11T06:08:53.327325+00:00",
+      "attempted_at": "2026-10-11T06:08:53.327325+00:00",
+      "status": 200,
+      "final_url": "https://mobinet.mn/about-us/20",
+      "bytes": 58630,
+      "sha256": "4cee5423f5443f3b9f6826f6b0e9e4518269c737c8712a0585f55b96dabab67a",
+      "kind": "primary_corporate_page",
+      "summary": "Mobinet's current official about page frames its mission as the Mobicom group. The page does not link the organization to Iran's Mobinnet.",
+      "verified_extracts": [
+        "Бид, Мобиком групп нь"
+      ],
+      "extract_word_count": 4
+    },
+    {
+      "url": "https://mobinnet.ir/",
+      "observed_at": "2026-10-11T06:08:54.888850+00:00",
+      "attempted_at": "2026-10-11T06:08:54.888850+00:00",
+      "status": 500,
+      "bytes": 2622,
+      "sha256": "896b3047b1a4feed16705cef0b2ec29e00ba103f7afa114c2b697318511fbf49",
+      "error": "HTTP error",
+      "kind": "primary_corporate_page",
+      "summary": "The Iranian brand homepage is supplementary; authoritative Iranian anchor identity is established by the RIPE observations.",
+      "verified_extracts": []
+    },
+    {
+      "url": "https://rest.db.ripe.net/ripe/aut-num/AS12697.json",
+      "observed_at": "2026-10-11T06:08:55.216251+00:00",
+      "attempted_at": "2026-10-11T06:08:55.216251+00:00",
+      "status": 200,
+      "final_url": "https://rest.db.ripe.net/ripe/aut-num/AS12697.json",
+      "bytes": 3358,
+      "sha256": "004da0bcea5fd452de62ed383ef1cca33b23545f38cd4c2ac4ee0189fc215a1f",
+      "kind": "authoritative_registry_relationship",
+      "selected_attributes": [
+        {
+          "name": "aut-num",
+          "value": "AS12697"
+        },
+        {
+          "name": "as-name",
+          "value": "PARSUN-SINDAD-ANCHOR"
+        },
+        {
+          "name": "org",
+          "value": "ORG-TMSA6-RIPE"
+        },
+        {
+          "name": "mnt-by",
+          "value": "RIPE-NCC-END-MNT"
+        },
+        {
+          "name": "mnt-by",
+          "value": "Parsun-MNT"
+        },
+        {
+          "name": "sponsoring-org",
+          "value": "ORG-PNSP1-RIPE"
+        }
+      ],
+      "interpretation": "AS12697 registrant and sponsoring organization are separate fields. ORG-PNSP1-RIPE is the Parsun registrant explicitly linked in the same-day AS31732 RDAP response. This establishes sponsorship, not common ownership."
+    }
+  ],
+  "independent_registry_check": {
+    "url": "https://rest.db.ripe.net/ripe/aut-num/AS12697.json",
+    "observed_at": "2026-10-11T06:11:36.981708+00:00",
+    "sha256": "004da0bcea5fd452de62ed383ef1cca33b23545f38cd4c2ac4ee0189fc215a1f",
+    "selected_attributes": [
+      {
+        "name": "aut-num",
+        "value": "AS12697"
+      },
+      {
+        "name": "as-name",
+        "value": "PARSUN-SINDAD-ANCHOR"
+      },
+      {
+        "name": "org",
+        "value": "ORG-TMSA6-RIPE"
+      },
+      {
+        "name": "sponsoring-org",
+        "value": "ORG-PNSP1-RIPE"
+      }
+    ]
+  },
+  "provider_rechecks": {
+    "iranserver": [
+      {
+        "url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+        "observed_at": "2026-10-11T06:04:55.418951+00:00",
+        "final_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+        "status": 200,
+        "bytes": 1083032,
+        "sha256": "0ccb66671dc87ed9ccf1a3fce19adfdb993cbbe36cacd74bb6fe43d6d61bedac",
+        "inventory_links": [
+          "https://ips.f95.com/"
+        ]
+      },
+      {
+        "url": "https://ips.f95.com/",
+        "observed_at": "2026-10-11T06:04:56.287069+00:00",
+        "final_url": "https://ips.f95.com/ips.txt",
+        "status": 200,
+        "bytes": 302,
+        "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+        "public_ipv4_addresses": [
+          "147.160.138.19/32",
+          "185.121.169.29/32",
+          "45.134.88.74/32",
+          "118.91.186.70/32",
+          "168.119.4.72/32",
+          "94.182.97.44/32",
+          "94.182.97.45/32",
+          "94.182.97.46/32",
+          "5.182.45.23/32",
+          "5.182.45.37/32",
+          "185.116.162.19/32",
+          "87.98.249.55/32",
+          "91.247.174.1/32",
+          "185.213.167.3/32",
+          "185.213.167.4/32",
+          "185.213.164.249/32",
+          "185.213.164.248/32",
+          "185.50.38.203/32",
+          "185.50.38.204/32",
+          "5.182.45.24/32",
+          "185.255.89.43/32",
+          "140.235.129.59/32"
+        ]
+      },
+      {
+        "url": "https://ips.f95.com/ip.txt",
+        "observed_at": "2026-10-11T06:04:57.768846+00:00",
+        "final_url": "https://ips.f95.com/ips.txt",
+        "status": 200,
+        "bytes": 302,
+        "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+        "public_ipv4_addresses": [
+          "147.160.138.19/32",
+          "185.121.169.29/32",
+          "45.134.88.74/32",
+          "118.91.186.70/32",
+          "168.119.4.72/32",
+          "94.182.97.44/32",
+          "94.182.97.45/32",
+          "94.182.97.46/32",
+          "5.182.45.23/32",
+          "5.182.45.37/32",
+          "185.116.162.19/32",
+          "87.98.249.55/32",
+          "91.247.174.1/32",
+          "185.213.167.3/32",
+          "185.213.167.4/32",
+          "185.213.164.249/32",
+          "185.213.164.248/32",
+          "185.50.38.203/32",
+          "185.50.38.204/32",
+          "5.182.45.24/32",
+          "185.255.89.43/32",
+          "140.235.129.59/32"
+        ]
+      },
+      {
+        "url": "https://ips.f95.com/ips.txt",
+        "observed_at": "2026-10-11T06:04:58.303680+00:00",
+        "final_url": "https://ips.f95.com/ips.txt",
+        "status": 200,
+        "bytes": 302,
+        "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+        "public_ipv4_addresses": [
+          "147.160.138.19/32",
+          "185.121.169.29/32",
+          "45.134.88.74/32",
+          "118.91.186.70/32",
+          "168.119.4.72/32",
+          "94.182.97.44/32",
+          "94.182.97.45/32",
+          "94.182.97.46/32",
+          "5.182.45.23/32",
+          "5.182.45.37/32",
+          "185.116.162.19/32",
+          "87.98.249.55/32",
+          "91.247.174.1/32",
+          "185.213.167.3/32",
+          "185.213.167.4/32",
+          "185.213.164.249/32",
+          "185.213.164.248/32",
+          "185.50.38.203/32",
+          "185.50.38.204/32",
+          "5.182.45.24/32",
+          "185.255.89.43/32",
+          "140.235.129.59/32"
+        ]
+      }
+    ],
+    "derak": {
+      "inventory": {
+        "url": "https://api.derak.cloud/public/ipv4",
+        "observed_at": "2026-10-11T06:07:59.138501+00:00",
+        "attempted_at": "2026-10-11T06:07:59.138501+00:00",
+        "status": 200,
+        "final_url": "https://api.derak.cloud/public/ipv4",
+        "bytes": 323,
+        "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c",
+        "kind": "official_provider_inventory",
+        "entry_count": 19,
+        "public_entries_count": 18,
+        "invalid_or_nonpublic_entries": [
+          "192.168.204.48/28"
+        ],
+        "entire_inventory_valid": false
+      },
+      "documentation_url_note": "Previously reviewed source lineage; documentation was not fetched again in this run. Current inventory was fetched directly."
+    }
+  },
+  "source_lineage_note": "New service leads retain the pinned bootmortis release, MIT licensing and shared iran-community-domains lineage. Provider lead fingerprints retain Chocolate4U GPL-3.0 provenance in the source snapshots. Repeated releases and copied lists do not count as independent corroboration; public primary evidence supports admissions.",
+  "new_provider_lead_evidence": {
+    "provider:https://api.derak.cloud/public/ipv4": {
+      "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb": {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "provider-inventory:derakcloud",
+        "original_source_urls": [
+          "https://api.derak.cloud/public/ipv4",
+          "https://api.derak.cloud/public/ipv6"
+        ],
+        "path": "text/derakcloud.txt",
+        "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/derakcloud.txt",
+        "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+      }
+    },
+    "provider:https://ips.f95.com/ip.txt": {
+      "d8e550acbf546b81cb7c3c94ff9d5d203c544c2345fd255e3944395b475606f9": {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "provider-inventory:iranserver",
+        "original_source_urls": [
+          "https://ips.f95.com/ip.txt"
+        ],
+        "path": "text/iranserver.txt",
+        "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/iranserver.txt",
+        "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+      }
+    }
+  },
+  "review_outcomes": {
+    "new_service_hostnames": [
+      "raychat.io",
+      "goftino.com",
+      "www.goftino.com",
+      "my.goftino.com",
+      "porsline.ir",
+      "survey.porsline.ir",
+      "porsall.com",
+      "panel.porsall.com",
+      "anjammidam.com",
+      "www.anjammidam.com",
+      "karboom.io",
+      "careers.karboom.io",
+      "virgool.io"
+    ],
+    "counts": {
+      "accepted": 8,
+      "pending": 3,
+      "rejected": 5
+    },
+    "pending": {
+      "domain:parsfreelancer.com": "Both the candidate apex and a conventional www probe failed local public HTTP fetching at DNS resolution. No current official company/contact/legal evidence or official hostname link was obtained. This is not evidence of non-Iranian affiliation or permanent unavailability. Retain the candidate pending primary evidence.",
+      "asn:31732": "RIPE identifies Parsun Network Solutions PTY LTD; Parsun's official site describes it as Australian and explicitly names AS31732. The official site offers sponsoring-LIR and registry-administration services; the current AS12697 record lists Parsun as sponsoring organization while naming Tose Masiryabi Shabake Aria PJSC as registrant. Other linked Iranian anchor records identify distinct organizations. Sponsorship, shared maintainers and a Parsun name match do not establish ownership. Require a current primary corporate link to a qualifying Iranian operator before admitting the ASN.",
+      "provider:https://api.derak.cloud/public/ipv4": "The refreshed official IPv4 inventory contains 19 entries, including non-public 192.168.204.48/28. Keep it outside collection under the strict public-prefix parser; no partial inventory is admitted."
+    },
+    "rejected_asns": [
+      10179,
+      10183,
+      10192,
+      10204,
+      9484
+    ],
+    "previously_rejected_candidates_reopened_by_new_evidence_and_deferred": [
+      "asn:10022",
+      "asn:10039",
+      "asn:10040",
+      "asn:10043"
+    ]
+  },
+  "projection": {
+    "generated_at": "2026-10-11T06:13:37+00:00",
+    "mode": "live collection through the repository downloader",
+    "comparison": "Both policies use identical public source payloads and shared DNS observations. No source payloads were manually modified.",
+    "baseline_policy_sha512": "459234db57608cdebefeb0dbe6ed5c0a137e8df7222945d5c51527324d01b16962af42380eb29eb35d0999ea7baf96a6000e09d31dcac478d2bb56552a7bd886",
+    "candidate_policy_sha512": "41ff66c62eae2d5d998a8a085fdff8b036477c366ed75be7e1057c6d89d86a5927bc61adccfe0a5d2a063db1cb6beef7436313059b4e5f0195e48207e6127a7a",
+    "policy_hash_format": "SHA-512 of UTF-8 json.dumps(policy, sort_keys=True), matching the generated manifest.",
+    "changes": {
+      "ipv4": {
+        "before_prefixes": 1867,
+        "after_prefixes": 1872,
+        "added_ranges": [
+          "104.21.86.209/32",
+          "104.26.10.2/32",
+          "104.26.11.2/32",
+          "172.67.70.180/32",
+          "172.67.136.222/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "5",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 594,
+        "after_prefixes": 599,
+        "added_ranges": [
+          "2606:4700:20::681a:a02/128",
+          "2606:4700:20::681a:b02/128",
+          "2606:4700:20::ac43:46b4/128",
+          "2606:4700:3031::ac43:88de/128",
+          "2606:4700:3037::6815:56d1/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "5",
+        "removed_addresses": "0"
+      }
+    },
+    "versus_last_publication": {
+      "ipv4": {
+        "before_prefixes": 1865,
+        "after_prefixes": 1872,
+        "added_ranges": [
+          "104.21.86.209/32",
+          "104.26.10.2/32",
+          "104.26.11.2/32",
+          "172.67.70.180/32",
+          "172.67.136.222/32",
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "7",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 592,
+        "after_prefixes": 599,
+        "added_ranges": [
+          "2606:4700:20::681a:a02/128",
+          "2606:4700:20::681a:b02/128",
+          "2606:4700:20::ac43:46b4/128",
+          "2606:4700:3031::ac43:88de/128",
+          "2606:4700:3037::6815:56d1/128",
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "7",
+        "removed_addresses": "0"
+      }
+    },
+    "last_publication_difference_note": "The extra two IPv4 and two IPv6 addresses versus publication are current shared Google DNS answers for already accepted limoo.host and taskulu.com. They are present in the fresh baseline and are not caused by this policy change.",
+    "source_observations": {
+      "dns_snapshot": {
+        "bytes": 119444,
+        "sha256": "7508195247ff7bf029b5a5f0b0a3a9333a0e3af71c9d35ab0bb9199e44ad828e"
+      },
+      "ipdeny_ipv4": {
+        "bytes": 30914,
+        "sha256": "8ff556b1084ed5901322ae7a72e1d620090726e5f85b5deaa4112c54c704685c"
+      },
+      "ipdeny_ipv6": {
+        "bytes": 8573,
+        "sha256": "74945f62cb5c1d1667349d589e3626f1936a23c0b27953165220e4ad32ad0c95"
+      },
+      "iptoasn_ipv4": {
+        "bytes": 7000517,
+        "sha256": "e632c4da7d4de99d178e280d4e8f1a0539f80901737f48ecae4896be09da2fbf"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2017690,
+        "sha256": "309557e3f6368bf9af4db7d29ed5d0fdc821bdcf008a8c6a3c92479c690284c1"
+      },
+      "nro_delegated": {
+        "bytes": 56955674,
+        "sha256": "cb151988466283220d13f4b9e3c10999f1645fb310d3511c6d26ce06702340f8"
+      },
+      "provider_arvancloud": {
+        "bytes": 220,
+        "sha256": "7357e3c11af8073d5a8c147c704e2c5a816a6c2cc4046918b00e5986e98e9967"
+      },
+      "provider_derakcloud_ipv6": {
+        "bytes": 207,
+        "sha256": "0ff567eb454c4d41976d6ae642782acaf00c2e0d17cd39a7ba18fbc433b16b25"
+      },
+      "provider_iranserver": {
+        "bytes": 302,
+        "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871"
+      },
+      "provider_mizbancloud": {
+        "bytes": 132,
+        "sha256": "53263ccf6dc9c95795751f9792a6a5a826ddb77b80433bddd646f7d0ced6c3f4"
+      },
+      "provider_parspack": {
+        "bytes": 828,
+        "sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3"
+      }
+    },
+    "resolver_disagreements": [
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.69.22",
+            "172.67.202.213"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "limoo.host",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3030::6815:4516",
+            "2606:4700:3030::ac43:cad5"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "limoo.host",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.46.192",
+            "172.67.141.145"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3030::ac43:8d91",
+            "2606:4700:3033::6815:2ec0"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.86.209",
+            "172.67.136.222"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3031::ac43:88de",
+            "2606:4700:3037::6815:56d1"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 28
+      }
+    ]
+  },
+  "validation": {
+    "unit_tests_passed": 59,
+    "compileall": "passed",
+    "catalogue_and_decisions": "passed",
+    "oldest_review_allocation": "14/16 pool candidates; 14/22 including derived hostnames",
+    "normal_live_projection": "passed",
+    "guarded_generation_against_last_publication": "passed",
+    "guarded_manifest_and_membership_equal_projection": true,
+    "v2_complete_page_validation": "passed",
+    "all_admitted_source_ranges_contained": true,
+    "all_service_answers_contained": true,
+    "non_public_provider_prefix_rejection": "passed",
+    "reviewed_asns_not_selected": [
+      10179,
+      10183,
+      10192,
+      10204,
+      31732,
+      9484
+    ],
+    "explain_checks": [
+      {
+        "address": "104.21.86.209",
+        "services": [
+          "www.anjammidam.com"
+        ],
+        "layers": [
+          "service_dns_ipv4"
+        ]
+      },
+      {
+        "address": "104.26.10.2",
+        "services": [
+          "virgool.io"
+        ],
+        "layers": [
+          "service_dns_ipv4"
+        ]
+      },
+      {
+        "address": "104.26.11.2",
+        "services": [
+          "virgool.io"
+        ],
+        "layers": [
+          "service_dns_ipv4"
+        ]
+      },
+      {
+        "address": "172.67.70.180",
+        "services": [
+          "virgool.io"
+        ],
+        "layers": [
+          "service_dns_ipv4"
+        ]
+      },
+      {
+        "address": "172.67.136.222",
+        "services": [
+          "www.anjammidam.com"
+        ],
+        "layers": [
+          "service_dns_ipv4"
+        ]
+      },
+      {
+        "address": "2606:4700:20::681a:a02",
+        "services": [
+          "virgool.io"
+        ],
+        "layers": [
+          "service_dns_ipv6"
+        ]
+      },
+      {
+        "address": "2606:4700:20::681a:b02",
+        "services": [
+          "virgool.io"
+        ],
+        "layers": [
+          "service_dns_ipv6"
+        ]
+      },
+      {
+        "address": "2606:4700:20::ac43:46b4",
+        "services": [
+          "virgool.io"
+        ],
+        "layers": [
+          "service_dns_ipv6"
+        ]
+      },
+      {
+        "address": "2606:4700:3031::ac43:88de",
+        "services": [
+          "www.anjammidam.com"
+        ],
+        "layers": [
+          "service_dns_ipv6"
+        ]
+      },
+      {
+        "address": "2606:4700:3037::6815:56d1",
+        "services": [
+          "www.anjammidam.com"
+        ],
+        "layers": [
+          "service_dns_ipv6"
+        ]
+      }
+    ],
+    "dns_query_status": {
+      "success": 224
+    },
+    "new_dns_queries": 52,
+    "unresolved_services": [],
+    "known_source_completeness_percent": 100
+  },
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null
+}

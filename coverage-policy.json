@@ -1565,6 +1565,498 @@
           }
         ]
       }
+    },
+    {
+      "domain": "raychat.io",
+      "evidence": "https://raychat.io/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Raychat’s official contact page lists offices in Tabriz and Tehran; its service terms are governed by Iranian law. Official apex website; its public dashboard login link remains on raychat.io. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "raychat.io",
+          "evidence": [
+            "https://raychat.io/contact",
+            "https://raychat.io/license",
+            "https://raychat.io/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Raychat’s official contact page lists offices in Tabriz and Tehran; its service terms are governed by Iranian law. Official apex website; its public dashboard login link remains on raychat.io. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:raychat.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "e29ba9c8638423a63d813d90021e3877d481c3a8b7dd9bb11d667d08d14b8469"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "raychat.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "goftino.com",
+      "evidence": "https://www.goftino.com/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. The candidate apex redirects to the official www.goftino.com website. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "goftino.com",
+          "evidence": [
+            "https://www.goftino.com/contact",
+            "https://www.goftino.com/rules",
+            "https://goftino.com/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. The candidate apex redirects to the official www.goftino.com website. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:goftino.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "ce7ed18b63c0ccecd76e09baae8b6c8c4e307c9ccca8461e336f1cc032274164"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "goftino.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.goftino.com",
+      "evidence": "https://www.goftino.com/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. Verified final hostname of the apex redirect and host of official contact and terms pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.goftino.com",
+          "evidence": [
+            "https://www.goftino.com/contact",
+            "https://www.goftino.com/rules",
+            "https://goftino.com/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. Verified final hostname of the apex redirect and host of official contact and terms pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:goftino.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "ce7ed18b63c0ccecd76e09baae8b6c8c4e307c9ccca8461e336f1cc032274164"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "goftino.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "my.goftino.com",
+      "evidence": "https://www.goftino.com/contact",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. The official home page directly links my.goftino.com for login. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "my.goftino.com",
+          "evidence": [
+            "https://www.goftino.com/contact",
+            "https://www.goftino.com/rules",
+            "https://goftino.com/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Goftino’s official contact page lists its Tehran office; its official terms identify the service and apply Iranian law. The official home page directly links my.goftino.com for login. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:goftino.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "ce7ed18b63c0ccecd76e09baae8b6c8c4e307c9ccca8461e336f1cc032274164"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "goftino.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "porsline.ir",
+      "evidence": "https://porsline.ir/terms-of-use",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Porsline’s official terms identify the service owner as System Gostar Chista, company registration 476949 in Tehran, and place service use under Iranian law. Official apex website carrying the terms and product pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "porsline.ir",
+          "evidence": [
+            "https://porsline.ir/terms-of-use",
+            "https://porsline.ir/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Porsline’s official terms identify the service owner as System Gostar Chista, company registration 476949 in Tehran, and place service use under Iranian law. Official apex website carrying the terms and product pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:porsline.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "55b826a5e925248356617bf1b8350bd7077183a660f444d4c20c71b29f592ffd"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "porsline.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "survey.porsline.ir",
+      "evidence": "https://porsline.ir/terms-of-use",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Porsline’s official terms identify the service owner as System Gostar Chista, company registration 476949 in Tehran, and place service use under Iranian law. The official home page directly links its contact survey and jobs form on survey.porsline.ir. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "survey.porsline.ir",
+          "evidence": [
+            "https://porsline.ir/terms-of-use",
+            "https://porsline.ir/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Porsline’s official terms identify the service owner as System Gostar Chista, company registration 476949 in Tehran, and place service use under Iranian law. The official home page directly links its contact survey and jobs form on survey.porsline.ir. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:porsline.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "55b826a5e925248356617bf1b8350bd7077183a660f444d4c20c71b29f592ffd"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "porsline.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "porsall.com",
+      "evidence": "https://porsall.com/contact-2/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Porsall’s official about page identifies it as a service of Sarafraz Rayan Ghasedak; the official contact page locates that company in Kashan, Isfahan province. Official apex website carrying company and contact pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "porsall.com",
+          "evidence": [
+            "https://porsall.com/contact-2/",
+            "https://porsall.com/about/",
+            "https://porsall.com/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Porsall’s official about page identifies it as a service of Sarafraz Rayan Ghasedak; the official contact page locates that company in Kashan, Isfahan province. Official apex website carrying company and contact pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:porsall.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "09867f383d8299bc9debffae9cb34bbcfa87694edb53c6446acebcb2c6bcd471"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "porsall.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "panel.porsall.com",
+      "evidence": "https://porsall.com/contact-2/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Porsall’s official about page identifies it as a service of Sarafraz Rayan Ghasedak; the official contact page locates that company in Kashan, Isfahan province. The official home page directly links panel.porsall.com for login and signup. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "panel.porsall.com",
+          "evidence": [
+            "https://porsall.com/contact-2/",
+            "https://porsall.com/about/",
+            "https://porsall.com/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Porsall’s official about page identifies it as a service of Sarafraz Rayan Ghasedak; the official contact page locates that company in Kashan, Isfahan province. The official home page directly links panel.porsall.com for login and signup. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:porsall.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "09867f383d8299bc9debffae9cb34bbcfa87694edb53c6446acebcb2c6bcd471"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "porsall.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "anjammidam.com",
+      "evidence": "https://anjammidam.com/pages/about-anjammidam",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Anjammidam’s official about page identifies an Iranian team serving Iranian specialists and businesses; its terms state that the site operates under Iranian law. Official apex website carrying the about and terms pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "anjammidam.com",
+          "evidence": [
+            "https://anjammidam.com/pages/about-anjammidam",
+            "https://anjammidam.com/support/terms-of-service",
+            "https://anjammidam.com/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Anjammidam’s official about page identifies an Iranian team serving Iranian specialists and businesses; its terms state that the site operates under Iranian law. Official apex website carrying the about and terms pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:anjammidam.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "39999b01626d833d8291e65c6b8d8a5138ac101c82be0e6f34ea040199e869c5"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "anjammidam.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.anjammidam.com",
+      "evidence": "https://anjammidam.com/pages/about-anjammidam",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Anjammidam’s official about page identifies an Iranian team serving Iranian specialists and businesses; its terms state that the site operates under Iranian law. The official about page directly links www.anjammidam.com; a request to that alias redirects to anjammidam.com. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.anjammidam.com",
+          "evidence": [
+            "https://anjammidam.com/pages/about-anjammidam",
+            "https://anjammidam.com/support/terms-of-service"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Anjammidam’s official about page identifies an Iranian team serving Iranian specialists and businesses; its terms state that the site operates under Iranian law. The official about page directly links www.anjammidam.com; a request to that alias redirects to anjammidam.com. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:anjammidam.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "39999b01626d833d8291e65c6b8d8a5138ac101c82be0e6f34ea040199e869c5"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "anjammidam.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "karboom.io",
+      "evidence": "https://karboom.io/contact-us",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Karboom’s official contact page identifies Aria Sabin Human Capital Development as its operating company and a Ministry of Labour electronic-recruitment licence; its terms explicitly apply Iranian law. Official apex service website carrying company and contact pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "karboom.io",
+          "evidence": [
+            "https://karboom.io/contact-us",
+            "https://karboom.io/terms-and-conditions",
+            "https://karboom.io/"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Karboom’s official contact page identifies Aria Sabin Human Capital Development as its operating company and a Ministry of Labour electronic-recruitment licence; its terms explicitly apply Iranian law. Official apex service website carrying company and contact pages. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:karboom.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "6741239a668df52bf2710c68a8067a4dcee1364f62fd21457022f7f902e667ce"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "karboom.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "careers.karboom.io",
+      "evidence": "https://karboom.io/contact-us",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Karboom’s official contact page identifies Aria Sabin Human Capital Development as its operating company and a Ministry of Labour electronic-recruitment licence; its terms explicitly apply Iranian law. The official home page links about-us; that URL redirects to the company’s career site at careers.karboom.io. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "careers.karboom.io",
+          "evidence": [
+            "https://karboom.io/contact-us",
+            "https://karboom.io/terms-and-conditions",
+            "https://karboom.io/",
+            "https://karboom.io/about-us"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Karboom’s official contact page identifies Aria Sabin Human Capital Development as its operating company and a Ministry of Labour electronic-recruitment licence; its terms explicitly apply Iranian law. The official home page links about-us; that URL redirects to the company’s career site at careers.karboom.io. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:karboom.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "6741239a668df52bf2710c68a8067a4dcee1364f62fd21457022f7f902e667ce"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "karboom.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "virgool.io",
+      "evidence": "https://virgool.io/contact-us",
+      "state": "accepted",
+      "reviewed_on": "2026-10-11",
+      "review_reason": "Virgool’s official contact page identifies Mohtava Negar Parsi Khalagh and an Isfahan office; its official login-linked terms place Virgool activities under Iranian law. Official apex website; the login, terms and contact pages are on the same exact hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "virgool.io",
+          "evidence": [
+            "https://virgool.io/contact-us",
+            "https://virgool.io/terms",
+            "https://virgool.io/login"
+          ],
+          "reviewed_on": "2026-10-11",
+          "reason": "Virgool’s official contact page identifies Mohtava Negar Parsi Khalagh and an Isfahan office; its official login-linked terms place Virgool activities under Iranian law. Official apex website; the login, terms and contact pages are on the same exact hostname. Collect exact public DNS answers for this hostname; this does not admit other subdomains or hosting ASNs."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:virgool.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "e378032057f33ca7b5bdcb6f5e63e380c1b09195f7b017fe8f5056fb05461888"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "virgool.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610050227/domains.txt",
+            "version": "202610050227"
+          }
+        ]
+      }
     }
   ]
 }
