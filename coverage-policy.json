@@ -2057,6 +2057,426 @@
           }
         ]
       }
+    },
+    {
+      "domain": "quera.org",
+      "evidence": "https://quera.org/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "Quera identifies its service as the community of Iranian developers, and its official contact page gives a Tehran office. Track the exact apex hostname used by its public website and registration pages. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "quera.org",
+          "evidence": [
+            "https://quera.org/",
+            "https://quera.org/contact"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "Quera identifies its service as the community of Iranian developers, and its official contact page gives a Tehran office. Track the exact apex hostname used by its public website and registration pages. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:quera.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "021871b4e1ff852b56026ae36632dc94c487bf76950eb15817490af52baa126c"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "quera.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "faradars.org",
+      "evidence": "https://faradars.org/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official homepage identifies Faradars as an Iranian online education platform and names Kalan Danesh Sahand as its rights holder. Track its exact apex hostname. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "faradars.org",
+          "evidence": [
+            "https://faradars.org/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official homepage identifies Faradars as an Iranian online education platform and names Kalan Danesh Sahand as its rights holder. Track its exact apex hostname. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:faradars.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "0a0cfffce527f07c7eaa168abffe52f8f878db75f84903b48e51f642174603a5"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "faradars.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "yektanet.com",
+      "evidence": "https://yektanet.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "yektanet.com",
+          "evidence": [
+            "https://yektanet.com/",
+            "https://www.yektanet.com/",
+            "https://www.yektanet.com/contact/",
+            "https://accounts.yektanet.com/login/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:yektanet.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "75523579488839c9ee6a11b3a21b7c0c36eb235806434c42e6f42a50f8fb998f"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "yektanet.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.yektanet.com",
+      "evidence": "https://yektanet.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.yektanet.com",
+          "evidence": [
+            "https://yektanet.com/",
+            "https://www.yektanet.com/",
+            "https://www.yektanet.com/contact/",
+            "https://accounts.yektanet.com/login/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:yektanet.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "75523579488839c9ee6a11b3a21b7c0c36eb235806434c42e6f42a50f8fb998f"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "yektanet.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "accounts.yektanet.com",
+      "evidence": "https://yektanet.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "accounts.yektanet.com",
+          "evidence": [
+            "https://yektanet.com/",
+            "https://www.yektanet.com/",
+            "https://www.yektanet.com/contact/",
+            "https://accounts.yektanet.com/login/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:yektanet.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "75523579488839c9ee6a11b3a21b7c0c36eb235806434c42e6f42a50f8fb998f"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "yektanet.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "zarinpal.com",
+      "evidence": "https://zarinpal.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "zarinpal.com",
+          "evidence": [
+            "https://zarinpal.com/",
+            "https://www.zarinpal.com/terms",
+            "https://www.zarinpal.com/aboutus",
+            "https://next.zarinpal.com/beta/panel"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:zarinpal.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "96f46dc484b30537f922da52f903ba8e0be864995707a7a8a08800be145eff16"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "zarinpal.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.zarinpal.com",
+      "evidence": "https://zarinpal.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.zarinpal.com",
+          "evidence": [
+            "https://zarinpal.com/",
+            "https://www.zarinpal.com/terms",
+            "https://www.zarinpal.com/aboutus",
+            "https://next.zarinpal.com/beta/panel"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:zarinpal.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "96f46dc484b30537f922da52f903ba8e0be864995707a7a8a08800be145eff16"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "zarinpal.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "next.zarinpal.com",
+      "evidence": "https://zarinpal.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "next.zarinpal.com",
+          "evidence": [
+            "https://zarinpal.com/",
+            "https://www.zarinpal.com/terms",
+            "https://www.zarinpal.com/aboutus",
+            "https://next.zarinpal.com/beta/panel"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:zarinpal.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "96f46dc484b30537f922da52f903ba8e0be864995707a7a8a08800be145eff16"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "zarinpal.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "childf.com",
+      "evidence": "https://childf.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "childf.com",
+          "evidence": [
+            "https://childf.com/",
+            "https://childf.com/contact-us/default.aspx",
+            "https://www.childf.com/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:childf.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "2e025d7680e861efc7fe82eeee8511293752ba63574105639d3e60f9b006f782"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "childf.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.childf.com",
+      "evidence": "https://childf.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.childf.com",
+          "evidence": [
+            "https://childf.com/",
+            "https://childf.com/contact-us/default.aspx",
+            "https://www.childf.com/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:childf.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "2e025d7680e861efc7fe82eeee8511293752ba63574105639d3e60f9b006f782"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "childf.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "manebartar.com",
+      "evidence": "https://manebartar.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-19",
+      "review_reason": "The official Manebartar website identifies its training and career-coaching service and gives Tehran as its business location. Its about page confirms the same service identity. Track the exact apex hostname. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "manebartar.com",
+          "evidence": [
+            "https://manebartar.com/",
+            "https://manebartar.com/about-us/"
+          ],
+          "reviewed_on": "2026-10-19",
+          "reason": "The official Manebartar website identifies its training and career-coaching service and gives Tehran as its business location. Its about page confirms the same service identity. Track the exact apex hostname. Collect exact public DNS addresses; this relationship admits neither a wildcard nor a hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:manebartar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "62eec3623373bff3029237bd4f01b526b0b7513a1715a934db88683aaa75fed8"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "manebartar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
     }
   ]
 }

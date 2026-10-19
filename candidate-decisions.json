@@ -162,34 +162,38 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reason": "The refreshed official IPv4 inventory contains 19 entries, including non-public 192.168.204.48/28. Keep it outside collection under the strict public-prefix parser; no partial inventory is admitted.",
-      "reviewed_on": "2026-10-11",
+      "reason": "The refreshed official IPv4 inventory still has 19 entries including private 192.168.204.48/28. Keep the entire inventory outside collection under strict public-prefix validation; no partial admission.",
+      "reviewed_on": "2026-10-19",
       "evidence_fingerprints": [
         "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
         "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
         "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
-        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5"
+        "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2"
       ],
       "evidence": [
-        "https://api.derak.cloud/public/ipv4",
-        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/"
+        "https://api.derak.cloud/public/ipv4"
       ]
     },
     "provider:https://ips.f95.com/ip.txt": {
       "state": "accepted",
-      "reason": "IranServer's official CDN documentation still links ips.f95.com. Its root and legacy /ip.txt path redirect to the accepted /ips.txt inventory, whose 22 public IPv4 host addresses are unchanged. The new community-release fingerprint repeats this same provider inventory; retain acceptance of the existing canonical source without adding hosting ASNs.",
-      "reviewed_on": "2026-10-11",
+      "reason": "IranServer official documentation links ips.f95.com; both the root and legacy ip.txt redirect to the already accepted canonical ips.txt. The same 22 public IPv4 host addresses and bytes remain unchanged. Reconfirm this discovery lead without adding a second inventory or changing collection policy.",
+      "reviewed_on": "2026-10-19",
       "evidence_fingerprints": [
+        "585fdc98650c8b528612cb352698bba6da49dae5eb97449a82c1a01570c4bb66",
         "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
         "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
         "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
+        "ab172b742aa634a12718df48935e811e2ac891ec5d5cbc3d2498c71a0d491d5d",
         "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08",
         "d8e550acbf546b81cb7c3c94ff9d5d203c544c2345fd255e3944395b475606f9"
       ],
       "evidence": [
         "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
         "https://ips.f95.com/",
+        "https://ips.f95.com/ip.txt",
         "https://ips.f95.com/ips.txt"
       ]
     },
@@ -981,6 +985,236 @@
         "https://rdap.db.ripe.net/autnum/61250",
         "https://rdap.db.ripe.net/autnum/210405",
         "https://mobinet.mn/about-us/20"
+      ]
+    },
+    "domain:quera.org": {
+      "state": "accepted",
+      "reason": "Quera identifies its service as the community of Iranian developers, and its official contact page gives a Tehran office. Track the exact apex hostname used by its public website and registration pages.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "021871b4e1ff852b56026ae36632dc94c487bf76950eb15817490af52baa126c"
+      ],
+      "evidence": [
+        "https://quera.org/",
+        "https://quera.org/contact"
+      ]
+    },
+    "domain:faradars.org": {
+      "state": "accepted",
+      "reason": "The official homepage identifies Faradars as an Iranian online education platform and names Kalan Danesh Sahand as its rights holder. Track its exact apex hostname.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "0a0cfffce527f07c7eaa168abffe52f8f878db75f84903b48e51f642174603a5"
+      ],
+      "evidence": [
+        "https://faradars.org/"
+      ]
+    },
+    "domain:yektanet.com": {
+      "state": "accepted",
+      "reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "75523579488839c9ee6a11b3a21b7c0c36eb235806434c42e6f42a50f8fb998f"
+      ],
+      "evidence": [
+        "https://yektanet.com/",
+        "https://www.yektanet.com/",
+        "https://www.yektanet.com/contact/",
+        "https://accounts.yektanet.com/login/"
+      ]
+    },
+    "domain:zarinpal.com": {
+      "state": "accepted",
+      "reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "96f46dc484b30537f922da52f903ba8e0be864995707a7a8a08800be145eff16"
+      ],
+      "evidence": [
+        "https://zarinpal.com/",
+        "https://www.zarinpal.com/terms",
+        "https://www.zarinpal.com/aboutus",
+        "https://next.zarinpal.com/beta/panel"
+      ]
+    },
+    "domain:childf.com": {
+      "state": "accepted",
+      "reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "2e025d7680e861efc7fe82eeee8511293752ba63574105639d3e60f9b006f782"
+      ],
+      "evidence": [
+        "https://childf.com/",
+        "https://childf.com/contact-us/default.aspx",
+        "https://www.childf.com/"
+      ]
+    },
+    "domain:manebartar.com": {
+      "state": "accepted",
+      "reason": "The official Manebartar website identifies its training and career-coaching service and gives Tehran as its business location. Its about page confirms the same service identity. Track the exact apex hostname.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "62eec3623373bff3029237bd4f01b526b0b7513a1715a934db88683aaa75fed8"
+      ],
+      "evidence": [
+        "https://manebartar.com/",
+        "https://manebartar.com/about-us/"
+      ]
+    },
+    "domain:roozesefr.com": {
+      "state": "pending",
+      "reason": "The apex and www HTTPS probes both failed certificate validation because the certificate has expired. No current primary service-affiliation evidence was retrieved. Keep the lead pending; do not infer permanent unavailability or a lack of Iranian affiliation.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "6bb7889110365dc35a2058b880b9f3b414bf1ad338ade25fc1c6afbcc06a9164"
+      ],
+      "evidence": [
+        "https://roozesefr.com/",
+        "https://www.roozesefr.com/"
+      ]
+    },
+    "domain:gitinegar.com": {
+      "state": "pending",
+      "reason": "The apex and www probes both failed local DNS resolution. No current primary service-affiliation evidence was retrieved. Keep the lead pending; this is not proof of permanent unavailability or non-Iranian status.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "5cc9e2ae03ebd29d61519e4d41e70efd8fbe484dd0d9ffc147f8caa6c3ffe3c2"
+      ],
+      "evidence": [
+        "https://gitinegar.com/",
+        "https://www.gitinegar.com/"
+      ]
+    },
+    "asn:151062": {
+      "state": "rejected",
+      "reason": "Reject the supplied fuzzy-name assertion: APNIC identifies Matin Net (AF); the Iranian anchor is SINA ATINET Company (Ltd). The supplied Matinnet/Atinet token similarity does not establish affiliation. This rejects these assertions only; new independently supported evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "7fc8d907670374a23ab4b9747aa7b9bad7e4e1f0cb54007deab1f9e545a1dfe4",
+        "917f501c4dd1f86cee2751cbc93ae6c84a801df5e3971463f5512a837e19a0f8"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/151062",
+        "https://rdap.db.ripe.net/autnum/62250"
+      ]
+    },
+    "asn:153322": {
+      "state": "rejected",
+      "reason": "Reject the supplied name-only assertions: APNIC identifies Persian Cable TV Network (PH), while the Iranian anchors identify distinct registrants including Parsian Bank, Parsian Electronic Commerce, Persia System Kashan and Parsian technology/telecommunications companies. The Persian/Parsian/Persia word matches do not establish common ownership. This rejects these assertions only, not any future independently supported relationship.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "29dc91d1afe2270382790e76f14a82692f37b5967e7f99a56754a3f8c07d792b",
+        "3b86355997b8b1f64293d78a447090916b32fb64df504b27b6acdca82d9ddac4",
+        "3ee00465f8fc18b3116465e8d8e1c2e2b904e811d9b081cbaa3dc0b58315e469",
+        "4333799f1e47a0399c52ebca828030014a9b1682e80423e7ee00c9d958551dea",
+        "4483fdb8757d2b8a86c435df59164edd20c6a5f85e56cb515fa8826dba3786d5",
+        "59cb9fee04f989ef3b2e84abcc222b7f5e7cdc37f1217f6b6835fd1595bb4d0d",
+        "5b848ee13788d2ac94dd6f41cb32aaa5065e0b006a3118bc3f87170a398b9777",
+        "63fbfb235284007c99b5ae98d9d19a83ea021cabbf2ae069ab873917eb6489ed",
+        "7d5f9494fdc118bcb27c319f1f7102a989149b62687b608f7ec06410b62438b0",
+        "8e4389ed15ddaba8aae67a1edc730fb9092ec5283c626a645b62b0414c86eb6a",
+        "8e98e29485aa2ec9e9aae94a5371371b3c26650900782e10a1502e35d88ba3b5",
+        "9a43171f45605010698c81cf66eee99d4965f979ac4480dc810a2fc35d6bd697",
+        "9d99b992504bbc88c56305a62d2dd3d2d265318a9e4bdc22d529aa5ac81914ba",
+        "a621f7d7945963d3547700e50e13402d711815f17170ea4f7dc67ae0a596a6d7",
+        "be9f70476d3b45b8c84e3a776a40a0c3becc2ca87f3a124546748dd1bec3c726",
+        "d45c71aa6d87e23f2d8f9ed76af450abe8d285c5c3e7a47b4e2aba1ffdadc61f",
+        "db7312a1d4e1a3dbe7552b24accda32d25d7b808a4f197c6db224a454c9c5782",
+        "f5132560d978d9301da7c9d4b4f8a80eb4e513e7a58a796b2a54c06359dce551",
+        "fe110671d5e6891edb6cc75120f2956c9b8b7fdcd5674bf402e6a01454fce4a5",
+        "fef72aaafc4f07e559f01588b0c261d28bfd0bc4a4aca4689a9b31be791eae05"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/153322",
+        "https://rdap.db.ripe.net/autnum/42043",
+        "https://rdap.db.ripe.net/autnum/44400",
+        "https://rdap.db.ripe.net/autnum/51280",
+        "https://rdap.db.ripe.net/autnum/52070",
+        "https://rdap.db.ripe.net/autnum/56703",
+        "https://rdap.db.ripe.net/autnum/57457",
+        "https://rdap.db.ripe.net/autnum/59882",
+        "https://rdap.db.ripe.net/autnum/59884",
+        "https://rdap.db.ripe.net/autnum/200436",
+        "https://rdap.db.ripe.net/autnum/214399"
+      ]
+    },
+    "asn:201406": {
+      "state": "rejected",
+      "reason": "Reject the supplied name-only assertions: RIPE identifies Mobinet Bulgaria Ltd.; current Iranian anchor records identify Mobin Net Communication Company, Amirkabir University of Technology, Ayandeh Bank and Vira Cloud DataCenter. Similar Mobinet/Mobinnet labels do not establish affiliation. This rejects these assertions only; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "07f4365959e375d97d9545b4c0b8b799080094d1abf0cca8a5c315099e345b33",
+        "81a2c0aae3519a8f28b685c66fd259ad9519f02ce48763db6dc2eab0a1490608",
+        "86e3066e6f2b2ec22606d01ea69a36532a6aa53d308b680cc7ededc2d6b005b9",
+        "88a9a0229c16df723ec2bf9b3c9b5f2fc01f58fdde9c612cc849bd97777fa222",
+        "8df351698ac987655ed903199bd140a3a791fa02ba8cf4e73b18a9fd17502471",
+        "be509c52d5de05753ccdd063de297aa54fcebb71537aacb905b0e3d8f6f6854b",
+        "e87b6d4598e2f1e2794f25c8b7d95e460ebb5889ad27095fa77fbd699400f83d"
+      ],
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/201406",
+        "https://rdap.db.ripe.net/autnum/47330",
+        "https://rdap.db.ripe.net/autnum/49792",
+        "https://rdap.db.ripe.net/autnum/50810",
+        "https://rdap.db.ripe.net/autnum/61250",
+        "https://rdap.db.ripe.net/autnum/210405"
+      ]
+    },
+    "asn:200222": {
+      "state": "pending",
+      "reason": "RIPE identifies Sama Tech s.r.o. for AS200222. The supplied Iranian anchors include Rayanesh Pardis Saman (SamanTech), Saman Bank, payment companies and other Samaneh companies. The closer Sama Tech/SamanTech branding warrants follow-up, but the current records establish distinct registrants and supply no verified common ownership or official affiliation. Keep pending until a primary ownership or affiliation source connects them; admit no ASN.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "056795665bc4106b49260d99c439570657f6598c28ada387bfb5a3b741e6bb74",
+        "20a29b9d7f2c1d0ba4f9404b08aa827ab767f02f4a0ebc146cf0ad2110788742",
+        "2d90a01e7aea42787933588a99f959bfe468efe1669eb2928dfd5150b6cf9597",
+        "42e4a10766935c927eb25a9d6eb2a5c858ff794722a6e1543a50973faa1d73ff",
+        "4eeb73e058262e3974f8fa87623beb50f4f4c7f81c84f409e023f2957a5eb7eb",
+        "59881c9858693a7c311c7f38d4637397a0b7eafda8d73d8a8773b43d766308c6",
+        "82fd4a89608d43332191aa3c6211d98ea07d73b93099b3bba8b1467b4d1ffa15",
+        "8c6275f764901e2b150ded697eda758bc35fa8929317316702a49a40e2b8c674",
+        "8e0cd269f038f9fce23c758b85857436f5ed2ee19e54f275bd1e73655a61339b",
+        "8fa6422aa3339dc538e1f7607749ee3955731a6506d696801148a6a77913b079",
+        "90b3b818c7a56198e015272a04cc5ea0e317d34c9956e24f130105a144af2fe7",
+        "9173fdb7930e91e672444d8586ad01ba8785555e5182152f1ef8f92420e2d59a",
+        "927207564d8c984c4b4092151b6ce94e196b22f155aab9eda64f021cb9f33464",
+        "939a95eed7f35d23a4d8ee421c40b0f5218167a1e1f14f3715d5f47cdc8b0e4f",
+        "9b0014f510e9080dbfa52e94a146d3218461cd9709e4e58d7f91dd7d8a357589",
+        "9c1e4e871bbf89df1a85fb22dffa204e0c2bf8749af59017875353a19cf220cc",
+        "a9bb84939d8f29209769325f1173a48f554d4103e9b70e6f2a63d024124c20e8",
+        "ae2fbd5fde99ff644b86e2ceb6826661d3be10b34cb54851ae247dce28fe841d",
+        "bec36f8d8f11a64a3cab30644e3b0284368098faa15648a4fbf1b5f0a12198fb",
+        "c4f0cb0183c4c91484a3db24a75acc84414f6acb3c06a51cfa68c1f903ae365d",
+        "cef3ad581b1e3a4eb28532da34c70959afe1ea4bc89154d92f98356182092da4",
+        "d362392f5cbd123e2314947a49b499971b83a02a44311c11f0802471e1e8d993",
+        "de073eb9d6c520ade085f010ebd3bae98ca46d6dd43b51ce10d00b0aa64ec893",
+        "eade57cede43927578cf18117bf9a9e9bc583dca541dd71ca96273777fe7e669",
+        "eb1e605a074ba7040768a6821f84bd5bc8a343d05798c971fcfad578d922ee81",
+        "eeaba0d96f65fc9eaa0f21c25574438b65e5c2aed7a13b7043f84cd026386ee7",
+        "ef5c477cf02db15f4cf44486d290a74251aef44d793655f7ddbeeb990bf75e6f",
+        "ef89a35452dee4456fcca8990a21da6855d1db9a1102e2df2ffccb51c0a1e347",
+        "f69fceb6e8ef50f9613f0c8456114d5e3d43831a26a48c9604c650d3ee89f11e",
+        "fe75426ca2579928db3a3b324b7807ed74f1f5714615a96b6441976c5b6b0d92"
+      ],
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/200222",
+        "https://rdap.db.ripe.net/autnum/31182",
+        "https://rdap.db.ripe.net/autnum/43487",
+        "https://rdap.db.ripe.net/autnum/50269",
+        "https://rdap.db.ripe.net/autnum/56466",
+        "https://rdap.db.ripe.net/autnum/57497",
+        "https://rdap.db.ripe.net/autnum/58333",
+        "https://rdap.db.ripe.net/autnum/61173",
+        "https://rdap.db.ripe.net/autnum/62442",
+        "https://rdap.db.ripe.net/autnum/201691",
+        "https://rdap.db.ripe.net/autnum/204955",
+        "https://rdap.db.ripe.net/autnum/205176",
+        "https://rdap.db.ripe.net/autnum/207817",
+        "https://rdap.db.ripe.net/autnum/210877",
+        "https://rdap.db.ripe.net/autnum/213969",
+        "https://rdap.db.ripe.net/autnum/216061"
       ]
     }
   }

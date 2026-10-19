@@ -1,0 +1,2928 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-10-19",
+  "main_commit": "7a3173e16884dc81f201dbdce18432b0387645fe",
+  "data_commit": "9811c1287a2d2bfda051ec51fc1bae3e0a006416",
+  "review_budget": {
+    "pool_candidates": [
+      "domain:quera.org",
+      "domain:faradars.org",
+      "domain:yektanet.com",
+      "domain:zarinpal.com",
+      "domain:childf.com",
+      "domain:manebartar.com",
+      "domain:roozesefr.com",
+      "domain:gitinegar.com",
+      "asn:151062",
+      "asn:153322",
+      "asn:201406",
+      "asn:200222",
+      "provider:https://api.derak.cloud/public/ipv4",
+      "provider:https://ips.f95.com/ip.txt"
+    ],
+    "oldest_previously_unreviewed": [
+      "domain:quera.org",
+      "domain:faradars.org",
+      "domain:yektanet.com",
+      "domain:zarinpal.com",
+      "domain:childf.com",
+      "domain:manebartar.com",
+      "domain:roozesefr.com",
+      "domain:gitinegar.com",
+      "asn:151062",
+      "asn:153322",
+      "asn:201406",
+      "asn:200222"
+    ],
+    "oldest_first_seen": "2026-09-17T18:24:45.497879+00:00",
+    "derived_exact_hostnames": [
+      "www.yektanet.com",
+      "accounts.yektanet.com",
+      "www.zarinpal.com",
+      "next.zarinpal.com",
+      "www.childf.com"
+    ],
+    "oldest_fraction_including_derived": "12/19",
+    "selection": "Four education, advertising and payment service leads; four service leads sampled by SHA-256(seed 2026-10-19 + candidate ID) ordering within the oldest unreviewed non-.ir domain cohort; four distinctive foreign network-name leads; two previously reviewed provider inventories. No lab observations used."
+  },
+  "discovery_before_proposal": {
+    "ageing_catalogue": [],
+    "candidates": {
+      "accepted": 38,
+      "pending": 134780,
+      "rejected": 24
+    },
+    "global_asns": 87253,
+    "iran_anchors": 590,
+    "observed_at": "2026-10-19T08:27:39.665008+00:00",
+    "rdap": {
+      "errors": [],
+      "pending_enrichment": 85801,
+      "requests": 0
+    },
+    "review_queue": [
+      "asn:10043",
+      "asn:10184",
+      "asn:10191",
+      "asn:10212",
+      "asn:10221",
+      "asn:10234",
+      "asn:10277",
+      "asn:10343",
+      "asn:10370",
+      "asn:10551",
+      "asn:10634",
+      "asn:10718",
+      "asn:10745",
+      "asn:10753",
+      "asn:10780",
+      "asn:10899",
+      "asn:10964",
+      "asn:10966",
+      "asn:11081",
+      "asn:11110",
+      "asn:11126",
+      "asn:1115",
+      "asn:11178",
+      "asn:11179",
+      "asn:1120",
+      "asn:10022",
+      "asn:10039",
+      "asn:10040",
+      "asn:11218",
+      "asn:1126",
+      "asn:11336",
+      "asn:11338",
+      "asn:11350",
+      "asn:11365",
+      "asn:11398",
+      "asn:11404",
+      "asn:11452",
+      "asn:11465",
+      "asn:11472",
+      "asn:11537",
+      "asn:11568",
+      "asn:11739",
+      "asn:11758",
+      "asn:11816",
+      "asn:11894",
+      "asn:11954",
+      "asn:1200",
+      "asn:12007",
+      "asn:1204",
+      "asn:12053"
+    ],
+    "schema": 1,
+    "source_errors": [],
+    "sources": [
+      {
+        "license": "MIT",
+        "license_url": "https://github.com/v2fly/domain-list-community/blob/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f/LICENSE",
+        "lineage": "iran-community-domains",
+        "source": "v2fly/domain-list-community",
+        "url": "https://github.com/v2fly/domain-list-community/blob/6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f",
+        "version": "6ee52f2c36634aeabeb9c4ba486ca02cd84c3d4f"
+      },
+      {
+        "asset_url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+        "license": "MIT",
+        "license_url": "https://github.com/bootmortis/iran-hosted-domains/blob/c5c047bfa94d523208d3ac4674e9259c82533797/LICENSE",
+        "lineage": "iran-community-domains",
+        "lineage_note": "Per-entry origin is not supplied; conservatively grouped with v2fly, not counted as independent confirmation.",
+        "original_sources": [
+          "v2fly/domain-list-community",
+          "ITO",
+          "Enamad",
+          "TCI",
+          "IWMF",
+          "bootmortis custom list"
+        ],
+        "release": "202610120242",
+        "sha256": "937ccc29ee8c504f5e1bbf76a707ed0fdb6c0cb5d3e9cec814004d03ec43fdb5",
+        "source": "bootmortis/iran-hosted-domains",
+        "url": "https://github.com/bootmortis/iran-hosted-domains/blob/c5c047bfa94d523208d3ac4674e9259c82533797",
+        "version": "c5c047bfa94d523208d3ac4674e9259c82533797"
+      },
+      {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "chocolate4u-provider-leads",
+        "release_commit": "f887031fc08af792fc9d0e0d397adfc6e1a8b968",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099",
+        "version": "676695ea3b4c95d5cf48a7c4e2e718bac5b8a099"
+      }
+    ],
+    "systematic_sources": {
+      "iptoasn_ipv4": {
+        "bytes": 7005576,
+        "sha256": "835b5b4a310e2aa1f0269963ed5dea0b2bf00c4b3cc9b555fad5a77e017ddcf6",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2010630,
+        "sha256": "183dca6a3ae0ad96a82608db4c4a56461d851a703e666de57fe522e947b1c154",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro": {
+        "bytes": 57002293,
+        "sha256": "466fcfe09ab58f39608bd319d3f677a257e6bb8eb1bfd18ae96d9885469c62e8",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      }
+    },
+    "universe_coverage_percent": null,
+    "unsupported_rules_count": 387
+  },
+  "source_lineage_note": "v2fly and bootmortis share iran-community-domains lineage and count as one evidence group, not independent confirmations. Each accepted service preserves the original exact-domain lead, MIT licence, source URL and release. Provider leads retain Chocolate4U GPL-3.0 attribution and upstream inventory URLs. Unsupported suffixes/patterns remain visible, never expanded into guessed hosts.",
+  "services": [
+    {
+      "root": "quera.org",
+      "hosts": [
+        "quera.org"
+      ],
+      "urls": [
+        "https://quera.org/",
+        "https://quera.org/contact"
+      ],
+      "reason": "Quera identifies its service as the community of Iranian developers, and its official contact page gives a Tehran office. Track the exact apex hostname used by its public website and registration pages.",
+      "quote": "جامعه توسعه‌دهندگان ایران",
+      "discovery": {
+        "candidate_id": "domain:quera.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "021871b4e1ff852b56026ae36632dc94c487bf76950eb15817490af52baa126c"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "quera.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "root": "faradars.org",
+      "hosts": [
+        "faradars.org"
+      ],
+      "urls": [
+        "https://faradars.org/"
+      ],
+      "reason": "The official homepage identifies Faradars as an Iranian online education platform and names Kalan Danesh Sahand as its rights holder. Track its exact apex hostname.",
+      "limitations": "The about and contact routes returned only a wait page and are not used as supporting content.",
+      "quote": "تمام حقوق متعلق به «کلان دانش سهند» است.",
+      "discovery": {
+        "candidate_id": "domain:faradars.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "0a0cfffce527f07c7eaa168abffe52f8f878db75f84903b48e51f642174603a5"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "faradars.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "root": "yektanet.com",
+      "hosts": [
+        "yektanet.com",
+        "www.yektanet.com",
+        "accounts.yektanet.com"
+      ],
+      "urls": [
+        "https://yektanet.com/",
+        "https://www.yektanet.com/",
+        "https://www.yektanet.com/contact/",
+        "https://accounts.yektanet.com/login/"
+      ],
+      "reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames.",
+      "quote": "شرکت نوآوران یکتانت",
+      "discovery": {
+        "candidate_id": "domain:yektanet.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "75523579488839c9ee6a11b3a21b7c0c36eb235806434c42e6f42a50f8fb998f"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "yektanet.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "root": "zarinpal.com",
+      "hosts": [
+        "zarinpal.com",
+        "www.zarinpal.com",
+        "next.zarinpal.com"
+      ],
+      "urls": [
+        "https://zarinpal.com/",
+        "https://www.zarinpal.com/terms",
+        "https://www.zarinpal.com/aboutus",
+        "https://next.zarinpal.com/beta/panel"
+      ],
+      "reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames.",
+      "quote": "شرکت همراه پرداز زرین مالک برند تجاری زرین‌پال",
+      "discovery": {
+        "candidate_id": "domain:zarinpal.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "96f46dc484b30537f922da52f903ba8e0be864995707a7a8a08800be145eff16"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "zarinpal.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "root": "childf.com",
+      "hosts": [
+        "childf.com",
+        "www.childf.com"
+      ],
+      "urls": [
+        "https://childf.com/",
+        "https://childf.com/contact-us/default.aspx",
+        "https://www.childf.com/"
+      ],
+      "reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames.",
+      "quote": "موسسه خیریه رفاه کودک ( بنیاد کودک ایران)",
+      "discovery": {
+        "candidate_id": "domain:childf.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "2e025d7680e861efc7fe82eeee8511293752ba63574105639d3e60f9b006f782"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "childf.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "root": "manebartar.com",
+      "hosts": [
+        "manebartar.com"
+      ],
+      "urls": [
+        "https://manebartar.com/",
+        "https://manebartar.com/about-us/"
+      ],
+      "reason": "The official Manebartar website identifies its training and career-coaching service and gives Tehran as its business location. Its about page confirms the same service identity. Track the exact apex hostname.",
+      "limitations": "The contact and rules routes returned HTTP 503 and are not used as supporting content.",
+      "quote": "آدرس: تهران",
+      "discovery": {
+        "candidate_id": "domain:manebartar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "62eec3623373bff3029237bd4f01b526b0b7513a1715a934db88683aaa75fed8"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "manebartar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    }
+  ],
+  "unresolved_services": [
+    {
+      "candidate": "domain:roozesefr.com",
+      "reason": "The apex and www HTTPS probes both failed certificate validation because the certificate has expired. No current primary service-affiliation evidence was retrieved. Keep the lead pending; do not infer permanent unavailability or a lack of Iranian affiliation.",
+      "sources": [
+        "https://roozesefr.com/",
+        "https://www.roozesefr.com/"
+      ],
+      "discovery": {
+        "candidate_id": "domain:roozesefr.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "6bb7889110365dc35a2058b880b9f3b414bf1ad338ade25fc1c6afbcc06a9164"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "roozesefr.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "domain:gitinegar.com",
+      "reason": "The apex and www probes both failed local DNS resolution. No current primary service-affiliation evidence was retrieved. Keep the lead pending; this is not proof of permanent unavailability or non-Iranian status.",
+      "sources": [
+        "https://gitinegar.com/",
+        "https://www.gitinegar.com/"
+      ],
+      "discovery": {
+        "candidate_id": "domain:gitinegar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "5cc9e2ae03ebd29d61519e4d41e70efd8fbe484dd0d9ffc147f8caa6c3ffe3c2"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "gitinegar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610120242/domains.txt",
+            "version": "202610120242"
+          }
+        ]
+      }
+    }
+  ],
+  "network_reviews": [
+    {
+      "candidate": "asn:151062",
+      "state": "rejected",
+      "reason": "Reject the supplied fuzzy-name assertion: APNIC identifies Matin Net (AF); the Iranian anchor is SINA ATINET Company (Ltd). The supplied Matinnet/Atinet token similarity does not establish affiliation. This rejects these assertions only; new independently supported evidence may reopen the candidate.",
+      "anchor_asns": [
+        62250
+      ],
+      "primary_sources": [
+        "https://rdap.apnic.net/autnum/151062",
+        "https://rdap.db.ripe.net/autnum/62250"
+      ],
+      "discovery": {
+        "candidate_id": "asn:151062",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7fc8d907670374a23ab4b9747aa7b9bad7e4e1f0cb54007deab1f9e545a1dfe4",
+          "917f501c4dd1f86cee2751cbc93ae6c84a801df5e3971463f5512a837e19a0f8"
+        ],
+        "source_versions": [
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://rdap.apnic.net/autnum/151062",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          },
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://iptoasn.com/",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          }
+        ]
+      },
+      "current_iptoasn_descriptions": [
+        "MATINNET-AS-AP Matin Net"
+      ],
+      "current_iptoasn_countries": [
+        "AF"
+      ]
+    },
+    {
+      "candidate": "asn:153322",
+      "state": "rejected",
+      "reason": "Reject the supplied name-only assertions: APNIC identifies Persian Cable TV Network (PH), while the Iranian anchors identify distinct registrants including Parsian Bank, Parsian Electronic Commerce, Persia System Kashan and Parsian technology/telecommunications companies. The Persian/Parsian/Persia word matches do not establish common ownership. This rejects these assertions only, not any future independently supported relationship.",
+      "anchor_asns": [
+        42043,
+        44400,
+        51280,
+        52070,
+        56703,
+        57457,
+        59882,
+        59884,
+        200436,
+        214399
+      ],
+      "primary_sources": [
+        "https://rdap.apnic.net/autnum/153322",
+        "https://rdap.db.ripe.net/autnum/42043",
+        "https://rdap.db.ripe.net/autnum/44400",
+        "https://rdap.db.ripe.net/autnum/51280",
+        "https://rdap.db.ripe.net/autnum/52070",
+        "https://rdap.db.ripe.net/autnum/56703",
+        "https://rdap.db.ripe.net/autnum/57457",
+        "https://rdap.db.ripe.net/autnum/59882",
+        "https://rdap.db.ripe.net/autnum/59884",
+        "https://rdap.db.ripe.net/autnum/200436",
+        "https://rdap.db.ripe.net/autnum/214399"
+      ],
+      "discovery": {
+        "candidate_id": "asn:153322",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "29dc91d1afe2270382790e76f14a82692f37b5967e7f99a56754a3f8c07d792b",
+          "3b86355997b8b1f64293d78a447090916b32fb64df504b27b6acdca82d9ddac4",
+          "3ee00465f8fc18b3116465e8d8e1c2e2b904e811d9b081cbaa3dc0b58315e469",
+          "4333799f1e47a0399c52ebca828030014a9b1682e80423e7ee00c9d958551dea",
+          "4483fdb8757d2b8a86c435df59164edd20c6a5f85e56cb515fa8826dba3786d5",
+          "59cb9fee04f989ef3b2e84abcc222b7f5e7cdc37f1217f6b6835fd1595bb4d0d",
+          "5b848ee13788d2ac94dd6f41cb32aaa5065e0b006a3118bc3f87170a398b9777",
+          "63fbfb235284007c99b5ae98d9d19a83ea021cabbf2ae069ab873917eb6489ed",
+          "7d5f9494fdc118bcb27c319f1f7102a989149b62687b608f7ec06410b62438b0",
+          "8e4389ed15ddaba8aae67a1edc730fb9092ec5283c626a645b62b0414c86eb6a",
+          "8e98e29485aa2ec9e9aae94a5371371b3c26650900782e10a1502e35d88ba3b5",
+          "9a43171f45605010698c81cf66eee99d4965f979ac4480dc810a2fc35d6bd697",
+          "9d99b992504bbc88c56305a62d2dd3d2d265318a9e4bdc22d529aa5ac81914ba",
+          "a621f7d7945963d3547700e50e13402d711815f17170ea4f7dc67ae0a596a6d7",
+          "be9f70476d3b45b8c84e3a776a40a0c3becc2ca87f3a124546748dd1bec3c726",
+          "d45c71aa6d87e23f2d8f9ed76af450abe8d285c5c3e7a47b4e2aba1ffdadc61f",
+          "db7312a1d4e1a3dbe7552b24accda32d25d7b808a4f197c6db224a454c9c5782",
+          "f5132560d978d9301da7c9d4b4f8a80eb4e513e7a58a796b2a54c06359dce551",
+          "fe110671d5e6891edb6cc75120f2956c9b8b7fdcd5674bf402e6a01454fce4a5",
+          "fef72aaafc4f07e559f01588b0c261d28bfd0bc4a4aca4689a9b31be791eae05"
+        ],
+        "source_versions": [
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://iptoasn.com/",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          },
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://rdap.apnic.net/autnum/153322",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          }
+        ]
+      },
+      "current_iptoasn_descriptions": [
+        "PERSIAN1-AS-AP Persian Cable TV Network"
+      ],
+      "current_iptoasn_countries": [
+        "PH"
+      ]
+    },
+    {
+      "candidate": "asn:201406",
+      "state": "rejected",
+      "reason": "Reject the supplied name-only assertions: RIPE identifies Mobinet Bulgaria Ltd.; current Iranian anchor records identify Mobin Net Communication Company, Amirkabir University of Technology, Ayandeh Bank and Vira Cloud DataCenter. Similar Mobinet/Mobinnet labels do not establish affiliation. This rejects these assertions only; independently supported new evidence may reopen the candidate.",
+      "anchor_asns": [
+        47330,
+        49792,
+        50810,
+        61250,
+        210405
+      ],
+      "primary_sources": [
+        "https://rdap.db.ripe.net/autnum/201406",
+        "https://rdap.db.ripe.net/autnum/47330",
+        "https://rdap.db.ripe.net/autnum/49792",
+        "https://rdap.db.ripe.net/autnum/50810",
+        "https://rdap.db.ripe.net/autnum/61250",
+        "https://rdap.db.ripe.net/autnum/210405"
+      ],
+      "discovery": {
+        "candidate_id": "asn:201406",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "07f4365959e375d97d9545b4c0b8b799080094d1abf0cca8a5c315099e345b33",
+          "81a2c0aae3519a8f28b685c66fd259ad9519f02ce48763db6dc2eab0a1490608",
+          "86e3066e6f2b2ec22606d01ea69a36532a6aa53d308b680cc7ededc2d6b005b9",
+          "88a9a0229c16df723ec2bf9b3c9b5f2fc01f58fdde9c612cc849bd97777fa222",
+          "8df351698ac987655ed903199bd140a3a791fa02ba8cf4e73b18a9fd17502471",
+          "be509c52d5de05753ccdd063de297aa54fcebb71537aacb905b0e3d8f6f6854b",
+          "e87b6d4598e2f1e2794f25c8b7d95e460ebb5889ad27095fa77fbd699400f83d"
+        ],
+        "source_versions": [
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://iptoasn.com/",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          },
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://rdap.db.ripe.net/autnum/201406",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          },
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://iptoasn.com/",
+            "version": "7734f02169a7e9493e70eb3406db7b7ab65f3280a8a690e9ffe7aa6ca4e22556"
+          }
+        ]
+      },
+      "current_iptoasn_descriptions": [
+        "MOBINET-AS"
+      ],
+      "current_iptoasn_countries": [
+        "BG"
+      ]
+    },
+    {
+      "candidate": "asn:200222",
+      "state": "pending",
+      "reason": "RIPE identifies Sama Tech s.r.o. for AS200222. The supplied Iranian anchors include Rayanesh Pardis Saman (SamanTech), Saman Bank, payment companies and other Samaneh companies. The closer Sama Tech/SamanTech branding warrants follow-up, but the current records establish distinct registrants and supply no verified common ownership or official affiliation. Keep pending until a primary ownership or affiliation source connects them; admit no ASN.",
+      "anchor_asns": [
+        31182,
+        43487,
+        50269,
+        56466,
+        57497,
+        58333,
+        61173,
+        62442,
+        201691,
+        204955,
+        205176,
+        207817,
+        210877,
+        213969,
+        216061
+      ],
+      "primary_sources": [
+        "https://rdap.db.ripe.net/autnum/200222",
+        "https://rdap.db.ripe.net/autnum/31182",
+        "https://rdap.db.ripe.net/autnum/43487",
+        "https://rdap.db.ripe.net/autnum/50269",
+        "https://rdap.db.ripe.net/autnum/56466",
+        "https://rdap.db.ripe.net/autnum/57497",
+        "https://rdap.db.ripe.net/autnum/58333",
+        "https://rdap.db.ripe.net/autnum/61173",
+        "https://rdap.db.ripe.net/autnum/62442",
+        "https://rdap.db.ripe.net/autnum/201691",
+        "https://rdap.db.ripe.net/autnum/204955",
+        "https://rdap.db.ripe.net/autnum/205176",
+        "https://rdap.db.ripe.net/autnum/207817",
+        "https://rdap.db.ripe.net/autnum/210877",
+        "https://rdap.db.ripe.net/autnum/213969",
+        "https://rdap.db.ripe.net/autnum/216061"
+      ],
+      "discovery": {
+        "candidate_id": "asn:200222",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "056795665bc4106b49260d99c439570657f6598c28ada387bfb5a3b741e6bb74",
+          "20a29b9d7f2c1d0ba4f9404b08aa827ab767f02f4a0ebc146cf0ad2110788742",
+          "2d90a01e7aea42787933588a99f959bfe468efe1669eb2928dfd5150b6cf9597",
+          "42e4a10766935c927eb25a9d6eb2a5c858ff794722a6e1543a50973faa1d73ff",
+          "4eeb73e058262e3974f8fa87623beb50f4f4c7f81c84f409e023f2957a5eb7eb",
+          "59881c9858693a7c311c7f38d4637397a0b7eafda8d73d8a8773b43d766308c6",
+          "82fd4a89608d43332191aa3c6211d98ea07d73b93099b3bba8b1467b4d1ffa15",
+          "8c6275f764901e2b150ded697eda758bc35fa8929317316702a49a40e2b8c674",
+          "8e0cd269f038f9fce23c758b85857436f5ed2ee19e54f275bd1e73655a61339b",
+          "8fa6422aa3339dc538e1f7607749ee3955731a6506d696801148a6a77913b079",
+          "90b3b818c7a56198e015272a04cc5ea0e317d34c9956e24f130105a144af2fe7",
+          "9173fdb7930e91e672444d8586ad01ba8785555e5182152f1ef8f92420e2d59a",
+          "927207564d8c984c4b4092151b6ce94e196b22f155aab9eda64f021cb9f33464",
+          "939a95eed7f35d23a4d8ee421c40b0f5218167a1e1f14f3715d5f47cdc8b0e4f",
+          "9b0014f510e9080dbfa52e94a146d3218461cd9709e4e58d7f91dd7d8a357589",
+          "9c1e4e871bbf89df1a85fb22dffa204e0c2bf8749af59017875353a19cf220cc",
+          "a9bb84939d8f29209769325f1173a48f554d4103e9b70e6f2a63d024124c20e8",
+          "ae2fbd5fde99ff644b86e2ceb6826661d3be10b34cb54851ae247dce28fe841d",
+          "bec36f8d8f11a64a3cab30644e3b0284368098faa15648a4fbf1b5f0a12198fb",
+          "c4f0cb0183c4c91484a3db24a75acc84414f6acb3c06a51cfa68c1f903ae365d",
+          "cef3ad581b1e3a4eb28532da34c70959afe1ea4bc89154d92f98356182092da4",
+          "d362392f5cbd123e2314947a49b499971b83a02a44311c11f0802471e1e8d993",
+          "de073eb9d6c520ade085f010ebd3bae98ca46d6dd43b51ce10d00b0aa64ec893",
+          "eade57cede43927578cf18117bf9a9e9bc583dca541dd71ca96273777fe7e669",
+          "eb1e605a074ba7040768a6821f84bd5bc8a343d05798c971fcfad578d922ee81",
+          "eeaba0d96f65fc9eaa0f21c25574438b65e5c2aed7a13b7043f84cd026386ee7",
+          "ef5c477cf02db15f4cf44486d290a74251aef44d793655f7ddbeeb990bf75e6f",
+          "ef89a35452dee4456fcca8990a21da6855d1db9a1102e2df2ffccb51c0a1e347",
+          "f69fceb6e8ef50f9613f0c8456114d5e3d43831a26a48c9604c650d3ee89f11e",
+          "fe75426ca2579928db3a3b324b7807ed74f1f5714615a96b6441976c5b6b0d92"
+        ],
+        "source_versions": [
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://iptoasn.com/",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          },
+          {
+            "lineage": "iptoasn-rdap",
+            "source": "global-asn-name-match",
+            "url": "https://rdap.db.ripe.net/autnum/200222",
+            "version": "8c966aa6a9cf0d560ab100b8d7108c2e6164fa3447dd3e5cc7204f3ca3f8f8c9"
+          }
+        ]
+      },
+      "current_iptoasn_descriptions": [
+        "SAMANET Sama Tech s.r.o."
+      ],
+      "current_iptoasn_countries": [
+        "SK"
+      ]
+    }
+  ],
+  "provider_rechecks": [
+    {
+      "url": "https://api.derak.cloud/public/ipv4",
+      "observed_at": "2026-10-19T08:26:21.552383+00:00",
+      "bytes": 323,
+      "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c",
+      "count": 19,
+      "non_public": [
+        "192.168.204.48/28"
+      ],
+      "discovery": {
+        "candidate_id": "provider:https://api.derak.cloud/public/ipv4",
+        "evidence_fingerprints": [
+          "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+          "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+          "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+          "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+          "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+          "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+          "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/derakcloud.txt",
+            "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/derakcloud.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/derakcloud.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/derakcloud.txt",
+            "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "f887031fc08af792fc9d0e0d397adfc6e1a8b968",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f887031fc08af792fc9d0e0d397adfc6e1a8b968/text/derakcloud.txt",
+            "version": "f887031fc08af792fc9d0e0d397adfc6e1a8b968"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/derakcloud.txt",
+            "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "b055853a504d489cde0a0a8a189bd43478d65000",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/b055853a504d489cde0a0a8a189bd43478d65000/text/derakcloud.txt",
+            "version": "b055853a504d489cde0a0a8a189bd43478d65000"
+          }
+        ]
+      }
+    },
+    {
+      "url": "https://ips.f95.com/ip.txt",
+      "observed_at": "2026-10-19T08:26:22.515429+00:00",
+      "bytes": 302,
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "count": 22,
+      "non_public": [],
+      "discovery": {
+        "candidate_id": "provider:https://ips.f95.com/ip.txt",
+        "evidence_fingerprints": [
+          "585fdc98650c8b528612cb352698bba6da49dae5eb97449a82c1a01570c4bb66",
+          "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
+          "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
+          "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
+          "ab172b742aa634a12718df48935e811e2ac891ec5d5cbc3d2498c71a0d491d5d",
+          "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08",
+          "d8e550acbf546b81cb7c3c94ff9d5d203c544c2345fd255e3944395b475606f9"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "f887031fc08af792fc9d0e0d397adfc6e1a8b968",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f887031fc08af792fc9d0e0d397adfc6e1a8b968/text/iranserver.txt",
+            "version": "f887031fc08af792fc9d0e0d397adfc6e1a8b968"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/iranserver.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/iranserver.txt",
+            "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/iranserver.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "b055853a504d489cde0a0a8a189bd43478d65000",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/b055853a504d489cde0a0a8a189bd43478d65000/text/iranserver.txt",
+            "version": "b055853a504d489cde0a0a8a189bd43478d65000"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/iranserver.txt",
+            "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:iranserver",
+            "original_source_urls": [
+              "https://ips.f95.com/ip.txt"
+            ],
+            "path": "text/iranserver.txt",
+            "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/iranserver.txt",
+            "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+          }
+        ]
+      }
+    }
+  ],
+  "registry_refresh": {
+    "previous_failed_requests": 36,
+    "recovered": 35,
+    "remaining": [
+      {
+        "url": "https://rdap.arin.net/registry/autnum/31928",
+        "observed_at": "2026-10-19T08:24:11.392108+00:00",
+        "status": 404,
+        "error": "HTTP Error 404: "
+      }
+    ],
+    "note": "Bounded retries recovered 35 previously failed lookups; AS31928 remains HTTP 404. An additional 35 candidate/anchor lookups returned current organization-only records. The discovery refresh used RDAP budget zero after locally importing these results; its empty per-run error list does not mean all global enrichment is complete. Registry holder IDs were not joined across records or registries.",
+    "observations": [
+      {
+        "url": "https://rdap.arin.net/registry/autnum/31834",
+        "observed_at": "2026-10-19T08:24:11.391872+00:00",
+        "status": 200,
+        "sha256": "61ff88f33de171ac9adc89fc0d77366a6bf818f59fdf02ef559b4e34e199676d",
+        "names": [
+          "TELA-ASN"
+        ],
+        "start_asn": 31834,
+        "end_asn": 31834,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/31928",
+        "observed_at": "2026-10-19T08:24:11.392108+00:00",
+        "status": 404,
+        "error": "HTTP Error 404: "
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32164",
+        "observed_at": "2026-10-19T08:24:11.392275+00:00",
+        "status": 200,
+        "sha256": "3215792cf942e96f60c946357df4d5fa2d03804caf2f8b2f22387655e59e0f2c",
+        "names": [
+          "SECURED-SERVERS"
+        ],
+        "start_asn": 32164,
+        "end_asn": 32164,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32171",
+        "observed_at": "2026-10-19T08:24:11.392437+00:00",
+        "status": 200,
+        "sha256": "b9f7acd0cb8b359ad23ee3fb8b52114717c9af67ee793d86c7d9f827a0adaf01",
+        "names": [
+          "TRIAN-FUND-MANAGEMENT-LP"
+        ],
+        "start_asn": 32171,
+        "end_asn": 32171,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32274",
+        "observed_at": "2026-10-19T08:26:20.053879+00:00",
+        "status": 200,
+        "sha256": "f04051e52b298d76016a5f76a6ba2b7829f87deafd1784aa8065d66f6023c53e",
+        "names": [
+          "LENAWEE-MONROE-TECHNOLOGY-CONSORTIUM",
+          "Lenawee-Monroe Technology Consortium"
+        ],
+        "start_asn": 32274,
+        "end_asn": 32274,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32368",
+        "observed_at": "2026-10-19T08:26:20.054411+00:00",
+        "status": 200,
+        "sha256": "4f6d534f414934b7b61785cb61c1f11458c73e5a8f3034b5696fa39dd9235022",
+        "names": [
+          "MOUSER-ELECTRONICS",
+          "mouser electronics"
+        ],
+        "start_asn": 32368,
+        "end_asn": 32368,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32425",
+        "observed_at": "2026-10-19T08:26:21.053523+00:00",
+        "status": 200,
+        "sha256": "0f5abc7a288c1c539d9cbd761ecc54d0b9afc9fdbadc3f6f08bd392ec1ea94eb",
+        "names": [
+          "Pixel Factory",
+          "SKB3-ARIN-BGP"
+        ],
+        "start_asn": 32425,
+        "end_asn": 32425,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32435",
+        "observed_at": "2026-10-19T08:26:21.060724+00:00",
+        "status": 200,
+        "sha256": "e09f539272f82a34fd42eda3dbbd96edb7f2ac80ed25f9fd3aa506a16d058a60",
+        "names": [
+          "DOTALLIANCE-PRIMARY",
+          "DotAlliance"
+        ],
+        "start_asn": 32435,
+        "end_asn": 32435,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32437",
+        "observed_at": "2026-10-19T08:24:12.576929+00:00",
+        "status": 200,
+        "sha256": "ae45b1701d173e7aa45b09f096203b516569eace6df13abe7c96817d076982bb",
+        "names": [
+          "ORG-WCTC1-AFRINIC"
+        ],
+        "start_asn": 32437,
+        "end_asn": 32437,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32508",
+        "observed_at": "2026-10-19T08:24:12.599739+00:00",
+        "status": 200,
+        "sha256": "ae6084004dfc80e1e9921e754749f7d0a78eb4bc408bd72c4e8abd7c4b89b592",
+        "names": [
+          "GSINET"
+        ],
+        "start_asn": 32508,
+        "end_asn": 32508,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32517",
+        "observed_at": "2026-10-19T08:24:12.783777+00:00",
+        "status": 200,
+        "sha256": "5cdd584759e673e63e61c9930006d150ce9eb06c1c345c262112c44e0ce72432",
+        "names": [
+          "DOTINC-NET"
+        ],
+        "start_asn": 32517,
+        "end_asn": 32517,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/32969",
+        "observed_at": "2026-10-19T08:24:12.787571+00:00",
+        "status": 200,
+        "sha256": "dff54210a086c5d2892f9b2319b856c78234b429419d9183194d85ae6941dfde",
+        "names": [
+          "GLOBAL-CASH-ACCESS"
+        ],
+        "start_asn": 32969,
+        "end_asn": 32969,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33071",
+        "observed_at": "2026-10-19T08:26:21.773217+00:00",
+        "status": 200,
+        "sha256": "e4c80af499c2a51bc4f70d225499dc7cdfab22faf97ea62a58bc672267f4ce37",
+        "names": [
+          "ISC-F-AS",
+          "Internet Systems Consortium, Inc."
+        ],
+        "start_asn": 33071,
+        "end_asn": 33071,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33178",
+        "observed_at": "2026-10-19T08:26:22.044578+00:00",
+        "status": 200,
+        "sha256": "0b6b19c2b801dd62f4d23f6b5de4441eca3118c3371fc50ff7805872c9f48ade",
+        "names": [
+          "CSINET",
+          "Cable Services, Inc."
+        ],
+        "start_asn": 33178,
+        "end_asn": 33178,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33239",
+        "observed_at": "2026-10-19T08:26:22.704263+00:00",
+        "status": 200,
+        "sha256": "024857401a9c9fc8604d83a27f60b29e59d72e6ba97bab1a26caf7c9c35f32e6",
+        "names": [
+          "CIS-MSISAC",
+          "Center for Internet Security"
+        ],
+        "start_asn": 33239,
+        "end_asn": 33239,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33354",
+        "observed_at": "2026-10-19T08:24:13.936790+00:00",
+        "status": 200,
+        "sha256": "3a3c64e1c7418a1e56be18f25711dbd2b1a266fcd7c7806128bf4b380356d2d7",
+        "names": [
+          "AS33354"
+        ],
+        "start_asn": 33354,
+        "end_asn": 33354,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33368",
+        "observed_at": "2026-10-19T08:24:13.945382+00:00",
+        "status": 200,
+        "sha256": "b1a7993d53bd11edbf06cc5940465457e916624d2166de25a219fc337ee0a9bf",
+        "names": [
+          "FXISP"
+        ],
+        "start_asn": 33368,
+        "end_asn": 33368,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33442",
+        "observed_at": "2026-10-19T08:24:13.945618+00:00",
+        "status": 200,
+        "sha256": "0545be82eadb62fde766c94ac43957c58c76527f2f2bf86ba0fc6e3fb45f2b4d",
+        "names": [
+          "ZEBRA-TECHNOLOGIES-BGP-AS-NUMBER"
+        ],
+        "start_asn": 33442,
+        "end_asn": 33442,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33463",
+        "observed_at": "2026-10-19T08:24:14.082893+00:00",
+        "status": 200,
+        "sha256": "4251cfc69bba333740cfaf03d4b7c92fd3fe74bf59c3b8d190eac21938a40142",
+        "names": [
+          "CITIGROUP-GLOBAL-ANYCAST-DNS"
+        ],
+        "start_asn": 33463,
+        "end_asn": 33463,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33496",
+        "observed_at": "2026-10-19T08:26:22.940452+00:00",
+        "status": 200,
+        "sha256": "88d62c499a6aaa8a727327143aa3e4cdc9c122c8ef1d9da37cb1e97ffca00281",
+        "names": [
+          "ISC",
+          "ISC CONSTRUCTORS, LLC"
+        ],
+        "start_asn": 33496,
+        "end_asn": 33496,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33509",
+        "observed_at": "2026-10-19T08:26:23.455443+00:00",
+        "status": 200,
+        "sha256": "db283666e461750efb6f06ac00be832a6642df90740b0bee65a62c645c3a6959",
+        "names": [
+          "CASCADE-ACCESS-LLC-CA-ESTOR1",
+          "Cascade Access, LLC"
+        ],
+        "start_asn": 33509,
+        "end_asn": 33509,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/33512",
+        "observed_at": "2026-10-19T08:26:23.612715+00:00",
+        "status": 200,
+        "sha256": "33f2dae721bc436a7fb1254dcd45b4e54b78ab61806d92f5a3e026278036fac9",
+        "names": [
+          "GATEWAY-PROCESSING-SERVICES",
+          "Gateway Processing Services"
+        ],
+        "start_asn": 33512,
+        "end_asn": 33512,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36112",
+        "observed_at": "2026-10-19T08:26:23.982747+00:00",
+        "status": 200,
+        "sha256": "e410e3c426ccc189a5ef9ac69c118d6c7e1fc71fff9b54d1a5cc9670d578c565",
+        "names": [
+          "PHSD-DATACENTER",
+          "Park Hill School District"
+        ],
+        "start_asn": 36112,
+        "end_asn": 36112,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36297",
+        "observed_at": "2026-10-19T08:24:14.788393+00:00",
+        "status": 200,
+        "sha256": "1620a89cec6acafc32d02f86535fce7d422357615591334b103ea9159dc0bc40",
+        "names": [
+          "DHI-COMPUTING-INTERNET"
+        ],
+        "start_asn": 36297,
+        "end_asn": 36297,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36488",
+        "observed_at": "2026-10-19T08:26:24.153282+00:00",
+        "status": 200,
+        "sha256": "f5f6835672325262d114df851fbc242108750e1ab38f9a23512fecc7cd71a92c",
+        "names": [
+          "SWA-INET",
+          "Southwest Airlines Co."
+        ],
+        "start_asn": 36488,
+        "end_asn": 36488,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36590",
+        "observed_at": "2026-10-19T08:24:14.803565+00:00",
+        "status": 200,
+        "sha256": "1df762f41c9661282fcee0f640624774c0888da358c2877bb2fe820ce18b98e4",
+        "names": [
+          "EMERSON-ELECTRIC"
+        ],
+        "start_asn": 36590,
+        "end_asn": 36590,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36661",
+        "observed_at": "2026-10-19T08:24:14.963832+00:00",
+        "status": 200,
+        "sha256": "4f76c1b05f8fcbaa393e1d3e314a9940ca5296bf795cd701d097cce586f886dd",
+        "names": [
+          "CHICAGO-FUNDAMENTAL-INVESTMENT-PARTNERS"
+        ],
+        "start_asn": 36661,
+        "end_asn": 36661,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36667",
+        "observed_at": "2026-10-19T08:24:15.123831+00:00",
+        "status": 200,
+        "sha256": "7e5d5904b84dbf048e28415be7bb18a90cc051992cde582bcc7633983c6efbf0",
+        "names": [
+          "PHIBRO-ANIMAL-HEALTH-CORPORATION-ARIN"
+        ],
+        "start_asn": 36667,
+        "end_asn": 36667,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36669",
+        "observed_at": "2026-10-19T08:24:15.890974+00:00",
+        "status": 200,
+        "sha256": "0807882e08974b63578e0a1961d4d7c505c14ca10110244d2c794420f0722c6f",
+        "names": [
+          "SONIC-MSM-DATACENTER"
+        ],
+        "start_asn": 36669,
+        "end_asn": 36669,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/36731",
+        "observed_at": "2026-10-19T08:24:16.049516+00:00",
+        "status": 200,
+        "sha256": "ccfa2e9f0983d7b4c5797e6b4aa4ce6840a76c0be0a41f5a88e1cc27ec051520",
+        "names": [
+          "SERVER-CLOUD-CANADA"
+        ],
+        "start_asn": 36731,
+        "end_asn": 36731,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/40327",
+        "observed_at": "2026-10-19T08:24:16.573907+00:00",
+        "status": 200,
+        "sha256": "7cacd04c0090a7f8248ab77b63833ade523e83572e67e1e6e5d36de79ad4f584",
+        "names": [
+          "AS40327"
+        ],
+        "start_asn": 40327,
+        "end_asn": 40327,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/40381",
+        "observed_at": "2026-10-19T08:24:16.581070+00:00",
+        "status": 200,
+        "sha256": "aea0c349ae552444fe60a2583255faba99b4d292fea9b1ef0f875c050e71466d",
+        "names": [
+          "AS-ADM-DC2"
+        ],
+        "start_asn": 40381,
+        "end_asn": 40381,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/40405",
+        "observed_at": "2026-10-19T08:24:17.075765+00:00",
+        "status": 200,
+        "sha256": "982595a9b0a9144388b0027ab849923465b929f30deecf388528a3cebaeabeb5",
+        "names": [
+          "BRAZORIA-INET"
+        ],
+        "start_asn": 40405,
+        "end_asn": 40405,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/40866",
+        "observed_at": "2026-10-19T08:24:17.085641+00:00",
+        "status": 200,
+        "sha256": "bd60fa7e6cf65f729b092b8a45d0f04c47c5c5fc9011bc702fbb22e745331ebe",
+        "names": [
+          "MYSERVER-DOT-ORG"
+        ],
+        "start_asn": 40866,
+        "end_asn": 40866,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/40895",
+        "observed_at": "2026-10-19T08:24:17.281999+00:00",
+        "status": 200,
+        "sha256": "cb61b408772241002ae963d39885b83d97b32e5e567c4b4cd736a9cdc60971b5",
+        "names": [
+          "ISF-QUEBEC"
+        ],
+        "start_asn": 40895,
+        "end_asn": 40895,
+        "country": null
+      },
+      {
+        "url": "https://rdap.arin.net/registry/autnum/40909",
+        "observed_at": "2026-10-19T08:24:17.337493+00:00",
+        "status": 200,
+        "sha256": "1dfe7d29569cb93fa27f55e3c848026401434078f92c24075645ce87d0dd7de0",
+        "names": [
+          "FUNDAMENTAL-ADVISORS-ASN"
+        ],
+        "start_asn": 40909,
+        "end_asn": 40909,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/31182",
+        "observed_at": "2026-10-19T08:26:20.053884+00:00",
+        "status": 200,
+        "sha256": "90235eece7f1fa629b5d3b3d59932822ac6da41ae2c67c589f65b6563620f8fb",
+        "names": [
+          "SB24-AS",
+          "Saman Bank PJSC"
+        ],
+        "start_asn": 31182,
+        "end_asn": 31182,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/42043",
+        "observed_at": "2026-10-19T08:26:20.054411+00:00",
+        "status": 200,
+        "sha256": "a97aa2b04fe94dedda3f5521646c4a1a8c7e500f46368f518cf48a1cfdf7d6ae",
+        "names": [
+          "BertinaTechnologyCompany",
+          "Parsian High Tech Company PJSC"
+        ],
+        "start_asn": 42043,
+        "end_asn": 42043,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/43487",
+        "observed_at": "2026-10-19T08:26:20.054552+00:00",
+        "status": 200,
+        "sha256": "73c34ac7a7dab7c4d29403b9e38ee9b84bf060dda20e16ff5d9cf49193f15406",
+        "names": [
+          "IR-SEP",
+          "Saman Electronic Payment Kish PJS"
+        ],
+        "start_asn": 43487,
+        "end_asn": 43487,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/44400",
+        "observed_at": "2026-10-19T08:26:20.054647+00:00",
+        "status": 200,
+        "sha256": "ea64ad065564f063c9992a515e3733443d2df5d1bfaf1ed4ab11f9e002810e14",
+        "names": [
+          "Ertebatat Sabet Parsian Co. PJS",
+          "IR-FCP"
+        ],
+        "start_asn": 44400,
+        "end_asn": 44400,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/47330",
+        "observed_at": "2026-10-19T08:26:20.589803+00:00",
+        "status": 200,
+        "sha256": "d9d2c57dbaafeaf4edb72c3780026f61a5a8a272d6f31b0b2ee58c34fbc84e0b",
+        "names": [
+          "Mobin Net Communication Company (Private Joint Stock)",
+          "Mobinnet-AS"
+        ],
+        "start_asn": 47330,
+        "end_asn": 47330,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/49792",
+        "observed_at": "2026-10-19T08:26:20.590011+00:00",
+        "status": 200,
+        "sha256": "0c3d0a970cc4805165a0fd6dafd42f162bc5d218e255ef3121228d1df8ad0a52",
+        "names": [
+          "Amirkabir University of Technology",
+          "AmirkabirUniversity"
+        ],
+        "start_asn": 49792,
+        "end_asn": 49792,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/50269",
+        "observed_at": "2026-10-19T08:26:20.590295+00:00",
+        "status": 200,
+        "sha256": "c782450f7b74386b19927ee7e678dbec719cc0159491be19d387ee77cd87305a",
+        "names": [
+          "GuilaNet",
+          "Guilanet"
+        ],
+        "start_asn": 50269,
+        "end_asn": 50269,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/50810",
+        "observed_at": "2026-10-19T08:26:20.590458+00:00",
+        "status": 200,
+        "sha256": "4dff39f516450f6c01e63908bc7098b0cb8413576a51ffd1e8660022a3db9622",
+        "names": [
+          "Mobin Net Communication Company (Private Joint Stock)",
+          "Mobinnet-AS"
+        ],
+        "start_asn": 50810,
+        "end_asn": 50810,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/51280",
+        "observed_at": "2026-10-19T08:26:20.965060+00:00",
+        "status": 200,
+        "sha256": "807917e0325ca05174e2623301fa2bdb5655739f59623c1c477c191c782d5748",
+        "names": [
+          "AS51280",
+          "Parsian Electronic Commerce PJSC"
+        ],
+        "start_asn": 51280,
+        "end_asn": 51280,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/52070",
+        "observed_at": "2026-10-19T08:26:21.008907+00:00",
+        "status": 200,
+        "sha256": "941ca18abe1e14d10100c4903e4d9ba7c19b1b76c32bda28b2422ff2967f60f8",
+        "names": [
+          "PARSIAN_BANK",
+          "Parsian Bank (Public Joint-Stock)"
+        ],
+        "start_asn": 52070,
+        "end_asn": 52070,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/56466",
+        "observed_at": "2026-10-19T08:26:21.011240+00:00",
+        "status": 200,
+        "sha256": "64e530b4fd12a46c99fd2e4f31e1cce47501943e11ff7cef4db4f747301450a4",
+        "names": [
+          "Bahar-Samaneh-Shargh",
+          "Pars Fonoun Ofogh Information Technology and Communications Company LTD"
+        ],
+        "start_asn": 56466,
+        "end_asn": 56466,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/56703",
+        "observed_at": "2026-10-19T08:26:21.011495+00:00",
+        "status": 200,
+        "sha256": "3a59db552c994a9da9c621ac151331c864c793befd5b02529587b183d81913d2",
+        "names": [
+          "MEHR AVA GOSTAR PARSIAN INFORMATION ENGINEERING CO.,LTD",
+          "MEHRAVA"
+        ],
+        "start_asn": 56703,
+        "end_asn": 56703,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/57457",
+        "observed_at": "2026-10-19T08:26:21.267018+00:00",
+        "status": 200,
+        "sha256": "0520301eb0985f1c830dbebbf7c4476e513ddf84978020c03e79797967ac531f",
+        "names": [
+          "Asan Pardakht Persian Co. LTD",
+          "asan-as"
+        ],
+        "start_asn": 57457,
+        "end_asn": 57457,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/57497",
+        "observed_at": "2026-10-19T08:26:21.293405+00:00",
+        "status": 200,
+        "sha256": "079e855bc0172cd6b3e4cd1f984693c016ff9126f7f370b0e609f8e8c799241d",
+        "names": [
+          "Faraso Samaneh Pasargad Ltd.",
+          "FarasoSamanehPasargad"
+        ],
+        "start_asn": 57497,
+        "end_asn": 57497,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/58333",
+        "observed_at": "2026-10-19T08:26:21.368012+00:00",
+        "status": 200,
+        "sha256": "388f4e8b94ee5030a779664f006d502faf789a83571a9f84aa57d177d068ca70",
+        "names": [
+          "Saman Insurance Co. (Public Joint Stock)",
+          "SamanInsurance-AS"
+        ],
+        "start_asn": 58333,
+        "end_asn": 58333,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/59882",
+        "observed_at": "2026-10-19T08:26:21.373162+00:00",
+        "status": 200,
+        "sha256": "9a3b80875e270158ee5e543a5003aff2a3ec7aa928c954f9f5e2617f9856a9b8",
+        "names": [
+          "PERSIA-ASN",
+          "Persia System Kashan Ltd"
+        ],
+        "start_asn": 59882,
+        "end_asn": 59882,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/59884",
+        "observed_at": "2026-10-19T08:26:21.587197+00:00",
+        "status": 200,
+        "sha256": "4224becc3228faaacb81e2f1c568c74db23ae2da56110c7142439e4f9c3d0720",
+        "names": [
+          "PERSIA TELECOM COMPANY",
+          "PTC-AS"
+        ],
+        "start_asn": 59884,
+        "end_asn": 59884,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/61173",
+        "observed_at": "2026-10-19T08:26:21.667207+00:00",
+        "status": 200,
+        "sha256": "fd70f07fff0e19563f5ca6387286616e14be0c037590281aa6d368a56dda57f7",
+        "names": [
+          "GWSN-AS",
+          "Green Web Samaneh Novin PJSC"
+        ],
+        "start_asn": 61173,
+        "end_asn": 61173,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/61250",
+        "observed_at": "2026-10-19T08:26:21.721289+00:00",
+        "status": 200,
+        "sha256": "5970cbdc1cd8d4a6c5909ec78d3760684c60dfa3c381d6c44896ad4509977ebd",
+        "names": [
+          "Ayandeh Bank",
+          "AyandehBank"
+        ],
+        "start_asn": 61250,
+        "end_asn": 61250,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/62250",
+        "observed_at": "2026-10-19T08:26:21.734898+00:00",
+        "status": 200,
+        "sha256": "7a514104aebddc0b06dc4e79bc495f2da8839d1ea8ca914b995e1498dbcc3291",
+        "names": [
+          "ATINET",
+          "SINA ATINET Company (Ltd)"
+        ],
+        "start_asn": 62250,
+        "end_asn": 62250,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/62442",
+        "observed_at": "2026-10-19T08:26:21.922316+00:00",
+        "status": 200,
+        "sha256": "7e4a58fbf4685576b13716e8d6e992a473e4405e282a5a4221923149d5f86347",
+        "names": [
+          "Dade Samane Fanava Company (PJS)",
+          "Dade-Samane-Fanava"
+        ],
+        "start_asn": 62442,
+        "end_asn": 62442,
+        "country": null
+      },
+      {
+        "url": "https://rdap.apnic.net/autnum/151062",
+        "observed_at": "2026-10-19T08:26:22.039026+00:00",
+        "status": 200,
+        "sha256": "eb0464258243e43d4cce5726e2abbfe26fe3c10ecfc5de02ba18a8c90526f3f5",
+        "names": [
+          "MATINNET-AS-AP",
+          "Matin Net"
+        ],
+        "start_asn": 151062,
+        "end_asn": 151062,
+        "country": "AF"
+      },
+      {
+        "url": "https://rdap.apnic.net/autnum/153322",
+        "observed_at": "2026-10-19T08:26:22.039464+00:00",
+        "status": 200,
+        "sha256": "0797c2e8728d06266c510139e8816406646aca61e42544a77ff1114ac7e4b8a2",
+        "names": [
+          "PERSIAN1-AS-AP",
+          "Persian Cable TV Network"
+        ],
+        "start_asn": 153322,
+        "end_asn": 153322,
+        "country": "PH"
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/200222",
+        "observed_at": "2026-10-19T08:26:22.086221+00:00",
+        "status": 200,
+        "sha256": "a4ee4a12ae6309dafd79fad5f465517ce44dd36615b3c89be0a5a36d2efe983e",
+        "names": [
+          "Sama Tech s.r.o.",
+          "Samanet"
+        ],
+        "start_asn": 200222,
+        "end_asn": 200222,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/200436",
+        "observed_at": "2026-10-19T08:26:22.273817+00:00",
+        "status": 200,
+        "sha256": "08f5dced3a58b8e84bcd48e8d04216d6f16f24f8383d4f7a278f93bb6720f5f0",
+        "names": [
+          "Patron Technology Persia Ltd",
+          "tehrangaming-com"
+        ],
+        "start_asn": 200436,
+        "end_asn": 200436,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/201406",
+        "observed_at": "2026-10-19T08:26:22.349473+00:00",
+        "status": 200,
+        "sha256": "72ad570b70d9415219078ff1094a36be5822f7b4c99092b1c87bec87c60f8540",
+        "names": [
+          "Mobinet Bulgaria Ltd.",
+          "Mobinet-AS"
+        ],
+        "start_asn": 201406,
+        "end_asn": 201406,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/201691",
+        "observed_at": "2026-10-19T08:26:22.428750+00:00",
+        "status": 200,
+        "sha256": "7b955a16ea3b12c70f50b2cc05d1e6983c015242bc6f2d37a4053301d155b6c4",
+        "names": [
+          "Fannavari Etelaate Samane Kavoshgar Ide Ltd.",
+          "weide"
+        ],
+        "start_asn": 201691,
+        "end_asn": 201691,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/204955",
+        "observed_at": "2026-10-19T08:26:22.586070+00:00",
+        "status": 200,
+        "sha256": "b2caab9cb745e412cf0d954b42449b9d2a686ab467c3e010c94464ec3659e4f9",
+        "names": [
+          "Vista Samaneh ASA Company (PJS)",
+          "Vistasamanehasa"
+        ],
+        "start_asn": 204955,
+        "end_asn": 204955,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/205176",
+        "observed_at": "2026-10-19T08:26:22.586294+00:00",
+        "status": 200,
+        "sha256": "3e8e709ef4c3dfd85d0df630a0d837e78d041dc40c755ed03c5d675d5ca8e478",
+        "names": [
+          "Arya Hamrah Samaneh PJS",
+          "aryahamrah"
+        ],
+        "start_asn": 205176,
+        "end_asn": 205176,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/207817",
+        "observed_at": "2026-10-19T08:26:22.716443+00:00",
+        "status": 200,
+        "sha256": "7ac2d5475915291d10bf16cc5b410ba0eb4819738a341500445db34a2321f9ee",
+        "names": [
+          "IR-SEP",
+          "Saman Kish Electronic Payment Company"
+        ],
+        "start_asn": 207817,
+        "end_asn": 207817,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/210405",
+        "observed_at": "2026-10-19T08:26:22.804372+00:00",
+        "status": 200,
+        "sha256": "019a41a0a3fddbce7395813e1c5161304e6c49a48b7dd96471007aaf6d62a62c",
+        "names": [
+          "VIDC",
+          "Vira Cloud DataCenter PJSC"
+        ],
+        "start_asn": 210405,
+        "end_asn": 210405,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/210877",
+        "observed_at": "2026-10-19T08:26:22.932566+00:00",
+        "status": 200,
+        "sha256": "a21574039f60ccdee647479c838944f029979bf4b48a850c4ee3170c69576704",
+        "names": [
+          "IR-TOWSESAMANIT-20201123",
+          "Towse'e Saman Information Technology Co. PJS"
+        ],
+        "start_asn": 210877,
+        "end_asn": 210877,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/213969",
+        "observed_at": "2026-10-19T08:26:22.950793+00:00",
+        "status": 200,
+        "sha256": "97c0b110a15cb184b920a68b6a6855f638362e395618f13e6e7b54433af6cd36",
+        "names": [
+          "Rayanesh Pardis Saman PJSC",
+          "SamanTech"
+        ],
+        "start_asn": 213969,
+        "end_asn": 213969,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/214399",
+        "observed_at": "2026-10-19T08:26:23.053736+00:00",
+        "status": 200,
+        "sha256": "37260edccfcaf318e052443b2b58a9980dd4b26a93663a3e47793168d8647f67",
+        "names": [
+          "PTCO",
+          "Parsian Technology Innovative Solution Co., PJS."
+        ],
+        "start_asn": 214399,
+        "end_asn": 214399,
+        "country": null
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/216061",
+        "observed_at": "2026-10-19T08:26:23.157134+00:00",
+        "status": 200,
+        "sha256": "a8dca1b3c1fdd5efa3b3e42ef9a2037b83a26eb0cb350c55bd411bd33819d16b",
+        "names": [
+          "Cloudinow",
+          "Rasa Samaneh Ofogh LLC"
+        ],
+        "start_asn": 216061,
+        "end_asn": 216061,
+        "country": null
+      }
+    ]
+  },
+  "public_http_observations": [
+    {
+      "url": "https://quera.org/",
+      "observed_at": "2026-10-19T08:24:11.200741+00:00",
+      "status": 200,
+      "final_url": "https://quera.org/",
+      "sha256": "9da921b4cd2380b6614869bc40f061e0ee803b18c5266698ef9b17190a39c921",
+      "bytes": 26152
+    },
+    {
+      "url": "https://faradars.org/",
+      "observed_at": "2026-10-19T08:24:11.201381+00:00",
+      "status": 200,
+      "final_url": "https://faradars.org/",
+      "sha256": "a1d6517a1a9737751443012ec55b8fceed8c4d9655f49b7b5182a908d5eb932d",
+      "bytes": 413533
+    },
+    {
+      "url": "https://yektanet.com/",
+      "observed_at": "2026-10-19T08:24:11.201544+00:00",
+      "status": 200,
+      "final_url": "https://www.yektanet.com/",
+      "sha256": "d8a0fdb6733109ebea9b59c5e4e273561baab3a3396bfab903a14afbba7cebe1",
+      "bytes": 183900
+    },
+    {
+      "url": "https://zarinpal.com/",
+      "observed_at": "2026-10-19T08:24:11.201661+00:00",
+      "status": 200,
+      "final_url": "https://www.zarinpal.com/",
+      "sha256": "4a76d765346fc38f9680c5c910f7753ab8d2c36c556b119a6d16b05b5a74ecf8",
+      "bytes": 223660
+    },
+    {
+      "url": "https://childf.com/",
+      "observed_at": "2026-10-19T08:24:11.663293+00:00",
+      "status": 200,
+      "final_url": "https://childf.com/",
+      "sha256": "7aa0eafbdefdfbbb6bce207213a84a853ea0ba2d847e18dbc47d66ac1c80cdbe",
+      "bytes": 85946
+    },
+    {
+      "url": "https://roozesefr.com/",
+      "observed_at": "2026-10-19T08:24:12.090385+00:00",
+      "status": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1082)>"
+    },
+    {
+      "url": "https://gitinegar.com/",
+      "observed_at": "2026-10-19T08:24:12.323910+00:00",
+      "status": null,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://manebartar.com/",
+      "observed_at": "2026-10-19T08:24:12.373999+00:00",
+      "status": 200,
+      "final_url": "https://manebartar.com/",
+      "sha256": "27c1bfe07181bf4527b298d198ef0af2b83e44c77e7cdde29ef7f0d252d20cbb",
+      "bytes": 872745
+    },
+    {
+      "url": "https://quera.org/contact",
+      "observed_at": "2026-10-19T08:24:45.453631+00:00",
+      "status": 200,
+      "final_url": "https://quera.org/contact",
+      "sha256": "3878e3348d973c730dd5d3fcfc4d9ee7ecae3d8a563216663b25829c165865c5",
+      "bytes": 27909
+    },
+    {
+      "url": "https://faradars.org/about-us",
+      "observed_at": "2026-10-19T08:24:45.454107+00:00",
+      "status": 200,
+      "final_url": "https://faradars.org/about-us",
+      "sha256": "f36009c7e19aa0a51e6cac765ed531dde5077eb47ceb325d5f43e1dcd05a30b8",
+      "bytes": 7227
+    },
+    {
+      "url": "https://faradars.org/contact-us",
+      "observed_at": "2026-10-19T08:24:45.454206+00:00",
+      "status": 200,
+      "final_url": "https://faradars.org/contact-us",
+      "sha256": "efae5a3998915027c1940c30ea67b645a5ec5c2602a994f5b174a30a53c30a13",
+      "bytes": 7401
+    },
+    {
+      "url": "https://www.yektanet.com/contact/",
+      "observed_at": "2026-10-19T08:24:45.454271+00:00",
+      "status": 200,
+      "final_url": "https://www.yektanet.com/contact/",
+      "sha256": "3d2ebb5cee0e0bed25fa95d568f70c57403b132eb2626a572bd9af5c6832053d",
+      "bytes": 133054
+    },
+    {
+      "url": "https://www.zarinpal.com/about-us.html",
+      "observed_at": "2026-10-19T08:24:45.671141+00:00",
+      "status": 404,
+      "error": "HTTP Error 404: Page not found: /about-us"
+    },
+    {
+      "url": "https://www.zarinpal.com/terms.html",
+      "observed_at": "2026-10-19T08:24:45.722772+00:00",
+      "status": 200,
+      "final_url": "https://www.zarinpal.com/terms",
+      "sha256": "9f1b8eccadb10faceb1eb5604a0016c04a9a50f8ba131c2fe75295485bc08156",
+      "bytes": 144328
+    },
+    {
+      "url": "https://childf.com/contact-us/default.aspx",
+      "observed_at": "2026-10-19T08:24:45.744184+00:00",
+      "status": 200,
+      "final_url": "https://childf.com/contact-us/default.aspx",
+      "sha256": "27656af5f9f057f7ba442babe38645f22e01f3fd7e3e1d7c0c867a823ebaa79b",
+      "bytes": 46443
+    },
+    {
+      "url": "https://childf.com/rules/default.aspx",
+      "observed_at": "2026-10-19T08:24:46.192341+00:00",
+      "status": 200,
+      "final_url": "https://childf.com/rules/default.aspx",
+      "sha256": "7f4750e1dfa2b948c463cbe3b6a18e10f2b1adc2575334d7d231f708d9d49c3c",
+      "bytes": 29242
+    },
+    {
+      "url": "https://manebartar.com/contact-us/",
+      "observed_at": "2026-10-19T08:24:46.336804+00:00",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://manebartar.com/rules/",
+      "observed_at": "2026-10-19T08:24:46.432675+00:00",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://www.roozesefr.com/",
+      "observed_at": "2026-10-19T08:24:46.605783+00:00",
+      "status": null,
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1082)>"
+    },
+    {
+      "url": "https://www.gitinegar.com/",
+      "observed_at": "2026-10-19T08:24:46.712851+00:00",
+      "status": null,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.zarinpal.com/aboutus",
+      "observed_at": "2026-10-19T08:25:28.526716+00:00",
+      "status": 200,
+      "final_url": "https://www.zarinpal.com/aboutus",
+      "sha256": "31b3175460305e3d0d9d11190768e5f9e0b31dbf27e09510cb53e9c5582a91be",
+      "bytes": 145569
+    },
+    {
+      "url": "https://www.zarinpal.com/contact",
+      "observed_at": "2026-10-19T08:25:28.527188+00:00",
+      "status": 200,
+      "final_url": "https://www.zarinpal.com/contact",
+      "sha256": "68f3becf82885285b7f073e95ae5ef5b7de5aabb0abf81724ad379cc582274dc",
+      "bytes": 115635
+    },
+    {
+      "url": "https://www.zarinpal.com/terms",
+      "observed_at": "2026-10-19T08:25:28.527319+00:00",
+      "status": 200,
+      "final_url": "https://www.zarinpal.com/terms",
+      "sha256": "9f1b8eccadb10faceb1eb5604a0016c04a9a50f8ba131c2fe75295485bc08156",
+      "bytes": 144328
+    },
+    {
+      "url": "https://next.zarinpal.com/beta/panel",
+      "observed_at": "2026-10-19T08:25:28.527407+00:00",
+      "status": 200,
+      "final_url": "https://next.zarinpal.com/beta/panel",
+      "sha256": "b4eca679043250a561bd11f9f3d32680c2da043cc04eb7cb0fcbeec44413e978",
+      "bytes": 19739
+    },
+    {
+      "url": "https://accounts.yektanet.com/login/",
+      "observed_at": "2026-10-19T08:25:28.983301+00:00",
+      "status": 200,
+      "final_url": "https://accounts.yektanet.com/login/",
+      "sha256": "5d0526cc892c1520d6fa33799a163b14167b831fb3f066459c5380d414c74c19",
+      "bytes": 10661
+    },
+    {
+      "url": "https://www.yektanet.com/",
+      "observed_at": "2026-10-19T08:25:29.047128+00:00",
+      "status": 200,
+      "final_url": "https://www.yektanet.com/",
+      "sha256": "d8a0fdb6733109ebea9b59c5e4e273561baab3a3396bfab903a14afbba7cebe1",
+      "bytes": 183900
+    },
+    {
+      "url": "https://www.childf.com/",
+      "observed_at": "2026-10-19T08:25:29.131596+00:00",
+      "status": 200,
+      "final_url": "https://www.childf.com/",
+      "sha256": "7aa0eafbdefdfbbb6bce207213a84a853ea0ba2d847e18dbc47d66ac1c80cdbe",
+      "bytes": 85946
+    },
+    {
+      "url": "https://manebartar.com/about-us/",
+      "observed_at": "2026-10-19T08:25:29.181013+00:00",
+      "status": 200,
+      "final_url": "https://manebartar.com/about-us/",
+      "sha256": "f7b0cf55e63bd982aeed9b3bdc417789c0e90aa3b63666c4016fdb0fda084463",
+      "bytes": 331152
+    },
+    {
+      "url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "observed_at": "2026-10-19T08:27:40.731495+00:00",
+      "status": 200,
+      "final_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "sha256": "694e9ef509ff618361a1d9d69886d962aadce8e0019456d3f1308f2044fd627d",
+      "bytes": 1083273
+    },
+    {
+      "url": "https://ips.f95.com/",
+      "observed_at": "2026-10-19T08:27:40.732003+00:00",
+      "status": 200,
+      "final_url": "https://ips.f95.com/ips.txt",
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "bytes": 302
+    },
+    {
+      "url": "https://ips.f95.com/ip.txt",
+      "observed_at": "2026-10-19T08:27:40.732102+00:00",
+      "status": 200,
+      "final_url": "https://ips.f95.com/ips.txt",
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "bytes": 302
+    },
+    {
+      "url": "https://ips.f95.com/ips.txt",
+      "observed_at": "2026-10-19T08:27:40.732172+00:00",
+      "status": 200,
+      "final_url": "https://ips.f95.com/ips.txt",
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "bytes": 302
+    }
+  ],
+  "candidate_outcomes": {
+    "domain:quera.org": {
+      "state": "accepted",
+      "reason": "Quera identifies its service as the community of Iranian developers, and its official contact page gives a Tehran office. Track the exact apex hostname used by its public website and registration pages.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "021871b4e1ff852b56026ae36632dc94c487bf76950eb15817490af52baa126c"
+      ],
+      "evidence": [
+        "https://quera.org/",
+        "https://quera.org/contact"
+      ]
+    },
+    "domain:faradars.org": {
+      "state": "accepted",
+      "reason": "The official homepage identifies Faradars as an Iranian online education platform and names Kalan Danesh Sahand as its rights holder. Track its exact apex hostname.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "0a0cfffce527f07c7eaa168abffe52f8f878db75f84903b48e51f642174603a5"
+      ],
+      "evidence": [
+        "https://faradars.org/"
+      ]
+    },
+    "domain:yektanet.com": {
+      "state": "accepted",
+      "reason": "The official website identifies Yektanet as an Iranian advertising platform and names Noavaran Yektanet as its rights holder. Its apex redirects to www, and the official homepage links the accounts.yektanet.com login. Track these three exact hostnames.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "75523579488839c9ee6a11b3a21b7c0c36eb235806434c42e6f42a50f8fb998f"
+      ],
+      "evidence": [
+        "https://yektanet.com/",
+        "https://www.yektanet.com/",
+        "https://www.yektanet.com/contact/",
+        "https://accounts.yektanet.com/login/"
+      ]
+    },
+    "domain:zarinpal.com": {
+      "state": "accepted",
+      "reason": "ZarinPal terms identify Hamrah Pardaz Zarin as the brand owner and explicitly place its payment service under Iranian law and Central Bank/Shaparak requirements. The apex redirects to www, and the homepage links its next.zarinpal.com user panel. Track these three exact hostnames.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "96f46dc484b30537f922da52f903ba8e0be864995707a7a8a08800be145eff16"
+      ],
+      "evidence": [
+        "https://zarinpal.com/",
+        "https://www.zarinpal.com/terms",
+        "https://www.zarinpal.com/aboutus",
+        "https://next.zarinpal.com/beta/panel"
+      ]
+    },
+    "domain:childf.com": {
+      "state": "accepted",
+      "reason": "The official site identifies Moasseseh Khayriyeh Refah Koodak (Child Foundation Iran); its contact page gives a Tehran office. The apex homepage links public pages on www.childf.com, which serves the same official site. Track these two exact hostnames.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "2e025d7680e861efc7fe82eeee8511293752ba63574105639d3e60f9b006f782"
+      ],
+      "evidence": [
+        "https://childf.com/",
+        "https://childf.com/contact-us/default.aspx",
+        "https://www.childf.com/"
+      ]
+    },
+    "domain:manebartar.com": {
+      "state": "accepted",
+      "reason": "The official Manebartar website identifies its training and career-coaching service and gives Tehran as its business location. Its about page confirms the same service identity. Track the exact apex hostname.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "62eec3623373bff3029237bd4f01b526b0b7513a1715a934db88683aaa75fed8"
+      ],
+      "evidence": [
+        "https://manebartar.com/",
+        "https://manebartar.com/about-us/"
+      ]
+    },
+    "domain:roozesefr.com": {
+      "state": "pending",
+      "reason": "The apex and www HTTPS probes both failed certificate validation because the certificate has expired. No current primary service-affiliation evidence was retrieved. Keep the lead pending; do not infer permanent unavailability or a lack of Iranian affiliation.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "6bb7889110365dc35a2058b880b9f3b414bf1ad338ade25fc1c6afbcc06a9164"
+      ],
+      "evidence": [
+        "https://roozesefr.com/",
+        "https://www.roozesefr.com/"
+      ]
+    },
+    "domain:gitinegar.com": {
+      "state": "pending",
+      "reason": "The apex and www probes both failed local DNS resolution. No current primary service-affiliation evidence was retrieved. Keep the lead pending; this is not proof of permanent unavailability or non-Iranian status.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "5cc9e2ae03ebd29d61519e4d41e70efd8fbe484dd0d9ffc147f8caa6c3ffe3c2"
+      ],
+      "evidence": [
+        "https://gitinegar.com/",
+        "https://www.gitinegar.com/"
+      ]
+    },
+    "asn:151062": {
+      "state": "rejected",
+      "reason": "Reject the supplied fuzzy-name assertion: APNIC identifies Matin Net (AF); the Iranian anchor is SINA ATINET Company (Ltd). The supplied Matinnet/Atinet token similarity does not establish affiliation. This rejects these assertions only; new independently supported evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "7fc8d907670374a23ab4b9747aa7b9bad7e4e1f0cb54007deab1f9e545a1dfe4",
+        "917f501c4dd1f86cee2751cbc93ae6c84a801df5e3971463f5512a837e19a0f8"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/151062",
+        "https://rdap.db.ripe.net/autnum/62250"
+      ]
+    },
+    "asn:153322": {
+      "state": "rejected",
+      "reason": "Reject the supplied name-only assertions: APNIC identifies Persian Cable TV Network (PH), while the Iranian anchors identify distinct registrants including Parsian Bank, Parsian Electronic Commerce, Persia System Kashan and Parsian technology/telecommunications companies. The Persian/Parsian/Persia word matches do not establish common ownership. This rejects these assertions only, not any future independently supported relationship.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "29dc91d1afe2270382790e76f14a82692f37b5967e7f99a56754a3f8c07d792b",
+        "3b86355997b8b1f64293d78a447090916b32fb64df504b27b6acdca82d9ddac4",
+        "3ee00465f8fc18b3116465e8d8e1c2e2b904e811d9b081cbaa3dc0b58315e469",
+        "4333799f1e47a0399c52ebca828030014a9b1682e80423e7ee00c9d958551dea",
+        "4483fdb8757d2b8a86c435df59164edd20c6a5f85e56cb515fa8826dba3786d5",
+        "59cb9fee04f989ef3b2e84abcc222b7f5e7cdc37f1217f6b6835fd1595bb4d0d",
+        "5b848ee13788d2ac94dd6f41cb32aaa5065e0b006a3118bc3f87170a398b9777",
+        "63fbfb235284007c99b5ae98d9d19a83ea021cabbf2ae069ab873917eb6489ed",
+        "7d5f9494fdc118bcb27c319f1f7102a989149b62687b608f7ec06410b62438b0",
+        "8e4389ed15ddaba8aae67a1edc730fb9092ec5283c626a645b62b0414c86eb6a",
+        "8e98e29485aa2ec9e9aae94a5371371b3c26650900782e10a1502e35d88ba3b5",
+        "9a43171f45605010698c81cf66eee99d4965f979ac4480dc810a2fc35d6bd697",
+        "9d99b992504bbc88c56305a62d2dd3d2d265318a9e4bdc22d529aa5ac81914ba",
+        "a621f7d7945963d3547700e50e13402d711815f17170ea4f7dc67ae0a596a6d7",
+        "be9f70476d3b45b8c84e3a776a40a0c3becc2ca87f3a124546748dd1bec3c726",
+        "d45c71aa6d87e23f2d8f9ed76af450abe8d285c5c3e7a47b4e2aba1ffdadc61f",
+        "db7312a1d4e1a3dbe7552b24accda32d25d7b808a4f197c6db224a454c9c5782",
+        "f5132560d978d9301da7c9d4b4f8a80eb4e513e7a58a796b2a54c06359dce551",
+        "fe110671d5e6891edb6cc75120f2956c9b8b7fdcd5674bf402e6a01454fce4a5",
+        "fef72aaafc4f07e559f01588b0c261d28bfd0bc4a4aca4689a9b31be791eae05"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/153322",
+        "https://rdap.db.ripe.net/autnum/42043",
+        "https://rdap.db.ripe.net/autnum/44400",
+        "https://rdap.db.ripe.net/autnum/51280",
+        "https://rdap.db.ripe.net/autnum/52070",
+        "https://rdap.db.ripe.net/autnum/56703",
+        "https://rdap.db.ripe.net/autnum/57457",
+        "https://rdap.db.ripe.net/autnum/59882",
+        "https://rdap.db.ripe.net/autnum/59884",
+        "https://rdap.db.ripe.net/autnum/200436",
+        "https://rdap.db.ripe.net/autnum/214399"
+      ]
+    },
+    "asn:201406": {
+      "state": "rejected",
+      "reason": "Reject the supplied name-only assertions: RIPE identifies Mobinet Bulgaria Ltd.; current Iranian anchor records identify Mobin Net Communication Company, Amirkabir University of Technology, Ayandeh Bank and Vira Cloud DataCenter. Similar Mobinet/Mobinnet labels do not establish affiliation. This rejects these assertions only; independently supported new evidence may reopen the candidate.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "07f4365959e375d97d9545b4c0b8b799080094d1abf0cca8a5c315099e345b33",
+        "81a2c0aae3519a8f28b685c66fd259ad9519f02ce48763db6dc2eab0a1490608",
+        "86e3066e6f2b2ec22606d01ea69a36532a6aa53d308b680cc7ededc2d6b005b9",
+        "88a9a0229c16df723ec2bf9b3c9b5f2fc01f58fdde9c612cc849bd97777fa222",
+        "8df351698ac987655ed903199bd140a3a791fa02ba8cf4e73b18a9fd17502471",
+        "be509c52d5de05753ccdd063de297aa54fcebb71537aacb905b0e3d8f6f6854b",
+        "e87b6d4598e2f1e2794f25c8b7d95e460ebb5889ad27095fa77fbd699400f83d"
+      ],
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/201406",
+        "https://rdap.db.ripe.net/autnum/47330",
+        "https://rdap.db.ripe.net/autnum/49792",
+        "https://rdap.db.ripe.net/autnum/50810",
+        "https://rdap.db.ripe.net/autnum/61250",
+        "https://rdap.db.ripe.net/autnum/210405"
+      ]
+    },
+    "asn:200222": {
+      "state": "pending",
+      "reason": "RIPE identifies Sama Tech s.r.o. for AS200222. The supplied Iranian anchors include Rayanesh Pardis Saman (SamanTech), Saman Bank, payment companies and other Samaneh companies. The closer Sama Tech/SamanTech branding warrants follow-up, but the current records establish distinct registrants and supply no verified common ownership or official affiliation. Keep pending until a primary ownership or affiliation source connects them; admit no ASN.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "056795665bc4106b49260d99c439570657f6598c28ada387bfb5a3b741e6bb74",
+        "20a29b9d7f2c1d0ba4f9404b08aa827ab767f02f4a0ebc146cf0ad2110788742",
+        "2d90a01e7aea42787933588a99f959bfe468efe1669eb2928dfd5150b6cf9597",
+        "42e4a10766935c927eb25a9d6eb2a5c858ff794722a6e1543a50973faa1d73ff",
+        "4eeb73e058262e3974f8fa87623beb50f4f4c7f81c84f409e023f2957a5eb7eb",
+        "59881c9858693a7c311c7f38d4637397a0b7eafda8d73d8a8773b43d766308c6",
+        "82fd4a89608d43332191aa3c6211d98ea07d73b93099b3bba8b1467b4d1ffa15",
+        "8c6275f764901e2b150ded697eda758bc35fa8929317316702a49a40e2b8c674",
+        "8e0cd269f038f9fce23c758b85857436f5ed2ee19e54f275bd1e73655a61339b",
+        "8fa6422aa3339dc538e1f7607749ee3955731a6506d696801148a6a77913b079",
+        "90b3b818c7a56198e015272a04cc5ea0e317d34c9956e24f130105a144af2fe7",
+        "9173fdb7930e91e672444d8586ad01ba8785555e5182152f1ef8f92420e2d59a",
+        "927207564d8c984c4b4092151b6ce94e196b22f155aab9eda64f021cb9f33464",
+        "939a95eed7f35d23a4d8ee421c40b0f5218167a1e1f14f3715d5f47cdc8b0e4f",
+        "9b0014f510e9080dbfa52e94a146d3218461cd9709e4e58d7f91dd7d8a357589",
+        "9c1e4e871bbf89df1a85fb22dffa204e0c2bf8749af59017875353a19cf220cc",
+        "a9bb84939d8f29209769325f1173a48f554d4103e9b70e6f2a63d024124c20e8",
+        "ae2fbd5fde99ff644b86e2ceb6826661d3be10b34cb54851ae247dce28fe841d",
+        "bec36f8d8f11a64a3cab30644e3b0284368098faa15648a4fbf1b5f0a12198fb",
+        "c4f0cb0183c4c91484a3db24a75acc84414f6acb3c06a51cfa68c1f903ae365d",
+        "cef3ad581b1e3a4eb28532da34c70959afe1ea4bc89154d92f98356182092da4",
+        "d362392f5cbd123e2314947a49b499971b83a02a44311c11f0802471e1e8d993",
+        "de073eb9d6c520ade085f010ebd3bae98ca46d6dd43b51ce10d00b0aa64ec893",
+        "eade57cede43927578cf18117bf9a9e9bc583dca541dd71ca96273777fe7e669",
+        "eb1e605a074ba7040768a6821f84bd5bc8a343d05798c971fcfad578d922ee81",
+        "eeaba0d96f65fc9eaa0f21c25574438b65e5c2aed7a13b7043f84cd026386ee7",
+        "ef5c477cf02db15f4cf44486d290a74251aef44d793655f7ddbeeb990bf75e6f",
+        "ef89a35452dee4456fcca8990a21da6855d1db9a1102e2df2ffccb51c0a1e347",
+        "f69fceb6e8ef50f9613f0c8456114d5e3d43831a26a48c9604c650d3ee89f11e",
+        "fe75426ca2579928db3a3b324b7807ed74f1f5714615a96b6441976c5b6b0d92"
+      ],
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/200222",
+        "https://rdap.db.ripe.net/autnum/31182",
+        "https://rdap.db.ripe.net/autnum/43487",
+        "https://rdap.db.ripe.net/autnum/50269",
+        "https://rdap.db.ripe.net/autnum/56466",
+        "https://rdap.db.ripe.net/autnum/57497",
+        "https://rdap.db.ripe.net/autnum/58333",
+        "https://rdap.db.ripe.net/autnum/61173",
+        "https://rdap.db.ripe.net/autnum/62442",
+        "https://rdap.db.ripe.net/autnum/201691",
+        "https://rdap.db.ripe.net/autnum/204955",
+        "https://rdap.db.ripe.net/autnum/205176",
+        "https://rdap.db.ripe.net/autnum/207817",
+        "https://rdap.db.ripe.net/autnum/210877",
+        "https://rdap.db.ripe.net/autnum/213969",
+        "https://rdap.db.ripe.net/autnum/216061"
+      ]
+    },
+    "provider:https://api.derak.cloud/public/ipv4": {
+      "state": "pending",
+      "reason": "The refreshed official IPv4 inventory still has 19 entries including private 192.168.204.48/28. Keep the entire inventory outside collection under strict public-prefix validation; no partial admission.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+        "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2"
+      ],
+      "evidence": [
+        "https://api.derak.cloud/public/ipv4"
+      ]
+    },
+    "provider:https://ips.f95.com/ip.txt": {
+      "state": "accepted",
+      "reason": "IranServer official documentation links ips.f95.com; both the root and legacy ip.txt redirect to the already accepted canonical ips.txt. The same 22 public IPv4 host addresses and bytes remain unchanged. Reconfirm this discovery lead without adding a second inventory or changing collection policy.",
+      "reviewed_on": "2026-10-19",
+      "evidence_fingerprints": [
+        "585fdc98650c8b528612cb352698bba6da49dae5eb97449a82c1a01570c4bb66",
+        "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
+        "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
+        "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
+        "ab172b742aa634a12718df48935e811e2ac891ec5d5cbc3d2498c71a0d491d5d",
+        "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08",
+        "d8e550acbf546b81cb7c3c94ff9d5d203c544c2345fd255e3944395b475606f9"
+      ],
+      "evidence": [
+        "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+        "https://ips.f95.com/",
+        "https://ips.f95.com/ip.txt",
+        "https://ips.f95.com/ips.txt"
+      ]
+    }
+  },
+  "projection": {
+    "generated_at": "2026-10-19T08:30:34+00:00",
+    "generation": "c5af53e91ea95c0017b48daae32c3ec7a2d231bc8bb908aed8b7fe6f96cde102",
+    "policy_comparison": {
+      "ipv4": {
+        "before_prefixes": 1871,
+        "after_prefixes": 1871,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 600,
+        "after_prefixes": 600,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      }
+    },
+    "last_publication_comparison": {
+      "ipv4": {
+        "before_prefixes": 1869,
+        "after_prefixes": 1871,
+        "added_ranges": [
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 598,
+        "after_prefixes": 600,
+        "added_ranges": [
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      }
+    },
+    "note": "All 11 newly tracked hostnames are already covered in the fresh baseline. This proposal changes tracking and review state, not current address membership. The +2 IPv4/+2 IPv6 versus last publication also appear in the fresh baseline and come from already accepted service DNS answers.",
+    "new_host_observations": {
+      "quera.org": [
+        {
+          "address": "185.166.104.7",
+          "domain": "quera.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.777682+00:00",
+          "owner": "quera.org",
+          "resolver": "google",
+          "ttl": 67
+        },
+        {
+          "address": "185.166.104.6",
+          "domain": "quera.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.777682+00:00",
+          "owner": "quera.org",
+          "resolver": "google",
+          "ttl": 67
+        },
+        {
+          "address": "185.166.104.6",
+          "domain": "quera.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.745106+00:00",
+          "owner": "quera.org",
+          "resolver": "cloudflare",
+          "ttl": 218
+        },
+        {
+          "address": "185.166.104.7",
+          "domain": "quera.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.745106+00:00",
+          "owner": "quera.org",
+          "resolver": "cloudflare",
+          "ttl": 218
+        }
+      ],
+      "faradars.org": [
+        {
+          "address": "185.143.234.132",
+          "domain": "faradars.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.831340+00:00",
+          "owner": "faradars.org",
+          "resolver": "google",
+          "ttl": 34
+        },
+        {
+          "address": "185.143.233.132",
+          "domain": "faradars.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.831340+00:00",
+          "owner": "faradars.org",
+          "resolver": "google",
+          "ttl": 34
+        },
+        {
+          "address": "185.143.233.132",
+          "domain": "faradars.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.829760+00:00",
+          "owner": "faradars.org",
+          "resolver": "cloudflare",
+          "ttl": 180
+        },
+        {
+          "address": "185.143.234.132",
+          "domain": "faradars.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.829760+00:00",
+          "owner": "faradars.org",
+          "resolver": "cloudflare",
+          "ttl": 180
+        }
+      ],
+      "yektanet.com": [
+        {
+          "address": "185.166.104.4",
+          "domain": "yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.944305+00:00",
+          "owner": "yektanet.com",
+          "resolver": "google",
+          "ttl": 167
+        },
+        {
+          "address": "185.166.104.3",
+          "domain": "yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.944305+00:00",
+          "owner": "yektanet.com",
+          "resolver": "google",
+          "ttl": 167
+        },
+        {
+          "address": "185.166.104.3",
+          "domain": "yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.969650+00:00",
+          "owner": "yektanet.com",
+          "resolver": "cloudflare",
+          "ttl": 300
+        },
+        {
+          "address": "185.166.104.4",
+          "domain": "yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:33.969650+00:00",
+          "owner": "yektanet.com",
+          "resolver": "cloudflare",
+          "ttl": 300
+        }
+      ],
+      "www.yektanet.com": [
+        {
+          "address": "185.166.104.3",
+          "domain": "www.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.044692+00:00",
+          "owner": "www.yektanet.com",
+          "resolver": "google",
+          "ttl": 231
+        },
+        {
+          "address": "185.166.104.4",
+          "domain": "www.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.044692+00:00",
+          "owner": "www.yektanet.com",
+          "resolver": "google",
+          "ttl": 231
+        },
+        {
+          "address": "185.166.104.3",
+          "domain": "www.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.055519+00:00",
+          "owner": "www.yektanet.com",
+          "resolver": "cloudflare",
+          "ttl": 300
+        },
+        {
+          "address": "185.166.104.4",
+          "domain": "www.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.055519+00:00",
+          "owner": "www.yektanet.com",
+          "resolver": "cloudflare",
+          "ttl": 300
+        }
+      ],
+      "accounts.yektanet.com": [
+        {
+          "address": "185.166.104.4",
+          "domain": "accounts.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.165726+00:00",
+          "owner": "accounts.yektanet.com",
+          "resolver": "google",
+          "ttl": 145
+        },
+        {
+          "address": "185.166.104.3",
+          "domain": "accounts.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.165726+00:00",
+          "owner": "accounts.yektanet.com",
+          "resolver": "google",
+          "ttl": 145
+        },
+        {
+          "address": "185.166.104.4",
+          "domain": "accounts.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.210690+00:00",
+          "owner": "accounts.yektanet.com",
+          "resolver": "cloudflare",
+          "ttl": 300
+        },
+        {
+          "address": "185.166.104.3",
+          "domain": "accounts.yektanet.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.210690+00:00",
+          "owner": "accounts.yektanet.com",
+          "resolver": "cloudflare",
+          "ttl": 300
+        }
+      ],
+      "zarinpal.com": [
+        {
+          "address": "185.143.233.1",
+          "domain": "zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.283260+00:00",
+          "owner": "zarinpal.com",
+          "resolver": "google",
+          "ttl": 145
+        },
+        {
+          "address": "185.143.234.1",
+          "domain": "zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.283260+00:00",
+          "owner": "zarinpal.com",
+          "resolver": "google",
+          "ttl": 145
+        },
+        {
+          "address": "185.143.233.1",
+          "domain": "zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.270762+00:00",
+          "owner": "zarinpal.com",
+          "resolver": "cloudflare",
+          "ttl": 24
+        },
+        {
+          "address": "185.143.234.1",
+          "domain": "zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.270762+00:00",
+          "owner": "zarinpal.com",
+          "resolver": "cloudflare",
+          "ttl": 24
+        }
+      ],
+      "www.zarinpal.com": [
+        {
+          "address": "185.143.234.1",
+          "domain": "www.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.361012+00:00",
+          "owner": "www.zarinpal.com",
+          "resolver": "google",
+          "ttl": 21
+        },
+        {
+          "address": "185.143.233.1",
+          "domain": "www.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.361012+00:00",
+          "owner": "www.zarinpal.com",
+          "resolver": "google",
+          "ttl": 21
+        },
+        {
+          "address": "185.143.234.1",
+          "domain": "www.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.360811+00:00",
+          "owner": "www.zarinpal.com",
+          "resolver": "cloudflare",
+          "ttl": 156
+        },
+        {
+          "address": "185.143.233.1",
+          "domain": "www.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.360811+00:00",
+          "owner": "www.zarinpal.com",
+          "resolver": "cloudflare",
+          "ttl": 156
+        }
+      ],
+      "next.zarinpal.com": [
+        {
+          "address": "185.143.234.1",
+          "domain": "next.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.444117+00:00",
+          "owner": "next.zarinpal.com",
+          "resolver": "google",
+          "ttl": 63
+        },
+        {
+          "address": "185.143.233.1",
+          "domain": "next.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.444117+00:00",
+          "owner": "next.zarinpal.com",
+          "resolver": "google",
+          "ttl": 63
+        },
+        {
+          "address": "185.143.233.1",
+          "domain": "next.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.444404+00:00",
+          "owner": "next.zarinpal.com",
+          "resolver": "cloudflare",
+          "ttl": 180
+        },
+        {
+          "address": "185.143.234.1",
+          "domain": "next.zarinpal.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.444404+00:00",
+          "owner": "next.zarinpal.com",
+          "resolver": "cloudflare",
+          "ttl": 180
+        }
+      ],
+      "childf.com": [
+        {
+          "address": "164.138.21.210",
+          "domain": "childf.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.562140+00:00",
+          "owner": "childf.com",
+          "resolver": "google",
+          "ttl": 12230
+        },
+        {
+          "address": "164.138.21.210",
+          "domain": "childf.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.610341+00:00",
+          "owner": "childf.com",
+          "resolver": "cloudflare",
+          "ttl": 14400
+        }
+      ],
+      "www.childf.com": [
+        {
+          "address": "164.138.21.210",
+          "domain": "www.childf.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.636069+00:00",
+          "owner": "www.childf.com",
+          "resolver": "google",
+          "ttl": 5396
+        },
+        {
+          "address": "164.138.21.210",
+          "domain": "www.childf.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.808812+00:00",
+          "owner": "www.childf.com",
+          "resolver": "cloudflare",
+          "ttl": 14400
+        }
+      ],
+      "manebartar.com": [
+        {
+          "address": "45.156.184.38",
+          "domain": "manebartar.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.870344+00:00",
+          "owner": "manebartar.com",
+          "resolver": "google",
+          "ttl": 14400
+        },
+        {
+          "address": "45.156.184.38",
+          "domain": "manebartar.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-19T08:30:34.965815+00:00",
+          "owner": "manebartar.com",
+          "resolver": "cloudflare",
+          "ttl": 14400
+        }
+      ]
+    },
+    "sources": {
+      "dns_snapshot": {
+        "bytes": 143455,
+        "sha512": "cb3673145116987e10d9549a0b20cce78eb2dbbff6569363dfafb03bfec5c2d16782e0e146220af03d35981623d752e94249bb639179531e9e3f6ee6a251db3a",
+        "url": "coverage-policy.json#dns_resolvers"
+      },
+      "ipdeny_ipv4": {
+        "bytes": 30914,
+        "sha512": "f9d3b6e81ca265b0bf4fd6c3ab47e6d83105f45ead574e152d0325f3d06e7937dffbdaf8d60f0aed9c8573ee9394647221b827bc41a1652c283b24764f10953b",
+        "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
+      },
+      "ipdeny_ipv6": {
+        "bytes": 8617,
+        "sha512": "5730b9e84713fa0c66deb21f303d40a1a3cfa41f6fb7af5bd447498bf09d4018bffbff6c51ef9c63fba5b5de0620b9287632ffbf7de40b28dac968f73ba67160",
+        "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
+      },
+      "iptoasn_ipv4": {
+        "bytes": 7005576,
+        "sha512": "bb57ae75d1d0323f875db27cd4d8039fe7c5b3de6f56a547ed5264c553754af5783b4e6bc24a708806570c6114f88742b84e23abbe3e9e57a77a797342af16b3",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2010630,
+        "sha512": "f6b578c8bd51345e99e868709d83cea9d03e85a6f8af9731a349e7248936f9864ee488328be9227f52540e0f07b543f4f5a2233e0734b414f4a9dcf48594f50b",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro_delegated": {
+        "bytes": 57002293,
+        "sha512": "f7366f79168093fda19325d117385da164bc6c8ddfe7cc9977ea517301a9ec2a2e9e37558d589754ba45357e19f381d268e634b38e09c82987a1219d3945ee8e",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      },
+      "provider_arvancloud": {
+        "bytes": 220,
+        "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+        "url": "https://www.arvancloud.ir/fa/ips.txt"
+      },
+      "provider_derakcloud_ipv6": {
+        "bytes": 207,
+        "sha512": "c2e956b20255305511391e16fbe2eac4fa60932401aa461d9716c8bae0c8715790f3820f13c53218bd5f31329aff61078942f0ed25667b8c8979fa5ddb135745",
+        "url": "https://api.derak.cloud/public/ipv6"
+      },
+      "provider_iranserver": {
+        "bytes": 302,
+        "sha512": "2369fd73c2507cb7c4c2eeda052359804b1bc508b4e11a2599f4adedf07c6bee131ea29ae225d0c5c9654e56f3c013a911c54c98c6e3824d23283ca7686b851f",
+        "url": "https://ips.f95.com/ips.txt"
+      },
+      "provider_mizbancloud": {
+        "bytes": 132,
+        "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
+        "url": "https://mizbancloud.com/ips.txt"
+      },
+      "provider_parspack": {
+        "bytes": 828,
+        "sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4",
+        "url": "https://parspack.com/cdnips.txt"
+      }
+    },
+    "policy_sha512": "8118efa0b5a348d9aafaf83505f5c9fde9f116fc8a82cfac5d704ba96e1b8de4359ade312e6f6520d3f9ded81142e86dec1365b5ada25a65320e51aff41e1417",
+    "resolver_disagreements": [
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.46.192",
+            "172.67.141.145"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3030::ac43:8d91",
+            "2606:4700:3033::6815:2ec0"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.86.209",
+            "172.67.136.222"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3031::ac43:88de",
+            "2606:4700:3037::6815:56d1"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 28
+      }
+    ]
+  },
+  "validation": {
+    "unit_tests": 59,
+    "unit_tests_result": "passed",
+    "compileall": "passed",
+    "non_dns_identical_sources": [
+      "ipdeny_ipv4",
+      "ipdeny_ipv6",
+      "iptoasn_ipv4",
+      "iptoasn_ipv6",
+      "nro_delegated",
+      "provider_arvancloud",
+      "provider_derakcloud_ipv6",
+      "provider_iranserver",
+      "provider_mizbancloud",
+      "provider_parspack"
+    ],
+    "identical_common_dns_queries": 224,
+    "new_dns_queries": 44,
+    "dns_successful_and_fresh": 268,
+    "unresolved_accepted_services": [],
+    "guarded_generation_against_last_publication": "passed; zone and manifest-v2 bytes match the candidate projection",
+    "source_interval_containment": "all admitted layer ranges and every service DNS address contained",
+    "complete_page_hash_and_capacity_validation": "passed",
+    "reviewed_foreign_asns_selected": [],
+    "strict_private_provider_rejection": "passed",
+    "known_source_completeness_percent": 100,
+    "new_hostname_ip_explanations_checked": 10
+  },
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null,
+  "deferred_reopened_rejections": [
+    "asn:10022",
+    "asn:10039",
+    "asn:10040",
+    "asn:10043"
+  ],
+  "unsupported_rule_counts": {
+    "not an enumerable exact hostname": 386,
+    "non-public network lead": 1
+  }
+}
