@@ -2477,6 +2477,390 @@
           }
         ]
       }
+    },
+    {
+      "domain": "bale.ai",
+      "evidence": "https://bale.ai/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "bale.ai",
+          "evidence": [
+            "https://bale.ai/",
+            "https://bale.ai/contact",
+            "https://bale.ai/terms",
+            "https://web.bale.ai/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:bale.ai",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "c6396093bb3cad3ddcf518825dfa1d390d7408c6d5050a306d95266b5f8d378b"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "bale.ai",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "web.bale.ai",
+      "evidence": "https://bale.ai/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "web.bale.ai",
+          "evidence": [
+            "https://bale.ai/",
+            "https://bale.ai/contact",
+            "https://bale.ai/terms",
+            "https://web.bale.ai/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:bale.ai",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "c6396093bb3cad3ddcf518825dfa1d390d7408c6d5050a306d95266b5f8d378b"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "bale.ai",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "neshan.org",
+      "evidence": "https://neshan.org/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "neshan.org",
+          "evidence": [
+            "https://neshan.org/",
+            "https://neshan.org/terms-of-service/",
+            "https://platform.neshan.org/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:neshan.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d4496e7b07d2ffd4c82aac2d189de69e7f676c98b93c945a2cb2eb44865188e2"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "neshan.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "platform.neshan.org",
+      "evidence": "https://neshan.org/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "platform.neshan.org",
+          "evidence": [
+            "https://neshan.org/",
+            "https://neshan.org/terms-of-service/",
+            "https://platform.neshan.org/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:neshan.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d4496e7b07d2ffd4c82aac2d189de69e7f676c98b93c945a2cb2eb44865188e2"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "neshan.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "sanjagh.pro",
+      "evidence": "https://sanjagh.pro/app/about-us",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Sanjagh identifies Daricheh Tajrobe No, registration 486284, as its operating company; its contact page gives a Tehran office and its terms identify sanjagh.pro and Iranian law. Track the exact apex hostname. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "sanjagh.pro",
+          "evidence": [
+            "https://sanjagh.pro/app/about-us",
+            "https://sanjagh.pro/app/contact-us",
+            "https://sanjagh.pro/app/terms"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Sanjagh identifies Daricheh Tajrobe No, registration 486284, as its operating company; its contact page gives a Tehran office and its terms identify sanjagh.pro and Iranian law. Track the exact apex hostname. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:sanjagh.pro",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "0a47801c31254c9cc51029825fe631078ec3e25b70434c9de2cc56eddf95416e"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "sanjagh.pro",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "didogram.com",
+      "evidence": "https://didogram.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "didogram.com",
+          "evidence": [
+            "https://didogram.com/",
+            "https://www.didogram.com/",
+            "https://www.didogram.com/contact/",
+            "https://www.didogram.com/rules/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:didogram.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "1397c46a77dffda629b13454ebf409ecdc94115596115e181146df36d012064d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "didogram.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.didogram.com",
+      "evidence": "https://didogram.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.didogram.com",
+          "evidence": [
+            "https://didogram.com/",
+            "https://www.didogram.com/",
+            "https://www.didogram.com/contact/",
+            "https://www.didogram.com/rules/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:didogram.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "1397c46a77dffda629b13454ebf409ecdc94115596115e181146df36d012064d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "didogram.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "iranfartak.com",
+      "evidence": "https://iranfartak.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "iranfartak.com",
+          "evidence": [
+            "https://iranfartak.com/",
+            "https://www.iranfartak.com/",
+            "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:iranfartak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "b54160dc2eecaf9199e33ffda5de1d942caa37a24c76ff03c9c01d347175e37d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "iranfartak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.iranfartak.com",
+      "evidence": "https://iranfartak.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.iranfartak.com",
+          "evidence": [
+            "https://iranfartak.com/",
+            "https://www.iranfartak.com/",
+            "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:iranfartak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "b54160dc2eecaf9199e33ffda5de1d942caa37a24c76ff03c9c01d347175e37d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "iranfartak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "banoomode.co",
+      "evidence": "https://banoomode.co/",
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "review_reason": "Banoomode official contact information gives a Rasht business location, and its about page describes its retail relationship with Iranian clothing brands. Track the exact apex hostname. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "banoomode.co",
+          "evidence": [
+            "https://banoomode.co/",
+            "https://banoomode.co/contact/",
+            "https://banoomode.co/about/"
+          ],
+          "reviewed_on": "2026-10-25",
+          "reason": "Banoomode official contact information gives a Rasht business location, and its about page describes its retail relationship with Iranian clothing brands. Track the exact apex hostname. Collect exact public DNS addresses only; no hosting ASN or wildcard is admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:banoomode.co",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "40529a41ff6d96b124610b57fcf67bb96016a778f16a8f1ee798a24e24853671"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "banoomode.co",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
     }
   ]
 }

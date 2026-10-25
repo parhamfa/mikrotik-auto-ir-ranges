@@ -1,0 +1,1877 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-10-25",
+  "main_commit": "01c035b7858e6122b58f188220362ddb762b0ae3",
+  "data_commit": "97bad0c83f870a48941102f82c79f87b0b735f01",
+  "reviewed_candidates": [
+    "domain:bale.ai",
+    "domain:neshan.org",
+    "domain:sanjagh.pro",
+    "domain:didogram.com",
+    "domain:iranfartak.com",
+    "domain:banoomode.co",
+    "domain:daroochii.com",
+    "domain:cloud-gram.com",
+    "asn:132159",
+    "asn:153324",
+    "asn:20928",
+    "asn:60808",
+    "provider:https://api.derak.cloud/public/ipv4"
+  ],
+  "oldest_previously_unreviewed": [
+    "domain:bale.ai",
+    "domain:neshan.org",
+    "domain:sanjagh.pro",
+    "domain:didogram.com",
+    "domain:iranfartak.com",
+    "domain:banoomode.co",
+    "domain:daroochii.com",
+    "domain:cloud-gram.com",
+    "asn:132159",
+    "asn:153324",
+    "asn:20928",
+    "asn:60808"
+  ],
+  "oldest_first_seen": "2026-09-17T18:24:45.497879+00:00",
+  "additional_exact_hostnames": [
+    "web.bale.ai",
+    "platform.neshan.org",
+    "www.didogram.com",
+    "www.iranfartak.com"
+  ],
+  "selection": "Four messaging, mapping and service-marketplace leads plus the first four oldest unreviewed non-.ir domain candidates sorted by SHA256(2026-10-25 + candidate ID); four foreign-network relationship leads and one provider recheck. At least half remains oldest-unreviewed even counting the derived hostnames separately.",
+  "discovery_before_proposal": {
+    "ageing_catalogue": [],
+    "candidates": {
+      "accepted": 44,
+      "pending": 134786,
+      "rejected": 27
+    },
+    "global_asns": 87369,
+    "iran_anchors": 590,
+    "observed_at": "2026-10-25T07:05:50.347921+00:00",
+    "rdap": {
+      "errors": [],
+      "pending_enrichment": 85958,
+      "requests": 0
+    },
+    "review_queue": [
+      "asn:10043",
+      "asn:10184",
+      "asn:10191",
+      "asn:10212",
+      "asn:10221",
+      "asn:10234",
+      "asn:10277",
+      "asn:10343",
+      "asn:10370",
+      "asn:10551",
+      "asn:10634",
+      "asn:10718",
+      "asn:10745",
+      "asn:10753",
+      "asn:10780",
+      "asn:10899",
+      "asn:10964",
+      "asn:10966",
+      "asn:11081",
+      "asn:11110",
+      "asn:11126",
+      "asn:1115",
+      "asn:11178",
+      "asn:11179",
+      "asn:1120",
+      "asn:10022",
+      "asn:10039",
+      "asn:10040",
+      "asn:11218",
+      "asn:1126",
+      "asn:11336",
+      "asn:11338",
+      "asn:11350",
+      "asn:11365",
+      "asn:11398",
+      "asn:11404",
+      "asn:11452",
+      "asn:11465",
+      "asn:11472",
+      "asn:11537",
+      "asn:11568",
+      "asn:11739",
+      "asn:11758",
+      "asn:11816",
+      "asn:11894",
+      "asn:11954",
+      "asn:1200",
+      "asn:12007",
+      "asn:1204",
+      "asn:12053"
+    ],
+    "schema": 1,
+    "source_errors": [],
+    "sources": [
+      {
+        "license": "MIT",
+        "license_url": "https://github.com/v2fly/domain-list-community/blob/664598567e92d797bea11bb83cf939d1f37e9512/LICENSE",
+        "lineage": "iran-community-domains",
+        "source": "v2fly/domain-list-community",
+        "url": "https://github.com/v2fly/domain-list-community/blob/664598567e92d797bea11bb83cf939d1f37e9512",
+        "version": "664598567e92d797bea11bb83cf939d1f37e9512"
+      },
+      {
+        "asset_url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+        "license": "MIT",
+        "license_url": "https://github.com/bootmortis/iran-hosted-domains/blob/43b6079ef7abee44cd572630f3bcaf4f19adcf08/LICENSE",
+        "lineage": "iran-community-domains",
+        "lineage_note": "Per-entry origin is not supplied; conservatively grouped with v2fly, not counted as independent confirmation.",
+        "original_sources": [
+          "v2fly/domain-list-community",
+          "ITO",
+          "Enamad",
+          "TCI",
+          "IWMF",
+          "bootmortis custom list"
+        ],
+        "release": "202610230802",
+        "sha256": "8fc54cd39c85a3b7de33c490fd53d0ffd46c1fd1abb16631bd98f6dbdb4b78f2",
+        "source": "bootmortis/iran-hosted-domains",
+        "url": "https://github.com/bootmortis/iran-hosted-domains/blob/43b6079ef7abee44cd572630f3bcaf4f19adcf08",
+        "version": "43b6079ef7abee44cd572630f3bcaf4f19adcf08"
+      },
+      {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "chocolate4u-provider-leads",
+        "release_commit": "56db305d4e1429d9cfd2afe3cbbadd615045c978",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099",
+        "version": "676695ea3b4c95d5cf48a7c4e2e718bac5b8a099"
+      }
+    ],
+    "systematic_sources": {
+      "iptoasn_ipv4": {
+        "bytes": 7015037,
+        "sha256": "40662f260721c30352407b11c7524a625757e25988aa3437e7db98d9fe620ccb",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2015793,
+        "sha256": "a582d92bf410285b07195575e7e558cd48b6c32fa862fe92e4419cf69612710a",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro": {
+        "bytes": 57039771,
+        "sha256": "444b88a9fc281fd66ae5ac06bccec21b5cc2588243cb1c5d6a1e3a96c26d1a68",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      }
+    },
+    "universe_coverage_percent": null,
+    "unsupported_rules_count": 387
+  },
+  "unsupported_rule_counts": {
+    "not an enumerable exact hostname": 386,
+    "non-public network lead": 1
+  },
+  "services": [
+    {
+      "root": "bale.ai",
+      "hosts": [
+        "bale.ai",
+        "web.bale.ai"
+      ],
+      "sources": [
+        "https://bale.ai/",
+        "https://bale.ai/contact",
+        "https://bale.ai/terms",
+        "https://web.bale.ai/"
+      ],
+      "reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames.",
+      "quote": "شرکت فناوری اطلاعات راهبر سداد",
+      "quote_source": "https://bale.ai/contact",
+      "discovery": {
+        "candidate_id": "domain:bale.ai",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "c6396093bb3cad3ddcf518825dfa1d390d7408c6d5050a306d95266b5f8d378b"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "bale.ai",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "neshan.org",
+      "hosts": [
+        "neshan.org",
+        "platform.neshan.org"
+      ],
+      "sources": [
+        "https://neshan.org/",
+        "https://neshan.org/terms-of-service/",
+        "https://platform.neshan.org/"
+      ],
+      "reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames.",
+      "quote": "سازه‌های اطلاعاتی راژمان",
+      "quote_source": "https://neshan.org/terms-of-service/",
+      "discovery": {
+        "candidate_id": "domain:neshan.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "d4496e7b07d2ffd4c82aac2d189de69e7f676c98b93c945a2cb2eb44865188e2"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "neshan.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "sanjagh.pro",
+      "hosts": [
+        "sanjagh.pro"
+      ],
+      "sources": [
+        "https://sanjagh.pro/app/about-us",
+        "https://sanjagh.pro/app/contact-us",
+        "https://sanjagh.pro/app/terms"
+      ],
+      "reason": "Sanjagh identifies Daricheh Tajrobe No, registration 486284, as its operating company; its contact page gives a Tehran office and its terms identify sanjagh.pro and Iranian law. Track the exact apex hostname.",
+      "quote": "شرکت دریچه تجربه نو",
+      "quote_source": "https://sanjagh.pro/app/about-us",
+      "discovery": {
+        "candidate_id": "domain:sanjagh.pro",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "0a47801c31254c9cc51029825fe631078ec3e25b70434c9de2cc56eddf95416e"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "sanjagh.pro",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "didogram.com",
+      "hosts": [
+        "didogram.com",
+        "www.didogram.com"
+      ],
+      "sources": [
+        "https://didogram.com/",
+        "https://www.didogram.com/",
+        "https://www.didogram.com/contact/",
+        "https://www.didogram.com/rules/"
+      ],
+      "reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames.",
+      "quote": "شرکت رسانه تجارت نوین",
+      "quote_source": "https://www.didogram.com/rules/",
+      "discovery": {
+        "candidate_id": "domain:didogram.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "1397c46a77dffda629b13454ebf409ecdc94115596115e181146df36d012064d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "didogram.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "iranfartak.com",
+      "hosts": [
+        "iranfartak.com",
+        "www.iranfartak.com"
+      ],
+      "sources": [
+        "https://iranfartak.com/",
+        "https://www.iranfartak.com/",
+        "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9"
+      ],
+      "reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames.",
+      "quote": "تابع قوانین و مقررات جمهوری اسلامی ایران است",
+      "quote_source": "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9",
+      "discovery": {
+        "candidate_id": "domain:iranfartak.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "b54160dc2eecaf9199e33ffda5de1d942caa37a24c76ff03c9c01d347175e37d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "iranfartak.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "banoomode.co",
+      "hosts": [
+        "banoomode.co"
+      ],
+      "sources": [
+        "https://banoomode.co/",
+        "https://banoomode.co/contact/",
+        "https://banoomode.co/about/"
+      ],
+      "reason": "Banoomode official contact information gives a Rasht business location, and its about page describes its retail relationship with Iranian clothing brands. Track the exact apex hostname.",
+      "quote": "رشت، خیابان مطهری",
+      "quote_source": "https://banoomode.co/contact/",
+      "discovery": {
+        "candidate_id": "domain:banoomode.co",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "40529a41ff6d96b124610b57fcf67bb96016a778f16a8f1ee798a24e24853671"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "banoomode.co",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    }
+  ],
+  "candidate_outcomes": {
+    "domain:bale.ai": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames.",
+      "evidence": [
+        "https://bale.ai/",
+        "https://bale.ai/contact",
+        "https://bale.ai/terms",
+        "https://web.bale.ai/"
+      ],
+      "evidence_fingerprints": [
+        "c6396093bb3cad3ddcf518825dfa1d390d7408c6d5050a306d95266b5f8d378b"
+      ]
+    },
+    "domain:neshan.org": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames.",
+      "evidence": [
+        "https://neshan.org/",
+        "https://neshan.org/terms-of-service/",
+        "https://platform.neshan.org/"
+      ],
+      "evidence_fingerprints": [
+        "d4496e7b07d2ffd4c82aac2d189de69e7f676c98b93c945a2cb2eb44865188e2"
+      ]
+    },
+    "domain:sanjagh.pro": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Sanjagh identifies Daricheh Tajrobe No, registration 486284, as its operating company; its contact page gives a Tehran office and its terms identify sanjagh.pro and Iranian law. Track the exact apex hostname.",
+      "evidence": [
+        "https://sanjagh.pro/app/about-us",
+        "https://sanjagh.pro/app/contact-us",
+        "https://sanjagh.pro/app/terms"
+      ],
+      "evidence_fingerprints": [
+        "0a47801c31254c9cc51029825fe631078ec3e25b70434c9de2cc56eddf95416e"
+      ]
+    },
+    "domain:didogram.com": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames.",
+      "evidence": [
+        "https://didogram.com/",
+        "https://www.didogram.com/",
+        "https://www.didogram.com/contact/",
+        "https://www.didogram.com/rules/"
+      ],
+      "evidence_fingerprints": [
+        "1397c46a77dffda629b13454ebf409ecdc94115596115e181146df36d012064d"
+      ]
+    },
+    "domain:iranfartak.com": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames.",
+      "evidence": [
+        "https://iranfartak.com/",
+        "https://www.iranfartak.com/",
+        "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9"
+      ],
+      "evidence_fingerprints": [
+        "b54160dc2eecaf9199e33ffda5de1d942caa37a24c76ff03c9c01d347175e37d"
+      ]
+    },
+    "domain:banoomode.co": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Banoomode official contact information gives a Rasht business location, and its about page describes its retail relationship with Iranian clothing brands. Track the exact apex hostname.",
+      "evidence": [
+        "https://banoomode.co/",
+        "https://banoomode.co/contact/",
+        "https://banoomode.co/about/"
+      ],
+      "evidence_fingerprints": [
+        "40529a41ff6d96b124610b57fcf67bb96016a778f16a8f1ee798a24e24853671"
+      ]
+    },
+    "domain:daroochii.com": {
+      "state": "pending",
+      "reviewed_on": "2026-10-25",
+      "reason": "The apex and www HTTPS probes both failed local DNS resolution. Current primary affiliation evidence was not retrieved. Retain the lead for later investigation; this does not establish global DNS failure, permanent unavailability or non-Iranian status.",
+      "evidence": [
+        "https://daroochii.com/",
+        "https://www.daroochii.com/"
+      ],
+      "evidence_fingerprints": [
+        "0fbba27e288c3b61efb1cb3a56ae5c4aad9b73f418dde48368201f7b7da538f7"
+      ]
+    },
+    "domain:cloud-gram.com": {
+      "state": "pending",
+      "reviewed_on": "2026-10-25",
+      "reason": "The apex and www HTTPS probes both failed local DNS resolution. Current primary affiliation evidence was not retrieved. Retain the lead for later investigation; this does not establish global DNS failure, permanent unavailability or non-Iranian status.",
+      "evidence": [
+        "https://cloud-gram.com/",
+        "https://www.cloud-gram.com/"
+      ],
+      "evidence_fingerprints": [
+        "f8a7e846c368696e1832515ebf2f7c8e211b2e53404c167e60b77c61267d2726"
+      ]
+    },
+    "asn:132159": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied name-only assertions: APNIC identifies Noor Communication Online Network (BD); current Iranian anchor records identify Tebyan-e-Noor Cultural-Artistic Institute, Fara Negar Pardaz Noor Khuzestan, and the Computer Research Center of Islamic Sciences. The shared Noor token does not establish affiliation. Only these assertions are rejected; independently supported new evidence can reopen the candidate.",
+      "evidence": [
+        "https://rdap.apnic.net/autnum/132159",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "776751ea88559ae55315756ee61f67f12e53e0754fe32b56687ff926fac906d2",
+        "b7905208083e99e96903341f9cf72aa60faec5a1767fcf2326f48333533dd906",
+        "efc36f328194c74b31054bb48fa4331f11cffb3f05ecd8c3936a87b7f4b8bf9c"
+      ]
+    },
+    "asn:153324": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied fuzzy-name assertions: APNIC identifies Noori Wave ICT Services Company (AF); Iranian anchors identify different organizations including Hormoz IT, Tebyan-e-Noor, Tehran Municipality ICT Organization, ITRC and the Computer Research Center of Islamic Sciences. Noori/Noor, Wave/Waves and ICT similarities do not establish common ownership. Only these assertions are rejected; new evidence can reopen the candidate.",
+      "evidence": [
+        "https://rdap.apnic.net/autnum/153324",
+        "https://rdap.db.ripe.net/autnum/39364",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "33ab1684656b9a3685f517c1c46c76a283707a8564567fd430b60e85f2d80b9d",
+        "49a66c4dbcd724cba551fffad2be08c59deb6357149e04fd91f8dbec42280b8d",
+        "58f265fec5baa3b97128182145db7eef821894a51c4e6c2a7dc30a42d521151c",
+        "86e1fdd2bb26efcaa6b75b846660e2be70a625132d432d89ac8887e8ffcd6631",
+        "dfb6117c36fef038808a0ed77fb438150f79d924df231894d94017863fc86ff2",
+        "ef3f7d01d9c0d6df1af8823decab5f5550f8f83910f3c96efb7e5943e5db6e22"
+      ]
+    },
+    "asn:20928": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied name-only assertions: authoritative RDAP identifies The Noor Group; current Iranian anchor records identify Tebyan-e-Noor Cultural-Artistic Institute, Fara Negar Pardaz Noor Khuzestan, and the Computer Research Center of Islamic Sciences. The shared Noor word supplies no verified affiliation. Only these assertions are rejected; independently supported new evidence may reopen the candidate.",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/20928",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "1822b3fc3a252a66e33c7a97a624fe2f9798a48b5a1d7d6d1a8f88d6142a4d7a",
+        "273f9041b4c310824efa2933fdf7184c8b6fd06d1ebaa1e2589634f7f88dd0e4",
+        "28c36e6f7f94c6511ff4eb7ebbe40ad850fbbae58b840f9740a72dac4fa908b1",
+        "bd32c0ce4f53b0d75e95615bf957f4a7b316968f4d0dcb7be56ff241c59155a2",
+        "e371fa7daf294a5bff151d9672da6b61588d72f83fc14317ca08844096ce6e1b",
+        "ed074bb10bdd009467c276964952517c3d049a615e07ccbaa95600ddbe74a716"
+      ]
+    },
+    "asn:60808": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied historical Parsun name-match assertions: current authoritative RIPE RDAP identifies AS60808 as AP-2440-60808, registered to Anthropic, PBC. The discovery description still says PARSUN. Iranian anchor records also now identify different organizations, including Tose Masiryabi Shabake Aria, Avini Cultural and Art Institute, Padidar Technology, Pardazeshgaran Etelat Zaban Layeha, and Shabake Tarh Madar Iranian. The historical description does not establish current affiliation. Reopen only on independently supported current evidence.",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/60808",
+        "https://rdap.db.ripe.net/autnum/12697",
+        "https://rdap.db.ripe.net/autnum/62048",
+        "https://rdap.db.ripe.net/autnum/198357",
+        "https://rdap.db.ripe.net/autnum/203895",
+        "https://rdap.db.ripe.net/autnum/213775"
+      ],
+      "evidence_fingerprints": [
+        "07eb2217113913c69626cc98f4a9bf0c797bb9a938fbff1a96aa507a760d0c4a",
+        "6f804a696d87c85a75e4a9cd645d455b26b17d9439e5478b9232290029a489c9",
+        "a7822a25efe8eb5be33d2227eee9e5264042d44856ebf7d86ccce032947098db",
+        "decf698a953b7bd07da6dee25aad95305d1f94808a131c84559d4b6501843723",
+        "e3c35b72bf973e0a68bb13ae095f9c934f89bf6adba15400822d41ece18ec5d3"
+      ]
+    },
+    "provider:https://api.derak.cloud/public/ipv4": {
+      "state": "pending",
+      "reviewed_on": "2026-10-25",
+      "reason": "The official IPv4 inventory remains unchanged at 19 entries including non-public 192.168.204.48/28. Strict public-range validation excludes the entire inventory; no partial admission.",
+      "evidence": [
+        "https://api.derak.cloud/public/ipv4"
+      ],
+      "evidence_fingerprints": [
+        "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+        "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
+        "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
+      ]
+    }
+  },
+  "network_evidence": [
+    {
+      "candidate": "asn:132159",
+      "anchor_asns": [
+        48434,
+        49596,
+        206596
+      ],
+      "reason": "Reject the supplied name-only assertions: APNIC identifies Noor Communication Online Network (BD); current Iranian anchor records identify Tebyan-e-Noor Cultural-Artistic Institute, Fara Negar Pardaz Noor Khuzestan, and the Computer Research Center of Islamic Sciences. The shared Noor token does not establish affiliation. Only these assertions are rejected; independently supported new evidence can reopen the candidate.",
+      "primary_sources": [
+        "https://rdap.apnic.net/autnum/132159",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "776751ea88559ae55315756ee61f67f12e53e0754fe32b56687ff926fac906d2",
+        "b7905208083e99e96903341f9cf72aa60faec5a1767fcf2326f48333533dd906",
+        "efc36f328194c74b31054bb48fa4331f11cffb3f05ecd8c3936a87b7f4b8bf9c"
+      ],
+      "description_at_discovery": [
+        "NCON-AS-AP Noor Communication Online Network"
+      ],
+      "iptoasn_countries": [
+        "BD"
+      ]
+    },
+    {
+      "candidate": "asn:153324",
+      "anchor_asns": [
+        39364,
+        48434,
+        49596,
+        56547,
+        57292,
+        206596
+      ],
+      "reason": "Reject the supplied fuzzy-name assertions: APNIC identifies Noori Wave ICT Services Company (AF); Iranian anchors identify different organizations including Hormoz IT, Tebyan-e-Noor, Tehran Municipality ICT Organization, ITRC and the Computer Research Center of Islamic Sciences. Noori/Noor, Wave/Waves and ICT similarities do not establish common ownership. Only these assertions are rejected; new evidence can reopen the candidate.",
+      "primary_sources": [
+        "https://rdap.apnic.net/autnum/153324",
+        "https://rdap.db.ripe.net/autnum/39364",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "33ab1684656b9a3685f517c1c46c76a283707a8564567fd430b60e85f2d80b9d",
+        "49a66c4dbcd724cba551fffad2be08c59deb6357149e04fd91f8dbec42280b8d",
+        "58f265fec5baa3b97128182145db7eef821894a51c4e6c2a7dc30a42d521151c",
+        "86e1fdd2bb26efcaa6b75b846660e2be70a625132d432d89ac8887e8ffcd6631",
+        "dfb6117c36fef038808a0ed77fb438150f79d924df231894d94017863fc86ff2",
+        "ef3f7d01d9c0d6df1af8823decab5f5550f8f83910f3c96efb7e5943e5db6e22"
+      ],
+      "description_at_discovery": [
+        "NWISC-AS-AP Noori Wave ICT Services Company"
+      ],
+      "iptoasn_countries": [
+        "AF"
+      ]
+    },
+    {
+      "candidate": "asn:20928",
+      "anchor_asns": [
+        48434,
+        49596,
+        206596
+      ],
+      "reason": "Reject the supplied name-only assertions: authoritative RDAP identifies The Noor Group; current Iranian anchor records identify Tebyan-e-Noor Cultural-Artistic Institute, Fara Negar Pardaz Noor Khuzestan, and the Computer Research Center of Islamic Sciences. The shared Noor word supplies no verified affiliation. Only these assertions are rejected; independently supported new evidence may reopen the candidate.",
+      "primary_sources": [
+        "https://rdap.db.ripe.net/autnum/20928",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "1822b3fc3a252a66e33c7a97a624fe2f9798a48b5a1d7d6d1a8f88d6142a4d7a",
+        "273f9041b4c310824efa2933fdf7184c8b6fd06d1ebaa1e2589634f7f88dd0e4",
+        "28c36e6f7f94c6511ff4eb7ebbe40ad850fbbae58b840f9740a72dac4fa908b1",
+        "bd32c0ce4f53b0d75e95615bf957f4a7b316968f4d0dcb7be56ff241c59155a2",
+        "e371fa7daf294a5bff151d9672da6b61588d72f83fc14317ca08844096ce6e1b",
+        "ed074bb10bdd009467c276964952517c3d049a615e07ccbaa95600ddbe74a716"
+      ],
+      "description_at_discovery": [
+        "NOOR-AS"
+      ],
+      "iptoasn_countries": [
+        "EG"
+      ]
+    },
+    {
+      "candidate": "asn:60808",
+      "anchor_asns": [
+        12697,
+        62048,
+        198357,
+        203895,
+        213775
+      ],
+      "reason": "Reject the supplied historical Parsun name-match assertions: current authoritative RIPE RDAP identifies AS60808 as AP-2440-60808, registered to Anthropic, PBC. The discovery description still says PARSUN. Iranian anchor records also now identify different organizations, including Tose Masiryabi Shabake Aria, Avini Cultural and Art Institute, Padidar Technology, Pardazeshgaran Etelat Zaban Layeha, and Shabake Tarh Madar Iranian. The historical description does not establish current affiliation. Reopen only on independently supported current evidence.",
+      "primary_sources": [
+        "https://rdap.db.ripe.net/autnum/60808",
+        "https://rdap.db.ripe.net/autnum/12697",
+        "https://rdap.db.ripe.net/autnum/62048",
+        "https://rdap.db.ripe.net/autnum/198357",
+        "https://rdap.db.ripe.net/autnum/203895",
+        "https://rdap.db.ripe.net/autnum/213775"
+      ],
+      "evidence_fingerprints": [
+        "07eb2217113913c69626cc98f4a9bf0c797bb9a938fbff1a96aa507a760d0c4a",
+        "6f804a696d87c85a75e4a9cd645d455b26b17d9439e5478b9232290029a489c9",
+        "a7822a25efe8eb5be33d2227eee9e5264042d44856ebf7d86ccce032947098db",
+        "decf698a953b7bd07da6dee25aad95305d1f94808a131c84559d4b6501843723",
+        "e3c35b72bf973e0a68bb13ae095f9c934f89bf6adba15400822d41ece18ec5d3"
+      ],
+      "description_at_discovery": [
+        "PARSUN"
+      ],
+      "iptoasn_countries": [
+        "US"
+      ]
+    }
+  ],
+  "registry_observations": [
+    {
+      "url": "https://rdap.db.ripe.net/autnum/12697",
+      "observed_at": "2026-10-25T07:06:24.169306+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/12697",
+      "sha256": "30606813d0914387100b66f30197bcbeebd8b5f8480c1c5262f878c083da9ab5",
+      "bytes": 9140,
+      "names": [
+        "PARSUN-SINDAD-ANCHOR",
+        "Tose Masiryabi Shabake Aria PJSC"
+      ],
+      "websites": [],
+      "start_asn": 12697,
+      "end_asn": 12697,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/20928",
+      "observed_at": "2026-10-25T07:06:24.169486+00:00",
+      "status": 200,
+      "final_url": "https://rdap.afrinic.net/rdap/autnum/20928",
+      "sha256": "4c9ab1e43e8ed905d2648cdc8b6b0bfd48f264ea03adb097f433fab850bc99b1",
+      "bytes": 7939,
+      "names": [
+        "ORG-TNG3-AFRINIC",
+        "The Noor Group"
+      ],
+      "websites": [],
+      "start_asn": 20928,
+      "end_asn": 20928,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/39364",
+      "observed_at": "2026-10-25T07:06:24.169611+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/39364",
+      "sha256": "7b09442158d5f3baf13f4e1d13091f004a73f7976f8ff0bf0bb1cc66f0654880",
+      "bytes": 9237,
+      "names": [
+        "Hormoz IT & Network Waves Connection Co. (PJS)",
+        "Hormoz-IT"
+      ],
+      "websites": [],
+      "start_asn": 39364,
+      "end_asn": 39364,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/48434",
+      "observed_at": "2026-10-25T07:06:24.169731+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/48434",
+      "sha256": "a2f5e134516174a6d081a36d91c880b0c444865e6c6d553961baf2bb60bb7f34",
+      "bytes": 9710,
+      "names": [
+        "Tebyan",
+        "Tebyan-e-Noor Cultural-Artistic Institute"
+      ],
+      "websites": [],
+      "start_asn": 48434,
+      "end_asn": 48434,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/49596",
+      "observed_at": "2026-10-25T07:06:24.533630+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/49596",
+      "sha256": "7fd8c2d54d85522418587c60da0c96b3e3e42450cb5c4a82f965d65163c43f6f",
+      "bytes": 8385,
+      "names": [
+        "Fara Negar Pardaz Noor Khuzestan Co.JSP",
+        "Faranet"
+      ],
+      "websites": [],
+      "start_asn": 49596,
+      "end_asn": 49596,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/56547",
+      "observed_at": "2026-10-25T07:06:24.539630+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/56547",
+      "sha256": "cd5c77defcb5ed1822bcf014a7aa6b0dff9a79f8ff23225266b75085a66442d3",
+      "bytes": 8566,
+      "names": [
+        "TMUNICIPALITY-AS",
+        "Tehran Municipality ICT Organization"
+      ],
+      "websites": [],
+      "start_asn": 56547,
+      "end_asn": 56547,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/57292",
+      "observed_at": "2026-10-25T07:06:24.567880+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/57292",
+      "sha256": "40c91ab22eef2aa3c339087de0ef5dd94daeec0ac8e4b40760130338f46e7310",
+      "bytes": 8705,
+      "names": [
+        "ICT Research Institute (Iran Telecommunications Research Center \"ITRC\")",
+        "ITRC"
+      ],
+      "websites": [],
+      "start_asn": 57292,
+      "end_asn": 57292,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/60808",
+      "observed_at": "2026-10-25T07:06:24.871589+00:00",
+      "status": 200,
+      "final_url": "https://rdap.arin.net/registry/autnum/60808",
+      "sha256": "bc1d5bff8fbaf146427510880e19a6e1bd24c1837c8218689ad5422719595f98",
+      "bytes": 4197,
+      "names": [
+        "AP-2440-60808",
+        "Anthropic, PBC"
+      ],
+      "websites": [],
+      "start_asn": 60808,
+      "end_asn": 60808,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/62048",
+      "observed_at": "2026-10-25T07:06:24.879608+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/62048",
+      "sha256": "85e16fefb3359d65551ca173b0107efcc509e8ded7530c6ee3616f5c7b495a50",
+      "bytes": 7978,
+      "names": [
+        "ACAI",
+        "Avini cultural and Art Institute"
+      ],
+      "websites": [],
+      "start_asn": 62048,
+      "end_asn": 62048,
+      "country": null
+    },
+    {
+      "url": "https://rdap.apnic.net/autnum/132159",
+      "observed_at": "2026-10-25T07:06:24.934514+00:00",
+      "status": 200,
+      "final_url": "https://rdap.apnic.net/autnum/132159",
+      "sha256": "9702926346029677a3a0caf84add55f183f3b8884bf47fc5b8ee639c943fc47c",
+      "bytes": 3581,
+      "names": [
+        "NCON-AS-AP",
+        "Noor Communication Online Network"
+      ],
+      "websites": [],
+      "start_asn": 132159,
+      "end_asn": 132159,
+      "country": "BD"
+    },
+    {
+      "url": "https://rdap.apnic.net/autnum/153324",
+      "observed_at": "2026-10-25T07:06:25.164621+00:00",
+      "status": 200,
+      "final_url": "https://rdap.apnic.net/autnum/153324",
+      "sha256": "33c876efa2627fa498af825af936dbea64e248dc4576737b041fc6c720815b1a",
+      "bytes": 3522,
+      "names": [
+        "NWISC-AS-AP",
+        "Noori Wave ICT Services Company"
+      ],
+      "websites": [],
+      "start_asn": 153324,
+      "end_asn": 153324,
+      "country": "AF"
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/198357",
+      "observed_at": "2026-10-25T07:06:25.260391+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/198357",
+      "sha256": "a23ad8247bbb532a194a1167b3c9a6501d80ede929c092caf68d25bfdf0e32ca",
+      "bytes": 10303,
+      "names": [
+        "Padidar",
+        "Padidar Technology PJSC"
+      ],
+      "websites": [],
+      "start_asn": 198357,
+      "end_asn": 198357,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/203895",
+      "observed_at": "2026-10-25T07:06:25.368470+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/203895",
+      "sha256": "8d56bdbc9a60de064465bdadea90604aae7e835a2658cb2361f42cac45fe8092",
+      "bytes": 8080,
+      "names": [
+        "Pardazeshgaran Etelat Zaban Layeha Co Ltd",
+        "puzzlenet"
+      ],
+      "websites": [],
+      "start_asn": 203895,
+      "end_asn": 203895,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/206596",
+      "observed_at": "2026-10-25T07:06:25.478569+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/206596",
+      "sha256": "57e7720c01d6ddb269755b83dbcb56ef0a3df21434001abdff4310f6ab61268a",
+      "bytes": 7730,
+      "names": [
+        "Computer Research Center of Islamic Sciences",
+        "NOOR-IDC"
+      ],
+      "websites": [],
+      "start_asn": 206596,
+      "end_asn": 206596,
+      "country": null
+    },
+    {
+      "url": "https://rdap.db.ripe.net/autnum/213775",
+      "observed_at": "2026-10-25T07:06:25.653932+00:00",
+      "status": 200,
+      "final_url": "https://rdap.db.ripe.net/autnum/213775",
+      "sha256": "82d064090041f089947758ad524254c2a6d197e41cc88070c111619cc547c3fa",
+      "bytes": 10167,
+      "names": [
+        "Shabake Tarh Madar Iranian Private Joint Stock Company",
+        "iranian-network"
+      ],
+      "websites": [],
+      "start_asn": 213775,
+      "end_asn": 213775,
+      "country": null
+    }
+  ],
+  "public_http_observations": [
+    {
+      "url": "https://bale.ai/",
+      "observed_at": "2026-10-25T07:06:23.162255+00:00",
+      "status": 200,
+      "final_url": "https://bale.ai/",
+      "sha256": "49c813aec80b602185ef9118257eb435b5c750f768783b47eb811895d3b6ef05",
+      "bytes": 238432
+    },
+    {
+      "url": "https://neshan.org/",
+      "observed_at": "2026-10-25T07:06:23.162738+00:00",
+      "status": 200,
+      "final_url": "https://neshan.org/",
+      "sha256": "968fed192646ea62d1b5463926f69daeb50fd44d8d33d3c32ef10c290b5248ed",
+      "bytes": 62624
+    },
+    {
+      "url": "https://sanjagh.pro/",
+      "observed_at": "2026-10-25T07:06:23.162841+00:00",
+      "status": 200,
+      "final_url": "https://sanjagh.pro/cities/%D8%AA%D9%87%D8%B1%D8%A7%D9%86",
+      "sha256": "08d8cbc0cf8a4eb1036fae793be3287311a8162aeb8f8cd1f20aad3d593ede73",
+      "bytes": 1964855
+    },
+    {
+      "url": "https://didogram.com/",
+      "observed_at": "2026-10-25T07:06:23.162910+00:00",
+      "status": 200,
+      "final_url": "https://www.didogram.com/",
+      "sha256": "1257d134da212b2e8d7f1e2fa0760f9bbc35105a5eba0f44700010017b7e849e",
+      "bytes": 175917
+    },
+    {
+      "url": "https://daroochii.com/",
+      "observed_at": "2026-10-25T07:06:23.751320+00:00",
+      "status": null,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://iranfartak.com/",
+      "observed_at": "2026-10-25T07:06:23.802280+00:00",
+      "status": 200,
+      "final_url": "https://www.iranfartak.com/",
+      "sha256": "d5726b31c84905412684d85cac635097106a8673666053bc429a6e5a2cd023c5",
+      "bytes": 151316
+    },
+    {
+      "url": "https://banoomode.co/",
+      "observed_at": "2026-10-25T07:06:23.827339+00:00",
+      "status": 200,
+      "final_url": "https://banoomode.co/",
+      "sha256": "b92afa1e81559e4b93743a3a64ed2b26603dd8aa3dbe529faffb01a185ec8745",
+      "bytes": 215306
+    },
+    {
+      "url": "https://cloud-gram.com/",
+      "observed_at": "2026-10-25T07:06:24.458114+00:00",
+      "status": null,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://bale.ai/contact",
+      "observed_at": "2026-10-25T07:07:28.867522+00:00",
+      "status": 200,
+      "final_url": "https://bale.ai/contact",
+      "sha256": "c6c600445db68ca208071f7f1ed4d09900ef6abc70597cc1f5e566b143f66701",
+      "bytes": 56145
+    },
+    {
+      "url": "https://bale.ai/terms",
+      "observed_at": "2026-10-25T07:07:28.867921+00:00",
+      "status": 200,
+      "final_url": "https://bale.ai/terms",
+      "sha256": "1944f1e9c3dfb9799f971e02b590adc00cc09c7f706aad0ba35ff6bcf87fc18a",
+      "bytes": 248657
+    },
+    {
+      "url": "https://web.bale.ai/",
+      "observed_at": "2026-10-25T07:07:28.868024+00:00",
+      "status": 200,
+      "final_url": "https://web.bale.ai/",
+      "sha256": "88c51feff698483f3bbd0ba5a669523d4a4ded1d2aff8abb687487c2ab08acfe",
+      "bytes": 3985
+    },
+    {
+      "url": "https://neshan.org/terms-of-service/",
+      "observed_at": "2026-10-25T07:07:28.868084+00:00",
+      "status": 200,
+      "final_url": "https://neshan.org/terms-of-service/",
+      "sha256": "5fc0f336d934930a8b9e85a9ff3c2c6879c0ab82c560467714beab1b3ba03d63",
+      "bytes": 115686
+    },
+    {
+      "url": "https://neshan.org/privacy_policy/",
+      "observed_at": "2026-10-25T07:07:29.158447+00:00",
+      "status": 200,
+      "final_url": "https://neshan.org/privacy_policy/",
+      "sha256": "05b7bf76bddc5348c3c5026fd7ddd918a0f594ad2dd0a1ff4d41cfa541de05e1",
+      "bytes": 28061
+    },
+    {
+      "url": "https://sanjagh.pro/app/about-us",
+      "observed_at": "2026-10-25T07:07:29.187905+00:00",
+      "status": 200,
+      "final_url": "https://sanjagh.pro/app/about-us",
+      "sha256": "4246f7600b435d982a6b6c55c809d587ec1cf145391b94296e4dda92d0527459",
+      "bytes": 19755
+    },
+    {
+      "url": "https://sanjagh.pro/app/contact-us",
+      "observed_at": "2026-10-25T07:07:29.258850+00:00",
+      "status": 200,
+      "final_url": "https://sanjagh.pro/app/contact-us",
+      "sha256": "e62ad671f268260a1558ce058c5ac6cd2d9b531fe73629ed8e885433c9090d98",
+      "bytes": 74713
+    },
+    {
+      "url": "https://sanjagh.pro/app/terms",
+      "observed_at": "2026-10-25T07:07:29.304774+00:00",
+      "status": 200,
+      "final_url": "https://sanjagh.pro/app/terms",
+      "sha256": "fc6994a34045e0228e9101b854f0617a24f080198115b6b2ac92c7f028ab0030",
+      "bytes": 163561
+    },
+    {
+      "url": "https://www.didogram.com/about-us/",
+      "observed_at": "2026-10-25T07:07:29.355372+00:00",
+      "status": 200,
+      "final_url": "https://www.didogram.com/about-us/",
+      "sha256": "d582fd54fc2a167da9139962c74f5268d62ec24f16fc0e6eca576594055c6c34",
+      "bytes": 93219
+    },
+    {
+      "url": "https://www.didogram.com/contact/",
+      "observed_at": "2026-10-25T07:07:29.378281+00:00",
+      "status": 200,
+      "final_url": "https://www.didogram.com/contact/",
+      "sha256": "c40b03f75b7eb161db388d09a133ac1b99a242a87d03f185096608c1a2538d03",
+      "bytes": 96929
+    },
+    {
+      "url": "https://www.didogram.com/rules/",
+      "observed_at": "2026-10-25T07:07:29.642234+00:00",
+      "status": 200,
+      "final_url": "https://www.didogram.com/rules/",
+      "sha256": "1eef6e1420654663b214a26dcbd77b08a5fa30053b9e276adfeac2cce967c391",
+      "bytes": 103224
+    },
+    {
+      "url": "https://banoomode.co/contact/",
+      "observed_at": "2026-10-25T07:07:29.708350+00:00",
+      "status": 200,
+      "final_url": "https://banoomode.co/contact/",
+      "sha256": "44da27c4d8fa660eb713e8d22184e9d1a9cf097124d0048e5b4fc0e6b8af9bcb",
+      "bytes": 126676
+    },
+    {
+      "url": "https://banoomode.co/privacy/",
+      "observed_at": "2026-10-25T07:07:30.072139+00:00",
+      "status": 200,
+      "final_url": "https://banoomode.co/privacy/",
+      "sha256": "b6a714db8d08c878ea1d401409f897e2bea6485b43bef2d62940675b29246289",
+      "bytes": 126794
+    },
+    {
+      "url": "https://banoomode.co/about/",
+      "observed_at": "2026-10-25T07:07:30.516203+00:00",
+      "status": 200,
+      "final_url": "https://banoomode.co/about/",
+      "sha256": "3463302e8af5e31284a0010bebb8826d9ec0381cd02c86e2ade2640697fd66ea",
+      "bytes": 122865
+    },
+    {
+      "url": "https://www.daroochii.com/",
+      "observed_at": "2026-10-25T07:07:30.524513+00:00",
+      "status": null,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.cloud-gram.com/",
+      "observed_at": "2026-10-25T07:07:30.533001+00:00",
+      "status": null,
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.iranfartak.com/page/%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%AA%D9%85%D8%A7%D8%B3",
+      "observed_at": "2026-10-25T07:07:57.452701+00:00",
+      "status": 200,
+      "final_url": "https://www.iranfartak.com/page/%D8%A7%D8%B7%D9%84%D8%A7%D8%B9%D8%A7%D8%AA-%D8%AA%D9%85%D8%A7%D8%B3",
+      "sha256": "bdc9e8d4765df3b5b546412ea4fe5664a8123c5dce683497b84a91c6e1513656",
+      "bytes": 70012
+    },
+    {
+      "url": "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9",
+      "observed_at": "2026-10-25T07:07:57.453124+00:00",
+      "status": 200,
+      "final_url": "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9",
+      "sha256": "e89480d62bece7ff1dbcb0f6af691392efc0ce32438ff668155446eab4dfca4b",
+      "bytes": 89646
+    },
+    {
+      "url": "https://www.iranfartak.com/page/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87",
+      "observed_at": "2026-10-25T07:07:57.453217+00:00",
+      "status": 200,
+      "final_url": "https://www.iranfartak.com/page/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87",
+      "sha256": "51238e8b8f143eaba5930fb915b5705879ea785a90136b6b699383ae1a6990bd",
+      "bytes": 54511
+    },
+    {
+      "url": "https://www.iranfartak.com/",
+      "observed_at": "2026-10-25T07:07:57.453285+00:00",
+      "status": 200,
+      "final_url": "https://www.iranfartak.com/",
+      "sha256": "edc9123a4a067806d57148abf88af73d4c5dc0ee86aacffbf3e674e0d4b5736a",
+      "bytes": 151316
+    },
+    {
+      "url": "https://www.didogram.com/",
+      "observed_at": "2026-10-25T07:07:57.997804+00:00",
+      "status": 200,
+      "final_url": "https://www.didogram.com/",
+      "sha256": "1257d134da212b2e8d7f1e2fa0760f9bbc35105a5eba0f44700010017b7e849e",
+      "bytes": 175917
+    },
+    {
+      "url": "https://banoomode.co/policy/",
+      "observed_at": "2026-10-25T07:07:58.004270+00:00",
+      "status": 200,
+      "final_url": "https://banoomode.co/policy/",
+      "sha256": "f4093d71f343fbaec44944f12743340c72815f407f41e521d39f429017213395",
+      "bytes": 125979
+    },
+    {
+      "url": "https://platform.neshan.org/",
+      "observed_at": "2026-10-25T07:09:00.109020+00:00",
+      "status": 200,
+      "final_url": "https://platform.neshan.org/",
+      "sha256": "dbab6359ad2a3a7e151c26c0a467ab8a8f54c7e2bc46b3f765dea3a5567f8967",
+      "bytes": 94745
+    }
+  ],
+  "provider_recheck": {
+    "url": "https://api.derak.cloud/public/ipv4",
+    "observed_at": "2026-10-25T07:07:59.259147+00:00",
+    "bytes": 323,
+    "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c",
+    "count": 19,
+    "non_public": [
+      "192.168.204.48/28"
+    ],
+    "discovery": {
+      "candidate_id": "provider:https://api.derak.cloud/public/ipv4",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "independent_evidence_groups": 1,
+      "evidence_fingerprints": [
+        "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
+        "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
+      ],
+      "sources": [
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/derakcloud.txt",
+          "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+        },
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/derakcloud.txt",
+          "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+        },
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/derakcloud.txt",
+          "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+        },
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/derakcloud.txt",
+          "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
+        },
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/derakcloud.txt",
+          "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
+        },
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "b055853a504d489cde0a0a8a189bd43478d65000",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/b055853a504d489cde0a0a8a189bd43478d65000/text/derakcloud.txt",
+          "version": "b055853a504d489cde0a0a8a189bd43478d65000"
+        },
+        {
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+          "lineage": "provider-inventory:derakcloud",
+          "original_source_urls": [
+            "https://api.derak.cloud/public/ipv4",
+            "https://api.derak.cloud/public/ipv6"
+          ],
+          "path": "text/derakcloud.txt",
+          "release_commit": "56db305d4e1429d9cfd2afe3cbbadd615045c978",
+          "source": "Chocolate4U/Iran-v2ray-rules",
+          "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/56db305d4e1429d9cfd2afe3cbbadd615045c978/text/derakcloud.txt",
+          "version": "56db305d4e1429d9cfd2afe3cbbadd615045c978"
+        }
+      ]
+    }
+  },
+  "prior_provider_review": "evidence/reviews/2026-10-19.json; retain all previously reviewed fingerprints even when an intermediate upstream release is absent from the persisted data-branch pool",
+  "source_lineage_note": "Community lists nominate leads; first-party service pages and current authoritative registries support the review. v2fly and bootmortis remain one shared iran-community-domains evidence group. Retain pinned source versions, MIT domain-list licensing and GPL-3.0 Chocolate4U provider-lead attribution. Unsupported suffixes and patterns remain unexpanded.",
+  "ageing_catalogue": [],
+  "projection": {
+    "generated_at": "2026-10-25T07:11:10+00:00",
+    "generation": "5e96a0ce0caea10a7db19776ae2e1afa967cac0d820cef337278aca449ebca22",
+    "policy_comparison": {
+      "ipv4": {
+        "before_prefixes": 1871,
+        "after_prefixes": 1871,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 600,
+        "after_prefixes": 600,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      }
+    },
+    "last_publication_comparison": {
+      "ipv4": {
+        "before_prefixes": 1869,
+        "after_prefixes": 1871,
+        "added_ranges": [
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 598,
+        "after_prefixes": 600,
+        "added_ranges": [
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      }
+    },
+    "new_hostname_addresses": {
+      "bale.ai": {
+        "ipv4": {
+          "observed_addresses": [
+            "185.166.104.30"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "web.bale.ai": {
+        "ipv4": {
+          "observed_addresses": [
+            "2.189.68.126"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "neshan.org": {
+        "ipv4": {
+          "observed_addresses": [
+            "185.228.58.160",
+            "185.228.58.161"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "platform.neshan.org": {
+        "ipv4": {
+          "observed_addresses": [
+            "185.166.104.6",
+            "185.166.104.7"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "sanjagh.pro": {
+        "ipv4": {
+          "observed_addresses": [
+            "95.128.194.121"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "didogram.com": {
+        "ipv4": {
+          "observed_addresses": [
+            "212.33.194.43"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "www.didogram.com": {
+        "ipv4": {
+          "observed_addresses": [
+            "212.33.194.43"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "iranfartak.com": {
+        "ipv4": {
+          "observed_addresses": [
+            "185.239.1.100"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "www.iranfartak.com": {
+        "ipv4": {
+          "observed_addresses": [
+            "185.239.1.100"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      },
+      "banoomode.co": {
+        "ipv4": {
+          "observed_addresses": [
+            "212.33.203.187"
+          ],
+          "outside_fresh_baseline": []
+        },
+        "ipv6": {
+          "observed_addresses": [],
+          "outside_fresh_baseline": []
+        }
+      }
+    },
+    "dns_observations": {
+      "bale.ai": [
+        {
+          "address": "185.166.104.30",
+          "domain": "bale.ai",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.095952+00:00",
+          "owner": "bale.ai",
+          "resolver": "google",
+          "ttl": 209
+        },
+        {
+          "address": "185.166.104.30",
+          "domain": "bale.ai",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.138127+00:00",
+          "owner": "bale.ai",
+          "resolver": "cloudflare",
+          "ttl": 110
+        }
+      ],
+      "web.bale.ai": [
+        {
+          "address": "2.189.68.126",
+          "domain": "web.bale.ai",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.202461+00:00",
+          "owner": "web.bale.ai",
+          "resolver": "google",
+          "ttl": 33
+        },
+        {
+          "address": "2.189.68.126",
+          "domain": "web.bale.ai",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.254465+00:00",
+          "owner": "web.bale.ai",
+          "resolver": "cloudflare",
+          "ttl": 71
+        }
+      ],
+      "neshan.org": [
+        {
+          "address": "185.228.58.160",
+          "domain": "neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.333129+00:00",
+          "owner": "neshan.org",
+          "resolver": "google",
+          "ttl": 9
+        },
+        {
+          "address": "185.228.58.161",
+          "domain": "neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.333129+00:00",
+          "owner": "neshan.org",
+          "resolver": "google",
+          "ttl": 9
+        },
+        {
+          "address": "185.228.58.161",
+          "domain": "neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.333658+00:00",
+          "owner": "neshan.org",
+          "resolver": "cloudflare",
+          "ttl": 69
+        },
+        {
+          "address": "185.228.58.160",
+          "domain": "neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.333658+00:00",
+          "owner": "neshan.org",
+          "resolver": "cloudflare",
+          "ttl": 69
+        }
+      ],
+      "platform.neshan.org": [
+        {
+          "address": "185.166.104.7",
+          "domain": "platform.neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.553743+00:00",
+          "owner": "platform.neshan.org",
+          "resolver": "google",
+          "ttl": 120
+        },
+        {
+          "address": "185.166.104.6",
+          "domain": "platform.neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.553743+00:00",
+          "owner": "platform.neshan.org",
+          "resolver": "google",
+          "ttl": 120
+        },
+        {
+          "address": "185.166.104.6",
+          "domain": "platform.neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.507877+00:00",
+          "owner": "platform.neshan.org",
+          "resolver": "cloudflare",
+          "ttl": 120
+        },
+        {
+          "address": "185.166.104.7",
+          "domain": "platform.neshan.org",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.507877+00:00",
+          "owner": "platform.neshan.org",
+          "resolver": "cloudflare",
+          "ttl": 120
+        }
+      ],
+      "sanjagh.pro": [
+        {
+          "address": "95.128.194.121",
+          "domain": "sanjagh.pro",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.531589+00:00",
+          "owner": "sanjagh.pro",
+          "resolver": "google",
+          "ttl": 300
+        },
+        {
+          "address": "95.128.194.121",
+          "domain": "sanjagh.pro",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.518272+00:00",
+          "owner": "sanjagh.pro",
+          "resolver": "cloudflare",
+          "ttl": 14
+        }
+      ],
+      "didogram.com": [
+        {
+          "address": "212.33.194.43",
+          "domain": "didogram.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.797639+00:00",
+          "owner": "didogram.com",
+          "resolver": "google",
+          "ttl": 120
+        },
+        {
+          "address": "212.33.194.43",
+          "domain": "didogram.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.750615+00:00",
+          "owner": "didogram.com",
+          "resolver": "cloudflare",
+          "ttl": 120
+        }
+      ],
+      "www.didogram.com": [
+        {
+          "address": "212.33.194.43",
+          "domain": "www.didogram.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.803145+00:00",
+          "owner": "www.didogram.com",
+          "resolver": "google",
+          "ttl": 120
+        },
+        {
+          "address": "212.33.194.43",
+          "domain": "www.didogram.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.787592+00:00",
+          "owner": "www.didogram.com",
+          "resolver": "cloudflare",
+          "ttl": 120
+        }
+      ],
+      "iranfartak.com": [
+        {
+          "address": "185.239.1.100",
+          "domain": "iranfartak.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.972733+00:00",
+          "owner": "iranfartak.com",
+          "resolver": "google",
+          "ttl": 3126
+        },
+        {
+          "address": "185.239.1.100",
+          "domain": "iranfartak.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:09.973196+00:00",
+          "owner": "iranfartak.com",
+          "resolver": "cloudflare",
+          "ttl": 3600
+        }
+      ],
+      "www.iranfartak.com": [
+        {
+          "address": "185.239.1.100",
+          "domain": "www.iranfartak.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:10.034472+00:00",
+          "owner": "www.iranfartak.com",
+          "resolver": "google",
+          "ttl": 2863
+        },
+        {
+          "address": "185.239.1.100",
+          "domain": "www.iranfartak.com",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:10.011586+00:00",
+          "owner": "www.iranfartak.com",
+          "resolver": "cloudflare",
+          "ttl": 3600
+        }
+      ],
+      "banoomode.co": [
+        {
+          "address": "212.33.203.187",
+          "domain": "banoomode.co",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:10.226999+00:00",
+          "owner": "banoomode.co",
+          "resolver": "google",
+          "ttl": 14400
+        },
+        {
+          "address": "212.33.203.187",
+          "domain": "banoomode.co",
+          "freshness": "fresh",
+          "observed_at": "2026-10-25T07:11:10.262948+00:00",
+          "owner": "banoomode.co",
+          "resolver": "cloudflare",
+          "ttl": 14400
+        }
+      ]
+    },
+    "source_snapshots": {
+      "dns_snapshot": {
+        "bytes": 164245,
+        "sha512": "9c226a84de8acf9ba81b659fa930517ac1bd4e58bf286d5b93efd0452da1d257b2d8972d02de74ffa977da7c59004235dc157d8504e906001611655b97953a87",
+        "url": "coverage-policy.json#dns_resolvers"
+      },
+      "ipdeny_ipv4": {
+        "bytes": 30914,
+        "sha512": "f9d3b6e81ca265b0bf4fd6c3ab47e6d83105f45ead574e152d0325f3d06e7937dffbdaf8d60f0aed9c8573ee9394647221b827bc41a1652c283b24764f10953b",
+        "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
+      },
+      "ipdeny_ipv6": {
+        "bytes": 8617,
+        "sha512": "5730b9e84713fa0c66deb21f303d40a1a3cfa41f6fb7af5bd447498bf09d4018bffbff6c51ef9c63fba5b5de0620b9287632ffbf7de40b28dac968f73ba67160",
+        "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
+      },
+      "iptoasn_ipv4": {
+        "bytes": 7015037,
+        "sha512": "c906d7a19f785cc955d1c5bc21cd9e5e2d9af8b61b7dc0bc2ef1ae63b354b058fb050387b8297d192ad48ccfb4205868e53c49af647932e30b79f57b13fd3f66",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2015793,
+        "sha512": "5779b736e3d0f4998ed175d4334a765b903ac92e395b9aa8c8356c6eafdde0aeb014e9151c073755d4a17cdcf04f592ccfbf013ce3afdd2bde30f736e750f818",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro_delegated": {
+        "bytes": 57039771,
+        "sha512": "84cb128c62e52d03051d6b5fba90f648b19929bf2b96e2ef4be8ecbae8be19de6ed40519ec12d87f3fd95cced36d1a6b1d49c5ec3745da7d9b37b1e988b9bcda",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      },
+      "provider_arvancloud": {
+        "bytes": 220,
+        "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+        "url": "https://www.arvancloud.ir/fa/ips.txt"
+      },
+      "provider_derakcloud_ipv6": {
+        "bytes": 207,
+        "sha512": "c2e956b20255305511391e16fbe2eac4fa60932401aa461d9716c8bae0c8715790f3820f13c53218bd5f31329aff61078942f0ed25667b8c8979fa5ddb135745",
+        "url": "https://api.derak.cloud/public/ipv6"
+      },
+      "provider_iranserver": {
+        "bytes": 302,
+        "sha512": "2369fd73c2507cb7c4c2eeda052359804b1bc508b4e11a2599f4adedf07c6bee131ea29ae225d0c5c9654e56f3c013a911c54c98c6e3824d23283ca7686b851f",
+        "url": "https://ips.f95.com/ips.txt"
+      },
+      "provider_mizbancloud": {
+        "bytes": 132,
+        "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
+        "url": "https://mizbancloud.com/ips.txt"
+      },
+      "provider_parspack": {
+        "bytes": 828,
+        "sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4",
+        "url": "https://parspack.com/cdnips.txt"
+      }
+    },
+    "policy_sha512": "ee0597250dc72ac451692c03fbd5af786f78607dc6bb4a8a43b309086c28e17efe237783390321d49da899803a625c699ba8436f2b85d5152a2310d79c0c9295",
+    "resolver_disagreements": [
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.46.192",
+            "172.67.141.145"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3030::ac43:8d91",
+            "2606:4700:3033::6815:2ec0"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "taskulu.com",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.86.209",
+            "172.67.136.222"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3031::ac43:88de",
+            "2606:4700:3037::6815:56d1"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 28
+      }
+    ]
+  },
+  "validation": {
+    "unit_tests": 59,
+    "unit_tests_result": "passed",
+    "compileall": "passed",
+    "guarded_generation": "passed against pinned last publication; zones and manifest-v2 bytes match candidate projection",
+    "page_hash_capacity_validation": "passed",
+    "known_source_completeness_percent": 100,
+    "source_interval_containment": "all admitted source ranges and service observations contained",
+    "identical_non_dns_sources": [
+      "ipdeny_ipv4",
+      "ipdeny_ipv6",
+      "iptoasn_ipv4",
+      "iptoasn_ipv6",
+      "nro_delegated",
+      "provider_arvancloud",
+      "provider_derakcloud_ipv6",
+      "provider_iranserver",
+      "provider_mizbancloud",
+      "provider_parspack"
+    ],
+    "identical_shared_dns_queries": 268,
+    "additional_dns_queries": 40,
+    "dns_outcomes": {
+      "success": 308
+    },
+    "dns_freshness": {
+      "fresh": 308
+    },
+    "unresolved_accepted_services": [],
+    "explained_new_hostname_addresses": 10,
+    "reviewed_asns_selected": [],
+    "strict_private_provider_rejection": "passed"
+  },
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null,
+  "registry_refresh_note": "The source refresh reused the persisted registry cache with zero automatic RDAP requests. The 15 current organization-only candidate/anchor lookups below are separate; global enrichment remains incomplete. Holder IDs were not joined across registries or snapshots.",
+  "deferred_reopened_rejections": [
+    "asn:10022",
+    "asn:10039",
+    "asn:10040",
+    "asn:10043"
+  ]
+}
