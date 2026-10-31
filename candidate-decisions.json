@@ -162,8 +162,11 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reason": "The refreshed official IPv4 inventory still has 19 entries including private 192.168.204.48/28. Keep the entire inventory outside collection under strict public-prefix validation; no partial admission.",
-      "reviewed_on": "2026-10-19",
+      "reviewed_on": "2026-10-25",
+      "reason": "The official IPv4 inventory remains unchanged at 19 entries including non-public 192.168.204.48/28. Strict public-range validation excludes the entire inventory; no partial admission.",
+      "evidence": [
+        "https://api.derak.cloud/public/ipv4"
+      ],
       "evidence_fingerprints": [
         "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
@@ -171,10 +174,8 @@
         "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
         "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
         "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
-        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2"
-      ],
-      "evidence": [
-        "https://api.derak.cloud/public/ipv4"
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
+        "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
       ]
     },
     "provider:https://ips.f95.com/ip.txt": {
@@ -1215,6 +1216,187 @@
         "https://rdap.db.ripe.net/autnum/210877",
         "https://rdap.db.ripe.net/autnum/213969",
         "https://rdap.db.ripe.net/autnum/216061"
+      ]
+    },
+    "domain:bale.ai": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Bale identifies Fannavari Ettelaat Rahbar Sadad as its operating company and explicitly applies Iranian law in its terms. Its official homepage links the web.bale.ai web application. Track these two exact hostnames.",
+      "evidence": [
+        "https://bale.ai/",
+        "https://bale.ai/contact",
+        "https://bale.ai/terms",
+        "https://web.bale.ai/"
+      ],
+      "evidence_fingerprints": [
+        "c6396093bb3cad3ddcf518825dfa1d390d7408c6d5050a306d95266b5f8d378b"
+      ]
+    },
+    "domain:neshan.org": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Neshan terms identify Sazehaye Ettelaati Rajman as owner of its map, routing and platform products and specify Iranian jurisdiction. The official homepage links the developer platform at platform.neshan.org. Track these two exact hostnames.",
+      "evidence": [
+        "https://neshan.org/",
+        "https://neshan.org/terms-of-service/",
+        "https://platform.neshan.org/"
+      ],
+      "evidence_fingerprints": [
+        "d4496e7b07d2ffd4c82aac2d189de69e7f676c98b93c945a2cb2eb44865188e2"
+      ]
+    },
+    "domain:sanjagh.pro": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Sanjagh identifies Daricheh Tajrobe No, registration 486284, as its operating company; its contact page gives a Tehran office and its terms identify sanjagh.pro and Iranian law. Track the exact apex hostname.",
+      "evidence": [
+        "https://sanjagh.pro/app/about-us",
+        "https://sanjagh.pro/app/contact-us",
+        "https://sanjagh.pro/app/terms"
+      ],
+      "evidence_fingerprints": [
+        "0a47801c31254c9cc51029825fe631078ec3e25b70434c9de2cc56eddf95416e"
+      ]
+    },
+    "domain:didogram.com": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Didogram official rules identify Rasaneh Tejarat Novin as its content rights holder and apply Iranian law; its contact page gives a Tehran office. The apex redirects to www. Track these two exact hostnames.",
+      "evidence": [
+        "https://didogram.com/",
+        "https://www.didogram.com/",
+        "https://www.didogram.com/contact/",
+        "https://www.didogram.com/rules/"
+      ],
+      "evidence_fingerprints": [
+        "1397c46a77dffda629b13454ebf409ecdc94115596115e181146df36d012064d"
+      ]
+    },
+    "domain:iranfartak.com": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Iran Fartak identifies its online typing and translation service and explicitly states that its activities follow Iranian law. The apex redirects to the official www website, whose linked rules identify the same service. Track these two exact hostnames.",
+      "evidence": [
+        "https://iranfartak.com/",
+        "https://www.iranfartak.com/",
+        "https://www.iranfartak.com/page/%D9%82%D9%88%D8%A7%D9%86%DB%8C%D9%86-%D9%88-%D9%85%D9%82%D8%B1%D8%B1%D8%A7%D8%AA-%D8%AF%D8%A7%D8%AE%D9%84%DB%8C-%D8%B4%D8%A8%DA%A9%D9%87-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%81%D8%B1%D8%AA%D8%A7%DA%A9"
+      ],
+      "evidence_fingerprints": [
+        "b54160dc2eecaf9199e33ffda5de1d942caa37a24c76ff03c9c01d347175e37d"
+      ]
+    },
+    "domain:banoomode.co": {
+      "state": "accepted",
+      "reviewed_on": "2026-10-25",
+      "reason": "Banoomode official contact information gives a Rasht business location, and its about page describes its retail relationship with Iranian clothing brands. Track the exact apex hostname.",
+      "evidence": [
+        "https://banoomode.co/",
+        "https://banoomode.co/contact/",
+        "https://banoomode.co/about/"
+      ],
+      "evidence_fingerprints": [
+        "40529a41ff6d96b124610b57fcf67bb96016a778f16a8f1ee798a24e24853671"
+      ]
+    },
+    "domain:daroochii.com": {
+      "state": "pending",
+      "reviewed_on": "2026-10-25",
+      "reason": "The apex and www HTTPS probes both failed local DNS resolution. Current primary affiliation evidence was not retrieved. Retain the lead for later investigation; this does not establish global DNS failure, permanent unavailability or non-Iranian status.",
+      "evidence": [
+        "https://daroochii.com/",
+        "https://www.daroochii.com/"
+      ],
+      "evidence_fingerprints": [
+        "0fbba27e288c3b61efb1cb3a56ae5c4aad9b73f418dde48368201f7b7da538f7"
+      ]
+    },
+    "domain:cloud-gram.com": {
+      "state": "pending",
+      "reviewed_on": "2026-10-25",
+      "reason": "The apex and www HTTPS probes both failed local DNS resolution. Current primary affiliation evidence was not retrieved. Retain the lead for later investigation; this does not establish global DNS failure, permanent unavailability or non-Iranian status.",
+      "evidence": [
+        "https://cloud-gram.com/",
+        "https://www.cloud-gram.com/"
+      ],
+      "evidence_fingerprints": [
+        "f8a7e846c368696e1832515ebf2f7c8e211b2e53404c167e60b77c61267d2726"
+      ]
+    },
+    "asn:132159": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied name-only assertions: APNIC identifies Noor Communication Online Network (BD); current Iranian anchor records identify Tebyan-e-Noor Cultural-Artistic Institute, Fara Negar Pardaz Noor Khuzestan, and the Computer Research Center of Islamic Sciences. The shared Noor token does not establish affiliation. Only these assertions are rejected; independently supported new evidence can reopen the candidate.",
+      "evidence": [
+        "https://rdap.apnic.net/autnum/132159",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "776751ea88559ae55315756ee61f67f12e53e0754fe32b56687ff926fac906d2",
+        "b7905208083e99e96903341f9cf72aa60faec5a1767fcf2326f48333533dd906",
+        "efc36f328194c74b31054bb48fa4331f11cffb3f05ecd8c3936a87b7f4b8bf9c"
+      ]
+    },
+    "asn:153324": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied fuzzy-name assertions: APNIC identifies Noori Wave ICT Services Company (AF); Iranian anchors identify different organizations including Hormoz IT, Tebyan-e-Noor, Tehran Municipality ICT Organization, ITRC and the Computer Research Center of Islamic Sciences. Noori/Noor, Wave/Waves and ICT similarities do not establish common ownership. Only these assertions are rejected; new evidence can reopen the candidate.",
+      "evidence": [
+        "https://rdap.apnic.net/autnum/153324",
+        "https://rdap.db.ripe.net/autnum/39364",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "33ab1684656b9a3685f517c1c46c76a283707a8564567fd430b60e85f2d80b9d",
+        "49a66c4dbcd724cba551fffad2be08c59deb6357149e04fd91f8dbec42280b8d",
+        "58f265fec5baa3b97128182145db7eef821894a51c4e6c2a7dc30a42d521151c",
+        "86e1fdd2bb26efcaa6b75b846660e2be70a625132d432d89ac8887e8ffcd6631",
+        "dfb6117c36fef038808a0ed77fb438150f79d924df231894d94017863fc86ff2",
+        "ef3f7d01d9c0d6df1af8823decab5f5550f8f83910f3c96efb7e5943e5db6e22"
+      ]
+    },
+    "asn:20928": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied name-only assertions: authoritative RDAP identifies The Noor Group; current Iranian anchor records identify Tebyan-e-Noor Cultural-Artistic Institute, Fara Negar Pardaz Noor Khuzestan, and the Computer Research Center of Islamic Sciences. The shared Noor word supplies no verified affiliation. Only these assertions are rejected; independently supported new evidence may reopen the candidate.",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/20928",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/49596",
+        "https://rdap.db.ripe.net/autnum/206596"
+      ],
+      "evidence_fingerprints": [
+        "1822b3fc3a252a66e33c7a97a624fe2f9798a48b5a1d7d6d1a8f88d6142a4d7a",
+        "273f9041b4c310824efa2933fdf7184c8b6fd06d1ebaa1e2589634f7f88dd0e4",
+        "28c36e6f7f94c6511ff4eb7ebbe40ad850fbbae58b840f9740a72dac4fa908b1",
+        "bd32c0ce4f53b0d75e95615bf957f4a7b316968f4d0dcb7be56ff241c59155a2",
+        "e371fa7daf294a5bff151d9672da6b61588d72f83fc14317ca08844096ce6e1b",
+        "ed074bb10bdd009467c276964952517c3d049a615e07ccbaa95600ddbe74a716"
+      ]
+    },
+    "asn:60808": {
+      "state": "rejected",
+      "reviewed_on": "2026-10-25",
+      "reason": "Reject the supplied historical Parsun name-match assertions: current authoritative RIPE RDAP identifies AS60808 as AP-2440-60808, registered to Anthropic, PBC. The discovery description still says PARSUN. Iranian anchor records also now identify different organizations, including Tose Masiryabi Shabake Aria, Avini Cultural and Art Institute, Padidar Technology, Pardazeshgaran Etelat Zaban Layeha, and Shabake Tarh Madar Iranian. The historical description does not establish current affiliation. Reopen only on independently supported current evidence.",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/60808",
+        "https://rdap.db.ripe.net/autnum/12697",
+        "https://rdap.db.ripe.net/autnum/62048",
+        "https://rdap.db.ripe.net/autnum/198357",
+        "https://rdap.db.ripe.net/autnum/203895",
+        "https://rdap.db.ripe.net/autnum/213775"
+      ],
+      "evidence_fingerprints": [
+        "07eb2217113913c69626cc98f4a9bf0c797bb9a938fbff1a96aa507a760d0c4a",
+        "6f804a696d87c85a75e4a9cd645d455b26b17d9439e5478b9232290029a489c9",
+        "a7822a25efe8eb5be33d2227eee9e5264042d44856ebf7d86ccce032947098db",
+        "decf698a953b7bd07da6dee25aad95305d1f94808a131c84559d4b6501843723",
+        "e3c35b72bf973e0a68bb13ae095f9c934f89bf6adba15400822d41ece18ec5d3"
       ]
     }
   }
