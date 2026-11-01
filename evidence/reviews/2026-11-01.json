@@ -1,0 +1,2769 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-11-01",
+  "main_commit": "aedb8d16510476317d6807631580f46a50a73de6",
+  "data_commit": "c1b6d3001e3a8c250775afb699989503455245be",
+  "reviewed_candidates": [
+    "domain:igwdc.com",
+    "domain:imedtajhiz.com",
+    "domain:irantech.net",
+    "domain:hematitegold.com",
+    "domain:rasm.io",
+    "domain:rasmio.com",
+    "domain:formafzar.com",
+    "asn:10043",
+    "asn:10184",
+    "asn:10191",
+    "asn:10212",
+    "provider:https://api.derak.cloud/public/ipv4"
+  ],
+  "oldest_previously_unreviewed": [
+    "domain:igwdc.com",
+    "domain:imedtajhiz.com",
+    "domain:irantech.net",
+    "domain:hematitegold.com",
+    "domain:rasm.io",
+    "domain:rasmio.com",
+    "domain:formafzar.com",
+    "asn:10184",
+    "asn:10191",
+    "asn:10212"
+  ],
+  "additional_exact_hostnames": [
+    "www.imedtajhiz.com",
+    "www.hematitegold.com",
+    "my.rasmio.com"
+  ],
+  "review_budget": {
+    "oldest_unreviewed": 10,
+    "total_review_units_including_derived_hostnames_and_provider_rechecks": 20
+  },
+  "selection": "Four oldest queue-head ASN assertions (AS10043 was previously investigated but remains pending); the first four oldest unreviewed non-.ir domain leads sorted by SHA256(2026-11-01 + candidate ID); the old Rasm.io/Rasmio.com migration and Formafzar leads; all five accepted provider inventories plus pending Derak IPv4. The oldest unreviewed share remains at least half even counting derived hostnames separately.",
+  "discovery_before_proposal": {
+    "ageing_catalogue": [],
+    "candidates": {
+      "accepted": 50,
+      "pending": 134818,
+      "rejected": 31
+    },
+    "global_asns": 87477,
+    "iran_anchors": 590,
+    "observed_at": "2026-11-01T06:14:24.463715+00:00",
+    "rdap": {
+      "errors": [],
+      "pending_enrichment": 86064,
+      "requests": 0
+    },
+    "review_queue": [
+      "asn:10043",
+      "asn:10184",
+      "asn:10191",
+      "asn:10212",
+      "asn:10221",
+      "asn:10234",
+      "asn:10277",
+      "asn:10343",
+      "asn:10370",
+      "asn:10551",
+      "asn:10634",
+      "asn:10718",
+      "asn:10745",
+      "asn:10753",
+      "asn:10780",
+      "asn:10899",
+      "asn:10964",
+      "asn:10966",
+      "asn:11081",
+      "asn:11110",
+      "asn:11126",
+      "asn:1115",
+      "asn:11178",
+      "asn:11179",
+      "asn:1120",
+      "asn:10022",
+      "asn:10039",
+      "asn:10040",
+      "asn:11218",
+      "asn:1126",
+      "asn:11336",
+      "asn:11338",
+      "asn:11350",
+      "asn:11365",
+      "asn:11398",
+      "asn:11404",
+      "asn:11452",
+      "asn:11465",
+      "asn:11472",
+      "asn:11537",
+      "asn:11568",
+      "asn:11739",
+      "asn:11758",
+      "asn:11816",
+      "asn:11894",
+      "asn:11954",
+      "asn:1200",
+      "asn:12007",
+      "asn:1204",
+      "asn:12053"
+    ],
+    "schema": 1,
+    "source_errors": [],
+    "sources": [
+      {
+        "license": "MIT",
+        "license_url": "https://github.com/v2fly/domain-list-community/blob/c6fe83bb5ba30856b1bdab9eb49324b338ca9641/LICENSE",
+        "lineage": "iran-community-domains",
+        "source": "v2fly/domain-list-community",
+        "url": "https://github.com/v2fly/domain-list-community/blob/c6fe83bb5ba30856b1bdab9eb49324b338ca9641",
+        "version": "c6fe83bb5ba30856b1bdab9eb49324b338ca9641"
+      },
+      {
+        "asset_url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+        "license": "MIT",
+        "license_url": "https://github.com/bootmortis/iran-hosted-domains/blob/43b6079ef7abee44cd572630f3bcaf4f19adcf08/LICENSE",
+        "lineage": "iran-community-domains",
+        "lineage_note": "Per-entry origin is not supplied; conservatively grouped with v2fly, not counted as independent confirmation.",
+        "original_sources": [
+          "v2fly/domain-list-community",
+          "ITO",
+          "Enamad",
+          "TCI",
+          "IWMF",
+          "bootmortis custom list"
+        ],
+        "release": "202610230802",
+        "sha256": "8fc54cd39c85a3b7de33c490fd53d0ffd46c1fd1abb16631bd98f6dbdb4b78f2",
+        "source": "bootmortis/iran-hosted-domains",
+        "url": "https://github.com/bootmortis/iran-hosted-domains/blob/43b6079ef7abee44cd572630f3bcaf4f19adcf08",
+        "version": "43b6079ef7abee44cd572630f3bcaf4f19adcf08"
+      },
+      {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "chocolate4u-provider-leads",
+        "release_commit": "e3c9686a747c7f6c2f573cd11435216d6a0e2ea2",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099",
+        "version": "676695ea3b4c95d5cf48a7c4e2e718bac5b8a099"
+      }
+    ],
+    "systematic_sources": {
+      "iptoasn_ipv4": {
+        "bytes": 7023670,
+        "sha256": "1fc04e0e974f028d6242b687ffcdec32c0bcb0fcb2af0c468bf7e742770ddfb1",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2027065,
+        "sha256": "0c63cd50e4998b03d79ed418f1f3f08fab2b324565d1b5d209e0f2c6b712b668",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro": {
+        "bytes": 57079372,
+        "sha256": "7da84777fe0dd512b022d5bd117f67dd5e0e86ae892aba65377f8e13c3fdb96f",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      }
+    },
+    "universe_coverage_percent": null,
+    "unsupported_rules_count": 387
+  },
+  "unsupported_rule_counts": {
+    "not an enumerable exact hostname": 386,
+    "non-public network lead": 1
+  },
+  "services": [
+    {
+      "root": "igwdc.com",
+      "state": "pending",
+      "hosts": [],
+      "sources": [
+        "https://igwdc.com/",
+        "https://igwdc.com/lander"
+      ],
+      "reason": "Current apex returns only a JavaScript redirect to /lander; that destination returns HTTP 403. Historical trade-association mentions do not establish the current website operator. Require a current primary company page or registry evidence linking this hostname to the Iranian company before admitting DNS addresses.",
+      "observed_content": "<!DOCTYPE html><html><head><script>window.onload=function(){window.location.href=\"/lander\"}</script></head></html>"
+    },
+    {
+      "root": "imedtajhiz.com",
+      "state": "accepted",
+      "hosts": [
+        "imedtajhiz.com",
+        "www.imedtajhiz.com"
+      ],
+      "sources": [
+        "https://imedtajhiz.com/",
+        "https://imedtajhiz.com/about/",
+        "https://imedtajhiz.com/contact/",
+        "https://imedtajhiz.com/terms-and-conditions/",
+        "https://www.imedtajhiz.com/"
+      ],
+      "reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "quote": "شرکت پزشکی پارسیان تجهیز التیام",
+      "quote_source": "https://imedtajhiz.com/about/",
+      "hostname_proof": {
+        "imedtajhiz.com": "Named as the sole official website in the terms",
+        "www.imedtajhiz.com": "HTTPS GET redirected to https://imedtajhiz.com/ with the same content hash"
+      },
+      "discovery": {
+        "candidate_id": "domain:imedtajhiz.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4a10a5e71a992dad7318a66aa238431a53fa925867eaf4c0653e972484881998"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "imedtajhiz.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "irantech.net",
+      "state": "pending",
+      "hosts": [],
+      "sources": [
+        "https://irantech.net/"
+      ],
+      "reason": "Current local HTTPS lookup fails DNS resolution and the web tool cannot access the official site. No current primary operator/about/contact evidence was obtained. Name similarity and stale third-party domain summaries do not establish Iranian service affiliation; require current primary evidence before admission.",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "root": "hematitegold.com",
+      "state": "accepted",
+      "hosts": [
+        "hematitegold.com",
+        "www.hematitegold.com"
+      ],
+      "sources": [
+        "https://hematitegold.com/",
+        "https://hematitegold.com/contact",
+        "https://www.hematitegold.com/"
+      ],
+      "reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "quote": "تهران، جنت آباد مرکزی، پلاک 219",
+      "quote_source": "https://hematitegold.com/contact",
+      "hostname_proof": {
+        "hematitegold.com": "Current official root and contact page on the exact apex",
+        "www.hematitegold.com": "HTTPS GET redirected to https://hematitegold.com/ with the same content hash"
+      },
+      "discovery": {
+        "candidate_id": "domain:hematitegold.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7fdf5848214693af93ccc9d1d1646f88cbc3596f0ee16914dfe2c170115ededd"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "hematitegold.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "rasm.io",
+      "state": "accepted",
+      "hosts": [
+        "rasm.io",
+        "rasmio.com",
+        "my.rasmio.com"
+      ],
+      "sources": [
+        "https://rasm.io/",
+        "https://rasmio.com/",
+        "https://rasmio.com/about-us/",
+        "https://my.rasmio.com/"
+      ],
+      "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "hostname_proof": {
+        "rasm.io": "HTTPS redirects to rasmio.com; the official history explicitly identifies the former domain.",
+        "rasmio.com": "Current official service and company page.",
+        "my.rasmio.com": "Linked by the official homepage as the business application; the exact destination identifies itself as Rasmio."
+      },
+      "discovery": {
+        "candidate_id": "domain:rasm.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "1df25e928cd56c1848c95b8954533964aeb7687c22242675f2524a1fa16441eb"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rasm.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "formafzar.com",
+      "state": "accepted",
+      "hosts": [
+        "formafzar.com"
+      ],
+      "sources": [
+        "https://formafzar.com/",
+        "https://formafzar.com/AboutUs",
+        "https://formafzar.com/TermsOfService"
+      ],
+      "reason": "Formafzar identifies Farsicom Information Technology Company, registration 428603, as its operator, and publishes its Tehran office on the official site. Its terms identify the Farsicom-operated form-building service. Collect the exact apex public DNS hostname only; neither customer forms on unrelated domains nor hosting ASNs are admitted.",
+      "hostname_proof": {
+        "formafzar.com": "Current official homepage, company and service-terms pages on the exact apex."
+      },
+      "discovery": {
+        "candidate_id": "domain:formafzar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "170942a6cb26a9314ba7c5663143d255207701345ada762c89ce94f8ef7efc66"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "formafzar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    }
+  ],
+  "candidate_outcomes": [
+    {
+      "candidate_id": "domain:igwdc.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "Current apex returns only a JavaScript redirect to /lander; that destination returns HTTP 403. Historical trade-association mentions do not establish the current website operator. Require a current primary company page or registry evidence linking this hostname to the Iranian company before admitting DNS addresses.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "a5a01b8bfa24b9546c82f30ade8d1b9cf8234f7b9778572352ad9eaf7f78ca5d"
+      ],
+      "evidence": [
+        "https://igwdc.com/",
+        "https://igwdc.com/lander"
+      ]
+    },
+    {
+      "candidate_id": "domain:imedtajhiz.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "4a10a5e71a992dad7318a66aa238431a53fa925867eaf4c0653e972484881998"
+      ],
+      "evidence": [
+        "https://imedtajhiz.com/",
+        "https://imedtajhiz.com/about/",
+        "https://imedtajhiz.com/contact/",
+        "https://imedtajhiz.com/terms-and-conditions/",
+        "https://www.imedtajhiz.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:irantech.net",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "Current local HTTPS lookup fails DNS resolution and the web tool cannot access the official site. No current primary operator/about/contact evidence was obtained. Name similarity and stale third-party domain summaries do not establish Iranian service affiliation; require current primary evidence before admission.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "f486f6c37697d51e115f9867e61588488ff67d1bcd2889b0b5f967f90c81cbbf"
+      ],
+      "evidence": [
+        "https://irantech.net/"
+      ]
+    },
+    {
+      "candidate_id": "domain:hematitegold.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "7fdf5848214693af93ccc9d1d1646f88cbc3596f0ee16914dfe2c170115ededd"
+      ],
+      "evidence": [
+        "https://hematitegold.com/",
+        "https://hematitegold.com/contact",
+        "https://www.hematitegold.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:rasm.io",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "1df25e928cd56c1848c95b8954533964aeb7687c22242675f2524a1fa16441eb"
+      ],
+      "evidence": [
+        "https://rasm.io/",
+        "https://rasmio.com/",
+        "https://rasmio.com/about-us/",
+        "https://my.rasmio.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:rasmio.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "3daa816315f175af1a17467b993ca4c14467e1d2a59f2b26f84cd85b04347942"
+      ],
+      "evidence": [
+        "https://rasm.io/",
+        "https://rasmio.com/",
+        "https://rasmio.com/about-us/",
+        "https://my.rasmio.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:formafzar.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Formafzar identifies Farsicom Information Technology Company, registration 428603, as its operator, and publishes its Tehran office on the official site. Its terms identify the Farsicom-operated form-building service. Collect the exact apex public DNS hostname only; neither customer forms on unrelated domains nor hosting ASNs are admitted.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "170942a6cb26a9314ba7c5663143d255207701345ada762c89ce94f8ef7efc66"
+      ],
+      "evidence": [
+        "https://formafzar.com/",
+        "https://formafzar.com/AboutUs",
+        "https://formafzar.com/TermsOfService"
+      ]
+    },
+    {
+      "candidate_id": "asn:10043",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "matched_iran_asns": [
+        5542,
+        6736,
+        15611,
+        16292,
+        34837,
+        35285,
+        39200,
+        41620,
+        43965,
+        47981,
+        48898,
+        49228,
+        56547,
+        57292,
+        57563,
+        59506,
+        59553,
+        60562,
+        203102,
+        203798,
+        206596,
+        212227,
+        215271
+      ],
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies Ministry of Science and ICT (KR); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'ict'/'ict' (1.00), Name similarity 'ministry'/'ministry' (1.00), Name similarity 'science'/'science' (1.00), Name similarity 'sciences'/'science' (0.93) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "071b05a8d771c6f92247d500363703b59cc5375fd870151c3463544f16b70901",
+        "1041054b5d914ebe50fdd27c053fb314e99f93c4384b881b8c9ecaf260273f8e",
+        "12a1188021befd3cd0a1f8bcb509b8b3a456cbf6a5cdfc447b36a9bf7f83f8d3",
+        "1969416138bdfa8b2d2a6e012404b5ab5b12d4cf953efe1eb6321f824cdac922",
+        "214cbcecc3d3560351069ddfb3cc78b46d9a57b3c63cd57190ff43369d7ac5ad",
+        "226300e55f37a69c93ea580a7ed4e641f7bb8b5dc0f4ade96754ceaaf44e665e",
+        "23f392325e0ce0342a11a2b2bdefcc9df9105f8ce39f1154e9125dfb92042b1a",
+        "2d310097342a3ee329435a378dcdfa000f888e2486fc512feb3fb2f1768afc71",
+        "2ddd5d92824a17ba3bf2ab73173edb0e73360406bb988c6e5e7eaf8cd3028243",
+        "353859316fda8c012ee4263c8d64be548ea9a43aff24687887891fecae16fcf7",
+        "3b860e283fa7904768dd133450e6e2f5ec1f4d86282e171a9f3568c179947795",
+        "427dbe24404d62e1aac7cd3e9330cb5dd1ceb925a5ceb62f7cda6ece3040dc1b",
+        "45de1191dde23ce8a2bba3d3db54f59efdd1ebc95400ea00f326116823475258",
+        "4c69253c9988fa247ffe287e75929ce36a60e860a3031991bbf0a8455bdc9d72",
+        "528508fd2a22589ff77e4ec2a3daad8dc7ae34f6492a880acf6359f24abbbd3f",
+        "531898050199593776606a278c72df96ee2b5b2defcd03d1cdfd775c0b8fee2c",
+        "53e9e9406dd8df6931b7417d4cd1dd2015674dcf415794cc2705f35fc6774f50",
+        "58652a8805f3504b3f0f684e3580c16da35df4def4af1a8a06aead848ac6dae6",
+        "5f646bdbec1b20b2605c676c7d93b651b7dd8e528ee4a859063ebd24f64f5450",
+        "60575aaa52e36d0b62ec5eadcbcdf9134cb40c6ae2e6bc7cb184527d42689b58",
+        "608863d5372b937f81efca613f076e5a25bf791edbe1d892b2e26972566f6262",
+        "62db4010f976e9482f727dc86458369d3e7658257876d6c3bf8822a0bb51ea2c",
+        "63afc1250ff93fb6e4388753e2776712e9e30e5f43351f9b7fa1178453cd38ea",
+        "649e5f8f5947ca2063db22eb4218893aaf9a096ce580e19e270c9fc2b07a165e",
+        "6def27386db56c91c305bb372516ba31d46b7e45b4f09d0aebef1bb5fb1d4523",
+        "756e65a822ed497dcac01cd99d58e716bdcf6529a80b0d6382301dd487df2768",
+        "7a868210865a5a00ea3d834ebbaf52dcf02a26928dfc6b8cd92c92c66baef50a",
+        "7f470d69dc1b8d91be592d0f294b2878ed19ac0a33046cdac3f17d4cdc3fea2a",
+        "84b0b5d5b31cbd3ba1d8ba9e60cc5310882f1601f4c299e3311f78355f042d36",
+        "88d414eeb842b180a485d9919b27009b5e416f4ef7494e10c56dadf229642d17",
+        "92117e54baba8e5ea63e1900d5da5fdc9e8333677e87d1ade2ddb8bde6bf14cc",
+        "944b18d459140aaee7173d16483e6fd0f891bb20615f77ccb95ae2614010765c",
+        "a1263c0478538c5668cd0a96606863031dad6701004642c13f59beefdfc51f7b",
+        "a158e6d1232e9c39a51d13696a04be68be37de683becad60c22f6d5ad384379a",
+        "b0aab09356b4c72c15c6d76534025ac2bf80a62ed5f9545326653b89c26271fb",
+        "be64625d5fe2f54d1aa2f45b7dbcd1d1dfbb2a094950da2452c14f0bf37e6806",
+        "c57f8ae13c1cf164db69b0b327b5ca8caf39e125c327aad97a8a721496cc1db5",
+        "c6facd5df2b715af50f42109f0df645846631df790768c8e9005d78cf39455e0",
+        "c7b5997b82a7a196d087df6ae86255f23de448fa03b7c2422868b5ba031ca060",
+        "caabeb0c2703eb3d63f6534c0f02384fc45b5633d2cc5be18ef774d6ea96dfd1",
+        "cc38c4fa8a61d432a17701b719734318b102b9ac8ec2531ad81dc3d4c0d2be64",
+        "e06b22035393e0c2f009f5fbb4b765370d24c4af3a5882102cd41b090e931d46",
+        "e7b97366a9b4e6d459a73c4bb4bf829e330ddfbb1862dbbdd48a7ebbc9f8c950",
+        "ea530f78dc583fe3975b83592082e029a712cd6c4b7b648222e11fe4339b4c70",
+        "f7e5286de84c28daa84a6c10d2f30a56c04f55aa2c68ac21cad5ebaed59ca2d1",
+        "fa98bc333033e80cf310f44a047886a3714b05736db007a765471e3dc0ee6d84"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10043",
+        "https://rdap.db.ripe.net/autnum/5542",
+        "https://rdap.db.ripe.net/autnum/6736",
+        "https://rdap.db.ripe.net/autnum/15611",
+        "https://rdap.db.ripe.net/autnum/16292",
+        "https://rdap.db.ripe.net/autnum/34837",
+        "https://rdap.db.ripe.net/autnum/35285",
+        "https://rdap.db.ripe.net/autnum/39200",
+        "https://rdap.db.ripe.net/autnum/41620",
+        "https://rdap.db.ripe.net/autnum/43965",
+        "https://rdap.db.ripe.net/autnum/47981",
+        "https://rdap.db.ripe.net/autnum/48898",
+        "https://rdap.db.ripe.net/autnum/49228",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292",
+        "https://rdap.db.ripe.net/autnum/57563",
+        "https://rdap.db.ripe.net/autnum/59506",
+        "https://rdap.db.ripe.net/autnum/59553",
+        "https://rdap.db.ripe.net/autnum/60562",
+        "https://rdap.db.ripe.net/autnum/203102",
+        "https://rdap.db.ripe.net/autnum/203798",
+        "https://rdap.db.ripe.net/autnum/206596",
+        "https://rdap.db.ripe.net/autnum/212227",
+        "https://rdap.db.ripe.net/autnum/215271"
+      ]
+    },
+    {
+      "candidate_id": "asn:10184",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "matched_iran_asns": [
+        43395,
+        44045,
+        50749,
+        58303,
+        58331,
+        62198,
+        198341,
+        202391,
+        202601,
+        208124
+      ],
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies Korean Federation of Community Credit Cooperatives (KR); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'cooperative'/'cooperatives' (0.96), Name similarity 'credit'/'credit' (1.00) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "074ad55799adf980e67640a3f3c42da161a18e9c8b1dc18548ba3d8efb45bb4c",
+        "27b0ed2a78c8dc0af681f57a30be29e86444e32aa538cf8039468fab7769f9da",
+        "28e57dd797491f19a5ea93dbd90647ea87c6faf761f960626ed8192067714129",
+        "4028b0a041f4029da8829198f74fbac0ebcee3dfbadd9ac6ca9667bf7aad10dd",
+        "5bb30f3543645d0548c50e450d47e0bc695c8195612f773ec585565a7e97c008",
+        "87b2edf697f9cefc7353492c54001d55f4ebf92d2e9dc899a63c9937617b4aef",
+        "a8a3d37e761462e37d86e89a1a3403cbc88770a02ffb808a541256e70267a100",
+        "ae07404329749024d84d28ee556e3a0bf867fdd5b15e81874b1933686d83978e",
+        "c8b6cc7ffcf9887589f56f9d44b8a04a18c8cfeefefb5ed33fc3ca67571f47ba",
+        "e80308ff273a1475cc573933efa90e4b29417c24c94b7b56a29af3fd963ca47d"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10184",
+        "https://rdap.db.ripe.net/autnum/43395",
+        "https://rdap.db.ripe.net/autnum/44045",
+        "https://rdap.db.ripe.net/autnum/50749",
+        "https://rdap.db.ripe.net/autnum/58303",
+        "https://rdap.db.ripe.net/autnum/58331",
+        "https://rdap.db.ripe.net/autnum/62198",
+        "https://rdap.db.ripe.net/autnum/198341",
+        "https://rdap.db.ripe.net/autnum/202391",
+        "https://rdap.db.ripe.net/autnum/202601",
+        "https://rdap.db.ripe.net/autnum/208124"
+      ]
+    },
+    {
+      "candidate_id": "asn:10191",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "matched_iran_asns": [
+        5542,
+        16292,
+        43965,
+        47981,
+        48898,
+        49228,
+        56375,
+        57563,
+        59506,
+        59553,
+        60562,
+        203102,
+        203798,
+        212227
+      ],
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies SEEGENE MEDICAL FOUNDATION (KR); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'foundation'/'foundation' (1.00), Name similarity 'medical'/'medical' (1.00) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "11c45416660cf67928671963f8c7d138ad0b71b28d0378cd26cb06d2ac2829e5",
+        "173af14c6e3fe75942cc69ff8967cadef2b6d63a5d4c8d270562485ff449a9d3",
+        "1c0efcc8bf250399bdd872c8016448c5eb66a87e493e7f900e45607cb111c6e7",
+        "236792e32127a880040ab28951dc0adf4b5c4009f0e174251b180e97613290d1",
+        "2ccf11a2f3b67ca187af5b2c8b7379de7cf460623f2deb95c8e3b396014e7bda",
+        "340cea8a852f6daa3225fc78b1910ba08419175816410944337c9dc5bf0c1c88",
+        "35caf2b1d5e7125c6fa4f1a88737e7260d6e86f9fa985e4449023a13e931c799",
+        "5557661d6b4e25b6f78e0fee3b526d97db8aa0fdbd4338c7f53df5d3cf4f0c9f",
+        "6929529754c5985ab73665cdc056bb71197d4b686367c567b3005a894afd742c",
+        "8acabb2240656379058e780c27c9d8cb9f9e065dabfae565e8e50d5c55e118a0",
+        "9c1e6c865c12bc7199379c376c2ef83095b20f51191947018469332c08fef7d9",
+        "b5a398d8beb1dffccd81f7367092c3d9481dadfa6fad2c837f3f7d3b0db834be",
+        "d981c25d35e490446f717b7069eb609e2972fd9567293ee3386d1e48549ad551",
+        "e56d7f23e6a6619b9a6d5ca43038a1cf16af89bd688561c305e620f7649f9c62"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10191",
+        "https://rdap.db.ripe.net/autnum/5542",
+        "https://rdap.db.ripe.net/autnum/16292",
+        "https://rdap.db.ripe.net/autnum/43965",
+        "https://rdap.db.ripe.net/autnum/47981",
+        "https://rdap.db.ripe.net/autnum/48898",
+        "https://rdap.db.ripe.net/autnum/49228",
+        "https://rdap.db.ripe.net/autnum/56375",
+        "https://rdap.db.ripe.net/autnum/57563",
+        "https://rdap.db.ripe.net/autnum/59506",
+        "https://rdap.db.ripe.net/autnum/59553",
+        "https://rdap.db.ripe.net/autnum/60562",
+        "https://rdap.db.ripe.net/autnum/203102",
+        "https://rdap.db.ripe.net/autnum/203798",
+        "https://rdap.db.ripe.net/autnum/212227"
+      ]
+    },
+    {
+      "candidate_id": "asn:10212",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "matched_iran_asns": [
+        56547,
+        57292
+      ],
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies China Enterprise ICT Solutions Limited (CN); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'ict'/'ict' (1.00) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "6b12c8fd6b620286742fbeaa7ab211faead5a7ce7c51f804ed42b9b9b62bd21c",
+        "ab397465957416050be75646498e5d42ebe2f48c46e647eb8141b7deabbcc7de"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10212",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292"
+      ]
+    },
+    {
+      "candidate_id": "provider:https://api.derak.cloud/public/ipv4",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "Entire provider inventory remains inadmissible while a private network is present; no partial admission.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "78fbc98fa503003d08ea26213a68d706a574771fba2942ea747b2d51d65c606e",
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+        "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
+        "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
+      ],
+      "evidence": [
+        "https://api.derak.cloud/public/ipv4",
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/"
+      ]
+    }
+  ],
+  "registry_observations": {
+    "5542": {
+      "url": "https://rdap.db.ripe.net/autnum/5542",
+      "final_url": "https://rdap.db.ripe.net/autnum/5542",
+      "observed_at": "2026-11-01T06:14:24.574745+00:00",
+      "status": 200,
+      "sha256": "18054bc7d36d50ec98ce33958dd30c47575a13947ccdb373e5b47a873cbf7556",
+      "handle": "AS5542",
+      "name": "Ministry-Of-Health",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-MOHT1-RIPE",
+          "names": [
+            "Ministry of Health, Treatment and Medical Education"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "6736": {
+      "url": "https://rdap.db.ripe.net/autnum/6736",
+      "final_url": "https://rdap.db.ripe.net/autnum/6736",
+      "observed_at": "2026-11-01T06:14:24.575296+00:00",
+      "status": 200,
+      "sha256": "b8a16a303387bade5f46c9fe21678018c87ae0b74c18ae5ef769362d7da3faa5",
+      "handle": "AS6736",
+      "name": "IRANET-IPM",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IA30-RIPE",
+          "names": [
+            "Institute for Research in Fundamental Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "10043": {
+      "url": "https://rdap.apnic.net/autnum/10043",
+      "final_url": "https://krnic.rdap.apnic.net/autnum/10043",
+      "observed_at": "2026-11-01T06:14:24.575522+00:00",
+      "status": 200,
+      "sha256": "bd98113e1e7c28e4fb158c5c5d55b6f852c0b3cc21d564bf4de7b7f5773bf5f6",
+      "handle": "AS10043",
+      "name": "MIC-AS-KR-KR",
+      "country": "KR",
+      "descriptions": [
+        "Ministry of Science and ICT"
+      ],
+      "organizations": [],
+      "index_country_labels": [
+        "KR"
+      ]
+    },
+    "10184": {
+      "url": "https://rdap.apnic.net/autnum/10184",
+      "final_url": "https://krnic.rdap.apnic.net/autnum/10184",
+      "observed_at": "2026-11-01T06:14:24.575602+00:00",
+      "status": 200,
+      "sha256": "4aa5165eab8160671cf9f780b37fd7f24506479a4534265d4dd87ef24cc1eb62",
+      "handle": "AS10184",
+      "name": "KFCCC-AS-KR",
+      "country": "KR",
+      "descriptions": [
+        "Korean Federation of Community Credit Cooperatives"
+      ],
+      "organizations": [],
+      "index_country_labels": [
+        "KR"
+      ]
+    },
+    "10191": {
+      "url": "https://rdap.apnic.net/autnum/10191",
+      "final_url": "https://krnic.rdap.apnic.net/autnum/10191",
+      "observed_at": "2026-11-01T06:14:24.575703+00:00",
+      "status": 200,
+      "sha256": "99ca0345242e994f431f2d83b0e9466366b99f51a270a22da947aeb1d2e3fabf",
+      "handle": "AS10191",
+      "name": "SGMF-AS-KR-KR",
+      "country": "KR",
+      "descriptions": [
+        "SEEGENE MEDICAL FOUNDATION"
+      ],
+      "organizations": [],
+      "index_country_labels": [
+        "KR"
+      ]
+    },
+    "10212": {
+      "url": "https://rdap.apnic.net/autnum/10212",
+      "final_url": "https://rdap.apnic.net/autnum/10212",
+      "observed_at": "2026-11-01T06:14:24.575773+00:00",
+      "status": 200,
+      "sha256": "baac7f77401b64754b746216939fc36855e02f3ff9818289d02d0b9819779f68",
+      "handle": "AS10212",
+      "name": "CHINAENTERCOM",
+      "country": "CN",
+      "descriptions": [
+        "China Enterprise ICT Solutions Limited"
+      ],
+      "organizations": [],
+      "index_country_labels": [
+        "CN"
+      ]
+    },
+    "15611": {
+      "url": "https://rdap.db.ripe.net/autnum/15611",
+      "final_url": "https://rdap.db.ripe.net/autnum/15611",
+      "observed_at": "2026-11-01T06:14:24.901727+00:00",
+      "status": 200,
+      "sha256": "2ffd0929a89065e0a91f5e33057f9944b80eaa653048269e7eb0c49659d4138e",
+      "handle": "AS15611",
+      "name": "IROST-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IROf1-RIPE",
+          "names": [
+            "Iranian Research Organization for Science & Technology"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "16292": {
+      "url": "https://rdap.db.ripe.net/autnum/16292",
+      "final_url": "https://rdap.db.ripe.net/autnum/16292",
+      "observed_at": "2026-11-01T06:14:24.943189+00:00",
+      "status": 200,
+      "sha256": "65cc3cb07753648ef2c3ab1c96e54835b615d6f877dfe8686c60ef584c8a5439",
+      "handle": "AS16292",
+      "name": "kums",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-KUOM1-RIPE",
+          "names": [
+            "Kermanshah University of Medical Science and Health Service"
+          ],
+          "country": null
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "34837": {
+      "url": "https://rdap.db.ripe.net/autnum/34837",
+      "final_url": "https://rdap.db.ripe.net/autnum/34837",
+      "observed_at": "2026-11-01T06:14:24.966173+00:00",
+      "status": 200,
+      "sha256": "b37a9a41566e64dedff247a3d6c86ff50669ac3c3978d25e79aa916d03c1bdcf",
+      "handle": "AS34837",
+      "name": "IRANET-IPM",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IA30-RIPE",
+          "names": [
+            "Institute for Research in Fundamental Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "35285": {
+      "url": "https://rdap.db.ripe.net/autnum/35285",
+      "final_url": "https://rdap.db.ripe.net/autnum/35285",
+      "observed_at": "2026-11-01T06:14:25.085497+00:00",
+      "status": 200,
+      "sha256": "3496d43d5f1067d2be2f9a768f462a9bd1cd5bf3cf47fb90bce7d5ed1879077c",
+      "handle": "AS35285",
+      "name": "IRNIC-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IA30-RIPE",
+          "names": [
+            "Institute for Research in Fundamental Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "39200": {
+      "url": "https://rdap.db.ripe.net/autnum/39200",
+      "final_url": "https://rdap.db.ripe.net/autnum/39200",
+      "observed_at": "2026-11-01T06:14:25.133101+00:00",
+      "status": 200,
+      "sha256": "6a9ed574ee2efe3a820a18b8c2a793a3143e3e3330a82208332842b2cc8f6940",
+      "handle": "AS39200",
+      "name": "IRNICAnyCAST-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IA30-RIPE",
+          "names": [
+            "Institute for Research in Fundamental Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "41620": {
+      "url": "https://rdap.db.ripe.net/autnum/41620",
+      "final_url": "https://rdap.db.ripe.net/autnum/41620",
+      "observed_at": "2026-11-01T06:14:25.265682+00:00",
+      "status": 200,
+      "sha256": "f16c9eed44665efd0d9ce933ecd8f54881dd201d804a86176061716b867b9123",
+      "handle": "AS41620",
+      "name": "IUSTCC-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IUOS2-RIPE",
+          "names": [
+            "Iran University Of Science and Technology"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "43395": {
+      "url": "https://rdap.db.ripe.net/autnum/43395",
+      "final_url": "https://rdap.db.ripe.net/autnum/43395",
+      "observed_at": "2026-11-01T06:14:25.326107+00:00",
+      "status": 200,
+      "sha256": "8986ff039752d703657f1ba1764cd08404ef4f08b60c572503edde6a9d95f9b5",
+      "handle": "AS43395",
+      "name": "Ertebatat-Doorbord-Fars",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-PPQC1-RIPE",
+          "names": [
+            "Pooya Parto Qeshm Cooperative Company"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "43965": {
+      "url": "https://rdap.db.ripe.net/autnum/43965",
+      "final_url": "https://rdap.db.ripe.net/autnum/43965",
+      "observed_at": "2026-11-01T06:14:25.339406+00:00",
+      "status": 200,
+      "sha256": "6829289ee292669aa7b094d34753444878610095dcc3d1c4dab2c2e8f625dec4",
+      "handle": "AS43965",
+      "name": "TUMS-IR-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TUoM3-RIPE",
+          "names": [
+            "Tehran University of Medical Science"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "44045": {
+      "url": "https://rdap.db.ripe.net/autnum/44045",
+      "final_url": "https://rdap.db.ripe.net/autnum/44045",
+      "observed_at": "2026-11-01T06:14:25.345315+00:00",
+      "status": 200,
+      "sha256": "755ff1d75bbdb309c503a9f947f27349b046a6be40b7b16520c498aa330a7f15",
+      "handle": "AS44045",
+      "name": "KICCC-ASN",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-KICC1-RIPE",
+          "names": [
+            "Kish Iran Credit Card Corporation (Public Corporation)"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "47981": {
+      "url": "https://rdap.db.ripe.net/autnum/47981",
+      "final_url": "https://rdap.db.ripe.net/autnum/47981",
+      "observed_at": "2026-11-01T06:14:25.442618+00:00",
+      "status": 200,
+      "sha256": "9dbd74fd27cb9b2a85c0bdacbc8fe5d7c457931a24467746cfaf8a1237dd30e0",
+      "handle": "AS47981",
+      "name": "IUMS-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IUOM5-RIPE",
+          "names": [
+            "Iran University of Medical Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "48898": {
+      "url": "https://rdap.db.ripe.net/autnum/48898",
+      "final_url": "https://rdap.db.ripe.net/autnum/48898",
+      "observed_at": "2026-11-01T06:14:25.527459+00:00",
+      "status": 200,
+      "sha256": "ccd99695f01dd97af41a17486599122b66ab30465e8c60c082f06ac2d28f4b89",
+      "handle": "AS48898",
+      "name": "KAUMS-ASN",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-MSUO3-RIPE",
+          "names": [
+            "Medical Science University Of Kashan"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "49228": {
+      "url": "https://rdap.db.ripe.net/autnum/49228",
+      "final_url": "https://rdap.db.ripe.net/autnum/49228",
+      "observed_at": "2026-11-01T06:14:25.630772+00:00",
+      "status": 200,
+      "sha256": "83f0c08426026656eca4278a116a64bb62ac620f5bb3658e04073b10393cbe2c",
+      "handle": "AS49228",
+      "name": "HUOM",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-HUOM6-RIPE",
+          "names": [
+            "Hormozgan University Of Medical Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "50749": {
+      "url": "https://rdap.db.ripe.net/autnum/50749",
+      "final_url": "https://rdap.db.ripe.net/autnum/50749",
+      "observed_at": "2026-11-01T06:14:25.636879+00:00",
+      "status": 200,
+      "sha256": "cf017abf3952bd3cd2bbee63d822e05d0332d24adfd9c3186d454712d038a872",
+      "handle": "AS50749",
+      "name": "YAGHOOT",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-YRSC2-RIPE",
+          "names": [
+            "Yaghoot Pars Asia Cooperative Company"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "56375": {
+      "url": "https://rdap.db.ripe.net/autnum/56375",
+      "final_url": "https://rdap.db.ripe.net/autnum/56375",
+      "observed_at": "2026-11-01T06:14:25.662463+00:00",
+      "status": 200,
+      "sha256": "39ff38e461475de863c353da2c8b73a0dad61e8da23cca1f5cae12e24afcfb5a",
+      "handle": "AS56375",
+      "name": "IKRF",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IKRF1-RIPE",
+          "names": [
+            "Imam Khomeini Relief Foundation IKRF"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "56547": {
+      "url": "https://rdap.db.ripe.net/autnum/56547",
+      "final_url": "https://rdap.db.ripe.net/autnum/56547",
+      "observed_at": "2026-11-01T06:14:25.678468+00:00",
+      "status": 200,
+      "sha256": "cd5c77defcb5ed1822bcf014a7aa6b0dff9a79f8ff23225266b75085a66442d3",
+      "handle": "AS56547",
+      "name": "TMUNICIPALITY-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TMIO1-RIPE",
+          "names": [
+            "Tehran Municipality ICT Organization"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "57292": {
+      "url": "https://rdap.db.ripe.net/autnum/57292",
+      "final_url": "https://rdap.db.ripe.net/autnum/57292",
+      "observed_at": "2026-11-01T06:14:25.813438+00:00",
+      "status": 200,
+      "sha256": "40c91ab22eef2aa3c339087de0ef5dd94daeec0ac8e4b40760130338f46e7310",
+      "handle": "AS57292",
+      "name": "ITRC",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-CAIR2-RIPE",
+          "names": [
+            "ICT Research Institute (Iran Telecommunications Research Center \"ITRC\")"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "57563": {
+      "url": "https://rdap.db.ripe.net/autnum/57563",
+      "final_url": "https://rdap.db.ripe.net/autnum/57563",
+      "observed_at": "2026-11-01T06:14:25.868582+00:00",
+      "status": 200,
+      "sha256": "985db91345d1165217850eccb32e82c3dfc6d601b8198e5ddd3804744f12984e",
+      "handle": "AS57563",
+      "name": "MUI",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IUOM4-RIPE",
+          "names": [
+            "isfahan university of medical sciences & health services"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "58303": {
+      "url": "https://rdap.db.ripe.net/autnum/58303",
+      "final_url": "https://rdap.db.ripe.net/autnum/58303",
+      "observed_at": "2026-11-01T06:14:25.964404+00:00",
+      "status": 200,
+      "sha256": "43fd371d562e13245a27e7000a29a1c1bd77ffcd87eeb823de2bab61771f84e9",
+      "handle": "AS58303",
+      "name": "IR-RasanaPishtaz",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-RPIS1-RIPE",
+          "names": [
+            "Rasana Pishtaz Iranian Service Cooperative Co."
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "58331": {
+      "url": "https://rdap.db.ripe.net/autnum/58331",
+      "final_url": "https://rdap.db.ripe.net/autnum/58331",
+      "observed_at": "2026-11-01T06:14:25.977122+00:00",
+      "status": 200,
+      "sha256": "e0c98667198fbf323649e009d7910b1a5737bab0a1cdb800a3132c9822961376",
+      "handle": "AS58331",
+      "name": "Afra-IR",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-RAEB1-RIPE",
+          "names": [
+            "Rayaneh Asr-e Ertebat Bam Technology and Engineering Cooperative Co"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "59506": {
+      "url": "https://rdap.db.ripe.net/autnum/59506",
+      "final_url": "https://rdap.db.ripe.net/autnum/59506",
+      "observed_at": "2026-11-01T06:14:25.988052+00:00",
+      "status": 200,
+      "sha256": "573af575a4da49e3518073635379b597a6b8c0673bc625293401477d8e1fdfd4",
+      "handle": "AS59506",
+      "name": "IR-SUMS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-FPUo1-RIPE",
+          "names": [
+            "Shiraz University of Medical Science and Health Care Services"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "59553": {
+      "url": "https://rdap.db.ripe.net/autnum/59553",
+      "final_url": "https://rdap.db.ripe.net/autnum/59553",
+      "observed_at": "2026-11-01T06:14:26.005457+00:00",
+      "status": 200,
+      "sha256": "49b67b72306b37852a639c434651db696da31f440b68dabc3fc6ed54686babd9",
+      "handle": "AS59553",
+      "name": "JahromUnivesityOfMedicalSciences",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-JUOM1-RIPE",
+          "names": [
+            "Jahrom Univesity Of Medical Sciences"
+          ],
+          "country": null
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "60562": {
+      "url": "https://rdap.db.ripe.net/autnum/60562",
+      "final_url": "https://rdap.db.ripe.net/autnum/60562",
+      "observed_at": "2026-11-01T06:14:26.148041+00:00",
+      "status": 200,
+      "sha256": "df04c43bcdde1de6df622e832b3a9b8863ddd64930c011d4cc55af5086826a5b",
+      "handle": "AS60562",
+      "name": "FAS-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-MOHA2-RIPE",
+          "names": [
+            "Ministry Of Health and Medical Education"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "62198": {
+      "url": "https://rdap.db.ripe.net/autnum/62198",
+      "final_url": "https://rdap.db.ripe.net/autnum/62198",
+      "observed_at": "2026-11-01T06:14:26.266479+00:00",
+      "status": 200,
+      "sha256": "c7f46de7afda0cd72455ea18180b86ddbbe808f0fb59076b0d036b7f82a9a981",
+      "handle": "AS62198",
+      "name": "ACFC-AS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-ACFC1-RIPE",
+          "names": [
+            "Melal Credit Company (Public Joint Stock)"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "198341": {
+      "url": "https://rdap.db.ripe.net/autnum/198341",
+      "final_url": "https://rdap.db.ripe.net/autnum/198341",
+      "observed_at": "2026-11-01T06:14:26.298750+00:00",
+      "status": 200,
+      "sha256": "d6c0b705494f5423205c0da25223e5253b45348c0ff59c613845ec2f192e8715",
+      "handle": "AS198341",
+      "name": "EZS",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-CCCO2-RIPE",
+          "names": [
+            "Consumers Cooperative Company of Employees of Esfahan Zobahan Company"
+          ],
+          "country": null
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "202391": {
+      "url": "https://rdap.db.ripe.net/autnum/202391",
+      "final_url": "https://rdap.db.ripe.net/autnum/202391",
+      "observed_at": "2026-11-01T06:14:26.313455+00:00",
+      "status": 200,
+      "sha256": "17a41333cc604c40526e9f71e373547e7bf431fd81b80be13654ac6d5df400c2",
+      "handle": "AS202391",
+      "name": "AfraRasa-AS-1",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-CAER1-RIPE",
+          "names": [
+            "Cooperative Afra ertebatat-e-sabet-e Rasa Co"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "202601": {
+      "url": "https://rdap.db.ripe.net/autnum/202601",
+      "final_url": "https://rdap.db.ripe.net/autnum/202601",
+      "observed_at": "2026-11-01T06:14:26.321844+00:00",
+      "status": 200,
+      "sha256": "2ef0928d17dd66a3fe44d3008d119abadcb556371db861e61ca6d2d09af160ab",
+      "handle": "AS202601",
+      "name": "PARDIS-EC",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-PESE1-RIPE",
+          "names": [
+            "Pardis Etelaresan Sepehr Employee's Cooperative Co."
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "203102": {
+      "url": "https://rdap.db.ripe.net/autnum/203102",
+      "final_url": "https://rdap.db.ripe.net/autnum/203102",
+      "observed_at": "2026-11-01T06:14:26.366705+00:00",
+      "status": 200,
+      "sha256": "67429e3a0840e6a77a6f918407f0eaa90befd145f2942425b5e46c142c3eae1b",
+      "handle": "AS203102",
+      "name": "kmu",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-KUOM2-RIPE",
+          "names": [
+            "Kerman University of Medical Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "203798": {
+      "url": "https://rdap.db.ripe.net/autnum/203798",
+      "final_url": "https://rdap.db.ripe.net/autnum/203798",
+      "observed_at": "2026-11-01T06:14:26.506226+00:00",
+      "status": 200,
+      "sha256": "53396d25b0c7f54e020a5e705bfc39402daf437220c23ee31a8ef727ad84d0c2",
+      "handle": "AS203798",
+      "name": "mums",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-MUOM1-RIPE",
+          "names": [
+            "Mashhad University of Medical Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "206596": {
+      "url": "https://rdap.db.ripe.net/autnum/206596",
+      "final_url": "https://rdap.db.ripe.net/autnum/206596",
+      "observed_at": "2026-11-01T06:14:26.553590+00:00",
+      "status": 200,
+      "sha256": "57e7720c01d6ddb269755b83dbcb56ef0a3df21434001abdff4310f6ab61268a",
+      "handle": "AS206596",
+      "name": "NOOR-IDC",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-CRCO3-RIPE",
+          "names": [
+            "Computer Research Center of Islamic Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "208124": {
+      "url": "https://rdap.db.ripe.net/autnum/208124",
+      "final_url": "https://rdap.db.ripe.net/autnum/208124",
+      "observed_at": "2026-11-01T06:14:26.630570+00:00",
+      "status": 200,
+      "sha256": "5908bb9a8a16b99222e64c4c189ccfe36abc3f4ed39475848bfffd45183abae9",
+      "handle": "AS208124",
+      "name": "Ir_neginnet",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-NNAR3-RIPE",
+          "names": [
+            "Negin Narmafzar Asak Research and Information Cooperative Company"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "212227": {
+      "url": "https://rdap.db.ripe.net/autnum/212227",
+      "final_url": "https://rdap.db.ripe.net/autnum/212227",
+      "observed_at": "2026-11-01T06:14:26.637994+00:00",
+      "status": 200,
+      "sha256": "800a0d395fd22680f3909be0c73e4cb77cf1a66807782858844063c8eb399f37",
+      "handle": "AS212227",
+      "name": "Jundishapur",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-AJUO1-RIPE",
+          "names": [
+            "Ahvaz Jundishapur University of Medical Sciences"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    },
+    "215271": {
+      "url": "https://rdap.db.ripe.net/autnum/215271",
+      "final_url": "https://rdap.db.ripe.net/autnum/215271",
+      "observed_at": "2026-11-01T06:14:26.653807+00:00",
+      "status": 200,
+      "sha256": "e32302b58de69cc1b6494f6287d809845fed3afb468223114f98cd6197583d90",
+      "handle": "AS215271",
+      "name": "Technology-Town",
+      "country": null,
+      "descriptions": [],
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-ISTT1-RIPE",
+          "names": [
+            "Isfahan Science & Technology Town"
+          ],
+          "country": "IR"
+        }
+      ],
+      "index_country_labels": [
+        "IR"
+      ]
+    }
+  },
+  "provider_rechecks": [
+    {
+      "id": "arvancloud",
+      "url": "https://www.arvancloud.ir/fa/ips.txt",
+      "evidence_url": "https://www.arvancloud.ir/fa/dev/ips",
+      "observed_at": "2026-11-01T06:14:26.972956+00:00",
+      "http_status": 200,
+      "final_url": "https://www.arvancloud.ir/fa/ips.txt",
+      "count": 14,
+      "sha256": "7357e3c11af8073d5a8c147c704e2c5a816a6c2cc4046918b00e5986e98e9967",
+      "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+      "bytes": 220,
+      "identical_to_published_source": true,
+      "published_input_prefixes": 14
+    },
+    {
+      "id": "mizbancloud",
+      "url": "https://mizbancloud.com/ips.txt",
+      "evidence_url": "https://docs.mizbancloud.com/cdn/whitelist",
+      "observed_at": "2026-11-01T06:14:27.334956+00:00",
+      "http_status": 200,
+      "final_url": "https://mizbancloud.com/ips.txt",
+      "count": 8,
+      "sha256": "53263ccf6dc9c95795751f9792a6a5a826ddb77b80433bddd646f7d0ced6c3f4",
+      "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
+      "bytes": 132,
+      "identical_to_published_source": true,
+      "published_input_prefixes": 8
+    },
+    {
+      "id": "parspack",
+      "url": "https://parspack.com/cdnips.txt",
+      "evidence_url": "https://parspack.com/cdn",
+      "observed_at": "2026-11-01T06:14:27.708370+00:00",
+      "http_status": 200,
+      "final_url": "https://parspack.com/cdnips.txt",
+      "count": 49,
+      "sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3",
+      "sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4",
+      "bytes": 828,
+      "identical_to_published_source": true,
+      "published_input_prefixes": 49
+    },
+    {
+      "id": "derakcloud_ipv6",
+      "url": "https://api.derak.cloud/public/ipv6",
+      "evidence_url": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "observed_at": "2026-11-01T06:14:28.193398+00:00",
+      "http_status": 200,
+      "final_url": "https://api.derak.cloud/public/ipv6",
+      "count": 10,
+      "sha256": "0ff567eb454c4d41976d6ae642782acaf00c2e0d17cd39a7ba18fbc433b16b25",
+      "sha512": "c2e956b20255305511391e16fbe2eac4fa60932401aa461d9716c8bae0c8715790f3820f13c53218bd5f31329aff61078942f0ed25667b8c8979fa5ddb135745",
+      "bytes": 207,
+      "identical_to_published_source": true,
+      "published_input_prefixes": 10
+    },
+    {
+      "id": "iranserver",
+      "url": "https://ips.f95.com/ips.txt",
+      "evidence_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "observed_at": "2026-11-01T06:14:28.649062+00:00",
+      "http_status": 200,
+      "final_url": "https://ips.f95.com/ips.txt",
+      "count": 22,
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "sha512": "2369fd73c2507cb7c4c2eeda052359804b1bc508b4e11a2599f4adedf07c6bee131ea29ae225d0c5c9654e56f3c013a911c54c98c6e3824d23283ca7686b851f",
+      "bytes": 302,
+      "identical_to_published_source": true,
+      "published_input_prefixes": 22
+    }
+  ],
+  "pending_provider": {
+    "url": "https://api.derak.cloud/public/ipv4",
+    "observed_at": "2026-11-01T06:14:29.383839+00:00",
+    "http_status": 200,
+    "count": 19,
+    "non_public": [
+      "192.168.204.48/28"
+    ],
+    "bytes": 323,
+    "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c",
+    "state": "pending",
+    "reason": "Entire provider inventory remains inadmissible while a private network is present; no partial admission."
+  },
+  "public_http_observations": [
+    {
+      "url": "https://igwdc.com/",
+      "observed_at": "2026-11-01T06:13:16.707361+00:00",
+      "status": 200,
+      "final_url": "https://igwdc.com/",
+      "bytes": 114,
+      "sha256": "6dc9c7fc93bb488bb0520a6c780a8d3c0fb5486a4711aca49b4c53fac7393023"
+    },
+    {
+      "url": "https://imedtajhiz.com/",
+      "observed_at": "2026-11-01T06:13:16.707747+00:00",
+      "status": 200,
+      "final_url": "https://imedtajhiz.com/",
+      "bytes": 406336,
+      "sha256": "fd10ed9e3145e86d4f2eab499030846c1320224e2fb1f6ae850e48ec1195e782"
+    },
+    {
+      "url": "https://irantech.net/",
+      "observed_at": "2026-11-01T06:13:16.707835+00:00",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://hematitegold.com/",
+      "observed_at": "2026-11-01T06:13:16.707899+00:00",
+      "status": 200,
+      "final_url": "https://hematitegold.com/",
+      "bytes": 167053,
+      "sha256": "645eea1f617eacdc9ff19f85e4de6366f4c771e3e295d5f99feba59b4209f4a9"
+    },
+    {
+      "url": "https://igwdc.com/lander",
+      "observed_at": "2026-11-01T06:13:51.507663+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://imedtajhiz.com/contact/",
+      "observed_at": "2026-11-01T06:13:51.508119+00:00",
+      "status": 200,
+      "final_url": "https://imedtajhiz.com/contact/",
+      "bytes": 153720,
+      "sha256": "b7d2133666bc81a8e1085b9922030604769a4a46fe65a1751225df2641ab307b"
+    },
+    {
+      "url": "https://imedtajhiz.com/about/",
+      "observed_at": "2026-11-01T06:13:51.508228+00:00",
+      "status": 200,
+      "final_url": "https://imedtajhiz.com/about/",
+      "bytes": 151001,
+      "sha256": "937dc2d54081d2b4bfbbd71cc89ac228bfe1a001dec92c161b324cf2959f3c55"
+    },
+    {
+      "url": "https://imedtajhiz.com/terms-and-conditions/",
+      "observed_at": "2026-11-01T06:13:51.508294+00:00",
+      "status": 200,
+      "final_url": "https://imedtajhiz.com/terms-and-conditions/",
+      "bytes": 156247,
+      "sha256": "d7503d677fe0a12e4620fb7e8270c4b60b6b8826f2959475bef41a38f810740f"
+    },
+    {
+      "url": "https://hematitegold.com/contact",
+      "observed_at": "2026-11-01T06:13:51.846885+00:00",
+      "status": 200,
+      "final_url": "https://hematitegold.com/contact",
+      "bytes": 14321,
+      "sha256": "e93f1ab3c89e1d93355748ef715132a1831243e6fee79f9d2968d968b328fe51"
+    },
+    {
+      "url": "https://hematitegold.com/about",
+      "observed_at": "2026-11-01T06:13:51.847115+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.imedtajhiz.com/",
+      "observed_at": "2026-11-01T06:13:52.401260+00:00",
+      "status": 200,
+      "final_url": "https://imedtajhiz.com/",
+      "bytes": 406336,
+      "sha256": "fd10ed9e3145e86d4f2eab499030846c1320224e2fb1f6ae850e48ec1195e782"
+    },
+    {
+      "url": "https://www.hematitegold.com/",
+      "observed_at": "2026-11-01T06:13:52.402213+00:00",
+      "status": 200,
+      "final_url": "https://hematitegold.com/",
+      "bytes": 167053,
+      "sha256": "645eea1f617eacdc9ff19f85e4de6366f4c771e3e295d5f99feba59b4209f4a9"
+    },
+    {
+      "url": "https://rasm.io/",
+      "final_url": "https://rasmio.com/",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:54.934251+00:00",
+      "bytes": 1036731,
+      "sha256": "76e32a8da60adb0f1f4e33fdf5155cc05117ac591aae91f38e6de3d4cf34e968"
+    },
+    {
+      "url": "https://rasmio.com/",
+      "final_url": "https://rasmio.com/",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:54.934671+00:00",
+      "bytes": 1036731,
+      "sha256": "76e32a8da60adb0f1f4e33fdf5155cc05117ac591aae91f38e6de3d4cf34e968"
+    },
+    {
+      "url": "https://rasmio.com/about-us/",
+      "final_url": "https://rasmio.com/about-us/",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:54.934768+00:00",
+      "bytes": 946985,
+      "sha256": "c30def281c70089907aebe5abb354f36e0f7d5fa673f789a71bd113d1e1f7df0"
+    },
+    {
+      "url": "https://my.rasmio.com/",
+      "final_url": "https://my.rasmio.com/",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:54.934836+00:00",
+      "bytes": 159735,
+      "sha256": "ade42dcc91689f3e9ed33881efcb4f5e31ee39ae4fb5b6aa58e54c36ee64f88a"
+    },
+    {
+      "url": "https://formafzar.com/",
+      "final_url": "https://formafzar.com/",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:55.407922+00:00",
+      "bytes": 94753,
+      "sha256": "8f7e7574b45da6612fa59fece4eb93c2fce2b3e0fe7305ca1f3b50fa983ff5ae"
+    },
+    {
+      "url": "https://formafzar.com/AboutUs",
+      "final_url": "https://formafzar.com/AboutUs",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:55.772352+00:00",
+      "bytes": 27588,
+      "sha256": "8be6c34e49831f9e069c75b35a33bcfb73a7377bcf09f8af8234b3fe88c830af"
+    },
+    {
+      "url": "https://formafzar.com/TermsOfService",
+      "final_url": "https://formafzar.com/TermsOfService",
+      "status": 200,
+      "observed_at": "2026-11-01T06:13:56.014124+00:00",
+      "bytes": 49365,
+      "sha256": "0c72d8e5d4ad976663c06b247f20cefd9cb1c8310606c06a16d6da7483388935"
+    },
+    {
+      "url": "https://docs.mizbancloud.com/cdn/whitelist",
+      "final_url": "https://docs.mizbancloud.com/cdn/whitelist",
+      "observed_at": "2026-11-01T06:14:34.868002+00:00",
+      "http_status": 200,
+      "sha256": "0a8d1467b425bd754d46bef90abaa279459d839dff7c2c2b344ed1b9dddf65f7",
+      "bytes": 20132,
+      "inventory_links": [
+        "https://mizbancloud.com/ips.txt"
+      ]
+    },
+    {
+      "url": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "final_url": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "observed_at": "2026-11-01T06:14:34.868417+00:00",
+      "http_status": 200,
+      "sha256": "173fb67b779b7361ad1546dd7f5fd2a8f1362300123c8299f36a9fa4fb172a14",
+      "bytes": 311966,
+      "inventory_links": [
+        "https://api.derak.cloud/public/ipv4",
+        "https://api.derak.cloud/public/ipv6"
+      ]
+    },
+    {
+      "url": "https://www.arvancloud.ir/fa/dev/ips",
+      "final_url": "https://www.arvancloud.ir/fa/dev/ips",
+      "observed_at": "2026-11-01T06:14:34.868524+00:00",
+      "http_status": 200,
+      "sha256": "c3223cbd08b0181683a4ae8877ffd3cff738551691c5fa8c736c54d01fc7925a",
+      "bytes": 6017,
+      "inventory_links": [],
+      "direct_http_content": "JavaScript transfer/challenge page, not inventory documentation despite HTTP 200.",
+      "web_reader_observation": {
+        "observed_on": "2026-11-01",
+        "result": "Official IP page readable through web reader; links https://www.arvancloud.ir/fa/ips.txt and lists 14 matching public IPv4 prefixes."
+      }
+    },
+    {
+      "url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "final_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "observed_at": "2026-11-01T06:14:34.868585+00:00",
+      "http_status": 200,
+      "sha256": "a56d5ff60eeea86a56e010b3b117118ac899cae0394217460544efdf52f4582f",
+      "bytes": 1084924,
+      "inventory_links": [
+        "https://ips.f95.com/"
+      ]
+    },
+    {
+      "url": "https://parspack.com/cdn",
+      "observed_at": "2026-11-01T06:14:34.868639+00:00",
+      "error": "[Errno 54] Connection reset by peer",
+      "retry": {
+        "observed_at": "2026-11-01T06:16:01.105925+00:00",
+        "http_status": 200,
+        "final_url": "https://parspack.com/cdn",
+        "sha256": "79714a08016979edab3c585534ce41d43e1d68ca392807d599fd44e93b0deec2",
+        "bytes": 406144,
+        "title": "خرید CDN ایرانی 🚀 از اولین ارائه دهنده خدمات ابری - پارس پک"
+      }
+    }
+  ],
+  "source_lineage_note": "v2fly and bootmortis domain copies share iran-community-domains lineage and count as one evidence group (MIT). Chocolate4U is GPL-3.0 and supplies provider leads only; primary provider inventories establish the reviewed scope. Pinned source versions, license URLs and original-source links remain in discovery_before_proposal and per-candidate evidence. No upstream compiled country list is admitted.",
+  "ageing_catalogue": [],
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null,
+  "scope": "Public primary evidence only. Exact service DNS addresses; no wildcard, customer domain or hosting ASN ownership admission. Cached DNS freshness and TTL behavior remain unchanged.",
+  "projection": {
+    "observed_at": "2026-11-01T07:52:28+00:00",
+    "same_non_dns_source_payloads": true,
+    "same_dns_observations_for_overlapping_hostnames": true,
+    "service_domains_before": 77,
+    "service_domains_after": 85,
+    "policy_delta": {
+      "ipv4": {
+        "before_prefixes": 1870,
+        "after_prefixes": 1870,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 602,
+        "after_prefixes": 602,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      }
+    },
+    "difference_from_published_snapshot": {
+      "ipv4": {
+        "before_prefixes": 1869,
+        "after_prefixes": 1870,
+        "added_ranges": [
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [
+          "94.183.161.0/24"
+        ],
+        "added_addresses": "2",
+        "removed_addresses": "256"
+      },
+      "ipv6": {
+        "before_prefixes": 600,
+        "after_prefixes": 602,
+        "added_ranges": [
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      }
+    },
+    "difference_note": "The catalogue itself changes no current addresses. Compared with the pinned published snapshot, existing-service resolver answers contribute two IPv4 and two IPv6 host addresses. The removed 94.183.161.0/24 is now Not routed (AS0) in IPtoASN, lies in an AE-labelled NRO allocation, and has no route in the independent RIPEstat lookup. It is absent from the fresh baseline and candidate equally.",
+    "dns_outcomes": {
+      "success": 340,
+      "failure": 0,
+      "all_fresh": true,
+      "unresolved_services": [],
+      "resolver_disagreements": [
+        {
+          "answers": {
+            "cloudflare": [
+              "104.21.86.209",
+              "172.67.136.222"
+            ],
+            "google": [
+              "188.114.96.7",
+              "188.114.97.7"
+            ]
+          },
+          "domain": "www.anjammidam.com",
+          "type": 1
+        },
+        {
+          "answers": {
+            "cloudflare": [
+              "2606:4700:3031::ac43:88de",
+              "2606:4700:3037::6815:56d1"
+            ],
+            "google": [
+              "2a06:98c1:3120::7",
+              "2a06:98c1:3121::7"
+            ]
+          },
+          "domain": "www.anjammidam.com",
+          "type": 28
+        }
+      ]
+    },
+    "added_hostname_observations": {
+      "formafzar.com": [
+        {
+          "addresses": [
+            "79.175.171.162"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.517790+00:00",
+          "domain": "formafzar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.517728+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.623783+00:00",
+          "domain": "formafzar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.623566+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "79.175.171.162"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.582262+00:00",
+          "domain": "formafzar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.582241+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.795828+00:00",
+          "domain": "formafzar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.795780+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "hematitegold.com": [
+        {
+          "addresses": [
+            "185.208.173.17"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.797608+00:00",
+          "domain": "hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.797542+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.823984+00:00",
+          "domain": "hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.823935+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.208.173.17"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.958670+00:00",
+          "domain": "hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.958629+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.085153+00:00",
+          "domain": "hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.085142+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "imedtajhiz.com": [
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.566626+00:00",
+          "domain": "imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.566541+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.614781+00:00",
+          "domain": "imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.614726+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.633026+00:00",
+          "domain": "imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.632992+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.625733+00:00",
+          "domain": "imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.625707+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "my.rasmio.com": [
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.413425+00:00",
+          "domain": "my.rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.413388+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.468798+00:00",
+          "domain": "my.rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.468697+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.580309+00:00",
+          "domain": "my.rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.580295+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.579828+00:00",
+          "domain": "my.rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.579774+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "rasm.io": [
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.083883+00:00",
+          "domain": "rasm.io",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.083862+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.121655+00:00",
+          "domain": "rasm.io",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.121593+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.231975+00:00",
+          "domain": "rasm.io",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.231958+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:28.210075+00:00",
+          "domain": "rasm.io",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:28.208709+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "rasmio.com": [
+        {
+          "addresses": [
+            "46.245.80.2"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.238657+00:00",
+          "domain": "rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.238645+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.390896+00:00",
+          "domain": "rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.390865+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "46.245.80.2"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.295174+00:00",
+          "domain": "rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.295154+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.449748+00:00",
+          "domain": "rasmio.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.449729+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "www.hematitegold.com": [
+        {
+          "addresses": [
+            "185.208.173.17"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.932718+00:00",
+          "domain": "www.hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.932689+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.158265+00:00",
+          "domain": "www.hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.158248+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.208.173.17"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.282278+00:00",
+          "domain": "www.hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.282219+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-01T07:52:27.045503+00:00",
+          "domain": "www.hematitegold.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:27.045447+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "www.imedtajhiz.com": [
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.646047+00:00",
+          "domain": "www.imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.646012+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.732179+00:00",
+          "domain": "www.imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.732146+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.143.233.133",
+            "185.143.234.133"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.824673+00:00",
+          "domain": "www.imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.824662+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-01T07:52:26.857648+00:00",
+          "domain": "www.imedtajhiz.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-01T07:52:26.857586+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ]
+    },
+    "source_snapshots": {
+      "dns_snapshot": {
+        "bytes": 181874,
+        "sha512": "07ffa97bb860491814dc750039cd17c5efee55441877b268a287b2c33a0ef32435909ab21a1f516d5a154a8134074d7dbe27534d90e7fac4e5584c1555047609",
+        "url": "coverage-policy.json#dns_resolvers"
+      },
+      "ipdeny_ipv4": {
+        "bytes": 30914,
+        "sha512": "f9d3b6e81ca265b0bf4fd6c3ab47e6d83105f45ead574e152d0325f3d06e7937dffbdaf8d60f0aed9c8573ee9394647221b827bc41a1652c283b24764f10953b",
+        "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
+      },
+      "ipdeny_ipv6": {
+        "bytes": 8617,
+        "sha512": "5730b9e84713fa0c66deb21f303d40a1a3cfa41f6fb7af5bd447498bf09d4018bffbff6c51ef9c63fba5b5de0620b9287632ffbf7de40b28dac968f73ba67160",
+        "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
+      },
+      "iptoasn_ipv4": {
+        "bytes": 7023670,
+        "sha512": "a3425aef1531c9d53807a1cc096b96774e8abce092b14c64f96e6408d3950b2f724864b24b468182e059d35045091c1f3c513bbee1fe05036f4ff54591dfd04d",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2027065,
+        "sha512": "170d0da95dbc986301208b3254f2bba0d7eb5d3125ba6ec3a134389ab1b715cf4b974ab6a0de6b158964cc87a17f78e1d92784489427b462a540d5eefd07c5d5",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro_delegated": {
+        "bytes": 57079372,
+        "sha512": "23635586e04f5cd210471c621a0847809181d37327849855eda2bb5afb1fe75c7dc91e03dc92db960b3a13675928f000ecbade596f32559e3901e1eef8fac30f",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      },
+      "provider_arvancloud": {
+        "bytes": 220,
+        "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+        "url": "https://www.arvancloud.ir/fa/ips.txt"
+      },
+      "provider_derakcloud_ipv6": {
+        "bytes": 207,
+        "sha512": "c2e956b20255305511391e16fbe2eac4fa60932401aa461d9716c8bae0c8715790f3820f13c53218bd5f31329aff61078942f0ed25667b8c8979fa5ddb135745",
+        "url": "https://api.derak.cloud/public/ipv6"
+      },
+      "provider_iranserver": {
+        "bytes": 302,
+        "sha512": "2369fd73c2507cb7c4c2eeda052359804b1bc508b4e11a2599f4adedf07c6bee131ea29ae225d0c5c9654e56f3c013a911c54c98c6e3824d23283ca7686b851f",
+        "url": "https://ips.f95.com/ips.txt"
+      },
+      "provider_mizbancloud": {
+        "bytes": 132,
+        "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
+        "url": "https://mizbancloud.com/ips.txt"
+      },
+      "provider_parspack": {
+        "bytes": 828,
+        "sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4",
+        "url": "https://parspack.com/cdnips.txt"
+      }
+    },
+    "upstream_drift_evidence": [
+      {
+        "url": "https://rdap.db.ripe.net/ip/94.183.161.0",
+        "observed_at": "2026-11-01T07:54:44.295635+00:00",
+        "sha256": "22a0278ab6bce05ee00a2fc0aee409857e79bd36bae1866b7e32a5cd5da69c64",
+        "result": {
+          "name": "AE-GOLDIP-20080917",
+          "handle": "94.183.149.0 - 94.183.255.255",
+          "startAddress": "94.183.149.0",
+          "endAddress": "94.183.255.255",
+          "country": "AE",
+          "orgs": [
+            {
+              "handle": "lir-ae-goldip-1-MNT",
+              "fn": [
+                "lir-ae-goldip-1-MNT"
+              ]
+            },
+            {
+              "handle": "ORG-GIL34-RIPE",
+              "fn": [
+                "GOLD IP L.L.C-FZ"
+              ]
+            },
+            {
+              "handle": "RIPE-NCC-HM-MNT",
+              "fn": [
+                "RIPE-NCC-HM-MNT"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://rdap.db.ripe.net/autnum/209279",
+        "observed_at": "2026-11-01T07:54:44.296119+00:00",
+        "sha256": "5c036c152e92f4de4b3d4725be070e22c10d8f39109b4a80d3faba8815d990ac",
+        "result": {
+          "name": "POSHTVAR-AS",
+          "handle": "AS209279",
+          "startAddress": null,
+          "endAddress": null,
+          "country": null,
+          "orgs": [
+            {
+              "handle": "ORG-PSPC3-RIPE",
+              "fn": [
+                "Padideh Sazan Poshtvar Co. PJS"
+              ]
+            },
+            {
+              "handle": "POSHTVAR-MNT",
+              "fn": [
+                "POSHTVAR-MNT"
+              ]
+            },
+            {
+              "handle": "RIPE-NCC-END-MNT",
+              "fn": [
+                "RIPE-NCC-END-MNT"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "url": "https://stat.ripe.net/data/network-info/data.json?resource=94.183.161.1",
+        "observed_at": "2026-11-01T07:54:44.296191+00:00",
+        "sha256": "a63381ede5356e6442fe4af165741a0788df38d689dc36dbdbaf8484cdfc66cb",
+        "result": {
+          "asns": [],
+          "prefix": ""
+        }
+      }
+    ]
+  },
+  "validation": {
+    "unit_tests": {
+      "passed": 59,
+      "command": "python3 -m unittest discover -s tests -v"
+    },
+    "compileall": "passed: python3 -m compileall -q auto_ir_ranges scripts",
+    "guarded_generation": "passed with --previous-dir build/previous, replaying identical candidate sources and generation time",
+    "known_source_completeness_percent": 100,
+    "source_layer_containment": {
+      "ipdeny_ipv4": {
+        "input_prefixes": 1972,
+        "missing_prefixes": []
+      },
+      "ipdeny_ipv6": {
+        "input_prefixes": 575,
+        "missing_prefixes": []
+      },
+      "provider_arvancloud": {
+        "input_prefixes": 14,
+        "missing_prefixes": []
+      },
+      "provider_derakcloud_ipv6": {
+        "input_prefixes": 10,
+        "missing_prefixes": []
+      },
+      "provider_iranserver": {
+        "input_prefixes": 22,
+        "missing_prefixes": []
+      },
+      "provider_mizbancloud": {
+        "input_prefixes": 8,
+        "missing_prefixes": []
+      },
+      "provider_parspack": {
+        "input_prefixes": 49,
+        "missing_prefixes": []
+      },
+      "registered_resources_ipv4": {
+        "input_prefixes": 1979,
+        "missing_prefixes": []
+      },
+      "registered_resources_ipv6": {
+        "input_prefixes": 581,
+        "missing_prefixes": []
+      },
+      "selected_asn_ipv4": {
+        "input_prefixes": 4932,
+        "missing_prefixes": []
+      },
+      "selected_asn_ipv6": {
+        "input_prefixes": 532,
+        "missing_prefixes": []
+      },
+      "service_dns_ipv4": {
+        "input_prefixes": 278,
+        "missing_prefixes": []
+      },
+      "service_dns_ipv6": {
+        "input_prefixes": 20,
+        "missing_prefixes": []
+      }
+    },
+    "manifest_pages": {
+      "ipv4": {
+        "count": 1870,
+        "page_bytes": [
+          29369
+        ]
+      },
+      "ipv6": {
+        "count": 602,
+        "page_bytes": [
+          9185
+        ]
+      }
+    },
+    "page_hashes_lengths_families_and_generation": "validated",
+    "generation_ceiling": 50000,
+    "max_page_bytes": 49152,
+    "new_service_address_explanations": {
+      "79.175.171.162": {
+        "included": true,
+        "covering_feed_prefixes": [
+          "79.175.128.0/18"
+        ],
+        "contributing_layers": {
+          "ipdeny_ipv4": [
+            "79.175.128.0/18"
+          ],
+          "registered_resources_ipv4": [
+            "79.175.128.0/18"
+          ],
+          "selected_asn_ipv4": [
+            "79.175.128.0/18"
+          ],
+          "service_dns_ipv4": [
+            "79.175.171.162/32",
+            "79.175.171.162/32"
+          ]
+        }
+      },
+      "185.208.173.17": {
+        "included": true,
+        "covering_feed_prefixes": [
+          "185.208.173.0/24"
+        ],
+        "contributing_layers": {
+          "provider_parspack": [
+            "185.208.173.0/24"
+          ],
+          "service_dns_ipv4": [
+            "185.208.173.17/32",
+            "185.208.173.17/32",
+            "185.208.173.17/32",
+            "185.208.173.17/32"
+          ]
+        }
+      },
+      "185.143.233.133": {
+        "included": true,
+        "covering_feed_prefixes": [
+          "185.143.232.0/22"
+        ],
+        "contributing_layers": {
+          "ipdeny_ipv4": [
+            "185.143.232.0/22"
+          ],
+          "provider_arvancloud": [
+            "185.143.232.0/22"
+          ],
+          "registered_resources_ipv4": [
+            "185.143.232.0/22"
+          ],
+          "selected_asn_ipv4": [
+            "185.143.232.0/22"
+          ],
+          "service_dns_ipv4": [
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32",
+            "185.143.233.133/32"
+          ]
+        }
+      },
+      "185.143.234.133": {
+        "included": true,
+        "covering_feed_prefixes": [
+          "185.143.232.0/22"
+        ],
+        "contributing_layers": {
+          "ipdeny_ipv4": [
+            "185.143.232.0/22"
+          ],
+          "provider_arvancloud": [
+            "185.143.232.0/22"
+          ],
+          "registered_resources_ipv4": [
+            "185.143.232.0/22"
+          ],
+          "selected_asn_ipv4": [
+            "185.143.232.0/22"
+          ],
+          "service_dns_ipv4": [
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32",
+            "185.143.234.133/32"
+          ]
+        }
+      },
+      "46.245.80.2": {
+        "included": true,
+        "covering_feed_prefixes": [
+          "46.245.0.0/17"
+        ],
+        "contributing_layers": {
+          "ipdeny_ipv4": [
+            "46.245.64.0/18"
+          ],
+          "registered_resources_ipv4": [
+            "46.245.64.0/18"
+          ],
+          "selected_asn_ipv4": [
+            "46.245.80.0/24"
+          ],
+          "service_dns_ipv4": [
+            "46.245.80.2/32",
+            "46.245.80.2/32"
+          ]
+        }
+      }
+    },
+    "rejected_asn_explanations": {
+      "AS10043": {
+        "selected": false,
+        "reviewed_operators": []
+      },
+      "AS10184": {
+        "selected": false,
+        "reviewed_operators": []
+      },
+      "AS10191": {
+        "selected": false,
+        "reviewed_operators": []
+      },
+      "AS10212": {
+        "selected": false,
+        "reviewed_operators": []
+      }
+    },
+    "previous_evidence_fingerprints_preserved": true,
+    "review_decisions_match_current_pool": true,
+    "operators_and_provider_catalogue_unchanged": true,
+    "independent_review": {
+      "verdict": "no blockers",
+      "audited_at": "2026-11-01T07:59:10.378365+00:00",
+      "source_recheck_limit": "Hematite contact-page refetch returned HTTP 502 during independent review. The initial successful same-day primary capture, content hash and Tehran office text were checked."
+    }
+  }
+}
