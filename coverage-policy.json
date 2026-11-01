@@ -2861,6 +2861,317 @@
           }
         ]
       }
+    },
+    {
+      "domain": "imedtajhiz.com",
+      "evidence": "https://imedtajhiz.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "imedtajhiz.com",
+          "evidence": [
+            "https://imedtajhiz.com/",
+            "https://imedtajhiz.com/about/",
+            "https://imedtajhiz.com/contact/",
+            "https://imedtajhiz.com/terms-and-conditions/",
+            "https://www.imedtajhiz.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:imedtajhiz.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4a10a5e71a992dad7318a66aa238431a53fa925867eaf4c0653e972484881998"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "imedtajhiz.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.imedtajhiz.com",
+      "evidence": "https://imedtajhiz.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.imedtajhiz.com",
+          "evidence": [
+            "https://imedtajhiz.com/",
+            "https://imedtajhiz.com/about/",
+            "https://imedtajhiz.com/contact/",
+            "https://imedtajhiz.com/terms-and-conditions/",
+            "https://www.imedtajhiz.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:imedtajhiz.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4a10a5e71a992dad7318a66aa238431a53fa925867eaf4c0653e972484881998"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "imedtajhiz.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "hematitegold.com",
+      "evidence": "https://hematitegold.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "hematitegold.com",
+          "evidence": [
+            "https://hematitegold.com/",
+            "https://hematitegold.com/contact",
+            "https://www.hematitegold.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:hematitegold.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7fdf5848214693af93ccc9d1d1646f88cbc3596f0ee16914dfe2c170115ededd"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "hematitegold.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.hematitegold.com",
+      "evidence": "https://hematitegold.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.hematitegold.com",
+          "evidence": [
+            "https://hematitegold.com/",
+            "https://hematitegold.com/contact",
+            "https://www.hematitegold.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:hematitegold.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7fdf5848214693af93ccc9d1d1646f88cbc3596f0ee16914dfe2c170115ededd"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "hematitegold.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "rasm.io",
+      "evidence": "https://rasm.io/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "rasm.io",
+          "evidence": [
+            "https://rasm.io/",
+            "https://rasmio.com/",
+            "https://rasmio.com/about-us/",
+            "https://my.rasmio.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:rasm.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "1df25e928cd56c1848c95b8954533964aeb7687c22242675f2524a1fa16441eb"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rasm.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "rasmio.com",
+      "evidence": "https://rasm.io/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "rasmio.com",
+          "evidence": [
+            "https://rasm.io/",
+            "https://rasmio.com/",
+            "https://rasmio.com/about-us/",
+            "https://my.rasmio.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:rasmio.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "3daa816315f175af1a17467b993ca4c14467e1d2a59f2b26f84cd85b04347942"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rasmio.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "my.rasmio.com",
+      "evidence": "https://rasm.io/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "my.rasmio.com",
+          "evidence": [
+            "https://rasm.io/",
+            "https://rasmio.com/",
+            "https://rasmio.com/about-us/",
+            "https://my.rasmio.com/"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:rasm.io",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "1df25e928cd56c1848c95b8954533964aeb7687c22242675f2524a1fa16441eb"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rasm.io",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "formafzar.com",
+      "evidence": "https://formafzar.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-01",
+      "review_reason": "Formafzar identifies Farsicom Information Technology Company, registration 428603, as its operator, and publishes its Tehran office on the official site. Its terms identify the Farsicom-operated form-building service. Collect the exact apex public DNS hostname only; neither customer forms on unrelated domains nor hosting ASNs are admitted.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "formafzar.com",
+          "evidence": [
+            "https://formafzar.com/",
+            "https://formafzar.com/AboutUs",
+            "https://formafzar.com/TermsOfService"
+          ],
+          "reviewed_on": "2026-11-01",
+          "reason": "Formafzar identifies Farsicom Information Technology Company, registration 428603, as its operator, and publishes its Tehran office on the official site. Its terms identify the Farsicom-operated form-building service. Collect the exact apex public DNS hostname only; neither customer forms on unrelated domains nor hosting ASNs are admitted."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:formafzar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "170942a6cb26a9314ba7c5663143d255207701345ada762c89ce94f8ef7efc66"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "formafzar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
     }
   ]
 }

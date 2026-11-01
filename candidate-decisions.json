@@ -162,20 +162,22 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reviewed_on": "2026-10-25",
-      "reason": "The official IPv4 inventory remains unchanged at 19 entries including non-public 192.168.204.48/28. Strict public-range validation excludes the entire inventory; no partial admission.",
-      "evidence": [
-        "https://api.derak.cloud/public/ipv4"
-      ],
+      "reason": "Entire provider inventory remains inadmissible while a private network is present; no partial admission.",
+      "reviewed_on": "2026-11-01",
       "evidence_fingerprints": [
         "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
         "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "78fbc98fa503003d08ea26213a68d706a574771fba2942ea747b2d51d65c606e",
         "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
         "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
         "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
         "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
         "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
+      ],
+      "evidence": [
+        "https://api.derak.cloud/public/ipv4",
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/"
       ]
     },
     "provider:https://ips.f95.com/ip.txt": {
@@ -344,8 +346,8 @@
     },
     "asn:10043": {
       "state": "rejected",
-      "reason": "Reject the supplied affiliation assertions: APNIC identifies Ministry of Science and ICT (KR); the linked RIPE records identify different organizations. The evidence consists of generic name matches (Name similarity 'ict'/'ict' (1.00); Name similarity 'ministry'/'ministry' (1.00); Name similarity 'science'/'science' (1.00); Name similarity 'sciences'/'science' (0.93)), without verified affiliation. This rejects these assertions; independently supported new evidence may reopen the candidate.",
-      "reviewed_on": "2026-09-27",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies Ministry of Science and ICT (KR); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'ict'/'ict' (1.00), Name similarity 'ministry'/'ministry' (1.00), Name similarity 'science'/'science' (1.00), Name similarity 'sciences'/'science' (0.93) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
       "evidence_fingerprints": [
         "071b05a8d771c6f92247d500363703b59cc5375fd870151c3463544f16b70901",
         "1041054b5d914ebe50fdd27c053fb314e99f93c4384b881b8c9ecaf260273f8e",
@@ -376,6 +378,7 @@
         "7a868210865a5a00ea3d834ebbaf52dcf02a26928dfc6b8cd92c92c66baef50a",
         "7f470d69dc1b8d91be592d0f294b2878ed19ac0a33046cdac3f17d4cdc3fea2a",
         "84b0b5d5b31cbd3ba1d8ba9e60cc5310882f1601f4c299e3311f78355f042d36",
+        "88d414eeb842b180a485d9919b27009b5e416f4ef7494e10c56dadf229642d17",
         "92117e54baba8e5ea63e1900d5da5fdc9e8333677e87d1ade2ddb8bde6bf14cc",
         "944b18d459140aaee7173d16483e6fd0f891bb20615f77ccb95ae2614010765c",
         "a1263c0478538c5668cd0a96606863031dad6701004642c13f59beefdfc51f7b",
@@ -1397,6 +1400,180 @@
         "a7822a25efe8eb5be33d2227eee9e5264042d44856ebf7d86ccce032947098db",
         "decf698a953b7bd07da6dee25aad95305d1f94808a131c84559d4b6501843723",
         "e3c35b72bf973e0a68bb13ae095f9c934f89bf6adba15400822d41ece18ec5d3"
+      ]
+    },
+    "domain:igwdc.com": {
+      "state": "pending",
+      "reason": "Current apex returns only a JavaScript redirect to /lander; that destination returns HTTP 403. Historical trade-association mentions do not establish the current website operator. Require a current primary company page or registry evidence linking this hostname to the Iranian company before admitting DNS addresses.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "a5a01b8bfa24b9546c82f30ade8d1b9cf8234f7b9778572352ad9eaf7f78ca5d"
+      ],
+      "evidence": [
+        "https://igwdc.com/",
+        "https://igwdc.com/lander"
+      ]
+    },
+    "domain:imedtajhiz.com": {
+      "state": "accepted",
+      "reason": "The official about page identifies Parsian Tajhiz Eltiam (registration 566385; IMED code 65267), with its head office in Tehran. Terms explicitly identify https://imedtajhiz.com/ as the sole official website and say operations follow Iranian law; the contact page publishes the Tehran office. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "4a10a5e71a992dad7318a66aa238431a53fa925867eaf4c0653e972484881998"
+      ],
+      "evidence": [
+        "https://imedtajhiz.com/",
+        "https://imedtajhiz.com/about/",
+        "https://imedtajhiz.com/contact/",
+        "https://imedtajhiz.com/terms-and-conditions/",
+        "https://www.imedtajhiz.com/"
+      ]
+    },
+    "domain:irantech.net": {
+      "state": "pending",
+      "reason": "Current local HTTPS lookup fails DNS resolution and the web tool cannot access the official site. No current primary operator/about/contact evidence was obtained. Name similarity and stale third-party domain summaries do not establish Iranian service affiliation; require current primary evidence before admission.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "f486f6c37697d51e115f9867e61588488ff67d1bcd2889b0b5f967f90c81cbbf"
+      ],
+      "evidence": [
+        "https://irantech.net/"
+      ]
+    },
+    "domain:hematitegold.com": {
+      "state": "accepted",
+      "reason": "Hematite Gold operates an online gold retail service; its official contact page gives its head office in Tehran, Jannat Abad Markazi. The www hostname redirects to the official apex. Admit these two exact service hostnames only, not a suffix or hosting ASN.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "7fdf5848214693af93ccc9d1d1646f88cbc3596f0ee16914dfe2c170115ededd"
+      ],
+      "evidence": [
+        "https://hematitegold.com/",
+        "https://hematitegold.com/contact",
+        "https://www.hematitegold.com/"
+      ]
+    },
+    "domain:rasm.io": {
+      "state": "accepted",
+      "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "1df25e928cd56c1848c95b8954533964aeb7687c22242675f2524a1fa16441eb"
+      ],
+      "evidence": [
+        "https://rasm.io/",
+        "https://rasmio.com/",
+        "https://rasmio.com/about-us/",
+        "https://my.rasmio.com/"
+      ]
+    },
+    "domain:rasmio.com": {
+      "state": "accepted",
+      "reason": "Rasmio identifies Pishgaman Rasmi Pardazesh Dana as its operating company and describes its Iranian business-information service. The official about page explains the move from Rasm.io to Rasmio.com; the former redirects to the latter, whose homepage links my.rasmio.com as its business application. Collect these three exact public DNS hostnames only; neither customer domains nor hosting ASNs are admitted.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "3daa816315f175af1a17467b993ca4c14467e1d2a59f2b26f84cd85b04347942"
+      ],
+      "evidence": [
+        "https://rasm.io/",
+        "https://rasmio.com/",
+        "https://rasmio.com/about-us/",
+        "https://my.rasmio.com/"
+      ]
+    },
+    "domain:formafzar.com": {
+      "state": "accepted",
+      "reason": "Formafzar identifies Farsicom Information Technology Company, registration 428603, as its operator, and publishes its Tehran office on the official site. Its terms identify the Farsicom-operated form-building service. Collect the exact apex public DNS hostname only; neither customer forms on unrelated domains nor hosting ASNs are admitted.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "170942a6cb26a9314ba7c5663143d255207701345ada762c89ce94f8ef7efc66"
+      ],
+      "evidence": [
+        "https://formafzar.com/",
+        "https://formafzar.com/AboutUs",
+        "https://formafzar.com/TermsOfService"
+      ]
+    },
+    "asn:10184": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies Korean Federation of Community Credit Cooperatives (KR); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'cooperative'/'cooperatives' (0.96), Name similarity 'credit'/'credit' (1.00) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "074ad55799adf980e67640a3f3c42da161a18e9c8b1dc18548ba3d8efb45bb4c",
+        "27b0ed2a78c8dc0af681f57a30be29e86444e32aa538cf8039468fab7769f9da",
+        "28e57dd797491f19a5ea93dbd90647ea87c6faf761f960626ed8192067714129",
+        "4028b0a041f4029da8829198f74fbac0ebcee3dfbadd9ac6ca9667bf7aad10dd",
+        "5bb30f3543645d0548c50e450d47e0bc695c8195612f773ec585565a7e97c008",
+        "87b2edf697f9cefc7353492c54001d55f4ebf92d2e9dc899a63c9937617b4aef",
+        "a8a3d37e761462e37d86e89a1a3403cbc88770a02ffb808a541256e70267a100",
+        "ae07404329749024d84d28ee556e3a0bf867fdd5b15e81874b1933686d83978e",
+        "c8b6cc7ffcf9887589f56f9d44b8a04a18c8cfeefefb5ed33fc3ca67571f47ba",
+        "e80308ff273a1475cc573933efa90e4b29417c24c94b7b56a29af3fd963ca47d"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10184",
+        "https://rdap.db.ripe.net/autnum/43395",
+        "https://rdap.db.ripe.net/autnum/44045",
+        "https://rdap.db.ripe.net/autnum/50749",
+        "https://rdap.db.ripe.net/autnum/58303",
+        "https://rdap.db.ripe.net/autnum/58331",
+        "https://rdap.db.ripe.net/autnum/62198",
+        "https://rdap.db.ripe.net/autnum/198341",
+        "https://rdap.db.ripe.net/autnum/202391",
+        "https://rdap.db.ripe.net/autnum/202601",
+        "https://rdap.db.ripe.net/autnum/208124"
+      ]
+    },
+    "asn:10191": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies SEEGENE MEDICAL FOUNDATION (KR); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'foundation'/'foundation' (1.00), Name similarity 'medical'/'medical' (1.00) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "11c45416660cf67928671963f8c7d138ad0b71b28d0378cd26cb06d2ac2829e5",
+        "173af14c6e3fe75942cc69ff8967cadef2b6d63a5d4c8d270562485ff449a9d3",
+        "1c0efcc8bf250399bdd872c8016448c5eb66a87e493e7f900e45607cb111c6e7",
+        "236792e32127a880040ab28951dc0adf4b5c4009f0e174251b180e97613290d1",
+        "2ccf11a2f3b67ca187af5b2c8b7379de7cf460623f2deb95c8e3b396014e7bda",
+        "340cea8a852f6daa3225fc78b1910ba08419175816410944337c9dc5bf0c1c88",
+        "35caf2b1d5e7125c6fa4f1a88737e7260d6e86f9fa985e4449023a13e931c799",
+        "5557661d6b4e25b6f78e0fee3b526d97db8aa0fdbd4338c7f53df5d3cf4f0c9f",
+        "6929529754c5985ab73665cdc056bb71197d4b686367c567b3005a894afd742c",
+        "8acabb2240656379058e780c27c9d8cb9f9e065dabfae565e8e50d5c55e118a0",
+        "9c1e6c865c12bc7199379c376c2ef83095b20f51191947018469332c08fef7d9",
+        "b5a398d8beb1dffccd81f7367092c3d9481dadfa6fad2c837f3f7d3b0db834be",
+        "d981c25d35e490446f717b7069eb609e2972fd9567293ee3386d1e48549ad551",
+        "e56d7f23e6a6619b9a6d5ca43038a1cf16af89bd688561c305e620f7649f9c62"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10191",
+        "https://rdap.db.ripe.net/autnum/5542",
+        "https://rdap.db.ripe.net/autnum/16292",
+        "https://rdap.db.ripe.net/autnum/43965",
+        "https://rdap.db.ripe.net/autnum/47981",
+        "https://rdap.db.ripe.net/autnum/48898",
+        "https://rdap.db.ripe.net/autnum/49228",
+        "https://rdap.db.ripe.net/autnum/56375",
+        "https://rdap.db.ripe.net/autnum/57563",
+        "https://rdap.db.ripe.net/autnum/59506",
+        "https://rdap.db.ripe.net/autnum/59553",
+        "https://rdap.db.ripe.net/autnum/60562",
+        "https://rdap.db.ripe.net/autnum/203102",
+        "https://rdap.db.ripe.net/autnum/203798",
+        "https://rdap.db.ripe.net/autnum/212227"
+      ]
+    },
+    "asn:10212": {
+      "state": "rejected",
+      "reason": "Reject the supplied affiliation assertions: authoritative APNIC identifies China Enterprise ICT Solutions Limited (CN); the linked RIPE anchor records identify different organizations. Generic shared words Name similarity 'ict'/'ict' (1.00) do not establish a business relationship or common ownership. This rejects the reviewed assertions, not future independent affiliation evidence.",
+      "reviewed_on": "2026-11-01",
+      "evidence_fingerprints": [
+        "6b12c8fd6b620286742fbeaa7ab211faead5a7ce7c51f804ed42b9b9b62bd21c",
+        "ab397465957416050be75646498e5d42ebe2f48c46e647eb8141b7deabbcc7de"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10212",
+        "https://rdap.db.ripe.net/autnum/56547",
+        "https://rdap.db.ripe.net/autnum/57292"
       ]
     }
   }
