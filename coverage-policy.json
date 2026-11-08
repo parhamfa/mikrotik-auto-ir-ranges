@@ -6,20 +6,22 @@
     {
       "id": "arvancloud",
       "name": "ArvanCloud, including its foreign-registered networks",
-      "reviewed_on": "2026-09-16",
+      "reviewed_on": "2026-11-08",
       "asns": {
         "202468": "ABRARVAN-AS",
-        "205585": "ARVANCLOUD-CDN-",
+        "205585": "ARVANCLOUD-CDN-IR",
         "208006": "ARVANCLOUD-CDN",
         "57568": "TR_ARVANCLOUD"
       },
       "evidence": [
         "https://www.arvancloud.ir/fa/dev/ips",
         "https://rdap.db.ripe.net/autnum/208006",
-        "https://rdap.db.ripe.net/autnum/57568"
+        "https://rdap.db.ripe.net/autnum/57568",
+        "https://rdap.db.ripe.net/autnum/205585",
+        "https://rdap.db.ripe.net/entity/ORG-NAAP1-RIPE"
       ],
       "state": "accepted",
-      "review_reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation.",
+      "review_reason": "RIPE confirms the four reviewed Arvan registrations. AS205585 uses the registered name ARVANCLOUD-CDN-IR in current IPv4 and IPv6 IPtoASN data.",
       "relationships": [
         {
           "type": "asn_ownership",
@@ -40,10 +42,11 @@
             "https://www.arvancloud.ir/fa/dev/ips",
             "https://rdap.db.ripe.net/autnum/208006",
             "https://rdap.db.ripe.net/autnum/57568",
-            "https://rdap.db.ripe.net/autnum/205585"
+            "https://rdap.db.ripe.net/autnum/205585",
+            "https://rdap.db.ripe.net/entity/ORG-NAAP1-RIPE"
           ],
-          "reviewed_on": "2026-09-16",
-          "reason": "Retain the reviewed v1.1.0 operator catalogue; registered network identities and published inventories support affiliation."
+          "reviewed_on": "2026-11-08",
+          "reason": "RIPE identifies AS205585 as ARVANCLOUD-CDN-IR and names Noyan Abr Arvan Co. as its registrant. The full registered name appears in both current IPtoASN files."
         },
         {
           "type": "asn_ownership",
@@ -3166,6 +3169,507 @@
             "license": "MIT",
             "lineage": "iran-community-domains",
             "rule": "formafzar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "rinotik.com",
+      "evidence": "https://rinotik.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "rinotik.com",
+          "evidence": [
+            "https://rinotik.com/",
+            "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+            "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+            "https://www.rinotik.com/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:rinotik.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "043b3f97734c1349bb5d188e2f231d75949dad211429ddd7be1abd60079e652d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rinotik.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.rinotik.com",
+      "evidence": "https://rinotik.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.rinotik.com",
+          "evidence": [
+            "https://rinotik.com/",
+            "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+            "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+            "https://www.rinotik.com/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:rinotik.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "043b3f97734c1349bb5d188e2f231d75949dad211429ddd7be1abd60079e652d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rinotik.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "mavarapos.com",
+      "evidence": "https://mavarapos.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "mavarapos.com",
+          "evidence": [
+            "https://mavarapos.com/",
+            "https://mavarapos.com/contact-us/",
+            "https://www.mavarapos.com/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:mavarapos.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "2fd060b23dd99a803923cf034af6d0b2ea4d1dc3a05eb2b3d22a19ac9d9bddec"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "mavarapos.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.mavarapos.com",
+      "evidence": "https://mavarapos.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.mavarapos.com",
+          "evidence": [
+            "https://mavarapos.com/",
+            "https://mavarapos.com/contact-us/",
+            "https://www.mavarapos.com/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:mavarapos.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "2fd060b23dd99a803923cf034af6d0b2ea4d1dc3a05eb2b3d22a19ac9d9bddec"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "mavarapos.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "khorsandmezon.com",
+      "evidence": "https://khorsandmezon.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "khorsandmezon.com",
+          "evidence": [
+            "https://khorsandmezon.com/",
+            "https://khorsandmezon.com/about-us/",
+            "https://khorsandmezon.com/contact-us/",
+            "https://www.khorsandmezon.com/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:khorsandmezon.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7e6dda2f1755abeca73c6655d20c7ec6e9fafb069884c7b7b45ad14447612fd4"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "khorsandmezon.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.khorsandmezon.com",
+      "evidence": "https://khorsandmezon.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.khorsandmezon.com",
+          "evidence": [
+            "https://khorsandmezon.com/",
+            "https://khorsandmezon.com/about-us/",
+            "https://khorsandmezon.com/contact-us/",
+            "https://www.khorsandmezon.com/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:khorsandmezon.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7e6dda2f1755abeca73c6655d20c7ec6e9fafb069884c7b7b45ad14447612fd4"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "khorsandmezon.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "blogfa.com",
+      "evidence": "https://blogfa.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "blogfa.com",
+          "evidence": [
+            "https://blogfa.com/",
+            "https://www.blogfa.com/",
+            "https://www.blogfa.com/contact/",
+            "https://faq.blogfa.com/?p=3"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:blogfa.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "f86542df94fd5c1a2d4f203b39065022986123acf1d25c2ace8e981a4f29c390"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "blogfa.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "www.blogfa.com",
+      "evidence": "https://blogfa.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "www.blogfa.com",
+          "evidence": [
+            "https://blogfa.com/",
+            "https://www.blogfa.com/",
+            "https://www.blogfa.com/contact/",
+            "https://faq.blogfa.com/?p=3"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:blogfa.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "f86542df94fd5c1a2d4f203b39065022986123acf1d25c2ace8e981a4f29c390"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "blogfa.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "kavenegar.com",
+      "evidence": "https://kavenegar.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "kavenegar.com",
+          "evidence": [
+            "https://kavenegar.com/",
+            "https://kavenegar.com/support/contact",
+            "https://kavenegar.com/rest.html"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:kavenegar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4bcb83ab6db912b20850215dbee6a6d652496a93a0059cd4ad312980bcd17258"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "kavenegar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "api.kavenegar.com",
+      "evidence": "https://kavenegar.com/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "api.kavenegar.com",
+          "evidence": [
+            "https://kavenegar.com/",
+            "https://kavenegar.com/support/contact",
+            "https://kavenegar.com/rest.html"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:kavenegar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4bcb83ab6db912b20850215dbee6a6d652496a93a0059cd4ad312980bcd17258"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "kavenegar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "sms.ir",
+      "evidence": "https://sms.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "sms.ir",
+          "evidence": [
+            "https://sms.ir/",
+            "https://sms.ir/about-us/",
+            "https://sms.ir/contact-us/",
+            "https://app.sms.ir/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:sms.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "bb0b66da557b71e10dc63bc67a9ef58b4a1181bf2c0141c5086a2fe3423091de"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "sms.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "app.sms.ir",
+      "evidence": "https://sms.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "app.sms.ir",
+          "evidence": [
+            "https://sms.ir/",
+            "https://sms.ir/about-us/",
+            "https://sms.ir/contact-us/",
+            "https://app.sms.ir/"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:sms.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "bb0b66da557b71e10dc63bc67a9ef58b4a1181bf2c0141c5086a2fe3423091de"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "sms.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "domain": "balad.ir",
+      "evidence": "https://balad.ir/",
+      "state": "accepted",
+      "reviewed_on": "2026-11-08",
+      "review_reason": "Balad publishes its interactive maps and route planner for Iranian locations on this exact hostname. Its official product page documents the local map and navigation service.",
+      "relationships": [
+        {
+          "type": "service_dns",
+          "target": "balad.ir",
+          "evidence": [
+            "https://balad.ir/",
+            "https://balad.ir/about"
+          ],
+          "reviewed_on": "2026-11-08",
+          "reason": "Balad publishes its interactive maps and route planner for Iranian locations on this exact hostname. Its official product page documents the local map and navigation service."
+        }
+      ],
+      "discovery_sources": {
+        "candidate_id": "domain:balad.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "df65ddf4035b2c042426f356e4ffc01c6e5dcd5560a14b6b013e2b7ee109d8cf"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "balad.ir",
             "source": "bootmortis/iran-hosted-domains",
             "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
             "version": "202610230802"

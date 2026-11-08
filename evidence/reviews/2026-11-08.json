@@ -1,0 +1,5074 @@
+{
+  "schema": 1,
+  "reviewed_on": "2026-11-08",
+  "main_commit": "0640143a3fb4a7e90931bdb733bacf3f306a6b99",
+  "data_commit": "4a49b849ffc10b1ab105379e49ee874c1a2eadfc",
+  "reviewed_candidates": [
+    "domain:habibabad.org",
+    "domain:rinotik.com",
+    "domain:mavarapos.com",
+    "domain:khorsandmezon.com",
+    "domain:banamaktoys.com",
+    "domain:net2university.com",
+    "domain:blogfa.com",
+    "domain:kavenegar.com",
+    "domain:sms.ir",
+    "domain:balad.ir",
+    "asn:10221",
+    "asn:10234",
+    "asn:10277",
+    "asn:10343",
+    "provider:https://api.derak.cloud/public/ipv4",
+    "provider:https://www.arvancloud.ir/en/ips.txt"
+  ],
+  "oldest_previously_unreviewed": [
+    "domain:habibabad.org",
+    "domain:rinotik.com",
+    "domain:mavarapos.com",
+    "domain:khorsandmezon.com",
+    "domain:banamaktoys.com",
+    "domain:net2university.com",
+    "domain:blogfa.com",
+    "domain:kavenegar.com",
+    "domain:sms.ir",
+    "domain:balad.ir",
+    "asn:10221",
+    "asn:10234",
+    "asn:10277",
+    "asn:10343",
+    "provider:https://www.arvancloud.ir/en/ips.txt"
+  ],
+  "review_budget": {
+    "oldest_unreviewed": 15,
+    "total_including_derived_hosts_accepted_provider_checks_and_operator_recheck": 28
+  },
+  "additional_exact_hostnames": [
+    "www.rinotik.com",
+    "www.mavarapos.com",
+    "www.khorsandmezon.com",
+    "www.blogfa.com",
+    "api.kavenegar.com",
+    "app.sms.ir"
+  ],
+  "selection": "Four oldest unreviewed ASN leads, the first six oldest exact non-.ir domains ranked by SHA256 of review date and candidate ID, and four older service leads. Review includes pending provider inventories, the current operator identity and accepted inventory rechecks.",
+  "discovery_before_proposal": {
+    "observed_at": "2026-11-07T11:52:48.758595+00:00",
+    "candidates": {
+      "accepted": 55,
+      "pending": 138504,
+      "rejected": 12
+    },
+    "source_errors": [],
+    "rdap": {
+      "errors": [
+        {
+          "asn": 212476,
+          "error": "download failed after 1 attempts: https://rdap.db.ripe.net/autnum/212476: <urlopen error [Errno 101] Network is unreachable>"
+        },
+        {
+          "asn": 372,
+          "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/372: <urlopen error [Errno 104] Connection reset by peer>"
+        },
+        {
+          "asn": 384,
+          "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/384: <urlopen error [Errno 104] Connection reset by peer>"
+        },
+        {
+          "asn": 399,
+          "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/399: <urlopen error [Errno 104] Connection reset by peer>"
+        },
+        {
+          "asn": 468,
+          "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/468: <urlopen error [Errno 104] Connection reset by peer>"
+        },
+        {
+          "asn": 1080,
+          "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/1080: <urlopen error [Errno 104] Connection reset by peer>"
+        },
+        {
+          "asn": 1261,
+          "error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/1261: <urlopen error [Errno 104] Connection reset by peer>"
+        }
+      ],
+      "pending_enrichment": 85339,
+      "requests": 250
+    },
+    "sources": [
+      {
+        "license": "MIT",
+        "license_url": "https://github.com/v2fly/domain-list-community/blob/6d14992a24e63dc9494334cc6711de363b0705c3/LICENSE",
+        "lineage": "iran-community-domains",
+        "source": "v2fly/domain-list-community",
+        "url": "https://github.com/v2fly/domain-list-community/blob/6d14992a24e63dc9494334cc6711de363b0705c3",
+        "version": "6d14992a24e63dc9494334cc6711de363b0705c3"
+      },
+      {
+        "asset_url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+        "license": "MIT",
+        "license_url": "https://github.com/bootmortis/iran-hosted-domains/blob/43b6079ef7abee44cd572630f3bcaf4f19adcf08/LICENSE",
+        "lineage": "iran-community-domains",
+        "lineage_note": "Per-entry origin is not supplied; conservatively grouped with v2fly, not counted as independent confirmation.",
+        "original_sources": [
+          "v2fly/domain-list-community",
+          "ITO",
+          "Enamad",
+          "TCI",
+          "IWMF",
+          "bootmortis custom list"
+        ],
+        "release": "202610230802",
+        "sha256": "8fc54cd39c85a3b7de33c490fd53d0ffd46c1fd1abb16631bd98f6dbdb4b78f2",
+        "source": "bootmortis/iran-hosted-domains",
+        "url": "https://github.com/bootmortis/iran-hosted-domains/blob/43b6079ef7abee44cd572630f3bcaf4f19adcf08",
+        "version": "43b6079ef7abee44cd572630f3bcaf4f19adcf08"
+      },
+      {
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+        "lineage": "chocolate4u-provider-leads",
+        "release_commit": "42a61a827a4bac99cb5fe9751388932de9821618",
+        "source": "Chocolate4U/Iran-v2ray-rules",
+        "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099",
+        "version": "676695ea3b4c95d5cf48a7c4e2e718bac5b8a099"
+      }
+    ],
+    "systematic_sources": {
+      "iptoasn_ipv4": {
+        "bytes": 8697031,
+        "sha256": "b881d19d4918552e5dca17ec0ee327d4b3873d629799063b575efb002c6dcd90",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2258661,
+        "sha256": "fcb95a83b58114873c87fdad6a92807c50818acc22df8b2c7a8bb00871907495",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro": {
+        "bytes": 57118906,
+        "sha256": "a2153ee185b4de352e02a38cd0b6ef3e02ddd1389a4ba0b6b352ac3a3cb85862",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      }
+    },
+    "unsupported_rules_count": 387
+  },
+  "unsupported_rule_counts": {
+    "not an enumerable exact hostname": 386,
+    "non-public network lead": 1
+  },
+  "rdap_retries": [
+    {
+      "asn": 212476,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.db.ripe.net/autnum/212476: <urlopen error [Errno 101] Network is unreachable>",
+      "observation": {
+        "url": "https://rdap.db.ripe.net/autnum/212476",
+        "final_url": "https://rdap.db.ripe.net/autnum/212476",
+        "observed_at": "2026-11-08T05:31:53.234196+00:00",
+        "http_status": 200,
+        "bytes": 8767,
+        "sha256": "64f405d91ebb072dc4846ef18fd2b21102390c025f7b691d81f6d9b1eead08ce",
+        "name": "SepehrPayment-AS",
+        "handle": "AS212476",
+        "start_autnum": 212476,
+        "end_autnum": 212476,
+        "country": null
+      }
+    },
+    {
+      "asn": 372,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/372: <urlopen error [Errno 104] Connection reset by peer>",
+      "observation": {
+        "url": "https://rdap.arin.net/registry/autnum/372",
+        "final_url": "https://rdap.arin.net/registry/autnum/372",
+        "http_status": 200,
+        "observed_at": "2026-11-08T05:32:21.771448+00:00",
+        "bytes": 8438,
+        "sha256": "790a78997c8afa0b5fa31388b2e190a991384f2a7eaebcba57283102e6b592f2",
+        "handle": "AS372",
+        "name": "AS372",
+        "start_autnum": 372,
+        "end_autnum": 372
+      },
+      "earlier_attempts": [
+        {
+          "url": "https://rdap.arin.net/registry/autnum/372",
+          "observed_at": "2026-11-08T05:31:52.047945+00:00",
+          "error": "<urlopen error [Errno 54] Connection reset by peer>",
+          "attempts": [
+            {
+              "observed_at": "2026-11-08T05:31:51.523827+00:00",
+              "error": "<urlopen error [Errno 54] Connection reset by peer>"
+            },
+            {
+              "observed_at": "2026-11-08T05:31:52.047945+00:00",
+              "error": "<urlopen error [Errno 54] Connection reset by peer>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "asn": 384,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/384: <urlopen error [Errno 104] Connection reset by peer>",
+      "observation": {
+        "url": "https://rdap.arin.net/registry/autnum/384",
+        "final_url": "https://rdap.arin.net/registry/autnum/384",
+        "observed_at": "2026-11-08T05:31:51.524042+00:00",
+        "http_status": 200,
+        "bytes": 4229,
+        "sha256": "42023bc49e09a1daeb8df2df9057ece74524079cdc7db3558f1db00f78c538d3",
+        "name": "AFCONC-BLOCK1-AS",
+        "handle": "AS379",
+        "start_autnum": 379,
+        "end_autnum": 508,
+        "country": null
+      }
+    },
+    {
+      "asn": 399,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/399: <urlopen error [Errno 104] Connection reset by peer>",
+      "observation": {
+        "url": "https://rdap.arin.net/registry/autnum/399",
+        "final_url": "https://rdap.arin.net/registry/autnum/399",
+        "http_status": 200,
+        "observed_at": "2026-11-08T05:32:22.682210+00:00",
+        "bytes": 4229,
+        "sha256": "2e92919f93af2b868199f19d42886ab6aeaa0b1c284491475878d753ce29e890",
+        "handle": "AS379",
+        "name": "AFCONC-BLOCK1-AS",
+        "start_autnum": 379,
+        "end_autnum": 508
+      },
+      "earlier_attempts": [
+        {
+          "url": "https://rdap.arin.net/registry/autnum/399",
+          "observed_at": "2026-11-08T05:31:52.048299+00:00",
+          "error": "<urlopen error [Errno 54] Connection reset by peer>",
+          "attempts": [
+            {
+              "observed_at": "2026-11-08T05:31:51.524211+00:00",
+              "error": "<urlopen error [Errno 54] Connection reset by peer>"
+            },
+            {
+              "observed_at": "2026-11-08T05:31:52.048299+00:00",
+              "error": "<urlopen error [Errno 54] Connection reset by peer>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "asn": 468,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/468: <urlopen error [Errno 104] Connection reset by peer>",
+      "observation": {
+        "url": "https://rdap.arin.net/registry/autnum/468",
+        "final_url": "https://rdap.arin.net/registry/autnum/468",
+        "observed_at": "2026-11-08T05:31:51.524372+00:00",
+        "http_status": 200,
+        "bytes": 4229,
+        "sha256": "114e885057c818613267c25f8b5dd575ad70b57f657c01b79d3f9edc685183e4",
+        "name": "AFCONC-BLOCK1-AS",
+        "handle": "AS379",
+        "start_autnum": 379,
+        "end_autnum": 508,
+        "country": null
+      }
+    },
+    {
+      "asn": 1080,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/1080: <urlopen error [Errno 104] Connection reset by peer>",
+      "observation": {
+        "url": "https://rdap.arin.net/registry/autnum/1080",
+        "final_url": "https://rdap.arin.net/registry/autnum/1080",
+        "observed_at": "2026-11-08T05:31:51.524523+00:00",
+        "http_status": 200,
+        "bytes": 4185,
+        "sha256": "326fed0dcf77005e10ef888e85a40ee0acf3b702b4d105573094db0a617a8d7d",
+        "name": "WPCCU-ASN-01",
+        "handle": "AS1080",
+        "start_autnum": 1080,
+        "end_autnum": 1080,
+        "country": null
+      }
+    },
+    {
+      "asn": 1261,
+      "state": "recovered",
+      "previous_error": "download failed after 1 attempts: https://rdap.arin.net/registry/autnum/1261: <urlopen error [Errno 104] Connection reset by peer>",
+      "observation": {
+        "url": "https://rdap.arin.net/registry/autnum/1261",
+        "final_url": "https://rdap.arin.net/registry/autnum/1261",
+        "observed_at": "2026-11-08T05:31:51.524640+00:00",
+        "http_status": 200,
+        "bytes": 7010,
+        "sha256": "53a291858555fb790815f56d0d77a4aa480ebaeecdce6c9bec2b34e08059576d",
+        "name": "NATINST-AS-AS",
+        "handle": "AS1261",
+        "start_autnum": 1261,
+        "end_autnum": 1261,
+        "country": null
+      }
+    }
+  ],
+  "services": [
+    {
+      "root": "habibabad.org",
+      "state": "pending",
+      "hosts": [],
+      "sources": [
+        "https://habibabad.org/",
+        "https://www.habibabad.org/"
+      ],
+      "reason": "The apex and www HTTPS checks failed at DNS. Google and Cloudflare both returned NXDOMAIN for the apex A and AAAA queries. No current primary evidence identifies an active Iranian service on this exact hostname.",
+      "discovery": {
+        "candidate_id": "domain:habibabad.org",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "960e3fb048a3c416c05f663097dc31ae11c6014ac656e1267bbe1a6ff711a2d8"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "habibabad.org",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "rinotik.com",
+      "state": "accepted",
+      "hosts": [
+        "rinotik.com",
+        "www.rinotik.com"
+      ],
+      "sources": [
+        "https://rinotik.com/",
+        "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+        "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+        "https://www.rinotik.com/"
+      ],
+      "reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "hostname_proof": {
+        "rinotik.com": "Official store, About and Contact pages returned HTTP 200 on the apex.",
+        "www.rinotik.com": "HTTPS 301 to https://rinotik.com/."
+      },
+      "discovery": {
+        "candidate_id": "domain:rinotik.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "043b3f97734c1349bb5d188e2f231d75949dad211429ddd7be1abd60079e652d"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "rinotik.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "mavarapos.com",
+      "state": "accepted",
+      "hosts": [
+        "mavarapos.com",
+        "www.mavarapos.com"
+      ],
+      "sources": [
+        "https://mavarapos.com/",
+        "https://mavarapos.com/contact-us/",
+        "https://www.mavarapos.com/"
+      ],
+      "reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "hostname_proof": {
+        "mavarapos.com": "Official store and contact page returned HTTP 200 on the apex.",
+        "www.mavarapos.com": "HTTPS 301 to https://mavarapos.com/."
+      },
+      "discovery": {
+        "candidate_id": "domain:mavarapos.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "2fd060b23dd99a803923cf034af6d0b2ea4d1dc3a05eb2b3d22a19ac9d9bddec"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "mavarapos.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "khorsandmezon.com",
+      "state": "accepted",
+      "hosts": [
+        "khorsandmezon.com",
+        "www.khorsandmezon.com"
+      ],
+      "sources": [
+        "https://khorsandmezon.com/",
+        "https://khorsandmezon.com/about-us/",
+        "https://khorsandmezon.com/contact-us/",
+        "https://www.khorsandmezon.com/"
+      ],
+      "reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "hostname_proof": {
+        "khorsandmezon.com": "Official store, About and Contact pages returned HTTP 200 on the apex.",
+        "www.khorsandmezon.com": "HTTPS 301 to https://khorsandmezon.com/."
+      },
+      "discovery": {
+        "candidate_id": "domain:khorsandmezon.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "7e6dda2f1755abeca73c6655d20c7ec6e9fafb069884c7b7b45ad14447612fd4"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "khorsandmezon.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "banamaktoys.com",
+      "state": "pending",
+      "hosts": [],
+      "sources": [
+        "https://banamaktoys.com/",
+        "https://www.banamaktoys.com/"
+      ],
+      "reason": "The apex and www HTTPS checks failed at DNS. Google and Cloudflare both returned NXDOMAIN for the apex A and AAAA queries. A same-name public storefront channel mentions the domain, but active exact-host service use could not be verified.",
+      "background_lead": "https://t.me/s/banamaktoys?after=780",
+      "discovery": {
+        "candidate_id": "domain:banamaktoys.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "9656f3bc68bb9ab046303f2def18e37bcb2db0e8e70c2162934f688e5a273100"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "banamaktoys.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "net2university.com",
+      "state": "pending",
+      "hosts": [],
+      "sources": [
+        "https://net2university.com/",
+        "https://www.net2university.com/"
+      ],
+      "reason": "Google and Cloudflare return one apex A record and no AAAA answer. Both apex and www HTTPS checks failed certificate hostname validation. Historical references to an Iranian learning institution do not verify the service currently operating on these hostnames.",
+      "discovery": {
+        "candidate_id": "domain:net2university.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "35fde93410d1ec4c82b015b96ce1920bac4abf670fd10242c3796ef3753d2ccd"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "net2university.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "blogfa.com",
+      "state": "accepted",
+      "hosts": [
+        "blogfa.com",
+        "www.blogfa.com"
+      ],
+      "sources": [
+        "https://blogfa.com/",
+        "https://www.blogfa.com/",
+        "https://www.blogfa.com/contact/",
+        "https://faq.blogfa.com/?p=3"
+      ],
+      "reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames.",
+      "discovery": {
+        "candidate_id": "domain:blogfa.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "f86542df94fd5c1a2d4f203b39065022986123acf1d25c2ace8e981a4f29c390"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "blogfa.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "kavenegar.com",
+      "state": "accepted",
+      "hosts": [
+        "kavenegar.com",
+        "api.kavenegar.com"
+      ],
+      "sources": [
+        "https://kavenegar.com/",
+        "https://kavenegar.com/support/contact",
+        "https://kavenegar.com/rest.html"
+      ],
+      "reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname.",
+      "discovery": {
+        "candidate_id": "domain:kavenegar.com",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "4bcb83ab6db912b20850215dbee6a6d652496a93a0059cd4ad312980bcd17258"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "kavenegar.com",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "sms.ir",
+      "state": "accepted",
+      "hosts": [
+        "sms.ir",
+        "app.sms.ir"
+      ],
+      "sources": [
+        "https://sms.ir/",
+        "https://sms.ir/about-us/",
+        "https://sms.ir/contact-us/",
+        "https://app.sms.ir/"
+      ],
+      "reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application.",
+      "discovery": {
+        "candidate_id": "domain:sms.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "bb0b66da557b71e10dc63bc67a9ef58b4a1181bf2c0141c5086a2fe3423091de"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "sms.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    },
+    {
+      "root": "balad.ir",
+      "state": "accepted",
+      "hosts": [
+        "balad.ir"
+      ],
+      "sources": [
+        "https://balad.ir/",
+        "https://balad.ir/about"
+      ],
+      "reason": "Balad publishes its interactive maps and route planner for Iranian locations on this exact hostname. Its official product page documents the local map and navigation service.",
+      "discovery": {
+        "candidate_id": "domain:balad.ir",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "df65ddf4035b2c042426f356e4ffc01c6e5dcd5560a14b6b013e2b7ee109d8cf"
+        ],
+        "sources": [
+          {
+            "license": "MIT",
+            "lineage": "iran-community-domains",
+            "rule": "balad.ir",
+            "source": "bootmortis/iran-hosted-domains",
+            "url": "https://github.com/bootmortis/iran-hosted-domains/releases/download/202610230802/domains.txt",
+            "version": "202610230802"
+          }
+        ]
+      }
+    }
+  ],
+  "candidate_outcomes": [
+    {
+      "candidate_id": "domain:habibabad.org",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "The apex and www HTTPS checks failed at DNS. Google and Cloudflare both returned NXDOMAIN for the apex A and AAAA queries. No current primary evidence identifies an active Iranian service on this exact hostname.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "960e3fb048a3c416c05f663097dc31ae11c6014ac656e1267bbe1a6ff711a2d8"
+      ],
+      "evidence": [
+        "https://habibabad.org/",
+        "https://www.habibabad.org/"
+      ]
+    },
+    {
+      "candidate_id": "domain:rinotik.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "043b3f97734c1349bb5d188e2f231d75949dad211429ddd7be1abd60079e652d"
+      ],
+      "evidence": [
+        "https://rinotik.com/",
+        "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+        "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+        "https://www.rinotik.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:mavarapos.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "2fd060b23dd99a803923cf034af6d0b2ea4d1dc3a05eb2b3d22a19ac9d9bddec"
+      ],
+      "evidence": [
+        "https://mavarapos.com/",
+        "https://mavarapos.com/contact-us/",
+        "https://www.mavarapos.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:khorsandmezon.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "7e6dda2f1755abeca73c6655d20c7ec6e9fafb069884c7b7b45ad14447612fd4"
+      ],
+      "evidence": [
+        "https://khorsandmezon.com/",
+        "https://khorsandmezon.com/about-us/",
+        "https://khorsandmezon.com/contact-us/",
+        "https://www.khorsandmezon.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:banamaktoys.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "The apex and www HTTPS checks failed at DNS. Google and Cloudflare both returned NXDOMAIN for the apex A and AAAA queries. A same-name public storefront channel mentions the domain, but active exact-host service use could not be verified.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "9656f3bc68bb9ab046303f2def18e37bcb2db0e8e70c2162934f688e5a273100"
+      ],
+      "evidence": [
+        "https://banamaktoys.com/",
+        "https://www.banamaktoys.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:net2university.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "Google and Cloudflare return one apex A record and no AAAA answer. Both apex and www HTTPS checks failed certificate hostname validation. Historical references to an Iranian learning institution do not verify the service currently operating on these hostnames.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "35fde93410d1ec4c82b015b96ce1920bac4abf670fd10242c3796ef3753d2ccd"
+      ],
+      "evidence": [
+        "https://net2university.com/",
+        "https://www.net2university.com/"
+      ]
+    },
+    {
+      "candidate_id": "domain:blogfa.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "f86542df94fd5c1a2d4f203b39065022986123acf1d25c2ace8e981a4f29c390"
+      ],
+      "evidence": [
+        "https://blogfa.com/",
+        "https://www.blogfa.com/",
+        "https://www.blogfa.com/contact/",
+        "https://faq.blogfa.com/?p=3"
+      ]
+    },
+    {
+      "candidate_id": "domain:kavenegar.com",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "4bcb83ab6db912b20850215dbee6a6d652496a93a0059cd4ad312980bcd17258"
+      ],
+      "evidence": [
+        "https://kavenegar.com/",
+        "https://kavenegar.com/support/contact",
+        "https://kavenegar.com/rest.html"
+      ]
+    },
+    {
+      "candidate_id": "domain:sms.ir",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "bb0b66da557b71e10dc63bc67a9ef58b4a1181bf2c0141c5086a2fe3423091de"
+      ],
+      "evidence": [
+        "https://sms.ir/",
+        "https://sms.ir/about-us/",
+        "https://sms.ir/contact-us/",
+        "https://app.sms.ir/"
+      ]
+    },
+    {
+      "candidate_id": "domain:balad.ir",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "accepted",
+      "reason": "Balad publishes its interactive maps and route planner for Iranian locations on this exact hostname. Its official product page documents the local map and navigation service.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "df65ddf4035b2c042426f356e4ffc01c6e5dcd5560a14b6b013e2b7ee109d8cf"
+      ],
+      "evidence": [
+        "https://balad.ir/",
+        "https://balad.ir/about"
+      ]
+    },
+    {
+      "candidate_id": "asn:10221",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "rejected",
+      "reason": "APNIC identifies the HEWLETT-PACKARD ASN in Australia and names SingTel Optus Pty Ltd as its registrant. The matched RIPE anchors identify distinct organizations. The supplied connection/connections name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "1e134126e23f30fe5669ce402ef1f03bd912b645b65c299819459669bec54f37",
+        "1ec337386e4b8d87d2b5544173f9a811c791fe531eb77f1b767c68b40b063905",
+        "86cfec33f9b7c5c58c13c4094961134e04f1bc0ea91faca7e5ff566c49890049",
+        "a06a6a4a0934441cfd206d91178b815663233d5286c337da248a2780becfa9fe",
+        "bf0b3ec013317850826c58d0e8cee1885f0a1f5eefb65bb722f3bd2c3006522e"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10221",
+        "https://rdap.db.ripe.net/autnum/34513",
+        "https://rdap.db.ripe.net/autnum/39364"
+      ]
+    },
+    {
+      "candidate_id": "asn:10234",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "rejected",
+      "reason": "APNIC identifies Zurich Financial Services Australia Limited in Australia. The matched RIPE anchors identify distinct organizations. The supplied financial name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "0e61329438bba72b7358265e1e97eb4aff02cbdd17663e9b8f8a4e26bdb67379",
+        "14acadb30a7046068e1b01142e05ad20c24fd0a9fdb684b66ff21055a1bb86b6",
+        "4e7fc0431ad8ac209401fcd9135e8b659c2cfecdc2160c82c0c521bed1ffc015",
+        "786e4e046128a0ec696a163417f1aa18869d7e68adba90753beba3e6a8c3ce33",
+        "a207b853fe7bd70c56fa50aa0320c57d8eb9f2826fe4c64fec2bc50dde990392",
+        "a323e45e233860339c884d50f2755c3a2c0a1f28bfa654f23e09240ee1316ddb",
+        "bf4e0bff1f844a06826aee6396ed84eeeb7c1a260da9390e15dc1ac08eaec293",
+        "bfc82e7bbf8ce1370ca28d5d2e775dc524f04130e715def333bbed0febdeb389",
+        "fbeb6ccd7f6b361298bd6019bf5399a6af2cebc1604d96787b8c8a753ebb854f",
+        "fd10879c4e89e0d544cb18970953272938d05937317cdd5173b8989027076079"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10234",
+        "https://rdap.db.ripe.net/autnum/34871",
+        "https://rdap.db.ripe.net/autnum/62238",
+        "https://rdap.db.ripe.net/autnum/203162",
+        "https://rdap.db.ripe.net/autnum/213682",
+        "https://rdap.db.ripe.net/autnum/215700"
+      ]
+    },
+    {
+      "candidate_id": "asn:10277",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "rejected",
+      "reason": "ARIN refers the request to LACNIC, which identifies Argentina’s Ministerio de Cultura y Educacion as registrant. The matched RIPE anchors identify distinct organizations. The supplied cultural/cultura name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "17deafb07b8c5f03050dc40868c42cb21eebcc1081b787fc74f756f85fb5c7cc",
+        "31aedd1fa8052d433468f68b445dcbe63043274ccee54bd672e9593d1aeea1c8",
+        "3c1911a96ed2f086474be4ef45689f90b394e4d795bedb9402dda0215910cb23",
+        "4b2dc0d44b2485e453356455f3e3c75762bfc9a8d6d856d01044323bd815d188",
+        "59db71edcff332e1e8b39daf7a35b3f23d85c309aa1d24087c6d0dc4baead45c",
+        "622bcdfc28a18e10a123b5dded83cab5e8b08fa8ba0d8ff424844269e0b33d07",
+        "820e8320ffe35e2d1c4199238eb2dcbf06a435effaa4e8c898543054dd2eb590",
+        "8b3e9a04ca1a38e672f46797e845c9c790b924b1cec21afa5e147ceeddd686d1",
+        "9211d80eb79c7a625511e111b9eccfe9595bb614450105e6747fe3f788bd229d",
+        "c141bd395122f81fb5ce1bab736d087820cb2d4e4397f82ec5a2e0cdd751ab5c",
+        "c92c38b9be727fa5abb3a87fde39421698c4e9dd6b7961c76c4e70de0f7a2fa7",
+        "d46a928d94284e74242676131bb75b49cfedd890754ff9ae6aa2267bc31f6030",
+        "dc650a789621212fd1b2e6378210f6606629d9f174316af1a3ffc701dcaacdc5",
+        "f3be9a7405ff31c6662437328a6c9bd805f4e1d160f5c8345e22e7ffec21d3fa"
+      ],
+      "evidence": [
+        "https://rdap.arin.net/registry/autnum/10277",
+        "https://rdap.lacnic.net/rdap/autnum/10277",
+        "https://rdap.db.ripe.net/autnum/44609",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/62048",
+        "https://rdap.db.ripe.net/autnum/62229",
+        "https://rdap.db.ripe.net/autnum/197343",
+        "https://rdap.db.ripe.net/autnum/204650",
+        "https://rdap.db.ripe.net/autnum/210609"
+      ]
+    },
+    {
+      "candidate_id": "asn:10343",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "rejected",
+      "reason": "ARIN identifies the United States National Aeronautics and Space Administration (NASA). The matched RIPE anchors identify distinct organizations. The supplied administration name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "c85e3c9e036fa6af054f82d2dcdb1f5a0f2b2cae6bb3a1bb3327e230572d446e"
+      ],
+      "evidence": [
+        "https://rdap.arin.net/registry/autnum/10343",
+        "https://rdap.db.ripe.net/autnum/34592"
+      ]
+    },
+    {
+      "candidate_id": "provider:https://api.derak.cloud/public/ipv4",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "pending",
+      "reason": "The provider’s official IPv4 inventory includes private 192.168.204.48/28. Strict public-range validation excludes the entire inventory pending a corrected endpoint.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+        "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+        "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "68e7d705b38e5e6547f01e67b2fcdf241318c966b2afee8656b59b896b5e4034",
+        "78fbc98fa503003d08ea26213a68d706a574771fba2942ea747b2d51d65c606e",
+        "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+        "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+        "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+        "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
+        "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
+      ],
+      "evidence": [
+        "https://api.derak.cloud/public/ipv4",
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/"
+      ]
+    },
+    {
+      "candidate_id": "provider:https://www.arvancloud.ir/en/ips.txt",
+      "first_seen": "2026-09-17T18:24:45.497879+00:00",
+      "state": "rejected",
+      "reason": "Both official language endpoints publish the same 14 public IPv4 prefixes. The English URL duplicates the accepted Persian inventory and does not add coverage.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "04d620d38ba89568d0e89a5e88901c3919516ce5d9d949ea149083114469bf5d",
+        "4db1a64471245ec99e69be16c0a4f0ecaed8472582cd8797d8fa51694c777a28",
+        "69b335d95f65130f824c33633df24cecbf18bd275a8848b751cd47bc2e42e00d",
+        "716f7b57d8b57532424754944f07d77876458c8ae1e41061a869f8b93c25e27c",
+        "ac1e5063c645093bdd66122f724356151b4555ee09fdf4b24c716bf74d274e2a",
+        "d18b89c3adaf7da3f8ec9e4e2696573499711b9be688034eb2c48d9f9074d986",
+        "dc30ed0162cb087383240638da1c887eca527eecb76347c6dc2597cf3ca921c8",
+        "f67d48513d51391fe39a5fbac3c63325f71a296f15f15bc5ed4accda13cf7488",
+        "f7822d39fafc0d1884d8fa95536e710bd694fb77455212278d6ef90307ffb73a"
+      ],
+      "evidence": [
+        "https://www.arvancloud.ir/en/dev/ips",
+        "https://www.arvancloud.ir/en/ips.txt",
+        "https://www.arvancloud.ir/fa/dev/ips",
+        "https://www.arvancloud.ir/fa/ips.txt"
+      ]
+    }
+  ],
+  "registry_observations": {
+    "10221": {
+      "url": "https://rdap.apnic.net/autnum/10221",
+      "final_url": "https://rdap.apnic.net/autnum/10221",
+      "observed_at": "2026-11-08T05:31:51.524738+00:00",
+      "http_status": 200,
+      "bytes": 4709,
+      "sha256": "f77bb72793daad84fdedb5402480378ebe7404fde530a9fa50f257ee9549d1b4",
+      "name": "HEWLETT-PACKARD",
+      "handle": "AS10221",
+      "start_autnum": 10221,
+      "end_autnum": 10221,
+      "country": "AU",
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-SOPL2-AP",
+          "names": [
+            "SingTel Optus Pty Ltd"
+          ],
+          "countries": []
+        }
+      ],
+      "connection_description": [
+        "Multi-homed connections to multiple ISP's providing",
+        "web-hosting facilities"
+      ]
+    },
+    "10234": {
+      "url": "https://rdap.apnic.net/autnum/10234",
+      "final_url": "https://rdap.apnic.net/autnum/10234",
+      "observed_at": "2026-11-08T05:31:51.943198+00:00",
+      "http_status": 200,
+      "bytes": 3789,
+      "sha256": "cbb83149abfa90d343dd9adf5a8bd30c66031fd19433575a787682ffe064c218",
+      "name": "Zurich-Australia-AS-AP",
+      "handle": "AS10234",
+      "start_autnum": 10234,
+      "end_autnum": 10234,
+      "country": "AU",
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-ZFSA1-AP",
+          "names": [
+            "Zurich Financial Services Australia Limited"
+          ],
+          "countries": []
+        }
+      ]
+    },
+    "10277": {
+      "url": "https://rdap.arin.net/registry/autnum/10277",
+      "final_url": "https://rdap.lacnic.net/rdap/autnum/10277",
+      "observed_at": "2026-11-08T05:31:52.719018+00:00",
+      "http_status": 200,
+      "bytes": 5206,
+      "sha256": "25206e4464f54447dbb705c9e805023f386044353fd5f6f39adfc25b1a6f42db",
+      "prior_attempt_errors": [
+        {
+          "observed_at": "2026-11-08T05:31:52.274870+00:00",
+          "error": "<urlopen error [Errno 54] Connection reset by peer>"
+        }
+      ],
+      "name": "10277",
+      "handle": "AS10277",
+      "start_autnum": 10277,
+      "end_autnum": 10277,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "AR-MCYE1-LACNIC",
+          "names": [
+            "Ministerio de Cultura y Educacion"
+          ],
+          "countries": [
+            "AR"
+          ]
+        }
+      ],
+      "registrant_country": "AR"
+    },
+    "10343": {
+      "url": "https://rdap.arin.net/registry/autnum/10343",
+      "final_url": "https://rdap.arin.net/registry/autnum/10343",
+      "observed_at": "2026-11-08T05:31:52.734598+00:00",
+      "http_status": 200,
+      "bytes": 8478,
+      "sha256": "c719fe26cb0f177aa0816125d945fd12c8609f1dddbd825ff7cb5054a8bf3691",
+      "prior_attempt_errors": [
+        {
+          "observed_at": "2026-11-08T05:31:52.280871+00:00",
+          "error": "<urlopen error [Errno 54] Connection reset by peer>"
+        }
+      ],
+      "name": "AS10343",
+      "handle": "AS10343",
+      "start_autnum": 10343,
+      "end_autnum": 10343,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "NASA-Z",
+          "names": [
+            "National Aeronautics and Space Administration"
+          ],
+          "countries": [
+            "US"
+          ]
+        }
+      ],
+      "registrant_country": "US"
+    },
+    "34513": {
+      "url": "https://rdap.db.ripe.net/autnum/34513",
+      "final_url": "https://rdap.db.ripe.net/autnum/34513",
+      "observed_at": "2026-11-08T05:31:52.281274+00:00",
+      "http_status": 200,
+      "bytes": 10714,
+      "sha256": "5e0e3d4e5a9bb95acc993bdb7c999da530d085866868e01c8964d9df47f581be",
+      "name": "TSTonline-AS",
+      "handle": "AS34513",
+      "start_autnum": 34513,
+      "end_autnum": 34513,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TC4-RIPE",
+          "names": [
+            "Tarashe Sabz Tehran Co. Ltd."
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "34592": {
+      "url": "https://rdap.db.ripe.net/autnum/34592",
+      "final_url": "https://rdap.db.ripe.net/autnum/34592",
+      "observed_at": "2026-11-08T05:31:52.290234+00:00",
+      "http_status": 200,
+      "bytes": 10103,
+      "sha256": "77b555ddae9e16608b071513249e00c85bb38b28f3d25a7e56c25a22fc6e24bb",
+      "name": "IRIPO-NET",
+      "handle": "AS34592",
+      "start_autnum": 34592,
+      "end_autnum": 34592,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-IPA15-RIPE",
+          "names": [
+            "Iranian Presidential Administration"
+          ],
+          "countries": []
+        }
+      ]
+    },
+    "34871": {
+      "url": "https://rdap.db.ripe.net/autnum/34871",
+      "final_url": "https://rdap.db.ripe.net/autnum/34871",
+      "observed_at": "2026-11-08T05:31:52.514977+00:00",
+      "http_status": 200,
+      "bytes": 9641,
+      "sha256": "b3b37c04d6dca73722526b5bff4449e08eb6c3c6d7aeb2244e4b62aba2b357ab",
+      "name": "Part-Financial-Information-Processing",
+      "handle": "AS34871",
+      "start_autnum": 34871,
+      "end_autnum": 34871,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-PFIP1-RIPE",
+          "names": [
+            "Part Financial Information Processing Co."
+          ],
+          "countries": []
+        }
+      ]
+    },
+    "39364": {
+      "url": "https://rdap.db.ripe.net/autnum/39364",
+      "final_url": "https://rdap.db.ripe.net/autnum/39364",
+      "observed_at": "2026-11-08T05:31:52.523146+00:00",
+      "http_status": 200,
+      "bytes": 9237,
+      "sha256": "7b09442158d5f3baf13f4e1d13091f004a73f7976f8ff0bf0bb1cc66f0654880",
+      "name": "Hormoz-IT",
+      "handle": "AS39364",
+      "start_autnum": 39364,
+      "end_autnum": 39364,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-HINW1-RIPE",
+          "names": [
+            "Hormoz IT & Network Waves Connection Co. (PJS)"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "44609": {
+      "url": "https://rdap.db.ripe.net/autnum/44609",
+      "final_url": "https://rdap.db.ripe.net/autnum/44609",
+      "observed_at": "2026-11-08T05:31:52.571052+00:00",
+      "http_status": 200,
+      "bytes": 7860,
+      "sha256": "cf492eabfcf25e474bf3fb021b522240201346d90c5cb1ea087e5f78a710c015",
+      "name": "FNA",
+      "handle": "AS44609",
+      "start_autnum": 44609,
+      "end_autnum": 44609,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-FNAC1-RIPE",
+          "names": [
+            "Fars News Agency Cultural Arts Institute"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "48434": {
+      "url": "https://rdap.db.ripe.net/autnum/48434",
+      "final_url": "https://rdap.db.ripe.net/autnum/48434",
+      "observed_at": "2026-11-08T05:31:52.589873+00:00",
+      "http_status": 200,
+      "bytes": 9710,
+      "sha256": "a2f5e134516174a6d081a36d91c880b0c444865e6c6d553961baf2bb60bb7f34",
+      "name": "Tebyan",
+      "handle": "AS48434",
+      "start_autnum": 48434,
+      "end_autnum": 48434,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TCI2-RIPE",
+          "names": [
+            "Tebyan-e-Noor Cultural-Artistic Institute"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "62048": {
+      "url": "https://rdap.db.ripe.net/autnum/62048",
+      "final_url": "https://rdap.db.ripe.net/autnum/62048",
+      "observed_at": "2026-11-08T05:31:52.634431+00:00",
+      "http_status": 200,
+      "bytes": 7978,
+      "sha256": "85e16fefb3359d65551ca173b0107efcc509e8ded7530c6ee3616f5c7b495a50",
+      "name": "ACAI",
+      "handle": "AS62048",
+      "start_autnum": 62048,
+      "end_autnum": 62048,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-ACAA2-RIPE",
+          "names": [
+            "Avini cultural and Art Institute"
+          ],
+          "countries": []
+        }
+      ]
+    },
+    "62229": {
+      "url": "https://rdap.db.ripe.net/autnum/62229",
+      "final_url": "https://rdap.db.ripe.net/autnum/62229",
+      "observed_at": "2026-11-08T05:31:52.797693+00:00",
+      "http_status": 200,
+      "bytes": 7864,
+      "sha256": "ac4f745c1eb22cf805699c3821e750822be0431fcbe03680f9f192089c812a76",
+      "name": "FNA-CDN",
+      "handle": "AS62229",
+      "start_autnum": 62229,
+      "end_autnum": 62229,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-FNAC1-RIPE",
+          "names": [
+            "Fars News Agency Cultural Arts Institute"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "62238": {
+      "url": "https://rdap.db.ripe.net/autnum/62238",
+      "final_url": "https://rdap.db.ripe.net/autnum/62238",
+      "observed_at": "2026-11-08T05:31:52.869788+00:00",
+      "http_status": 200,
+      "bytes": 7881,
+      "sha256": "f793a80a0417de9613cf4ad0b458da7092114661878391a46e9280ca23ac4aa7",
+      "name": "SINAICT",
+      "handle": "AS62238",
+      "start_autnum": 62238,
+      "end_autnum": 62238,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-SEDC2-RIPE",
+          "names": [
+            "Sina Financial & Investment Holding Co (PJS)"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "197343": {
+      "url": "https://rdap.db.ripe.net/autnum/197343",
+      "final_url": "https://rdap.db.ripe.net/autnum/197343",
+      "observed_at": "2026-11-08T05:31:52.886208+00:00",
+      "http_status": 200,
+      "bytes": 8094,
+      "sha256": "45d1eaf9681aff0d4c152e8dc7bfaaf97172bd2369dab5a2a2149f9d03853d46",
+      "name": "TRLCo",
+      "handle": "AS197343",
+      "start_autnum": 197343,
+      "end_autnum": 197343,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TRLE1-RIPE",
+          "names": [
+            "Toloe Rayaneh Loghman Educational and Cultural Co. LTD"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "203162": {
+      "url": "https://rdap.db.ripe.net/autnum/203162",
+      "final_url": "https://rdap.db.ripe.net/autnum/203162",
+      "observed_at": "2026-11-08T05:31:52.913526+00:00",
+      "http_status": 200,
+      "bytes": 9602,
+      "sha256": "54d44ba9d391123d1b9301f299dd20b4dcaa0417749ee1eba48cdcd6340503e1",
+      "name": "charisma",
+      "handle": "AS203162",
+      "start_autnum": 203162,
+      "end_autnum": 203162,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-CFIP3-RIPE",
+          "names": [
+            "Charisma Financial Information Processing PJSC"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "204650": {
+      "url": "https://rdap.db.ripe.net/autnum/204650",
+      "final_url": "https://rdap.db.ripe.net/autnum/204650",
+      "observed_at": "2026-11-08T05:31:52.981808+00:00",
+      "http_status": 200,
+      "bytes": 8105,
+      "sha256": "21fce99f543193409cb48dcf73329a6d62b0ee875683b589d30d72133a578503",
+      "name": "ErtebatateSabeteAvaArvand",
+      "handle": "AS204650",
+      "start_autnum": 204650,
+      "end_autnum": 204650,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TRLE1-RIPE",
+          "names": [
+            "Toloe Rayaneh Loghman Educational and Cultural Co. LTD"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "210609": {
+      "url": "https://rdap.db.ripe.net/autnum/210609",
+      "final_url": "https://rdap.db.ripe.net/autnum/210609",
+      "observed_at": "2026-11-08T05:31:53.189108+00:00",
+      "http_status": 200,
+      "bytes": 8089,
+      "sha256": "3cb31bfd21e667bb7a856ea9e9d7808c6666347b4ac6efa63c29b543dbab2a8c",
+      "name": "SayanCard",
+      "handle": "AS210609",
+      "start_autnum": 210609,
+      "end_autnum": 210609,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-TRLE1-RIPE",
+          "names": [
+            "Toloe Rayaneh Loghman Educational and Cultural Co. LTD"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "213682": {
+      "url": "https://rdap.db.ripe.net/autnum/213682",
+      "final_url": "https://rdap.db.ripe.net/autnum/213682",
+      "observed_at": "2026-11-08T05:31:53.235191+00:00",
+      "http_status": 200,
+      "bytes": 7809,
+      "sha256": "5d9cae354c49cb096b4068e34ae11a407876eec58558dba64ef79683bd6b416a",
+      "name": "charisma",
+      "handle": "AS213682",
+      "start_autnum": 213682,
+      "end_autnum": 213682,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-CFIP3-RIPE",
+          "names": [
+            "Charisma Financial Information Processing PJSC"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    },
+    "215700": {
+      "url": "https://rdap.db.ripe.net/autnum/215700",
+      "final_url": "https://rdap.db.ripe.net/autnum/215700",
+      "observed_at": "2026-11-08T05:31:53.294919+00:00",
+      "http_status": 200,
+      "bytes": 8133,
+      "sha256": "0acdac0c28604433a8e135d06ce1e309d3deced3297fda5dad198d5648b3cb51",
+      "name": "MabnaDP",
+      "handle": "AS215700",
+      "start_autnum": 215700,
+      "end_autnum": 215700,
+      "country": null,
+      "organizations": [
+        {
+          "registry_scoped_handle": "ORG-MFDP2-RIPE",
+          "names": [
+            "Mabna Financial Data Processing PJS"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      ],
+      "registrant_country": "IR"
+    }
+  },
+  "public_http_observations": [
+    {
+      "url": "https://habibabad.org/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "redirects": [],
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.habibabad.org/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "redirects": [],
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://rinotik.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "status": 200,
+      "final_url": "https://rinotik.com/",
+      "bytes": 378041,
+      "sha256": "4f5b1c2bff9cec3ea3d63eabb4bb13e87bea62107f76959eb36d495f01355a29",
+      "redirects": []
+    },
+    {
+      "url": "https://www.rinotik.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "status": 200,
+      "final_url": "https://rinotik.com/",
+      "bytes": 378041,
+      "sha256": "4f5b1c2bff9cec3ea3d63eabb4bb13e87bea62107f76959eb36d495f01355a29",
+      "redirects": [
+        {
+          "url": "https://www.rinotik.com/",
+          "status": 301,
+          "location": "https://rinotik.com/"
+        }
+      ]
+    },
+    {
+      "url": "https://mavarapos.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "status": 200,
+      "final_url": "https://mavarapos.com/",
+      "bytes": 355881,
+      "sha256": "26a02218d51c0841b363d57aecff9a4ec6a1cca8db482e83a79fc176c12fa063",
+      "redirects": []
+    },
+    {
+      "url": "https://www.mavarapos.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "status": 200,
+      "final_url": "https://mavarapos.com/",
+      "bytes": 355881,
+      "sha256": "26a02218d51c0841b363d57aecff9a4ec6a1cca8db482e83a79fc176c12fa063",
+      "redirects": [
+        {
+          "url": "https://www.mavarapos.com/",
+          "status": 301,
+          "location": "https://mavarapos.com/"
+        }
+      ]
+    },
+    {
+      "url": "https://khorsandmezon.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "status": 200,
+      "final_url": "https://khorsandmezon.com/",
+      "bytes": 330506,
+      "sha256": "f86b4177f98df48f54bbee53bafb585c92404f2aff1de36686c5683996881ff3",
+      "redirects": []
+    },
+    {
+      "url": "https://www.khorsandmezon.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "status": 200,
+      "final_url": "https://khorsandmezon.com/",
+      "bytes": 330506,
+      "sha256": "fd70502273e3259acabff350ff92c1072bf2ded07a830776cb463a2a05b5c678",
+      "redirects": [
+        {
+          "url": "https://www.khorsandmezon.com/",
+          "status": 301,
+          "location": "https://khorsandmezon.com/"
+        }
+      ]
+    },
+    {
+      "url": "https://banamaktoys.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "redirects": [],
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.banamaktoys.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "redirects": [],
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://net2university.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "redirects": [],
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'net2university.com'. (_ssl.c:1082)>"
+    },
+    {
+      "url": "https://www.net2university.com/",
+      "observed_at": "2026-11-08T05:29:09+00:00",
+      "redirects": [],
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.net2university.com'. (_ssl.c:1082)>"
+    },
+    {
+      "url": "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+      "observed_at": "2026-11-08T05:29:33+00:00",
+      "status": 200,
+      "final_url": "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+      "bytes": 101555,
+      "sha256": "a564f703beeebfb59e9c64de31256edd82da5751885fe21f4c54824f71449b2e",
+      "redirects": []
+    },
+    {
+      "url": "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+      "observed_at": "2026-11-08T05:29:33+00:00",
+      "status": 200,
+      "final_url": "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+      "bytes": 92610,
+      "sha256": "d5aeebd1c15a7c4042d54d83f778890410c73b0bbbb4f165f7433e4f6100f017",
+      "redirects": []
+    },
+    {
+      "url": "https://mavarapos.com/contact-us/",
+      "observed_at": "2026-11-08T05:29:33+00:00",
+      "status": 200,
+      "final_url": "https://mavarapos.com/contact-us/",
+      "bytes": 265359,
+      "sha256": "e1966080318412191387975555fd2acb36a8161ca4ebb88a80f446d6ad7c4473",
+      "redirects": []
+    },
+    {
+      "url": "https://khorsandmezon.com/contact-us/",
+      "observed_at": "2026-11-08T05:29:33+00:00",
+      "status": 200,
+      "final_url": "https://khorsandmezon.com/contact-us/",
+      "bytes": 206758,
+      "sha256": "e016ea888fb5d9bcf71e2f3db285e4a24bf135a9433c7affb7dfbb0295a56c27",
+      "redirects": []
+    },
+    {
+      "url": "https://khorsandmezon.com/about-us/",
+      "observed_at": "2026-11-08T05:29:33+00:00",
+      "status": 200,
+      "final_url": "https://khorsandmezon.com/about-us/",
+      "bytes": 203294,
+      "sha256": "9f28ed170f038ea20d1ae9451eb93667d9668c127c4a8693c0bd402411fcb25c",
+      "redirects": []
+    },
+    {
+      "url": "https://blogfa.com/",
+      "observed_at": "2026-11-08T05:34:22.644353+00:00",
+      "status": 200,
+      "final_url": "https://blogfa.com/",
+      "redirects": [],
+      "bytes": 9501,
+      "sha256": "39fb10ff968e85e050f394169dfbc036a1efc008df3ab04bc78cba077488d2b1",
+      "markers": {
+        "بلاگفا": true
+      },
+      "relevant_link_hosts": []
+    },
+    {
+      "url": "https://www.blogfa.com/",
+      "observed_at": "2026-11-08T05:34:22.644630+00:00",
+      "status": 200,
+      "final_url": "https://www.blogfa.com/",
+      "redirects": [],
+      "bytes": 9501,
+      "sha256": "2d9fca3f5d1452367d88131b12a5a7a68876616e97f7978538e6e037f46dfdc6",
+      "markers": {
+        "بلاگفا": true
+      },
+      "relevant_link_hosts": []
+    },
+    {
+      "url": "https://www.blogfa.com/contact/",
+      "observed_at": "2026-11-08T05:34:22.644702+00:00",
+      "status": 200,
+      "final_url": "https://www.blogfa.com/contact/",
+      "redirects": [],
+      "bytes": 4532,
+      "sha256": "5cae9aef4d9a512b5337c3c8113800b4e83c6a264865e6cdc70f9d95d2f26b81",
+      "markers": {
+        "تماس": true
+      },
+      "relevant_link_hosts": [
+        "faq.blogfa.com"
+      ]
+    },
+    {
+      "url": "https://faq.blogfa.com/?p=3",
+      "observed_at": "2026-11-08T05:34:22.644754+00:00",
+      "status": 200,
+      "final_url": "https://faq.blogfa.com/?p=3",
+      "redirects": [],
+      "bytes": 20472,
+      "sha256": "7faf8b50060f5ae2cafb0aab24414b653fef7b8f6f96c10043324cebb86b5675",
+      "markers": {
+        "سایت مشابه و فعال": true,
+        "قوانین ایران": true
+      },
+      "relevant_link_hosts": [
+        "faq.blogfa.com",
+        "www.blogfa.com"
+      ]
+    },
+    {
+      "url": "https://kavenegar.com/",
+      "observed_at": "2026-11-08T05:34:22.644828+00:00",
+      "status": 200,
+      "final_url": "https://kavenegar.com/",
+      "redirects": [],
+      "bytes": 153847,
+      "sha256": "be96ec467aa7af5ac26ae33b29bb7cfc0f326d8495f7806bb631034e4883a723",
+      "markers": {
+        "تهران": true,
+        "کاوه نگار": true
+      },
+      "relevant_link_hosts": []
+    },
+    {
+      "url": "https://kavenegar.com/support/contact",
+      "observed_at": "2026-11-08T05:34:22.644895+00:00",
+      "status": 200,
+      "final_url": "https://kavenegar.com/support/contact",
+      "redirects": [],
+      "bytes": 28505,
+      "sha256": "6051097ee631169ff56d3d5ab805ffa13a6f83e1e13214296d5859354d9d6705",
+      "markers": {
+        "تهران": true
+      },
+      "relevant_link_hosts": []
+    },
+    {
+      "url": "https://kavenegar.com/rest.html",
+      "observed_at": "2026-11-08T05:34:22.875284+00:00",
+      "status": 200,
+      "final_url": "https://kavenegar.com/rest.html",
+      "redirects": [],
+      "bytes": 251683,
+      "sha256": "db78feb7211a97095e9b78a779cf06d01858fa2a7b3753f829cafd1288f112cc",
+      "markers": {
+        "api.kavenegar.com": true
+      },
+      "relevant_link_hosts": [
+        "api.kavenegar.com"
+      ]
+    },
+    {
+      "url": "https://sms.ir/",
+      "observed_at": "2026-11-08T05:34:23.000526+00:00",
+      "status": 200,
+      "final_url": "https://sms.ir/",
+      "redirects": [],
+      "bytes": 200972,
+      "sha256": "bfdee9c9f9631f957bda0dcb56a806043371b8a180961eeabd1ad1b30779be90",
+      "markers": {
+        "ایده پردازان": true,
+        "تهران": true,
+        "app.sms.ir": true
+      },
+      "relevant_link_hosts": [
+        "app.sms.ir"
+      ]
+    },
+    {
+      "url": "https://sms.ir/about-us/",
+      "observed_at": "2026-11-08T05:34:23.023996+00:00",
+      "status": 200,
+      "final_url": "https://sms.ir/about-us/",
+      "redirects": [],
+      "bytes": 173776,
+      "sha256": "9aef9b17c47a64cfb498099487c64508f134f3eaf26d2eeeaf0cfacbeaae160c",
+      "markers": {
+        "ایده پردازان": true,
+        "تهران": true,
+        "ایران": true
+      },
+      "relevant_link_hosts": [
+        "app.sms.ir"
+      ]
+    },
+    {
+      "url": "https://sms.ir/contact-us/",
+      "observed_at": "2026-11-08T05:34:23.114810+00:00",
+      "status": 200,
+      "final_url": "https://sms.ir/contact-us/",
+      "redirects": [],
+      "bytes": 133356,
+      "sha256": "4740ddc59f09efefdc8b4bc1d25dc4c2d79691eb559a1b6e5226e4c79a886a2f",
+      "markers": {
+        "تهران": true,
+        "ایده پردازان": true
+      },
+      "relevant_link_hosts": [
+        "app.sms.ir"
+      ]
+    },
+    {
+      "url": "https://app.sms.ir/",
+      "observed_at": "2026-11-08T05:34:23.122922+00:00",
+      "status": 200,
+      "final_url": "https://app.sms.ir/",
+      "redirects": [],
+      "bytes": 55549,
+      "sha256": "79973e16387dbc7303aad72fbf4c8deb3fa255cc199c63d015c18178f511a692",
+      "markers": {
+        "ایده پردازان": true,
+        "پیامکی": false
+      },
+      "relevant_link_hosts": []
+    },
+    {
+      "url": "https://balad.ir/",
+      "observed_at": "2026-11-08T05:34:23.163866+00:00",
+      "status": 200,
+      "final_url": "https://balad.ir/",
+      "redirects": [],
+      "bytes": 397927,
+      "sha256": "c0496bf185df0a04c66ad7864fb398437c8dd51bd745afd9bdf356aa3acdd4ac",
+      "markers": {
+        "تهران": true,
+        "مسیریاب": true
+      },
+      "relevant_link_hosts": []
+    },
+    {
+      "url": "https://balad.ir/about",
+      "observed_at": "2026-11-08T05:34:23.249299+00:00",
+      "status": 200,
+      "final_url": "https://balad.ir/about",
+      "redirects": [],
+      "bytes": 26636,
+      "sha256": "2fe275328902736587c0e36c2df2d27d3e782c5c399bea7b388d47646de83c88",
+      "markers": {
+        "ایران": false,
+        "مسیریاب": true
+      },
+      "relevant_link_hosts": []
+    }
+  ],
+  "candidate_dns_observations": [
+    {
+      "hostname": "habibabad.org",
+      "qtype": "A",
+      "resolver": "google",
+      "url": "https://dns.google/resolve?name=habibabad.org&type=A",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "habibabad.org",
+      "qtype": "A",
+      "resolver": "cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query?name=habibabad.org&type=A",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "habibabad.org",
+      "qtype": "AAAA",
+      "resolver": "google",
+      "url": "https://dns.google/resolve?name=habibabad.org&type=AAAA",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "habibabad.org",
+      "qtype": "AAAA",
+      "resolver": "cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query?name=habibabad.org&type=AAAA",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "banamaktoys.com",
+      "qtype": "A",
+      "resolver": "google",
+      "url": "https://dns.google/resolve?name=banamaktoys.com&type=A",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "banamaktoys.com",
+      "qtype": "A",
+      "resolver": "cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query?name=banamaktoys.com&type=A",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "banamaktoys.com",
+      "qtype": "AAAA",
+      "resolver": "google",
+      "url": "https://dns.google/resolve?name=banamaktoys.com&type=AAAA",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "banamaktoys.com",
+      "qtype": "AAAA",
+      "resolver": "cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query?name=banamaktoys.com&type=AAAA",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 3,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "net2university.com",
+      "qtype": "A",
+      "resolver": "google",
+      "url": "https://dns.google/resolve?name=net2university.com&type=A",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 0,
+      "address_answer_count": 1
+    },
+    {
+      "hostname": "net2university.com",
+      "qtype": "A",
+      "resolver": "cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query?name=net2university.com&type=A",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 0,
+      "address_answer_count": 1
+    },
+    {
+      "hostname": "net2university.com",
+      "qtype": "AAAA",
+      "resolver": "google",
+      "url": "https://dns.google/resolve?name=net2university.com&type=AAAA",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 0,
+      "address_answer_count": 0
+    },
+    {
+      "hostname": "net2university.com",
+      "qtype": "AAAA",
+      "resolver": "cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query?name=net2university.com&type=AAAA",
+      "observed_at": "2026-11-08T05:30:25+00:00",
+      "rcode": 0,
+      "address_answer_count": 0
+    }
+  ],
+  "provider_rechecks": [
+    {
+      "url": "https://www.arvancloud.ir/fa/ips.txt",
+      "final_url": "https://www.arvancloud.ir/fa/ips.txt",
+      "observed_at": "2026-11-08T05:31:53.301803+00:00",
+      "http_status": 200,
+      "bytes": 220,
+      "sha256": "7357e3c11af8073d5a8c147c704e2c5a816a6c2cc4046918b00e5986e98e9967",
+      "id": "arvancloud",
+      "evidence_url": "https://www.arvancloud.ir/fa/dev/ips",
+      "count": 14,
+      "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+      "identical_to_published_source": true,
+      "published_input_prefixes": 14
+    },
+    {
+      "url": "https://mizbancloud.com/ips.txt",
+      "final_url": "https://mizbancloud.com/ips.txt",
+      "observed_at": "2026-11-08T05:31:53.374507+00:00",
+      "http_status": 200,
+      "bytes": 132,
+      "sha256": "53263ccf6dc9c95795751f9792a6a5a826ddb77b80433bddd646f7d0ced6c3f4",
+      "id": "mizbancloud",
+      "evidence_url": "https://docs.mizbancloud.com/cdn/whitelist",
+      "count": 8,
+      "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
+      "identical_to_published_source": true,
+      "published_input_prefixes": 8
+    },
+    {
+      "url": "https://parspack.com/cdnips.txt",
+      "final_url": "https://parspack.com/cdnips.txt",
+      "observed_at": "2026-11-08T05:31:53.504339+00:00",
+      "http_status": 200,
+      "bytes": 828,
+      "sha256": "81749e81cb08a8e19bf2aee99c37aa90111f0bd83145d2b86e4eccdddea5f4d3",
+      "id": "parspack",
+      "evidence_url": "https://parspack.com/cdn",
+      "count": 49,
+      "sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4",
+      "identical_to_published_source": true,
+      "published_input_prefixes": 49
+    },
+    {
+      "url": "https://api.derak.cloud/public/ipv6",
+      "final_url": "https://api.derak.cloud/public/ipv6",
+      "observed_at": "2026-11-08T05:31:53.509770+00:00",
+      "http_status": 200,
+      "bytes": 207,
+      "sha256": "0ff567eb454c4d41976d6ae642782acaf00c2e0d17cd39a7ba18fbc433b16b25",
+      "id": "derakcloud_ipv6",
+      "evidence_url": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "count": 10,
+      "sha512": "c2e956b20255305511391e16fbe2eac4fa60932401aa461d9716c8bae0c8715790f3820f13c53218bd5f31329aff61078942f0ed25667b8c8979fa5ddb135745",
+      "identical_to_published_source": true,
+      "published_input_prefixes": 10
+    },
+    {
+      "url": "https://ips.f95.com/ips.txt",
+      "final_url": "https://ips.f95.com/ips.txt",
+      "observed_at": "2026-11-08T05:31:53.526358+00:00",
+      "http_status": 200,
+      "bytes": 302,
+      "sha256": "9ca05f100ff730270bb506e7df4923af55f2a8fcaf5d650427c6ce7da33db871",
+      "id": "iranserver",
+      "evidence_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "count": 22,
+      "sha512": "2369fd73c2507cb7c4c2eeda052359804b1bc508b4e11a2599f4adedf07c6bee131ea29ae225d0c5c9654e56f3c013a911c54c98c6e3824d23283ca7686b851f",
+      "identical_to_published_source": true,
+      "published_input_prefixes": 22
+    }
+  ],
+  "provider_documentation_observations": [
+    {
+      "url": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "final_url": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "observed_at": "2026-11-08T05:31:53.568090+00:00",
+      "http_status": 200,
+      "bytes": 312131,
+      "sha256": "077c490e25447a56af89159d4127896ff425e556d19dc811bc37be43c65b2b38",
+      "inventory_links": [
+        "https://api.derak.cloud/public/ipv4",
+        "https://api.derak.cloud/public/ipv6"
+      ]
+    },
+    {
+      "url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "final_url": "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/",
+      "observed_at": "2026-11-08T05:31:53.584215+00:00",
+      "http_status": 200,
+      "bytes": 1084864,
+      "sha256": "8ef50c7d6d3394cb8deafc682afca18c7505ef28f2642258c5da02a520764c4f",
+      "inventory_links": [
+        "https://ips.f95.com/"
+      ]
+    },
+    {
+      "url": "https://docs.mizbancloud.com/cdn/whitelist",
+      "final_url": "https://docs.mizbancloud.com/cdn/whitelist",
+      "observed_at": "2026-11-08T05:31:53.608153+00:00",
+      "http_status": 200,
+      "bytes": 20132,
+      "sha256": "0a8d1467b425bd754d46bef90abaa279459d839dff7c2c2b344ed1b9dddf65f7",
+      "inventory_links": [
+        "https://mizbancloud.com/ips.txt"
+      ]
+    },
+    {
+      "url": "https://parspack.com/cdn",
+      "final_url": "https://parspack.com/cdn",
+      "observed_at": "2026-11-08T05:31:53.684714+00:00",
+      "http_status": 200,
+      "bytes": 405656,
+      "sha256": "d66b36deb97bba9c8dc540ec774869be3ae7c9996d5b335a44eab58a184a180b",
+      "inventory_links": []
+    },
+    {
+      "url": "https://www.arvancloud.ir/en/dev/ips",
+      "final_url": "https://www.arvancloud.ir/en/dev/ips",
+      "observed_at": "2026-11-08T05:31:53.786430+00:00",
+      "http_status": 200,
+      "bytes": 6108,
+      "sha256": "9f750cd835c9214dc6ec14c68f129ce7e33b5239fa4501929c88648b44f09e1a",
+      "inventory_links": [],
+      "direct_http_content": "JavaScript transfer/challenge page",
+      "web_reader_observation": "Official Arvan IP page lists 14 IPv4 prefixes and links the corresponding language endpoint."
+    },
+    {
+      "url": "https://www.arvancloud.ir/fa/dev/ips",
+      "final_url": "https://www.arvancloud.ir/fa/dev/ips",
+      "observed_at": "2026-11-08T05:31:53.978310+00:00",
+      "http_status": 200,
+      "bytes": 6140,
+      "sha256": "65baed21af96f9b9efdff3b71a377a66b606a41af4437faca76b9bc2798a64df",
+      "inventory_links": [],
+      "direct_http_content": "JavaScript transfer/challenge page",
+      "web_reader_observation": "Official Arvan IP page lists 14 IPv4 prefixes and links the corresponding language endpoint."
+    }
+  ],
+  "provider_leads": {
+    "pending_derak_ipv4": {
+      "url": "https://api.derak.cloud/public/ipv4",
+      "final_url": "https://api.derak.cloud/public/ipv4",
+      "observed_at": "2026-11-08T05:31:53.981943+00:00",
+      "http_status": 200,
+      "bytes": 323,
+      "sha256": "894b28d9d97663a10be198ec23e77780dac6add23d7cd181ba8aceddbceb056c",
+      "count": 19,
+      "non_public": [
+        "192.168.204.48/28"
+      ],
+      "state": "pending",
+      "reason": "The provider’s official IPv4 inventory includes private 192.168.204.48/28. Strict public-range validation excludes the entire inventory pending a corrected endpoint.",
+      "evidence_urls": [
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+        "https://api.derak.cloud/public/ipv4"
+      ],
+      "discovery": {
+        "candidate_id": "provider:https://api.derak.cloud/public/ipv4",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
+          "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
+          "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+          "68e7d705b38e5e6547f01e67b2fcdf241318c966b2afee8656b59b896b5e4034",
+          "78fbc98fa503003d08ea26213a68d706a574771fba2942ea747b2d51d65c606e",
+          "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
+          "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
+          "bfb90f52363b87d21cbe4c0b40105d7b1ad3b2408e5517a0efb9e7133443b6e5",
+          "dd3eb72f6b7e8790f85754ea66d5374a6f26878f381cc303e5e621fbce17bfe2",
+          "e8088c91468d7ceeb46c213484627a62327f7a1783fb3663aec20d3259b74f4a"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/derakcloud.txt",
+            "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/derakcloud.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/derakcloud.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "42a61a827a4bac99cb5fe9751388932de9821618",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/42a61a827a4bac99cb5fe9751388932de9821618/text/derakcloud.txt",
+            "version": "42a61a827a4bac99cb5fe9751388932de9821618"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "e3c9686a747c7f6c2f573cd11435216d6a0e2ea2",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/e3c9686a747c7f6c2f573cd11435216d6a0e2ea2/text/derakcloud.txt",
+            "version": "e3c9686a747c7f6c2f573cd11435216d6a0e2ea2"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/derakcloud.txt",
+            "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/derakcloud.txt",
+            "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "b055853a504d489cde0a0a8a189bd43478d65000",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/b055853a504d489cde0a0a8a189bd43478d65000/text/derakcloud.txt",
+            "version": "b055853a504d489cde0a0a8a189bd43478d65000"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:derakcloud",
+            "original_source_urls": [
+              "https://api.derak.cloud/public/ipv4",
+              "https://api.derak.cloud/public/ipv6"
+            ],
+            "path": "text/derakcloud.txt",
+            "release_commit": "56db305d4e1429d9cfd2afe3cbbadd615045c978",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/56db305d4e1429d9cfd2afe3cbbadd615045c978/text/derakcloud.txt",
+            "version": "56db305d4e1429d9cfd2afe3cbbadd615045c978"
+          }
+        ]
+      }
+    },
+    "arvan_english_inventory_lead": {
+      "url": "https://www.arvancloud.ir/en/ips.txt",
+      "final_url": "https://www.arvancloud.ir/en/ips.txt",
+      "observed_at": "2026-11-08T05:31:53.981096+00:00",
+      "http_status": 200,
+      "bytes": 220,
+      "sha256": "7357e3c11af8073d5a8c147c704e2c5a816a6c2cc4046918b00e5986e98e9967",
+      "count": 14,
+      "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+      "byte_identical_to_accepted_persian": true,
+      "same_prefixes": true,
+      "english_only": [],
+      "persian_only": [],
+      "state": "rejected",
+      "reason": "Both official language endpoints publish the same 14 public IPv4 prefixes. The English URL duplicates the accepted Persian inventory and does not add coverage.",
+      "evidence_urls": [
+        "https://www.arvancloud.ir/en/dev/ips",
+        "https://www.arvancloud.ir/en/ips.txt",
+        "https://www.arvancloud.ir/fa/dev/ips",
+        "https://www.arvancloud.ir/fa/ips.txt"
+      ],
+      "discovery": {
+        "candidate_id": "provider:https://www.arvancloud.ir/en/ips.txt",
+        "first_seen": "2026-09-17T18:24:45.497879+00:00",
+        "independent_evidence_groups": 1,
+        "evidence_fingerprints": [
+          "04d620d38ba89568d0e89a5e88901c3919516ce5d9d949ea149083114469bf5d",
+          "4db1a64471245ec99e69be16c0a4f0ecaed8472582cd8797d8fa51694c777a28",
+          "69b335d95f65130f824c33633df24cecbf18bd275a8848b751cd47bc2e42e00d",
+          "716f7b57d8b57532424754944f07d77876458c8ae1e41061a869f8b93c25e27c",
+          "ac1e5063c645093bdd66122f724356151b4555ee09fdf4b24c716bf74d274e2a",
+          "d18b89c3adaf7da3f8ec9e4e2696573499711b9be688034eb2c48d9f9074d986",
+          "dc30ed0162cb087383240638da1c887eca527eecb76347c6dc2597cf3ca921c8",
+          "f67d48513d51391fe39a5fbac3c63325f71a296f15f15bc5ed4accda13cf7488",
+          "f7822d39fafc0d1884d8fa95536e710bd694fb77455212278d6ef90307ffb73a"
+        ],
+        "sources": [
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/arvancloud.txt",
+            "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/arvancloud.txt",
+            "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/arvancloud.txt",
+            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "f537b189cebd1e7240f5baa3f3acde5f6da7a483",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/f537b189cebd1e7240f5baa3f3acde5f6da7a483/text/arvancloud.txt",
+            "version": "f537b189cebd1e7240f5baa3f3acde5f6da7a483"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "b055853a504d489cde0a0a8a189bd43478d65000",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/b055853a504d489cde0a0a8a189bd43478d65000/text/arvancloud.txt",
+            "version": "b055853a504d489cde0a0a8a189bd43478d65000"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "56db305d4e1429d9cfd2afe3cbbadd615045c978",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/56db305d4e1429d9cfd2afe3cbbadd615045c978/text/arvancloud.txt",
+            "version": "56db305d4e1429d9cfd2afe3cbbadd615045c978"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "42a61a827a4bac99cb5fe9751388932de9821618",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/42a61a827a4bac99cb5fe9751388932de9821618/text/arvancloud.txt",
+            "version": "42a61a827a4bac99cb5fe9751388932de9821618"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/arvancloud.txt",
+            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
+          },
+          {
+            "license": "GPL-3.0",
+            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
+            "lineage": "provider-inventory:arvancloud",
+            "original_source_urls": [
+              "https://www.arvancloud.ir/en/ips.txt"
+            ],
+            "path": "text/arvancloud.txt",
+            "release_commit": "e3c9686a747c7f6c2f573cd11435216d6a0e2ea2",
+            "source": "Chocolate4U/Iran-v2ray-rules",
+            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/e3c9686a747c7f6c2f573cd11435216d6a0e2ea2/text/arvancloud.txt",
+            "version": "e3c9686a747c7f6c2f573cd11435216d6a0e2ea2"
+          }
+        ]
+      }
+    }
+  },
+  "ageing_catalogue": {
+    "review_threshold_days": 90,
+    "due": [],
+    "oldest_age_days": 53,
+    "oldest": [
+      {
+        "kind": "operators",
+        "id": "arvancloud",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "providers",
+        "id": "arvancloud",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "providers",
+        "id": "mizbancloud",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "arvancloud.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "mizbancloud.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "derak.cloud",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "hostiran.net",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "iranserver.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "parspack.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "digikala.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "www.digikala.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "snapp.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "snappfood.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "torob.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "divar.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "sheypoor.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "aparat.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "www.aparat.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "filimo.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "www.filimo.com",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "namava.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "mci.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      },
+      {
+        "kind": "services",
+        "id": "my.irancell.ir",
+        "reviewed_on": "2026-09-16",
+        "age_days": 53
+      }
+    ]
+  },
+  "publisher_incident": {
+    "last_published_at": "2026-10-31T17:14:12Z",
+    "published_hostname_count": 77,
+    "failed_runs": [
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/41333879233",
+        "failure": "Derak IPv6 inventory download timed out after three attempts.",
+        "log_line": "2026-11-01T18:01:21.8207048Z generation failed: download failed after 3 attempts: https://api.derak.cloud/public/ipv6: <urlopen error timed out>"
+      },
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/41530528730",
+        "failure": "ParsPack inventory returned HTTP 403 after three attempts.",
+        "log_line": "2026-11-02T21:41:00.0593155Z generation failed: download failed after 3 attempts: https://parspack.com/cdnips.txt: HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/41703429603",
+        "failure": "AS205585 label mismatch. IPtoASN supplied ARVANCLOUD-CDN-IR.",
+        "log_line": "2026-11-03T19:28:33.1846565Z generation failed: reviewed operator AS205585 identity changed: ARVANCLOUD-CDN-IR"
+      },
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/41899527059",
+        "failure": "ParsPack inventory returned HTTP 403 after three attempts.",
+        "log_line": "2026-11-04T19:43:40.6546691Z generation failed: download failed after 3 attempts: https://parspack.com/cdnips.txt: HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/42098159600",
+        "failure": "ParsPack inventory returned HTTP 403 after three attempts.",
+        "log_line": "2026-11-05T19:54:36.0346793Z generation failed: download failed after 3 attempts: https://parspack.com/cdnips.txt: HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/42278567898",
+        "failure": "ParsPack inventory returned HTTP 403 after three attempts.",
+        "log_line": "2026-11-06T19:19:31.0417612Z generation failed: download failed after 3 attempts: https://parspack.com/cdnips.txt: HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://github.com/parhamfa/mikrotik-auto-ir-ranges/actions/runs/42397701247",
+        "failure": "AS205585 label mismatch. IPtoASN supplied ARVANCLOUD-CDN-IR.",
+        "log_line": "2026-11-07T17:43:45.2148979Z generation failed: reviewed operator AS205585 identity changed: ARVANCLOUD-CDN-IR"
+      }
+    ],
+    "correction": {
+      "asn": 205585,
+      "published_labels": [
+        "ARVANCLOUD-CDN-"
+      ],
+      "expected_before": "ARVANCLOUD-CDN-",
+      "expected_after": "ARVANCLOUD-CDN-IR",
+      "primary_registration": {
+        "AS205585": {
+          "url": "https://rdap.db.ripe.net/autnum/205585",
+          "observed_at": "2026-11-08T05:30:59.982624+00:00",
+          "sha256": "0651f1d5d412952bdffb0358f655cf0f85cac37d7c50999a2db5240475a9cf66",
+          "handle": "AS205585",
+          "name": "ARVANCLOUD-CDN-IR",
+          "country": null,
+          "range": [
+            205585,
+            205585
+          ],
+          "events": [
+            {
+              "eventAction": "registration",
+              "eventDate": "2022-04-21T08:32:42Z"
+            },
+            {
+              "eventAction": "last changed",
+              "eventDate": "2023-06-03T07:47:10Z"
+            }
+          ],
+          "registrant_organizations": [
+            {
+              "handle": "ORG-NAAP1-RIPE",
+              "name": [
+                "Noyan Abr Arvan Co. ( Private Joint Stock)"
+              ],
+              "country": null
+            }
+          ]
+        },
+        "AS202468": {
+          "url": "https://rdap.db.ripe.net/autnum/202468",
+          "observed_at": "2026-11-08T05:30:59.983018+00:00",
+          "sha256": "633fff774ad0ff8cb6f24b2dc61a12ec06d9be184527d3009e713b8eacf1bcda",
+          "handle": "AS202468",
+          "name": "AbrArvan-AS",
+          "country": null,
+          "range": [
+            202468,
+            202468
+          ],
+          "events": [
+            {
+              "eventAction": "registration",
+              "eventDate": "2018-05-09T11:50:06Z"
+            },
+            {
+              "eventAction": "last changed",
+              "eventDate": "2023-06-03T07:46:50Z"
+            }
+          ],
+          "registrant_organizations": [
+            {
+              "handle": "ORG-NAAP1-RIPE",
+              "name": [
+                "Noyan Abr Arvan Co. ( Private Joint Stock)"
+              ],
+              "country": null
+            }
+          ]
+        },
+        "AS208006": {
+          "url": "https://rdap.db.ripe.net/autnum/208006",
+          "observed_at": "2026-11-08T05:30:59.983154+00:00",
+          "sha256": "6d21c550b2429d1e106891999fee0aeb37bc5cb6c7076b6dffdadb1a5b38c2ce",
+          "handle": "AS208006",
+          "name": "ARVANCLOUD-CDN",
+          "country": null,
+          "range": [
+            208006,
+            208006
+          ],
+          "events": [
+            {
+              "eventAction": "registration",
+              "eventDate": "2019-10-18T06:36:09Z"
+            },
+            {
+              "eventAction": "last changed",
+              "eventDate": "2022-11-28T09:35:13Z"
+            }
+          ],
+          "registrant_organizations": [
+            {
+              "handle": "ORG-AGTL2-RIPE",
+              "name": [
+                "ARVANCLOUD GLOBAL TECHNOLOGIES L.L.C"
+              ],
+              "country": null
+            }
+          ]
+        },
+        "AS57568": {
+          "url": "https://rdap.db.ripe.net/autnum/57568",
+          "observed_at": "2026-11-08T05:30:59.983255+00:00",
+          "sha256": "02ff4018e03798a7041eaf22694e97a9f335efbef2b44c88d94c77c2cccdd3fa",
+          "handle": "AS57568",
+          "name": "TR_Arvancloud",
+          "country": null,
+          "range": [
+            57568,
+            57568
+          ],
+          "events": [
+            {
+              "eventAction": "registration",
+              "eventDate": "2022-10-31T15:00:07Z"
+            },
+            {
+              "eventAction": "last changed",
+              "eventDate": "2023-02-12T08:47:19Z"
+            }
+          ],
+          "registrant_organizations": [
+            {
+              "handle": "ORG-AGTL2-RIPE",
+              "name": [
+                "ARVANCLOUD GLOBAL TECHNOLOGIES L.L.C"
+              ],
+              "country": null
+            }
+          ]
+        },
+        "ORG-NAAP1-RIPE": {
+          "url": "https://rdap.db.ripe.net/entity/ORG-NAAP1-RIPE",
+          "observed_at": "2026-11-08T05:30:59.983398+00:00",
+          "sha256": "90acc3b187832871ea80d732bffe971dfeef2cbb2702a70220c0b40cdcfeb46e",
+          "handle": "ORG-NAAP1-RIPE",
+          "name": null,
+          "country": null,
+          "range": [
+            null,
+            null
+          ],
+          "events": [
+            {
+              "eventAction": "registration",
+              "eventDate": "2018-05-07T15:56:52Z"
+            },
+            {
+              "eventAction": "last changed",
+              "eventDate": "2026-05-13T07:39:10Z"
+            }
+          ],
+          "registrant_organizations": [],
+          "organization_name": [
+            "Noyan Abr Arvan Co. ( Private Joint Stock)"
+          ]
+        }
+      },
+      "current_ipv4": {
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz",
+        "observed_at": "2026-11-08T05:30:59.981367+00:00",
+        "bytes": 8697031,
+        "sha512": "cab9f0f27dd7019a11e7feeea6913f7353710d4acb7280e067b11a29fb435665a5cd4d229983463d511fbe7ee256248eb4e4125ec5e2530eb4234af67020f2fb",
+        "AS205585": {
+          "rows": 2,
+          "descriptions": [
+            "ARVANCLOUD-CDN-IR Noyan Abr Arvan Co. ( Private Joint Stock)"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      },
+      "current_ipv6": {
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz",
+        "observed_at": "2026-11-08T05:30:59.981475+00:00",
+        "bytes": 2258661,
+        "sha512": "556dfb58ca3822593485d5621fd810a2634cc8d5e3cceef8e8318c860808443616e219f0046ad1468ab7e7c9520da18a3abf094be7bcae6f298a7cca7be2e7ba",
+        "AS205585": {
+          "rows": 6,
+          "descriptions": [
+            "ARVANCLOUD-CDN-IR Noyan Abr Arvan Co. ( Private Joint Stock)"
+          ],
+          "countries": [
+            "IR"
+          ]
+        }
+      },
+      "current_delegation": {
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats",
+        "observed_at": "2026-11-08T05:30:59.981583+00:00",
+        "bytes": 57124114,
+        "sha512": "085c5cb548be4527ac8c539cd0e8b05c6b859936a2f0067d1137d0410e8c462114f89b678237ccc75086fba6cb8a90d7b87e3d2c69733bba89b63dfb3ab1fcb1",
+        "AS205585": [
+          {
+            "registry": "ripencc",
+            "country": "IR",
+            "status": "assigned",
+            "date": "20220421"
+          }
+        ]
+      }
+    },
+    "runner_download_follow_up": "All five official inventories downloaded locally and match the last published source hashes. A successful GitHub publisher run is needed to verify access from its runner."
+  },
+  "source_lineage_note": "v2fly and bootmortis share the MIT-licensed iran-community-domains lineage. Chocolate4U uses GPL-3.0 and points to official inventories. Pinned versions, license URLs and original provider sources accompany the corresponding leads.",
+  "universe_coverage_percent": null,
+  "measured_lab_recall": null,
+  "projection": {
+    "observed_at": "2026-11-08T05:37:44+00:00",
+    "comparison_method": "The original policy rejected the pinned input before generation. The comparison baseline changes only the reviewed AS205585 label. Both generated variants use identical non-DNS bytes and one shared DNS collection. Matching existing questions use the same observations.",
+    "service_domains_before": 85,
+    "service_domains_after": 98,
+    "policy_delta": {
+      "ipv4": {
+        "before_prefixes": 1867,
+        "after_prefixes": 1870,
+        "added_ranges": [
+          "104.21.73.98/32",
+          "172.67.160.233/32",
+          "185.211.56.44/32"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "3",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 592,
+        "after_prefixes": 594,
+        "added_ranges": [
+          "2606:4700:3031::6815:4962/128",
+          "2606:4700:3037::ac43:a0e9/128"
+        ],
+        "removed_ranges": [],
+        "added_addresses": "2",
+        "removed_addresses": "0"
+      }
+    },
+    "new_addresses_by_service": {
+      "104.21.73.98/32": {
+        "hosts": [
+          "blogfa.com",
+          "www.blogfa.com"
+        ],
+        "sources": [
+          "cloudflare"
+        ]
+      },
+      "172.67.160.233/32": {
+        "hosts": [
+          "blogfa.com",
+          "www.blogfa.com"
+        ],
+        "sources": [
+          "cloudflare"
+        ]
+      },
+      "185.211.56.44/32": {
+        "hosts": [
+          "app.sms.ir"
+        ],
+        "sources": [
+          "cloudflare",
+          "google"
+        ]
+      },
+      "2606:4700:3031::6815:4962/128": {
+        "hosts": [
+          "blogfa.com",
+          "www.blogfa.com"
+        ],
+        "sources": [
+          "cloudflare"
+        ]
+      },
+      "2606:4700:3037::ac43:a0e9/128": {
+        "hosts": [
+          "blogfa.com",
+          "www.blogfa.com"
+        ],
+        "sources": [
+          "cloudflare"
+        ]
+      }
+    },
+    "upstream_drift_from_last_publication": {
+      "ipv4": {
+        "before_prefixes": 1869,
+        "after_prefixes": 1867,
+        "added_ranges": [
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [
+          "94.183.161.0/24",
+          "104.26.10.2/32",
+          "104.26.11.2/32",
+          "172.67.70.180/32"
+        ],
+        "added_addresses": "2",
+        "removed_addresses": "259"
+      },
+      "ipv6": {
+        "before_prefixes": 600,
+        "after_prefixes": 592,
+        "added_ranges": [
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128",
+          "2a0b:5047:2141::/48"
+        ],
+        "removed_ranges": [
+          "2606:4700:20::681a:a02/128",
+          "2606:4700:20::681a:b02/128",
+          "2606:4700:20::ac43:46b4/128",
+          "2a03:b0c0:3:d0::469d:4001/128",
+          "2a0b:441::/32",
+          "2a0f:85c1:3b1::/48",
+          "2a12:eb80::/48",
+          "2a13:c8c3:e801::/48",
+          "2a14:7c0:300::/40",
+          "2a14:7c0:6000::/40",
+          "2a14:9e00:200::/40"
+        ],
+        "added_addresses": "1208925819614629174706178",
+        "removed_addresses": "80160244321187216687242412036"
+      }
+    },
+    "candidate_difference_from_last_publication": {
+      "ipv4": {
+        "before_prefixes": 1869,
+        "after_prefixes": 1870,
+        "added_ranges": [
+          "104.21.73.98/32",
+          "172.67.160.233/32",
+          "185.211.56.44/32",
+          "188.114.96.7/32",
+          "188.114.97.7/32"
+        ],
+        "removed_ranges": [
+          "94.183.161.0/24",
+          "104.26.10.2/32",
+          "104.26.11.2/32",
+          "172.67.70.180/32"
+        ],
+        "added_addresses": "5",
+        "removed_addresses": "259"
+      },
+      "ipv6": {
+        "before_prefixes": 600,
+        "after_prefixes": 594,
+        "added_ranges": [
+          "2606:4700:3031::6815:4962/128",
+          "2606:4700:3037::ac43:a0e9/128",
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128",
+          "2a0b:5047:2141::/48"
+        ],
+        "removed_ranges": [
+          "2606:4700:20::681a:a02/128",
+          "2606:4700:20::681a:b02/128",
+          "2606:4700:20::ac43:46b4/128",
+          "2a03:b0c0:3:d0::469d:4001/128",
+          "2a0b:441::/32",
+          "2a0f:85c1:3b1::/48",
+          "2a12:eb80::/48",
+          "2a13:c8c3:e801::/48",
+          "2a14:7c0:300::/40",
+          "2a14:7c0:6000::/40",
+          "2a14:9e00:200::/40"
+        ],
+        "added_addresses": "1208925819614629174706180",
+        "removed_addresses": "80160244321187216687242412036"
+      }
+    },
+    "previous_dns_only_removals": {
+      "104.26.10.2/32": [
+        "virgool.io"
+      ],
+      "104.26.11.2/32": [
+        "virgool.io"
+      ],
+      "172.67.70.180/32": [
+        "virgool.io"
+      ],
+      "2606:4700:20::681a:a02/128": [
+        "virgool.io"
+      ],
+      "2606:4700:20::681a:b02/128": [
+        "virgool.io"
+      ],
+      "2606:4700:20::ac43:46b4/128": [
+        "virgool.io"
+      ],
+      "2a03:b0c0:3:d0::469d:4001/128": [
+        "taskulu.com"
+      ]
+    },
+    "dns_outcomes": {
+      "success": 388,
+      "failure": 4
+    },
+    "unresolved_services": [
+      "virgool.io"
+    ],
+    "resolver_disagreements": [
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.86.209",
+            "172.67.136.222"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3031::ac43:88de",
+            "2606:4700:3037::6815:56d1"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "www.anjammidam.com",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.73.98",
+            "172.67.160.233"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "blogfa.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3031::6815:4962",
+            "2606:4700:3037::ac43:a0e9"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "blogfa.com",
+        "type": 28
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "104.21.73.98",
+            "172.67.160.233"
+          ],
+          "google": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ]
+        },
+        "domain": "www.blogfa.com",
+        "type": 1
+      },
+      {
+        "answers": {
+          "cloudflare": [
+            "2606:4700:3031::6815:4962",
+            "2606:4700:3037::ac43:a0e9"
+          ],
+          "google": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ]
+        },
+        "domain": "www.blogfa.com",
+        "type": 28
+      }
+    ],
+    "new_hostname_observations": {
+      "api.kavenegar.com": [
+        {
+          "addresses": [
+            "46.102.138.125"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.234549+00:00",
+          "domain": "api.kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.234529+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.230139+00:00",
+          "domain": "api.kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.230104+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "46.102.138.125"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.188111+00:00",
+          "domain": "api.kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.188083+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.250533+00:00",
+          "domain": "api.kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.250513+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "app.sms.ir": [
+        {
+          "addresses": [
+            "185.211.56.44"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.416239+00:00",
+          "domain": "app.sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.416219+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.439051+00:00",
+          "domain": "app.sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.439007+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.211.56.44"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.398273+00:00",
+          "domain": "app.sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.398232+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.415969+00:00",
+          "domain": "app.sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.415932+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "balad.ir": [
+        {
+          "addresses": [
+            "185.166.104.6",
+            "185.166.104.7"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.489108+00:00",
+          "domain": "balad.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.489087+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.511374+00:00",
+          "domain": "balad.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.511327+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.166.104.6",
+            "185.166.104.7"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.547470+00:00",
+          "domain": "balad.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.547436+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.574280+00:00",
+          "domain": "balad.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.574238+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "blogfa.com": [
+        {
+          "addresses": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.874710+00:00",
+          "domain": "blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.874692+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.915264+00:00",
+          "domain": "blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.915246+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "104.21.73.98",
+            "172.67.160.233"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.865591+00:00",
+          "domain": "blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.865574+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [
+            "2606:4700:3031::6815:4962",
+            "2606:4700:3037::ac43:a0e9"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.923023+00:00",
+          "domain": "blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.923007+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "kavenegar.com": [
+        {
+          "addresses": [
+            "93.113.236.241"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.095856+00:00",
+          "domain": "kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.095835+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.146255+00:00",
+          "domain": "kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.146224+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "93.113.236.241"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.077294+00:00",
+          "domain": "kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.077261+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.130370+00:00",
+          "domain": "kavenegar.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.130358+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "khorsandmezon.com": [
+        {
+          "addresses": [
+            "88.135.68.15"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.546646+00:00",
+          "domain": "khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.546617+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.635338+00:00",
+          "domain": "khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.635286+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "88.135.68.15"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.660689+00:00",
+          "domain": "khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.660662+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.701420+00:00",
+          "domain": "khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.701390+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "mavarapos.com": [
+        {
+          "addresses": [
+            "185.94.96.10"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.283788+00:00",
+          "domain": "mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.283747+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.330951+00:00",
+          "domain": "mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.330924+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.94.96.10"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.693796+00:00",
+          "domain": "mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.693669+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.382757+00:00",
+          "domain": "mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.382721+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "rinotik.com": [
+        {
+          "addresses": [
+            "185.106.201.75"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-08T05:37:42.963807+00:00",
+          "domain": "rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:42.963798+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.018332+00:00",
+          "domain": "rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.018294+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.106.201.75"
+          ],
+          "age_seconds": 1,
+          "attempted_at": "2026-11-08T05:37:42.963495+00:00",
+          "domain": "rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:42.963461+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.034893+00:00",
+          "domain": "rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.034856+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "sms.ir": [
+        {
+          "addresses": [
+            "62.60.201.86"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.308412+00:00",
+          "domain": "sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.308375+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.322279+00:00",
+          "domain": "sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.322241+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "62.60.201.86"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.367902+00:00",
+          "domain": "sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.367867+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.369427+00:00",
+          "domain": "sms.ir",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.369409+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "www.blogfa.com": [
+        {
+          "addresses": [
+            "188.114.96.7",
+            "188.114.97.7"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.023709+00:00",
+          "domain": "www.blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.023683+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [
+            "2a06:98c1:3120::7",
+            "2a06:98c1:3121::7"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.093953+00:00",
+          "domain": "www.blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.093917+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "104.21.73.98",
+            "172.67.160.233"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.025298+00:00",
+          "domain": "www.blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.025279+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [
+            "2606:4700:3031::6815:4962",
+            "2606:4700:3037::ac43:a0e9"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:44.033058+00:00",
+          "domain": "www.blogfa.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:44.033047+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "www.khorsandmezon.com": [
+        {
+          "addresses": [
+            "88.135.68.15"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.754679+00:00",
+          "domain": "www.khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.754653+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.860912+00:00",
+          "domain": "www.khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.860877+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "88.135.68.15"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.810836+00:00",
+          "domain": "www.khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.810788+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.957569+00:00",
+          "domain": "www.khorsandmezon.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.957534+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "www.mavarapos.com": [
+        {
+          "addresses": [
+            "185.94.96.10"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.440143+00:00",
+          "domain": "www.mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.440109+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.454907+00:00",
+          "domain": "www.mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.454866+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.94.96.10"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.893685+00:00",
+          "domain": "www.mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.893646+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.434082+00:00",
+          "domain": "www.mavarapos.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.433982+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ],
+      "www.rinotik.com": [
+        {
+          "addresses": [
+            "185.106.201.75"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.103733+00:00",
+          "domain": "www.rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.103716+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.202286+00:00",
+          "domain": "www.rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.202249+00:00",
+          "resolver": "google",
+          "status": "success",
+          "type": 28
+        },
+        {
+          "addresses": [
+            "185.106.201.75"
+          ],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.157770+00:00",
+          "domain": "www.rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.157728+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 1
+        },
+        {
+          "addresses": [],
+          "age_seconds": 0,
+          "attempted_at": "2026-11-08T05:37:43.213090+00:00",
+          "domain": "www.rinotik.com",
+          "error": null,
+          "freshness": "fresh",
+          "observed_at": "2026-11-08T05:37:43.213078+00:00",
+          "resolver": "cloudflare",
+          "status": "success",
+          "type": 28
+        }
+      ]
+    },
+    "source_snapshots": {
+      "dns_snapshot": {
+        "bytes": 209494,
+        "sha512": "04fcaab8907245530e67025a49289a08326671a2346b0da9c4b7b655c5b5361346bfc4956a8c7ec94f57d02378a329e7a0d3c2207e32c085b7ef2d07145d471e",
+        "url": "coverage-policy.json#dns_resolvers"
+      },
+      "ipdeny_ipv4": {
+        "bytes": 30914,
+        "sha512": "f9d3b6e81ca265b0bf4fd6c3ab47e6d83105f45ead574e152d0325f3d06e7937dffbdaf8d60f0aed9c8573ee9394647221b827bc41a1652c283b24764f10953b",
+        "url": "https://www.ipdeny.com/ipblocks/data/countries/ir.zone"
+      },
+      "ipdeny_ipv6": {
+        "bytes": 8617,
+        "sha512": "5730b9e84713fa0c66deb21f303d40a1a3cfa41f6fb7af5bd447498bf09d4018bffbff6c51ef9c63fba5b5de0620b9287632ffbf7de40b28dac968f73ba67160",
+        "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone"
+      },
+      "iptoasn_ipv4": {
+        "bytes": 8697031,
+        "sha512": "cab9f0f27dd7019a11e7feeea6913f7353710d4acb7280e067b11a29fb435665a5cd4d229983463d511fbe7ee256248eb4e4125ec5e2530eb4234af67020f2fb",
+        "url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+      },
+      "iptoasn_ipv6": {
+        "bytes": 2258661,
+        "sha512": "556dfb58ca3822593485d5621fd810a2634cc8d5e3cceef8e8318c860808443616e219f0046ad1468ab7e7c9520da18a3abf094be7bcae6f298a7cca7be2e7ba",
+        "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
+      },
+      "nro_delegated": {
+        "bytes": 57124114,
+        "sha512": "085c5cb548be4527ac8c539cd0e8b05c6b859936a2f0067d1137d0410e8c462114f89b678237ccc75086fba6cb8a90d7b87e3d2c69733bba89b63dfb3ab1fcb1",
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
+      },
+      "provider_arvancloud": {
+        "bytes": 220,
+        "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
+        "url": "https://www.arvancloud.ir/fa/ips.txt"
+      },
+      "provider_derakcloud_ipv6": {
+        "bytes": 207,
+        "sha512": "c2e956b20255305511391e16fbe2eac4fa60932401aa461d9716c8bae0c8715790f3820f13c53218bd5f31329aff61078942f0ed25667b8c8979fa5ddb135745",
+        "url": "https://api.derak.cloud/public/ipv6"
+      },
+      "provider_iranserver": {
+        "bytes": 302,
+        "sha512": "2369fd73c2507cb7c4c2eeda052359804b1bc508b4e11a2599f4adedf07c6bee131ea29ae225d0c5c9654e56f3c013a911c54c98c6e3824d23283ca7686b851f",
+        "url": "https://ips.f95.com/ips.txt"
+      },
+      "provider_mizbancloud": {
+        "bytes": 132,
+        "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
+        "url": "https://mizbancloud.com/ips.txt"
+      },
+      "provider_parspack": {
+        "bytes": 828,
+        "sha512": "200fbcc4cda64f7e2b739bba8f7f05cdf03480278c216b53767b51c46223dc8222aab237ef408c8a712524e836a94396ba76a03a795af4da737595987b74f8f4",
+        "url": "https://parspack.com/cdnips.txt"
+      }
+    },
+    "prior_catalogue_merge_control": {
+      "ipv4": {
+        "before_prefixes": 1867,
+        "after_prefixes": 1867,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      },
+      "ipv6": {
+        "before_prefixes": 592,
+        "after_prefixes": 592,
+        "added_ranges": [],
+        "removed_ranges": [],
+        "added_addresses": "0",
+        "removed_addresses": "0"
+      }
+    },
+    "upstream_ipv4_interval_observation": {
+      "range": "94.183.161.0/24",
+      "previous_origins": [
+        {
+          "asn": 209279,
+          "country": "IR",
+          "description": "POSHTVAR-AS",
+          "first": "94.183.161.0",
+          "last": "94.183.161.255",
+          "selection": "IR label"
+        }
+      ],
+      "current_covering_row": {
+        "first": "94.183.161.0",
+        "last": "94.183.161.255",
+        "asn": 0,
+        "country": "None",
+        "description": "Not routed"
+      },
+      "source_url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz"
+    },
+    "upstream_ipv6_evidence": {
+      "schema": 1,
+      "reviewed_at": "2026-11-08T05:47:45.226019+00:00",
+      "old_generation": "2026-10-31T17:14:12Z",
+      "new_generation": "2026-11-08T05:37:44+00:00",
+      "ipv6_delta": {
+        "before_prefixes": 600,
+        "after_prefixes": 592,
+        "added_ranges": [
+          "2a06:98c1:3120::7/128",
+          "2a06:98c1:3121::7/128",
+          "2a0b:5047:2141::/48"
+        ],
+        "removed_ranges": [
+          "2606:4700:20::681a:a02/128",
+          "2606:4700:20::681a:b02/128",
+          "2606:4700:20::ac43:46b4/128",
+          "2a03:b0c0:3:d0::469d:4001/128",
+          "2a0b:441::/32",
+          "2a0f:85c1:3b1::/48",
+          "2a12:eb80::/48",
+          "2a13:c8c3:e801::/48",
+          "2a14:7c0:300::/40",
+          "2a14:7c0:6000::/40",
+          "2a14:9e00:200::/40"
+        ],
+        "added_addresses": "1208925819614629174706178",
+        "removed_addresses": "80160244321187216687242412036"
+      },
+      "scope": "Public feed versus fresh baseline before weekly proposal. Provider membership and reviewed ASN sets match, and the baseline retains all previously tracked services.",
+      "snapshot_sources": {
+        "iptoasn_ipv6": {
+          "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz",
+          "prior_sha512": "9ecbc84b08b3ccdf0a8559a074e1b0997b6d8ebf022c2337222e160fa811e6c2f90cf05a42e798dca73eea93c7c7e078f5a7e960ef5002563bd5eae10e62fe3c",
+          "fresh_sha512": "556dfb58ca3822593485d5621fd810a2634cc8d5e3cceef8e8318c860808443616e219f0046ad1468ab7e7c9520da18a3abf094be7bcae6f298a7cca7be2e7ba"
+        },
+        "nro_delegated": {
+          "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats",
+          "prior_sha512": "23635586e04f5cd210471c621a0847809181d37327849855eda2bb5afb1fe75c7dc91e03dc92db960b3a13675928f000ecbade596f32559e3901e1eef8fac30f",
+          "fresh_sha512": "085c5cb548be4527ac8c539cd0e8b05c6b859936a2f0067d1137d0410e8c462114f89b678237ccc75086fba6cb8a90d7b87e3d2c69733bba89b63dfb3ab1fcb1"
+        },
+        "ipdeny_ipv6": {
+          "url": "https://www.ipdeny.com/ipv6/ipaddresses/blocks/ir.zone",
+          "prior_sha512": "5730b9e84713fa0c66deb21f303d40a1a3cfa41f6fb7af5bd447498bf09d4018bffbff6c51ef9c63fba5b5de0620b9287632ffbf7de40b28dac968f73ba67160",
+          "fresh_sha512": "5730b9e84713fa0c66deb21f303d40a1a3cfa41f6fb7af5bd447498bf09d4018bffbff6c51ef9c63fba5b5de0620b9287632ffbf7de40b28dac968f73ba67160"
+        }
+      },
+      "old_nro_archive_receipt": {
+        "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/20261031/nro-delegated-stats",
+        "final_url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/20261031/nro-delegated-stats",
+        "observed_at": "2026-11-08T05:43:19.223298+00:00",
+        "http_status": 200,
+        "bytes": 57079372,
+        "sha256": "7da84777fe0dd512b022d5bd117f67dd5e0e86ae892aba65377f8e13c3fdb96f",
+        "sha512": "23635586e04f5cd210471c621a0847809181d37327849855eda2bb5afb1fe75c7dc91e03dc92db960b3a13675928f000ecbade596f32559e3901e1eef8fac30f",
+        "matches_published_nro_sha512": true
+      },
+      "ris_state_receipts": {
+        "bgp_old": {
+          "url": "https://stat.ripe.net/data/bgp-state/data.json?resource=2a0b%3A441%3A%3A%2F32%2C2a0f%3A85c1%3A3b1%3A%3A%2F48%2C2a12%3Aeb80%3A%3A%2F48%2C2a13%3Ac8c3%3Ae801%3A%3A%2F48%2C2a14%3A7c0%3A300%3A%3A%2F40%2C2a14%3A7c0%3A6000%3A%3A%2F40%2C2a14%3A9e00%3A200%3A%3A%2F40&timestamp=2026-10-31T17%3A14%3A12",
+          "final_url": "https://stat.ripe.net/data/bgp-state/data.json?resource=2a0b%3A441%3A%3A%2F32%2C2a0f%3A85c1%3A3b1%3A%3A%2F48%2C2a12%3Aeb80%3A%3A%2F48%2C2a13%3Ac8c3%3Ae801%3A%3A%2F48%2C2a14%3A7c0%3A300%3A%3A%2F40%2C2a14%3A7c0%3A6000%3A%3A%2F40%2C2a14%3A9e00%3A200%3A%3A%2F40&timestamp=2026-10-31T17%3A14%3A12",
+          "observed_at": "2026-11-08T05:44:14.558174+00:00",
+          "http_status": 200,
+          "bytes": 57381,
+          "sha256": "6925c10de9b9f62196410e0bc0844aca7a58156b8b1a264c3f87c8e7818684e2",
+          "result": {
+            "resource": [
+              "2a0b:441::/32",
+              "2a0f:85c1:3b1::/48",
+              "2a12:eb80::/48",
+              "2a13:c8c3:e801::/48",
+              "2a14:7c0:300::/40",
+              "2a14:7c0:6000::/40",
+              "2a14:9e00:200::/40"
+            ],
+            "timestamp": "2026-10-31T17:14:12",
+            "nr_routes": 332,
+            "requested_timestamp": "2026-10-31T17:14:12",
+            "prefix_origins": [
+              {
+                "prefix": "2a0b:441::/32",
+                "origin": "213740",
+                "peer_routes": 332
+              }
+            ]
+          }
+        },
+        "bgp_new": {
+          "url": "https://stat.ripe.net/data/bgp-state/data.json?resource=2a0b%3A441%3A%3A%2F32%2C2a0f%3A85c1%3A3b1%3A%3A%2F48%2C2a12%3Aeb80%3A%3A%2F48%2C2a13%3Ac8c3%3Ae801%3A%3A%2F48%2C2a14%3A7c0%3A300%3A%3A%2F40%2C2a14%3A7c0%3A6000%3A%3A%2F40%2C2a14%3A9e00%3A200%3A%3A%2F40&timestamp=2026-11-08T05%3A37%3A44",
+          "final_url": "https://stat.ripe.net/data/bgp-state/data.json?resource=2a0b%3A441%3A%3A%2F32%2C2a0f%3A85c1%3A3b1%3A%3A%2F48%2C2a12%3Aeb80%3A%3A%2F48%2C2a13%3Ac8c3%3Ae801%3A%3A%2F48%2C2a14%3A7c0%3A300%3A%3A%2F40%2C2a14%3A7c0%3A6000%3A%3A%2F40%2C2a14%3A9e00%3A200%3A%3A%2F40&timestamp=2026-11-08T05%3A37%3A44",
+          "observed_at": "2026-11-08T05:44:14.558442+00:00",
+          "http_status": 200,
+          "bytes": 57325,
+          "sha256": "4eb172243191b8ad1272a81cc95ec5d9261bb111521782a8c9bd5fb01e3ce2b3",
+          "result": {
+            "resource": [
+              "2a0b:441::/32",
+              "2a0f:85c1:3b1::/48",
+              "2a12:eb80::/48",
+              "2a13:c8c3:e801::/48",
+              "2a14:7c0:300::/40",
+              "2a14:7c0:6000::/40",
+              "2a14:9e00:200::/40"
+            ],
+            "timestamp": "2026-11-08T03:59:58",
+            "nr_routes": 331,
+            "requested_timestamp": "2026-11-08T05:37:44",
+            "prefix_origins": [
+              {
+                "prefix": "2a0b:441::/32",
+                "origin": "213740",
+                "peer_routes": 331
+              }
+            ]
+          }
+        }
+      },
+      "removed_network_prefixes": [
+        {
+          "prefix": "2a0b:441::/32",
+          "classification": "old_origin_attribution_disagrees_with_ris",
+          "reason": "Full current interval maps to AS213740 in Germany. The Oct 31 and Nov 8 RIS snapshots and the Oct 30 to Nov 8 history all see AS213740 for this exact /32. The Oct 31 IPtoASN mapping to AS213470 lacks matching RIS evidence at publication time. The covering German registration predates both generations.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 213470,
+              "country": "IR",
+              "first": "2a0b:441::",
+              "last": "2a0b:441:ffff:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a0b:441::",
+              "last": "2a0b:441:ffff:ffff:ffff:ffff:ffff:ffff",
+              "asn": 213740,
+              "country": "DE",
+              "not_routed": false
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a0b:440::/29",
+              "registry": "ripencc",
+              "country": "DE",
+              "date": "20170524",
+              "status": "assigned"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a0b:440::/29",
+              "registry": "ripencc",
+              "country": "DE",
+              "date": "20170524",
+              "status": "assigned"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a0b:440::/29",
+            "final_url": "https://rdap.db.ripe.net/ip/2a0b:440::/29",
+            "observed_at": "2026-11-08T05:41:47.116899+00:00",
+            "http_status": 200,
+            "bytes": 7994,
+            "sha256": "0f4f7a181fb420238a12fbe6bf4e4af1928906bef3b777395f7e2918b205bf11",
+            "result": {
+              "handle": "2a0b:440::/29",
+              "name": "DE-RACKSPACE-20170524",
+              "startAddress": "2a0b:440::",
+              "endAddress": "2a0b:447:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "DE",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a0b:440::",
+                  "length": 29
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2017-05-24T15:00:03Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2021-09-21T17:33:23Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [
+              {
+                "prefix": "2a0b:441::/32",
+                "origin": "213740",
+                "peer_routes": 332
+              }
+            ],
+            "bgp_new": [
+              {
+                "prefix": "2a0b:441::/32",
+                "origin": "213740",
+                "peer_routes": 331
+              }
+            ]
+          },
+          "ris_specific_origin_history": [
+            {
+              "prefix": "2a0b:441::/32",
+              "asn": 213740,
+              "first": {
+                "starttime": "2026-01-01T00:00:00",
+                "endtime": "2026-01-10T23:59:59",
+                "full_peers_seeing": 326.83
+              },
+              "last": {
+                "starttime": "2026-11-07T00:00:00",
+                "endtime": "2026-11-08T00:00:00",
+                "full_peers_seeing": 212.0
+              },
+              "intervals": 29
+            }
+          ],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a0b%3A441%3A%3A%2F32&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:45.819327+00:00",
+              "sha256": "7821a962c3c3433b79f540b1b3c72822411cfa000117b8cff7a43a5989ef972d",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a0b%3A441%3A%3A%2F32&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.223600+00:00",
+              "sha256": "eda6d2313298b1848e4229dfad5708dc0df08e48d509f011f5546601a4a29256",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        },
+        {
+          "prefix": "2a0f:85c1:3b1::/48",
+          "classification": "earlier_ris_route_no_longer_visible",
+          "reason": "Current IPtoASN marks the full interval Not routed. RIS last saw the old origin AS215154 for the exact prefix through 2026-03-05T23:59:59 UTC, before the Oct 31 publication. Both compared RIS states have no matching routes.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 215154,
+              "country": "IR",
+              "first": "2a0f:85c1:3b1::",
+              "last": "2a0f:85c1:3b1:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a0f:85c1:3af::",
+              "last": "2a0f:85c1:3bb:ffff:ffff:ffff:ffff:ffff",
+              "asn": 0,
+              "country": "None",
+              "not_routed": true
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a0f:85c0::/29",
+              "registry": "ripencc",
+              "country": "GB",
+              "date": "20191115",
+              "status": "assigned"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a0f:85c0::/29",
+              "registry": "ripencc",
+              "country": "GB",
+              "date": "20191115",
+              "status": "assigned"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a0f:85c0::/29",
+            "final_url": "https://rdap.db.ripe.net/ip/2a0f:85c0::/29",
+            "observed_at": "2026-11-08T05:41:47.170141+00:00",
+            "http_status": 200,
+            "bytes": 9513,
+            "sha256": "90fbbcfe65a86249a347773001c80f58dcaf0dbc202b6833a1d671cc108d8712",
+            "result": {
+              "handle": "2a0f:85c0::/29",
+              "name": "UK-INFERNOLAN-20191115",
+              "startAddress": "2a0f:85c0::",
+              "endAddress": "2a0f:85c7:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "GB",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a0f:85c0::",
+                  "length": 29
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2019-11-15T07:57:27Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2024-01-18T23:53:18Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [],
+            "bgp_new": []
+          },
+          "ris_specific_origin_history": [
+            {
+              "prefix": "2a0f:85c1:3b1::/48",
+              "asn": 215154,
+              "first": {
+                "starttime": "2026-01-01T00:00:00",
+                "endtime": "2026-01-10T23:59:59",
+                "full_peers_seeing": 326.83
+              },
+              "last": {
+                "starttime": "2026-03-04T00:00:00",
+                "endtime": "2026-03-05T23:59:59",
+                "full_peers_seeing": 329.0
+              },
+              "intervals": 9
+            }
+          ],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a0f%3A85c1%3A3b1%3A%3A%2F48&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:45.819469+00:00",
+              "sha256": "e356b37038a673cbaa2f8fa35fa4ad2c413e5a153e03e418618f871d2ad41c4e",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a0f%3A85c1%3A3b1%3A%3A%2F48&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.223668+00:00",
+              "sha256": "db4dee4c2fa9c7956563a2c0ba5deddb0fcb8c3779232701ef718e72fd1c36ab",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        },
+        {
+          "prefix": "2a12:eb80::/48",
+          "classification": "old_origin_unverified_in_2026_ris",
+          "reason": "Current IPtoASN marks the full interval Not routed. RIS does not show the old exact origin in the reviewed 2026 history or either compared state. The old mapping and withdrawal timing remain unconfirmed.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 47430,
+              "country": "IR",
+              "first": "2a12:eb80::",
+              "last": "2a12:eb80:0:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a12:eb48::",
+              "last": "2a12:ec3f:ffff:ffff:ffff:ffff:ffff:ffff",
+              "asn": 0,
+              "country": "None",
+              "not_routed": true
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a12:eb80::/29",
+              "registry": "ripencc",
+              "country": "GB",
+              "date": "20211203",
+              "status": "assigned"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a12:eb80::/29",
+              "registry": "ripencc",
+              "country": "GB",
+              "date": "20211203",
+              "status": "assigned"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a12:eb80::/29",
+            "final_url": "https://rdap.db.ripe.net/ip/2a12:eb80::/29",
+            "observed_at": "2026-11-08T05:41:47.350545+00:00",
+            "http_status": 200,
+            "bytes": 8165,
+            "sha256": "a1cb200bb531fce7684b9b6f294a1a800ee82c430adaee8fc52b835b302fbf61",
+            "result": {
+              "handle": "2a12:eb80::/29",
+              "name": "UK-NIN-20211203",
+              "startAddress": "2a12:eb80::",
+              "endAddress": "2a12:eb87:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "TR",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a12:eb80::",
+                  "length": 29
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2024-10-01T14:14:09Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2024-10-01T14:14:09Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [],
+            "bgp_new": []
+          },
+          "ris_specific_origin_history": [],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a12%3Aeb80%3A%3A%2F48&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:46.300426+00:00",
+              "sha256": "cdcad0344d07bbfccd29e1b6dd43d67edfdf8010d05cf8e9c46aeeda0e0b7e3a",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a12%3Aeb80%3A%3A%2F48&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.223721+00:00",
+              "sha256": "91f559561be183020b8b234143c33698db50d426ec5553925fca64a7aed0f009",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        },
+        {
+          "prefix": "2a13:c8c3:e801::/48",
+          "classification": "earlier_ris_route_no_longer_visible",
+          "reason": "Current IPtoASN marks the full interval Not routed. RIS last saw the old origin AS218970 for the exact prefix through 2026-09-29T23:59:59 UTC, before the Oct 31 publication. Both compared RIS states have no matching routes.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 218970,
+              "country": "IR",
+              "first": "2a13:c8c3:e801::",
+              "last": "2a13:c8c3:e801:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a13:c8c3:cf45::",
+              "last": "2a13:c8c3:e801:ffff:ffff:ffff:ffff:ffff",
+              "asn": 0,
+              "country": "None",
+              "not_routed": true
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a13:c8c0::/29",
+              "registry": "ripencc",
+              "country": "AL",
+              "date": "20260410",
+              "status": "assigned"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a13:c8c0::/29",
+              "registry": "ripencc",
+              "country": "AL",
+              "date": "20260410",
+              "status": "assigned"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a13:c8c0::/29",
+            "final_url": "https://rdap.db.ripe.net/ip/2a13:c8c0::/29",
+            "observed_at": "2026-11-08T05:41:47.459622+00:00",
+            "http_status": 200,
+            "bytes": 8344,
+            "sha256": "579b0ebc37e3b3903566e4bc2a6dbf48f2ae3f8720825770d43298b1aaa1c1fd",
+            "result": {
+              "handle": "2a13:c8c0::/29",
+              "name": "AL-RSCOMPUTERS-20260410",
+              "startAddress": "2a13:c8c0::",
+              "endAddress": "2a13:c8c7:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "AL",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a13:c8c0::",
+                  "length": 29
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2026-04-10T14:06:03Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2026-04-10T14:06:03Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [],
+            "bgp_new": []
+          },
+          "ris_specific_origin_history": [
+            {
+              "prefix": "2a13:c8c3:e801::/48",
+              "asn": 218970,
+              "first": {
+                "starttime": "2026-08-13T00:00:00",
+                "endtime": "2026-08-24T23:59:59",
+                "full_peers_seeing": 320.25
+              },
+              "last": {
+                "starttime": "2026-09-28T00:00:00",
+                "endtime": "2026-09-29T23:59:59",
+                "full_peers_seeing": 215.67
+              },
+              "intervals": 6
+            }
+          ],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a13%3Ac8c3%3Ae801%3A%3A%2F48&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:46.550674+00:00",
+              "sha256": "b3e69712a2b3821e741b079eb017c4415554cf605693f909fad7e2d0d0b59df8",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a13%3Ac8c3%3Ae801%3A%3A%2F48&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.223765+00:00",
+              "sha256": "5811e185687a0e200c6cf907018da3bf60226fa0629513e6e167aa0e81a40276",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        },
+        {
+          "prefix": "2a14:7c0:300::/40",
+          "classification": "old_origin_unverified_in_2026_ris",
+          "reason": "Current IPtoASN marks the full interval Not routed. RIS does not show the old exact origin in the reviewed 2026 history or either compared state. The old mapping and withdrawal timing remain unconfirmed.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 216061,
+              "country": "IR",
+              "first": "2a14:7c0:300::",
+              "last": "2a14:7c0:3ff:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a14:7c0:200::",
+              "last": "2a14:7c0:fff:ffff:ffff:ffff:ffff:ffff",
+              "asn": 0,
+              "country": "None",
+              "not_routed": true
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a14:7c0::/29",
+              "registry": "ripencc",
+              "country": "IL",
+              "date": "20240219",
+              "status": "assigned"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a14:7c0::/29",
+              "registry": "ripencc",
+              "country": "IL",
+              "date": "20240219",
+              "status": "assigned"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a14:7c0::/29",
+            "final_url": "https://rdap.db.ripe.net/ip/2a14:7c0::/29",
+            "observed_at": "2026-11-08T05:41:47.504252+00:00",
+            "http_status": 200,
+            "bytes": 8175,
+            "sha256": "86a4c48178758381b75ab534851e5ca2793a2ef714edd910d7d378693b3910cc",
+            "result": {
+              "handle": "2a14:7c0::/29",
+              "name": "IL-WHITELABEL-20240219",
+              "startAddress": "2a14:7c0::",
+              "endAddress": "2a14:7c7:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "DE",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a14:7c0::",
+                  "length": 29
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2024-02-19T13:52:22Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2025-03-10T23:02:58Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [],
+            "bgp_new": []
+          },
+          "ris_specific_origin_history": [],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a14%3A7c0%3A300%3A%3A%2F40&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:46.650271+00:00",
+              "sha256": "bb3869c4f707be5645f75e3e0730f9ffb44cee6d6e232a33c4687013670adb85",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a14%3A7c0%3A300%3A%3A%2F40&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.223838+00:00",
+              "sha256": "b56d44a03eb89be9d4e37d4f58c1f139548f7a82fb48382f1e4ac541679e24c2",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        },
+        {
+          "prefix": "2a14:7c0:6000::/40",
+          "classification": "earlier_ris_route_no_longer_visible",
+          "reason": "Current IPtoASN marks the full interval Not routed. RIS last saw the old origin AS214515 for the exact prefix through 2026-04-28T23:59:59 UTC, before the Oct 31 publication. Both compared RIS states have no matching routes.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 214515,
+              "country": "IR",
+              "first": "2a14:7c0:6000::",
+              "last": "2a14:7c0:60ff:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a14:7c0:5400::",
+              "last": "2a14:7c0:6fff:ffff:ffff:ffff:ffff:ffff",
+              "asn": 0,
+              "country": "None",
+              "not_routed": true
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a14:7c0::/29",
+              "registry": "ripencc",
+              "country": "IL",
+              "date": "20240219",
+              "status": "assigned"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a14:7c0::/29",
+              "registry": "ripencc",
+              "country": "IL",
+              "date": "20240219",
+              "status": "assigned"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a14:7c0::/29",
+            "final_url": "https://rdap.db.ripe.net/ip/2a14:7c0::/29",
+            "observed_at": "2026-11-08T05:41:47.504252+00:00",
+            "http_status": 200,
+            "bytes": 8175,
+            "sha256": "86a4c48178758381b75ab534851e5ca2793a2ef714edd910d7d378693b3910cc",
+            "result": {
+              "handle": "2a14:7c0::/29",
+              "name": "IL-WHITELABEL-20240219",
+              "startAddress": "2a14:7c0::",
+              "endAddress": "2a14:7c7:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "DE",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a14:7c0::",
+                  "length": 29
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2024-02-19T13:52:22Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2025-03-10T23:02:58Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [],
+            "bgp_new": []
+          },
+          "ris_specific_origin_history": [
+            {
+              "prefix": "2a14:7c0:6000::/40",
+              "asn": 214515,
+              "first": {
+                "starttime": "2026-01-01T00:00:00",
+                "endtime": "2026-01-10T23:59:59",
+                "full_peers_seeing": 326.83
+              },
+              "last": {
+                "starttime": "2026-04-23T00:00:00",
+                "endtime": "2026-04-28T23:59:59",
+                "full_peers_seeing": 320.33
+              },
+              "intervals": 13
+            }
+          ],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a14%3A7c0%3A6000%3A%3A%2F40&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:46.774366+00:00",
+              "sha256": "2c508d5440b8fea8288a4c7435c40c30e9895d0262c10fd9beb2e69b823ea868",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a14%3A7c0%3A6000%3A%3A%2F40&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.951080+00:00",
+              "sha256": "6869204bce0c1864483df03410b96d7ec393166be1593f987caa27e3aaf90b45",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        },
+        {
+          "prefix": "2a14:9e00:200::/40",
+          "classification": "earlier_ris_route_no_longer_visible",
+          "reason": "Current IPtoASN marks the full interval Not routed. RIS last saw the old origin AS214515 for the exact prefix through 2026-04-28T23:59:59 UTC, before the Oct 31 publication. Both compared RIS states have no matching routes.",
+          "old_iptoasn_provenance": [
+            {
+              "asn": 214515,
+              "country": "IR",
+              "first": "2a14:9e00:200::",
+              "last": "2a14:9e00:2ff:ffff:ffff:ffff:ffff:ffff",
+              "selection": "IR label"
+            }
+          ],
+          "old_selection_layers": [
+            "selected_asn_ipv6"
+          ],
+          "current_iptoasn_rows": [
+            {
+              "first": "2a14:9d88::",
+              "last": "2a14:a082:ffff:ffff:ffff:ffff:ffff:ffff",
+              "asn": 0,
+              "country": "None",
+              "not_routed": true
+            }
+          ],
+          "whole_interval_covered_by_old_and_current_source_rows": true,
+          "old_nro": [
+            {
+              "prefix": "2a14:9e00::/26",
+              "registry": "ripencc",
+              "country": "ZZ",
+              "date": "20261031",
+              "status": "reserved"
+            }
+          ],
+          "current_nro": [
+            {
+              "prefix": "2a14:9e00::/26",
+              "registry": "ripencc",
+              "country": "ZZ",
+              "date": "20261107",
+              "status": "reserved"
+            }
+          ],
+          "nro_country_and_status_unchanged": true,
+          "current_rdap": {
+            "url": "https://rdap.db.ripe.net/ip/2a14:9e00::/26",
+            "final_url": "https://rdap.db.ripe.net/ip/2a14:9e00::/26",
+            "observed_at": "2026-11-08T05:41:47.562214+00:00",
+            "http_status": 200,
+            "bytes": 19013,
+            "sha256": "70ec5ceba8ee48005ea75d13aad81bf48098788ad2e9f5596a3f4fe6d3f4ddba",
+            "result": {
+              "handle": "2a00::/11",
+              "name": "EU-ZZ-2A00",
+              "startAddress": "2a00::",
+              "endAddress": "2a1f:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+              "country": "EU",
+              "status": [
+                "active"
+              ],
+              "type": "ALLOCATED-BY-RIR",
+              "ipVersion": "v6",
+              "cidr0_cidrs": [
+                {
+                  "v6prefix": "2a00::",
+                  "length": 11
+                }
+              ],
+              "events": [
+                {
+                  "action": "registration",
+                  "date": "2019-06-06T15:16:51Z"
+                },
+                {
+                  "action": "last changed",
+                  "date": "2019-06-06T15:16:51Z"
+                }
+              ],
+              "covering_interval": true
+            }
+          },
+          "current_ipdeny_matches": [],
+          "ris_state_matches": {
+            "bgp_old": [],
+            "bgp_new": []
+          },
+          "ris_specific_origin_history": [
+            {
+              "prefix": "2a14:9e00:200::/40",
+              "asn": 214515,
+              "first": {
+                "starttime": "2026-01-01T00:00:00",
+                "endtime": "2026-01-10T23:59:59",
+                "full_peers_seeing": 326.83
+              },
+              "last": {
+                "starttime": "2026-04-25T00:00:00",
+                "endtime": "2026-04-28T23:59:59",
+                "full_peers_seeing": 318.83
+              },
+              "intervals": 16
+            }
+          ],
+          "ris_history_receipts": [
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a14%3A9e00%3A200%3A%3A%2F40&starttime=2026-10-30T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:41:47.068768+00:00",
+              "sha256": "03a33727a293dde2f3f4f5802804241484156e96f983d902b0a6c8fe708d76f3",
+              "http_status": 200,
+              "query_starttime": "2026-10-30T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            },
+            {
+              "url": "https://stat.ripe.net/data/routing-history/data.json?resource=2a14%3A9e00%3A200%3A%3A%2F40&starttime=2026-01-01T00%3A00%3A00&endtime=2026-11-08T00%3A00%3A00&min_peers=1",
+              "observed_at": "2026-11-08T05:43:19.955384+00:00",
+              "sha256": "b44b00fa1592085e3106df5bdb0f54dacbcbbab403ae787cbeff21781854905c",
+              "http_status": 200,
+              "query_starttime": "2026-01-01T00:00:00",
+              "query_endtime": "2026-11-08T00:00:00"
+            }
+          ]
+        }
+      ],
+      "removed_service_hosts": [
+        {
+          "prefix": "2606:4700:20::681a:a02/128",
+          "service_domains": [
+            "virgool.io"
+          ],
+          "prior_dns": [
+            {
+              "address": "2606:4700:20::681a:a02",
+              "domain": "virgool.io",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:09.512404+00:00",
+              "owner": "virgool.io",
+              "resolver": "google",
+              "ttl": 300
+            },
+            {
+              "address": "2606:4700:20::681a:a02",
+              "domain": "virgool.io",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:09.506070+00:00",
+              "owner": "virgool.io",
+              "resolver": "cloudflare",
+              "ttl": 300
+            }
+          ],
+          "current_aaaa_outcomes": [
+            {
+              "domain": "virgool.io",
+              "resolver": "google",
+              "type": 28,
+              "status": "failure",
+              "freshness": "missing",
+              "addresses": [],
+              "error": "invalid DNS answer for virgool.io: DNS status=3, truncated=False"
+            },
+            {
+              "domain": "virgool.io",
+              "resolver": "cloudflare",
+              "type": 28,
+              "status": "failure",
+              "freshness": "missing",
+              "addresses": [],
+              "error": "invalid DNS answer for virgool.io: DNS status=3, truncated=False"
+            }
+          ],
+          "reason": "Both current AAAA lookups failed. The October 31 observation is outside the 48-hour reuse window."
+        },
+        {
+          "prefix": "2606:4700:20::681a:b02/128",
+          "service_domains": [
+            "virgool.io"
+          ],
+          "prior_dns": [
+            {
+              "address": "2606:4700:20::681a:b02",
+              "domain": "virgool.io",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:09.512404+00:00",
+              "owner": "virgool.io",
+              "resolver": "google",
+              "ttl": 300
+            },
+            {
+              "address": "2606:4700:20::681a:b02",
+              "domain": "virgool.io",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:09.506070+00:00",
+              "owner": "virgool.io",
+              "resolver": "cloudflare",
+              "ttl": 300
+            }
+          ],
+          "current_aaaa_outcomes": [
+            {
+              "domain": "virgool.io",
+              "resolver": "google",
+              "type": 28,
+              "status": "failure",
+              "freshness": "missing",
+              "addresses": [],
+              "error": "invalid DNS answer for virgool.io: DNS status=3, truncated=False"
+            },
+            {
+              "domain": "virgool.io",
+              "resolver": "cloudflare",
+              "type": 28,
+              "status": "failure",
+              "freshness": "missing",
+              "addresses": [],
+              "error": "invalid DNS answer for virgool.io: DNS status=3, truncated=False"
+            }
+          ],
+          "reason": "Both current AAAA lookups failed. The October 31 observation is outside the 48-hour reuse window."
+        },
+        {
+          "prefix": "2606:4700:20::ac43:46b4/128",
+          "service_domains": [
+            "virgool.io"
+          ],
+          "prior_dns": [
+            {
+              "address": "2606:4700:20::ac43:46b4",
+              "domain": "virgool.io",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:09.512404+00:00",
+              "owner": "virgool.io",
+              "resolver": "google",
+              "ttl": 300
+            },
+            {
+              "address": "2606:4700:20::ac43:46b4",
+              "domain": "virgool.io",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:09.506070+00:00",
+              "owner": "virgool.io",
+              "resolver": "cloudflare",
+              "ttl": 300
+            }
+          ],
+          "current_aaaa_outcomes": [
+            {
+              "domain": "virgool.io",
+              "resolver": "google",
+              "type": 28,
+              "status": "failure",
+              "freshness": "missing",
+              "addresses": [],
+              "error": "invalid DNS answer for virgool.io: DNS status=3, truncated=False"
+            },
+            {
+              "domain": "virgool.io",
+              "resolver": "cloudflare",
+              "type": 28,
+              "status": "failure",
+              "freshness": "missing",
+              "addresses": [],
+              "error": "invalid DNS answer for virgool.io: DNS status=3, truncated=False"
+            }
+          ],
+          "reason": "Both current AAAA lookups failed. The October 31 observation is outside the 48-hour reuse window."
+        },
+        {
+          "prefix": "2a03:b0c0:3:d0::469d:4001/128",
+          "service_domains": [
+            "taskulu.com"
+          ],
+          "prior_dns": [
+            {
+              "address": "2a03:b0c0:3:d0::469d:4001",
+              "domain": "taskulu.com",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:06.946786+00:00",
+              "owner": "taskulu.com",
+              "resolver": "google",
+              "ttl": 300
+            },
+            {
+              "address": "2a03:b0c0:3:d0::469d:4001",
+              "domain": "taskulu.com",
+              "freshness": "fresh",
+              "observed_at": "2026-10-31T17:14:06.959199+00:00",
+              "owner": "taskulu.com",
+              "resolver": "cloudflare",
+              "ttl": 300
+            }
+          ],
+          "current_aaaa_outcomes": [
+            {
+              "domain": "taskulu.com",
+              "resolver": "google",
+              "type": 28,
+              "status": "success",
+              "freshness": "fresh",
+              "addresses": [],
+              "observed_at": "2026-11-08T05:37:35.914666+00:00",
+              "error": null
+            },
+            {
+              "domain": "taskulu.com",
+              "resolver": "cloudflare",
+              "type": 28,
+              "status": "success",
+              "freshness": "fresh",
+              "addresses": [],
+              "observed_at": "2026-11-08T05:37:35.901891+00:00",
+              "error": null
+            }
+          ],
+          "reason": "Both resolvers returned fresh empty AAAA answers."
+        }
+      ],
+      "limits": [
+        "RIPE RIS state and history describe collector visibility. The new state returns 03:59:58 UTC, before the 05:37:44 projection.",
+        "NRO country/status and covering prefixes match the verified October 31 archive and pinned November 7 snapshot. RDAP and NRO disagree on country for two assigned parent blocks. For the reserved block RDAP returns a broader /11 registry object. No transfer is established for any removal.",
+        "Timestamped routing-status returned HTTP 500. Whole-prefix BGP-state and routing-history calls succeeded.",
+        "All source interval comparisons cover the whole removed prefix. No classification was extrapolated from a single address."
+      ]
+    }
+  },
+  "existing_service_gap": {
+    "hostname": "virgool.io",
+    "decision": "Retain the reviewed hostname for fresh daily lookups. Both public resolvers returned NXDOMAIN, and the registry reports clientHold. The previous answers exceed the cache freshness limit.",
+    "registration": {
+      "registry": "whois.nic.io",
+      "registry_directory": "https://www.iana.org/domains/root/db/io.html",
+      "domain": "virgool.io",
+      "observed_at": "2026-11-08T05:41:32.319632+00:00",
+      "status": [
+        "clientDeleteProhibited",
+        "clientHold",
+        "clientRenewProhibited",
+        "clientTransferProhibited",
+        "clientUpdateProhibited"
+      ],
+      "registration_queried": true,
+      "response_sha256": "7dd53f9e2128f84d9a915a18c922a54e0101cbecf87148bea0b757ae461e93ab"
+    },
+    "dns_authority_checks": {
+      "google": {
+        "url": "https://dns.google/resolve?name=virgool.io&type=NS",
+        "observed_at": "2026-11-08T05:40:52.188898+00:00",
+        "sha256": "e6d6aa1e22547687971deda1fc3278031147db428687c802510452dbf439c1ae",
+        "status": 3,
+        "question": [
+          {
+            "name": "virgool.io.",
+            "type": 2
+          }
+        ],
+        "authority": [
+          {
+            "name": "io.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "a0.nic.io. hostmaster.donuts.email. 1794116035 7200 900 1209600 3600"
+          }
+        ]
+      },
+      "cloudflare": {
+        "url": "https://cloudflare-dns.com/dns-query?name=virgool.io&type=NS",
+        "observed_at": "2026-11-08T05:40:52.189378+00:00",
+        "sha256": "ee7d6567e48e5f96791b5023b6ef736500d8bcc9f836680cf59e18d74620f775",
+        "status": 3,
+        "question": [
+          {
+            "name": "virgool.io",
+            "type": 2
+          }
+        ],
+        "authority": [
+          {
+            "name": "io",
+            "type": 6,
+            "TTL": 3600,
+            "data": "a0.nic.io. hostmaster.donuts.email. 1794116035 7200 900 1209600 3600"
+          }
+        ]
+      }
+    },
+    "status_definition": "https://www.icann.org/resources/pages/epp-status-codes-2014-06-16-en"
+  },
+  "validation": {
+    "unit_tests_passed": 59,
+    "compilation_passed": true,
+    "original_label_guard_failure": "generation failed: reviewed operator AS205585 identity changed: ARVANCLOUD-CDN-IR",
+    "label_only_replay_against_last_publication": "passed",
+    "candidate_replay_against_last_publication": "passed",
+    "manifest_validation": "Page hashes, families, lengths, counts and generation validated.",
+    "page_sizes": {
+      "ipv4": [
+        29373
+      ],
+      "ipv6": [
+        9029
+      ]
+    },
+    "known_source_completeness_percent": 100,
+    "selected_asns": {
+      "AS205585": true,
+      "AS10221": false,
+      "AS10234": false,
+      "AS10277": false,
+      "AS10343": false
+    },
+    "all_new_hosts_fresh": true,
+    "independent_catalogue_review": "No blockers found. The review counted candidate and validation work items and verified primary identity, service and workflow evidence."
+  }
+}

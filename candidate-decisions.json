@@ -162,12 +162,13 @@
     },
     "provider:https://api.derak.cloud/public/ipv4": {
       "state": "pending",
-      "reason": "Entire provider inventory remains inadmissible while a private network is present; no partial admission.",
-      "reviewed_on": "2026-11-01",
+      "reason": "The provider’s official IPv4 inventory includes private 192.168.204.48/28. Strict public-range validation excludes the entire inventory pending a corrected endpoint.",
+      "reviewed_on": "2026-11-08",
       "evidence_fingerprints": [
         "12cf0e64dd1cb164035e92d46851e806b1720c9b76f474cbfd9fcfdc94688efb",
         "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
         "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d",
+        "68e7d705b38e5e6547f01e67b2fcdf241318c966b2afee8656b59b896b5e4034",
         "78fbc98fa503003d08ea26213a68d706a574771fba2942ea747b2d51d65c606e",
         "8d2d445a33508d995eedf192e4b862ef70697dbb1484bb3df0fe96ff5518f3f0",
         "9eb6350a8a91c0bc1ab1fb9c7a2f3624d05bf69e6d5e524e4b8ce0f1fe065df0",
@@ -1574,6 +1575,244 @@
         "https://rdap.apnic.net/autnum/10212",
         "https://rdap.db.ripe.net/autnum/56547",
         "https://rdap.db.ripe.net/autnum/57292"
+      ]
+    },
+    "domain:habibabad.org": {
+      "state": "pending",
+      "reason": "The apex and www HTTPS checks failed at DNS. Google and Cloudflare both returned NXDOMAIN for the apex A and AAAA queries. No current primary evidence identifies an active Iranian service on this exact hostname.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "960e3fb048a3c416c05f663097dc31ae11c6014ac656e1267bbe1a6ff711a2d8"
+      ],
+      "evidence": [
+        "https://habibabad.org/",
+        "https://www.habibabad.org/"
+      ]
+    },
+    "domain:rinotik.com": {
+      "state": "accepted",
+      "reason": "Rinotik operates a wheel and tire storefront. Its official contact page lists its physical shop on Rey Street in Tehran, and its homepage describes local delivery. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "043b3f97734c1349bb5d188e2f231d75949dad211429ddd7be1abd60079e652d"
+      ],
+      "evidence": [
+        "https://rinotik.com/",
+        "https://rinotik.com/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7/",
+        "https://rinotik.com/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D9%85%D8%A7/",
+        "https://www.rinotik.com/"
+      ]
+    },
+    "domain:mavarapos.com": {
+      "state": "accepted",
+      "reason": "Mavara POS operates a payment terminal equipment store. Its official contact page identifies Vira Gostar Mazand as its parent company, lists a Sari, Mazandaran business address and describes delivery across Iran. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "2fd060b23dd99a803923cf034af6d0b2ea4d1dc3a05eb2b3d22a19ac9d9bddec"
+      ],
+      "evidence": [
+        "https://mavarapos.com/",
+        "https://mavarapos.com/contact-us/",
+        "https://www.mavarapos.com/"
+      ]
+    },
+    "domain:khorsandmezon.com": {
+      "state": "accepted",
+      "reason": "Khorsand Mezon operates a clothing storefront. Its official About and Contact pages place its physical store on Farhang Street in Bandar Anzali, Gilan. The exact www hostname returned an HTTPS 301 to the official apex.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "7e6dda2f1755abeca73c6655d20c7ec6e9fafb069884c7b7b45ad14447612fd4"
+      ],
+      "evidence": [
+        "https://khorsandmezon.com/",
+        "https://khorsandmezon.com/about-us/",
+        "https://khorsandmezon.com/contact-us/",
+        "https://www.khorsandmezon.com/"
+      ]
+    },
+    "domain:banamaktoys.com": {
+      "state": "pending",
+      "reason": "The apex and www HTTPS checks failed at DNS. Google and Cloudflare both returned NXDOMAIN for the apex A and AAAA queries. A same-name public storefront channel mentions the domain, but active exact-host service use could not be verified.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "9656f3bc68bb9ab046303f2def18e37bcb2db0e8e70c2162934f688e5a273100"
+      ],
+      "evidence": [
+        "https://banamaktoys.com/",
+        "https://www.banamaktoys.com/"
+      ]
+    },
+    "domain:net2university.com": {
+      "state": "pending",
+      "reason": "Google and Cloudflare return one apex A record and no AAAA answer. Both apex and www HTTPS checks failed certificate hostname validation. Historical references to an Iranian learning institution do not verify the service currently operating on these hostnames.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "35fde93410d1ec4c82b015b96ce1920bac4abf670fd10242c3796ef3753d2ccd"
+      ],
+      "evidence": [
+        "https://net2university.com/",
+        "https://www.net2university.com/"
+      ]
+    },
+    "domain:blogfa.com": {
+      "state": "accepted",
+      "reason": "The Blogfa landing pages serve the same blogging product. The official contact page links the operator FAQ, which describes Blogfa as active in Iran and explains its obligations under Iranian law. Review the two public entry hostnames.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "f86542df94fd5c1a2d4f203b39065022986123acf1d25c2ace8e981a4f29c390"
+      ],
+      "evidence": [
+        "https://blogfa.com/",
+        "https://www.blogfa.com/",
+        "https://www.blogfa.com/contact/",
+        "https://faq.blogfa.com/?p=3"
+      ]
+    },
+    "domain:kavenegar.com": {
+      "state": "accepted",
+      "reason": "Kavenegar identifies its SMS service and Tehran office on its public site. Its official REST documentation identifies api.kavenegar.com as the exact API hostname.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "4bcb83ab6db912b20850215dbee6a6d652496a93a0059cd4ad312980bcd17258"
+      ],
+      "evidence": [
+        "https://kavenegar.com/",
+        "https://kavenegar.com/support/contact",
+        "https://kavenegar.com/rest.html"
+      ]
+    },
+    "domain:sms.ir": {
+      "state": "accepted",
+      "reason": "SMS.ir identifies Ideh Pardazan as its messaging service operator and lists a Tehran office. Its official homepage links app.sms.ir as the exact customer application.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "bb0b66da557b71e10dc63bc67a9ef58b4a1181bf2c0141c5086a2fe3423091de"
+      ],
+      "evidence": [
+        "https://sms.ir/",
+        "https://sms.ir/about-us/",
+        "https://sms.ir/contact-us/",
+        "https://app.sms.ir/"
+      ]
+    },
+    "domain:balad.ir": {
+      "state": "accepted",
+      "reason": "Balad publishes its interactive maps and route planner for Iranian locations on this exact hostname. Its official product page documents the local map and navigation service.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "df65ddf4035b2c042426f356e4ffc01c6e5dcd5560a14b6b013e2b7ee109d8cf"
+      ],
+      "evidence": [
+        "https://balad.ir/",
+        "https://balad.ir/about"
+      ]
+    },
+    "asn:10221": {
+      "state": "rejected",
+      "reason": "APNIC identifies the HEWLETT-PACKARD ASN in Australia and names SingTel Optus Pty Ltd as its registrant. The matched RIPE anchors identify distinct organizations. The supplied connection/connections name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "1e134126e23f30fe5669ce402ef1f03bd912b645b65c299819459669bec54f37",
+        "1ec337386e4b8d87d2b5544173f9a811c791fe531eb77f1b767c68b40b063905",
+        "86cfec33f9b7c5c58c13c4094961134e04f1bc0ea91faca7e5ff566c49890049",
+        "a06a6a4a0934441cfd206d91178b815663233d5286c337da248a2780becfa9fe",
+        "bf0b3ec013317850826c58d0e8cee1885f0a1f5eefb65bb722f3bd2c3006522e"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10221",
+        "https://rdap.db.ripe.net/autnum/34513",
+        "https://rdap.db.ripe.net/autnum/39364"
+      ]
+    },
+    "asn:10234": {
+      "state": "rejected",
+      "reason": "APNIC identifies Zurich Financial Services Australia Limited in Australia. The matched RIPE anchors identify distinct organizations. The supplied financial name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "0e61329438bba72b7358265e1e97eb4aff02cbdd17663e9b8f8a4e26bdb67379",
+        "14acadb30a7046068e1b01142e05ad20c24fd0a9fdb684b66ff21055a1bb86b6",
+        "4e7fc0431ad8ac209401fcd9135e8b659c2cfecdc2160c82c0c521bed1ffc015",
+        "786e4e046128a0ec696a163417f1aa18869d7e68adba90753beba3e6a8c3ce33",
+        "a207b853fe7bd70c56fa50aa0320c57d8eb9f2826fe4c64fec2bc50dde990392",
+        "a323e45e233860339c884d50f2755c3a2c0a1f28bfa654f23e09240ee1316ddb",
+        "bf4e0bff1f844a06826aee6396ed84eeeb7c1a260da9390e15dc1ac08eaec293",
+        "bfc82e7bbf8ce1370ca28d5d2e775dc524f04130e715def333bbed0febdeb389",
+        "fbeb6ccd7f6b361298bd6019bf5399a6af2cebc1604d96787b8c8a753ebb854f",
+        "fd10879c4e89e0d544cb18970953272938d05937317cdd5173b8989027076079"
+      ],
+      "evidence": [
+        "https://rdap.apnic.net/autnum/10234",
+        "https://rdap.db.ripe.net/autnum/34871",
+        "https://rdap.db.ripe.net/autnum/62238",
+        "https://rdap.db.ripe.net/autnum/203162",
+        "https://rdap.db.ripe.net/autnum/213682",
+        "https://rdap.db.ripe.net/autnum/215700"
+      ]
+    },
+    "asn:10277": {
+      "state": "rejected",
+      "reason": "ARIN refers the request to LACNIC, which identifies Argentina’s Ministerio de Cultura y Educacion as registrant. The matched RIPE anchors identify distinct organizations. The supplied cultural/cultura name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "17deafb07b8c5f03050dc40868c42cb21eebcc1081b787fc74f756f85fb5c7cc",
+        "31aedd1fa8052d433468f68b445dcbe63043274ccee54bd672e9593d1aeea1c8",
+        "3c1911a96ed2f086474be4ef45689f90b394e4d795bedb9402dda0215910cb23",
+        "4b2dc0d44b2485e453356455f3e3c75762bfc9a8d6d856d01044323bd815d188",
+        "59db71edcff332e1e8b39daf7a35b3f23d85c309aa1d24087c6d0dc4baead45c",
+        "622bcdfc28a18e10a123b5dded83cab5e8b08fa8ba0d8ff424844269e0b33d07",
+        "820e8320ffe35e2d1c4199238eb2dcbf06a435effaa4e8c898543054dd2eb590",
+        "8b3e9a04ca1a38e672f46797e845c9c790b924b1cec21afa5e147ceeddd686d1",
+        "9211d80eb79c7a625511e111b9eccfe9595bb614450105e6747fe3f788bd229d",
+        "c141bd395122f81fb5ce1bab736d087820cb2d4e4397f82ec5a2e0cdd751ab5c",
+        "c92c38b9be727fa5abb3a87fde39421698c4e9dd6b7961c76c4e70de0f7a2fa7",
+        "d46a928d94284e74242676131bb75b49cfedd890754ff9ae6aa2267bc31f6030",
+        "dc650a789621212fd1b2e6378210f6606629d9f174316af1a3ffc701dcaacdc5",
+        "f3be9a7405ff31c6662437328a6c9bd805f4e1d160f5c8345e22e7ffec21d3fa"
+      ],
+      "evidence": [
+        "https://rdap.arin.net/registry/autnum/10277",
+        "https://rdap.lacnic.net/rdap/autnum/10277",
+        "https://rdap.db.ripe.net/autnum/44609",
+        "https://rdap.db.ripe.net/autnum/48434",
+        "https://rdap.db.ripe.net/autnum/62048",
+        "https://rdap.db.ripe.net/autnum/62229",
+        "https://rdap.db.ripe.net/autnum/197343",
+        "https://rdap.db.ripe.net/autnum/204650",
+        "https://rdap.db.ripe.net/autnum/210609"
+      ]
+    },
+    "asn:10343": {
+      "state": "rejected",
+      "reason": "ARIN identifies the United States National Aeronautics and Space Administration (NASA). The matched RIPE anchors identify distinct organizations. The supplied administration name similarity does not establish an Iranian affiliation or common ownership. Independently supported new evidence can reopen the candidate.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "c85e3c9e036fa6af054f82d2dcdb1f5a0f2b2cae6bb3a1bb3327e230572d446e"
+      ],
+      "evidence": [
+        "https://rdap.arin.net/registry/autnum/10343",
+        "https://rdap.db.ripe.net/autnum/34592"
+      ]
+    },
+    "provider:https://www.arvancloud.ir/en/ips.txt": {
+      "state": "rejected",
+      "reason": "Both official language endpoints publish the same 14 public IPv4 prefixes. The English URL duplicates the accepted Persian inventory and does not add coverage.",
+      "reviewed_on": "2026-11-08",
+      "evidence_fingerprints": [
+        "04d620d38ba89568d0e89a5e88901c3919516ce5d9d949ea149083114469bf5d",
+        "4db1a64471245ec99e69be16c0a4f0ecaed8472582cd8797d8fa51694c777a28",
+        "69b335d95f65130f824c33633df24cecbf18bd275a8848b751cd47bc2e42e00d",
+        "716f7b57d8b57532424754944f07d77876458c8ae1e41061a869f8b93c25e27c",
+        "ac1e5063c645093bdd66122f724356151b4555ee09fdf4b24c716bf74d274e2a",
+        "d18b89c3adaf7da3f8ec9e4e2696573499711b9be688034eb2c48d9f9074d986",
+        "dc30ed0162cb087383240638da1c887eca527eecb76347c6dc2597cf3ca921c8",
+        "f67d48513d51391fe39a5fbac3c63325f71a296f15f15bc5ed4accda13cf7488",
+        "f7822d39fafc0d1884d8fa95536e710bd694fb77455212278d6ef90307ffb73a"
+      ],
+      "evidence": [
+        "https://www.arvancloud.ir/en/dev/ips",
+        "https://www.arvancloud.ir/en/ips.txt",
+        "https://www.arvancloud.ir/fa/dev/ips",
+        "https://www.arvancloud.ir/fa/ips.txt"
       ]
     }
   }
