@@ -18,8 +18,12 @@ signals. The [catalogue](../coverage-policy.json) records accepted organizations
 ASNs, provider URLs and service hostnames, with evidence, aliases and review dates.
 Hosting a service does not establish ownership of its hosting ASN.
 
-Malformed core data, conflicting operator identities and suspicious provider
-changes stop publication. DNS failures are handled per hostname, resolver and
+A missing or malformed NRO registry stops publication. If IPdeny, IPtoASN or a
+provider inventory fails to download or fails its checks, the feed still
+publishes with that source's ranges from the last good build, for up to 30 days;
+after that the source is left out. A reviewed operator ASN whose IPtoASN name
+no longer matches the catalogue loses its non-`IR` ranges for that build. Both
+are recorded in `coverage.json` (`source_status`, `warnings`). DNS failures are handled per hostname, resolver and
 family: successful answers continue, while previous answers can be reused for
 up to 48 hours at generation time. Original timestamps and TTLs are retained;
 expired answers are omitted and reported. Routers receive changes at their next

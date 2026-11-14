@@ -8,11 +8,14 @@ from pathlib import Path
 from .delivery import validate
 
 
-def build_provenance(policy, layers, registry, origins, dns, manifest):
+def build_provenance(policy, layers, registry, origins, dns, manifest, source_status=None):
+    # source_status carries each layer's last fresh time into the next build.
     document = {"schema": 1, "generated_at": manifest["generated_at"], "policy": policy,
                 "sources": manifest["sources"], "layers": {k: [str(n) for n in ns] for k, (_, ns) in layers.items()},
                 "registry_records": registry, "asn_origins": origins, "dns_records": dns,
                 "feed_hashes": {str(v): manifest[f"ipv{v}"]["sha512"] for v in (4, 6)}}
+    if source_status is not None:
+        document["source_status"] = source_status
     return gzip.compress((json.dumps(document, sort_keys=True)+"\n").encode(), mtime=0)
 
 
