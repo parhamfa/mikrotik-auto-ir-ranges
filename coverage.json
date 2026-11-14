@@ -1,6 +1,6 @@
 {
   "delivery": {
-    "generation": "bc3a1f705dce99e3ac13a096ac0133e6f07d5da200e1f11fbab09f79b6bec75a",
+    "generation": "d64dc08b6a83ed662c417215e045ff400bec908e497c0cac316172aac135ac33",
     "legacy_compatible": true
   },
   "generator_version": "2.1.0",
@@ -176,7 +176,7 @@
     "The list's accuracy against real traffic has not been measured.",
     "Shared IPs may also serve unrelated foreign services; hosting ASNs are not automatically included."
   ],
-  "observed_at": "2026-11-14T14:48:03Z",
+  "observed_at": "2026-11-14T17:57:34Z",
   "policy_sha512": "252433813c661227bef245a34df297a18ca818661c3171c5ee82a1bf7715a08a8ed0680544e95fdbc7b17d50d8e2d1dca04dc2d203586e729b4afbf7b88179a7",
   "registry": {
     "records": 775625,
@@ -194,52 +194,52 @@
   "scope": "All admitted source ranges, not all possible Iran-related IPs",
   "source_status": {
     "ipdeny_ipv4": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "ipdeny_ipv6": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "nro_delegated": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_arvancloud": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_derakcloud_ipv6": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_iranserver": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_mizbancloud": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_parspack": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv4": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv6": {
-      "last_fresh": "2026-11-14T14:48:03Z",
+      "last_fresh": "2026-11-14T17:57:34Z",
       "reason": null,
       "status": "fresh"
     }
