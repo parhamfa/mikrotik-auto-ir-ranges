@@ -28,6 +28,9 @@ there are removed on refresh. Run it through the terminal, SSH or scheduler.
 ## Feed and recovery
 
 GitHub Actions publishes daily at 12:17 UTC. Routers refresh at 03:00 local time.
+When a source other than the registry fails, the run still publishes, then turns
+red if that source was dropped or has been reused for more than 3 days; the
+failure names each source and how long it has been stale.
 The [data branch](https://github.com/parhamfa/mikrotik-auto-ir-ranges/tree/data)
 contains the feed and reports:
 

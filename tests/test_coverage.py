@@ -62,9 +62,13 @@ class CoverageTests(unittest.TestCase):
         self.assertEqual([str(n) for n in networks], ["185.215.232.0/22"])
         self.assertEqual(asns, {208006})
 
-    def test_reviewed_asn_transfer_requires_review(self):
-        with self.assertRaisesRegex(GenerationError, "identity changed"):
-            parse_iptoasn_rows("185.215.232.0\t185.215.235.255\t208006\tAE\tUNRELATED\n", 4, include_asns={208006}, expected_descriptions={208006: "ARVANCLOUD-CDN"})
+    def test_reviewed_asn_transfer_is_left_out_and_recorded(self):
+        rows = "2.144.0.0\t2.147.255.255\t100\tIR\tIR-EXAMPLE\n185.215.232.0\t185.215.235.255\t208006\tAE\tUNRELATED\n"
+        mismatches = {}
+        networks, asns = parse_iptoasn_rows(rows, 4, include_asns={208006}, expected_descriptions={208006: "ARVANCLOUD-CDN"}, mismatches=mismatches)
+        self.assertEqual([str(n) for n in networks], ["2.144.0.0/14"])
+        self.assertEqual(asns, {100})
+        self.assertEqual(mismatches, {208006: "UNRELATED"})
 
     def test_registry_country_and_holder_identity_are_independent(self):
         payload = delegated(
@@ -145,13 +149,17 @@ class CoverageTests(unittest.TestCase):
         self.assertIsNone(report["universe_coverage_percent"])
         self.assertEqual(report["layers"]["provider_arvancloud"]["missing_prefixes"], [])
 
-    def test_missing_provider_payload_aborts_generation(self):
+    def test_missing_provider_payload_without_previous_build_drops_only_that_layer(self):
         payloads, policy = generation_inputs()
         del payloads["provider_arvancloud"]
-        with self.assertRaisesRegex(GenerationError, "missing source payloads"):
-            generate_from_sources(payloads, policy=policy, generated_at="2026-09-16T00:00:00Z", limits=LIMITS)
+        artifacts = generate_from_sources(payloads, policy=policy, generated_at="2026-09-16T00:00:00Z", limits=LIMITS, source_failures={"provider_arvancloud": "HTTP Error 403"})
+        self.assertNotIn(b"193.24.119.0/29", artifacts.ipv4.data)
+        self.assertIn(b"2.144.0.0/14\n", artifacts.ipv4.data)
+        report = json.loads(artifacts.coverage)
+        self.assertEqual(report["source_status"]["provider_arvancloud"], {"status": "dropped", "last_fresh": None, "reason": "HTTP Error 403"})
+        self.assertNotIn("provider_arvancloud", json.loads(artifacts.manifest)["sources"])
 
-    def test_provider_shrink_blocks_all_publication(self):
+    def test_provider_shrink_no_longer_blocks_publication(self):
         payloads, policy = generation_inputs()
         artifacts = generate_from_sources(payloads, policy=policy, generated_at="2026-09-16T00:00:00Z", limits=LIMITS)
         with tempfile.TemporaryDirectory() as tmp:
@@ -159,11 +167,8 @@ class CoverageTests(unittest.TestCase):
             old_report = json.loads(artifacts.coverage)
             old_report["layers"]["provider_arvancloud"]["unique_addresses"] = "4096"
             (target / "coverage.json").write_text(json.dumps(old_report))
-            (target / "manifest.json").write_bytes(b"old manifest")
-            with self.assertRaisesRegex(GenerationError, "shrank by more than 10%"):
-                publish_artifacts(artifacts, target)
-            self.assertEqual((target / "manifest.json").read_bytes(), b"old manifest")
-            self.assertFalse((target / "ir-ipv4.zone").exists())
+            self.assertTrue(publish_artifacts(artifacts, target))
+            self.assertEqual((target / "ir-ipv4.zone").read_bytes(), artifacts.ipv4.data)
 
 
 if __name__ == "__main__":

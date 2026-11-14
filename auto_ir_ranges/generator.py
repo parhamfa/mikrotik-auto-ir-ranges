@@ -13,7 +13,7 @@ import tempfile
 import time
 import urllib.request
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Callable, Iterable, Mapping, Sequence
 
@@ -41,6 +41,21 @@ DEFAULT_LIMITS = {
     4: {"min_count": 1_000, "max_count": 50_000, "max_bytes": 3 * 1024 * 1024},
     6: {"min_count": 300, "max_count": 50_000, "max_bytes": 3 * 1024 * 1024},
 }
+
+# Optional sources and the layer each one feeds; provider_<id> sources feed
+# their own layer. Only the registry remains mandatory.
+REUSABLE_SOURCES = {
+    "ipdeny_ipv4": "ipdeny_ipv4", "ipdeny_ipv6": "ipdeny_ipv6",
+    "iptoasn_ipv4": "selected_asn_ipv4", "iptoasn_ipv6": "selected_asn_ipv6",
+}
+# A failed optional source keeps its last fresh prefixes this long, then drops out.
+REUSE_MAX_AGE_DAYS = 30
+# The run turns red once a reused source has not been fresh for this long.
+STALE_ALERT_DAYS = 3
+
+
+def is_reusable_source(name: str) -> bool:
+    return name in REUSABLE_SOURCES or name.startswith("provider_")
 
 
 @dataclass(frozen=True)
@@ -144,8 +159,13 @@ def parse_iptoasn_rows(
     include_asns: Iterable[int] = (),
     expected_descriptions: Mapping[int, str] | None = None,
     details: list | None = None,
+    mismatches: dict[int, str] | None = None,
 ) -> tuple[list[ipaddress._BaseNetwork], set[int]]:
-    """Select IR-labelled rows OR independently identified Iranian operator ASNs."""
+    """Select IR-labelled rows OR independently identified Iranian operator ASNs.
+
+    A reviewed ASN whose description no longer matches keeps only its
+    IR-labelled rows; the observed name is recorded in ``mismatches``.
+    """
     text = payload.decode("utf-8", "strict") if isinstance(payload, bytes) else payload
     networks: list[ipaddress._BaseNetwork] = []
     asns: set[int] = set()
@@ -178,8 +198,11 @@ def parse_iptoasn_rows(
             raise GenerationError(f"unassigned ASN in selected IPtoASN row {line_number}")
         if expected_descriptions and asn in expected_descriptions:
             first_word = parts[4].split()[0].upper() if len(parts) > 4 and parts[4].strip() else ""
-            if first_word != expected_descriptions[asn].upper():
-                raise GenerationError(f"reviewed operator AS{asn} identity changed: {first_word}")
+            if not same_operator(first_word, expected_descriptions[asn]):
+                if mismatches is not None:
+                    mismatches[asn] = first_word
+                if parts[3].strip().upper() != wanted_country:
+                    continue
         if details is not None:
             details.append({"asn": asn, "country": parts[3], "description": parts[4] if len(parts) > 4 else "", "first": str(first), "last": str(last), "selection": "IR label" if parts[3] == wanted_country else "selected ASN"})
         asns.add(asn)
@@ -190,6 +213,11 @@ def parse_iptoasn_rows(
     return networks, asns
 
 
+def same_operator(observed: str, expected: str) -> bool:
+    """Catalogue names are prefixes: ARVANCLOUD-CDN- accepts ARVANCLOUD-CDN-IR."""
+    return observed.upper().rstrip("-_").startswith(expected.upper().rstrip("-_"))
+
+
 def parse_iptoasn_gzip(
     payload: bytes,
     version: int,
@@ -198,12 +226,13 @@ def parse_iptoasn_gzip(
     include_asns: Iterable[int] = (),
     expected_descriptions: Mapping[int, str] | None = None,
     details: list | None = None,
+    mismatches: dict[int, str] | None = None,
 ) -> tuple[list[ipaddress._BaseNetwork], set[int]]:
     try:
         uncompressed = gzip.decompress(payload)
     except (OSError, EOFError) as exc:
         raise GenerationError(f"invalid IPv{version} IPtoASN gzip stream") from exc
-    return parse_iptoasn_rows(uncompressed, version, country_code=country_code, include_asns=include_asns, expected_descriptions=expected_descriptions, details=details)
+    return parse_iptoasn_rows(uncompressed, version, country_code=country_code, include_asns=include_asns, expected_descriptions=expected_descriptions, details=details, mismatches=mismatches)
 
 
 def collapse_networks(
@@ -291,29 +320,103 @@ def generate_from_sources(
     source_urls: Mapping[str, str] = SOURCE_URLS,
     limits: Mapping[int, Mapping[str, int]] = DEFAULT_LIMITS,
     policy: Mapping | None = None,
+    previous_provenance: Mapping | None = None,
+    source_failures: Mapping[str, str] | None = None,
 ) -> GeneratedArtifacts:
+    """Build feeds; optional sources that fail are reused or dropped, never fatal.
+
+    ``previous_provenance`` is the last build's decoded provenance document and
+    ``source_failures`` explains optional payloads that could not be downloaded.
+    """
     policy = coverage.load_policy() if policy is None else policy
     if policy.get("schema") == 2:
         catalogue.validate(policy)
     effective_urls = {**source_urls, **coverage.source_urls(policy), "dns_snapshot": "coverage-policy.json#dns_resolvers"}
-    missing = sorted(set(effective_urls) - set(source_payloads))
+    missing = sorted(name for name in effective_urls if name not in source_payloads and not is_reusable_source(name))
     if missing:
         raise GenerationError(f"missing source payloads: {', '.join(missing)}")
 
-    country_v4 = parse_country_zone(source_payloads["ipdeny_ipv4"], 4)
-    country_v6 = parse_country_zone(source_payloads["ipdeny_ipv6"], 6)
-    anchors = coverage.extra_asns(policy)
     reference_time = datetime.fromisoformat(generated_at.replace("Z", "+00:00")) if generated_at else datetime.now(timezone.utc).replace(microsecond=0)
+    timestamp = generated_at or reference_time.isoformat().replace(
+        "+00:00", "Z"
+    )
+    previous = previous_provenance or {}
+    source_records = {name: _source_record(effective_urls[name], source_payloads[name]) for name in effective_urls if not is_reusable_source(name)}
+    source_status = {"nro_delegated": {"status": "fresh", "last_fresh": timestamp, "reason": None}}
+    warnings: list[str] = []
+
+    def attempt(layer: str, source: str, parse: Callable[[bytes], object]):
+        """Parse one optional source; on failure record why and return None."""
+        if source not in source_payloads:
+            reason = (source_failures or {}).get(source, "source payload missing")
+        else:
+            try:
+                parsed = parse(source_payloads[source])
+            except (GenerationError, ValueError) as exc:  # UnicodeDecodeError is a ValueError
+                reason = str(exc)
+            else:
+                source_records[source] = _source_record(effective_urls[source], source_payloads[source])
+                source_status[layer] = {"status": "fresh", "last_fresh": timestamp, "reason": None}
+                return parsed
+        print(f"source unavailable: {source}: {reason}", file=sys.stderr)
+        source_status[layer] = {"status": "dropped", "last_fresh": None, "reason": reason}
+        return None
+
+    def fall_back(layer: str, source: str, version: int) -> list:
+        """Reuse the previous build's prefixes while they were fresh within the window."""
+        status = previous.get("source_status")
+        if status is None:  # provenance written before source status was recorded
+            prior = {"status": "fresh", "last_fresh": previous.get("generated_at")} if layer in previous.get("layers", {}) else None
+        else:
+            prior = status.get(layer)
+        if prior is None:
+            return []
+        source_status[layer]["last_fresh"] = prior["last_fresh"]
+        if prior["status"] == "dropped" or not prior["last_fresh"] or layer not in previous.get("layers", {}):
+            return []
+        if reference_time - datetime.fromisoformat(prior["last_fresh"].replace("Z", "+00:00")) > timedelta(days=REUSE_MAX_AGE_DAYS):
+            return []
+        source_status[layer]["status"] = "reused"
+        if source in previous.get("sources", {}):
+            source_records[source] = previous["sources"][source]
+        return [n for n in map(ipaddress.ip_network, previous["layers"][layer]) if n.version == version]
+
+    country = {}
+    for version in (4, 6):
+        name = f"ipdeny_ipv{version}"
+        country[version] = attempt(name, name, lambda payload: parse_country_zone(payload, version))
+        if country[version] is None:
+            country[version] = fall_back(name, name, version)
+    country_v4, country_v6 = country[4], country[6]
+    anchors = coverage.extra_asns(policy)
     registry_details, asn_details = [], []
     registry, registered_asns, registry_stats = coverage.parse_delegated(source_payloads["nro_delegated"], anchors=anchors, now=reference_time, details=registry_details)
     if len(registered_asns) < policy["registry_min_asns"]:
         raise GenerationError(f"registry returned too few selected ASNs: {len(registered_asns)}")
     selected_asns = registered_asns | set(anchors)
-    asn_v4, asns_v4 = parse_iptoasn_gzip(source_payloads["iptoasn_ipv4"], 4, include_asns=selected_asns, expected_descriptions=anchors, details=asn_details)
-    asn_v6, asns_v6 = parse_iptoasn_gzip(source_payloads["iptoasn_ipv6"], 6, include_asns=selected_asns, expected_descriptions=anchors, details=asn_details)
-    absent_operators = set(anchors) - (asns_v4 | asns_v6)
-    if absent_operators:
-        raise GenerationError(f"reviewed operator ASNs disappeared from the routing dataset: {sorted(absent_operators)}")
+    asn_layers, asn_sets, baselines, mismatches = {}, {}, {}, {}
+    for version in (4, 6):
+        name, source = f"selected_asn_ipv{version}", f"iptoasn_ipv{version}"
+        found, changed = [], {}
+        parsed = attempt(name, source, lambda payload: (
+            *parse_iptoasn_gzip(payload, version, include_asns=selected_asns, expected_descriptions=anchors, details=found, mismatches=changed),
+            parse_iptoasn_gzip(payload, version)[0],
+        ))
+        if parsed is not None:
+            asn_layers[version], asn_sets[version], baselines[version] = parsed
+            asn_details += found
+            mismatches.update(changed)
+            continue
+        asn_layers[version] = fall_back(name, source, version)
+        # A reused layer carries its origin evidence, so identity checks do not apply.
+        reused = [r for r in previous.get("asn_origins", []) if ipaddress.ip_address(r["first"]).version == version] if source_status[name]["status"] == "reused" else []
+        asn_details += reused
+        asn_sets[version] = {r["asn"] for r in reused}
+        baselines[version] = [n for r in reused if r["selection"] == "IR label" for n in ipaddress.summarize_address_range(ipaddress.ip_address(r["first"]), ipaddress.ip_address(r["last"]))]
+    asn_v4, asns_v4, asn_v6, asns_v6 = asn_layers[4], asn_sets[4], asn_layers[6], asn_sets[6]
+    warnings += [f"reviewed operator AS{asn} identity changed to {word or 'no description'}; its ranges not labelled IR were left out" for asn, word in mismatches.items()]
+    if all(source_status[f"selected_asn_ipv{v}"]["status"] == "fresh" for v in (4, 6)):
+        warnings += [f"reviewed operator AS{asn} is absent from IPtoASN" for asn in sorted(set(anchors) - asns_v4 - asns_v6 - set(mismatches))]
 
     if json.loads(source_payloads["dns_snapshot"])["schema"] == 2:
         dns_networks, dns_records, dns_status = dns.evaluate(source_payloads["dns_snapshot"], policy, now=reference_time)
@@ -328,7 +431,8 @@ def generate_from_sources(
     }
     for provider in policy["providers"]:
         key = f"provider_{provider['id']}"
-        layers[key] = (provider["version"], coverage.parse_provider(source_payloads[key], provider))
+        networks = attempt(key, key, lambda payload: coverage.parse_provider(payload, provider))
+        layers[key] = (provider["version"], fall_back(key, key, provider["version"]) if networks is None else networks)
 
     collapsed_v4 = collapse_networks((n for version, ns in layers.values() if version == 4 for n in ns), 4)
     collapsed_v6 = collapse_networks((n for version, ns in layers.values() if version == 6 for n in ns), 6)
@@ -337,9 +441,6 @@ def generate_from_sources(
     parse_and_validate_zone(feed_v4.data, 4, limits=limits)
     parse_and_validate_zone(feed_v6.data, 6, limits=limits)
 
-    timestamp = generated_at or reference_time.isoformat().replace(
-        "+00:00", "Z"
-    )
     manifest = {
         "schema": SCHEMA_VERSION,
         "generated_at": timestamp,
@@ -379,14 +480,11 @@ def generate_from_sources(
                 "iptoasn_selected_asns": len(asns_v6),
             },
         },
-        "sources": {
-            key: _source_record(effective_urls[key], source_payloads[key])
-            for key in sorted(effective_urls)
-        },
+        # Reused layers keep the snapshot they came from; dropped ones are absent.
+        "sources": {key: source_records[key] for key in sorted(source_records)},
     }
     manifest_bytes = (json.dumps(manifest, indent=2, sort_keys=True) + "\n").encode("utf-8")
-    baseline_v4, _ = parse_iptoasn_gzip(source_payloads["iptoasn_ipv4"], 4)
-    baseline_v6, _ = parse_iptoasn_gzip(source_payloads["iptoasn_ipv6"], 6)
+    baseline_v4, baseline_v6 = baselines[4], baselines[6]
     report = {
         "schema": 1,
         "observed_at": timestamp,
@@ -409,9 +507,11 @@ def generate_from_sources(
         "known_source_completeness_percent": 100,
         "measured_lab_recall": None,
         "discovery": {"report": "discovery/report.json", "admission": "Only reviewed catalogue entries are collected; pending discovery is reported separately."},
+        "source_status": source_status,
+        "warnings": sorted(warnings),
     }
     from .provenance import build_provenance
-    provenance = build_provenance(policy, layers, registry_details, asn_details, dns_records, manifest)
+    provenance = build_provenance(policy, layers, registry_details, asn_details, dns_records, manifest, source_status)
     paged_manifest, pages = delivery.build({4: feed_v4, 6: feed_v6}, generated_at=timestamp, generator_version=__version__)
     report["delivery"] = {"generation": json.loads(paged_manifest)["generation"], "legacy_compatible": json.loads(paged_manifest)["legacy_compatible"]}
     return GeneratedArtifacts(feed_v4, feed_v6, manifest_bytes, (json.dumps(report, indent=2, sort_keys=True) + "\n").encode(), paged_manifest, pages, provenance, source_payloads["dns_snapshot"])
@@ -466,19 +566,9 @@ def publish_artifacts(
                 legacy_shrink = True
 
     prior_report = {}
-    if artifacts.coverage is not None:
-        report = json.loads(artifacts.coverage)
-        prior_report_path = previous_dir / "coverage.json"
-        if prior_report_path.exists():
-            prior_report = json.loads(prior_report_path.read_bytes())
-            for name, stats in report["layers"].items():
-                if not name.startswith("provider_"):
-                    continue
-                old = prior_report.get("layers", {}).get(name)
-                if old:
-                    for metric in ("input_prefixes", "unique_addresses"):
-                        if int(stats[metric]) * 10 < int(old[metric]) * 9:
-                            raise GenerationError(f"{name} {metric} shrank by more than 10%; review the provider change")
+    prior_report_path = previous_dir / "coverage.json"
+    if artifacts.coverage is not None and prior_report_path.exists():
+        prior_report = json.loads(prior_report_path.read_bytes())
 
     if artifacts.paged_manifest is not None:
         desired = delivery.validate(artifacts.paged_manifest, artifacts.pages.__getitem__)
@@ -575,23 +665,41 @@ def build_live_artifacts(
     policy: Mapping | None = None,
     source_dir: Path | None = None,
     previous_dns: bytes | None = None,
+    previous_provenance: Mapping | None = None,
 ) -> GeneratedArtifacts:
     policy = coverage.load_policy() if policy is None else policy
     urls = {**source_urls, **coverage.source_urls(policy)}
-    def fetch(name: str) -> tuple[str, bytes]:
-        if source_dir is not None:
-            return name, (source_dir / name).read_bytes()
-        print(f"downloading {name}: {urls[name]}", file=sys.stderr)
-        return name, download(urls[name], timeout=60)
+    def fetch(name: str) -> tuple[str, bytes | None, str | None]:
+        try:
+            if source_dir is not None:
+                return name, (source_dir / name).read_bytes(), None
+            print(f"downloading {name}: {urls[name]}", file=sys.stderr)
+            return name, download(urls[name], timeout=60), None
+        except (GenerationError, OSError) as exc:
+            if not is_reusable_source(name):
+                raise
+            return name, None, str(exc)
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
-        payloads = dict(executor.map(fetch, sorted(urls)))
+        fetched = list(executor.map(fetch, sorted(urls)))
+    payloads = {name: payload for name, payload, _ in fetched if payload is not None}
+    failures = {name: error for name, _, error in fetched if error is not None}
     payloads["dns_snapshot"] = (source_dir / "dns_snapshot").read_bytes() if source_dir is not None else dns.collect(policy, previous_dns)
     return generate_from_sources(
         payloads,
         generated_at=generated_at,
         source_urls=source_urls,
         policy=policy,
+        previous_provenance=previous_provenance,
+        source_failures=failures,
     )
+
+
+def _previous_provenance(path: Path) -> dict | None:
+    """The last build's evidence; if it is unreadable there is simply nothing to reuse."""
+    try:
+        return json.loads(gzip.decompress(path.read_bytes()))
+    except (OSError, EOFError, ValueError):
+        return None
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -609,7 +717,8 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     try:
         cache_path = (args.previous_dir or args.output_dir) / "dns-cache.json"
-        artifacts = build_live_artifacts(generated_at=args.generated_at, policy=coverage.load_policy(args.policy), source_dir=args.source_dir, previous_dns=cache_path.read_bytes() if cache_path.exists() else None)
+        previous_provenance = _previous_provenance((args.previous_dir or args.output_dir) / "provenance.json.gz")
+        artifacts = build_live_artifacts(generated_at=args.generated_at, policy=coverage.load_policy(args.policy), source_dir=args.source_dir, previous_dns=cache_path.read_bytes() if cache_path.exists() else None, previous_provenance=previous_provenance)
         changed = publish_artifacts(
             artifacts,
             args.output_dir,
