@@ -118,7 +118,6 @@ def refresh(args):
     decisions = discovery.validate_decisions(load(args.decisions, {"schema": 1, "decisions": {}}))
     pool = discovery.update_pool(load(previous/"candidates.json.gz", {}), leads, decisions, now=now.isoformat())
     accepted = {"asn:"+a: o for o in policy["operators"] for a in o["asns"]}
-    accepted.update({"domain:"+s["domain"]: s for s in policy["services"]})
     accepted.update({"provider:"+p["url"]: p for p in policy["providers"]})
     for ident, row in pool.items():
         if row.get("catalogue_reference") and ident not in accepted and row["state"] == "accepted":
@@ -128,7 +127,7 @@ def refresh(args):
     for ident, item in accepted.items():
         if ident in pool:
             pool[ident].update(state="accepted", catalogue_reference=item.get("id", item.get("domain")), catalogue_reviewed_on=item["reviewed_on"])
-    report = {"schema": 1, "observed_at": now.isoformat(), "systematic_sources": {**{f"iptoasn_ipv{v}": {"url": SOURCE_URLS[f"iptoasn_ipv{v}"], "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)} for v, raw in payloads.items()}, "nro": {"url": policy["registry_url"], "sha256": hashlib.sha256(nro).hexdigest(), "bytes": len(nro)}}, "candidates": dict(Counter(r["state"] for r in pool.values())), "global_asns": len(index), "iran_anchors": sum(r["iran_anchor"] for r in index.values()), "sources": sources, "source_errors": errors, "rdap": rdap, "review_queue": discovery.review_queue(pool), "ageing_catalogue": catalogue.ageing(policy, today=now.date()), "unsupported_rules_count": len(unsupported), "universe_coverage_percent": None}
+    report = {"schema": 1, "observed_at": now.isoformat(), "systematic_sources": {**{f"iptoasn_ipv{v}": {"url": SOURCE_URLS[f"iptoasn_ipv{v}"], "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)} for v, raw in payloads.items()}, "nro": {"url": policy["registry_url"], "sha256": hashlib.sha256(nro).hexdigest(), "bytes": len(nro)}}, "candidates": dict(Counter(r["state"] for r in pool.values())), "global_asns": len(index), "iran_anchors": sum(r["iran_anchor"] for r in index.values()), "sources": sources, "source_errors": errors, "rdap": rdap, "review_queue": discovery.review_queue(pool), "ageing_catalogue": catalogue.ageing(policy, today=now.date()), "unsupported_rules_count": len(unsupported)}
     for name, value in (("asn-index.json.gz", index), ("rdap-cache.json.gz", rdap_cache), ("candidates.json.gz", pool), ("unsupported-rules.json.gz", unsupported), ("report.json", report)):
         save(out/name, value)
     print(json.dumps({k: report[k] for k in ("candidates", "global_asns", "iran_anchors", "unsupported_rules_count", "source_errors")}))

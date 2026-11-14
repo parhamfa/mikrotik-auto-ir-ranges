@@ -19,7 +19,7 @@
 Remove the updater while keeping the lists and their referencing rules:
 
 ```routeros
-/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.1/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
+/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.1.0/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
 ```
 
 The updater owns all entries in `Iran_IPV4` and `Iran_IPV6`; manual additions
@@ -38,19 +38,18 @@ contains the feed and reports:
 | --- | --- |
 | `manifest-v2.json` | Current generation, page paths, counts, sizes and SHA-512 hashes |
 | `generations/` | Immutable manifests and numbered IPv4/IPv6 pages |
-| `coverage.json` | Source completeness, freshness and collection gaps |
+| `coverage.json` | Per-source freshness, layer sizes and collection gaps; not a measure of accuracy |
 | `provenance.json.gz` | Evidence used by the IP/ASN explanation command |
-| `dns-cache.json` | Timestamped public DNS observations for catalogue services |
-| `discovery/` | Candidate pool, review queue and source provenance |
+| `discovery/` | Candidate pool and review queue from the paused discovery job |
 
 Pages are at most 48 KiB, with a ceiling of 50,000 entries per family. Routers
 check the complete generation and available memory/storage before changing
 lists. A failed check retains the installed feed; output is never truncated.
-If application is interrupted, rerun the sync. Its recovery journal finishes
-the same generation before advancing to a newer one. Recovery is stored in
-`auto-ir-ranges/state.json` (under `flash/` where required), and removed on success.
-Changed lists wait 45 seconds after saving state for RouterOS disk write-back;
-unchanged runs skip the write and wait.
+A router refuses an update that would remove more entries than the feed
+contains, and the publisher refuses to publish one.
+If application is interrupted, rerun the sync. Each run adds whatever is missing
+and removes whatever is stale, so the next run finishes the job from the lists
+themselves; the updater keeps no state files.
 
 Old v1 endpoints stay complete while they fit their limits. Otherwise they keep
 the last compatible generation, and `legacy-status.json` reports that the router
@@ -72,12 +71,14 @@ disposable CHR with loopback ports 24222 → SSH and 24728 → API, then run
 
 ## Catalogue maintenance
 
-Saturday's workflow refreshes discovery. The weekly investigator reviews public
-evidence and proposes PRs; the accepted catalogue continues refreshing daily.
-See the [investigator instructions](weekly-investigator.md).
+Discovery and the weekly investigator are paused since 2026-11-14, until a
+measurement of real traffic shows what the list is missing. The discovery
+workflow runs only when started by hand, and nothing in the daily build depends
+on it; the accepted catalogue continues refreshing daily. See the
+[investigator notice](weekly-investigator.md).
 
-Reuse `discovery/` from the data branch in `build/discovery/` to preserve the
-candidate history and RDAP cache before refreshing:
+To run discovery by hand, reuse `discovery/` from the data branch in
+`build/discovery/` to preserve the candidate history and RDAP cache:
 
 ```sh
 python3 scripts/discover.py refresh --output-dir build/discovery
@@ -94,5 +95,6 @@ python3 scripts/compare.py build/projection/baseline/feed build/projection/candi
 ```
 
 Review address additions/removals, evidence and collection gaps before merging.
-Source-completeness checks confirm that accepted inputs survived generation;
-they do not measure undiscovered networks or services.
+The generator checks that every accepted input survived generation; that does
+not measure undiscovered networks. The list's accuracy against real traffic has
+not been measured yet.

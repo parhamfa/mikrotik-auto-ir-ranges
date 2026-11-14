@@ -11,25 +11,26 @@ A range can qualify through any of these sources; they do not all have to agree.
 | [NRO](https://www.nro.net/about/rirs/statistics/) | Allocated or assigned `IR` resources, plus resources linked to selected ASNs through the same registered holder. Holder IDs are matched only within one registry and snapshot. |
 | [IPtoASN](https://iptoasn.com/) | Ranges labelled `IR` or associated with ASNs selected through NRO and the catalogue. |
 | Provider inventories | Published ranges from the URLs in the catalogue. |
-| Public DNS | Exact public A/AAAA addresses for catalogue hostnames, queried through Google and Cloudflare. |
 
-Country registration, operator affiliation and service hosting are different
-signals. The [catalogue](../coverage-policy.json) records accepted organizations,
-ASNs, provider URLs and service hostnames, with evidence, aliases and review dates.
-Hosting a service does not establish ownership of its hosting ASN.
+Country registration and operator affiliation are different signals. The
+[catalogue](../coverage-policy.json) records accepted organizations, ASNs and
+provider URLs, with evidence, aliases and review dates. A provider inventory
+does not establish ownership of its hosting ASN. Website hostnames are not
+tracked; the generator rejects a catalogue that lists them.
 
 A missing or malformed NRO registry stops publication. If IPdeny, IPtoASN or a
 provider inventory fails to download or fails its checks, the feed still
 publishes with that source's ranges from the last good build, for up to 30 days;
 after that the source is left out. A reviewed operator ASN whose IPtoASN name
 no longer matches the catalogue loses its non-`IR` ranges for that build. Both
-are recorded in `coverage.json` (`source_status`, `warnings`). DNS failures are handled per hostname, resolver and
-family: successful answers continue, while previous answers can be reused for
-up to 48 hours at generation time. Original timestamps and TTLs are retained;
-expired answers are omitted and reported. Routers receive changes at their next
-successful daily sync.
+are recorded in `coverage.json` (`source_status`, `warnings`). Routers receive
+changes at their next successful daily sync.
 
 ## Discovery
+
+Discovery is paused since 2026-11-14, until a measurement of real traffic shows
+what the list is missing. Its workflow runs only when started by hand, and
+nothing in the daily build depends on it. When it runs:
 
 NRO and IPtoASN identify Iranian starting points. Name matching across the global
 ASN index, enriched with [RDAP organization records](https://data.iana.org/rdap/asn.json),
@@ -45,7 +46,8 @@ Name matches and community entries are candidates, not automatic additions.
 Review decisions persist; new evidence can reopen a rejection. Wildcards,
 suffixes and patterns remain visible as rules rather than being treated as
 individual hostnames. Copied lists share provenance and do not count as separate
-confirmations.
+confirmations. Domain leads can no longer enter the catalogue, because website
+hostnames are not tracked.
 
 ## Attribution
 

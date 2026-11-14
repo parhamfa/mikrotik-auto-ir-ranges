@@ -8,7 +8,7 @@ GitHub builds the feed daily; each router downloads it directly over HTTPS.
 Requires **RouterOS 7.20+** and access to GitHub. Paste this into the router terminal:
 
 ```routeros
-:if ([:pick [/system resource get version] 0 4] = "7.20") do={ /certificate settings set builtin-trust-anchors=trusted }; /tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.1/routeros/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
+:if ([:pick [/system resource get version] 0 4] = "7.20") do={ /certificate settings set builtin-trust-anchors=trusted }; /tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.1.0/routeros/install.rsc" check-certificate=yes dst-path=auto-ir-ranges-install.rsc; /import file-name=auto-ir-ranges-install.rsc; /file remove auto-ir-ranges-install.rsc
 ```
 
 This syncs both lists and schedules updates for **03:00 router-local time**.
@@ -21,21 +21,18 @@ manages the lists and updater. Keep manual exceptions in a separate list.
    allocations and ASNs. IPtoASN adds Iran-labelled ranges and ranges associated
    with selected ASNs.
 2. **Extend:** a reviewed [catalogue](coverage-policy.json) adds operator
-   affiliations, provider-published ranges and public DNS addresses for listed
-   services. A service on shared hosting adds its exact addresses, not the
-   hosting provider's entire network.
+   affiliations and provider-published ranges.
 3. **Publish:** combine and deduplicate the ranges, validate the result, and
    publish a versioned feed on the [`data` branch](https://github.com/parhamfa/mikrotik-auto-ir-ranges/tree/data).
 4. **Sync:** routers validate every page, add missing entries, then remove stale
    entries. Interrupted updates resume on the next run.
 
-Discovery searches global ASN descriptions, registry information and community
-lists for more operators and services. Candidates stay separate from the feed;
-a weekly investigator proposes catalogue changes through reviewed pull requests.
-Accepted sources then refresh automatically.
+Discovery, a weekly search of global ASN descriptions, registry information and
+community lists for more operators, is paused. Nothing in the daily build
+depends on it.
 
-Coverage depends on the sources and catalogue. Service DNS is a daily snapshot;
-shared addresses can also serve unrelated sites.
+Coverage depends on the sources and catalogue. The list's accuracy against real
+traffic has not been measured yet.
 
 ## Management
 
