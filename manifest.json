@@ -10,8 +10,8 @@
     "report": "coverage.json",
     "services": "Exact A/AAAA addresses observed for reviewed service domains; shared hosting included"
   },
-  "generated_at": "2026-11-14T10:58:03Z",
-  "generator_version": "2.0.1",
+  "generated_at": "2026-11-14T14:07:49Z",
+  "generator_version": "2.1.0",
   "ipv4": {
     "bytes": 29290,
     "count": 1865,
@@ -39,8 +39,8 @@
   },
   "sources": {
     "dns_snapshot": {
-      "bytes": 185702,
-      "sha512": "e9bf22084104eafb5beda204aa7063695bd76bb2202723ed6952c34a3950ccbc19e1c84afa1f27ffdef57bd780d3375c91964edd4d1c8e00dd6832f1cb7d79aa",
+      "bytes": 185595,
+      "sha512": "b0864843b392a057f7580d4c644c189fb7f975b23ae3b21e8e0bae93f7f57f8f7ca78af4901878c5ba29ac68a0a4fb2bb2c4f85dee14779dfafe352c9b646643",
       "url": "coverage-policy.json#dns_resolvers"
     },
     "ipdeny_ipv4": {
@@ -64,8 +64,8 @@
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 57155102,
-      "sha512": "bb8613e5796065bdde5206ad147a737543f2502e28cd4f6ff67ab5452bedc412366c8c2c7b67854fa172837faaf93c393e07dbec3b24ada66095b7e2eb67c16b",
+      "bytes": 57157883,
+      "sha512": "6efe5cf5ee8a602d6c4ede7e468f1766675a36874b8f52bdfb0c11b7a87243ad1afe9a42d6e5ab7e5bf6102441496787849ca07d63c71172809643f2f574e5d7",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
