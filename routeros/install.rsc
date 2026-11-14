@@ -1,4 +1,4 @@
-# mikrotik-auto-ir-ranges v2.0.1 installer
+# mikrotik-auto-ir-ranges v2.1.0 installer
 # RouterOS 7.20+; data updates daily at 03:00 router-local time.
 
 :local rosVersion [/system resource get version]
@@ -8,18 +8,14 @@
 :if ([:typeof $majorVersion] != "num") do={ :error "auto-ir-ranges: invalid RouterOS major version" }
 :if ($majorVersion < 7) do={ :error "auto-ir-ranges: RouterOS 7.20 or newer is required" }
 :if ($majorVersion = 7) do={
-    :local minorEnd [:find $rosVersion "." ($firstDot + 1)]
-    :if ([:typeof $minorEnd] = "nil") do={
-        :local spaceAfterMinor [:find $rosVersion " " ($firstDot + 1)]
-        :if ([:typeof $spaceAfterMinor] = "nil") do={ :error "auto-ir-ranges: cannot parse RouterOS minor version" }
-        :local minorVersion [:tonum [:pick $rosVersion ($firstDot + 1) $spaceAfterMinor]]
-        :if ([:typeof $minorVersion] != "num") do={ :error "auto-ir-ranges: invalid RouterOS minor version" }
-        :if ($minorVersion < 20) do={ :error "auto-ir-ranges: RouterOS 7.20 or newer is required" }
-    } else={
-        :local minorVersion [:tonum [:pick $rosVersion ($firstDot + 1) $minorEnd]]
-        :if ([:typeof $minorVersion] != "num") do={ :error "auto-ir-ranges: invalid RouterOS minor version" }
-        :if ($minorVersion < 20) do={ :error "auto-ir-ranges: RouterOS 7.20 or newer is required" }
-    }
+    # The minor version is the run of digits after the first dot. RouterOS
+    # reports "7.25", "7.20.8 (long-term)" and "7.26rc1 (testing)" alike.
+    :local minorEnd ($firstDot + 1)
+    :while ([:pick $rosVersion $minorEnd ($minorEnd + 1)] ~ "[0-9]") do={ :set minorEnd ($minorEnd + 1) }
+    :if ($minorEnd = ($firstDot + 1)) do={ :error ("auto-ir-ranges: cannot parse RouterOS minor version " . $rosVersion) }
+    :local minorVersion [:tonum [:pick $rosVersion ($firstDot + 1) $minorEnd]]
+    :if ([:typeof $minorVersion] != "num") do={ :error "auto-ir-ranges: invalid RouterOS minor version" }
+    :if ($minorVersion < 20) do={ :error "auto-ir-ranges: RouterOS 7.20 or newer is required" }
 }
 
 :if ([:len [/system script job find where script="auto-ir-ranges-sync"]] > 0) do={ :error "auto-ir-ranges: wait for the running sync before upgrading" }
@@ -31,7 +27,7 @@
     /system script remove [/system script find where name="auto-ir-ranges-sync"]
 }
 
-/system script add name="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=2.0.1" source={
+/system script add name="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=2.1.0" source={
     :if ([:len [/system script job find where script="auto-ir-ranges-sync"]] > 1) do={ :error "auto-ir-ranges: another sync is running" }
     :local baseUrl "https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/data/"
     :local manifestUrl ($baseUrl . "manifest-v2.json")
@@ -41,45 +37,6 @@
     :local maxPageBytes 49152
     :local currentV4 [:len [/ip firewall address-list find where list=$listV4]]
     :local currentV6 [:len [/ipv6 firewall address-list find where list=$listV6]]
-    :local baselineV4 $currentV4
-    :local baselineV6 $currentV6
-    # Use persistent storage on devices whose root file directory is a RAM disk.
-    :local stateDirectory "auto-ir-ranges"
-    :if ([:len [/file find where name="flash"]] > 0) do={ :set stateDirectory "flash/auto-ir-ranges" }
-    :local statePath ($stateDirectory . "/state.json")
-    :local temporaryPath ($statePath . ".tmp")
-    :local journalText ""
-    :local stateFile [/file find where name=$statePath]
-    :if ([:len $stateFile] > 0) do={
-        :local stateSize [/file get $stateFile size]
-        :if (($stateSize < 1) || ($stateSize > 1024)) do={ :error "auto-ir-ranges: invalid recovery file size" }
-        :set journalText [/file get $stateFile contents]
-    }
-    # Read old checkpoints during upgrades; remove the old object only on success.
-    :local legacyState [/system script find where name="auto-ir-ranges-state"]
-    :if ([:len $legacyState] > 0) do={
-        :if ([:len [/system script get $legacyState source]] > 0) do={ :error "auto-ir-ranges: unexpected legacy state script contents" }
-        :local legacyText [/system script get $legacyState comment]
-        :if ([:len $legacyText] > 0) do={
-            :if (([:len $journalText] > 0) && ($journalText != $legacyText)) do={ :error "auto-ir-ranges: conflicting recovery checkpoints" }
-            :set journalText $legacyText
-        }
-    }
-    :local pendingGeneration ""
-    :local journal
-    :if ([:len $journalText] > 0) do={
-        :if ([:len $journalText] > 1024) do={ :error "auto-ir-ranges: oversized recovery checkpoint" }
-        :set journal [:deserialize from=json value=$journalText options=json.no-string-conversion]
-        :if ([:typeof $journal] != "array") do={ :error "auto-ir-ranges: invalid recovery checkpoint" }
-        :set pendingGeneration ($journal->"generation")
-        :if (([:len $pendingGeneration] != 64) || ($pendingGeneration ~ "[^0-9a-f]")) do={ :error "auto-ir-ranges: invalid recovery journal" }
-        :set manifestUrl ($baseUrl . "generations/" . $pendingGeneration . "/manifest.json")
-        :set baselineV4 ($journal->"previous4")
-        :set baselineV6 ($journal->"previous6")
-        :if (([:typeof $baselineV4] != "num") || ([:typeof $baselineV6] != "num")) do={ :error "auto-ir-ranges: invalid recovery baseline counts" }
-        :if (($baselineV4 < 0) || ($baselineV6 < 0) || ($baselineV4 > 100000) || ($baselineV6 > 100000)) do={ :error "auto-ir-ranges: invalid recovery baseline bounds" }
-        :log warning ("auto-ir-ranges: resuming interrupted generation " . $pendingGeneration)
-    }
     :local manifestResponse [/tool fetch url=$manifestUrl check-certificate=yes output=user as-value]
     :if (($manifestResponse->"status") != "finished") do={ :error "auto-ir-ranges: manifest fetch did not finish" }
     :local manifestText ($manifestResponse->"data")
@@ -89,7 +46,6 @@
     :if (($manifest->"country") != "IR") do={ :error "auto-ir-ranges: manifest country is not IR" }
     :local generation ($manifest->"generation")
     :if (([:len $generation] != 64) || ($generation ~ "[^0-9a-f]")) do={ :error "auto-ir-ranges: invalid generation ID" }
-    :if (([:len $pendingGeneration] > 0) && ($generation != $pendingGeneration)) do={ :error "auto-ir-ranges: wrong recovery generation" }
     :local generatedAt [:tostr ($manifest->"generated_at")]
     :local metaV4 ($manifest->"ipv4")
     :local metaV6 ($manifest->"ipv6")
@@ -98,9 +54,6 @@
     :if (([:typeof $expectedV4] != "num") || ([:typeof $expectedV6] != "num")) do={ :error "auto-ir-ranges: invalid family counts" }
     :if (($expectedV4 < 1000) || ($expectedV4 > 50000)) do={ :error "auto-ir-ranges: IPv4 capacity/count limit" }
     :if (($expectedV6 < 300) || ($expectedV6 > 50000)) do={ :error "auto-ir-ranges: IPv6 capacity/count limit" }
-    :if ([:len $pendingGeneration] > 0) do={
-        :if ((($journal->"expected4") != $expectedV4) || (($journal->"expected6") != $expectedV6)) do={ :error "auto-ir-ranges: recovery counts changed" }
-    }
     # Budget for desired maps, existing maps and the transient union on disk.
     :local capacityEntries ($expectedV4 + $expectedV6 + $currentV4 + $currentV6)
     :local memoryRequired (16777216 + $capacityEntries * 2048)
@@ -153,7 +106,6 @@
         :if (($prefixLength < 0) || ($prefixLength > 32)) do={ :error ("auto-ir-ranges: invalid IPv4 prefix " . $cidr) }
         :if ($prefixLength = 32) do={ :set cidr $addressPart }
         :if ([:typeof ($desiredV4->$cidr)] != "nothing") do={ :error ("auto-ir-ranges: duplicate IPv4 CIDR " . $cidr) }
-        :if ($prefixLength = 32) do={ :set cidr $addressPart }
         :set ($desiredV4->$cidr) true
         :set parsedV4 ($parsedV4 + 1)
     }
@@ -161,11 +113,6 @@
         :if (($parsedV4 - $beforeCount) != $pageCount) do={ :error "auto-ir-ranges: IPv4 page count mismatch" }
     }
     :if (($parsedV4 != $expectedV4) || ($totalBytesV4 != ($metaV4->"bytes"))) do={ :error "auto-ir-ranges: IPv4 count mismatch" }
-    :if (($parsedV4 * 2) < $baselineV4) do={
-        :local proof ($metaV4->"dns_only_shrink")
-        :if (([:typeof $proof] != "array") || (($proof->"previous_count") != $baselineV4) || (($proof->"reason") != "removed space covered only by prior DNS observations")) do={ :error "auto-ir-ranges: IPv4 shrink guard" }
-        :log warning "auto-ir-ranges: accepting publisher-validated IPv4 DNS-only shrink"
-    }
 
     :local pagesV6 ($metaV6->"pages")
     :if (([:len $pagesV6] < 1) || ([:len $pagesV6] > 64)) do={ :error "auto-ir-ranges: invalid IPv6 page count" }
@@ -214,56 +161,26 @@
         :if (($parsedV6 - $beforeCount) != $pageCount) do={ :error "auto-ir-ranges: IPv6 page count mismatch" }
     }
     :if (($parsedV6 != $expectedV6) || ($totalBytesV6 != ($metaV6->"bytes"))) do={ :error "auto-ir-ranges: IPv6 count mismatch" }
-    :if (($parsedV6 * 2) < $baselineV6) do={
-        :local proof ($metaV6->"dns_only_shrink")
-        :if (([:typeof $proof] != "array") || (($proof->"previous_count") != $baselineV6) || (($proof->"reason") != "removed space covered only by prior DNS observations")) do={ :error "auto-ir-ranges: IPv6 shrink guard" }
-        :log warning "auto-ir-ranges: accepting publisher-validated IPv6 DNS-only shrink"
-    }
 
     # Build current membership maps once. This avoids one RouterOS search per CIDR.
-    :local needsUpdate (($currentV4 != $parsedV4) || ($currentV6 != $parsedV6))
     :local presentV4 [:toarray ""]
+    :local staleV4 0
     :foreach entryId in=[/ip firewall address-list find where list=$listV4] do={
         :local currentAddress [:tostr [/ip firewall address-list get $entryId address]]
         :set ($presentV4->$currentAddress) true
-        :if (([:typeof ($desiredV4->$currentAddress)] = "nothing") || ([/ip firewall address-list get $entryId comment] != $managedComment) || ([/ip firewall address-list get $entryId disabled] = true)) do={ :set needsUpdate true }
+        :if ([:typeof ($desiredV4->$currentAddress)] = "nothing") do={ :set staleV4 ($staleV4 + 1) }
     }
     :local presentV6 [:toarray ""]
+    :local staleV6 0
     :foreach entryId in=[/ipv6 firewall address-list find where list=$listV6] do={
         :local currentAddress [:tostr [/ipv6 firewall address-list get $entryId address]]
         :set ($presentV6->$currentAddress) true
-        :if (([:typeof ($desiredV6->$currentAddress)] = "nothing") || ([/ipv6 firewall address-list get $entryId comment] != $managedComment) || ([/ipv6 firewall address-list get $entryId disabled] = true)) do={ :set needsUpdate true }
+        :if ([:typeof ($desiredV6->$currentAddress)] = "nothing") do={ :set staleV6 ($staleV6 + 1) }
     }
-    :foreach cidr,wanted in=$desiredV4 do={
-        :if ([:typeof ($presentV4->$cidr)] = "nothing") do={ :set needsUpdate true }
-    }
-    :foreach cidr,wanted in=$desiredV6 do={
-        :if ([:typeof ($presentV6->$cidr)] = "nothing") do={ :set needsUpdate true }
-    }
-
-    # Checkpoint only actual changes, after every page of BOTH families validated.
-    :if ($needsUpdate = true) do={
-        :if ([:len $stateFile] = 0) do={
-            :if ([:len $pendingGeneration] = 0) do={
-                :local state {"generation"=$generation;"previous4"=$baselineV4;"previous6"=$baselineV6;"expected4"=$expectedV4;"expected6"=$expectedV6}
-                :set journalText [:serialize to=json value=$state options=json.no-string-conversion]
-            }
-            :local directory [/file find where name=$stateDirectory]
-            :if ([:len $directory] = 0) do={
-                /file add name=$stateDirectory type=directory
-            } else={
-                :if ([/file get $directory type] != "directory") do={ :error "auto-ir-ranges: recovery directory path is occupied" }
-            }
-            :if ([:len [/file find where name=$temporaryPath]] > 0) do={ /file remove [find where name=$temporaryPath] }
-            /file add name=$temporaryPath type=file contents=$journalText
-            :if ([/file get [find where name=$temporaryPath] contents] != $journalText) do={ :error "auto-ir-ranges: recovery file write failed" }
-            /file set [find where name=$temporaryPath] name=$statePath
-        }
-        # RouterOS NAND write-back can take 40 seconds; wait before list mutation.
-        # https://help.mikrotik.com/docs/spaces/ROS/pages/2555971/Files
-        :delay 45s
-        :if ([/file get [find where name=$statePath] contents] != $journalText) do={ :error "auto-ir-ranges: recovery file readback failed" }
-    }
+    # Never remove more entries than the feed contains. Interrupted runs only add
+    # feed rows or remove stale ones, so they cannot change this answer.
+    :if ($staleV4 > $parsedV4) do={ :error ("auto-ir-ranges: IPv4 shrink guard; stale=" . $staleV4 . " feed=" . $parsedV4) }
+    :if ($staleV6 > $parsedV6) do={ :error ("auto-ir-ranges: IPv6 shrink guard; stale=" . $staleV6 . " feed=" . $parsedV6) }
 
     :local addedV4 0
     :local adoptedV4 0
@@ -344,10 +261,6 @@
     :if (($finalV4 != $parsedV4) || ($ownedV4 != $parsedV4)) do={ :error ("auto-ir-ranges: final IPv4 mismatch " . $finalV4 . "/" . $ownedV4 . "/" . $parsedV4) }
     :if (($finalV6 != $parsedV6) || ($ownedV6 != $parsedV6)) do={ :error ("auto-ir-ranges: final IPv6 mismatch " . $finalV6 . "/" . $ownedV6 . "/" . $parsedV6) }
 
-    # Clear checkpoints only after both exact counts and owned entries verify.
-    :if ([:len [/file find where name=$statePath]] > 0) do={ /file remove [find where name=$statePath] }
-    :if ([:len [/file find where name=$temporaryPath]] > 0) do={ /file remove [find where name=$temporaryPath] }
-    :if ([:len $legacyState] > 0) do={ /system script remove $legacyState }
     :local totalChanges ($addedV4 + $adoptedV4 + $removedV4 + $duplicateV4 + $addedV6 + $adoptedV6 + $removedV6 + $duplicateV6)
     :if ($totalChanges = 0) do={
         :log info ("auto-ir-ranges: unchanged generated=" . $generatedAt . " ipv4=" . $finalV4 . " ipv6=" . $finalV6)
@@ -359,7 +272,18 @@
 :if ([:len [/system scheduler find where name="auto-ir-ranges-daily"]] > 0) do={
     /system scheduler remove [/system scheduler find where name="auto-ir-ranges-daily"]
 }
-/system scheduler add name="auto-ir-ranges-daily" disabled=yes start-time=03:00:00 interval=1d on-event="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=2.0.1"
+/system scheduler add name="auto-ir-ranges-daily" disabled=yes start-time=03:00:00 interval=1d on-event="auto-ir-ranges-sync" policy=read,write,test comment="managed:mikrotik-auto-ir-ranges version=2.1.0"
+
+# Remove leftovers of older versions; best effort, never fails the install.
+:foreach leftover in={"auto-ir-ranges/state.json";"auto-ir-ranges/state.json.tmp";"flash/auto-ir-ranges/state.json";"flash/auto-ir-ranges/state.json.tmp"} do={
+    :do { /file remove [/file find where name=$leftover] } on-error={}
+}
+:foreach leftover in={"auto-ir-ranges";"flash/auto-ir-ranges"} do={
+    :do {
+        :if ([:len [/file find where name~("^" . $leftover . "/")]] = 0) do={ /file remove [/file find where name=$leftover and type=directory] }
+    } on-error={}
+}
+:do { /system script remove [/system script find where name="auto-ir-ranges-state"] } on-error={}
 
 :onerror syncError in={
     /system script run auto-ir-ranges-sync
@@ -368,4 +292,4 @@
     :error $syncError
 }
 /system scheduler enable [/system scheduler find where name="auto-ir-ranges-daily"]
-:log info "auto-ir-ranges: v2.0.1 installed; daily schedule enabled at 03:00 local time"
+:log info "auto-ir-ranges: v2.1.0 installed; daily schedule enabled at 03:00 local time"

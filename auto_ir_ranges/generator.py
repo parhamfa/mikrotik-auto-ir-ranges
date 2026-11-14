@@ -305,6 +305,17 @@ def validate_shrink(new_count: int, previous_count: int, version: int) -> None:
         )
 
 
+def validate_removal(previous: Iterable, desired: Iterable, version: int) -> None:
+    """Mirror the router guard: an update may not remove more entries than it contains."""
+    desired_set = set(desired)
+    removed = len(set(previous) - desired_set)
+    if removed > len(desired_set):
+        raise GenerationError(
+            f"IPv{version} update removes {removed} entries but the feed contains only {len(desired_set)}; "
+            "routers refuse an update that removes more entries than it keeps"
+        )
+
+
 def _source_record(url: str, payload: bytes) -> dict[str, str | int]:
     return {
         "url": url,
@@ -553,22 +564,13 @@ def publish_artifacts(
     """Atomically write changed feeds. Preserve the old manifest on unchanged runs."""
     output_dir.mkdir(parents=True, exist_ok=True)
     previous_dir = previous_dir or output_dir
-    legacy_shrink = False
     for filename, feed, version in (
         ("ir-ipv4.zone", artifacts.ipv4, 4),
         ("ir-ipv6.zone", artifacts.ipv6, 6),
     ):
         prior = _previous_count(previous_dir / filename, version)
         if prior is not None:
-            if artifacts.paged_manifest is None:
-                validate_shrink(feed.count, prior, version)
-            elif feed.count * 2 < prior:
-                legacy_shrink = True
-
-    prior_report = {}
-    prior_report_path = previous_dir / "coverage.json"
-    if artifacts.coverage is not None and prior_report_path.exists():
-        prior_report = json.loads(prior_report_path.read_bytes())
+            validate_shrink(feed.count, prior, version)
 
     if artifacts.paged_manifest is not None:
         desired = delivery.validate(artifacts.paged_manifest, artifacts.pages.__getitem__)
@@ -578,28 +580,17 @@ def publish_artifacts(
             old = delivery.validate(old_v2.read_bytes(), lambda name: (previous_dir/name).read_bytes())
         else:
             old = {v: parse_and_validate_zone((previous_dir/f"ir-ipv{v}.zone").read_bytes(), v) if (previous_dir/f"ir-ipv{v}.zone").exists() else [] for v in (4, 6)}
-        if old_v2.exists():
-            old_manifest_v2 = json.loads(old_v2.read_bytes())
-            if old_manifest_v2["generation"] == manifest_v2["generation"]:
-                for version in (4, 6):
-                    if "dns_only_shrink" in old_manifest_v2[f"ipv{version}"]:
-                        manifest_v2[f"ipv{version}"]["dns_only_shrink"] = old_manifest_v2[f"ipv{version}"]["dns_only_shrink"]
+        # old and desired are both lists of ipaddress networks (delivery.validate / parse_and_validate_zone).
         for version in (4, 6):
-            if len(desired[version]) * 2 < len(old[version]):
-                proof = delivery.dns_shrink_proof(old[version], desired[version], prior_report.get("dns_records", []), version)
-                if proof is None:
-                    validate_shrink(len(desired[version]), len(old[version]), version)
-                manifest_v2[f"ipv{version}"]["dns_only_shrink"] = proof
-        # Legacy updaters cannot honor a reviewed DNS-only shrink exception.
-        if legacy_shrink:
-            manifest_v2["legacy_compatible"] = False
+            validate_shrink(len(desired[version]), len(old[version]), version)
+            validate_removal(old[version], desired[version], version)
         paged_manifest = delivery.encoded(manifest_v2)
         pages = dict(artifacts.pages)
         pages[f"generations/{manifest_v2['generation']}/manifest.json"] = paged_manifest
         report_bytes = artifacts.coverage
         if report_bytes is not None:
             current_report = json.loads(report_bytes)
-            current_report["delivery"] = {"generation": manifest_v2["generation"], "legacy_compatible": manifest_v2["legacy_compatible"], "dns_only_shrink": {f"ipv{v}": manifest_v2[f"ipv{v}"].get("dns_only_shrink") for v in (4, 6)}}
+            current_report["delivery"] = {"generation": manifest_v2["generation"], "legacy_compatible": manifest_v2["legacy_compatible"]}
             report_bytes = (json.dumps(current_report, indent=2, sort_keys=True)+"\n").encode()
         # Preflight immutable paths before writing anything.
         for name, data in pages.items():

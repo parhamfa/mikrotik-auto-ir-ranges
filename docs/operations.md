@@ -19,7 +19,7 @@
 Remove the updater while keeping the lists and their referencing rules:
 
 ```routeros
-/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.0.1/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
+/tool fetch url="https://raw.githubusercontent.com/parhamfa/mikrotik-auto-ir-ranges/v2.1.0/routeros/uninstall.rsc" check-certificate=yes dst-path=auto-ir-ranges-uninstall.rsc; /import file-name=auto-ir-ranges-uninstall.rsc; /file remove auto-ir-ranges-uninstall.rsc
 ```
 
 The updater owns all entries in `Iran_IPV4` and `Iran_IPV6`; manual additions
@@ -46,11 +46,11 @@ contains the feed and reports:
 Pages are at most 48 KiB, with a ceiling of 50,000 entries per family. Routers
 check the complete generation and available memory/storage before changing
 lists. A failed check retains the installed feed; output is never truncated.
-If application is interrupted, rerun the sync. Its recovery journal finishes
-the same generation before advancing to a newer one. Recovery is stored in
-`auto-ir-ranges/state.json` (under `flash/` where required), and removed on success.
-Changed lists wait 45 seconds after saving state for RouterOS disk write-back;
-unchanged runs skip the write and wait.
+A router refuses an update that would remove more entries than the feed
+contains, and the publisher refuses to publish one.
+If application is interrupted, rerun the sync. Each run adds whatever is missing
+and removes whatever is stale, so the next run finishes the job from the lists
+themselves; the updater keeps no state files.
 
 Old v1 endpoints stay complete while they fit their limits. Otherwise they keep
 the last compatible generation, and `legacy-status.json` reports that the router
