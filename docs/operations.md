@@ -38,10 +38,9 @@ contains the feed and reports:
 | --- | --- |
 | `manifest-v2.json` | Current generation, page paths, counts, sizes and SHA-512 hashes |
 | `generations/` | Immutable manifests and numbered IPv4/IPv6 pages |
-| `coverage.json` | Source completeness, freshness and collection gaps |
+| `coverage.json` | Per-source freshness, layer sizes and collection gaps; not a measure of accuracy |
 | `provenance.json.gz` | Evidence used by the IP/ASN explanation command |
-| `dns-cache.json` | Timestamped public DNS observations for catalogue services |
-| `discovery/` | Candidate pool, review queue and source provenance |
+| `discovery/` | Candidate pool and review queue from the paused discovery job |
 
 Pages are at most 48 KiB, with a ceiling of 50,000 entries per family. Routers
 check the complete generation and available memory/storage before changing
@@ -72,12 +71,14 @@ disposable CHR with loopback ports 24222 → SSH and 24728 → API, then run
 
 ## Catalogue maintenance
 
-Saturday's workflow refreshes discovery. The weekly investigator reviews public
-evidence and proposes PRs; the accepted catalogue continues refreshing daily.
-See the [investigator instructions](weekly-investigator.md).
+Discovery and the weekly investigator are paused since 2026-11-14, until a
+measurement of real traffic shows what the list is missing. The discovery
+workflow runs only when started by hand, and nothing in the daily build depends
+on it; the accepted catalogue continues refreshing daily. See the
+[investigator notice](weekly-investigator.md).
 
-Reuse `discovery/` from the data branch in `build/discovery/` to preserve the
-candidate history and RDAP cache before refreshing:
+To run discovery by hand, reuse `discovery/` from the data branch in
+`build/discovery/` to preserve the candidate history and RDAP cache:
 
 ```sh
 python3 scripts/discover.py refresh --output-dir build/discovery
@@ -94,5 +95,6 @@ python3 scripts/compare.py build/projection/baseline/feed build/projection/candi
 ```
 
 Review address additions/removals, evidence and collection gaps before merging.
-Source-completeness checks confirm that accepted inputs survived generation;
-they do not measure undiscovered networks or services.
+The generator checks that every accepted input survived generation; that does
+not measure undiscovered networks. The list's accuracy against real traffic has
+not been measured yet.

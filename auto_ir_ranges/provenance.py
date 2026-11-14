@@ -8,11 +8,11 @@ from pathlib import Path
 from .delivery import validate
 
 
-def build_provenance(policy, layers, registry, origins, dns, manifest, source_status=None):
+def build_provenance(policy, layers, registry, origins, manifest, source_status=None):
     # source_status carries each layer's last fresh time into the next build.
     document = {"schema": 1, "generated_at": manifest["generated_at"], "policy": policy,
                 "sources": manifest["sources"], "layers": {k: [str(n) for n in ns] for k, (_, ns) in layers.items()},
-                "registry_records": registry, "asn_origins": origins, "dns_records": dns,
+                "registry_records": registry, "asn_origins": origins,
                 "feed_hashes": {str(v): manifest[f"ipv{v}"]["sha512"] for v in (4, 6)}}
     if source_status is not None:
         document["source_status"] = source_status
@@ -45,7 +45,7 @@ def explain(query, directory):
             size = int(r["value"]) if address.version == 4 else 2**(128-int(r["value"]))
             if int(start) <= int(address) < int(start)+size:
                 registry.append(r)
-    return {"query": str(address), "generation": manifest["generation"], "included": any(address in n for n in networks[address.version]), "covering_feed_prefixes": [str(n) for n in networks[address.version] if address in n], "contributing_layers": layers, "registry_evidence": registry, "asn_origins": origins, "reviewed_operators": [o for o in policy["operators"] if any(str(r["asn"]) in o["asns"] for r in origins)], "provider_evidence": [p for p in policy["providers"] if "provider_"+p["id"] in layers], "service_observations": [r for r in document["dns_records"] if r["address"] == str(address)], "service_evidence": [s for s in policy["services"] if any(r["domain"] == s["domain"] and r["address"] == str(address) for r in document["dns_records"])], "source_snapshots": document["sources"]}
+    return {"query": str(address), "generation": manifest["generation"], "included": any(address in n for n in networks[address.version]), "covering_feed_prefixes": [str(n) for n in networks[address.version] if address in n], "contributing_layers": layers, "registry_evidence": registry, "asn_origins": origins, "reviewed_operators": [o for o in policy["operators"] if any(str(r["asn"]) in o["asns"] for r in origins)], "provider_evidence": [p for p in policy["providers"] if "provider_"+p["id"] in layers], "source_snapshots": document["sources"]}
 
 
 def main():

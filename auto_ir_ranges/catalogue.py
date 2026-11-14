@@ -4,7 +4,7 @@ from urllib.parse import urlparse
 
 from .errors import GenerationError
 
-RELATIONS = {"operator_affiliation", "asn_ownership", "provider_inventory", "service_dns"}
+RELATIONS = {"operator_affiliation", "asn_ownership", "provider_inventory"}
 
 
 def validate(policy):
@@ -14,7 +14,7 @@ def validate(policy):
         raise GenerationError("unsupported catalogue schema")
     owners = {}
     try:
-        for group in ("operators", "providers", "services"):
+        for group in ("operators", "providers"):
             for item in policy[group]:
                 if item["state"] != "accepted":
                     raise ValueError("only accepted entries belong in the collection catalogue")
@@ -32,7 +32,7 @@ def validate(policy):
                             raise ValueError("evidence URL must use HTTPS")
                     date.fromisoformat(relation["reviewed_on"])
                 kinds = {r["type"] for r in relations}
-                required = {"operators": "asn_ownership", "providers": "provider_inventory", "services": "service_dns"}[group]
+                required = {"operators": "asn_ownership", "providers": "provider_inventory"}[group]
                 if required not in kinds:
                     raise ValueError(f"{group} needs {required} evidence")
                 if group == "operators":
@@ -53,5 +53,5 @@ def validate(policy):
 def ageing(policy, today=None, max_days=90):
     today = today or date.today()
     return [{"kind": group, "id": item.get("id", item.get("domain")), "reviewed_on": item.get("reviewed_on"), "age_days": (today-date.fromisoformat(item.get("reviewed_on", "1970-01-01"))).days}
-            for group in ("operators", "providers", "services") for item in policy[group]
+            for group in ("operators", "providers") for item in policy[group]
             if (today-date.fromisoformat(item.get("reviewed_on", "1970-01-01"))).days >= max_days]

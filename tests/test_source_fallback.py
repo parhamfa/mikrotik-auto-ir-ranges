@@ -22,7 +22,6 @@ def stamp(when: datetime) -> str:
 def inputs_at(when: datetime) -> tuple[dict, dict]:
     payloads, policy = generation_inputs()
     payloads["nro_delegated"] = delegated("ripencc|IR|asn|100|1|20200101|assigned|ir", "ripencc|AE|asn|208006|1|20200101|assigned|arvan", date=when.strftime("%Y%m%d"))
-    payloads["dns_snapshot"] = json.dumps({"schema": 1, "observed_at": stamp(when), "queries": []}).encode()
     return payloads, policy
 
 
