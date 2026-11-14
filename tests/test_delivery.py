@@ -6,8 +6,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from auto_ir_ranges.delivery import build, validate, preflight, MAX_ENTRIES, dns_shrink_proof
-from auto_ir_ranges.generator import Feed, GeneratedArtifacts, publish_artifacts
+from auto_ir_ranges.delivery import build, validate, preflight, MAX_ENTRIES
+from auto_ir_ranges.generator import Feed, GeneratedArtifacts, publish_artifacts, validate_removal
 from auto_ir_ranges.errors import GenerationError
 
 
@@ -49,14 +49,35 @@ class DeliveryTests(unittest.TestCase):
             preflight([50000, 50000], [1000, 300], free_memory=20_000_000, free_storage=100_000_000)
         self.assertGreater(preflight([1000, 300], [1000, 300], free_memory=100_000_000, free_storage=100_000_000)["memory"], 0)
 
-    def test_dns_only_expiry_can_shrink_but_loss_of_core_space_cannot(self):
-        old = [ipaddress.ip_network("8.8.8.0/24"), *[ipaddress.ip_network(f"9.0.0.{i}/32") for i in range(0, 200, 2)]]
-        desired = old[:1]
-        observations = [{"address": str(n.network_address)} for n in old[1:]]
-        proof = dns_shrink_proof(old, desired, observations, 4)
-        self.assertEqual(proof["previous_count"], 101)
-        self.assertEqual(proof["removed_addresses"], "100")
-        self.assertIsNone(dns_shrink_proof(old, [], observations, 4))
+    def test_removal_may_not_exceed_feed_size(self):
+        old = [ipaddress.ip_network(f"9.0.{i}.0/24") for i in range(10)]
+        validate_removal(old, old[:5], 4)  # removes 5, keeps 5
+        with self.assertRaisesRegex(GenerationError, "IPv4 update removes 6 entries but the feed contains only 4"):
+            validate_removal(old, old[:4], 4)
+        fresh = [ipaddress.ip_network(f"10.0.{i}.0/24") for i in range(9)]
+        with self.assertRaisesRegex(GenerationError, "routers refuse"):
+            validate_removal(old, fresh, 4)  # 10 removed, 9 in feed, no 50% shrink
+
+    def test_publisher_refuses_high_turnover_and_accepts_small_change(self):
+        def artifact(rows, when):
+            nets = {4: [ipaddress.ip_network(r) for r in rows], 6: [ipaddress.ip_network(f"2606:4700:{i:x}::/48") for i in range(350)]}
+            feeds = {v: Feed(("\n".join(map(str, sorted(n, key=lambda x: (int(x.network_address), x.prefixlen)))) + "\n").encode(), len(n)) for v, n in nets.items()}
+            raw, pages = build(feeds, generated_at=when, generator_version="test")
+            return GeneratedArtifacts(feeds[4], feeds[6], b'{"generated_at":"' + when.encode() + b'"}', paged_manifest=raw, pages=pages)
+        old = [str(ipaddress.ip_network((int(ipaddress.ip_address("9.0.0.0")) + i*256, 24))) for i in range(1200)]
+        new = [str(ipaddress.ip_network((int(ipaddress.ip_address("20.0.0.0")) + i*256, 24))) for i in range(1000)]
+        with tempfile.TemporaryDirectory() as temp:
+            target = Path(temp)
+            self.assertTrue(publish_artifacts(artifact(old, "t1"), target))
+            before = (target/"manifest-v2.json").read_bytes()
+            turnover = old[:50] + new[:950]  # 1000 rows (more than half of 1200), but 1150 removed
+            with self.assertRaisesRegex(GenerationError, "removes 1150 entries but the feed contains only 1000"):
+                publish_artifacts(artifact(turnover, "t2"), target)
+            self.assertEqual((target/"manifest-v2.json").read_bytes(), before)
+            small = old[50:] + new[:50]
+            self.assertTrue(publish_artifacts(artifact(small, "t3"), target))
+            self.assertNotEqual((target/"manifest-v2.json").read_bytes(), before)
+            self.assertEqual(len(validate((target/"manifest-v2.json").read_bytes(), lambda p: (target/p).read_bytes())[4]), 1200)
 
     def test_legacy_freezes_at_last_complete_generation(self):
         feeds = sample(5100)

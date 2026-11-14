@@ -117,17 +117,3 @@ def preflight(desired, current, *, free_memory, free_storage):
     if free_memory < required["memory"] or free_storage < required["storage"]:
         raise GenerationError(f"insufficient router capacity: required {required}")
     return required
-
-
-def dns_shrink_proof(previous, desired, records, family):
-    """Permit DNS churn only if every removed address was a prior exact answer.
-
-    Any loss outside those exact host addresses keeps the normal shrink guard.
-    This prevents an expired, large DNS layer from freezing healthy core feeds.
-    """
-    from .coverage import subtract_networks
-    lost = subtract_networks(previous, desired, family)
-    hosts = [ipaddress.ip_network(row["address"]) for row in records if ipaddress.ip_address(row["address"]).version == family]
-    if not lost or subtract_networks(lost, hosts, family):
-        return None
-    return {"reason": "removed space covered only by prior DNS observations", "previous_count": len(previous), "removed_addresses": str(sum(n.num_addresses for n in lost))}
