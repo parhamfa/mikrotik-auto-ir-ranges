@@ -77,13 +77,12 @@ class GeneratorTests(unittest.TestCase):
             "iptoasn_ipv4": gzip.compress((FIXTURES / "iptoasn-v4.tsv").read_bytes()),
             "iptoasn_ipv6": gzip.compress((FIXTURES / "iptoasn-v6.tsv").read_bytes()),
             "nro_delegated": b"2|nro|1|1|20260102|20260102|+0000\nripencc|IR|asn|100|1|20200101|assigned|ir-example\n",
-            "dns_snapshot": b'{"schema":1,"observed_at":"2026-01-02T03:04:05Z","queries":[]}',
         }
         artifacts = generate_from_sources(
             payloads,
             generated_at="2026-01-02T03:04:05Z",
             limits=TEST_LIMITS,
-            policy={"registry_url": "https://example.org/nro", "registry_min_asns": 1, "operators": [], "providers": [], "services": [], "dns_resolvers": {}},
+            policy={"registry_url": "https://example.org/nro", "registry_min_asns": 1, "operators": [], "providers": []},
         )
         manifest = json.loads(artifacts.manifest)
         self.assertEqual(manifest["schema"], 1)

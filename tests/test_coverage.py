@@ -10,9 +10,8 @@ from pathlib import Path
 
 from auto_ir_ranges.coverage import (
     coverage_report,
+    load_policy,
     parse_delegated,
-    parse_dns_answer,
-    parse_dns_snapshot,
     parse_provider,
     subtract_networks,
 )
@@ -33,15 +32,11 @@ def delegated(*rows: str, count: int | None = None, date: str = "20260916") -> b
     return ("\n".join((header, *rows)) + "\n").encode()
 
 
-def dns_response(domain="service.example", record_type=1, address="104.16.1.1") -> dict:
-    return {"Status": 0, "Question": [{"name": domain + ".", "type": record_type}], "Answer": [{"name": domain + ".", "type": record_type, "TTL": 60, "data": address}]}
-
-
 def generation_inputs() -> tuple[dict, dict]:
     policy = {
         "registry_url": "https://example.com/nro", "registry_min_asns": 1,
         "operators": [{"asns": {"208006": "ARVANCLOUD-CDN"}}],
-        "providers": [PROVIDER], "services": [], "dns_resolvers": {},
+        "providers": [PROVIDER],
     }
     payloads = {
         "ipdeny_ipv4": b"2.144.0.0/14\n",
@@ -50,7 +45,6 @@ def generation_inputs() -> tuple[dict, dict]:
         "iptoasn_ipv6": gzip.compress(b"2a0c:a7c0::\t2a0c:a7c7:ffff:ffff:ffff:ffff:ffff:ffff\t100\tIR\tIR-EXAMPLE\n"),
         "nro_delegated": delegated("ripencc|IR|asn|100|1|20200101|assigned|ir", "ripencc|AE|asn|208006|1|20200101|assigned|arvan"),
         "provider_arvancloud": b"185.215.232.0/22\n193.24.119.0/29\n",
-        "dns_snapshot": b'{"schema":1,"observed_at":"2026-09-16T00:00:00Z","queries":[]}',
     }
     return payloads, policy
 
@@ -102,37 +96,13 @@ class CoverageTests(unittest.TestCase):
         self.assertEqual(subtract_networks([network("185.215.232.0/22")], [network("185.215.232.0/23"), network("185.215.234.0/23")], 4), [])
         self.assertEqual([str(n) for n in subtract_networks([network("185.215.232.0/22")], [network("185.215.232.0/23")], 4)], ["185.215.234.0/23"])
 
-    def test_dns_cname_is_followed_but_unrelated_answers_are_ignored(self):
-        response = dns_response(address="edge.example.")
-        response["Answer"][0]["type"] = 5
-        response["Answer"] += [
-            {"name": "edge.example.", "type": 1, "TTL": 60, "data": "104.16.1.1"},
-            {"name": "unrelated.example.", "type": 1, "TTL": 60, "data": "8.8.8.8"},
-        ]
-        result = parse_dns_answer(response, "service.example", 1)
-        self.assertEqual([r["address"] for r in result], ["104.16.1.1"])
-
-    def test_dns_wrong_question_private_address_and_servfail_fail(self):
-        for response in [dns_response(domain="other.example"), dns_response(address="127.0.0.1"), {**dns_response(), "Status": 2}]:
-            with self.subTest(response=response), self.assertRaises(GenerationError):
-                parse_dns_answer(response, "service.example", 1)
-
-    def test_service_dns_only_adds_exact_host_addresses(self):
-        policy = {"services": [{"domain": "service.example"}], "dns_resolvers": {"resolver": "https://dns.example"}}
-        snapshot = [
-            {"domain": "service.example", "resolver": "resolver", "type": 1, "response": dns_response()},
-            {"domain": "service.example", "resolver": "resolver", "type": 28, "response": {**dns_response(record_type=28), "Answer": []}},
-        ]
-        envelope = {"schema": 1, "observed_at": NOW.isoformat(), "queries": snapshot}
-        networks, _ = parse_dns_snapshot(json.dumps(envelope).encode(), policy, now=NOW)
-        self.assertEqual([str(n) for n in networks[4]], ["104.16.1.1/32"])
-        self.assertEqual(networks[6], [])
-        with self.assertRaisesRegex(GenerationError, "incomplete"):
-            parse_dns_snapshot(json.dumps({**envelope, "queries": snapshot[:1]}).encode(), policy, now=NOW)
-
-    def test_old_dns_snapshot_cannot_be_relabelled_as_fresh(self):
-        with self.assertRaisesRegex(GenerationError, "stale"):
-            parse_dns_snapshot(b'{"schema":1,"observed_at":"2026-09-15T00:00:00Z","queries":[]}', {"services": [], "dns_resolvers": {}}, now=NOW)
+    def test_policy_with_website_dns_keys_is_rejected(self):
+        for key, value in (("services", []), ("dns_resolvers", {})):
+            with self.subTest(key=key), tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / "policy.json"
+                path.write_text(json.dumps({"schema": 2, "registry_url": "https://example.com/nro", "registry_min_asns": 1, "operators": [], "providers": [], key: value}))
+                with self.assertRaisesRegex(GenerationError, f"website DNS tracking was removed; delete the '{key}' key"):
+                    load_policy(path)
 
     def test_coverage_gate_catches_lost_provider_subnet(self):
         n = ipaddress.ip_network("185.215.232.0/22")
@@ -146,8 +116,18 @@ class CoverageTests(unittest.TestCase):
         self.assertIn(b"193.24.119.0/29\n", artifacts.ipv4.data)
         self.assertNotIn(b"8.8.8.0/24", artifacts.ipv4.data)
         report = json.loads(artifacts.coverage)
-        self.assertIsNone(report["universe_coverage_percent"])
+        for key in ("universe_coverage_percent", "known_source_completeness_percent", "measured_lab_recall"):
+            self.assertNotIn(key, report)
         self.assertEqual(report["layers"]["provider_arvancloud"]["missing_prefixes"], [])
+
+    def test_coverage_report_has_no_website_dns_or_fixed_accuracy_keys(self):
+        payloads, policy = generation_inputs()
+        artifacts = generate_from_sources(payloads, policy=policy, generated_at="2026-09-16T00:00:00Z", limits=LIMITS)
+        report = json.loads(artifacts.coverage)
+        removed = {"service_domains", "dns_records", "dns", "discovery", "universe_coverage_percent", "known_source_completeness_percent", "measured_lab_recall"}
+        self.assertEqual(removed & set(report), set())
+        self.assertEqual([name for name in report["layers"] if name.startswith("service_dns")], [])
+        self.assertNotIn("services", json.loads(artifacts.manifest)["coverage"])
 
     def test_missing_provider_payload_without_previous_build_drops_only_that_layer(self):
         payloads, policy = generation_inputs()

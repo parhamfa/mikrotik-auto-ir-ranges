@@ -84,7 +84,7 @@ class DiscoveryTests(unittest.TestCase):
         with self.assertRaisesRegex(GenerationError, "conflicting"):
             validate(policy)
         policy = load_policy()
-        policy["services"][0]["asns"] = {"13335": "CLOUDFLARE"}
+        policy["providers"][0]["asns"] = {"13335": "CLOUDFLARE"}
         with self.assertRaisesRegex(GenerationError, "hosting"):
             validate(policy)
 
