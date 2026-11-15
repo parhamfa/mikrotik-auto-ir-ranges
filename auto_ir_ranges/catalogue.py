@@ -1,4 +1,4 @@
-"""Review constraints shared by the generator and investigator tooling."""
+"""Review constraints shared by the generator and provider research tooling."""
 from datetime import date
 from urllib.parse import urlparse
 

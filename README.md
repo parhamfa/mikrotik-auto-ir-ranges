@@ -27,8 +27,8 @@ manages the lists and updater. Keep manual exceptions in a separate list.
 4. **Sync:** routers validate every page, add missing entries, then remove stale
    entries. Interrupted updates resume on the next run.
 
-Discovery, a weekly search of global ASN descriptions, registry information and
-community lists for more operators, is paused. Nothing in the daily build
+Weekly [provider research](docs/provider-research.md) looks for more Iranian
+hosting companies and their published ranges. Nothing in the daily build
 depends on it.
 
 Coverage depends on the sources and catalogue. The list's accuracy against real
@@ -53,11 +53,9 @@ command from the current README.
 
 ## Thanks to
 
-Discovery builds on these community projects:
-
-- [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) — Iran-related domain rules.
-- [bootmortis/iran-hosted-domains](https://github.com/bootmortis/iran-hosted-domains) — service domain lists.
-- [Chocolate4U/Iran-v2ray-rules](https://github.com/Chocolate4U/Iran-v2ray-rules) — provider inventory sources and ranges.
+[Chocolate4U/Iran-v2ray-rules](https://github.com/Chocolate4U/Iran-v2ray-rules),
+whose provider files first pointed to several of the published provider lists
+in the catalogue.
 
 [Sources and selection](docs/data-sources.md) ·
 [Commands and maintenance](docs/operations.md)

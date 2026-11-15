@@ -40,7 +40,6 @@ contains the feed and reports:
 | `generations/` | Immutable manifests and numbered IPv4/IPv6 pages |
 | `coverage.json` | Per-source freshness, layer sizes and collection gaps; not a measure of accuracy |
 | `provenance.json.gz` | Evidence used by the IP/ASN explanation command |
-| `discovery/` | Candidate pool and review queue from the paused discovery job |
 
 Pages are at most 48 KiB, with a ceiling of 50,000 entries per family. Routers
 check the complete generation and available memory/storage before changing
@@ -69,21 +68,27 @@ Local generation does not publish. For RouterOS integration, boot a fresh
 disposable CHR with loopback ports 24222 → SSH and 24728 → API, then run
 `tests/routeros_lab.py` followed by `tests/routeros_capacity_lab.py`.
 
-## Catalogue maintenance
+## Provider research
 
-Discovery and the weekly investigator are paused since 2026-11-14, until a
-measurement of real traffic shows what the list is missing. The discovery
-workflow runs only when started by hand, and nothing in the daily build depends
-on it; the accepted catalogue continues refreshing daily. See the
-[investigator notice](weekly-investigator.md).
+The provider layer grows through weekly research, run as an agent routine. The
+rules and the routine's instructions are in [provider research](provider-research.md).
 
-To run discovery by hand, reuse `discovery/` from the data branch in
-`build/discovery/` to preserve the candidate history and RDAP cache:
+`provider-ledger.json` lists every Iranian hosting company the research knows
+about, whether or not it publishes a list of its own ranges. `coverage-policy.json`
+holds only the entries the daily build reads.
 
 ```sh
-python3 scripts/discover.py refresh --output-dir build/discovery
-python3 scripts/discover.py search 'organization name'
+python3 scripts/ledger.py stats
+python3 scripts/ledger.py next 15
+python3 scripts/check_providers.py --offline
+python3 scripts/check_providers.py --only chabokan
 ```
+
+`check_providers.py` fetches a provider's list the way the build does and
+refuses it when it does not parse, when no row sits inside known Iranian space,
+or when it would add more than 4,096 addresses outside that space. The same
+limit applies in the daily build. A repeated or private row is dropped and
+reported in `coverage.json`; it no longer refuses the whole file.
 
 To preview a catalogue change against the same source observations:
 
