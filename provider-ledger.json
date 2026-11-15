@@ -93,12 +93,15 @@
         39501,
         59703
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "unreachable",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/39501",
+        "https://dpco.net/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "Searched the registered name and read AS39501 RDAP; its abuse contact uses dpco.net. HTTPS to that website timed out and the single HTTP fallback returned 404. Could not read a page confirming the registered name, so brand and domains remain empty. Products, help pages and any published list are not verified."
     },
     {
       "id": "arvancloud",
@@ -159,12 +162,14 @@
       "asns": [
         47262
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "unreachable",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://hamarasystem.net/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "Searched the registered name; hamarasystem.net was a website lead. HTTPS failed verification with a self-signed certificate; the single HTTP fallback returned 403 Forbidden. No block or certificate check was bypassed. Could not read a page confirming the registered name, so brand and domains remain empty; products and any published list are not verified."
     },
     {
       "id": "hostiran-network",
@@ -186,56 +191,76 @@
     },
     {
       "id": "pishgaman-datacenter",
-      "brand": "",
+      "brand": "Pishgaman",
       "legal_names": [
         "Pishgaman Toseeh Ertebatat Company (Private Joint Stock)"
       ],
-      "domains": [],
+      "domains": [
+        "pishgaman.net"
+      ],
       "asns": [
         34918
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://pishgaman.net/",
+        "https://pishgaman.net/راهنمای-موارد-فنی/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "Homepage footer names Pishgaman Toseeh Ertebatat and its menu offers VPS and datacenter hosting alongside internet access. Read the linked technical help page, covering access technology and modem setup, with no provider inventory link. /ips.txt and /cdnips.txt returned 404. No list found in this bounded review; no claim is made that all support content was exhausted."
     },
     {
       "id": "sefroyekpardazeng-as",
-      "brand": "",
+      "brand": "Sefroyek",
       "legal_names": [
         "Sefroyek Pardaz Engineering PJSC"
       ],
-      "domains": [],
+      "domains": [
+        "0-1.ir"
+      ],
       "asns": [
         48715,
         44285,
         60248
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://0-1.ir/about/",
+        "https://0-1.ir/faq/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "The about page names Sefroyek Pardaz Engineering as the company behind Sefroyek. Homepage offers dedicated servers, VPS, hosting and colocation alongside internet access; cloud servers are marked coming soon. Read the public FAQ, which discusses domain registration and links no provider inventory. /ips.txt and /cdnips.txt returned 404. No list found in these pages; the broader help catalogue is not exhaustively verified."
     },
     {
       "id": "at-cloud",
-      "brand": "",
+      "brand": "Cloud.ir (Asiatech Cloud)",
       "legal_names": [
         "Asre Dadeha Asiatech"
       ],
-      "domains": [],
+      "domains": [
+        "cloud.ir",
+        "asiatech.cloud"
+      ],
       "asns": [
         60077
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/60077",
+        "https://cloud.ir/",
+        "https://cloud.ir/about-us/",
+        "https://cloud.ir/faq/",
+        "https://cloud.ir/weblog/category/articles/learn/",
+        "https://cloud.ir/weblog/articles/create-cdn-service/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "AS60077 RDAP names Asre Dadeha Asiatech. Cloud.ir homepage and about/FAQ footers explicitly name the same company; it offers cloud servers, storage and CDN. Read the FAQ, training index and CDN setup guide; none linked a provider range inventory. Domain-limited searches found no whitelist page; /ips.txt and /cdnips.txt on cloud.ir returned 404. IPtoASN name matches AsiaTech Telecom Limited (Hong Kong, AS45855) and PT Sprint Asia Technology (Indonesia, AS131786) describe different companies and were discarded without attribution. No list found in this bounded review; the wider support catalogue is not exhaustively verified."
     },
     {
       "id": "webdade",
@@ -2508,14 +2533,15 @@
         "backtory.com"
       ],
       "asns": [],
-      "status": "unchecked",
-      "last_checked": null,
+      "status": "unreachable",
+      "last_checked": "2026-11-15",
       "evidence": [
-        "https://www.context-awesome.com/list/professormahi/awesome-services-4-iranian-developers"
+        "https://www.context-awesome.com/list/professormahi/awesome-services-4-iranian-developers",
+        "https://backtory.com/"
       ],
       "lists": [],
       "foreign_networks": [],
-      "notes": "Found by market research on 2026-11-15 as selling: cloud. Not yet verified on the company's own site. storage/CDN/video; old list, status unverified, may be closed"
+      "notes": "On 2026-11-15 HTTPS failed certificate verification: hostname mismatch for backtory.com. The single HTTP fallback returned 404. No certificate checks were disabled. Current product availability, help pages and any published list are not verified."
     },
     {
       "id": "saba-host",
@@ -2525,14 +2551,59 @@
         "saba.host"
       ],
       "asns": [],
-      "status": "unchecked",
-      "last_checked": null,
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
       "evidence": [
-        "https://www.whtop.com/directory/country/ir/category/cdn"
+        "https://www.whtop.com/directory/country/ir/category/cdn",
+        "https://saba.host/about-us",
+        "https://saba.host/cdn",
+        "https://saba.host/blog",
+        "https://saba.host/blog/categories/CDN"
       ],
       "lists": [],
       "foreign_networks": [],
-      "notes": "Found by market research on 2026-11-15 as selling: cdn. Not yet verified on the company's own site. listed in CDN directory only; product unverified MizbanCloud's registered name is Saba Abr Mizban; whether this is the same company is not verified."
+      "notes": "Read the homepage, about page, CDN product explanation and public tutorial blog/CDN category. The about page names Saba Hoor Yeganeh as the company. No provider inventory link was found in those help and product pages or the domain-limited searches; /ips.txt returned 404. Both usual addresses were probed, but the /cdnips.txt outcome was not retained and is not verified. The menu refers to MizbanCloud CDN; a corporate identity or shared network relationship with the separate MizbanCloud ledger entry is not verified. No such relationship or rented host ASN is proposed."
+    },
+    {
+      "id": "weblines-cloud",
+      "brand": "Weblines Cloud",
+      "legal_names": [],
+      "domains": [
+        "weblines.ir"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://weblines.ir/",
+        "https://docs.weblines.ir/",
+        "https://docs.weblines.ir/databases/public-access",
+        "https://docs.weblines.ir/domains/overview",
+        "https://docs.weblines.ir/faq",
+        "https://docs.weblines.ir/getting-started/platform-limits"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Read the Iranian application platform homepage, documentation index, public database access, custom domains, FAQ and platform limits, plus its linked deployment guide. Public access documents customer-supplied allowlists; custom domains obtain their DNS target in the console. Found no provider inventory link in these pages or the domain-limited search; /ips.txt and /cdnips.txt returned 404. IPtoASN matches Webline Services Inc (US, AS29757) and Webline Services, S.A. (Honduras, AS263179) describe different companies and were discarded without attribution. This bounded review does not prove no list exists elsewhere."
+    },
+    {
+      "id": "negarnovin",
+      "brand": "Negarnovin",
+      "legal_names": [],
+      "domains": [
+        "negarnovin.com"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://negarnovin.com/",
+        "https://my.negarnovin.com/knowledgebase",
+        "https://my.negarnovin.com/knowledgebase/5/آموزش-کامل-اتصال-به-سرور-مجازی-لینوکس-Linux-VPS.html"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Homepage offers Iranian and foreign VPS, cloud servers and hosting. Read its public knowledge-base index and Linux VPS connection guide. The index lists five tutorials, with no provider IP inventory or whitelist list linked; /ips.txt and /cdnips.txt returned 404. No range list found in this bounded review; rented foreign-host networks were not treated as company-owned."
     }
   ]
 }
