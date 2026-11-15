@@ -256,6 +256,30 @@
           "reason": "Chabokan, an Iranian platform host, serves this plain list from its own domain. On 2026-11-15 it held 22 rows, one a repeat: 20 single addresses and one /28, eleven inside Iranian networks and ten at Hetzner, OVH and OneProvider. The site does not describe the file. Admit only the published prefixes, not the hosting ASNs."
         }
       ]
+    },
+    {
+      "id": "paasta",
+      "version": 4,
+      "url": "https://network.paasta.cloud/ips.txt",
+      "evidence": "https://paasta.cloud/docs/cdn",
+      "min_count": 42,
+      "max_count": 252,
+      "min_prefixlen": 24,
+      "state": "accepted",
+      "reviewed_on": "2026-11-15",
+      "review_reason": "PaastaCloud, an Iranian CDN and platform host, documents this list on its CDN help page for customers to whitelist. On 2026-11-15 it held 84 rows: 64 single addresses and 20 ranges, nine of the addresses at Hetzner, Sollutium and Datacamp. Admit only the published prefixes, not the hosting ASNs.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://network.paasta.cloud/ips.txt",
+          "evidence": [
+            "https://paasta.cloud/docs/cdn",
+            "https://network.paasta.cloud/ips.txt"
+          ],
+          "reviewed_on": "2026-11-15",
+          "reason": "PaastaCloud, an Iranian CDN and platform host, documents this list on its CDN help page for customers to whitelist. On 2026-11-15 it held 84 rows: 64 single addresses and 20 ranges, nine of the addresses at Hetzner, Sollutium and Datacamp. Admit only the published prefixes, not the hosting ASNs."
+        }
+      ]
     }
   ]
 }
