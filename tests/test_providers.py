@@ -210,8 +210,9 @@ class LedgerToolTests(unittest.TestCase):
                 self.assertEqual(module.main(["--ledger", str(path), "next", "2"]), 0)
                 self.assertEqual(module.main(["--ledger", str(path), "sync", "--iptoasn", str(feed)]), 0)
             lines = out.getvalue().splitlines()
-            self.assertIn("list_in_use    6", lines)
-            self.assertEqual(len([line for line in lines if line.count(" | ") == 5]), 2)
+            self.assertIn(f"{'list_in_use':<14} {providers.stats(LEDGER)['list_in_use']}", lines)
+            self.assertIn(f"{'total':<14} {len(LEDGER['companies'])}", lines)
+            self.assertEqual([line for line in lines if line.count(" | ") == 5], [providers.describe(c) for c in providers.next_companies(LEDGER, 2)])
             self.assertEqual(lines[-1], "added 1 networks (1 new companies)")
             self.assertEqual(company(json.loads(path.read_text()), "new-host")["asns"], [64602])
 
@@ -241,6 +242,227 @@ class LedgerCliTests(unittest.TestCase):
             self.assertEqual(self.run_cli(module, "--ledger", str(path), "leads", "--iptoasn", str(feed), "--only", "zed-host")[:2], (0, ["no leads"]))
             self.assertEqual(self.run_cli(module, "--ledger", str(path), "leads", "--iptoasn", str(feed), "--only", "nope")[0], 1)
             self.assertEqual(path.read_text(), before)
+
+
+def free_company(ledger):
+    """A company without a list and with a domain: where a test list can go, whatever research added."""
+    return next(c for c in ledger["companies"] if c["domains"] and not c["lists"])
+
+
+class SetCompanyTests(unittest.TestCase):
+    def test_set_updates_fields_and_dates(self):
+        ledger = copy.deepcopy(LEDGER)
+        first, second = [c["id"] for c in ledger["companies"] if c["status"] == "unchecked"][:2]
+        entry = providers.set_company(ledger, first, "no_list_found", brand=" Fresh ", domains=["WWW.Fresh-Host.IR", "fresh-host.ir"],
+                                      evidence=["https://fresh-host.ir/a", "https://fresh-host.ir/a"], note="looked", today=date(2026, 11, 15))
+        self.assertEqual((entry["brand"], entry["domains"][-1:], entry["status"], entry["last_checked"], entry["notes"]),
+                         ("Fresh", ["fresh-host.ir"], "no_list_found", "2026-11-15", "looked"))
+        self.assertEqual(entry["evidence"].count("https://fresh-host.ir/a"), 1)
+        self.assertEqual(entry["domains"].count("fresh-host.ir"), 1)
+        providers.validate_ledger(ledger, POLICY)
+        again = providers.set_company(ledger, first, "candidate", domains=["fresh-host.ir"], evidence=["https://fresh-host.ir/a"], today=date(2026, 11, 16))
+        self.assertEqual((again["domains"].count("fresh-host.ir"), again["evidence"].count("https://fresh-host.ir/a"), again["brand"], again["notes"]),
+                         (1, 1, "Fresh", "looked"))
+        self.assertIsNotNone(providers.set_company(ledger, second, "rejected")["last_checked"])
+        self.assertIsNone(providers.set_company(ledger, second, "unchecked")["last_checked"])
+        providers.validate_ledger(ledger, POLICY)
+
+    def test_set_refusals_leave_the_company_untouched(self):
+        ledger = copy.deepcopy(LEDGER)
+        used = next(c for c in ledger["companies"] if c["status"] == "list_in_use")
+        other = next(c for c in ledger["companies"] if c["status"] != "list_in_use" and c["domains"])
+        before = copy.deepcopy(ledger)
+        for args, message in (((used["id"], "rejected"), "has a list in use"), ((other["id"], "list_in_use"), "only by propose-list"),
+                              (("nope", "rejected"), "unknown company id"), ((other["id"], "maybe"), "unknown status")):
+            with self.assertRaisesRegex(ValueError, message):
+                providers.set_company(ledger, *args)
+        with self.assertRaisesRegex(ValueError, "already belongs to " + used["id"]):
+            providers.set_company(ledger, other["id"], "rejected", brand="X", domains=["new-one.ir", used["domains"][0]])
+        with self.assertRaisesRegex(ValueError, "must use https"):
+            providers.set_company(ledger, other["id"], "rejected", brand="X", evidence=["http://x.ir/"])
+        with self.assertRaisesRegex(ValueError, "invalid domain"):
+            providers.set_company(ledger, other["id"], "rejected", domains=["nodot"])
+        self.assertEqual(ledger, before)
+
+
+PROPOSE = dict(policy_id="zed_host", url="https://{domain}/ips.txt", evidence="https://{domain}/help/ips", rows=10, broadest=28,
+               reason="Zed publishes this list from its own domain.", today=date(2026, 11, 16))
+
+
+def propose(policy, ledger, **change):
+    target = free_company(ledger)
+    args = {key: value.format(domain=target["domains"][0]) if isinstance(value, str) and "{domain}" in value else value
+            for key, value in {**PROPOSE, **change}.items()}
+    return target["id"], providers.propose_list(policy, ledger, target["id"], args.pop("policy_id"), args.pop("url"), args.pop("evidence"),
+                                                args.pop("rows"), args.pop("broadest"), args.pop("reason"), **args)
+
+
+class ProposeWithdrawTests(unittest.TestCase):
+    def test_propose_writes_a_valid_entry_and_marks_the_list(self):
+        policy, ledger = copy.deepcopy(POLICY), copy.deepcopy(LEDGER)
+        cid, entry = propose(policy, ledger)
+        domain = company(ledger, cid)["domains"][0]
+        chabokan = next(p for p in POLICY["providers"] if p["id"] == "chabokan")
+        self.assertEqual(list(entry), list(chabokan))
+        self.assertEqual((entry["min_count"], entry["max_count"], entry["min_prefixlen"], entry["state"], entry["reviewed_on"], entry["version"]),
+                         (5, 30, 28, "accepted", "2026-11-16", 4))
+        self.assertEqual(entry["relationships"], [{"type": "provider_inventory", "target": f"https://{domain}/ips.txt",
+                                                   "evidence": [f"https://{domain}/help/ips", f"https://{domain}/ips.txt"], "reviewed_on": "2026-11-16",
+                                                   "reason": PROPOSE["reason"]}])
+        self.assertIs(policy["providers"][-1], entry)
+        self.assertEqual(company(ledger, cid)["lists"][-1], {"url": f"https://{domain}/ips.txt", "policy_id": "zed_host", "state": "in_use", "note": ""})
+        self.assertEqual((company(ledger, cid)["status"], company(ledger, cid)["last_checked"]), ("list_in_use", "2026-11-16"))
+        self.assertIn(f"https://{domain}/help/ips", company(ledger, cid)["evidence"])
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "policy.json"
+            path.write_text(json.dumps(policy, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            load_policy(path)
+        providers.validate_ledger(ledger, policy)
+
+    def test_propose_bounds_and_evidence_dedupe(self):
+        policy, ledger = copy.deepcopy(POLICY), copy.deepcopy(LEDGER)
+        target = free_company(ledger)
+        url = f"https://{target['domains'][0]}/ips.txt"
+        entry = providers.propose_list(policy, ledger, target["id"], "tiny", url, url, 1, 24, "reason", version=6)
+        self.assertEqual((entry["min_count"], entry["max_count"], entry["version"], entry["relationships"][0]["evidence"]), (1, 3, 6, [url]))
+        self.assertEqual(providers.propose_list(copy.deepcopy(policy), ledger, target["id"], "big", url, url, 9000, 24, "r")["max_count"], 10_000)
+
+    def test_propose_reuses_an_existing_proposed_list(self):
+        policy, ledger = copy.deepcopy(POLICY), copy.deepcopy(LEDGER)
+        target = free_company(ledger)
+        url = f"https://{target['domains'][0]}/ips.txt"
+        target["lists"].append({"url": url, "policy_id": None, "state": "proposed", "note": "seen"})
+        providers.propose_list(policy, ledger, target["id"], "zed_host", url, url, 10, 28, "r")
+        self.assertEqual(len(target["lists"]), 1)
+        self.assertEqual((target["lists"][0]["state"], target["lists"][0]["policy_id"], target["lists"][0]["note"]), ("in_use", "zed_host", "seen"))
+        providers.validate_ledger(ledger, policy)
+
+    def test_propose_refusals(self):
+        policy, ledger = copy.deepcopy(POLICY), copy.deepcopy(LEDGER)
+        before = copy.deepcopy((policy, ledger))
+        for change, message in (({"policy_id": POLICY["providers"][0]["id"]}, "already exists"), ({"policy_id": "Bad-Id"}, "invalid policy id"),
+                                ({"rows": 0}, "rows must be"), ({"url": "http://{domain}/ips.txt"}, "must use https"), ({"version": 5}, "version")):
+            with self.assertRaisesRegex(ValueError, message):
+                propose(policy, ledger, **change)
+        with self.assertRaisesRegex(ValueError, "unknown company id"):
+            providers.propose_list(policy, ledger, "nope", "x", "https://a.ir/i", "https://a.ir/h", 5, 24, "r")
+        self.assertEqual((policy, ledger), before)
+
+    def test_withdraw_round_trip(self):
+        policy, ledger = copy.deepcopy(POLICY), copy.deepcopy(LEDGER)
+        cid, _ = propose(policy, ledger)
+        entry = providers.withdraw_list(policy, ledger, "zed_host", "list went away", today=date(2026, 11, 17))
+        self.assertEqual(policy, POLICY)
+        self.assertEqual((entry["status"], entry["last_checked"]), ("no_list_found", "2026-11-17"))
+        item = company(ledger, cid)["lists"][-1]
+        self.assertEqual((item["state"], item["policy_id"], item["note"]), ("rejected", None, "list went away"))
+        providers.validate_ledger(ledger, policy)
+        with self.assertRaisesRegex(ValueError, "unknown policy provider"):
+            providers.withdraw_list(policy, ledger, "zed_host", "again")
+
+    def test_withdraw_keeps_status_while_another_list_is_in_use(self):
+        policy, ledger = copy.deepcopy(POLICY), copy.deepcopy(LEDGER)
+        cid, _ = propose(policy, ledger)
+        domain = company(ledger, cid)["domains"][0]
+        providers.propose_list(policy, ledger, cid, "second", f"https://{domain}/cdnips.txt", f"https://{domain}/h", 4, 24, "r")
+        self.assertEqual(providers.withdraw_list(policy, ledger, "zed_host", "gone")["status"], "list_in_use")
+        providers.validate_ledger(ledger, policy)
+
+
+class ListProbeTests(unittest.TestCase):
+    def test_looks_like_list(self):
+        plain = b"1.2.3.0/24\n1.2.4.5\n1.2.8.0/22\n"
+        self.assertEqual(providers.looks_like_list(plain), {"rows": 3, "ipv4": 3, "ipv6": 0, "broadest4": 22, "broadest6": None})
+        noisy = b"# header\n\n1.2.3.0/24\n  1.2.4.0/24  \n# mid\n1.2.5.0/24\n\n"
+        self.assertEqual(providers.looks_like_list(noisy)["rows"], 3)
+        mixed = providers.looks_like_list(b"1.2.3.0/24\n2001:db8::/32\n2001:db8:1::/48\n1.2.4.0/23\n")
+        self.assertEqual(mixed, {"rows": 4, "ipv4": 2, "ipv6": 2, "broadest4": 23, "broadest6": 32})
+        self.assertIsNone(providers.looks_like_list(b"<!doctype html>\n<html>\n<body>hi</body>\n</html>\n"))
+        self.assertIsNone(providers.looks_like_list(b"1.2.3.0/24\n1.2.4.0/24\n"))
+        self.assertIsNone(providers.looks_like_list("1.2.3.0/24\n1.2.4.0/24\n1.2.5.0/24\nا\n".encode()))
+        self.assertIsNone(providers.looks_like_list(b"1.2.3.0/24\n1.2.4.0/24\n1.2.5.0/24\nnope\n"))
+        self.assertEqual(providers.looks_like_list(b"\n".join([b"1.2.3.0/24"] * 9 + [b"nope"]))["rows"], 9)
+        self.assertIsNone(providers.looks_like_list(b"1.1.1.1\n" * 10_001))
+        self.assertEqual(providers.looks_like_list(b"1.1.1.1\n" * 10_000)["rows"], 10_000)
+
+    def test_format_list(self):
+        both = {"rows": 4, "ipv4": 2, "ipv6": 2, "broadest4": 23, "broadest6": 32}
+        self.assertEqual(providers.format_list(both), "list of 4 rows (IPv4 2, broadest /23; IPv6 2, broadest /32)")
+        self.assertEqual(providers.format_list({**both, "ipv6": 0, "broadest6": None}), "list of 4 rows (IPv4 2, broadest /23)")
+
+
+class LedgerWriteCommandTests(unittest.TestCase):
+    def setUp(self):
+        self.module = load_script("ledger")
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.policy, self.ledger = Path(self.tmp.name) / "policy.json", Path(self.tmp.name) / "ledger.json"
+        self.policy.write_text((ROOT / "coverage-policy.json").read_text(encoding="utf-8"), encoding="utf-8")
+        self.ledger.write_text(providers.dump_ledger(LEDGER), encoding="utf-8")
+        self.target = free_company(LEDGER)
+        self.domain = self.target["domains"][0]
+
+    def run_cli(self, *argv):
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            code = self.module.main(["--ledger", str(self.ledger), "--policy", str(self.policy), *argv])
+        return code, out.getvalue().splitlines(), err.getvalue()
+
+    def propose_args(self, **change):
+        args = {"--policy-id": "zed_host", "--url": f"https://{self.domain}/ips.txt", "--evidence": f"https://{self.domain}/help", "--rows": "10",
+                "--broadest": "28", "--reason": "Published by the provider.", "--date": "2026-11-16", **change}
+        return ["propose-list", self.target["id"], *[part for pair in args.items() for part in pair]]
+
+    def test_the_real_policy_survives_a_rewrite_byte_for_byte(self):
+        text = (ROOT / "coverage-policy.json").read_text(encoding="utf-8")
+        self.assertEqual(json.dumps(json.loads(text), indent=2, ensure_ascii=False) + "\n", text)
+
+    def test_set_command(self):
+        code, lines, err = self.run_cli("set", self.target["id"], "--status", "no_list_found", "--domain", "extra-" + self.domain, "--evidence",
+                                        "https://x.ir/e", "--note", "none", "--date", "2026-11-16")
+        self.assertEqual((code, lines, err), (0, [f"updated {self.target['id']}"], ""))
+        saved = company(json.loads(self.ledger.read_text()), self.target["id"])
+        self.assertEqual((saved["status"], saved["last_checked"], saved["notes"], saved["domains"][-1]), ("no_list_found", "2026-11-16", "none", "extra-" + self.domain))
+        before = self.ledger.read_text()
+        for argv in (["set", self.target["id"], "--status", "list_in_use"], ["set", "nope", "--status", "rejected"]):
+            code, _, err = self.run_cli(*argv)
+            self.assertEqual(code, 1)
+            self.assertTrue(err.startswith("ledger: "))
+        self.assertEqual(self.ledger.read_text(), before)
+
+    def test_propose_then_withdraw_through_the_script(self):
+        original = (self.policy.read_bytes(), self.ledger.read_bytes())
+        code, lines, _ = self.run_cli(*self.propose_args())
+        self.assertEqual((code, lines), (0, [f"proposed zed_host for {self.target['id']}; now run: python3 scripts/check_providers.py --only zed_host"]))
+        self.assertEqual(len(load_policy(self.policy)["providers"]), len(POLICY["providers"]) + 1)
+        self.assertEqual(self.run_cli(*self.propose_args())[0], 1)  # duplicate id
+        self.assertEqual(self.run_cli("withdraw-list", "--policy-id", "zed_host", "--reason", "gone", "--date", "2026-11-17")[:2],
+                         (0, [f"withdrew zed_host from {self.target['id']}"]))
+        self.assertEqual(self.policy.read_bytes(), original[0])
+        self.assertEqual(self.run_cli("withdraw-list", "--policy-id", "zed_host", "--reason", "gone")[0], 1)
+
+    def test_failed_validation_restores_both_files(self):
+        original = (self.policy.read_bytes(), self.ledger.read_bytes())
+        # the list host is not one of the company's domains, which only the ledger validation after the write notices
+        code, lines, err = self.run_cli(*self.propose_args(**{"--url": "https://elsewhere.example/ips.txt"}))
+        self.assertEqual((code, lines), (1, []))
+        self.assertIn("not one of the company's domains", err)
+        self.assertEqual((self.policy.read_bytes(), self.ledger.read_bytes()), original)
+
+    def test_probe_needs_no_ledger_and_reports_each_url(self):
+        shown = "https://fresh.ir/ips.txt: list of 3 rows (IPv4 2, broadest /24; IPv6 1, broadest /32)"
+        pages = {"https://fresh.ir/ips.txt": b"1.2.3.0/24\n1.2.4.0/24\n2001:db8::/32\n", "https://fresh.ir/cdnips.txt": b"<html>\n"}
+        self.module.fetch = lambda url: pages[url]
+        self.ledger.write_text("{broken", encoding="utf-8")
+        self.assertEqual(self.run_cli("probe", "  WWW.Fresh.IR ")[:2], (0, [shown, "https://fresh.ir/cdnips.txt: no list (not a list of ranges)"]))
+        self.assertEqual(self.run_cli("probe", "https://fresh.ir/ips.txt")[:2], (0, [shown]))
+
+        def broken(url):
+            raise GenerationError("download failed after 3 attempts: HTTP 404")
+        self.module.fetch = broken
+        failed = "no list (download failed after 3 attempts: HTTP 404)"
+        self.assertEqual(self.run_cli("probe", "fresh.ir")[:2], (0, [f"https://fresh.ir/ips.txt: {failed}", f"https://fresh.ir/cdnips.txt: {failed}"]))
+        self.assertEqual(self.run_cli("probe", "not a domain")[0], 1)
 
 
 ANCHOR = {4: [net("91.107.0.0/16"), net("94.182.0.0/16"), net("185.24.252.0/22")], 6: []}
@@ -304,7 +526,7 @@ class GateTests(unittest.TestCase):
                 self.assertEqual(module.main(["--only", "parspack", "--anchor", str(anchor)]), 1)
                 self.assertEqual(module.main(["--only", "nope"]), 1)
             lines = out.getvalue().splitlines()
-        self.assertRegex(lines[0], r"^OK ledger and catalogue agree \(\d+ companies, 7 provider lists\)$")
+        self.assertEqual(lines[0], f"OK ledger and catalogue agree ({len(LEDGER['companies'])} companies, {len(POLICY['providers'])} provider lists)")
         self.assertTrue(lines[2].startswith("OK   chabokan: 21 rows kept, 1 dropped (duplicate)"))
         self.assertEqual(lines[3], "1 of 1 provider lists healthy")
         self.assertTrue(lines[5].startswith("FAIL parspack: invalid parspack provider feed"))
