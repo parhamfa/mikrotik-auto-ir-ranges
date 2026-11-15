@@ -1,6 +1,6 @@
 {
   "delivery": {
-    "generation": "0caf4a818662b9e71f13535c792b6c38aa9499d5a7819eaf4db0bb3914a786e7",
+    "generation": "aa72698cd02f4d6d15aff486310964738c412588d287a9ccf2549e1e13ad275f",
     "legacy_compatible": true
   },
   "generator_version": "2.1.0",
@@ -227,7 +227,7 @@
     "The list's accuracy against real traffic has not been measured.",
     "Shared IPs may also serve unrelated foreign services; hosting ASNs are not automatically included."
   ],
-  "observed_at": "2026-11-15T12:17:54Z",
+  "observed_at": "2026-11-15T18:47:25Z",
   "policy_sha512": "680c6bb85af359e016fe8b78dff74f9121feef9169dc0dc67814b1c9a9dbfe478f36c99a81609bc2e49617760e67408c524e94638da87e66a7ea52bb583c3168",
   "provider_dropped_rows": {
     "chabokan": [
@@ -259,67 +259,67 @@
   "scope": "All admitted source ranges, not all possible Iran-related IPs",
   "source_status": {
     "ipdeny_ipv4": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "ipdeny_ipv6": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "nro_delegated": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_arvancloud": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_chabokan": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_derakcloud_ipv4": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_derakcloud_ipv6": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_iranserver": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_mizbancloud": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_paasta": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_parspack": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv4": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv6": {
-      "last_fresh": "2026-11-15T12:17:54Z",
+      "last_fresh": "2026-11-15T18:47:25Z",
       "reason": null,
       "status": "fresh"
     }
