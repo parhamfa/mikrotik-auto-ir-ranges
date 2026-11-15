@@ -4,18 +4,18 @@
     "asn_ranges": "IR-labelled IPtoASN rows plus independently selected operator ASNs",
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort",
-    "policy_sha512": "9bf19c2be875f9b7c03f3072a9dd3f80b58147824cac6532b2f95f17828af5c007630a97485e5a39fca9ea5afd99ee1938537babb094b6679c50595bdac078e1",
+    "policy_sha512": "680c6bb85af359e016fe8b78dff74f9121feef9169dc0dc67814b1c9a9dbfe478f36c99a81609bc2e49617760e67408c524e94638da87e66a7ea52bb583c3168",
     "providers": "Official provider-published inventories",
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json"
   },
-  "generated_at": "2026-11-15T11:37:25Z",
+  "generated_at": "2026-11-15T12:17:54Z",
   "generator_version": "2.1.0",
   "ipv4": {
-    "bytes": 29545,
-    "count": 1880,
+    "bytes": 29703,
+    "count": 1889,
     "file": "ir-ipv4.zone",
-    "sha512": "31dc09c3e9ca4b9fbe67c933ebe3dc4c2a91a1186736610c5f9d937000531d0e2a17360a1d04fdde44b3363557a09514e1d4d028314e7b34e96f6a9374800d80"
+    "sha512": "dd14ac0c2cb7ef1dc8bcac7cbaa505c648ae0327504ce278f40bc8c57af9cebe061b30fe0be94620f245e26939146e0e18e1b4b30fe3998305219a48d2023558"
   },
   "ipv6": {
     "bytes": 8820,
@@ -58,8 +58,8 @@
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 57157883,
-      "sha512": "6efe5cf5ee8a602d6c4ede7e468f1766675a36874b8f52bdfb0c11b7a87243ad1afe9a42d6e5ab7e5bf6102441496787849ca07d63c71172809643f2f574e5d7",
+      "bytes": 57162391,
+      "sha512": "eef3bd1ca34dd21fc5fdc48b7809f85dedd0edaa156b000609e498a8e21632e61c3ffbe7d76ef6a333d991d41bb98626ef0581a766d8f94c18e99d7358859e80",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
@@ -91,6 +91,11 @@
       "bytes": 132,
       "sha512": "ebad075d00b20b7836c6d357aeca8536189e7238725fb7dbf899d9b2fca8c4a93dcd6e091a9d60c1ed622f9b064fcf3ad9da786d5a92eab4d94cc067f82d6863",
       "url": "https://mizbancloud.com/ips.txt"
+    },
+    "provider_paasta": {
+      "bytes": 1466,
+      "sha512": "d5dae21053d884236e6211c5e2e5f0b1c7b30736db14db18365a657d9353f0a85690c944c9c3dc57ec1bebbbb607ca090c572bbda883bd77d3dbadb01e7054ec",
+      "url": "https://network.paasta.cloud/ips.txt"
     },
     "provider_parspack": {
       "bytes": 828,
