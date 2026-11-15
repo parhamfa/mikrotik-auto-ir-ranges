@@ -2307,6 +2307,210 @@
       "lists": [],
       "foreign_networks": [],
       "notes": ""
+    },
+    {
+      "id": "liara",
+      "brand": "Liara",
+      "legal_names": [],
+      "domains": [
+        "liara.ir"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://liara.ir/products/object-storage/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: paas+cloud. Not yet verified on the company's own site. S3-compatible object storage, PaaS"
+    },
+    {
+      "id": "paastacloud",
+      "brand": "PaastaCloud",
+      "legal_names": [],
+      "domains": [
+        "paasta.cloud"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://digiato.com/promoted/comparing-different-paas-services-in-iran"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: paas. Not yet verified on the company's own site. sponsored article; new service"
+    },
+    {
+      "id": "hamravesh",
+      "brand": "Hamravesh",
+      "legal_names": [],
+      "domains": [
+        "hamravesh.com"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://github.com/aliasadi313/IranianWebsites"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: paas. Not yet verified on the company's own site. listed under PaaS on github list; not opened on own site"
+    },
+    {
+      "id": "sakku",
+      "brand": "Sakku",
+      "legal_names": [],
+      "domains": [
+        "sakku.cloud"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://github.com/aliasadi313/IranianWebsites"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: paas. Not yet verified on the company's own site. listed under PaaS on github list"
+    },
+    {
+      "id": "abalon-cloud",
+      "brand": "Abalon Cloud",
+      "legal_names": [],
+      "domains": [
+        "abalon.cloud"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://abalon.cloud/cdn"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cdn+paas+cloud. Not yet verified on the company's own site. 40+ PoPs claimed; xaas.ir also listed under PaaS on github list Formerly Abr Zas / Xaas; xaas.ir may still be in use."
+    },
+    {
+      "id": "afranet",
+      "brand": "Afranet",
+      "legal_names": [],
+      "domains": [
+        "afranet.ir"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.rtl-theme.com/blog/best-iranian-cdns/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cdn+cloud. Not yet verified on the company's own site. domain seen only as a search-result URL on afranet.ir; has data-center rating certificate"
+    },
+    {
+      "id": "greenplus",
+      "brand": "GreenPlus",
+      "legal_names": [],
+      "domains": [
+        "greenplus.cloud"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://greenplus.cloud/knowledge-base/best-iranian-cdn/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cdn. Not yet verified on the company's own site."
+    },
+    {
+      "id": "nodisk",
+      "brand": "Nodisk",
+      "legal_names": [],
+      "domains": [
+        "nodisk.ir"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://nodisk.ir/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cloud. Not yet verified on the company's own site. S3-compatible object storage"
+    },
+    {
+      "id": "darkube",
+      "brand": "Darkube",
+      "legal_names": [],
+      "domains": [
+        "darkube.ir"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.context-awesome.com/list/professormahi/awesome-services-4-iranian-developers"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: paas. Not yet verified on the company's own site. Kubernetes PaaS; old list, status unverified"
+    },
+    {
+      "id": "kubit",
+      "brand": "Kubit",
+      "legal_names": [],
+      "domains": [
+        "kubit.ir"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.context-awesome.com/list/professormahi/awesome-services-4-iranian-developers"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: paas. Not yet verified on the company's own site. managed Kubernetes; old list, status unverified"
+    },
+    {
+      "id": "backtory",
+      "brand": "Backtory",
+      "legal_names": [],
+      "domains": [
+        "backtory.com"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.context-awesome.com/list/professormahi/awesome-services-4-iranian-developers"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cloud. Not yet verified on the company's own site. storage/CDN/video; old list, status unverified, may be closed"
+    },
+    {
+      "id": "saba-host",
+      "brand": "Saba.host",
+      "legal_names": [],
+      "domains": [
+        "saba.host"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.whtop.com/directory/country/ir/category/cdn"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cdn. Not yet verified on the company's own site. listed in CDN directory only; product unverified MizbanCloud's registered name is Saba Abr Mizban; whether this is the same company is not verified."
     }
   ]
 }
