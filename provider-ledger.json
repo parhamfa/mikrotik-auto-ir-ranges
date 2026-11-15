@@ -2335,7 +2335,7 @@
         "paasta.cloud"
       ],
       "asns": [],
-      "status": "candidate",
+      "status": "list_in_use",
       "last_checked": "2026-11-15",
       "evidence": [
         "https://paasta.cloud/",
@@ -2345,9 +2345,9 @@
       "lists": [
         {
           "url": "https://network.paasta.cloud/ips.txt",
-          "policy_id": null,
-          "state": "proposed",
-          "note": "Linked from the whitelisting section of https://paasta.cloud/docs/cdn. On 2026-11-15 it held 84 rows, broadest /24, and passed the gate; 9 single addresses are outside known Iranian space: 3 at Hetzner, 4 at Sollutium, 2 at Datacamp. Waits for the owner's yes."
+          "policy_id": "paasta",
+          "state": "in_use",
+          "note": "Linked from the whitelisting section of https://paasta.cloud/docs/cdn. On 2026-11-15 it held 84 rows, broadest /24, and passed the gate; 9 single addresses are outside known Iranian space: 3 at Hetzner, 4 at Sollutium, 2 at Datacamp."
         }
       ],
       "foreign_networks": [],
