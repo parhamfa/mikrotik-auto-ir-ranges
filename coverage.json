@@ -1,6 +1,6 @@
 {
   "delivery": {
-    "generation": "d64dc08b6a83ed662c417215e045ff400bec908e497c0cac316172aac135ac33",
+    "generation": "ca983786c21c43f0f55cdc4d42153ec04707184304a48dd25c91a8516d166bfc",
     "legacy_compatible": true
   },
   "generator_version": "2.1.0",
@@ -27,6 +27,40 @@
         "193.24.119.0/29"
       ],
       "unique_addresses": "2300",
+      "version": 4
+    },
+    "provider_chabokan": {
+      "input_prefixes": 21,
+      "missing_prefixes": [],
+      "outside_legacy_baseline": [
+        "54.36.30.61/32",
+        "65.109.189.164/32",
+        "65.109.196.20/32",
+        "65.109.212.48/32",
+        "91.107.132.28/32",
+        "91.107.137.67/32",
+        "91.107.161.252/32",
+        "91.107.181.26/32",
+        "92.118.205.155/32",
+        "178.32.115.159/32"
+      ],
+      "unique_addresses": "36",
+      "version": 4
+    },
+    "provider_derakcloud_ipv4": {
+      "input_prefixes": 18,
+      "missing_prefixes": [],
+      "outside_legacy_baseline": [
+        "45.63.43.128/28",
+        "45.77.87.48/28",
+        "89.222.113.80/28",
+        "116.202.90.176/28",
+        "159.69.229.224/28",
+        "165.232.92.112/28",
+        "178.62.222.208/28",
+        "207.148.25.64/28"
+      ],
+      "unique_addresses": "1008",
       "version": 4
     },
     "provider_derakcloud_ipv6": {
@@ -176,8 +210,22 @@
     "The list's accuracy against real traffic has not been measured.",
     "Shared IPs may also serve unrelated foreign services; hosting ASNs are not automatically included."
   ],
-  "observed_at": "2026-11-14T17:57:34Z",
-  "policy_sha512": "252433813c661227bef245a34df297a18ca818661c3171c5ee82a1bf7715a08a8ed0680544e95fdbc7b17d50d8e2d1dca04dc2d203586e729b4afbf7b88179a7",
+  "observed_at": "2026-11-15T11:37:25Z",
+  "policy_sha512": "9bf19c2be875f9b7c03f3072a9dd3f80b58147824cac6532b2f95f17828af5c007630a97485e5a39fca9ea5afd99ee1938537babb094b6679c50595bdac078e1",
+  "provider_dropped_rows": {
+    "chabokan": [
+      {
+        "reason": "duplicate",
+        "row": "81.16.116.189/32"
+      }
+    ],
+    "derakcloud_ipv4": [
+      {
+        "reason": "non-public",
+        "row": "192.168.204.48/28"
+      }
+    ]
+  },
   "registry": {
     "records": 775625,
     "selected_asns": 866,
@@ -194,52 +242,62 @@
   "scope": "All admitted source ranges, not all possible Iran-related IPs",
   "source_status": {
     "ipdeny_ipv4": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "ipdeny_ipv6": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "nro_delegated": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_arvancloud": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
+      "reason": null,
+      "status": "fresh"
+    },
+    "provider_chabokan": {
+      "last_fresh": "2026-11-15T11:37:25Z",
+      "reason": null,
+      "status": "fresh"
+    },
+    "provider_derakcloud_ipv4": {
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_derakcloud_ipv6": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_iranserver": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_mizbancloud": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_parspack": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv4": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv6": {
-      "last_fresh": "2026-11-14T17:57:34Z",
+      "last_fresh": "2026-11-15T11:37:25Z",
       "reason": null,
       "status": "fresh"
     }
@@ -274,6 +332,16 @@
       "bytes": 220,
       "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
       "url": "https://www.arvancloud.ir/fa/ips.txt"
+    },
+    "provider_chabokan": {
+      "bytes": 383,
+      "sha512": "5c0df09bf5e77baafae31fd1ddfc725fe5e04a7cbabc95217240cc47a9bb71a9900eab73f91afc4a01a598a6d72fea2dbc50246fd23e1614137541d185938a1d",
+      "url": "https://chabokan.net/ips.txt"
+    },
+    "provider_derakcloud_ipv4": {
+      "bytes": 323,
+      "sha512": "789490e86637ab29a9fdf519f6bae97a96db7530dc440744958a67fb119606ae3bc034e6162bf6bcecc5ab84a54a915388d4a49cacb0fa91101b0834ff9e368b",
+      "url": "https://api.derak.cloud/public/ipv4"
     },
     "provider_derakcloud_ipv6": {
       "bytes": 207,

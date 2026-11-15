@@ -4,18 +4,18 @@
     "asn_ranges": "IR-labelled IPtoASN rows plus independently selected operator ASNs",
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort",
-    "policy_sha512": "252433813c661227bef245a34df297a18ca818661c3171c5ee82a1bf7715a08a8ed0680544e95fdbc7b17d50d8e2d1dca04dc2d203586e729b4afbf7b88179a7",
+    "policy_sha512": "9bf19c2be875f9b7c03f3072a9dd3f80b58147824cac6532b2f95f17828af5c007630a97485e5a39fca9ea5afd99ee1938537babb094b6679c50595bdac078e1",
     "providers": "Official provider-published inventories",
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json"
   },
-  "generated_at": "2026-11-14T14:46:58Z",
+  "generated_at": "2026-11-15T11:37:25Z",
   "generator_version": "2.1.0",
   "ipv4": {
-    "bytes": 29236,
-    "count": 1862,
+    "bytes": 29545,
+    "count": 1880,
     "file": "ir-ipv4.zone",
-    "sha512": "4b810b994171ec6f2e3c4bbc23dc6ab77e1ac685c6a1cdf722b0634359df89684d0a6cbba71b9d63f96a18eb381c185b9cbedf5338af654f9ba152f7b3f50be9"
+    "sha512": "31dc09c3e9ca4b9fbe67c933ebe3dc4c2a91a1186736610c5f9d937000531d0e2a17360a1d04fdde44b3363557a09514e1d4d028314e7b34e96f6a9374800d80"
   },
   "ipv6": {
     "bytes": 8820,
@@ -66,6 +66,16 @@
       "bytes": 220,
       "sha512": "e4b06a7b3998fad71a206aeec78926ac838e9498aa930379efc8e9bed1c17ae6b8d41fd16923a946d50d6720203f99a9e395d499e7b19a5e3e403a381c76ae4f",
       "url": "https://www.arvancloud.ir/fa/ips.txt"
+    },
+    "provider_chabokan": {
+      "bytes": 383,
+      "sha512": "5c0df09bf5e77baafae31fd1ddfc725fe5e04a7cbabc95217240cc47a9bb71a9900eab73f91afc4a01a598a6d72fea2dbc50246fd23e1614137541d185938a1d",
+      "url": "https://chabokan.net/ips.txt"
+    },
+    "provider_derakcloud_ipv4": {
+      "bytes": 323,
+      "sha512": "789490e86637ab29a9fdf519f6bae97a96db7530dc440744958a67fb119606ae3bc034e6162bf6bcecc5ab84a54a915388d4a49cacb0fa91101b0834ff9e368b",
+      "url": "https://api.derak.cloud/public/ipv4"
     },
     "provider_derakcloud_ipv6": {
       "bytes": 207,
