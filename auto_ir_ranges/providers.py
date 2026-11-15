@@ -27,6 +27,7 @@ HOSTING_WORDS = re.compile(r"cloud|host|server|data ?cent|datacenter|idc|cdn|abr
 # Fields whose change sends a provider entry through the networked gate again.
 GATED_FIELDS = ("url", "version", "min_count", "max_count", "min_prefixlen", "anchor_waiver")
 STALE_DAYS = 90
+LEAD_STOP_KEYS = {"cloud", "hosting", "server", "servers", "network", "datacenter", "internet", "iranian", "company"}
 
 
 # --- the outside-space cap (daily build and gate) ---
@@ -215,17 +216,87 @@ def stats(ledger: Mapping) -> dict[str, int]:
     return {status: sum(c["status"] == status for c in ledger["companies"]) for status in STATUSES}
 
 
+def add_company(ledger: dict, brand: str, domain: str, evidence: str | None = None, note: str = "") -> dict:
+    """Append an unchecked company found by market research; it may have no network of its own."""
+    brand, domain = brand.strip(), domain.strip().lower()
+    domain = domain[4:] if domain.startswith("www.") else domain
+    if not brand:
+        raise ValueError("brand must not be empty")
+    if "." not in domain or any(ch in domain for ch in "/:") or re.search(r"\s", domain):
+        raise ValueError(f"invalid domain {domain!r}")
+    companies = ledger["companies"]
+    for existing in companies:
+        if domain in [d.lower() for d in existing["domains"]] or existing["brand"].lower() == brand.lower():
+            raise ValueError(f"already in the ledger: {existing['id']}")
+    entry = {"id": slug(brand, {c["id"] for c in companies}), "brand": brand, "legal_names": [], "domains": [domain], "asns": [],
+             "status": "unchecked", "last_checked": None, "evidence": [evidence] if evidence else [], "lists": [], "foreign_networks": [],
+             "notes": note}
+    companies.append(entry)
+    return entry
+
+
 def next_companies(ledger: Mapping, limit: int = 15, today: date | None = None) -> list[dict]:
+    """Unchecked companies with a domain, other unchecked ones, then stale ones, oldest first."""
     today = today or date.today()
     unchecked = [c for c in ledger["companies"] if c["status"] == "unchecked"]
     stale = [c for c in ledger["companies"] if c["status"] != "unchecked" and (today - date.fromisoformat(c["last_checked"])).days > STALE_DAYS]
-    return (unchecked + sorted(stale, key=lambda c: c["last_checked"]))[:limit]
+    return ([c for c in unchecked if c["domains"]] + [c for c in unchecked if not c["domains"]] + sorted(stale, key=lambda c: c["last_checked"]))[:limit]
 
 
 def describe(company: Mapping) -> str:
     name = company["brand"] or (company["legal_names"][0] if company["legal_names"] else "")
     asns = ",".join(f"AS{a}" for a in company["asns"]) or "-"
-    return f"{company['id']} | {name} | {asns} | {company['status']} | {company['last_checked'] or '-'}"
+    domain = company["domains"][0] if company["domains"] else "-"
+    return f"{company['id']} | {name} | {domain} | {asns} | {company['status']} | {company['last_checked'] or '-'}"
+
+
+def _lead_keys(company: Mapping) -> list[str]:
+    raw = [company["brand"]] + [d.lower().split(".")[-2] for d in company["domains"] if d.count(".") >= 1] + list(company["legal_names"])
+    keys = []
+    for key in (re.sub(r"[^a-z0-9]+", "", item.lower()) for item in raw if item):
+        if len(key) >= 5 and key not in LEAD_STOP_KEYS and key not in keys:
+            keys.append(key)
+    return keys
+
+
+def foreign_leads(ledger: Mapping, text: str, only: str | None = None) -> list[dict]:
+    """Non-IR networks in IPtoASN rows whose description names a ledger company; read-only."""
+    companies = ledger["companies"]
+    if only is not None and not any(c["id"] == only for c in companies):
+        raise ValueError(f"unknown company id {only!r}")
+    held = {a for c in companies for a in c["asns"]} | {f["asn"] for c in companies for f in c["foreign_networks"]}
+    keyed = [(c["id"], _lead_keys(c)) for c in companies if only is None or c["id"] == only]
+    found: dict[tuple[str, int], dict] = {}
+    matches: dict[str, list[tuple[str, str]]] = {}
+    for line in text.splitlines():
+        parts = line.split("\t", 4)
+        if len(parts) < 5 or not parts[2].isdigit() or int(parts[2]) == 0 or int(parts[2]) in held:
+            continue
+        country = parts[3].strip().upper()
+        if country == "IR" or not re.fullmatch(r"[A-Z]{2}", country):
+            continue
+        try:
+            size = int(ipaddress.ip_address(parts[1].strip())) - int(ipaddress.ip_address(parts[0].strip())) + 1
+        except ValueError:
+            continue
+        description = parts[4].strip()
+        if description not in matches:  # one network's rows repeat its description
+            flat = re.sub(r"[^a-z0-9]+", "", description.lower())
+            matches[description] = [(cid, key) for cid, keys in keyed for key in keys if key in flat]
+        seen = set()
+        for cid, key in matches[description]:
+            if cid in seen:
+                continue
+            seen.add(cid)
+            lead = found.setdefault((cid, int(parts[2])), {"company": cid, "asn": int(parts[2]), "country": country, "description": description, "addresses": 0, "matched": key})
+            lead["addresses"] += size
+    order = {c["id"]: i for i, c in enumerate(companies)}
+    return sorted(found.values(), key=lambda lead: (order[lead["company"]], -lead["addresses"]))
+
+
+def gate_summary(results: Iterable[bool]) -> str:
+    results = list(results)
+    return f"{sum(results)} of {len(results)} provider lists healthy"
 
 
 # --- the provider gate ---

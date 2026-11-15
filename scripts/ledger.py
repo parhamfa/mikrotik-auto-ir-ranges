@@ -4,6 +4,10 @@
   stats                 companies per status
   next [N]              the companies to research next (default 15)
   sync --iptoasn PATH   add IR hosting-like networks from an ip2asn-v4.tsv.gz no company holds yet
+  add --brand B --domain D [--evidence URL] [--note TEXT]
+                        add a company found by market research
+  leads --iptoasn PATH [--only ID]
+                        print non-IR networks whose name matches a company (read-only)
 """
 from __future__ import annotations
 
@@ -27,6 +31,14 @@ def main(argv: list[str] | None = None) -> int:
     nxt.add_argument("count", nargs="?", type=int, default=15)
     sync = commands.add_parser("sync")
     sync.add_argument("--iptoasn", type=Path, required=True)
+    add = commands.add_parser("add")
+    add.add_argument("--brand", required=True)
+    add.add_argument("--domain", required=True)
+    add.add_argument("--evidence")
+    add.add_argument("--note", default="")
+    leads = commands.add_parser("leads")
+    leads.add_argument("--iptoasn", type=Path, required=True)
+    leads.add_argument("--only")
     args = parser.parse_args(argv)
     try:
         policy = coverage.load_policy(args.policy)
@@ -39,6 +51,17 @@ def main(argv: list[str] | None = None) -> int:
         elif args.command == "next":
             for company in providers.next_companies(ledger, args.count):
                 print(providers.describe(company))
+        elif args.command == "add":
+            entry = providers.add_company(ledger, args.brand, args.domain, args.evidence, args.note)
+            providers.validate_ledger(ledger, policy)
+            args.ledger.write_text(providers.dump_ledger(ledger), encoding="utf-8")
+            print(f"added {entry['id']}")
+        elif args.command == "leads":
+            found = providers.foreign_leads(ledger, gzip.decompress(args.iptoasn.read_bytes()).decode("utf-8"), args.only)
+            for lead in found:
+                print(f"{lead['company']} | AS{lead['asn']} | {lead['country']} | {lead['description']} | {lead['addresses']} addresses | matched \"{lead['matched']}\"")
+            if not found:
+                print("no leads")
         else:
             before = len(ledger["companies"])
             added = providers.sync_iptoasn(ledger, gzip.decompress(args.iptoasn.read_bytes()).decode("utf-8"))

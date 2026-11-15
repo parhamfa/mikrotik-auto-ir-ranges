@@ -79,10 +79,17 @@ holds only the entries the daily build reads.
 
 ```sh
 python3 scripts/ledger.py stats
-python3 scripts/ledger.py next 15
+python3 scripts/ledger.py next 10
+python3 scripts/ledger.py add --brand Example --domain example.ir
+python3 scripts/ledger.py leads --iptoasn ip2asn-v4.tsv.gz --only sotoon
 python3 scripts/check_providers.py --offline
 python3 scripts/check_providers.py --only chabokan
 ```
+
+`add` records a company found by market research; it needs no network of its
+own. `leads` prints networks registered under another country whose name
+matches a company. A lead is only a name match: the research guide says what
+turns one into evidence.
 
 `check_providers.py` fetches a provider's list the way the build does and
 refuses it when it does not parse, when no row sits inside known Iranian space,

@@ -119,7 +119,65 @@ class LedgerToolTests(unittest.TestCase):
         picked = providers.next_companies(self.ledger(), 15, today=date(2026, 11, 15))
         self.assertEqual([c["id"] for c in picked], ["a", "b", "older", "old"])
         self.assertEqual([c["id"] for c in providers.next_companies(self.ledger(), 3, today=date(2026, 11, 15))], ["a", "b", "older"])
-        self.assertEqual(providers.describe({**self.ledger()["companies"][2], "asns": [1, 2]}), "a | a LLC | AS1,AS2 | unchecked | -")
+
+    def test_next_puts_unchecked_with_a_domain_first(self):
+        ledger = self.ledger()
+        company(ledger, "b")["domains"] = ["b.example"]
+        picked = providers.next_companies(ledger, 15, today=date(2026, 11, 15))
+        self.assertEqual([c["id"] for c in picked], ["b", "a", "older", "old"])
+
+    def test_describe_with_and_without_a_domain(self):
+        entry = {**self.ledger()["companies"][2], "asns": [1, 2]}
+        self.assertEqual(providers.describe(entry), "a | a LLC | - | AS1,AS2 | unchecked | -")
+        self.assertEqual(providers.describe({**entry, "domains": ["a.example", "x.example"], "asns": []}), "a | a LLC | a.example | - | unchecked | -")
+
+    def test_add_company(self):
+        ledger = copy.deepcopy(LEDGER)
+        entry = providers.add_company(ledger, "New Host", "  WWW.NewHost.IR ", "https://newhost.ir/about", "found by search")
+        self.assertEqual(entry, {"id": "new-host", "brand": "New Host", "legal_names": [], "domains": ["newhost.ir"], "asns": [], "status": "unchecked",
+                                 "last_checked": None, "evidence": ["https://newhost.ir/about"], "lists": [], "foreign_networks": [], "notes": "found by search"})
+        self.assertIs(ledger["companies"][-1], entry)
+        providers.validate_ledger(ledger, POLICY)
+        bare = providers.add_company(ledger, "Other", "other.ir")
+        self.assertEqual((bare["evidence"], bare["notes"]), ([], ""))
+        self.assertEqual(providers.add_company(ledger, "New  Host", "third.ir")["id"], "new-host-2")
+
+    def test_add_company_refuses_duplicates_and_bad_domains(self):
+        ledger = copy.deepcopy(LEDGER)
+        for domain in ("parspack.com", "WWW.ParsPack.com", " ParsPack.COM "):
+            with self.assertRaisesRegex(ValueError, "already in the ledger: parspack"):
+                providers.add_company(ledger, "Brand New", domain)
+        with self.assertRaisesRegex(ValueError, "already in the ledger: parspack"):
+            providers.add_company(ledger, "PARSPACK", "different.ir")
+        providers.add_company(ledger, "Sub", "a.parspack.com")
+        for domain in ("nodot", "a.com/x", "https://a.com", "a.com:80", "a b.com", ""):
+            with self.assertRaises(ValueError, msg=domain):
+                providers.add_company(ledger, "Fine Brand", domain)
+
+    def test_foreign_leads(self):
+        ledger = {"schema": 1, "companies": [
+            {**self.ledger()["companies"][0], "id": "sotoon", "brand": "Sotoon", "domains": ["sotoon.ir"], "legal_names": ["Hezardastan Unit Cloud Computing PJSC"], "asns": [100]},
+            {**self.ledger()["companies"][0], "id": "tiny", "brand": "Tiny", "domains": ["host.cloud", "api.derak.cloud"], "legal_names": ["Network"]},
+        ]}
+        rows = "\n".join([
+            "1.0.0.0\t1.0.0.255\t200\tNL\tSotoon-Cloud-Infrastructure Insightometrics B.V.",
+            "1.0.1.0\t1.0.1.255\t200\tNL\tSotoon-Cloud-Infrastructure Insightometrics B.V.",
+            "1.0.2.0\t1.0.2.255\t201\tIR\tSotoon Iranian",
+            "1.0.3.0\t1.0.3.255\t100\tDE\tSotoon held asn",
+            "1.0.4.0\t1.0.4.255\t202\tNone\tSotoon nowhere",
+            "1.0.5.0\t1.0.5.255\t203\tDE\tTiny Network Cloud Hosting",
+            "1.0.6.0\t1.0.6.255\t204\tFR\tDerak-Edge Derak SAS",
+            "1.0.7.0\t1.0.7.15\t205\tFR\tHezardastan Unit Cloud Computing Ltd",
+            "1.0.8.0\t1.0.8.255\t0\tFR\tSotoon zero",
+        ])
+        leads = providers.foreign_leads(ledger, rows)
+        self.assertEqual(leads[0], {"company": "sotoon", "asn": 200, "country": "NL", "description": "Sotoon-Cloud-Infrastructure Insightometrics B.V.",
+                                    "addresses": 512, "matched": "sotoon"})
+        self.assertEqual([(lead["company"], lead["asn"]) for lead in leads], [("sotoon", 200), ("tiny", 204)])
+        self.assertEqual(leads[1]["matched"], "derak")
+        self.assertEqual([lead["asn"] for lead in providers.foreign_leads(ledger, rows, only="tiny")], [204])
+        with self.assertRaisesRegex(ValueError, "unknown company id"):
+            providers.foreign_leads(ledger, rows, only="nope")
 
     def test_sync_attaches_by_legal_name_or_appends_unchecked(self):
         ledger = copy.deepcopy(LEDGER)
@@ -153,9 +211,36 @@ class LedgerToolTests(unittest.TestCase):
                 self.assertEqual(module.main(["--ledger", str(path), "sync", "--iptoasn", str(feed)]), 0)
             lines = out.getvalue().splitlines()
             self.assertIn("list_in_use    6", lines)
-            self.assertEqual(len([line for line in lines if line.count(" | ") == 4]), 2)
+            self.assertEqual(len([line for line in lines if line.count(" | ") == 5]), 2)
             self.assertEqual(lines[-1], "added 1 networks (1 new companies)")
             self.assertEqual(company(json.loads(path.read_text()), "new-host")["asns"], [64602])
+
+
+class LedgerCliTests(unittest.TestCase):
+    def run_cli(self, module, *argv):
+        out, err = io.StringIO(), io.StringIO()
+        with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
+            code = module.main(list(argv))
+        return code, out.getvalue().splitlines(), err.getvalue()
+
+    def test_add_and_leads(self):
+        module = load_script("ledger")
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "ledger.json"
+            path.write_text(providers.dump_ledger(LEDGER), encoding="utf-8")
+            feed = Path(tmp) / "ip2asn-v4.tsv.gz"
+            feed.write_bytes(gzip.compress(b"1.0.0.0\t1.0.0.255\t64700\tNL\tSOTOON-X Sotoon Europe B.V.\n"))
+            self.assertEqual(self.run_cli(module, "--ledger", str(path), "add", "--brand", "Zed Host", "--domain", "WWW.zedhost.ir", "--evidence", "https://zedhost.ir/", "--note", "n")[:2], (0, ["added zed-host"]))
+            code, lines, err = self.run_cli(module, "--ledger", str(path), "add", "--brand", "Other", "--domain", "zedhost.ir")
+            self.assertEqual((code, lines), (1, []))
+            self.assertIn("already in the ledger: zed-host", err)
+            self.assertEqual(company(json.loads(path.read_text()), "zed-host")["domains"], ["zedhost.ir"])
+            before = path.read_text()
+            self.assertEqual(self.run_cli(module, "--ledger", str(path), "leads", "--iptoasn", str(feed))[:2],
+                             (0, ["sotoon | AS64700 | NL | SOTOON-X Sotoon Europe B.V. | 256 addresses | matched \"sotoon\""]))
+            self.assertEqual(self.run_cli(module, "--ledger", str(path), "leads", "--iptoasn", str(feed), "--only", "zed-host")[:2], (0, ["no leads"]))
+            self.assertEqual(self.run_cli(module, "--ledger", str(path), "leads", "--iptoasn", str(feed), "--only", "nope")[0], 1)
+            self.assertEqual(path.read_text(), before)
 
 
 ANCHOR = {4: [net("91.107.0.0/16"), net("94.182.0.0/16"), net("185.24.252.0/22")], 6: []}
@@ -221,7 +306,10 @@ class GateTests(unittest.TestCase):
             lines = out.getvalue().splitlines()
         self.assertRegex(lines[0], r"^OK ledger and catalogue agree \(\d+ companies, 7 provider lists\)$")
         self.assertTrue(lines[2].startswith("OK   chabokan: 21 rows kept, 1 dropped (duplicate)"))
-        self.assertTrue(lines[4].startswith("FAIL parspack: invalid parspack provider feed"))
+        self.assertEqual(lines[3], "1 of 1 provider lists healthy")
+        self.assertTrue(lines[5].startswith("FAIL parspack: invalid parspack provider feed"))
+        self.assertEqual(lines[6], "0 of 1 provider lists healthy")
+        self.assertEqual(providers.gate_summary([True, False, True]), "2 of 3 provider lists healthy")
         self.assertEqual(lines[-1], "FAIL unknown provider ids: nope")
 
 
