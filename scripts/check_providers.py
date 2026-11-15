@@ -74,12 +74,13 @@ def main(argv: list[str] | None = None) -> int:
     except (GenerationError, OSError, EOFError, ValueError, KeyError) as exc:
         print(f"FAIL cannot load known Iranian space: {exc}")
         return 1
-    failed = False
+    results = []
     for provider in selected:
         ok, line = providers.check_provider(provider, lambda url: download(url, timeout=60), anchor)
         print(line)
-        failed |= not ok
-    return 1 if failed else 0
+        results.append(ok)
+    print(providers.gate_summary(results))
+    return 0 if all(results) else 1
 
 
 if __name__ == "__main__":

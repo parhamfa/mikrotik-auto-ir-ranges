@@ -487,9 +487,10 @@
           "label": "NL",
           "state": "proposed",
           "evidence": [
-            "https://rdap.db.ripe.net/autnum/41227"
+            "https://rdap.db.ripe.net/autnum/41227",
+            "https://rdap.db.ripe.net/autnum/49801"
           ],
-          "note": "Same network handle, Sotoon-Cloud-Infrastructure, registered to Insightometrics B.V. On 2026-11-14 it announced 5,888 addresses and 768 were not in the list: 193.29.17.0/24, 193.29.18.0/24, 193.29.24.0/24. Where those servers are is not verified. Needs the owner's yes."
+          "note": "Tie: the Dutch network AS41227 (Insightometrics B.V., Amsterdam) and the Iranian AS49801 share the contact handle SCS600-RIPE, \"Sotoon Cloud Support\", and the network name Sotoon-Cloud-Infrastructure. On 2026-11-14 it announced 5,888 addresses, 768 of them outside the published list: 193.29.17.0/24, 193.29.18.0/24 and 193.29.24.0/24. Where those servers are is not verified."
         }
       ],
       "notes": "No published list at the usual addresses on 2026-11-14; help pages not read yet."
@@ -1249,7 +1250,7 @@
           "evidence": [
             "https://rdap.db.ripe.net/autnum/24947"
           ],
-          "note": "Registered to Parsun Network Solutions PTY LTD, Australia; the registry's organisation record also lists an address in Yazd. 217.216.217.0/24 was not in the list on 2026-11-14. Server location not verified. Needs the owner's yes."
+          "note": "Tie: AS24947, named digitalvps and registered to Parsun Network Solutions PTY LTD in Australia, is maintained by lir-ir-Nahor-1-mnt, the maintainer of the Iranian company Nahor Hadish; the organisation record also lists an address in Yazd. On 2026-11-14 the published list lacked 217.216.217.0/24 (256 addresses). Where those servers sit is not verified."
         }
       ],
       "notes": ""
@@ -2307,6 +2308,231 @@
       "lists": [],
       "foreign_networks": [],
       "notes": ""
+    },
+    {
+      "id": "liara",
+      "brand": "Liara",
+      "legal_names": [],
+      "domains": [
+        "liara.ir"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://liara.ir/",
+        "https://docs.liara.ir/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Sells hosting, PaaS, cloud servers and object storage; no CDN in its menu. Read the home page and the docs index: no page about IP ranges or whitelisting. /ips.txt and /cdnips.txt on liara.ir are 404. No leads from the foreign-network check. Pages listed by a web search about fixed IPs and firewalls were not opened; they are about a customer's own IP, not a published list (not verified)."
+    },
+    {
+      "id": "paastacloud",
+      "brand": "PaastaCloud",
+      "legal_names": [],
+      "domains": [
+        "paasta.cloud"
+      ],
+      "asns": [],
+      "status": "candidate",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://paasta.cloud/",
+        "https://paasta.cloud/docs/cdn",
+        "https://network.paasta.cloud/ips.txt"
+      ],
+      "lists": [
+        {
+          "url": "https://network.paasta.cloud/ips.txt",
+          "policy_id": null,
+          "state": "proposed",
+          "note": "Linked from the whitelisting section of https://paasta.cloud/docs/cdn. On 2026-11-15 it held 84 rows, broadest /24, and passed the gate; 9 single addresses are outside known Iranian space: 3 at Hetzner, 4 at Sollutium, 2 at Datacamp. Waits for the owner's yes."
+        }
+      ],
+      "foreign_networks": [],
+      "notes": "Sells a CDN and a deployment platform. Usual addresses /ips.txt, /cdnips.txt, /ip.txt, /ips, /ip-ranges.txt on paasta.cloud all 404; api.paasta.cloud does not resolve. No leads from the foreign-network check."
+    },
+    {
+      "id": "hamravesh",
+      "brand": "Hamravesh",
+      "legal_names": [],
+      "domains": [
+        "hamravesh.com"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://hamravesh.com/",
+        "https://docs.hamravesh.com/",
+        "https://docs.hamravesh.com/products/network/exclusive-outbound-ip"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Managed Kubernetes and the Darkube PaaS. Docs home and first of five pages of guides read; the network page only explains one dedicated outbound IP per organisation and cluster, not a published list. /ips.txt and /cdnips.txt on hamravesh.com are 404. Guides pages 2 to 5 not read (not verified). No leads."
+    },
+    {
+      "id": "sakku",
+      "brand": "Sakku",
+      "legal_names": [],
+      "domains": [
+        "sakku.cloud"
+      ],
+      "asns": [],
+      "status": "unreachable",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://github.com/SakkuCloud"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "sakku.cloud does not resolve (no DNS answer). sakku.ir resolves to 185.37.54.254 (a Tebyan-Collocation network in Iran per RIPE) but port 443 refused the connection and port 80 timed out from here. That sakku.ir is this company is not verified. A GitHub organisation SakkuCloud describes a Sakku cloud platform; that it is Iranian is not verified. Site never read."
+    },
+    {
+      "id": "abalon-cloud",
+      "brand": "Abalon Cloud",
+      "legal_names": [],
+      "domains": [
+        "abalon.cloud"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://abalon.cloud/",
+        "https://docs.abalon.cloud/",
+        "https://docs.abalon.cloud/cdn/cdn"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Sells a CDN, cloud servers, PaaS and DDoS protection. Home page, docs index and the CDN docs section index read (the https address redirects to an http one, which is what was actually opened): no IP list. The CDN subpages (for example Security) were not opened (not verified). On abalon.cloud, /ips.txt /cdnips.txt /ip.txt /ips /ip-ranges.txt are all 404, and api.abalon.cloud does not resolve. The one lead (AS149384, Indonesian municipality Tabalong) matched only because 'abalon' sits inside 'Tabalong'; rejected."
+    },
+    {
+      "id": "afranet",
+      "brand": "Afranet",
+      "legal_names": [],
+      "domains": [
+        "afranet.ir"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://plus.afranet.ir/",
+        "https://plus.afranet.ir/faq"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Sells cloud servers, DNS, object storage, bandwidth and, per its FAQ, a CDN. afranet.ir redirects to plus.afranet.ir. FAQ read, including the CDN section: no IP list or whitelist page. /ips.txt /cdnips.txt /ip.txt /ips /ip-ranges.txt on afranet.ir are 404 and api.afranet.ir does not resolve. The first fetch by the page-reading tool failed on a certificate chain error; a plain curl had no certificate error. No leads."
+    },
+    {
+      "id": "greenplus",
+      "brand": "GreenPlus",
+      "legal_names": [],
+      "domains": [
+        "greenplus.cloud"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://greenplus.cloud/",
+        "https://greenplus.cloud/category/product_documentation/",
+        "https://greenplus.cloud/product_documentation/setting-up-a-cdn-in-the-portal/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Sells cloud servers, Kubernetes and a CDN. Home, product documentation index and the CDN setup page read: no IP list. The knowledge-base category was not read (not verified). The five usual addresses on greenplus.cloud redirect to the home page, so they do not exist; api.greenplus.cloud does not resolve. No leads."
+    },
+    {
+      "id": "nodisk",
+      "brand": "Nodisk",
+      "legal_names": [],
+      "domains": [
+        "nodisk.ir"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://nodisk.ir/",
+        "https://nodisk.ir/help"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Sells cloud file storage and S3-compatible storage (Nodrive); no CDN. Home page and help page read: no IP list. /ips.txt and /cdnips.txt are 404. No leads."
+    },
+    {
+      "id": "darkube",
+      "brand": "Darkube",
+      "legal_names": [],
+      "domains": [
+        "darkube.ir"
+      ],
+      "asns": [],
+      "status": "rejected",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://hamravesh.com/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "A product of Hamravesh, not a company of its own; see the hamravesh entry. darkube.ir does not resolve (no DNS answer). Darkube is listed as a product (PaaS) on the Hamravesh home page, so it is probably not a separate company; it is covered by the hamravesh entry. Not verified that darkube.ir was ever its domain."
+    },
+    {
+      "id": "kubit",
+      "brand": "Kubit",
+      "legal_names": [],
+      "domains": [
+        "kubit.ir",
+        "kubit.cloud"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://kubit.cloud/",
+        "https://kubit.cloud/fa/docs/",
+        "https://kubit.cloud/fa/docs/faq/"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "kubit.ir redirects to kubit.cloud. Sells a managed Kubernetes platform, cloud servers (IaaS) and databases; no CDN. Home, docs index and FAQ read: no IP list. The IaaS pages on floating IPs and security groups were not opened (not verified). /ips.txt and /cdnips.txt are 404. The one lead (AS154615, UBITECH ASIA LIMITED, Hong Kong) matched on a shared word only: its APNIC record (https://rdap.apnic.net/autnum/154615) shows Hong Kong and Taiwan addresses, none in Iran; rejected."
+    },
+    {
+      "id": "backtory",
+      "brand": "Backtory",
+      "legal_names": [],
+      "domains": [
+        "backtory.com"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.context-awesome.com/list/professormahi/awesome-services-4-iranian-developers"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cloud. Not yet verified on the company's own site. storage/CDN/video; old list, status unverified, may be closed"
+    },
+    {
+      "id": "saba-host",
+      "brand": "Saba.host",
+      "legal_names": [],
+      "domains": [
+        "saba.host"
+      ],
+      "asns": [],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [
+        "https://www.whtop.com/directory/country/ir/category/cdn"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "Found by market research on 2026-11-15 as selling: cdn. Not yet verified on the company's own site. listed in CDN directory only; product unverified MizbanCloud's registered name is Saba Abr Mizban; whether this is the same company is not verified."
     }
   ]
 }
