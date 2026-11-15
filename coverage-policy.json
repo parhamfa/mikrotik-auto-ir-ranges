@@ -159,44 +159,7 @@
           "reviewed_on": "2026-09-20",
           "reason": "The provider publishes this inventory on its own domain for its Iranian CDN service. Collect the listed public prefixes, including foreign-hosted edges; this does not establish ownership of the hosting ASNs."
         }
-      ],
-      "discovery_sources": {
-        "candidate_id": "provider:https://parspack.com/cdnips.txt",
-        "first_seen": "2026-09-17T18:24:45.497879+00:00",
-        "independent_evidence_groups": 1,
-        "evidence_fingerprints": [
-          "4ff1061203de60284d876b2fa8b8ee7ba386710c31a5325a3da6c94a3c8da140",
-          "e804dfa642074d7dc08ab44a5ad61dc2e1458e92e42a071371a2624d72881991"
-        ],
-        "sources": [
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:parspack",
-            "original_source_urls": [
-              "https://parspack.com/cdnips.txt"
-            ],
-            "path": "text/parspack.txt",
-            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/parspack.txt",
-            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
-          },
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:parspack",
-            "original_source_urls": [
-              "https://parspack.com/cdnips.txt"
-            ],
-            "path": "text/parspack.txt",
-            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/parspack.txt",
-            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "derakcloud_ipv6",
@@ -220,46 +183,7 @@
           "reviewed_on": "2026-09-20",
           "reason": "Derak's official IP-range documentation links this IPv6 inventory for its reverse proxies. All ten observed prefixes are public /64s. Admit only the published prefixes, not the hosting ASNs."
         }
-      ],
-      "discovery_sources": {
-        "candidate_id": "provider:https://api.derak.cloud/public/ipv6",
-        "first_seen": "2026-09-17T18:24:45.497879+00:00",
-        "independent_evidence_groups": 1,
-        "evidence_fingerprints": [
-          "3b92802576f1e47a537e067bd2a2bd9b4767e3159491e04f2c3eefb2a95543c1",
-          "5aad866fd6c6c19d5ff16ee9e352e4525f9766e1be23c8a267cb47aed495657d"
-        ],
-        "sources": [
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:derakcloud",
-            "original_source_urls": [
-              "https://api.derak.cloud/public/ipv4",
-              "https://api.derak.cloud/public/ipv6"
-            ],
-            "path": "text/derakcloud.txt",
-            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/derakcloud.txt",
-            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
-          },
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:derakcloud",
-            "original_source_urls": [
-              "https://api.derak.cloud/public/ipv4",
-              "https://api.derak.cloud/public/ipv6"
-            ],
-            "path": "text/derakcloud.txt",
-            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/derakcloud.txt",
-            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "iranserver",
@@ -284,72 +208,54 @@
           "reviewed_on": "2026-10-04",
           "reason": "IranServer's official CDN whitelist documentation links ips.f95.com, whose root and legacy ip.txt path redirect to this inventory. All 22 observed entries are public IPv4 host addresses. Admit the published CDN endpoints without admitting their hosting ASNs."
         }
-      ],
-      "discovery_sources": {
-        "candidate_id": "provider:https://ips.f95.com/ip.txt",
-        "first_seen": "2026-09-17T18:24:45.497879+00:00",
-        "independent_evidence_groups": 1,
-        "evidence_fingerprints": [
-          "66772521d24248090b8277437c4a4b6c4affc417cd4a6d15d2c444d0878dbe0b",
-          "6fece8bfa74f7f71da9464a3a11e262193778d7015694320f9142280859667c6",
-          "7799809e3c0d3eb6aeb6ba36f4e4095852bfe26e44ec5e5883975b0a0f0a8b6a",
-          "b73f32cd8feadfeb5aade5fff8881e196b0867ebca4f07c8a2abb3cf816b3e08"
-        ],
-        "sources": [
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:iranserver",
-            "original_source_urls": [
-              "https://ips.f95.com/ip.txt"
-            ],
-            "path": "text/iranserver.txt",
-            "release_commit": "466bd542d3c21cf85451150507111e5a50bc7211",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/466bd542d3c21cf85451150507111e5a50bc7211/text/iranserver.txt",
-            "version": "466bd542d3c21cf85451150507111e5a50bc7211"
-          },
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:iranserver",
-            "original_source_urls": [
-              "https://ips.f95.com/ip.txt"
-            ],
-            "path": "text/iranserver.txt",
-            "release_commit": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43/text/iranserver.txt",
-            "version": "693579c7fcd1b39e4de3fbb35b9f5ea1e7da8c43"
-          },
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:iranserver",
-            "original_source_urls": [
-              "https://ips.f95.com/ip.txt"
-            ],
-            "path": "text/iranserver.txt",
-            "release_commit": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/c96c2b93bcb0ae1d884df1a19a66c396476a74b7/text/iranserver.txt",
-            "version": "c96c2b93bcb0ae1d884df1a19a66c396476a74b7"
-          },
-          {
-            "license": "GPL-3.0",
-            "license_url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/676695ea3b4c95d5cf48a7c4e2e718bac5b8a099/LICENSE",
-            "lineage": "provider-inventory:iranserver",
-            "original_source_urls": [
-              "https://ips.f95.com/ip.txt"
-            ],
-            "path": "text/iranserver.txt",
-            "release_commit": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf",
-            "source": "Chocolate4U/Iran-v2ray-rules",
-            "url": "https://github.com/Chocolate4U/Iran-v2ray-rules/blob/9f1cd642f1be25c493ae1c7185fa57aa6975c2bf/text/iranserver.txt",
-            "version": "9f1cd642f1be25c493ae1c7185fa57aa6975c2bf"
-          }
-        ]
-      }
+      ]
+    },
+    {
+      "id": "derakcloud_ipv4",
+      "version": 4,
+      "url": "https://api.derak.cloud/public/ipv4",
+      "evidence": "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+      "min_count": 8,
+      "max_count": 64,
+      "min_prefixlen": 24,
+      "state": "accepted",
+      "reviewed_on": "2026-11-15",
+      "review_reason": "Derak's official IP-range documentation links this IPv4 inventory next to the IPv6 one. On 2026-11-15 it held 19 rows: 18 public /24 and /28 ranges and one private range that the build drops. Eight /28 ranges sit at DigitalOcean, Hetzner, Vultr and Datacamp. Admit only the published prefixes, not the hosting ASNs.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://api.derak.cloud/public/ipv4",
+          "evidence": [
+            "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/",
+            "https://api.derak.cloud/public/ipv4"
+          ],
+          "reviewed_on": "2026-11-15",
+          "reason": "Derak's official IP-range documentation links this IPv4 inventory next to the IPv6 one. On 2026-11-15 it held 19 rows: 18 public /24 and /28 ranges and one private range that the build drops. Eight /28 ranges sit at DigitalOcean, Hetzner, Vultr and Datacamp. Admit only the published prefixes, not the hosting ASNs."
+        }
+      ]
+    },
+    {
+      "id": "chabokan",
+      "version": 4,
+      "url": "https://chabokan.net/ips.txt",
+      "evidence": "https://chabokan.net/ips.txt",
+      "min_count": 8,
+      "max_count": 64,
+      "min_prefixlen": 28,
+      "state": "accepted",
+      "reviewed_on": "2026-11-15",
+      "review_reason": "Chabokan, an Iranian platform host, serves this plain list from its own domain. On 2026-11-15 it held 22 rows, one a repeat: 20 single addresses and one /28, eleven inside Iranian networks and ten at Hetzner, OVH and OneProvider. The site does not describe the file. Admit only the published prefixes, not the hosting ASNs.",
+      "relationships": [
+        {
+          "type": "provider_inventory",
+          "target": "https://chabokan.net/ips.txt",
+          "evidence": [
+            "https://chabokan.net/ips.txt"
+          ],
+          "reviewed_on": "2026-11-15",
+          "reason": "Chabokan, an Iranian platform host, serves this plain list from its own domain. On 2026-11-15 it held 22 rows, one a repeat: 20 single addresses and one /28, eleven inside Iranian networks and ten at Hetzner, OVH and OneProvider. The site does not describe the file. Admit only the published prefixes, not the hosting ASNs."
+        }
+      ]
     }
   ]
 }

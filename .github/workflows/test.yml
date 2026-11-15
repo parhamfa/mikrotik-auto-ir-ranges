@@ -20,5 +20,14 @@ jobs:
           python-version: "3.13"
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
+      - name: Check provider ledger and catalogue agree
+        run: python scripts/check_providers.py --offline
+      - name: Test changed provider lists
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          git fetch --no-tags --depth=1 origin "+refs/heads/$BASE_REF:refs/remotes/origin/$BASE_REF"
+          python scripts/check_providers.py --changed-against "origin/$BASE_REF"
       - name: Compile Python sources
         run: python -m compileall -q auto_ir_ranges scripts tests

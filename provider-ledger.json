@@ -1,0 +1,2312 @@
+{
+  "schema": 1,
+  "companies": [
+    {
+      "id": "iranserver",
+      "brand": "IranServer",
+      "legal_names": [
+        "Green Web Samaneh Novin PJSC"
+      ],
+      "domains": [
+        "iranserver.com",
+        "f95.com"
+      ],
+      "asns": [
+        61173
+      ],
+      "status": "list_in_use",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://docs.iranserver.com/cdn/security-ssl/cdn-ip-whitelist/"
+      ],
+      "lists": [
+        {
+          "url": "https://ips.f95.com/ips.txt",
+          "policy_id": "iranserver",
+          "state": "in_use",
+          "note": ""
+        }
+      ],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "parspack",
+      "brand": "ParsPack",
+      "legal_names": [
+        "Vandad Vira Hooman LLC"
+      ],
+      "domains": [
+        "parspack.com"
+      ],
+      "asns": [
+        60631
+      ],
+      "status": "list_in_use",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://parspack.com/cdn"
+      ],
+      "lists": [
+        {
+          "url": "https://parspack.com/cdnips.txt",
+          "policy_id": "parspack",
+          "state": "in_use",
+          "note": ""
+        }
+      ],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "chabokan",
+      "brand": "Chabokan",
+      "legal_names": [],
+      "domains": [
+        "chabokan.net"
+      ],
+      "asns": [],
+      "status": "list_in_use",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://chabokan.net/ips.txt"
+      ],
+      "lists": [
+        {
+          "url": "https://chabokan.net/ips.txt",
+          "policy_id": "chabokan",
+          "state": "in_use",
+          "note": "The site does not describe the file. Rows are single servers at Iranian hosts and at Hetzner, OVH and OneProvider. One row is repeated; the build drops the repeat."
+        }
+      ],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ngsas-nedagostarsaba",
+      "brand": "",
+      "legal_names": [
+        "Parvaresh Dadeha Co. Private Joint Stock"
+      ],
+      "domains": [],
+      "asns": [
+        39501,
+        59703
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "arvancloud",
+      "brand": "ArvanCloud",
+      "legal_names": [
+        "Noyan Abr Arvan Co. (Private Joint Stock)"
+      ],
+      "domains": [
+        "arvancloud.ir",
+        "arvancloud.com"
+      ],
+      "asns": [
+        202468,
+        205585
+      ],
+      "status": "list_in_use",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://www.arvancloud.ir/fa/dev/ips"
+      ],
+      "lists": [
+        {
+          "url": "https://www.arvancloud.ir/fa/ips.txt",
+          "policy_id": "arvancloud",
+          "state": "in_use",
+          "note": ""
+        }
+      ],
+      "foreign_networks": [
+        {
+          "asn": 208006,
+          "label": "AE",
+          "state": "accepted",
+          "evidence": [
+            "https://rdap.db.ripe.net/autnum/208006"
+          ],
+          "note": "ARVANCLOUD GLOBAL TECHNOLOGIES L.L.C"
+        },
+        {
+          "asn": 57568,
+          "label": "AE",
+          "state": "accepted",
+          "evidence": [
+            "https://rdap.db.ripe.net/autnum/57568"
+          ],
+          "note": "ARVANCLOUD GLOBAL TECHNOLOGIES L.L.C"
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "hamara-as",
+      "brand": "",
+      "legal_names": [
+        "Hamara System Tabriz Engineering Company"
+      ],
+      "domains": [],
+      "asns": [
+        47262
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "hostiran-network",
+      "brand": "",
+      "legal_names": [
+        "NOAVARAN SHABAKEH SABZ MEHREGAN (Ltd.)"
+      ],
+      "domains": [],
+      "asns": [
+        59441,
+        48029
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "pishgaman-datacenter",
+      "brand": "",
+      "legal_names": [
+        "Pishgaman Toseeh Ertebatat Company (Private Joint Stock)"
+      ],
+      "domains": [],
+      "asns": [
+        34918
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "sefroyekpardazeng-as",
+      "brand": "",
+      "legal_names": [
+        "Sefroyek Pardaz Engineering PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        48715,
+        44285,
+        60248
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "at-cloud",
+      "brand": "",
+      "legal_names": [
+        "Asre Dadeha Asiatech"
+      ],
+      "domains": [],
+      "asns": [
+        60077
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "webdade",
+      "brand": "",
+      "legal_names": [
+        "Web Dadeh Paydar Co (Ltd)"
+      ],
+      "domains": [],
+      "asns": [
+        49556,
+        207724
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "hesabgar-as",
+      "brand": "",
+      "legal_names": [
+        "Hesabgar Pardaz Gharb PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        48359
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "tehranserver",
+      "brand": "",
+      "legal_names": [
+        "Fanavaran Mehr Vatan Tehran Server Group LLC"
+      ],
+      "domains": [],
+      "asns": [
+        213807
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dade-samane-fanava",
+      "brand": "",
+      "legal_names": [
+        "Dade Samane Fanava Company (PJS)"
+      ],
+      "domains": [],
+      "asns": [
+        62442
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "aminidc",
+      "brand": "",
+      "legal_names": [
+        "Asre Pardazeshe Ettelaate Amin Institute"
+      ],
+      "domains": [],
+      "asns": [
+        48147
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "gsc",
+      "brand": "",
+      "legal_names": [
+        "Giti Secure Cloud LLC"
+      ],
+      "domains": [],
+      "asns": [
+        204104
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mobinidc",
+      "brand": "",
+      "legal_names": [
+        "Mobin Arvand Infrastructure Company LTD"
+      ],
+      "domains": [],
+      "asns": [
+        215708
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mahannet-as",
+      "brand": "",
+      "legal_names": [
+        "Enteghal Dadeh Mahan Co. PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        44090
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "fanavaran-mihan-mizban",
+      "brand": "",
+      "legal_names": [
+        "FanAvaran Mihan Mizban PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        214922
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "parsabr",
+      "brand": "",
+      "legal_names": [
+        "Pars Abr Toseeh Ertebatat LTD"
+      ],
+      "domains": [],
+      "asns": [
+        198154
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "systec-as",
+      "brand": "",
+      "legal_names": [
+        "Rayaneh Pardazan Baran Co. Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        50558
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mobinhost",
+      "brand": "",
+      "legal_names": [
+        "Dade Pardazi Mobinhost Co LTD"
+      ],
+      "domains": [],
+      "asns": [
+        208555,
+        204544,
+        51026
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ir-asretelecom-as",
+      "brand": "",
+      "legal_names": [
+        "Asr-e Enteghal-e Dadeha Company (Private J.S.)"
+      ],
+      "domains": [],
+      "asns": [
+        49103
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "sotoon",
+      "brand": "Sotoon",
+      "legal_names": [
+        "Hezardastan Unit Cloud Computing PJSC"
+      ],
+      "domains": [
+        "sotoon.ir"
+      ],
+      "asns": [
+        49801,
+        204533,
+        202319
+      ],
+      "status": "candidate",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://sotoon.ir/"
+      ],
+      "lists": [],
+      "foreign_networks": [
+        {
+          "asn": 41227,
+          "label": "NL",
+          "state": "proposed",
+          "evidence": [
+            "https://rdap.db.ripe.net/autnum/41227"
+          ],
+          "note": "Same network handle, Sotoon-Cloud-Infrastructure, registered to Insightometrics B.V. On 2026-11-14 it announced 5,888 addresses and 768 were not in the list: 193.29.17.0/24, 193.29.18.0/24, 193.29.24.0/24. Where those servers are is not verified. Needs the owner's yes."
+        }
+      ],
+      "notes": "No published list at the usual addresses on 2026-11-14; help pages not read yet."
+    },
+    {
+      "id": "rayazma-as",
+      "brand": "",
+      "legal_names": [
+        "Pardazeshgar Ray Azma Co. Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        49847
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "derakcloud",
+      "brand": "DerakCloud",
+      "legal_names": [
+        "E-Money Net Developers 24 Company Private Joint Stock"
+      ],
+      "domains": [
+        "derak.cloud"
+      ],
+      "asns": [
+        60423
+      ],
+      "status": "list_in_use",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://derak.cloud/%D9%84%DB%8C%D8%B3%D8%AA-%D8%A8%D8%A7%D8%B2%D9%87-%D9%87%D8%A7%DB%8C-ip/"
+      ],
+      "lists": [
+        {
+          "url": "https://api.derak.cloud/public/ipv6",
+          "policy_id": "derakcloud_ipv6",
+          "state": "in_use",
+          "note": ""
+        },
+        {
+          "url": "https://api.derak.cloud/public/ipv4",
+          "policy_id": "derakcloud_ipv4",
+          "state": "in_use",
+          "note": "The file carries one private row, 192.168.204.48/28, which the build drops."
+        }
+      ],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "sabaidea",
+      "brand": "",
+      "legal_names": [
+        "Fannavaran-e Idea Pardaz-e Saba PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        44932
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizbancloud",
+      "brand": "MizbanCloud",
+      "legal_names": [
+        "Saba Abr Mizban LLC"
+      ],
+      "domains": [
+        "mizbancloud.com"
+      ],
+      "asns": [
+        34412
+      ],
+      "status": "list_in_use",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://docs.mizbancloud.com/cdn/whitelist"
+      ],
+      "lists": [
+        {
+          "url": "https://mizbancloud.com/ips.txt",
+          "policy_id": "mizbancloud",
+          "state": "in_use",
+          "note": ""
+        }
+      ],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "khalijserver",
+      "brand": "",
+      "legal_names": [
+        "Amir Hosein Maaref"
+      ],
+      "domains": [],
+      "asns": [
+        211056
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ir-resanehpardaz",
+      "brand": "",
+      "legal_names": [
+        "Gostaresh Ertebat Azin Kia Company PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        206495
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "abrenik-cloud",
+      "brand": "",
+      "legal_names": [
+        "Padiz Dadeh Resan PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        205207
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ircdn",
+      "brand": "",
+      "legal_names": [
+        "Khallagh Borhan Market Development for Creative Industries Co"
+      ],
+      "domains": [],
+      "asns": [
+        8868
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "pishgamrayan",
+      "brand": "",
+      "legal_names": [
+        "Pishgam Rayan Dadeh Pajooh PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        214570
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "adg-as",
+      "brand": "",
+      "legal_names": [
+        "ARAAX DADEH GOSTAR information and communication Development Co (Private Joint Stock)"
+      ],
+      "domains": [],
+      "asns": [
+        51235
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "adpdigital-as",
+      "brand": "",
+      "legal_names": [
+        "Atieh Dadeh Pardaz PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        49148
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "vip-host",
+      "brand": "",
+      "legal_names": [
+        "Taymaz Gostaran Naghshe Almas Co. ( Ltd )"
+      ],
+      "domains": [],
+      "asns": [
+        216054
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "abramad",
+      "brand": "",
+      "legal_names": [
+        "Abramad Technological Infrastructures Development Company PJS"
+      ],
+      "domains": [],
+      "asns": [
+        60014,
+        211325
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "tadbir-as",
+      "brand": "",
+      "legal_names": [
+        "Tadbir Pardaz IT Group LTD"
+      ],
+      "domains": [],
+      "asns": [
+        49099
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "foojan",
+      "brand": "",
+      "legal_names": [
+        "Foojan Cloud Computing Co. PJS"
+      ],
+      "domains": [],
+      "asns": [
+        214171
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizbandadehpardis",
+      "brand": "",
+      "legal_names": [
+        "Mizban Dadeh Pardis .Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        213953
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mtserver",
+      "brand": "",
+      "legal_names": [
+        "Mohammad Taha Mashhorrodi"
+      ],
+      "domains": [],
+      "asns": [
+        216169
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "darvag",
+      "brand": "",
+      "legal_names": [
+        "Darvag Cloud Infrastructure Innovators Co.PJS"
+      ],
+      "domains": [],
+      "asns": [
+        212544
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "noor-idc",
+      "brand": "",
+      "legal_names": [
+        "Computer Research Center of Islamic Sciences"
+      ],
+      "domains": [],
+      "asns": [
+        206596
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "kimiacloud-as",
+      "brand": "",
+      "legal_names": [
+        "Dade Pardaz Kimia Pouyesh PJS."
+      ],
+      "domains": [],
+      "asns": [
+        200554
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "faranet",
+      "brand": "",
+      "legal_names": [
+        "Fara Negar Pardaz Noor Khuzestan Co.JSP"
+      ],
+      "domains": [],
+      "asns": [
+        49596
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dsa-as",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Pardazan Sabz Alborz Co.(P.J.S.)"
+      ],
+      "domains": [],
+      "asns": [
+        48289
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mabna-cloud",
+      "brand": "",
+      "legal_names": [
+        "Mizbani Dadehaye Mabna PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        35766
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "serverpars",
+      "brand": "",
+      "legal_names": [
+        "Fanavari Serverpars Argham Gostar Company Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        201999
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "onlineserver",
+      "brand": "",
+      "legal_names": [
+        "Mizban Dade Pasargad LLC"
+      ],
+      "domains": [],
+      "asns": [
+        64458,
+        201227
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "aadp",
+      "brand": "",
+      "legal_names": [
+        "Afagh Andish Dadeh Pardis Co. Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        25264
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "abrbaranidc",
+      "brand": "",
+      "legal_names": [
+        "Abr Baran Information Technologists LLC"
+      ],
+      "domains": [],
+      "asns": [
+        215633
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "varesh-asn",
+      "brand": "",
+      "legal_names": [
+        "Varesh Cloud Hosting Limited Liability Company"
+      ],
+      "domains": [],
+      "asns": [
+        213727
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "rapidoserver",
+      "brand": "",
+      "legal_names": [
+        "Sajjad Khazaei"
+      ],
+      "domains": [],
+      "asns": [
+        218732
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "cloudinow",
+      "brand": "",
+      "legal_names": [
+        "Rasa Samaneh Ofogh LLC"
+      ],
+      "domains": [],
+      "asns": [
+        216061
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mahancloud",
+      "brand": "",
+      "legal_names": [
+        "Mizban Gostar Dade Alvand Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        214431
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "amincloud",
+      "brand": "",
+      "legal_names": [
+        "Amin Asia Cloud Data PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        214151
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "parmincloud-iaas",
+      "brand": "",
+      "legal_names": [
+        "PARMIN CLOUD COMPUTING LLC"
+      ],
+      "domains": [],
+      "asns": [
+        213665,
+        197330
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ako-fanavaran",
+      "brand": "",
+      "legal_names": [
+        "Gostaresh Dade AKO Fanavaran Co LLC"
+      ],
+      "domains": [],
+      "asns": [
+        21005
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "tenp",
+      "brand": "",
+      "legal_names": [
+        "Tejarat Electronic Nojhan Pardazesh LLC"
+      ],
+      "domains": [],
+      "asns": [
+        205536
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "hostandserverprovider",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Gostar Sina Shiraz PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        200296
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ir-gulfcloud-v4-01",
+      "brand": "",
+      "legal_names": [
+        "Seyed Amir Tabatabaei Anaraki"
+      ],
+      "domains": [],
+      "asns": [
+        62334
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "gpdn-as",
+      "brand": "",
+      "legal_names": [
+        "Gostaresh Pardazesh Dana Negar Co.(PJSC)"
+      ],
+      "domains": [],
+      "asns": [
+        51889
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizbanonline",
+      "brand": "",
+      "legal_names": [
+        "Avrin Telecom Industry Development Company (Private Joint Stock)"
+      ],
+      "domains": [],
+      "asns": [
+        219142
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dgp-sh",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Gostar Parmis PJS Company"
+      ],
+      "domains": [],
+      "asns": [
+        216131
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mayahost-llc",
+      "brand": "",
+      "legal_names": [
+        "Maya Pardazesh Iranian LLC"
+      ],
+      "domains": [],
+      "asns": [
+        213069
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "digitalvps",
+      "brand": "DigitalVPS",
+      "legal_names": [
+        "Nahor Hadish Design and Architecture Co., Ltd"
+      ],
+      "domains": [
+        "digitalvps.ir"
+      ],
+      "asns": [
+        201194,
+        214957
+      ],
+      "status": "candidate",
+      "last_checked": "2026-11-15",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/24947"
+      ],
+      "lists": [],
+      "foreign_networks": [
+        {
+          "asn": 24947,
+          "label": "AU",
+          "state": "proposed",
+          "evidence": [
+            "https://rdap.db.ripe.net/autnum/24947"
+          ],
+          "note": "Registered to Parsun Network Solutions PTY LTD, Australia; the registry's organisation record also lists an address in Yazd. 217.216.217.0/24 was not in the list on 2026-11-14. Server location not verified. Needs the owner's yes."
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "id": "chakavak",
+      "brand": "",
+      "legal_names": [
+        "Chakavak Pardazesh Hooshmand Alborz"
+      ],
+      "domains": [],
+      "asns": [
+        200252
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "iranhost-as",
+      "brand": "",
+      "legal_names": [
+        "Roshangar Rayaneh Tehran Co. Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        61055
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "behpardaz",
+      "brand": "",
+      "legal_names": [
+        "Behpardaz Jahan PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        43528
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "bita",
+      "brand": "",
+      "legal_names": [
+        "Pardazesh Rayaneh Bita Co.Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        41856
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "arvincloud",
+      "brand": "",
+      "legal_names": [
+        "Arvin Data Transfer Co. Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        216074
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ayande-cloud",
+      "brand": "",
+      "legal_names": [
+        "Abr Ayande Iranian Co. (Private Joint Stock)"
+      ],
+      "domains": [],
+      "asns": [
+        215350
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "digitalvps-2",
+      "brand": "",
+      "legal_names": [
+        "Amir Mohammad Masoudi"
+      ],
+      "domains": [],
+      "asns": [
+        214515
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "sabzsystem-asn",
+      "brand": "",
+      "legal_names": [
+        "Sabz Pardazesh System Ghadir Co. (P.J.S.)"
+      ],
+      "domains": [],
+      "asns": [
+        214225
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "sourena",
+      "brand": "",
+      "legal_names": [
+        "Sourena Pardazesh Arya Software co. LLC"
+      ],
+      "domains": [],
+      "asns": [
+        207796
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "fava-tabriz-municipality",
+      "brand": "",
+      "legal_names": [
+        "Information and Communication Technology Organization of Tabriz Municipality"
+      ],
+      "domains": [],
+      "asns": [
+        206692
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "shetaban",
+      "brand": "",
+      "legal_names": [
+        "Mizban Dade Shetaban Co. (Ltd)"
+      ],
+      "domains": [],
+      "asns": [
+        201634
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dpa-as",
+      "brand": "",
+      "legal_names": [
+        "Data Pardaz Afraz Private Joint Stock Company"
+      ],
+      "domains": [],
+      "asns": [
+        200796
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "berbidserver",
+      "brand": "",
+      "legal_names": [
+        "Javid Berbid Mamasani Information Technology Company PJS"
+      ],
+      "domains": [],
+      "asns": [
+        200406
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mehranhost-as",
+      "brand": "",
+      "legal_names": [
+        "Mehran Saeedikia trading as Mehranhost.cloud"
+      ],
+      "domains": [],
+      "asns": [
+        219466
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ertebanet-as",
+      "brand": "",
+      "legal_names": [
+        "Mizban Pardazesh Nasle Farda PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        215938
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "irhosting",
+      "brand": "",
+      "legal_names": [
+        "Bonyan Sepehr Kasir PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        215285
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "aep",
+      "brand": "",
+      "legal_names": [
+        "Abr Gostar Arianet LLC"
+      ],
+      "domains": [],
+      "asns": [
+        214824
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "bia2host",
+      "brand": "",
+      "legal_names": [
+        "Mizbani Hooshmand Mehr Afarin PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        214567
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "almahost",
+      "brand": "",
+      "legal_names": [
+        "Alma Fan Avaran Dehkade Jahani Company Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        212328
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "fadakdata",
+      "brand": "",
+      "legal_names": [
+        "Tahlil Dadeh Novin Fadak LLC"
+      ],
+      "domains": [],
+      "asns": [
+        211881
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "hostbaran",
+      "brand": "",
+      "legal_names": [
+        "Fanavaran Nicsepehr Zenderood Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        211408
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "pentaserver",
+      "brand": "",
+      "legal_names": [
+        "Enteghal Dadeh Araz Shomal Company PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        210820
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "spad-abr-pardazesh",
+      "brand": "",
+      "legal_names": [
+        "Parsway Shomal Company Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        210474
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "zarinpal",
+      "brand": "",
+      "legal_names": [
+        "Hamrah Pardaz Zarin PJS"
+      ],
+      "domains": [],
+      "asns": [
+        208675
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizbanabri",
+      "brand": "",
+      "legal_names": [
+        "Mizban Abri Iman Iranian, LLC"
+      ],
+      "domains": [],
+      "asns": [
+        200324
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "anycast",
+      "brand": "",
+      "legal_names": [
+        "Amnpardaz Soft Corporation"
+      ],
+      "domains": [],
+      "asns": [
+        197946
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "iranicaserver",
+      "brand": "",
+      "legal_names": [
+        "Mizban Amvaj Sahel Sepehr Bushehr PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        64434
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "azma-idc",
+      "brand": "",
+      "legal_names": [
+        "Farhang Azma Communications Company LTD"
+      ],
+      "domains": [],
+      "asns": [
+        64399
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "fna-cdn",
+      "brand": "",
+      "legal_names": [
+        "Fars News Agency Cultural Arts Institute"
+      ],
+      "domains": [],
+      "asns": [
+        62229
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dadehpardazanmojtamehormozcompany",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Pardazan Mojtame Hormoz Company Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        59635
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dadehgostar-as",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Gostar Asr Novin P.J.S. Co."
+      ],
+      "domains": [],
+      "asns": [
+        56402
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "lordvpsnlnetworknl",
+      "brand": "",
+      "legal_names": [
+        "Atis Omran Sevin PSJ"
+      ],
+      "domains": [],
+      "asns": [
+        52209
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "daryagroup",
+      "brand": "",
+      "legal_names": [
+        "Abr Tose'eh Darya Group Company PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        48281
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "damavand",
+      "brand": "",
+      "legal_names": [
+        "Zirsakht Pishro Abr Damavand Private Joint Stock Company"
+      ],
+      "domains": [],
+      "asns": [
+        47603
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dade-pardazi-aria-sepehr-utelco",
+      "brand": "",
+      "legal_names": [
+        "Web Gostaran Bandar Company (PJS)"
+      ],
+      "domains": [],
+      "asns": [
+        47308
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dadehgostar",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Gostar Mizban Web LTD"
+      ],
+      "domains": [],
+      "asns": [
+        218302
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "ariyaserver",
+      "brand": "",
+      "legal_names": [
+        "Enteghal Dade Arya Sarv Co (Ltd.)"
+      ],
+      "domains": [],
+      "asns": [
+        216344
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "sahra",
+      "brand": "",
+      "legal_names": [
+        "Rahpooyan Pardazesh Gostar Sahra CO. PJS"
+      ],
+      "domains": [],
+      "asns": [
+        214751
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizban-dadepardaz-pasargad",
+      "brand": "",
+      "legal_names": [
+        "Mizban Dadeh Pardazi Pasargad Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        214361
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "espyrcloudnetworks",
+      "brand": "",
+      "legal_names": [
+        "Milad Ahadpour"
+      ],
+      "domains": [],
+      "asns": [
+        214192
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "famaserver",
+      "brand": "",
+      "legal_names": [
+        "Fanavaran Asak Mahan Asia Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        211703
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "puzzlenet",
+      "brand": "",
+      "legal_names": [
+        "Pardazeshgaran Etelat Zaban Layeha Co Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        203895
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mahanserver",
+      "brand": "",
+      "legal_names": [
+        "Andisheh Sabz Mahan Co. Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        201703
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "hidata",
+      "brand": "",
+      "legal_names": [
+        "Mizban Dadeh Roham Co"
+      ],
+      "domains": [],
+      "asns": [
+        197937
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "jahesh-server",
+      "brand": "",
+      "legal_names": [
+        "Aria Web Development LLC"
+      ],
+      "domains": [],
+      "asns": [
+        60374
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "as-sdnc",
+      "brand": "",
+      "legal_names": [
+        "Abr Afzar Sedna Ertebat Company (LTD.)"
+      ],
+      "domains": [],
+      "asns": [
+        59643
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "shooka",
+      "brand": "",
+      "legal_names": [
+        "Iman Hamrah Behpardaz Company- Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        44243
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizbani-mehr-hamin",
+      "brand": "",
+      "legal_names": [
+        "Mizbani Mehr Hamin PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        219060
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "noyan-abr-negin",
+      "brand": "",
+      "legal_names": [
+        "Noyan Abr Negin"
+      ],
+      "domains": [],
+      "asns": [
+        218724
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mppl2c",
+      "brand": "",
+      "legal_names": [
+        "Mizban Pardazesh Pouyan LLC"
+      ],
+      "domains": [],
+      "asns": [
+        215767
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "webideh",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Gostaran Webideh Co. Ltd."
+      ],
+      "domains": [],
+      "asns": [
+        215746
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "aspa",
+      "brand": "",
+      "legal_names": [
+        "Ayande sazan pardazesh amn ltd."
+      ],
+      "domains": [],
+      "asns": [
+        213895
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "phonixcloud724",
+      "brand": "",
+      "legal_names": [
+        "Noavaran Fanavari Abri Simorgh Ltd"
+      ],
+      "domains": [],
+      "asns": [
+        213551
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "iranians",
+      "brand": "",
+      "legal_names": [
+        "Shabakeh Dadehaye Houshmand Iranian LLC"
+      ],
+      "domains": [],
+      "asns": [
+        213531
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "mizbanfa",
+      "brand": "",
+      "legal_names": [
+        "Dade Pardazan Fahim Shahin Shahr (Ltd)"
+      ],
+      "domains": [],
+      "asns": [
+        212296
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "pardisco",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Rayanesh Abri Pardis Private Joint Stock Company"
+      ],
+      "domains": [],
+      "asns": [
+        212076
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "fekrpardaz",
+      "brand": "",
+      "legal_names": [
+        "Fekr Pardaz Shomal PLC"
+      ],
+      "domains": [],
+      "asns": [
+        212067
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "vidc",
+      "brand": "",
+      "legal_names": [
+        "Vira Cloud DataCenter PJSC"
+      ],
+      "domains": [],
+      "asns": [
+        210405
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "rahkarpardaz",
+      "brand": "",
+      "legal_names": [
+        "Ashraf Rahimi Khorasgani"
+      ],
+      "domains": [],
+      "asns": [
+        208940
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "fireserver",
+      "brand": "",
+      "legal_names": [
+        "HAMED SHIRVANI BAGHERI"
+      ],
+      "domains": [],
+      "asns": [
+        208264
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "datapardaz",
+      "brand": "",
+      "legal_names": [
+        "Dadeh Pardaz Pouya-e Sharif LLC"
+      ],
+      "domains": [],
+      "asns": [
+        205217
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    },
+    {
+      "id": "dorsacloud",
+      "brand": "",
+      "legal_names": [
+        "Dorsa Expert System PJS"
+      ],
+      "domains": [],
+      "asns": [
+        205134
+      ],
+      "status": "unchecked",
+      "last_checked": null,
+      "evidence": [],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": ""
+    }
+  ]
+}

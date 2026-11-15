@@ -25,6 +25,49 @@ from auto_ir_ranges.generator import (
 NOW = datetime(2026, 9, 16, tzinfo=timezone.utc)
 LIMITS = {v: {"min_count": 1, "max_count": 100, "max_bytes": 10_000} for v in (4, 6)}
 PROVIDER = {"id": "arvancloud", "version": 4, "url": "https://example.com/ips", "min_count": 1, "max_count": 100, "min_prefixlen": 16}
+# Real provider files as served on 2026-11-15 (Derak's lacks a final newline).
+DERAK_IPV4 = b"""5.145.115.0/24
+5.145.118.0/24
+5.145.119.0/24
+178.62.222.208/28
+159.69.229.224/28
+116.202.90.176/28
+165.232.92.112/28
+45.77.87.48/28
+207.148.25.64/28
+185.24.252.192/28
+185.24.255.192/28
+185.24.254.64/28
+185.24.252.208/28
+185.24.255.208/28
+185.24.254.80/28
+45.63.43.128/28
+185.24.255.224/28
+192.168.204.48/28
+89.222.113.80/28"""
+CHABOKAN = b"""91.107.181.26/32
+185.58.240.109/32
+45.135.241.131/32
+91.107.161.252/32
+78.110.121.152/32
+65.109.212.48/32
+81.16.116.189/32
+185.141.104.123/32
+81.16.116.189/32
+185.173.129.48/28
+54.36.30.61/32
+178.32.115.159/32
+65.109.189.164/32
+65.109.196.20/32
+91.107.132.28/32
+92.118.205.155/32
+87.247.169.244/32
+91.107.137.67/32
+94.182.93.113/32
+94.182.93.115/32
+46.34.186.251/32
+94.182.93.118/32
+"""
 
 
 def delegated(*rows: str, count: int | None = None, date: str = "20260916") -> bytes:
@@ -87,9 +130,54 @@ class CoverageTests(unittest.TestCase):
             parse_delegated(delegated(date="20260901"), now=NOW)
 
     def test_provider_html_wrong_family_private_and_default_route_fail(self):
-        for data in [b"<html>maintenance</html>\n", b"::/0\n", b"10.0.0.0/24\n", b"0.0.0.0/0\n", b"185.215.232.0/22\n185.215.232.0/22\n"]:
+        for data in [b"<html>maintenance</html>\n", b"::/0\n", b"10.0.0.0/24\n", b"0.0.0.0/0\n", b"185.215.232.0/22\n2a0c:a7c0::/32\n", b"185.215.232.0/22\n185.0.0.0/8\n"]:
             with self.subTest(data=data), self.assertRaises(GenerationError):
                 parse_provider(data, PROVIDER)
+
+    def test_provider_repeat_is_dropped_and_recorded(self):
+        provider = {**PROVIDER, "id": "chabokan", "min_count": 8, "max_count": 64, "min_prefixlen": 28}
+        dropped = []
+        networks = parse_provider(CHABOKAN, provider, dropped)
+        self.assertEqual(len(networks), 21)
+        self.assertEqual(networks.count(ipaddress.ip_network("81.16.116.189/32")), 1)
+        self.assertEqual(dropped, [{"row": "81.16.116.189/32", "reason": "duplicate"}])
+
+    def test_provider_private_row_is_dropped_and_recorded(self):
+        provider = {**PROVIDER, "id": "derakcloud_ipv4", "min_count": 8, "max_count": 64, "min_prefixlen": 24}
+        dropped = []
+        networks = parse_provider(DERAK_IPV4, provider, dropped)
+        self.assertEqual(len(networks), 18)
+        self.assertNotIn(ipaddress.ip_network("192.168.204.48/28"), networks)
+        self.assertEqual(dropped, [{"row": "192.168.204.48/28", "reason": "non-public"}])
+
+    def test_provider_with_too_many_private_rows_is_refused(self):
+        # 19 rows allow one non-public row; a second refuses the whole file.
+        payload = DERAK_IPV4.replace(b"45.63.43.128/28", b"10.1.2.0/28")
+        with self.assertRaisesRegex(GenerationError, "invalid derakcloud_ipv4 provider feed: too many non-public rows: 2 of 19"):
+            parse_provider(payload, {**PROVIDER, "id": "derakcloud_ipv4", "min_prefixlen": 24})
+        with self.assertRaisesRegex(GenerationError, "too many non-public rows"):
+            parse_provider(b"10.0.0.0/24\n192.168.0.0/24\n", PROVIDER)
+
+    def test_provider_count_bounds_apply_to_kept_rows(self):
+        provider = {**PROVIDER, "id": "chabokan", "min_count": 22, "max_count": 64, "min_prefixlen": 28}
+        with self.assertRaisesRegex(GenerationError, "provider count 21 outside configured bounds"):
+            parse_provider(CHABOKAN, provider)
+        self.assertEqual(len(parse_provider(CHABOKAN, {**provider, "min_count": 21})), 21)
+
+    def test_provider_broad_or_wrong_family_row_still_refuses_the_file(self):
+        provider = {**PROVIDER, "id": "derakcloud_ipv4", "min_prefixlen": 25}
+        with self.assertRaisesRegex(GenerationError, "overly broad prefix: 5.145.115.0/24"):
+            parse_provider(DERAK_IPV4, provider)
+        with self.assertRaisesRegex(GenerationError, "unexpected family"):
+            parse_provider(CHABOKAN + b"2a0c:a7c0::/64\n", {**PROVIDER, "min_prefixlen": 28})
+
+    def test_policy_anchor_waiver_must_be_a_non_empty_string(self):
+        for waiver in ("", "   ", 1, None, ["reason"]):
+            with self.subTest(waiver=waiver), tempfile.TemporaryDirectory() as tmp:
+                path = Path(tmp) / "policy.json"
+                path.write_text(json.dumps({"schema": 1, "registry_url": "https://example.com/nro", "registry_min_asns": 1, "operators": [], "providers": [{**PROVIDER, "anchor_waiver": waiver}]}))
+                with self.assertRaisesRegex(GenerationError, "anchor_waiver must be a non-empty string"):
+                    load_policy(path)
 
     def test_exact_subtraction_handles_several_smaller_covering_prefixes(self):
         network = ipaddress.ip_network

@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Callable, Iterable, Mapping, Sequence
 
 from . import __version__
-from . import coverage, delivery, catalogue
+from . import coverage, delivery, catalogue, providers
 from .errors import GenerationError
 
 
@@ -433,9 +433,19 @@ def generate_from_sources(
         "registered_resources_ipv4": (4, registry[4]), "registered_resources_ipv6": (6, registry[6]),
         "selected_asn_ipv4": (4, asn_v4), "selected_asn_ipv6": (6, asn_v6),
     }
+    # Known Iranian space at this point: registry, IPdeny and IPtoASN layers, never other providers.
+    known = {v: collapse_networks((n for version, ns in layers.values() if version == v for n in ns), v) for v in (4, 6)}
+    dropped_rows = {}
     for provider in policy["providers"]:
         key = f"provider_{provider['id']}"
-        networks = attempt(key, key, lambda payload: coverage.parse_provider(payload, provider))
+        dropped: list = []
+        def parse_provider(payload, provider=provider, dropped=dropped):
+            networks = coverage.parse_provider(payload, provider, dropped)
+            providers.check_outside(provider["id"], networks, known[provider["version"]], provider["version"])
+            return networks
+        networks = attempt(key, key, parse_provider)
+        if networks is not None and dropped:
+            dropped_rows[provider["id"]] = dropped
         layers[key] = (provider["version"], fall_back(key, key, provider["version"]) if networks is None else networks)
 
     collapsed_v4 = collapse_networks((n for version, ns in layers.values() if version == 4 for n in ns), 4)
@@ -506,6 +516,8 @@ def generate_from_sources(
         "source_status": source_status,
         "warnings": sorted(warnings),
     }
+    if dropped_rows:
+        report["provider_dropped_rows"] = dropped_rows
     from .provenance import build_provenance
     provenance = build_provenance(policy, layers, registry_details, asn_details, manifest, source_status)
     paged_manifest, pages = delivery.build({4: feed_v4, 6: feed_v6}, generated_at=timestamp, generator_version=__version__)

@@ -51,12 +51,37 @@ class SourceFallbackTests(unittest.TestCase):
 
     def test_provider_payload_failing_sanity_check_is_reused(self):
         _, _, first = build(DAY1)
-        artifacts, report, _ = build(DAY1 + timedelta(days=1), first, replace={"provider_arvancloud": b"10.0.0.0/24\n"})
+        artifacts, report, _ = build(DAY1 + timedelta(days=1), first, replace={"provider_arvancloud": b"10.0.0.0/24\n192.168.0.0/24\n"})
         self.assertIn(b"193.24.119.0/29\n", artifacts.ipv4.data)
         self.assertNotIn(b"10.0.0.0/24", artifacts.ipv4.data)
         status = report["source_status"]["provider_arvancloud"]
         self.assertEqual((status["status"], status["last_fresh"]), ("reused", stamp(DAY1)))
-        self.assertIn("non-public provider prefix", status["reason"])
+        self.assertIn("too many non-public rows", status["reason"])
+        self.assertNotIn("provider_dropped_rows", report)
+
+    def test_provider_over_outside_cap_falls_back_like_a_failed_source(self):
+        _, _, first = build(DAY1)
+        # 8.8.0.0/16 is 65,536 addresses outside the registry, IPdeny and IPtoASN layers.
+        oversized = {"provider_arvancloud": b"185.215.232.0/22\n8.8.0.0/16\n"}
+        artifacts, report, _ = build(DAY1 + timedelta(days=1), first, replace=oversized)
+        self.assertIn(b"193.24.119.0/29\n", artifacts.ipv4.data)
+        self.assertNotIn(b"8.8.0.0/16", artifacts.ipv4.data)
+        self.assertEqual(report["source_status"]["provider_arvancloud"], {"status": "reused", "last_fresh": stamp(DAY1), "reason": "arvancloud provider feed adds 65536 addresses outside known Iranian space; limit 4096"})
+        # Without an earlier copy the layer is dropped with the same reason.
+        artifacts, report, _ = build(DAY1, replace=oversized)
+        self.assertNotIn(b"8.8.0.0/16", artifacts.ipv4.data)
+        self.assertEqual(report["source_status"]["provider_arvancloud"]["status"], "dropped")
+        self.assertIn("outside known Iranian space", report["source_status"]["provider_arvancloud"]["reason"])
+        # Exactly at the cap is still admitted.
+        _, report, _ = build(DAY1, replace={"provider_arvancloud": b"8.8.0.0/20\n"})
+        self.assertEqual(report["source_status"]["provider_arvancloud"]["status"], "fresh")
+
+    def test_dropped_provider_rows_are_reported_only_when_present(self):
+        _, report, _ = build(DAY1)
+        self.assertNotIn("provider_dropped_rows", report)
+        _, report, _ = build(DAY1, replace={"provider_arvancloud": b"185.215.232.0/22\n193.24.119.0/29\n193.24.119.0/29\n10.0.0.0/24\n"})
+        self.assertEqual(report["provider_dropped_rows"], {"arvancloud": [{"row": "193.24.119.0/29", "reason": "duplicate"}, {"row": "10.0.0.0/24", "reason": "non-public"}]})
+        self.assertEqual(report["source_status"]["provider_arvancloud"]["status"], "fresh")
 
     def test_reuse_older_than_thirty_days_drops_the_layer(self):
         _, _, first = build(DAY1)

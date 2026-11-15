@@ -33,6 +33,9 @@ def load_policy(path: Path = POLICY_PATH) -> dict:
                 raise ValueError("invalid provider address family")
             if not 1 <= provider["min_count"] <= provider["max_count"] <= 10_000:
                 raise ValueError("invalid provider count bounds")
+            waiver = provider.get("anchor_waiver")
+            if "anchor_waiver" in provider and (not isinstance(waiver, str) or not waiver.strip()):
+                raise ValueError("anchor_waiver must be a non-empty string")
         for operator in policy["operators"]:
             if not operator["evidence"] or not operator["asns"]:
                 raise ValueError("operator needs ASN ownership evidence")
@@ -140,18 +143,33 @@ def parse_delegated(payload: bytes, *, anchors: Iterable[int] = (), now: datetim
         raise GenerationError(f"invalid NRO delegated statistics: {exc}") from exc
 
 
-def parse_provider(payload: bytes, provider: Mapping) -> list:
+def parse_provider(payload: bytes, provider: Mapping, dropped: list | None = None) -> list:
+    """Keep the public rows of a provider list; a repeat or a stray private row is dropped, not fatal.
+
+    A malformed, wrong-family or too-broad row still refuses the whole file,
+    and so do non-public rows beyond one in ten.
+    """
     try:
-        networks = [ipaddress.ip_network(line.strip(), strict=True) for line in payload.decode("ascii").splitlines() if line.strip() and not line.startswith("#")]
-        if len(set(networks)) != len(networks):
-            raise ValueError("duplicate provider CIDRs")
-        if not provider["min_count"] <= len(networks) <= provider["max_count"]:
-            raise ValueError(f"provider count {len(networks)} outside configured bounds")
-        for net in networks:
+        rows = [line.strip() for line in payload.decode("ascii").splitlines() if line.strip() and not line.startswith("#")]
+        networks, seen, skipped = [], set(), []
+        for row in rows:
+            net = ipaddress.ip_network(row, strict=True)
             if net.version != provider["version"] or net.prefixlen < provider["min_prefixlen"]:
                 raise ValueError(f"unexpected family or overly broad prefix: {net}")
-            if not net.is_global or net.is_multicast:
-                raise ValueError(f"non-public provider prefix: {net}")
+            if net in seen:
+                skipped.append({"row": row, "reason": "duplicate"})
+            elif not net.is_global or net.is_multicast:
+                skipped.append({"row": row, "reason": "non-public"})
+            else:
+                networks.append(net)
+            seen.add(net)
+        private = sum(item["reason"] == "non-public" for item in skipped)
+        if private > max(1, len(rows) // 10):
+            raise ValueError(f"too many non-public rows: {private} of {len(rows)}")
+        if not provider["min_count"] <= len(networks) <= provider["max_count"]:
+            raise ValueError(f"provider count {len(networks)} outside configured bounds")
+        if dropped is not None:
+            dropped.extend(skipped)
         return networks
     except (ValueError, UnicodeError) as exc:
         raise GenerationError(f"invalid {provider['id']} provider feed: {exc}") from exc
