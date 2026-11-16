@@ -4,18 +4,18 @@
     "asn_ranges": "IR-labelled IPtoASN rows plus independently selected operator ASNs",
     "country_ranges": "IPdeny Iran country zones",
     "operation": "union, collapse, numeric sort",
-    "policy_sha512": "680c6bb85af359e016fe8b78dff74f9121feef9169dc0dc67814b1c9a9dbfe478f36c99a81609bc2e49617760e67408c524e94638da87e66a7ea52bb583c3168",
+    "policy_sha512": "1dd184581685bc2cc61456bb0b3d2a4537b5022d86113ae4ab58d103664ec0eca955be091358fec8968bd56551ae6311a5ddd3eb88ea08274caf6bed92106790",
     "providers": "Official provider-published inventories",
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json"
   },
-  "generated_at": "2026-11-15T12:17:54Z",
+  "generated_at": "2026-11-16T10:12:03Z",
   "generator_version": "2.1.0",
   "ipv4": {
-    "bytes": 29703,
-    "count": 1889,
+    "bytes": 29763,
+    "count": 1893,
     "file": "ir-ipv4.zone",
-    "sha512": "dd14ac0c2cb7ef1dc8bcac7cbaa505c648ae0327504ce278f40bc8c57af9cebe061b30fe0be94620f245e26939146e0e18e1b4b30fe3998305219a48d2023558"
+    "sha512": "e43a2ef64bc86cf8f66bff80e3581fcb9279fbce15955d731081c5a3b2a5dd123eb921fa2efbf85a6e23ff7f12681a4b2211c093ef1b75280271f687eb75c0c5"
   },
   "ipv6": {
     "bytes": 8820,
@@ -27,8 +27,8 @@
   "source_stats": {
     "ipv4": {
       "ipdeny_cidrs": 1972,
-      "iptoasn_selected_asns": 571,
-      "iptoasn_selected_ranges": 4932
+      "iptoasn_selected_asns": 572,
+      "iptoasn_selected_ranges": 4946
     },
     "ipv6": {
       "ipdeny_cidrs": 575,
