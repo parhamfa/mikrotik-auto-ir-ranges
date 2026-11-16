@@ -88,6 +88,39 @@
         "https://www.arvancloud.ir/",
         "https://www.arvancloud.com/"
       ]
+    },
+    {
+      "id": "sotoon",
+      "name": "Sotoon, its network registered in the Netherlands",
+      "reviewed_on": "2026-11-16",
+      "asns": {
+        "41227": "Sotoon-Cloud-Infrastructure"
+      },
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/41227",
+        "https://rdap.db.ripe.net/autnum/49801"
+      ],
+      "state": "accepted",
+      "review_reason": "AS41227 is registered to Insightometrics B.V. in Amsterdam and shares the contact SCS600-RIPE and the maintainer lir-ir-sotoon-1-MNT with Sotoon's Iranian AS49801. On 2026-11-16 its three blocks missing from the list answered like a Tehran address and through the same carrier.",
+      "relationships": [
+        {
+          "type": "asn_ownership",
+          "target": "AS41227",
+          "evidence": [
+            "https://rdap.db.ripe.net/autnum/41227",
+            "https://rdap.db.ripe.net/autnum/49801"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reason": "AS41227 is registered to Insightometrics B.V. in Amsterdam and shares the contact SCS600-RIPE and the maintainer lir-ir-sotoon-1-MNT with Sotoon's Iranian AS49801. On 2026-11-16 its three blocks missing from the list answered like a Tehran address and through the same carrier."
+        }
+      ],
+      "aliases": [
+        "Sotoon",
+        "Hezardastan"
+      ],
+      "websites": [
+        "https://sotoon.ir/"
+      ]
     }
   ],
   "providers": [
