@@ -24,7 +24,7 @@ The daily build never reads the ledger. A mistake there cannot change the list.
 | Evidence | Result |
 | --- | --- |
 | A list of ranges the company serves from its own domain | Catalogue provider entry, refreshed daily |
-| A network of the same company registered under another country, tied by its registry record: a contact, maintainer or organisation handle that also appears in the company's Iranian record, or an Iranian address in the foreign organisation's record | Recorded in the ledger as `proposed`. Enters the catalogue only when the owner says yes |
+| A network of the same company registered under another country, tied by its registry record: a contact, maintainer or organisation handle that also appears in the company's Iranian record, or an Iranian address in the foreign organisation's record | Recorded in the ledger as `proposed`. Enters the catalogue only when a measurement shows it answers from inside Iran and the owner says yes |
 | A name that matches, with nothing else | Never accepted. A Japanese research network of 8.7 million addresses shares a handle with an Iranian one |
 | A whole foreign host's network, because a company rents part of it | Never accepted |
 
@@ -179,6 +179,19 @@ The owner approves each pull request. The test workflow runs the gate against
 every provider entry the pull request changes, from GitHub's side, which is
 where the daily build fetches from. A list that only answers inside Iran fails
 there and stays out.
+
+A network registered under another country gets one more check before the owner
+is asked: where it answers from. Its registry record shows who owns it, not
+where its servers are. From a server outside Iran, time a reply from one address
+in each block next to a known Tehran address, and compare the two paths.
+Sotoon's Dutch-registered blocks answered like the Tehran address and through
+the same carrier, so they were accepted. DigitalVPS's Australian-registered
+block answered from a Dutch data center and was rejected: an Iranian company's
+servers abroad are not Iranian address space. Accepting a network admits every
+address it announces and every block registered to the same holder, in use or
+not. The weekly routine does not run this check: timed from its own machine on
+2026-11-16, a Tehran address answered in 42 ms and Sotoon's blocks in 120 ms,
+although both are in Iran, so timing from there misleads.
 
 After the merge, the next daily build reads the new lists, and the routers pick
 up the result at their next refresh.

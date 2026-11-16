@@ -68,8 +68,8 @@ class LedgerTests(unittest.TestCase):
 
     def test_rule_2_status_and_last_checked(self):
         self.assertRejected(lambda l: company(l, "sotoon").update(status="maybe"), "unknown status")
-        self.assertRejected(lambda l: company(l, "sotoon").update(last_checked=None), "last_checked must be an ISO date")
-        self.assertRejected(lambda l: company(l, "sotoon").update(last_checked="2026-13-01"), "month must be")
+        self.assertRejected(lambda l: company(l, "sotoon").update(status="candidate", last_checked=None), "last_checked must be an ISO date")
+        self.assertRejected(lambda l: company(l, "sotoon").update(status="candidate", last_checked="2026-13-01"), "month must be")
         first_unchecked = next(c for c in LEDGER["companies"] if c["status"] == "unchecked")["id"]
         self.assertRejected(lambda l: company(l, first_unchecked).update(last_checked="2026-11-15"), "unchecked company has last_checked null")
 
@@ -87,7 +87,7 @@ class LedgerTests(unittest.TestCase):
         self.assertRejected(lambda l: company(l, "parspack")["lists"].append(dict(company(l, "parspack")["lists"][0])), "appears twice")
         self.assertRejected(lambda l: company(l, "parspack")["lists"].append({"url": "https://parspack.com/new.txt", "policy_id": "parspack", "state": "proposed", "note": ""}), "only an in_use list carries a policy_id")
         self.assertRejected(lambda l: company(l, "parspack").update(status="candidate"), "list_in_use if and only if")
-        self.assertRejected(lambda l: company(l, "sotoon").update(status="list_in_use"), "list_in_use if and only if")
+        self.assertRejected(lambda l: company(l, "sotoon").update(status="list_in_use", last_checked="2026-11-16"), "list_in_use if and only if")
         self.assertRejected(lambda l: company(l, "sotoon")["lists"].append({"url": "https://sotoon.ir/ips.txt", "policy_id": None, "state": "maybe", "note": ""}), "unknown list state")
 
     def test_rule_5_list_host_belongs_to_the_company(self):
@@ -102,7 +102,7 @@ class LedgerTests(unittest.TestCase):
         self.assertRejected(lambda l: company(l, "parspack")["asns"].append(41227), "AS41227 belongs to both")
 
     def test_rule_7_accepted_foreign_network_iff_policy_operator(self):
-        self.assertRejected(lambda l: company(l, "sotoon")["foreign_networks"][0].update(state="accepted"), "AS41227 is accepted if and only if")
+        self.assertRejected(lambda l: company(l, "digitalvps")["foreign_networks"][0].update(state="accepted"), "AS24947 is accepted if and only if")
         self.assertRejected(lambda l: company(l, "arvancloud")["foreign_networks"][0].update(state="proposed"), "AS208006 is accepted if and only if")
         self.assertRejected(lambda l: company(l, "sotoon")["foreign_networks"][0].update(state="maybe"), "unknown foreign network state")
 

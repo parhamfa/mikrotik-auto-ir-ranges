@@ -500,8 +500,8 @@
         204533,
         202319
       ],
-      "status": "candidate",
-      "last_checked": "2026-11-15",
+      "status": "unchecked",
+      "last_checked": null,
       "evidence": [
         "https://sotoon.ir/"
       ],
@@ -510,12 +510,12 @@
         {
           "asn": 41227,
           "label": "NL",
-          "state": "proposed",
+          "state": "accepted",
           "evidence": [
             "https://rdap.db.ripe.net/autnum/41227",
             "https://rdap.db.ripe.net/autnum/49801"
           ],
-          "note": "Tie: the Dutch network AS41227 (Insightometrics B.V., Amsterdam) and the Iranian AS49801 share the contact handle SCS600-RIPE, \"Sotoon Cloud Support\", and the network name Sotoon-Cloud-Infrastructure. On 2026-11-14 it announced 5,888 addresses, 768 of them outside the published list: 193.29.17.0/24, 193.29.18.0/24 and 193.29.24.0/24. Where those servers are is not verified."
+          "note": "Tie: the Dutch network AS41227 (Insightometrics B.V., Amsterdam) and the Iranian AS49801 share the contact handle SCS600-RIPE, \"Sotoon Cloud Support\", and the network name Sotoon-Cloud-Infrastructure. On 2026-11-14 it announced 5,888 addresses, 768 of them outside the published list: 193.29.17.0/24, 193.29.18.0/24 and 193.29.24.0/24. Measured on 2026-11-16: one address in each of the three blocks answered a server in Germany in 81 to 87 ms, next to 90 ms for a known Tehran address (178.22.122.100), and a trace from outside Iran entered through the same Azerbaijani carrier (Delta Telecom) as that address. They answer from Iran. Accepted on 2026-11-16. The same holder's fourth block, 193.29.26.0/24, is not announced and enters with it."
         }
       ],
       "notes": "No published list at the usual addresses on 2026-11-14; help pages not read yet."
@@ -1261,8 +1261,8 @@
         201194,
         214957
       ],
-      "status": "candidate",
-      "last_checked": "2026-11-15",
+      "status": "unchecked",
+      "last_checked": null,
       "evidence": [
         "https://rdap.db.ripe.net/autnum/24947"
       ],
@@ -1271,11 +1271,11 @@
         {
           "asn": 24947,
           "label": "AU",
-          "state": "proposed",
+          "state": "rejected",
           "evidence": [
             "https://rdap.db.ripe.net/autnum/24947"
           ],
-          "note": "Tie: AS24947, named digitalvps and registered to Parsun Network Solutions PTY LTD in Australia, is maintained by lir-ir-Nahor-1-mnt, the maintainer of the Iranian company Nahor Hadish; the organisation record also lists an address in Yazd. On 2026-11-14 the published list lacked 217.216.217.0/24 (256 addresses). Where those servers sit is not verified."
+          "note": "Tie: AS24947, named digitalvps and registered to Parsun Network Solutions PTY LTD in Australia, is maintained by lir-ir-Nahor-1-mnt, the maintainer of the Iranian company Nahor Hadish; the organisation record also lists an address in Yazd. On 2026-11-14 the published list lacked 217.216.217.0/24 (256 addresses). Measured on 2026-11-16: 217.216.217.1 answered a server in Germany in 17 ms, next to 90 ms for a known Tehran address, and the path ended at SkyLink Data Center BV in the Netherlands. The block is served from Europe, not Iran, so it stays out."
         }
       ],
       "notes": ""
