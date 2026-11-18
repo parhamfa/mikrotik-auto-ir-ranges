@@ -9,13 +9,13 @@
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json"
   },
-  "generated_at": "2026-11-16T10:12:03Z",
+  "generated_at": "2026-11-18T20:26:30Z",
   "generator_version": "2.1.0",
   "ipv4": {
-    "bytes": 29763,
-    "count": 1893,
+    "bytes": 29778,
+    "count": 1894,
     "file": "ir-ipv4.zone",
-    "sha512": "e43a2ef64bc86cf8f66bff80e3581fcb9279fbce15955d731081c5a3b2a5dd123eb921fa2efbf85a6e23ff7f12681a4b2211c093ef1b75280271f687eb75c0c5"
+    "sha512": "e64859de2ff2a27bd34a66b5eaf86ed448915feb4834cf4515511ad8444e9f75496536d5d299defdcb441e098e02922ecc0b824916cc29a82792fc55812b2437"
   },
   "ipv6": {
     "bytes": 8820,
@@ -58,8 +58,8 @@
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 57162391,
-      "sha512": "eef3bd1ca34dd21fc5fdc48b7809f85dedd0edaa156b000609e498a8e21632e61c3ffbe7d76ef6a333d991d41bb98626ef0581a766d8f94c18e99d7358859e80",
+      "bytes": 57179172,
+      "sha512": "e206959c38b3b1a46bc988997417e10f6722b842ce1ba480dba7c080f74d00b3ee821511c03e7085e734f2fbf72faa7d6f5f07a60660871c2af6a3473cbb90da",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {

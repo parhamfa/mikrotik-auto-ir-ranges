@@ -1,6 +1,6 @@
 {
   "delivery": {
-    "generation": "cd19885e03d337a5c37821bbb4a608f8b37ca69b4c733e8aec3a0926f39848e4",
+    "generation": "a4402df13b0dd053dad3cd58b70a393cbeae2399c40e03da0ee5e6ec982691e3",
     "legacy_compatible": true
   },
   "generator_version": "2.1.0",
@@ -158,7 +158,7 @@
       "version": 4
     },
     "registered_resources_ipv4": {
-      "input_prefixes": 1983,
+      "input_prefixes": 1984,
       "missing_prefixes": [],
       "outside_legacy_baseline": [
         "130.185.120.0/22",
@@ -171,13 +171,14 @@
         "193.29.24.0/24",
         "193.29.26.0/24",
         "194.5.192.0/23",
-        "194.5.206.0/23"
+        "194.5.206.0/23",
+        "195.2.250.0/24"
       ],
-      "unique_addresses": "10846464",
+      "unique_addresses": "10846720",
       "version": 4
     },
     "registered_resources_ipv6": {
-      "input_prefixes": 583,
+      "input_prefixes": 582,
       "missing_prefixes": [],
       "outside_legacy_baseline": [
         "2a04:dac0::/29",
@@ -196,7 +197,7 @@
         "2a0f:94c0::/29",
         "2a12:3640::/29"
       ],
-      "unique_addresses": "329272257916392422414318754070528",
+      "unique_addresses": "328638432616278307713570402467840",
       "version": 6
     },
     "selected_asn_ipv4": {
@@ -234,7 +235,7 @@
     "The list's accuracy against real traffic has not been measured.",
     "Shared IPs may also serve unrelated foreign services; hosting ASNs are not automatically included."
   ],
-  "observed_at": "2026-11-17T20:50:30Z",
+  "observed_at": "2026-11-18T20:26:30Z",
   "policy_sha512": "1dd184581685bc2cc61456bb0b3d2a4537b5022d86113ae4ab58d103664ec0eca955be091358fec8968bd56551ae6311a5ddd3eb88ea08274caf6bed92106790",
   "provider_dropped_rows": {
     "chabokan": [
@@ -251,10 +252,10 @@
     ]
   },
   "registry": {
-    "records": 775790,
+    "records": 775921,
     "selected_asns": 866,
-    "selected_holders": 920,
-    "snapshot_date": "20261117"
+    "selected_holders": 921,
+    "snapshot_date": "20261118"
   },
   "reviewed_operator_asns": [
     41227,
@@ -267,67 +268,67 @@
   "scope": "All admitted source ranges, not all possible Iran-related IPs",
   "source_status": {
     "ipdeny_ipv4": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "ipdeny_ipv6": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "nro_delegated": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_arvancloud": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_chabokan": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_derakcloud_ipv4": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_derakcloud_ipv6": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_iranserver": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_mizbancloud": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_paasta": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "provider_parspack": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv4": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     },
     "selected_asn_ipv6": {
-      "last_fresh": "2026-11-17T20:50:30Z",
+      "last_fresh": "2026-11-18T20:26:30Z",
       "reason": null,
       "status": "fresh"
     }
@@ -354,8 +355,8 @@
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 57169495,
-      "sha512": "55dbbeb41c2ec03b261e6db652626d7c1fbec17dbe8f877f112993cd5a1730907d1144538a3b178c4fd6a695a643daeda7da23734395750e1f560951a95d0759",
+      "bytes": 57179172,
+      "sha512": "e206959c38b3b1a46bc988997417e10f6722b842ce1ba480dba7c080f74d00b3ee821511c03e7085e734f2fbf72faa7d6f5f07a60660871c2af6a3473cbb90da",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
