@@ -9,31 +9,31 @@
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json"
   },
-  "generated_at": "2026-11-18T20:26:30Z",
+  "generated_at": "2026-11-19T20:29:31Z",
   "generator_version": "2.1.0",
   "ipv4": {
-    "bytes": 29778,
-    "count": 1894,
+    "bytes": 29793,
+    "count": 1895,
     "file": "ir-ipv4.zone",
-    "sha512": "e64859de2ff2a27bd34a66b5eaf86ed448915feb4834cf4515511ad8444e9f75496536d5d299defdcb441e098e02922ecc0b824916cc29a82792fc55812b2437"
+    "sha512": "c194fec392279424b0741c8215bb33a2aac852e7888392efa12a3d57b319b7eed5cdbfc59b9a9bba07fa62404f1f191929c1639081bdfd2c1fba5c4c11a452ee"
   },
   "ipv6": {
-    "bytes": 8820,
-    "count": 587,
+    "bytes": 8835,
+    "count": 588,
     "file": "ir-ipv6.zone",
-    "sha512": "3a15fb42a80d12bee21e4a560b3bcaec0a0e63374d1d3017f299910c154755220b64038727b6af352d1c0577f36c7a3a45605a64db4e2892239e74b189f38568"
+    "sha512": "50ac09b6502130f017f2d0c427e0c4909fb9d4d7649f374113f51e0574fbb36edc61b99f1661fdea25d42fdbad49f44ea382d9f299e534e3566decae8a2a4919"
   },
   "schema": 1,
   "source_stats": {
     "ipv4": {
       "ipdeny_cidrs": 1972,
-      "iptoasn_selected_asns": 572,
-      "iptoasn_selected_ranges": 4946
+      "iptoasn_selected_asns": 573,
+      "iptoasn_selected_ranges": 4951
     },
     "ipv6": {
       "ipdeny_cidrs": 575,
-      "iptoasn_selected_asns": 136,
-      "iptoasn_selected_ranges": 457
+      "iptoasn_selected_asns": 137,
+      "iptoasn_selected_ranges": 458
     }
   },
   "sources": {
@@ -58,8 +58,8 @@
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 57179172,
-      "sha512": "e206959c38b3b1a46bc988997417e10f6722b842ce1ba480dba7c080f74d00b3ee821511c03e7085e734f2fbf72faa7d6f5f07a60660871c2af6a3473cbb90da",
+      "bytes": 57186078,
+      "sha512": "0af4e29b032bb133e73490b318a82e73b8306300d4c4c169dc63a8e3d95cb8db69b59ad4afd4e152c63e3e48bd4dea1ca07213f03aa8c33cdbdd37a8a9e2b253",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
