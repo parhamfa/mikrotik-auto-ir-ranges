@@ -173,21 +173,30 @@
     },
     {
       "id": "hostiran-network",
-      "brand": "",
+      "brand": "HostIran",
       "legal_names": [
         "NOAVARAN SHABAKEH SABZ MEHREGAN (Ltd.)"
       ],
-      "domains": [],
+      "domains": [
+        "hostiran.net",
+        "hostiran.com"
+      ],
       "asns": [
         59441,
         48029
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/59441",
+        "https://hostiran.net/about",
+        "https://hostiran.net/cloud/cdn",
+        "https://hostiran.net/docs/dashboard",
+        "https://hostiran.net/help"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "The registry contact domain redirects to HostIran, whose About page names Noavaran Shabakeh Sabz Mehregan. Read the CDN FAQ, technical documentation and help index. They did not link an edge address list; both usual text addresses returned 404, and IPtoASN gave no foreign name matches."
     },
     {
       "id": "pishgaman-datacenter",
@@ -264,89 +273,123 @@
     },
     {
       "id": "webdade",
-      "brand": "",
+      "brand": "Web Dadeh",
       "legal_names": [
         "Web Dadeh Paydar Co (Ltd)"
       ],
-      "domains": [],
+      "domains": [
+        "webdade.com"
+      ],
       "asns": [
         49556,
         207724
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/49556",
+        "https://webdade.com/about-us",
+        "https://my.webdade.com/knowledgebase",
+        "https://webdade.com/blog/real-ip-behind-cdn-nginx"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "The home page offers cloud VPS and the About page identifies Web Dadeh Paydar. Read the public knowledge base and the CDN address guide, which discusses other providers’ lists and publishes no Web Dadeh inventory. Both usual text addresses returned 404; IPtoASN gave no foreign name matches."
     },
     {
       "id": "hesabgar-as",
-      "brand": "",
+      "brand": "Taknet",
       "legal_names": [
         "Hesabgar Pardaz Gharb PJSC"
       ],
-      "domains": [],
+      "domains": [
+        "taknet.ir"
+      ],
       "asns": [
         48359
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/48359",
+        "https://taknet.ir/about/",
+        "https://taknet.ir/b2b-services/",
+        "https://taknet.ir/blog/internet-phone/voip-sbc-firewall/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "Taknet identifies Hesabgar Pardaz Gharb and advertises connectivity, a cloud contact center, dedicated servers and colocation. The public VoIP firewall FAQ did not include a Taknet address inventory. Both usual text addresses returned 404. IPtoASN name matches were similarly named Brazilian telecoms, not Taknet."
     },
     {
       "id": "tehranserver",
-      "brand": "",
+      "brand": "TehranServer",
       "legal_names": [
         "Fanavaran Mehr Vatan Tehran Server Group LLC"
       ],
-      "domains": [],
+      "domains": [
+        "tehranserver.ir"
+      ],
       "asns": [
         213807
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/213807",
+        "https://www.tehranserver.ir/faq.php",
+        "https://client.tehranserver.ir/index.php/knowledgebase"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "The public FAQ identifies Fanavaran Mehr Vatan and describes dedicated and virtual servers and online classrooms. It did not link an address list. The separate knowledge base redirected to sign-in and was not verified. Both usual text addresses returned 404; IPtoASN gave no foreign name matches."
     },
     {
       "id": "dade-samane-fanava",
-      "brand": "",
+      "brand": "FanavaIDC",
       "legal_names": [
         "Dade Samane Fanava Company (PJS)"
       ],
-      "domains": [],
+      "domains": [
+        "fanavaidc.com"
+      ],
       "asns": [
         62442
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/62442",
+        "https://fanavaidc.com/page/%D8%AF%D8%B1%D8%A8%D8%A7%D8%B1%D9%87-%D8%AF%D8%A7%D8%AF%D9%87-%D8%B3%D8%A7%D9%85%D8%A7%D9%86%D9%87-%D9%81%D9%86-%D8%A2%D9%88%D8%A7",
+        "https://fanavaidc.com/service/%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%D8%A8%D8%B1%DB%8C",
+        "https://fanavaidc.com/page/%D8%AF%D9%BE%D8%A7%D8%B1%D8%AA%D9%85%D8%A7%D9%86-%D9%81%D9%86%DB%8C-%D9%88-%D9%BE%D8%B4%D8%AA%DB%8C%D8%A8%D8%A7%D9%86%DB%8C",
+        "https://my.fanavaidc.com/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "The company About page identifies Dade Samane Fanava, and the product page offers cloud servers. Its public technical support page directs customers to the ticket portal, which required sign-in. No list was linked in the public pages; both usual text addresses returned 404 and IPtoASN gave no foreign name matches. Portal content was not verified."
     },
     {
       "id": "aminidc",
-      "brand": "",
+      "brand": "Amin IDC",
       "legal_names": [
         "Asre Pardazeshe Ettelaate Amin Institute"
       ],
-      "domains": [],
+      "domains": [
+        "aminidc.com"
+      ],
       "asns": [
         48147
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/48147",
+        "https://www.aminidc.com/about-us/",
+        "https://www.aminidc.com/order-help/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "The About page identifies Asre Pardazeshe Ettelaate Amin. The site offers cloud, hosting and storage. The public order and support guide did not link an inventory. Both usual text addresses returned 404; IPtoASN gave no foreign name matches."
     },
     {
       "id": "gsc",
@@ -358,12 +401,17 @@
       "asns": [
         204104
       ],
-      "status": "unchecked",
-      "last_checked": null,
-      "evidence": [],
+      "status": "unreachable",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://rdap.db.ripe.net/autnum/204104",
+        "https://www.ripe.net/membership/member-support/list-of-members/ir/giticloud/",
+        "https://helixgame.ir/",
+        "https://helixgame.net/"
+      ],
       "lists": [],
       "foreign_networks": [],
-      "notes": ""
+      "notes": "Searched the registered name and checked RIPE. The registry contact uses a free mail domain. HelixGame was a lead, but helixgame.ir could not be read over HTTPS because the certificate issuer could not be verified; HTTP redirected back to HTTPS. helixgame.net returned a 404. Could not confirm a company site from its own pages."
     },
     {
       "id": "mobinidc",
@@ -500,12 +548,20 @@
         204533,
         202319
       ],
-      "status": "unchecked",
-      "last_checked": null,
+      "status": "candidate",
+      "last_checked": "2026-11-22",
       "evidence": [
-        "https://sotoon.ir/"
+        "https://sotoon.ir/",
+        "https://docs.sotoon.ir/products/cdn/how-to-guides/security/how-to-whitelist-cdn-ips"
       ],
-      "lists": [],
+      "lists": [
+        {
+          "url": "https://edge.sotoon.ir/ip-list.txt",
+          "policy_id": null,
+          "state": "proposed",
+          "note": "Live check passed on 2026-11-22: 76 IPv4 rows kept, no rows dropped, broadest /24, six addresses outside known Iranian space."
+        }
+      ],
       "foreign_networks": [
         {
           "asn": 41227,
@@ -518,7 +574,7 @@
           "note": "Tie: the Dutch network AS41227 (Insightometrics B.V., Amsterdam) and the Iranian AS49801 share the contact handle SCS600-RIPE, \"Sotoon Cloud Support\", and the network name Sotoon-Cloud-Infrastructure. On 2026-11-14 it announced 5,888 addresses, 768 of them outside the published list: 193.29.17.0/24, 193.29.18.0/24 and 193.29.24.0/24. Measured on 2026-11-16: one address in each of the three blocks answered a server in Germany in 81 to 87 ms, next to 90 ms for a known Tehran address (178.22.122.100), and a trace from outside Iran entered through the same Azerbaijani carrier (Delta Telecom) as that address. They answer from Iran. Accepted on 2026-11-16. The same holder's fourth block, 193.29.26.0/24, is not announced and enters with it."
         }
       ],
-      "notes": "No published list at the usual addresses on 2026-11-14; help pages not read yet."
+      "notes": "Sotoon documents its public edge address list for customer origin firewall allowlisting. Kept as a candidate because test_rule_4_ledger_and_policy_lists_match assumes Sotoon has no in-use list. The catalogue change and a test update can be reviewed together."
     },
     {
       "id": "rayazma-as",
@@ -1261,10 +1317,11 @@
         201194,
         214957
       ],
-      "status": "unchecked",
-      "last_checked": null,
+      "status": "unreachable",
+      "last_checked": "2026-11-22",
       "evidence": [
-        "https://rdap.db.ripe.net/autnum/24947"
+        "https://rdap.db.ripe.net/autnum/24947",
+        "https://www.digitalvps.ir/"
       ],
       "lists": [],
       "foreign_networks": [
@@ -1278,7 +1335,7 @@
           "note": "Tie: AS24947, named digitalvps and registered to Parsun Network Solutions PTY LTD in Australia, is maintained by lir-ir-Nahor-1-mnt, the maintainer of the Iranian company Nahor Hadish; the organisation record also lists an address in Yazd. On 2026-11-14 the published list lacked 217.216.217.0/24 (256 addresses). Measured on 2026-11-16: 217.216.217.1 answered a server in Germany in 17 ms, next to 90 ms for a known Tehran address, and the path ended at SkyLink Data Center BV in the Netherlands. The block is served from Europe, not Iran, so it stays out."
         }
       ],
-      "notes": ""
+      "notes": "The HTTPS home page and the HTTP fallback both returned the browser-verification page titled Transferring to the website...; the menu and help pages could not be read. The existing Australian registry entry remains a separate, previously reviewed finding."
     },
     {
       "id": "chakavak",
@@ -2604,6 +2661,25 @@
       "lists": [],
       "foreign_networks": [],
       "notes": "Homepage offers Iranian and foreign VPS, cloud servers and hosting. Read its public knowledge-base index and Linux VPS connection guide. The index lists five tutorials, with no provider IP inventory or whitelist list linked; /ips.txt and /cdnips.txt returned 404. No range list found in this bounded review; rented foreign-host networks were not treated as company-owned."
+    },
+    {
+      "id": "diakoweb",
+      "brand": "DiaKoWeb",
+      "legal_names": [],
+      "domains": [
+        "diakoweb.com"
+      ],
+      "asns": [],
+      "status": "no_list_found",
+      "last_checked": "2026-11-22",
+      "evidence": [
+        "https://diakoweb.com/asasf.php",
+        "https://diakoweb.com/",
+        "https://client.diakoweb.com/knowledgebase"
+      ],
+      "lists": [],
+      "foreign_networks": [],
+      "notes": "The home page offers cloud VPS. The public knowledge base covers Windows remote access, connection stability and speed tests. It did not link an address inventory. Neither usual text address parsed as a list; IPtoASN gave no foreign name matches."
     }
   ]
 }
