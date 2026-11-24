@@ -9,13 +9,13 @@
     "registered_resources": "NRO IR resources and same-holder resources of selected operators",
     "report": "coverage.json"
   },
-  "generated_at": "2026-11-19T20:29:31Z",
+  "generated_at": "2026-11-24T22:20:52Z",
   "generator_version": "2.1.0",
   "ipv4": {
-    "bytes": 29793,
-    "count": 1895,
+    "bytes": 29810,
+    "count": 1896,
     "file": "ir-ipv4.zone",
-    "sha512": "c194fec392279424b0741c8215bb33a2aac852e7888392efa12a3d57b319b7eed5cdbfc59b9a9bba07fa62404f1f191929c1639081bdfd2c1fba5c4c11a452ee"
+    "sha512": "02c3e64bf9e046f0dc05d47c3a2464da23b0c4bfcd4868d894dd8885e61129a123da5381c2f1b9463f745c143c098f0236282b397e14261ebeb3c03c499aea6c"
   },
   "ipv6": {
     "bytes": 8835,
@@ -58,8 +58,8 @@
       "url": "https://iptoasn.com/data/ip2asn-v6.tsv.gz"
     },
     "nro_delegated": {
-      "bytes": 57186078,
-      "sha512": "0af4e29b032bb133e73490b318a82e73b8306300d4c4c169dc63a8e3d95cb8db69b59ad4afd4e152c63e3e48bd4dea1ca07213f03aa8c33cdbdd37a8a9e2b253",
+      "bytes": 57215644,
+      "sha512": "f6b324d87ac5d981decad463a71b35eefc2a6abaee67eccdddd68249e327bc5a3d0116f29802d99c5ee93a1a743c63d168163552b309d06c423e13a3b65da7bb",
       "url": "https://ftp.ripe.net/pub/stats/ripencc/nro-stats/latest/nro-delegated-stats"
     },
     "provider_arvancloud": {
@@ -93,8 +93,8 @@
       "url": "https://mizbancloud.com/ips.txt"
     },
     "provider_paasta": {
-      "bytes": 1466,
-      "sha512": "d5dae21053d884236e6211c5e2e5f0b1c7b30736db14db18365a657d9353f0a85690c944c9c3dc57ec1bebbbb607ca090c572bbda883bd77d3dbadb01e7054ec",
+      "bytes": 1465,
+      "sha512": "fd5caeed874a2bad31aee49ff07381d00b4700e04f17da949b1d42f1aad8102546eac1e134eaec6c798744ef0c86f637f9c263e636c5350f2c5b413241cdf86c",
       "url": "https://network.paasta.cloud/ips.txt"
     },
     "provider_parspack": {
